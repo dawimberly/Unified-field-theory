@@ -25,16 +25,17 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-30 US Central)
-See experiments/threshold_independent_2026_10_30/REPORT.md and check.py/results.json.
-- Read the newly authorized provisional threshold archive (Library libfile_fa52b432f24c8191ac948aabcca17d35) and verified it independently with u=sqrt(4/s-1), not its root solver.
-- The physical lower q-lip has u=-i beta and Im J=-pi beta. The below-threshold adjacent sheet changes J by -2pi u, confirming the archived minus sign.
-- Decimal threshold root: L_c=14.5572064556843705..., agreeing with the provisional value within 1.73e-13. Eight offsets confirm the local sheet-I to sheet-II real pole trajectory and vanishing square-root residue. No global uniqueness or complete second-sheet search is established.
-- Independent principal-log quadrature initially missed narrow complex-log layers; retained failure data and corrected root-neighborhood splits reduce the maximum comparison error to 1.93e-15. All corrected assertions passed.
-- Explicitly matched the Einstein slope and both tensor q^2 coefficients to reference L=10, recording both A and K2 polynomial changes. All five tested original spectra then have first-sheet subthreshold scalar poles, including L=30,100. The unmatched crossing is not a fixed-UV-theory stability prediction; higher-order coefficients differ.
-- No bare model, physical regulator, contour or constrained-equivalence assumption was adopted. Prior source/measure and fixed-prescription pole results remain in their existing folders.
+See experiments/matched_spin2_2026_10_30/REPORT.md and check.py/results.json.
+- Audited the explicitly Lref=10 coefficient-matched spin-2 kernels; no physical bare action was adopted.
+- Additional principal-sheet zeros: L=3 q=60.3330308219; L=5 q=82.4469390832; L=30 q=8.72600156453 +/-78.0620223980i; L=100 q=10.0532001673 +/-66.1017934580i. L=10 retains its original no-extra-pole theorem.
+- Independent parameter integrals at 256/512/1024 nodes agree at the roots (maximum absolute matched-kernel residual 4.56e-14). Thirty-eight adaptive isolating/upper-rectangle contour checks pass.
+- Derived positive-measure restrictions for F=K2_matched/q=S+a+bq: b<=0 excludes off-axis zeros and gives a unique positive real zero here; b>0 permits at most one simple conjugate pair. A Cauchy-Schwarz real-axis lower bound excludes real zeros for tested L=30,100, with floating-point coefficient signs rather than interval certification.
+- Extra zeros have |q|/4=15.08--20.62 and quadratic/Einstein ratios 1.38--1.88. These are full modified-kernel poles, not controlled low-energy expansion predictions or constrained-CEV stability conclusions.
+- Earlier independently verified scalar threshold/sheet continuation and matched scalar poles remain in experiments/threshold_independent_2026_10_30/. The original no-bare spin-2 theorem remains valid under its original hypotheses.
+- All new assertions passed. No previous full scans were repeated. No UV completion or healthy theory is established.
 
 ## Next bounded work batch
-Audit zeros of the explicitly coefficient-matched spin-2 kernel under its changed polynomial terms, without transferring the no-bare-curvature positive-measure theorem to it. Keep such resummed kernel behavior distinct from controlled low-energy EFT predictions. Continue pending background-independent composite/source-matching literature (arXiv:2011.06541) before any auxiliary-to-constrained spectrum transfer. Preserve all prior data.
+Inspect the pending published background-independent composite/source definition (arXiv:2011.06541) before transferring any auxiliary spectra to constrained CEV. Then formulate a controlled low-energy matched response comparison with explicit truncation/error assumptions, preserving the distinction between that expansion and fully resummed polynomial-modified kernels. Global scalar zero control, measure, Lorentzian contour and interactions remain open.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.

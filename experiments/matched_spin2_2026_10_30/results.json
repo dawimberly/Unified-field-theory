@@ -1,0 +1,611 @@
+{
+  "scope": "Explicitly polynomial matched determinant; Lref=10. Not a physical UV completion or an EFT validity claim.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "longdouble_bits": 63
+  },
+  "roots": [
+    {
+      "L": 3,
+      "q": [
+        60.333030821894226,
+        0.0
+      ],
+      "delta_k1": 0.0014886756642634644,
+      "delta_k2": -2.589412619073035e-05,
+      "F_residual": 8.607972326471827e-20,
+      "independent_integral_nodes": [
+        256,
+        512,
+        1024
+      ],
+      "independent_K_residuals": [
+        7.878507552296424e-17,
+        1.362075565997014e-16,
+        7.887528453184682e-17
+      ],
+      "integral_convergence": 5.733227206785457e-17,
+      "K_prime_values": [
+        [
+          -0.0016116797706748444,
+          0.0
+        ],
+        [
+          -0.0016116797707243931,
+          0.0
+        ],
+        [
+          -0.0016116797711917077,
+          0.0
+        ]
+      ],
+      "inverse_K_residue": [
+        -620.4706529638827,
+        -0.0
+      ],
+      "conjugation_error": 0.0,
+      "expansion_parameter_abs_q_over_4": 15.083257705473557,
+      "local_quadratic_ratio": 1.3767131848967473
+    },
+    {
+      "L": 5,
+      "q": [
+        82.44693908321197,
+        0.0
+      ],
+      "delta_k1": 0.0011028588843533828,
+      "delta_k2": -1.5724714077801887e-05,
+      "F_residual": 2.6130966422795165e-19,
+      "independent_integral_nodes": [
+        256,
+        512,
+        1024
+      ],
+      "independent_K_residuals": [
+        3.224230913723494e-16,
+        4.533574443589192e-16,
+        2.4835006013496086e-16
+      ],
+      "integral_convergence": 2.050073842239583e-16,
+      "K_prime_values": [
+        [
+          -0.0014216357683770114,
+          0.0
+        ],
+        [
+          -0.001421635768407311,
+          0.0
+        ],
+        [
+          -0.0014216357687915795,
+          0.0
+        ]
+      ],
+      "inverse_K_residue": [
+        -703.4150532453339,
+        -0.0
+      ],
+      "conjugation_error": 0.0,
+      "expansion_parameter_abs_q_over_4": 20.611734770802993,
+      "local_quadratic_ratio": 1.8813208377565347
+    },
+    {
+      "L": 30,
+      "q": [
+        8.726001564530259,
+        78.06202239801073
+      ],
+      "delta_k1": -0.004829948465489152,
+      "delta_k2": 2.7236769091891242e-05,
+      "F_residual": 1.3158027332630858e-19,
+      "independent_integral_nodes": [
+        256,
+        512,
+        1024
+      ],
+      "independent_K_residuals": [
+        7.087299090142272e-15,
+        1.2218223960197827e-14,
+        6.86980322762344e-15
+      ],
+      "integral_convergence": 5.349046690232718e-15,
+      "K_prime_values": [
+        [
+          -0.0015033386931984946,
+          0.0014365210801193348
+        ],
+        [
+          -0.0015033386931851882,
+          0.0014365210800652887
+        ],
+        [
+          -0.0015033386932037836,
+          0.0014365210800134744
+        ]
+      ],
+      "inverse_K_residue": [
+        -347.70370184309286,
+        -332.24961185018594
+      ],
+      "conjugation_error": 0.0,
+      "expansion_parameter_abs_q_over_4": 19.637054330034637,
+      "local_quadratic_ratio": 1.7923576018250935
+    },
+    {
+      "L": 100,
+      "q": [
+        10.053200167287645,
+        66.10179345796234
+      ],
+      "delta_k1": -0.022416778523908384,
+      "delta_k2": 5.8383606537415453e-05,
+      "F_residual": 4.6247872537016396e-18,
+      "independent_integral_nodes": [
+        256,
+        512,
+        1024
+      ],
+      "independent_K_residuals": [
+        2.6137870209554126e-14,
+        4.5568110189693085e-14,
+        2.5818592145066174e-14
+      ],
+      "integral_convergence": 1.9750588566693913e-14,
+      "K_prime_values": [
+        [
+          -0.0018059848985696996,
+          0.0013872710616102324
+        ],
+        [
+          -0.001805984898630977,
+          0.0013872710615479217
+        ],
+        [
+          -0.0018059848989591361,
+          0.001387271061389347
+        ]
+      ],
+      "inverse_K_residue": [
+        -348.2354842221882,
+        -267.4978124616529
+      ],
+      "conjugation_error": 0.0,
+      "expansion_parameter_abs_q_over_4": 16.715475486735833,
+      "local_quadratic_ratio": 1.5256926549797418
+    }
+  ],
+  "positive_real_minima": [
+    {
+      "L": 30,
+      "q": 37.904223252379595,
+      "F_min": 0.0012526514676645204
+    },
+    {
+      "L": 100,
+      "q": 29.512724137498626,
+      "F_min": 0.0013266853393186543
+    }
+  ],
+  "cauchy_schwarz_lower_bound": [
+    {
+      "L": 30,
+      "quadratic": 1.8310464868783317e-09,
+      "linear": -1.4541751428668727e-07,
+      "constant": 1.1535997909553538e-05,
+      "discriminant": -6.334554031837623e-14
+    },
+    {
+      "L": 100,
+      "quadratic": 5.743419871581281e-09,
+      "linear": -7.941332526924741e-07,
+      "constant": 4.235745980234908e-05,
+      "discriminant": -3.424590823221393e-13
+    }
+  ],
+  "contours": [
+    {
+      "L": 3,
+      "kind": "isolating",
+      "initial_points_per_edge": 128,
+      "final_points": 513,
+      "winding": 1.0,
+      "max_phase": 0.015629417487503537,
+      "minimum_boundary_modulus": 2.6703671466955675e-05
+    },
+    {
+      "L": 3,
+      "kind": "isolating",
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": 1.0,
+      "max_phase": 0.007815185493689729,
+      "minimum_boundary_modulus": 2.6703671466955675e-05
+    },
+    {
+      "L": 5,
+      "kind": "isolating",
+      "initial_points_per_edge": 128,
+      "final_points": 513,
+      "winding": 1.0,
+      "max_phase": 0.015635238255274637,
+      "minimum_boundary_modulus": 1.7230648613791738e-05
+    },
+    {
+      "L": 5,
+      "kind": "isolating",
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": 1.0,
+      "max_phase": 0.007818095877573122,
+      "minimum_boundary_modulus": 1.7230648613791738e-05
+    },
+    {
+      "L": 30,
+      "kind": "isolating",
+      "initial_points_per_edge": 128,
+      "final_points": 513,
+      "winding": 1.0,
+      "max_phase": 0.015695449651873503,
+      "minimum_boundary_modulus": 2.6351716638844145e-05
+    },
+    {
+      "L": 30,
+      "kind": "isolating",
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": 1.0,
+      "max_phase": 0.007848200066070728,
+      "minimum_boundary_modulus": 2.6351716638844145e-05
+    },
+    {
+      "L": 100,
+      "kind": "isolating",
+      "initial_points_per_edge": 128,
+      "final_points": 513,
+      "winding": 1.0,
+      "max_phase": 0.01569117710525399,
+      "minimum_boundary_modulus": 3.391499005021021e-05
+    },
+    {
+      "L": 100,
+      "kind": "isolating",
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": 1.0,
+      "max_phase": 0.007846063628861392,
+      "minimum_boundary_modulus": 3.391499005021021e-05
+    },
+    {
+      "L": 3,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1140,
+      "winding": -1.0353368103722385e-19,
+      "max_phase": 0.1893723025546977,
+      "minimum_boundary_modulus": 2.6725395797229385e-08
+    },
+    {
+      "L": 3,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2155,
+      "winding": -6.90224540248159e-20,
+      "max_phase": 0.1893723025546977,
+      "minimum_boundary_modulus": 2.6725395797229385e-08
+    },
+    {
+      "L": 3,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1164,
+      "winding": 3.451122701240795e-20,
+      "max_phase": 0.18941297575612762,
+      "minimum_boundary_modulus": 2.6717049811993503e-08
+    },
+    {
+      "L": 3,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2177,
+      "winding": 6.90224540248159e-20,
+      "max_phase": 0.17859405468326953,
+      "minimum_boundary_modulus": 2.6717049811993503e-08
+    },
+    {
+      "L": 3,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1197,
+      "winding": -3.451122701240795e-20,
+      "max_phase": 0.14825586309711827,
+      "minimum_boundary_modulus": 2.6717049811993503e-08
+    },
+    {
+      "L": 3,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2212,
+      "winding": 1.0353368103722385e-19,
+      "max_phase": 0.14825586309711827,
+      "minimum_boundary_modulus": 2.6717049811993503e-08
+    },
+    {
+      "L": 5,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1139,
+      "winding": 3.451122701240795e-20,
+      "max_phase": 0.19010207327100845,
+      "minimum_boundary_modulus": 1.7295167274899385e-08
+    },
+    {
+      "L": 5,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2154,
+      "winding": -3.451122701240795e-20,
+      "max_phase": 0.19010207327100845,
+      "minimum_boundary_modulus": 1.7295167274899385e-08
+    },
+    {
+      "L": 5,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1167,
+      "winding": -6.90224540248159e-20,
+      "max_phase": 0.1592122560537055,
+      "minimum_boundary_modulus": 1.724338002281048e-08
+    },
+    {
+      "L": 5,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2178,
+      "winding": -1.380449080496318e-19,
+      "max_phase": 0.15883295072430434,
+      "minimum_boundary_modulus": 1.724338002281048e-08
+    },
+    {
+      "L": 5,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1204,
+      "winding": -6.90224540248159e-20,
+      "max_phase": 0.1480541597573307,
+      "minimum_boundary_modulus": 1.724338002281048e-08
+    },
+    {
+      "L": 5,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2219,
+      "winding": 6.90224540248159e-20,
+      "max_phase": 0.1480541597573307,
+      "minimum_boundary_modulus": 1.724338002281048e-08
+    },
+    {
+      "L": 10,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": -3.451122701240795e-20,
+      "max_phase": 0.04151212579512143,
+      "minimum_boundary_modulus": 0.00034909643486253527
+    },
+    {
+      "L": 10,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2049,
+      "winding": -6.90224540248159e-20,
+      "max_phase": 0.020757125575544818,
+      "minimum_boundary_modulus": 0.00034909643486253527
+    },
+    {
+      "L": 10,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1028,
+      "winding": -3.451122701240795e-20,
+      "max_phase": 0.19539813658272756,
+      "minimum_boundary_modulus": 8.720580549385233e-05
+    },
+    {
+      "L": 10,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2049,
+      "winding": -6.90224540248159e-20,
+      "max_phase": 0.10303140552458695,
+      "minimum_boundary_modulus": 8.720580549385233e-05
+    },
+    {
+      "L": 10,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1057,
+      "winding": -3.451122701240795e-20,
+      "max_phase": 0.1934573098238897,
+      "minimum_boundary_modulus": 9.39551439109411e-06
+    },
+    {
+      "L": 10,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2073,
+      "winding": -1.380449080496318e-19,
+      "max_phase": 0.1934573098238897,
+      "minimum_boundary_modulus": 9.39551439109411e-06
+    },
+    {
+      "L": 30,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": 1.0,
+      "max_phase": 0.03682317610751305,
+      "minimum_boundary_modulus": 0.0012526842850586076
+    },
+    {
+      "L": 30,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2049,
+      "winding": 1.0,
+      "max_phase": 0.0184346837069717,
+      "minimum_boundary_modulus": 0.001252679805597611
+    },
+    {
+      "L": 30,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1027,
+      "winding": 1.0,
+      "max_phase": 0.17135634734633887,
+      "minimum_boundary_modulus": 0.0012529169575480987
+    },
+    {
+      "L": 30,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2049,
+      "winding": 1.0,
+      "max_phase": 0.09149541020778637,
+      "minimum_boundary_modulus": 0.0012529169575480987
+    },
+    {
+      "L": 30,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1052,
+      "winding": 1.0,
+      "max_phase": 0.17543025384525518,
+      "minimum_boundary_modulus": 0.0014904444516758437
+    },
+    {
+      "L": 30,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2070,
+      "winding": 1.0,
+      "max_phase": 0.17543025384525518,
+      "minimum_boundary_modulus": 0.0012529169575480987
+    },
+    {
+      "L": 100,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1025,
+      "winding": 1.0,
+      "max_phase": 0.03654138930645641,
+      "minimum_boundary_modulus": 0.001326695008689145
+    },
+    {
+      "L": 100,
+      "kind": "upper_rectangle",
+      "R": 200,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2049,
+      "winding": 1.0,
+      "max_phase": 0.01828346454138234,
+      "minimum_boundary_modulus": 0.001326695008689145
+    },
+    {
+      "L": 100,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1027,
+      "winding": 1.0,
+      "max_phase": 0.1675887015812108,
+      "minimum_boundary_modulus": 0.0013276265637805883
+    },
+    {
+      "L": 100,
+      "kind": "upper_rectangle",
+      "R": 1000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2049,
+      "winding": 1.0,
+      "max_phase": 0.09051844727126813,
+      "minimum_boundary_modulus": 0.0013276265637805883
+    },
+    {
+      "L": 100,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 256,
+      "final_points": 1055,
+      "winding": 1.0,
+      "max_phase": 0.16458222292928865,
+      "minimum_boundary_modulus": 0.0017525308293683227
+    },
+    {
+      "L": 100,
+      "kind": "upper_rectangle",
+      "R": 10000,
+      "h": 0.001,
+      "initial_points_per_edge": 512,
+      "final_points": 2070,
+      "winding": 1.0,
+      "max_phase": 0.16458222292928865,
+      "minimum_boundary_modulus": 0.0013532204995996392
+    }
+  ]
+}
