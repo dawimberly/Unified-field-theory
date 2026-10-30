@@ -24,17 +24,17 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 4. Matching Einstein and independent curvature-squared coefficients across regulator prescriptions. Separately setting bare terms to zero is not a matched comparison of one physical theory.
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
-## Latest bounded batch (2026-10-29 US Central)
-See experiments/auxiliary_source_matching_2026_10_30/REPORT.md, sources.json and check.py/results.json.
-- Inspected published source/Jacobian conditions in Criado-Perez-Victoria Section 2 and Carone's auxiliary/constrained distinction (footnote 4, Section IV). Henneaux's auxiliary-preserving gauge result was accessible only as an abstract; no model-specific quantum measure was inferred.
-- Derived the finite-regulator triangular shift g=G(phi)+h (unit change-of-variable Jacobian), followed by the distinct induced weight I_phi[0] and source factor I_phi[J]/I_phi[0]. Matching matter sources requires the induced reduced measure; matching independent-g insertions additionally requires their source cumulants/conditional-mean map.
-- Computed the actual algebraic metric Hessian on a definite D=4 branch: nine eigenvalues V/2 and one -V/2; det H=-(V/2)^10. The constraint Jacobian has det J_T=-V^10 and is not the canonical Poisson matrix.
-- Nine new high-precision directional checks and exact fraction determinants passed. The leading stationary-phase magnitude scales as |V|^-5, so it is not generically a field-independent normalization. No quantum integration cycle has been defined.
-- Qualified the imported classical bridge: a raw real positive-flavor gradient Gram matrix is definite when nonsingular and cannot itself yield a Lorentzian G by scalar multiplication. This does not rule out a renormalized quantum composite, complex continuation, clock-containing CEV, or the published perturbative construction.
-- All previous auxiliary pole/dispersion results remain conditional; no spectrum transfer or physical ghost diagnosis follows from the algebraic trace direction.
+## Latest bounded batch (2026-10-30 US Central)
+See experiments/threshold_independent_2026_10_30/REPORT.md and check.py/results.json.
+- Read the newly authorized provisional threshold archive (Library libfile_fa52b432f24c8191ac948aabcca17d35) and verified it independently with u=sqrt(4/s-1), not its root solver.
+- The physical lower q-lip has u=-i beta and Im J=-pi beta. The below-threshold adjacent sheet changes J by -2pi u, confirming the archived minus sign.
+- Decimal threshold root: L_c=14.5572064556843705..., agreeing with the provisional value within 1.73e-13. Eight offsets confirm the local sheet-I to sheet-II real pole trajectory and vanishing square-root residue. No global uniqueness or complete second-sheet search is established.
+- Independent principal-log quadrature initially missed narrow complex-log layers; retained failure data and corrected root-neighborhood splits reduce the maximum comparison error to 1.93e-15. All corrected assertions passed.
+- Explicitly matched the Einstein slope and both tensor q^2 coefficients to reference L=10, recording both A and K2 polynomial changes. All five tested original spectra then have first-sheet subthreshold scalar poles, including L=30,100. The unmatched crossing is not a fixed-UV-theory stability prediction; higher-order coefficients differ.
+- No bare model, physical regulator, contour or constrained-equivalence assumption was adopted. Prior source/measure and fixed-prescription pole results remain in their existing folders.
 
 ## Next bounded work batch
-Inspect the renormalized composite, self-consistency, and gauge/measure definition in background-independent clock-free composite gravity (arXiv:2011.06541 and published version) before trying to transfer the auxiliary spectrum. Specify which limits/observables are actually controlled. A source-matched large-N comparison and Lorentzian cycle remain missing; preserve all earlier data and avoid repeated passing scans.
+Audit zeros of the explicitly coefficient-matched spin-2 kernel under its changed polynomial terms, without transferring the no-bare-curvature positive-measure theorem to it. Keep such resummed kernel behavior distinct from controlled low-energy EFT predictions. Continue pending background-independent composite/source-matching literature (arXiv:2011.06541) before any auxiliary-to-constrained spectrum transfer. Preserve all prior data.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
