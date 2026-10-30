@@ -9,7 +9,7 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 ## Completed checks
 - Full momentum scalar kernel in finite D has an exact zero at Q_E^2=4M^2/(D-2), not a derivative-expansion artifact.
 - Identical on-shell constituent scalar source traces vanish at that same zero, cancelling it in that exchange channel. Unequal-mass probes need not cancel it; vacuum stability does not follow.
-- Three raw PV spectra have subthreshold scalar poles with positive connected Euclidean source residues. Exact coefficient/sign arguments now give complete extra-zero counts within |q|<4: one for raw L=3,5,10, none for raw L=30,100; one for all five explicitly Lref=10 matched spectra. This is not global first-sheet pole control.
+- Three raw PV spectra have subthreshold scalar poles with positive connected Euclidean source residues. Exact coefficient/sign arguments now give complete extra-zero counts within |q|<4: one for raw L=3,5,10, none for raw L=30,100; one for all five explicitly Lref=10 matched spectra. The later cut-boundary argument now gives complete global counts for these five raw and explicitly matched spectra; see the latest batch.
 - Full 4D 10x10 metric Hessian, with bubble and stationary contacts, passes longitudinal Ward checks in 40 cases (maximum absolute residual about 1.9e-13). Scalar projection K0=2A/3 agrees.
 - Sixteen finite-D longitudinal/trace tensor checks agree with the corresponding scalar kernel.
 - Physical-only continuum scalar weights are positive analytically below the first PV threshold, confirmed in 750 samples. The spin-2 inverse cut sign is positive there too.
@@ -18,24 +18,22 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 - Fixed four-species no-bare-curvature spin-2 determinant: the Genocchi-Hermite representation makes K2/q a positive Stieltjes transform and excludes additional first-sheet spin-2 poles. This does not extend automatically to modified kernels or constrained CEV.
 
 ## Open problems
-1. Global scalar first-sheet zero control in the remaining finite collar near the cuts. The first-threshold disk and |w|<4/5 conformal region are controlled, and explicit UV exterior regions are zero-free. These regions do not yet cover the whole sheet. The fixed-prescription spin-2 coefficient has an analytic positive-measure zero-exclusion result.
+1. Extend coefficient-inverse dispersion relations to infinite boundary using the now complete scalar inventories for the five specified raw and explicitly matched spectra. Derive tails and applicable moment sum rules; do not apply the non-reference matched asymptotics to raw/reference kernels. Other spectra, adjacent sheets and physical interpretation remain separate. The fixed-prescription spin-2 coefficient has an analytic positive-measure zero-exclusion result.
 2. Lorentzian contour from the microscopic metric path integral, rather than only Euclidean sign calibration.
 3. Constrained metric/clock-field measure equivalence.
 4. Matching Einstein and independent curvature-squared coefficients across regulator prescriptions. Separately setting bare terms to zero is not a matched comparison of one physical theory.
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-30 US Central)
-See experiments/matched_inverse_reconstruction_2026_10_30/REPORT.md and saved code/results/diagnostics.
-- A failed L=30 matched slit-dispersion check exposed another principal-sheet pole pair q=-407.9744557683 +/-12.2684914375i. Its |w| is about 0.997014, outside the earlier |w|<0.8 count and within the remaining finite collar.
-- An independent exact-rational local Rouche certificate isolates the upper root within radius 1e-10; reflection gives its simple conjugate. Elementary log/atan/sqrt interval operations and an explicit A'' bound are saved, along with a coarse certificate/refinement trace.
-- New residues of 1/A are approximately -1.6761537244 +/-1.3103048575i. Independent principal-log integrals and derivative quadrature support the branch and normalization; the quadrature alone is not an existence proof.
-- Fifteen conformal Cauchy reconstructions close to 3.86e-12 relative, using only poles inside the validated conformal contour and the transformed residues r_q/q'(w).
-- Thirty matched slit-cut reconstructions, with all PV thresholds and explicit finite boundaries, close to 6.02e-15 after adding the newly identified pair. Omitting it restores the initial 2.53503e-7 residual; the failed results and independent cut quadrature diagnostics are preserved.
-- The new pair was computed from the unchanged kernel, not fitted to closure. No global inventory completeness follows from the successful finite-probe residuals. The example shows why the remaining collar qualification must be retained.
-- Stable UV wrapper checks and analytic/independent derivative comparisons pass. No physical action, regulator, microscopic contour or constrained-equivalence assumption changed. No healthy theory or UV completion is established.
+See experiments/scalar_cut_boundary_2026_10_30/REPORT.md and saved exact/numerical code, results and corrections.
+- A complete cut-boundary classification now closes the remaining global first-sheet scalar count for the five specified spectra. Additional zeros, counting multiplicity and excluding the simple massless zero: raw 1,1,1,0,0; explicitly Lref=10 matched 3,3,1,4,2, ordered L=3,5,10,30,100.
+- Exact rational Sturm counts isolate the only two imaginary-part zeros on each cut. Outward rational log/atan/sqrt bounds separate the real part from zero at every candidate and check every threshold. A third-divided-difference sign argument controls the entire cut above the last threshold.
+- The argument principle combines these exact crossings with the previously bounded uniform UV asymptotics. Orientation and phase bookkeeping are explicit. Known isolated poles, including the L=30 collar pair q=-407.9744557683 +/-12.2684914375i, exhaust the counts. No further scalar first-sheet zeros exist for these ten specified coefficient kernels.
+- Thirty numerical slit windings and thirty independent real parameter integrals support the new boundary formulas. They are diagnostics, not the completeness proof. Final integral disagreement is below 1.88e-12 relative; a remaining quadrature warning and the initial cancellation/threshold-rounding corrections are preserved explicitly.
+- This closes a mathematical counting problem for the stated auxiliary model and explicit matching. It does not establish constrained-CEV equivalence, a physical Lorentzian prescription, unitarity or a UV completion, and is not a theorem for every L or arbitrary regulators. No action or model assumption changed.
 
 ## Next bounded work batch
-Prioritize boundary/cut-based global scalar counting using the established UV exclusion, including possible cut-boundary zeros and every regulator threshold. The conformal interior and local collar certificates do not establish a complete whole-sheet inventory. Avoid relying on convergence of uniform |w|<r counts or on a small dispersion residual as a proof of completeness. Keep the common composite-source/measure prescription, Lorentzian contour, interactions and 1/N distinct.
+Use the complete scalar inventories for infinite-boundary subtracted dispersion reconstruction, with rigorous UV tail estimates. Investigate the convergent coefficient-inverse superconvergence sum rule only for the four non-reference matched kernels, whose inverse decays as 1/q^2; raw kernels and matched L=10 approach a constant inverse and require different subtractions. Keep every isolated pole, regulator cut and source normalization explicit. Constrained measure, the common source prescription, Lorentzian contour, interactions and 1/N remain distinct open problems.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.

@@ -1,0 +1,557 @@
+{
+  "scope": "Diagnostics only; exact/analytic proof is in check.py and REPORT.md.",
+  "numpy": "2.3.5",
+  "longdouble_bits": 63,
+  "quadrature_warnings": [
+    {
+      "L": 3,
+      "s": 12.93512600557412,
+      "z": 1.0,
+      "message": "The integral is probably divergent, or slowly convergent."
+    }
+  ],
+  "slit_windings": [
+    {
+      "L": 3,
+      "matched": false,
+      "expected": 2,
+      "nodes": 512,
+      "R": 2048,
+      "winding": 2.0,
+      "maximum_phase_step": 0.09426412184165849,
+      "minimum_sampled_modulus": 0.01695722705269355
+    },
+    {
+      "L": 3,
+      "matched": false,
+      "expected": 2,
+      "nodes": 2048,
+      "R": 2048,
+      "winding": 2.0,
+      "maximum_phase_step": 0.023598668218071304,
+      "minimum_sampled_modulus": 0.01695722705269355
+    },
+    {
+      "L": 3,
+      "matched": false,
+      "expected": 2,
+      "nodes": 8192,
+      "R": 2048,
+      "winding": 2.0,
+      "maximum_phase_step": 0.005900976452569343,
+      "minimum_sampled_modulus": 0.01695696174832239
+    },
+    {
+      "L": 3,
+      "matched": true,
+      "expected": 4,
+      "nodes": 512,
+      "R": 512,
+      "winding": 4.0,
+      "maximum_phase_step": 0.19869395566112932,
+      "minimum_sampled_modulus": 0.007740769520758153
+    },
+    {
+      "L": 3,
+      "matched": true,
+      "expected": 4,
+      "nodes": 2048,
+      "R": 512,
+      "winding": 4.0,
+      "maximum_phase_step": 0.050146967020448324,
+      "minimum_sampled_modulus": 0.007740769520758153
+    },
+    {
+      "L": 3,
+      "matched": true,
+      "expected": 4,
+      "nodes": 8192,
+      "R": 512,
+      "winding": 4.0,
+      "maximum_phase_step": 0.01254428771019553,
+      "minimum_sampled_modulus": 0.007740769520758153
+    },
+    {
+      "L": 5,
+      "matched": false,
+      "expected": 2,
+      "nodes": 512,
+      "R": 3328,
+      "winding": 2.0,
+      "maximum_phase_step": 0.11728137763852692,
+      "minimum_sampled_modulus": 0.01869349101629785
+    },
+    {
+      "L": 5,
+      "matched": false,
+      "expected": 2,
+      "nodes": 2048,
+      "R": 3328,
+      "winding": 2.0,
+      "maximum_phase_step": 0.029381350979318724,
+      "minimum_sampled_modulus": 0.01869349101629785
+    },
+    {
+      "L": 5,
+      "matched": false,
+      "expected": 2,
+      "nodes": 8192,
+      "R": 3328,
+      "winding": 2.0,
+      "maximum_phase_step": 0.007346295434475837,
+      "minimum_sampled_modulus": 0.01869349101629785
+    },
+    {
+      "L": 5,
+      "matched": true,
+      "expected": 4,
+      "nodes": 512,
+      "R": 832,
+      "winding": 4.0,
+      "maximum_phase_step": 0.234613455189928,
+      "minimum_sampled_modulus": 0.00923311578272971
+    },
+    {
+      "L": 5,
+      "matched": true,
+      "expected": 4,
+      "nodes": 2048,
+      "R": 832,
+      "winding": 4.0,
+      "maximum_phase_step": 0.05944022066272509,
+      "minimum_sampled_modulus": 0.00923311578272971
+    },
+    {
+      "L": 5,
+      "matched": true,
+      "expected": 4,
+      "nodes": 8192,
+      "R": 832,
+      "winding": 4.0,
+      "maximum_phase_step": 0.014872694242314074,
+      "minimum_sampled_modulus": 0.00923311578272971
+    },
+    {
+      "L": 10,
+      "matched": false,
+      "expected": 2,
+      "nodes": 512,
+      "R": 6528,
+      "winding": 2.0,
+      "maximum_phase_step": 0.31159544217222496,
+      "minimum_sampled_modulus": 0.010310313756559076
+    },
+    {
+      "L": 10,
+      "matched": false,
+      "expected": 2,
+      "nodes": 2048,
+      "R": 6528,
+      "winding": 2.0,
+      "maximum_phase_step": 0.0797853696900503,
+      "minimum_sampled_modulus": 0.010310313756559076
+    },
+    {
+      "L": 10,
+      "matched": false,
+      "expected": 2,
+      "nodes": 8192,
+      "R": 6528,
+      "winding": 2.0,
+      "maximum_phase_step": 0.019977306768444992,
+      "minimum_sampled_modulus": 0.010310313756559076
+    },
+    {
+      "L": 10,
+      "matched": true,
+      "expected": 2,
+      "nodes": 512,
+      "R": 6528,
+      "winding": 2.0,
+      "maximum_phase_step": 0.31159544217222496,
+      "minimum_sampled_modulus": 0.010310313756559076
+    },
+    {
+      "L": 10,
+      "matched": true,
+      "expected": 2,
+      "nodes": 2048,
+      "R": 6528,
+      "winding": 2.0,
+      "maximum_phase_step": 0.0797853696900503,
+      "minimum_sampled_modulus": 0.010310313756559076
+    },
+    {
+      "L": 10,
+      "matched": true,
+      "expected": 2,
+      "nodes": 8192,
+      "R": 6528,
+      "winding": 2.0,
+      "maximum_phase_step": 0.019977306768444992,
+      "minimum_sampled_modulus": 0.010310313756559076
+    },
+    {
+      "L": 30,
+      "matched": false,
+      "expected": 1,
+      "nodes": 512,
+      "R": 77312,
+      "winding": 1.0,
+      "maximum_phase_step": 0.19729530241054904,
+      "minimum_sampled_modulus": 0.04040743729287551
+    },
+    {
+      "L": 30,
+      "matched": false,
+      "expected": 1,
+      "nodes": 2048,
+      "R": 77312,
+      "winding": 1.0,
+      "maximum_phase_step": 0.05050493252618484,
+      "minimum_sampled_modulus": 0.04040743729287551
+    },
+    {
+      "L": 30,
+      "matched": false,
+      "expected": 1,
+      "nodes": 8192,
+      "R": 77312,
+      "winding": 1.0,
+      "maximum_phase_step": 0.012635289765847556,
+      "minimum_sampled_modulus": 0.04040743729287551
+    },
+    {
+      "L": 30,
+      "matched": true,
+      "expected": 5,
+      "nodes": 512,
+      "R": 4832,
+      "winding": 5.0,
+      "maximum_phase_step": 0.7082467764580753,
+      "minimum_sampled_modulus": 0.011015119710940416
+    },
+    {
+      "L": 30,
+      "matched": true,
+      "expected": 5,
+      "nodes": 2048,
+      "R": 4832,
+      "winding": 5.0,
+      "maximum_phase_step": 0.1840282952208854,
+      "minimum_sampled_modulus": 0.011015119710940416
+    },
+    {
+      "L": 30,
+      "matched": true,
+      "expected": 5,
+      "nodes": 8192,
+      "R": 4832,
+      "winding": 5.0,
+      "maximum_phase_step": 0.046183450949131316,
+      "minimum_sampled_modulus": 0.011015119710940416
+    },
+    {
+      "L": 100,
+      "matched": false,
+      "expected": 1,
+      "nodes": 512,
+      "R": 256512,
+      "winding": 1.0,
+      "maximum_phase_step": 0.1981110161402279,
+      "minimum_sampled_modulus": 0.24372937374978557
+    },
+    {
+      "L": 100,
+      "matched": false,
+      "expected": 1,
+      "nodes": 2048,
+      "R": 256512,
+      "winding": 1.0,
+      "maximum_phase_step": 0.05063130097834117,
+      "minimum_sampled_modulus": 0.24372937374978557
+    },
+    {
+      "L": 100,
+      "matched": false,
+      "expected": 1,
+      "nodes": 8192,
+      "R": 256512,
+      "winding": 1.0,
+      "maximum_phase_step": 0.012664771697286558,
+      "minimum_sampled_modulus": 0.24372937374978557
+    },
+    {
+      "L": 100,
+      "matched": true,
+      "expected": 3,
+      "nodes": 512,
+      "R": 16032,
+      "winding": 3.0,
+      "maximum_phase_step": 0.8033218021053726,
+      "minimum_sampled_modulus": 0.01125990296813533
+    },
+    {
+      "L": 100,
+      "matched": true,
+      "expected": 3,
+      "nodes": 2048,
+      "R": 16032,
+      "winding": 3.0,
+      "maximum_phase_step": 0.23903870443513764,
+      "minimum_sampled_modulus": 0.01125990296813533
+    },
+    {
+      "L": 100,
+      "matched": true,
+      "expected": 3,
+      "nodes": 8192,
+      "R": 16032,
+      "winding": 3.0,
+      "maximum_phase_step": 0.060616965240647545,
+      "minimum_sampled_modulus": 0.01125990296813533
+    }
+  ],
+  "independent_real_parameter_integrals": [
+    {
+      "L": 3,
+      "s": 4.0,
+      "parameter_real_A_over_C": -3.0619914231703995,
+      "interval_midpoint": -3.0619914231703977,
+      "relative_discrepancy": 5.140591518655148e-16,
+      "quadrature_error_estimate": 8.85147281618546e-12
+    },
+    {
+      "L": 3,
+      "s": 12.0,
+      "parameter_real_A_over_C": 58.81569615419537,
+      "interval_midpoint": 58.815696154195365,
+      "relative_discrepancy": 9.013435679970228e-17,
+      "quadrature_error_estimate": 9.868186965626563e-13
+    },
+    {
+      "L": 3,
+      "s": 24.0,
+      "parameter_real_A_over_C": -57.58303232257586,
+      "interval_midpoint": -57.58303232257598,
+      "relative_discrepancy": 2.1002364233566803e-15,
+      "quadrature_error_estimate": 9.03624222074516e-11
+    },
+    {
+      "L": 3,
+      "s": 64.0,
+      "parameter_real_A_over_C": 0.6226236989544708,
+      "interval_midpoint": 0.6226236989550211,
+      "relative_discrepancy": 5.503913297344454e-13,
+      "quadrature_error_estimate": 1.3215377510260414e-11
+    },
+    {
+      "L": 3,
+      "s": 12.93512600557412,
+      "parameter_real_A_over_C": 58.53221383948311,
+      "interval_midpoint": 58.53221383948315,
+      "relative_discrepancy": 6.479849571856178e-16,
+      "quadrature_error_estimate": 1.3162887979280173e-12
+    },
+    {
+      "L": 3,
+      "s": 41.561202182228044,
+      "parameter_real_A_over_C": -58.29861522900332,
+      "interval_midpoint": -58.2986152290046,
+      "relative_discrepancy": 2.1884041572677164e-14,
+      "quadrature_error_estimate": 3.248711185548552e-12
+    },
+    {
+      "L": 5,
+      "s": 4.0,
+      "parameter_real_A_over_C": -2.9519577792988536,
+      "interval_midpoint": -2.9519577792988425,
+      "relative_discrepancy": 3.757739810820892e-15,
+      "quadrature_error_estimate": 2.3063530850157144e-12
+    },
+    {
+      "L": 5,
+      "s": 20.0,
+      "parameter_real_A_over_C": 193.0407048825216,
+      "interval_midpoint": 193.0407048825215,
+      "relative_discrepancy": 4.675037535173685e-16,
+      "quadrature_error_estimate": 4.378016994088906e-12
+    },
+    {
+      "L": 5,
+      "s": 40.0,
+      "parameter_real_A_over_C": -212.52131028880083,
+      "interval_midpoint": -212.52131028880103,
+      "relative_discrepancy": 9.270085689383949e-16,
+      "quadrature_error_estimate": 5.433267715820721e-10
+    },
+    {
+      "L": 5,
+      "s": 104.0,
+      "parameter_real_A_over_C": 2.1043408444218277,
+      "interval_midpoint": 2.1043408444252725,
+      "relative_discrepancy": 1.636969138974995e-12,
+      "quadrature_error_estimate": 3.0815112366562e-11
+    },
+    {
+      "L": 5,
+      "s": 21.137916466388965,
+      "parameter_real_A_over_C": 192.38273529589148,
+      "interval_midpoint": 192.38273529589134,
+      "relative_discrepancy": 8.048973631725922e-16,
+      "quadrature_error_estimate": 6.0665616908583276e-12
+    },
+    {
+      "L": 5,
+      "s": 67.60561091399174,
+      "parameter_real_A_over_C": -214.5043971356926,
+      "interval_midpoint": -214.50439713569625,
+      "relative_discrepancy": 1.7010713622866003e-14,
+      "quadrature_error_estimate": 1.611238309329595e-11
+    },
+    {
+      "L": 10,
+      "s": 4.0,
+      "parameter_real_A_over_C": -1.6281394884535265,
+      "interval_midpoint": -1.6281394884535618,
+      "relative_discrepancy": 2.1655549109442443e-14,
+      "quadrature_error_estimate": 1.196447227219909e-11
+    },
+    {
+      "L": 10,
+      "s": 40.0,
+      "parameter_real_A_over_C": 859.1354479881344,
+      "interval_midpoint": 859.1354479881336,
+      "relative_discrepancy": 9.101359722434567e-16,
+      "quadrature_error_estimate": 3.045233068717621e-11
+    },
+    {
+      "L": 10,
+      "s": 80.0,
+      "parameter_real_A_over_C": -1029.7306331264151,
+      "interval_midpoint": -1029.7306331264158,
+      "relative_discrepancy": 7.381140836324648e-16,
+      "quadrature_error_estimate": 3.827874466873577e-09
+    },
+    {
+      "L": 10,
+      "s": 204.0,
+      "parameter_real_A_over_C": 9.237024800250873,
+      "interval_midpoint": 9.237024800265448,
+      "relative_discrepancy": 1.577907899555915e-12,
+      "quadrature_error_estimate": 1.199377100389713e-10
+    },
+    {
+      "L": 10,
+      "s": 41.77400858019107,
+      "parameter_real_A_over_C": 856.8002612935251,
+      "interval_midpoint": 856.8002612935259,
+      "relative_discrepancy": 8.738727584849573e-16,
+      "quadrature_error_estimate": 3.73792407416202e-11
+    },
+    {
+      "L": 10,
+      "s": 132.75815324952652,
+      "parameter_real_A_over_C": -1036.8226831491766,
+      "interval_midpoint": -1036.822683149174,
+      "relative_discrepancy": 2.3677386615373084e-15,
+      "quadrature_error_estimate": 7.09308431761145e-11
+    },
+    {
+      "L": 30,
+      "s": 4.0,
+      "parameter_real_A_over_C": 6.380886735080293,
+      "interval_midpoint": 6.380886735080104,
+      "relative_discrepancy": 2.958515883252552e-14,
+      "quadrature_error_estimate": 1.434482804690168e-10
+    },
+    {
+      "L": 30,
+      "s": 120.0,
+      "parameter_real_A_over_C": 8245.51881614196,
+      "interval_midpoint": 8245.518816141956,
+      "relative_discrepancy": 3.380143740091624e-16,
+      "quadrature_error_estimate": 3.5213510131544e-10
+    },
+    {
+      "L": 30,
+      "s": 240.0,
+      "parameter_real_A_over_C": -10447.883245887358,
+      "interval_midpoint": -10447.883245887384,
+      "relative_discrepancy": 2.490548807788146e-15,
+      "quadrature_error_estimate": 4.991995571278817e-08
+    },
+    {
+      "L": 30,
+      "s": 604.0,
+      "parameter_real_A_over_C": 85.04404778127075,
+      "interval_midpoint": 85.04404778143055,
+      "relative_discrepancy": 1.8789969754198328e-12,
+      "quadrature_error_estimate": 2.096006374543577e-09
+    },
+    {
+      "L": 30,
+      "s": 124.47835932272699,
+      "parameter_real_A_over_C": 8225.954171766387,
+      "interval_midpoint": 8225.954171766392,
+      "relative_discrepancy": 7.162908415553912e-16,
+      "quadrature_error_estimate": 4.255301425890318e-10
+    },
+    {
+      "L": 30,
+      "s": 393.42902821745963,
+      "parameter_real_A_over_C": -10502.256689801568,
+      "interval_midpoint": -10502.256689801658,
+      "relative_discrepancy": 8.57297029036164e-15,
+      "quadrature_error_estimate": 5.135348039858377e-10
+    },
+    {
+      "L": 100,
+      "s": 4.0,
+      "parameter_real_A_over_C": 38.4881999973569,
+      "interval_midpoint": 38.48819999737019,
+      "relative_discrepancy": 3.451742840764048e-13,
+      "quadrature_error_estimate": 2.0280803748057755e-09
+    },
+    {
+      "L": 100,
+      "s": 400.0,
+      "parameter_real_A_over_C": 93592.41237842792,
+      "interval_midpoint": 93592.41237842798,
+      "relative_discrepancy": 6.893430649714465e-16,
+      "quadrature_error_estimate": 5.199167847626093e-09
+    },
+    {
+      "L": 100,
+      "s": 800.0,
+      "parameter_real_A_over_C": -120908.16688112933,
+      "interval_midpoint": -120908.16688113005,
+      "relative_discrepancy": 5.915794304086299e-15,
+      "quadrature_error_estimate": 6.358593683011654e-07
+    },
+    {
+      "L": 100,
+      "s": 2004.0,
+      "parameter_real_A_over_C": 940.3970797233217,
+      "interval_midpoint": 940.3970797225506,
+      "relative_discrepancy": 8.199072082510059e-13,
+      "quadrature_error_estimate": 1.9399550203852607e-08
+    },
+    {
+      "L": 100,
+      "s": 414.03493210659,
+      "parameter_real_A_over_C": 93380.10615963727,
+      "interval_midpoint": 93380.10615963745,
+      "relative_discrepancy": 1.905786370538494e-15,
+      "quadrature_error_estimate": 6.3904298497142415e-09
+    },
+    {
+      "L": 100,
+      "s": 1305.8158824755164,
+      "parameter_real_A_over_C": -121465.07482431237,
+      "interval_midpoint": -121465.07482431375,
+      "relative_discrepancy": 1.1375696492733196e-14,
+      "quadrature_error_estimate": 2.023014264310934e-08
+    }
+  ]
+}
