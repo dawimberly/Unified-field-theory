@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "new_primary_literature_read": false,
+  "access_result": "Web retrieval returned empty isError results for the targeted primary-literature search and direct PDF opens. No content was returned or used.",
+  "attempted_unverified_urls": [
+    "https://arxiv.org/pdf/hep-th/0107088",
+    "https://arxiv.org/pdf/gr-qc/9602052"
+  ],
+  "pending_search_topics": [
+    "semiclassical gravity runaway solutions, retarded versus future boundary conditions",
+    "higher-derivative Euclidean contour prescriptions and causality",
+    "effective-theory order reduction versus exact inversion"
+  ],
+  "local_inputs": [
+    "experiments/infinite_scalar_dispersion_2026_10_30/results.json",
+    "experiments/spin2_global_count_2026_10_30/results.json"
+  ],
+  "scope": "The report contains explicit conditional frequency and residue derivations, not assertions about uninspected papers. New literature comparison remains pending."
+}
