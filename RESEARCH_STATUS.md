@@ -25,17 +25,16 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-30 US Central)
-See experiments/matched_spin2_2026_10_30/REPORT.md and check.py/results.json.
-- Audited the explicitly Lref=10 coefficient-matched spin-2 kernels; no physical bare action was adopted.
-- Additional principal-sheet zeros: L=3 q=60.3330308219; L=5 q=82.4469390832; L=30 q=8.72600156453 +/-78.0620223980i; L=100 q=10.0532001673 +/-66.1017934580i. L=10 retains its original no-extra-pole theorem.
-- Independent parameter integrals at 256/512/1024 nodes agree at the roots (maximum absolute matched-kernel residual 4.56e-14). Thirty-eight adaptive isolating/upper-rectangle contour checks pass.
-- Derived positive-measure restrictions for F=K2_matched/q=S+a+bq: b<=0 excludes off-axis zeros and gives a unique positive real zero here; b>0 permits at most one simple conjugate pair. A Cauchy-Schwarz real-axis lower bound excludes real zeros for tested L=30,100, with floating-point coefficient signs rather than interval certification.
-- Extra zeros have |q|/4=15.08--20.62 and quadratic/Einstein ratios 1.38--1.88. These are full modified-kernel poles, not controlled low-energy expansion predictions or constrained-CEV stability conclusions.
-- Earlier independently verified scalar threshold/sheet continuation and matched scalar poles remain in experiments/threshold_independent_2026_10_30/. The original no-bare spin-2 theorem remains valid under its original hypotheses.
-- All new assertions passed. No previous full scans were repeated. No UV completion or healthy theory is established.
+See experiments/composite_source_bridge_2026_10_30/REPORT.md and check.py/results.json.
+- Inspected Batz/Erlich/Mrini arXiv:2011.06541v1 directly, including composite metric, canceling clock construction, adiabatic truncation, leading stress bubble chain and metric contact discussion. Publisher DOI access was blocked; final-version identity is not asserted.
+- Derived a conditional finite-dimensional quadratic stress/source bridge, with P=(D-2)I/2-vv^T/2 and H=V P^-1/2. The auxiliary response equals the linear composite response plus local 2P/V; the ordered bubble amplitude is auxiliary response/4 for the specified -hT/2 coupling.
+- Eight noncommuting rational-matrix cases in D=3,4,5,6 and 24 source forms verify these identities exactly. This is algebraic evidence, not a convergent indefinite Gaussian integral or a continuum path-integral simulation.
+- In D=4, identifying V=p and matching the stress-insertion convention would reproduce the determinant's stationary contact and bubble normalization. Those identifications remain conditional on a common regulated generating functional and local source prescription.
+- The literature audit does not justify dropping our PV contact terms or transferring high-q auxiliary poles to constrained CEV. No full measure equality, microscopic Lorentzian cycle, UV completion or healthy theory is established.
+- Earlier independently verified threshold and matched spin-2 results remain in their existing experiment folders. No passing root/Ward scan was repeated.
 
 ## Next bounded work batch
-Inspect the pending published background-independent composite/source definition (arXiv:2011.06541) before transferring any auxiliary spectra to constrained CEV. Then formulate a controlled low-energy matched response comparison with explicit truncation/error assumptions, preserving the distinction between that expansion and fully resummed polynomial-modified kernels. Global scalar zero control, measure, Lorentzian contour and interactions remain open.
+Derive the regulated scalar stress-bubble/contact dictionary, separating fixed-field seagulls, connected stress correlators and the stationary cosmological term. Then perform a controlled low-energy matched response comparison with explicit remainder bounds; do not interpret high-q resummed polynomial poles as low-energy predictions. Any composite-spectrum transfer still requires the same regulated insertions, local source terms and measure assumptions. Global scalar zero control, Lorentzian contour, interactions and 1/N remain open.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
