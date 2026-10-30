@@ -22,8 +22,15 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 4. Matching Einstein and independent curvature-squared coefficients across regulator prescriptions. Separately setting bare terms to zero is not a matched comparison of one physical theory.
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
+## Latest bounded batch (2026-10-29 US Central)
+See experiments/complex_scalar_first_sheet_2026_10_30/REPORT.md and its executable check.py/results.json.
+- Scalar first-sheet principal-branch formula agrees with independent 1024-node parameter integration at 25 off-axis points (max relative error 4.58e-12).
+- Ninety adaptively resolved upper-half-plane contour evaluations have zero winding for A/q. R=4L,20L,100L; imaginary floors 0.05,0.005; three initial resolutions. Max final phase step 0.233 radians. This excludes no untested near-axis region, real-axis root, second-sheet pole, or remote complex root; numerical contour sampling is not a certified proof.
+- Fifteen twice-subtracted dispersion reconstructions of A agree to max relative error 3.19e-12. This is the kernel, not 1/A: no isolated-pole terms enter this check. Subtraction data are supplied from the exact kernel.
+- Existing subthreshold scalar poles and all earlier limitations remain.
+
 ## Next bounded work batch
-Implement a robust first-sheet complex-pole search with an explicit branch prescription, quadrature convergence, and contour winding/root counts. Then reconstruct a subtracted dispersion relation including isolated poles and regulator cuts. Audit formulas before extension. Save a dated report and reproducible results; update this checkpoint.
+Count known real subthreshold roots by cut-avoiding contours as a nonzero-count calibration. Reconstruct 1/A including massless and isolated poles, regulator cuts, and large-circle/asymptotic control. Improve near-axis error control; spin-2 complex poles remain untested. Keep regulator matching and constrained measure separate. See latest report for bounds and reproduction.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
