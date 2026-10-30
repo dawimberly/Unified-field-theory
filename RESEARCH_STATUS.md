@@ -23,16 +23,16 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-29 US Central)
-See experiments/inverse_scalar_dispersion_2026_10_30/REPORT.md and check.py/results.json.
-- Fifteen cut-avoiding subthreshold contours reproduce A/q zero counts [1,1,1,0,0] for L=[3,5,10,30,100], stable across three resolutions. Maximum phase step 0.04184 radians.
-- Isolated roots and residues agree with the earlier scalar calculation. The massless residue is included as tensor-structure bookkeeping, not a standalone physical scalar interpretation.
-- Forty-five once-subtracted reconstructions of 1/A include massless and isolated poles, all regulator cuts and an explicit finite outer circle. Maximum relative closure error is 2.00e-13.
-- Omitting the outer circle leaves maximum relative errors 2.164e-4,1.508e-6,5.486e-8 at R/L=100,1000,5000. The outer term quantitatively closes these residuals.
-- A tends to (3C/8) sum c_i z_i^2 log(z_i); 1/A therefore has a constant asymptote. An unsubtracted inverse spectral representation cannot silently drop it.
-- Preceding bounded scalar complex-contour/branch audit remains at experiments/complex_scalar_first_sheet_2026_10_30/. Global pole absence, physical stability, regulator matching and constrained equivalence remain unproved.
+See experiments/spin2_stieltjes_2026_10_30/REPORT.md and check.py/results.json.
+- Derived K2 from the saved transverse-traceless full tensor Hessian including stationary contacts; 25 tensor comparisons agree within 9.37e-14 absolute.
+- Applying the standard Genocchi-Hermite divided-difference identity gives K2(q)/q=H integral dx d lambda [1/Z]/[q+Z/t], H=-C/(4w0)>0, Z=sum lambda_i z_i, t=x(1-x). This positive Stieltjes representation analytically excludes all additional first-sheet spin-2 zeros in the fixed four-species no-bare-curvature model.
+- The massless spin-2 residue is 24/G>0. Its continuum sign remains positive above PV thresholds as well. This does not repair the scalar negative spectral regions or establish physical UV unitarity.
+- 20 off-axis quadrature checks agree within 2.67e-14 relative. Ten simplex normalization checks converge to at worst 1.15e-6; 30 bounded contour windings are zero. Fifteen kernel dispersion checks agree within 3.81e-11 relative.
+- This is a conditional analytic result ready for independent review, not external validation or a novelty claim. Adding bare curvature terms can invalidate the representation.
+- Prior scalar contour and inverse-dispersion audits remain under their existing experiment directories. Scalar global pole control, physical stability, regulator matching and constrained equivalence remain unproved.
 
 ## Next bounded work batch
-Derive and audit the spin-2 first-sheet kernel from the saved full tensor Hessian, then apply complex-root/dispersion checks with explicit branches and boundaries. Scalar near-axis strips and rigorous global zero/asymptotic control remain open. Match Einstein and independent curvature-squared terms before interpreting regulator differences physically. Preserve all prior experiments.
+Apply divided-difference/measure methods to the scalar kernel and attempt analytic control of its remaining zeros. Then match the induced Einstein and two independent curvature-squared coefficients before physical regulator comparisons. Keep bare-curvature changes distinct from the proven fixed-prescription spin-2 statement. Preserve all previous experiments.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
