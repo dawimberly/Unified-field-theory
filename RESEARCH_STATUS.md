@@ -23,14 +23,16 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-29 US Central)
-See experiments/complex_scalar_first_sheet_2026_10_30/REPORT.md and its executable check.py/results.json.
-- Scalar first-sheet principal-branch formula agrees with independent 1024-node parameter integration at 25 off-axis points (max relative error 4.58e-12).
-- Ninety adaptively resolved upper-half-plane contour evaluations have zero winding for A/q. R=4L,20L,100L; imaginary floors 0.05,0.005; three initial resolutions. Max final phase step 0.233 radians. This excludes no untested near-axis region, real-axis root, second-sheet pole, or remote complex root; numerical contour sampling is not a certified proof.
-- Fifteen twice-subtracted dispersion reconstructions of A agree to max relative error 3.19e-12. This is the kernel, not 1/A: no isolated-pole terms enter this check. Subtraction data are supplied from the exact kernel.
-- Existing subthreshold scalar poles and all earlier limitations remain.
+See experiments/inverse_scalar_dispersion_2026_10_30/REPORT.md and check.py/results.json.
+- Fifteen cut-avoiding subthreshold contours reproduce A/q zero counts [1,1,1,0,0] for L=[3,5,10,30,100], stable across three resolutions. Maximum phase step 0.04184 radians.
+- Isolated roots and residues agree with the earlier scalar calculation. The massless residue is included as tensor-structure bookkeeping, not a standalone physical scalar interpretation.
+- Forty-five once-subtracted reconstructions of 1/A include massless and isolated poles, all regulator cuts and an explicit finite outer circle. Maximum relative closure error is 2.00e-13.
+- Omitting the outer circle leaves maximum relative errors 2.164e-4,1.508e-6,5.486e-8 at R/L=100,1000,5000. The outer term quantitatively closes these residuals.
+- A tends to (3C/8) sum c_i z_i^2 log(z_i); 1/A therefore has a constant asymptote. An unsubtracted inverse spectral representation cannot silently drop it.
+- Preceding bounded scalar complex-contour/branch audit remains at experiments/complex_scalar_first_sheet_2026_10_30/. Global pole absence, physical stability, regulator matching and constrained equivalence remain unproved.
 
 ## Next bounded work batch
-Count known real subthreshold roots by cut-avoiding contours as a nonzero-count calibration. Reconstruct 1/A including massless and isolated poles, regulator cuts, and large-circle/asymptotic control. Improve near-axis error control; spin-2 complex poles remain untested. Keep regulator matching and constrained measure separate. See latest report for bounds and reproduction.
+Derive and audit the spin-2 first-sheet kernel from the saved full tensor Hessian, then apply complex-root/dispersion checks with explicit branches and boundaries. Scalar near-axis strips and rigorous global zero/asymptotic control remain open. Match Einstein and independent curvature-squared terms before interpreting regulator differences physically. Preserve all prior experiments.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
