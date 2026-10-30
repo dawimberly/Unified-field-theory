@@ -25,16 +25,16 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-29 US Central)
-See experiments/scalar_negative_index_2026_10_30/REPORT.md and check.py/results.json.
-- Read Rovnyak and Sakhnovich's peer-reviewed generalized Nevanlinna definition and audited applicability.
-- With h(z)=1/A(-z), a negative scalar continuum interval forces its kernel to have arbitrarily many negative squares. The elementary diagonal-limit proof rules out every finite-index N_kappa class; it does not prove extra complex poles.
-- Five exact rational inequalities at s=6L establish strictly negative continuum points for all five spectra. Continuity supplies open negative intervals.
-- Seventy-five new kernel matrices illustrate growing negative index; at eta/L=1e-6 all n=2,4,8,16,32 directions are negative in each spectrum. Finite matrices are illustrations, not the infinite-index proof.
-- Subtracting finitely many real pole/contact terms does not remove the obstruction. Real polynomial low-energy counterterms added to A leave the continuum sign unchanged.
-- Prior scalar identity/matching and fixed-prescription spin-2 proof remain in their existing experiment directories. No full-model health or constrained-CEV spectrum transfer follows.
+See experiments/auxiliary_source_matching_2026_10_30/REPORT.md, sources.json and check.py/results.json.
+- Inspected published source/Jacobian conditions in Criado-Perez-Victoria Section 2 and Carone's auxiliary/constrained distinction (footnote 4, Section IV). Henneaux's auxiliary-preserving gauge result was accessible only as an abstract; no model-specific quantum measure was inferred.
+- Derived the finite-regulator triangular shift g=G(phi)+h (unit change-of-variable Jacobian), followed by the distinct induced weight I_phi[0] and source factor I_phi[J]/I_phi[0]. Matching matter sources requires the induced reduced measure; matching independent-g insertions additionally requires their source cumulants/conditional-mean map.
+- Computed the actual algebraic metric Hessian on a definite D=4 branch: nine eigenvalues V/2 and one -V/2; det H=-(V/2)^10. The constraint Jacobian has det J_T=-V^10 and is not the canonical Poisson matrix.
+- Nine new high-precision directional checks and exact fraction determinants passed. The leading stationary-phase magnitude scales as |V|^-5, so it is not generically a field-independent normalization. No quantum integration cycle has been defined.
+- Qualified the imported classical bridge: a raw real positive-flavor gradient Gram matrix is definite when nonsingular and cannot itself yield a Lorentzian G by scalar multiplication. This does not rule out a renormalized quantum composite, complex continuation, clock-containing CEV, or the published perturbative construction.
+- All previous auxiliary pole/dispersion results remain conditional; no spectrum transfer or physical ghost diagnosis follows from the algebraic trace direction.
 
 ## Next bounded work batch
-Stop pursuing finite-index Nevanlinna bounds for the same full signed-PV scalar response. Prioritize published auxiliary-preserving quantization/source-matching results and specify the model's reduced/constrained generating-functional assumptions. Scalar global zero control remains open; any future slit-plane certification needs new error/asymptotic control rather than repeating the existing finite scans. Keep the stochastic comparison separate and preserve all prior data.
+Inspect the renormalized composite, self-consistency, and gauge/measure definition in background-independent clock-free composite gravity (arXiv:2011.06541 and published version) before trying to transfer the auxiliary spectrum. Specify which limits/observables are actually controlled. A source-matched large-N comparison and Lorentzian cycle remain missing; preserve all earlier data and avoid repeated passing scans.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.

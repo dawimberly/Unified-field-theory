@@ -1,0 +1,102 @@
+{
+  "scope": "D=4 algebraic S0=sqrt(det g)[tr(g^-1 P)/2-V], P=V I, definite G=I. No gauge, continuum, quantum vacuum or Lorentzian contour claim.",
+  "versions": {
+    "python": "3.12.14"
+  },
+  "directional_hessians": [
+    {
+      "V": 1,
+      "polarization": "trace",
+      "predicted_second_derivative": "-2",
+      "numeric_second_derivative": "-2.000000000000000000000000000000000000000000000",
+      "absolute_error": "0E-45"
+    },
+    {
+      "V": 1,
+      "polarization": "traceless_diagonal",
+      "predicted_second_derivative": "1",
+      "numeric_second_derivative": "1.000000000000000000000000750000000000000000000",
+      "absolute_error": "7.50000000000000000000E-25"
+    },
+    {
+      "V": 1,
+      "polarization": "off_diagonal",
+      "predicted_second_derivative": "1",
+      "numeric_second_derivative": "1.000000000000000000000000750000000000000000000",
+      "absolute_error": "7.50000000000000000000E-25"
+    },
+    {
+      "V": 4,
+      "polarization": "trace",
+      "predicted_second_derivative": "-8",
+      "numeric_second_derivative": "-8.000000000000000000000000000000000000000000000",
+      "absolute_error": "0E-45"
+    },
+    {
+      "V": 4,
+      "polarization": "traceless_diagonal",
+      "predicted_second_derivative": "4",
+      "numeric_second_derivative": "4.000000000000000000000003000000000000000000000",
+      "absolute_error": "3.000000000000000000000E-24"
+    },
+    {
+      "V": 4,
+      "polarization": "off_diagonal",
+      "predicted_second_derivative": "4",
+      "numeric_second_derivative": "4.000000000000000000000003000000000000000000000",
+      "absolute_error": "3.000000000000000000000E-24"
+    },
+    {
+      "V": 9,
+      "polarization": "trace",
+      "predicted_second_derivative": "-18",
+      "numeric_second_derivative": "-18.00000000000000000000000000000000000000000000",
+      "absolute_error": "0E-44"
+    },
+    {
+      "V": 9,
+      "polarization": "traceless_diagonal",
+      "predicted_second_derivative": "9",
+      "numeric_second_derivative": "9.00000000000000000000000675000000000000000000",
+      "absolute_error": "6.75000000000000000000E-24"
+    },
+    {
+      "V": 9,
+      "polarization": "off_diagonal",
+      "predicted_second_derivative": "9",
+      "numeric_second_derivative": "9.00000000000000000000000675000000000000000000",
+      "absolute_error": "6.75000000000000000000E-24"
+    }
+  ],
+  "determinants": [
+    {
+      "V": 1,
+      "hessian_det": "-1/1024",
+      "constraint_jacobian_det": "-1",
+      "hessian_traceless_eigenvalue": "1/2",
+      "hessian_trace_eigenvalue": "-1/2",
+      "stationary_phase_absolute_factor": "32"
+    },
+    {
+      "V": 4,
+      "hessian_det": "-1024",
+      "constraint_jacobian_det": "-1048576",
+      "hessian_traceless_eigenvalue": "2",
+      "hessian_trace_eigenvalue": "-2",
+      "stationary_phase_absolute_factor": "1/32"
+    },
+    {
+      "V": 9,
+      "hessian_det": "-3486784401/1024",
+      "constraint_jacobian_det": "-3486784401",
+      "hessian_traceless_eigenvalue": "9/2",
+      "hessian_trace_eigenvalue": "-9/2",
+      "stationary_phase_absolute_factor": "32/59049"
+    }
+  ],
+  "exact_general_results": {
+    "hessian": "sqrt(det G)*V/(D-2)*[tr(G^-1 h G^-1 j)-tr(G^-1 h)tr(G^-1 j)/2]",
+    "metric_shift_jacobian": "1 for the finite-dimensional triangular map (phi,h)->(phi,g=G(phi)+h)",
+    "raw_Gram_signature": "P=B^T B is positive semidefinite for real positive-flavor gradients; full-rank P is positive definite"
+  }
+}
