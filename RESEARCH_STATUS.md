@@ -15,24 +15,26 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 - Physical-only continuum scalar weights are positive analytically below the first PV threshold, confirmed in 750 samples. The spin-2 inverse cut sign is positive there too.
 - Above regulator thresholds each tested PV spectrum develops negative scalar spectral weight. PV is not thereby a physical unitary UV completion.
 
+- Fixed four-species no-bare-curvature spin-2 determinant: the Genocchi-Hermite representation makes K2/q a positive Stieltjes transform and excludes additional first-sheet spin-2 poles. This does not extend automatically to modified kernels or constrained CEV.
+
 ## Open problems
-1. First-sheet complex poles and dispersion-relation reconstruction.
+1. Global scalar first-sheet zero control. Bounded scalar contours and finite-radius inverse dispersion checks exist; the fixed-prescription spin-2 coefficient has an analytic positive-measure zero-exclusion result.
 2. Lorentzian contour from the microscopic metric path integral, rather than only Euclidean sign calibration.
 3. Constrained metric/clock-field measure equivalence.
 4. Matching Einstein and independent curvature-squared coefficients across regulator prescriptions. Separately setting bare terms to zero is not a matched comparison of one physical theory.
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-29 US Central)
-See experiments/spin2_stieltjes_2026_10_30/REPORT.md and check.py/results.json.
-- Derived K2 from the saved transverse-traceless full tensor Hessian including stationary contacts; 25 tensor comparisons agree within 9.37e-14 absolute.
-- Applying the standard Genocchi-Hermite divided-difference identity gives K2(q)/q=H integral dx d lambda [1/Z]/[q+Z/t], H=-C/(4w0)>0, Z=sum lambda_i z_i, t=x(1-x). This positive Stieltjes representation analytically excludes all additional first-sheet spin-2 zeros in the fixed four-species no-bare-curvature model.
-- The massless spin-2 residue is 24/G>0. Its continuum sign remains positive above PV thresholds as well. This does not repair the scalar negative spectral regions or establish physical UV unitarity.
-- 20 off-axis quadrature checks agree within 2.67e-14 relative. Ten simplex normalization checks converge to at worst 1.15e-6; 30 bounded contour windings are zero. Fifteen kernel dispersion checks agree within 3.81e-11 relative.
-- This is a conditional analytic result ready for independent review, not external validation or a novelty claim. Adding bare curvature terms can invalidate the representation.
-- Prior scalar contour and inverse-dispersion audits remain under their existing experiment directories. Scalar global pole control, physical stability, regulator matching and constrained equivalence remain unproved.
+See experiments/scalar_identity_matching_2026_10_30/REPORT.md and check.py/results.json.
+- Read and imported three current conditional notes under bots/gpt/research_notes/2026-10-29/: literature elimination, matched constraint identity, and stochastic regulator screening. They do not establish quantum equivalence or adopt a stochastic microscopic theory.
+- Applying the established divided-difference identity yields an exact scalar simplex formula, but its integrand has no fixed sign. The spin-2 positive-measure zero theorem cannot be copied to the scalar channel. Global scalar zero control is still open.
+- Six scalar simplex checks converge to maximum relative error 3.806e-8. A failed 48-node resolution check (1.436e-5 error) is retained; the wide L=100 cases were refined to 96 nodes.
+- Computed a formal reference-L=10 map matching the Einstein slope and both independent tensor q^2 coefficients. This is bookkeeping, not an adopted bare action or physical regulator.
+- Thirty exact-kernel matched differences agree with independently derived Taylor differences through q^8 within 5.81e-17 absolute. First unmatched cubic coefficients are a3=(17C/1120)sum c/z and k3=(C/3360)sum c/z; Delta a3=51 Delta k3 in this family. Higher-order mismatch is not a fixed-theory prediction.
+- The prior spin-2 analytic proof and earlier scalar contour/dispersion data remain in their existing experiment folders. Matching polynomials can invalidate the fixed-prescription spin-2 theorem and were not used to claim a pole cure.
 
 ## Next bounded work batch
-Apply divided-difference/measure methods to the scalar kernel and attempt analytic control of its remaining zeros. Then match the induced Einstein and two independent curvature-squared coefficients before physical regulator comparisons. Keep bare-curvature changes distinct from the proven fixed-prescription spin-2 statement. Preserve all previous experiments.
+Use established signed-measure/generalized-Nevanlinna results only where their hypotheses can be verified for the scalar kernel; otherwise retain the unresolved global-zero question. Prioritize the imported literature's matched-observable and reduced-measure construction before transferring auxiliary poles to constrained CEV. Inspect the stochastic comparison's source/state-space assumptions without adopting them. Preserve all earlier experiments; do not repeat passing scans without a new reason.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
