@@ -25,16 +25,16 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-29 US Central)
-See experiments/scalar_identity_matching_2026_10_30/REPORT.md and check.py/results.json.
-- Read and imported three current conditional notes under bots/gpt/research_notes/2026-10-29/: literature elimination, matched constraint identity, and stochastic regulator screening. They do not establish quantum equivalence or adopt a stochastic microscopic theory.
-- Applying the established divided-difference identity yields an exact scalar simplex formula, but its integrand has no fixed sign. The spin-2 positive-measure zero theorem cannot be copied to the scalar channel. Global scalar zero control is still open.
-- Six scalar simplex checks converge to maximum relative error 3.806e-8. A failed 48-node resolution check (1.436e-5 error) is retained; the wide L=100 cases were refined to 96 nodes.
-- Computed a formal reference-L=10 map matching the Einstein slope and both independent tensor q^2 coefficients. This is bookkeeping, not an adopted bare action or physical regulator.
-- Thirty exact-kernel matched differences agree with independently derived Taylor differences through q^8 within 5.81e-17 absolute. First unmatched cubic coefficients are a3=(17C/1120)sum c/z and k3=(C/3360)sum c/z; Delta a3=51 Delta k3 in this family. Higher-order mismatch is not a fixed-theory prediction.
-- The prior spin-2 analytic proof and earlier scalar contour/dispersion data remain in their existing experiment folders. Matching polynomials can invalidate the fixed-prescription spin-2 theorem and were not used to claim a pole cure.
+See experiments/scalar_negative_index_2026_10_30/REPORT.md and check.py/results.json.
+- Read Rovnyak and Sakhnovich's peer-reviewed generalized Nevanlinna definition and audited applicability.
+- With h(z)=1/A(-z), a negative scalar continuum interval forces its kernel to have arbitrarily many negative squares. The elementary diagonal-limit proof rules out every finite-index N_kappa class; it does not prove extra complex poles.
+- Five exact rational inequalities at s=6L establish strictly negative continuum points for all five spectra. Continuity supplies open negative intervals.
+- Seventy-five new kernel matrices illustrate growing negative index; at eta/L=1e-6 all n=2,4,8,16,32 directions are negative in each spectrum. Finite matrices are illustrations, not the infinite-index proof.
+- Subtracting finitely many real pole/contact terms does not remove the obstruction. Real polynomial low-energy counterterms added to A leave the continuum sign unchanged.
+- Prior scalar identity/matching and fixed-prescription spin-2 proof remain in their existing experiment directories. No full-model health or constrained-CEV spectrum transfer follows.
 
 ## Next bounded work batch
-Use established signed-measure/generalized-Nevanlinna results only where their hypotheses can be verified for the scalar kernel; otherwise retain the unresolved global-zero question. Prioritize the imported literature's matched-observable and reduced-measure construction before transferring auxiliary poles to constrained CEV. Inspect the stochastic comparison's source/state-space assumptions without adopting them. Preserve all earlier experiments; do not repeat passing scans without a new reason.
+Stop pursuing finite-index Nevanlinna bounds for the same full signed-PV scalar response. Prioritize published auxiliary-preserving quantization/source-matching results and specify the model's reduced/constrained generating-functional assumptions. Scalar global zero control remains open; any future slit-plane certification needs new error/asymptotic control rather than repeating the existing finite scans. Keep the stochastic comparison separate and preserve all prior data.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
