@@ -25,16 +25,17 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-30 US Central)
-See experiments/scalar_threshold_disk_2026_10_30/REPORT.md, check.py and results.json.
-- Proved positive scalar inverse moments and coefficient-ratio bound d_(k+1)<d_k/4 for the whole PV family L>=3, raw or explicitly matched to Lref=10. The first-ratio certificates use exact rational Riemann sums; the higher ratios use a finite exact prefix and an infinite induction argument.
-- A deflated convergent-series argument gives at most one additional scalar zero in the entire open disk |q|<4; if present it is simple and on the negative real q axis.
-- Exact rational logarithm/arctangent enclosures certify all ten tested threshold signs: raw extra-zero counts 1,1,1,0,0 at L=3,5,10,30,100; all five matched counts equal one. The known massless zero is separate.
-- Eight independent 512-term positive-series brackets confirm archived real pole locations within +/-1e-8; these location checks use long double and are not interval-certified. Maximum saved tail bound is 5.09e-14.
-- Eighty inverse-moment identities were checked exactly. All new assertions passed. This improves the prior disk-|q|<=2 bound without repeating a broad contour or Ward scan.
-- The signed scalar continuum outside regulator thresholds remains negative in places; positive local coefficients do not give a global Stieltjes representation. No global first-sheet, constrained-equivalence or physical-health conclusion follows.
+See experiments/scalar_conformal_count_2026_10_30/REPORT.md, check.py, verify.py and saved results.
+- Derived a whole-first-sheet conformal representation q=16w/(1-w)^2 retaining every regulator cut on |w|=1. Counted only |w|<4/5, not the full unit disk.
+- Exact rational Chebyshev coefficients, bounded logarithmic constants, an explicit analytic tail and directed-Decimal arc enclosures give validated additional-zero counts. Raw L=3,5,10,30,100: 1,1,1,0,0. Explicitly Lref=10 matched: 3,3,1,2,2.
+- Newly isolated matched scalar poles: L=3 q=-17.4662104652 +/-12.7654098460i; L=5 q=-25.3822329364 +/-30.4480072636i; L=30 q=+34.2768433995; L=100 q=+27.5993608103. The earlier subthreshold poles remain.
+- Four new representative isolating counts and eight known subthreshold isolating counts each equal one. Conjugation supplies the complex partners. Independent principal-log parameter quadrature at three node counts gives residuals below 2.81e-14 for the new poles.
+- Focused N=160/80-digit refinement preserves matched counts for L=3,100. Twelve conformal/compact overlap checks and exact-Fraction arithmetic enclosure audits pass.
+- An initial rounding-context issue and conservative interval-wrapping attempts were discarded before accepted results; corrections are documented. Final counts use explicit tail margins and exact rational winding, not floating-point phase agreement alone.
+- All new poles are outside |q|<4 (|q|/4=5.41--9.91). They concern the full explicitly modified kernels, not controlled low-energy predictions or an adopted physical UV action. No global first-sheet count, constrained equivalence or physical health is established.
 
 ## Next bounded work batch
-Seek scalar zero control outside |q|<4 using a conformal map or cut-subtracted representation retaining every regulator cut. Do not assume finite negative-index methods apply or transfer the disk theorem to a global stability claim. Keep the common regulated composite-source/measure dictionary, Lorentzian contour, interactions and 1/N as distinct open problems.
+Audit large-q and cut asymptotics in the conformal representation before extending beyond |w|<4/5. Seek explicit tail and boundary control for the unresolved collar 4/5<=|w|<1; do not infer a global count from convergence of bounded counts. Keep the common regulated composite-source/measure dictionary, Lorentzian contour, interactions and 1/N as distinct open problems. No new physical action or regulator is chosen.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
