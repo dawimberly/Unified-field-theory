@@ -1,0 +1,33 @@
+{
+  "scope": "Principal-log integrals on both conjugate first-sheet sides; no continuation through the cut.",
+  "cases": [
+    {
+      "q": [
+        -407.9744557683061,
+        12.268491437532663
+      ],
+      "parameter_kernel_value": [
+        1.050201592356359e-13,
+        -3.211059890206869e-14
+      ],
+      "absolute_parameter_kernel_residual": 1.0981950832037018e-13,
+      "quadrature_error_estimate": 1.2483408655648901e-08,
+      "compact_kernel_residual": 6.243061561910773e-15,
+      "independent_derivative_relative_error": 1.9314597343437964e-15
+    },
+    {
+      "q": [
+        -407.9744557683061,
+        -12.268491437532663
+      ],
+      "parameter_kernel_value": [
+        1.050201592356359e-13,
+        3.211059890206869e-14
+      ],
+      "absolute_parameter_kernel_residual": 1.0981950832037018e-13,
+      "quadrature_error_estimate": 1.2483408655648901e-08,
+      "compact_kernel_residual": 6.243061561910773e-15,
+      "independent_derivative_relative_error": 1.9314597343437964e-15
+    }
+  ]
+}

@@ -25,17 +25,17 @@ Free, minimally coupled, leading-N auxiliary-metric determinant; stationary cosm
 5. Interacting scalar mixing, 1/N corrections, and eventual nonlinear gravity/universality checks for the extended model.
 
 ## Latest bounded batch (2026-10-30 US Central)
-See experiments/uv_asymptotic_audit_2026_10_30/REPORT.md, check.py, precision_check.py and saved results/failure diagnostics.
-- Derived a convergent uniform exterior expansion retaining every PV species and the explicit principal Log q branch. Confirmed A_infinity=3C T2/8 and K2_infinity=-C T2/8, with exact leading 1/q logarithmic correction coefficients.
-- Exact rational remainder/log bounds exclude raw scalar zeros for all |q| beyond R=1024,1664,3264,38656,128256 at L=3,5,10,30,100. Explicitly matched scalar exterior radii are 256,416,3264,2416,8016. These are sufficient, nonoptimal bounds.
-- The scalar and raw spin-2 lower-cut imaginary parts are strictly negative for all s>=16 z_max in each tested spectrum. The inverse scalar cut weight is therefore eventually positive again; intervening negative intervals remain and global positivity/physical unitarity do not follow.
-- Sixty direct 160-digit comparisons satisfy analytic UV tails plus tracked log-coefficient uncertainty. Forty exterior/cut candidate certificates retain successes and insufficient bounds separately.
-- An initial comparison omitted finite log-midpoint uncertainty when the UV tail became smaller; the failure is retained and the error budget corrected before extension.
-- Twenty conditioning checks demonstrate catastrophic cancellation in naive compact long-double evaluation at extreme q; use the stable UV series for future exterior work. Fifteen archived moderate-q asymptotic rows differ from high-precision references by at most 2.37e-9 relative, preserving their qualitative interpretation.
-- No original files or full passing Ward/dispersion scans were rerun or overwritten. No new physical regulator, action, contour, constrained equivalence or healthy UV completion is established.
+See experiments/matched_inverse_reconstruction_2026_10_30/REPORT.md and saved code/results/diagnostics.
+- A failed L=30 matched slit-dispersion check exposed another principal-sheet pole pair q=-407.9744557683 +/-12.2684914375i. Its |w| is about 0.997014, outside the earlier |w|<0.8 count and within the remaining finite collar.
+- An independent exact-rational local Rouche certificate isolates the upper root within radius 1e-10; reflection gives its simple conjugate. Elementary log/atan/sqrt interval operations and an explicit A'' bound are saved, along with a coarse certificate/refinement trace.
+- New residues of 1/A are approximately -1.6761537244 +/-1.3103048575i. Independent principal-log integrals and derivative quadrature support the branch and normalization; the quadrature alone is not an existence proof.
+- Fifteen conformal Cauchy reconstructions close to 3.86e-12 relative, using only poles inside the validated conformal contour and the transformed residues r_q/q'(w).
+- Thirty matched slit-cut reconstructions, with all PV thresholds and explicit finite boundaries, close to 6.02e-15 after adding the newly identified pair. Omitting it restores the initial 2.53503e-7 residual; the failed results and independent cut quadrature diagnostics are preserved.
+- The new pair was computed from the unchanged kernel, not fitted to closure. No global inventory completeness follows from the successful finite-probe residuals. The example shows why the remaining collar qualification must be retained.
+- Stable UV wrapper checks and analytic/independent derivative comparisons pass. No physical action, regulator, microscopic contour or constrained-equivalence assumption changed. No healthy theory or UV completion is established.
 
 ## Next bounded work batch
-Audit inverse response reconstruction for the explicitly matched scalar kernels with real and complex isolated poles, an explicit finite boundary and stable UV evaluations. Keep pole-inventory completeness separate from a dispersion residual. A whole-first-sheet count still requires the finite collar between the conformal interior and UV exterior, including every cut. Preserve the common regulated composite-source/measure, Lorentzian contour, interactions and 1/N as distinct open problems.
+Prioritize boundary/cut-based global scalar counting using the established UV exclusion, including possible cut-boundary zeros and every regulator threshold. The conformal interior and local collar certificates do not establish a complete whole-sheet inventory. Avoid relying on convergence of uniform |w|<r counts or on a small dispersion residual as a proof of completeness. Keep the common composite-source/measure prescription, Lorentzian contour, interactions and 1/N distinct.
 
 ## Working policy
 Keep established literature, reproduced calculations, assumptions, and speculation distinct. Agreement between AI assistants is not independent verification. Preserve unsuccessful tests and corrections. Do not infer ghost freedom from one residue, or unification from consistency checks. Do not add a material/spin interaction solely to fit a desired conclusion.
