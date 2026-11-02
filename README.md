@@ -21,3 +21,7 @@ Scripts write results under experiments/ relative to the repository, independent
 - [docs/POSSIBILITY_CLOUD_ORIGINAL.md](docs/POSSIBILITY_CLOUD_ORIGINAL.md): earlier qualitative Possibility Cloud proposal, preserved verbatim. Its claims are hypotheses, not established conclusions of the current calculations.
 
 Current numerical work concerns a free, leading-N, auxiliary-metric scalar determinant. Equivalence to constrained CEV is not established here. Passing numerical identities does not prove physical unitarity, UV completion, experimental validity, novelty, or unification.
+
+## November 1 field and dimension follow-up
+
+[Latest discussion, reports, and computation archive links](bots/gpt/research_batches/2026-11-01/README.md). The field model is a separate exploratory line from the CEV calculations. Its best tested configuration is not a certified full equilibrium. Raw-file transfer coverage is explicitly documented in the batch.
