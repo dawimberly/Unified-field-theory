@@ -1,0 +1,17 @@
+# Cursor prompt for testing matter organization and gravity
+
+Work in my Physics repo. I want to test whether the organization of matter can change the gravitational field it produces after accounting for ordinary mass-energy and its distribution. My working hypothesis is that Einstein’s equations get the large-scale behavior right, while microscopic correlations might leave a small, measurable correction. Start from constituents and their interactions. Don’t use an inferred model of Earth’s or the Moon’s interior as an input.
+
+Read the existing project notes on the S³ framework, phase locking, and composite gravity if available. Then do the following calculation and show the result.
+
+1. Build a matched pair of sources with the same constituents in two different arrangements. Start with the smallest tractable example, such as a finite lattice with two patterns of relative phase or orientation. Identify what the microscopic variable represents and whether it is physically observable. If it’s an arbitrary phase convention, use an observable correlation instead. State whether either arrangement is stable under the proposed Hamiltonian.
+
+2. Calculate the standard gravity baseline for each arrangement. Include constituent rest masses, ordinary binding or stress energy, and changes in where that energy sits. If the arrangements have different total energies, show the expected far-field difference from ΔM = ΔE/c². If they have the same total mass but different spatial distributions, calculate the leading ordinary multipole difference. Show which differences vanish once the relevant quantities are matched.
+
+3. Try to derive an additional gravitational contribution from the same microscopic model. If the existing action doesn’t define one, identify the missing coupling and build one explicitly labeled toy model with a single free coefficient. Use a well-defined pair correlation and check whether its contribution is already counted in the ordinary binding energy. Check the units, the source of the coupling, and whether it can be embedded in a conserved stress-energy description. Flag any failure.
+
+4. Calculate how the predicted fractional change in mean pull scales as the system grows at fixed density. Compare short-range correlations with correlations that extend across the sample. Keep the mean shift separate from fluctuations. If the model predicts fluctuations, derive or state the assumed time correlation and show what averaging does to the signal. Don’t assume 1/√N unless the model justifies it.
+
+5. Put the result in experimental units. Qin et al., Nature Communications (2026), DOI 10.1038/s41467-026-78187-4, measured 471 ± 23 attonewtons at a 0.654 mm gap between 7.6 mg silicon wafers. Their 5.3% uncertainty is for inferred G. Use these numbers as a sensitivity benchmark. If the predicted correction changes the distance dependence, account for the wafer geometry before translating it into a force. State what a paired comparison would need to resolve and which assumptions control that estimate.
+
+Run the simplest useful calculation now. Report the equations, a numerical example, and enough detail to reproduce it. Tell me whether the two arrangements differ only through ordinary mass-energy, or whether the proposed model predicts an additional signal that survives the matching. If the extra signal depends entirely on an assumed coupling, say so plainly and give the measurement that could bound it.
