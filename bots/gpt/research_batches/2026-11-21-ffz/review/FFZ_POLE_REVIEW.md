@@ -6,9 +6,11 @@ Prescription: fixed \(\xi=1/6\), \(d=4-2\varepsilon\), equal masses, units \(h^2
 Runnable checks in this directory (they do not call the checkpoint scripts):
 
 - `ffz_independent_pole_review.py` — QCc and CcFf poles
-- `ffz_ffff_A_poles.py` — FFff(A) soft-corner Taylor averages and triple pole
+- `ffz_ffff_A_poles.py` — FFff(A) soft-corner Taylor averages
+- `ffz_ffff_A_regulated_conversion.py` — projective \(\to\) graph conversion and B targets
+- `ffz_ffff_B_gaussian.py` — FFff(B) parity-even Gaussian algebra
 
-SymPy and mpmath own the exact identities. The CcFf simple pole is a separate quasi-Monte Carlo of an integrand written for this review.
+SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
 ## Verdicts
 
@@ -20,7 +22,9 @@ SymPy and mpmath own the exact identities. The CcFf simple pole is a separate qu
 | CcFf simple pole about \(-0.0247-L/48\) | Agree at the checkpoint's stated precision. This review's extrapolation is \(-0.02480\) |
 | FFff(A) short-short triple pole | None (earlier \(1/7776\) retracted; see correction) |
 | FFff(A) corner double pole \(5/(1728\varepsilon^2)\) | Agree with corrected cycle Wick check |
-| FFff(A) full double / simple / graph triple | Open (faces, long overlaps, FFff(B)) |
+| FFff(A) long-pair triple add-back \(1/(576\varepsilon^3)\) | Agree |
+| FFff(A) full graph higher poles | Numerical inference only (`FFFF_A_REGULATED.md`); conversion exact |
+| FFff(B) poles | Open (Gaussian setup only); implied targets below |
 | Projected finish line at \(a_X=0\), \(a_Y=-1\) | Not reached |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
 
@@ -85,13 +89,33 @@ The earlier bilinear average \(-4/27\) is wrong; the mixed derivative vanishes. 
 \[
 +\frac{5}{1728\,\varepsilon^2}.
 \]
-The once-soft faces are rational with fifth-order denominators in the spectator effective lengths (printed by the correction script). Their \(r\)-independent \(q\)-linear piece is nonuniform at the spectator fraction endpoint.
+The once-soft faces are rational with fifth-order denominators in the spectator effective lengths. At fixed spectator fraction they decay at large pair length; the nonuniform \(g\to 0\) region with \(Q=rg\) fixed is the long-pair endpoint.
 
 The long-pair add-back models (`FFFF_A_LONG_PAIR.md`) were re-checked: each long-pair/short-spectator residue is \(+1\) at projective order \(1/\varepsilon^2\), and the two models together contribute
 \[
 +\frac{1}{576\,\varepsilon^3}
 \]
-to the graph. The short-short corner still supplies no triple pole. The globally subtracted remainder and FFff(B) remain open; against the bare FFff budget \(1/36\), this add-back leaves \(5/192\) of triple pole still to find.
+to the graph. The analytic two-tail Dirichlet form has leading coefficient \(2/\varepsilon^2\) in the projective integral.
+
+### Regulated full-graph inference
+
+`FFFF_A_REGULATED.md` subtracts both long-pair models and short Taylor faces at nonzero \(\varepsilon\). Independently re-run at \(\varepsilon=0.00375\), power \(2^{17}\), the three cuts \(0.5,1,2\) give \(\varepsilon^2 I\approx 1.9877\) and \(\varepsilon(I-2/\varepsilon^2)\approx -3.28\), consistent with the note's finer extrapolation to projective
+\[
+I=\frac{2}{\varepsilon^2}-\frac{10}{3\varepsilon}+c_0,\qquad c_0\approx 14.93.
+\]
+The conversion through \(-\Gamma(3\varepsilon-1)e^{3\gamma_E\varepsilon-3\varepsilon L}/[32d(d-1)]\) is exact (`ffz_ffff_A_regulated_conversion.py`) and yields, in units \(h^2 z/K\),
+\[
+\frac{1}{576\varepsilon^3}+\Bigl(\frac{5}{1152}-\frac{L}{192}\Bigr)\frac{1}{\varepsilon^2}
++\Bigl(\frac{c_0}{1152}+\frac{79}{6912}+\frac{\pi^2}{768}-\frac{5L}{384}+\frac{L^2}{128}\Bigr)\frac{1}{\varepsilon}.
+\]
+With \(c_0\approx 14.93\) the constant simple piece is about \(0.03724\). The higher poles match the long-pair triple with no extra triple from the remainder. This is numerical evidence for the full A graph, not an analytic remainder evaluation.
+
+## FFff(B)
+
+`FFFF_B_GAUSSIAN.md` reduces the parity-even four-kinetic contraction and the Weyl covariance tilt; the runnable Gaussian check passes. The graph integral and its poles are not evaluated here. Against the combined bare FFff budget and the A inference above, the **implied B targets** (predictions to check) are
+\[
+\frac{5}{192\varepsilon^3}+\Bigl(\frac{11}{1152}-\frac{5L}{64}\Bigr)\frac{1}{\varepsilon^2}.
+\]
 
 ## Counterterm budget (from `COUNTERTERM_BUDGET.md`)
 
@@ -103,17 +127,17 @@ The runnable asserts in that note were re-run and pass. The simple-pole countert
 
 ## Finish line
 
-Not reached. Independently verified pieces in \(h^2 z/K\):
+Not reached. Independently verified / inferred pieces in \(h^2 z/K\):
 
 | Piece | Triple | Double | Simple |
 | --- | --- | --- | --- |
 | QCc (doubled) | \(0\) | \(1/72\) | \(-0.01649742330-L/24\) |
 | CcFf | \(0\) | \(1/144\) | \(\approx-0.02480-L/48\) |
-| FFff(A) short-short corner | \(0\) | \(+5/1728\) (corner only) | open |
-| FFff(A) long-pair add-backs | \(+1/576\) | open (with remainder) | open |
+| FFff(A) (regulated inference) | \(1/576\) | \(5/1152-L/192\) | \(\approx 0.03724-5L/384+L^2/128\) |
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
+| FFff(B) (implied target only) | \(5/192\) | \(11/1152-5L/64\) | open |
 
-Still open: FFff(A) faces and long overlaps, FFff(B), and the projected simple pole versus \(1/24\).
+Still open: analytic FFff(A) remainder, FFff(B) poles, and the projected simple pole versus \(1/24\).
 
 ## What was derived, and what was only run
 
@@ -124,7 +148,10 @@ Derived in this review, with new SymPy/mpmath/NumPy code:
 - Re-run of the corrected FFff(A) cycle Wick corner (averages, no triple pole, corner double \(5/1728\))
 - Re-run of the counterterm-budget asserts
 - Re-run of the FFff(A) long-pair add-back asserts (triple \(1/576\))
+- Exact conversion of the regulated projective series to graph poles and B targets
+- Re-run of the FFff(B) Gaussian algebra check
+- Smoke re-run of the regulated FFff(A) QMC (consistent with \(2/\varepsilon^2\) and \(-10/(3\varepsilon)\))
 
 Retracted: the earlier FFff(A) bilinear \(-4/27\) and triple pole \(1/7776\) (incorrect Wick/assembly for the mixed term).
 
-Not done: checkpoint QMC scripts not executed; QQ, QCc tadpole, CCcc, QFf, FFff(B), and full FFff(A) faces not re-derived as complete Laurent series.
+Not done: full analytic FFff(A) remainder; FFff(B) graph poles; QQ, QCc tadpole, CCcc, QFf not re-derived as complete Laurent series; projected simple pole versus \(1/24\).

@@ -9,7 +9,7 @@ The required bare FFff(A)+FFff(B) budget is therefore
 - Triple pole 1/36.
 - Double pole 1/72−L/12.
 
-This uses the independent Y higher-pole target and the bare subtotal 5/144 at L=0. It does not allocate an unfinished corner result to a full graph. If 1/7776 is provisionally kept as one contribution, the remaining bare triple budget is 215/7776.
+This uses the independent Y higher-pole target and the bare subtotal 5/144 at L=0. It does not allocate an unfinished corner result to a full graph. With the regulated FFff(A) inference triple 1/576, the remaining bare triple budget for FFff(B) is 5/192.
 
 ## Simple-pole counterterm
 
@@ -29,7 +29,7 @@ two_loop_double = 2*F(-1,24) - F(-1,24)
 assert two_loop_triple + F(1,12) == 0
 assert two_loop_double - F(1,16) == -F(5,48)
 assert -F(1,18) + F(5,48) - F(5,144) == F(1,72)
-assert F(1,36) - F(1,7776) == F(215,7776)
+assert F(1,36) - F(1,576) == F(5,192)
 assert F(1,6)-F(1,12)+F(1,16) == F(7,48)
 assert -F(1,6)+F(1,24) == -F(1,8)
 ```
