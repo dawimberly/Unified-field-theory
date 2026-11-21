@@ -1,8 +1,12 @@
-"""FFff(A) soft-corner poles for the FFZ three-loop Newton sum.
+"""FFff(A) soft-corner check (corrected).
 
-Exact SymPy averages of the short-pair Taylor coefficients of the curvature
-density H, and the resulting triple-pole coefficient. The double pole still
-needs the once-soft faces (and any long-pair tails); those are not claimed here.
+Supersedes the earlier bilinear claim -4/27. The connected-cycle Wick formula
+and finite-d numerator are those of FFFF_A_CORNER_CORRECTION.md.
+
+At d=4 the angular averages of H are (-32/3, 0, -8, 0) for
+(constant, q, r, qr). There is no short-short triple pole. The unit-cutoff
+corner Laurent series is 10/(3ε)-169/3, giving graph double pole +5/(1728ε²)
+from this corner alone. Once-soft faces and FFff(B) remain open.
 
 Run:
   python ffz_ffff_A_poles.py
@@ -10,129 +14,106 @@ Run:
 Requires: sympy
 """
 
-from fractions import Fraction as F
-import sympy as sp
+import sympy as s
 
 
-def taylor_averages():
-    """Angular averages of H = a00 + bq*q + br*r + bqr*q*r + ... at d=4.
-
-    H = (q N1)(r N2) S^{-2} B multiplies the projective measure
-    q^{ε-2} r^{ε-2} dq dr dg dh dv on the gauge v+w=1.
-    """
-    g, h, v = sp.symbols("g h v")
-    # Coefficients in effective lengths Q=q g(1-g), R=r h(1-h), from the
-    # independent Wick expansion at d=4 (see review notes).
-    a00 = sp.Rational(32, 3)
-    a10 = 0  # coeff of Q
-    a01 = (
-        32
-        * v
-        * (3 * h**2 * v - 3 * h**2 - 3 * h * v + 3 * h + 2 * v - 2)
-        / (h * (h - 1))
+def corner_check():
+    q, r, f, g, v, d = s.symbols("q r f g v d")
+    P, Q = q * f, r * g
+    S = 1 + P + Q
+    t = [0, P, P + v, P + v + Q]
+    C = s.Matrix(4, 4, lambda i, j: 2 * t[min(i, j)] * (S - t[max(i, j)]) / S)
+    a = C[:, 1]
+    b = C[:, 3] - C[:, 2]
+    c = 2 * P * (S - P) / S
+    e = 2 * Q * (S - Q) / S
+    j = -2 * P * Q / S
+    N = d * (d * (S - P) * (S - Q) + 2 * P * Q) / (4 * S * S)
+    T = (
+        d * C * N
+        + (d * (a * a.T * e + b * b.T * c) + 2 * j * (a * b.T + b * a.T))
+        * d
+        / (8 * P * Q)
+    ).applyfunc(s.cancel)
+    A = -(4 - d) * s.trace(T) / 2 - d * (4 - d) * N / 3
+    B = s.Rational(2, 3) * (
+        q * T[1, 1]
+        + r * (T[2, 2] + T[3, 3] + T[2, 3])
+        + v * (T[1, 1] + T[2, 2] + T[1, 2])
+        + (1 - v) * T[3, 3]
+        + N
+        * (
+            (d - 1) * (q * q * (1 - 2 * f) + r * r * (1 - 2 * g))
+            + d * (v * v + (1 - v) ** 2)
+        )
     )
-    poly = (
-        -81 * h**2 * v**2
-        + 54 * h**2 * v
-        - h**2
-        + 81 * h * v**2
-        - 54 * h * v
-        + h
-        - 54 * v**2
-        + 36 * v
-    )
-    a11 = 16 * poly / (3 * h * (h - 1))
+    k = 6 - 3 * d / 2
+    W = 1 + q + r
+    H = S ** (-d / 2) * W ** (1 - k) * (A + (k - 1) * B / W)
 
-    # Convert to physical q,r: ∂_r H = a01 * h(1-h), ∂_q∂_r H = a11*g(1-g)*h(1-h).
-    br = sp.simplify(a01 * h * (1 - h))
-    # h(1-h)/(h(h-1)) = -1
-    assert sp.simplify(h * (1 - h) / (h * (h - 1)) + 1) == 0
-    br = sp.simplify(-32 * v * (3 * h**2 * v - 3 * h**2 - 3 * h * v + 3 * h + 2 * v - 2))
-    bqr = sp.simplify(a11 * g * (1 - g) * h * (1 - h))
-    # a11*h(1-h) = -16/3 * poly
-    bqr = sp.Rational(-16, 3) * poly * g * (1 - g)
+    def at(expr):
+        return s.factor(expr.subs({q: 0, r: 0}, simultaneous=True))
 
-    avg_br = sp.integrate(sp.integrate(br, (h, 0, 1)), (v, 0, 1))
-    avg_bqr = sp.integrate(
-        sp.integrate(sp.integrate(bqr, (g, 0, 1)), (h, 0, 1)), (v, 0, 1)
+    def avg(expr):
+        x, y = s.symbols("x y")
+        return s.factor(
+            s.integrate(
+                s.integrate(
+                    s.integrate(
+                        s.expand(expr.subs({f: x * (1 - x), g: y * (1 - y)})),
+                        (x, 0, 1),
+                    ),
+                    (y, 0, 1),
+                ),
+                (v, 0, 1),
+            )
+        )
+
+    b_avgs = [
+        avg(at(h))
+        for h in (
+            B.subs(d, 4) / S**2,
+            s.diff(B.subs(d, 4) / S**2, q),
+            s.diff(B.subs(d, 4) / S**2, r),
+            s.diff(B.subs(d, 4) / S**2, q, r),
+        )
+    ]
+    assert b_avgs == [s.Rational(32, 3), 0, 8, 0]
+
+    vals = [avg(at(h)) for h in (H, s.diff(H, q), s.diff(H, r), s.diff(H, q, r))]
+    assert [h.subs(d, 4) for h in vals] == [-s.Rational(32, 3), 0, -8, 0]
+
+    ep = s.symbols("eps")
+    corner = (
+        vals[0] / (ep - 1) ** 2
+        + (vals[1] + vals[2]) / (ep * (ep - 1))
+        + vals[3] / ep**2
     )
-    assert avg_br == 8
-    assert avg_bqr == sp.Rational(-4, 27)
+    laurent = s.series(corner.subs(d, 4 - 2 * ep), ep, 0, 1)
+    assert s.simplify(laurent.coeff(ep, -1) - s.Rational(10, 3)) == 0
+
+    # Gamma(3ε-1)~-1/(3ε), Wick -1/8, 1/[4d(d-1)]=1/48
+    pre = s.Rational(-1, 8) / 48
+    graph_double = pre * (-s.Rational(1, 3)) * s.Rational(10, 3)
+    assert graph_double == s.Rational(5, 1728)
+
     return {
-        "a00": a00,
-        "bq": 0,
-        "br": avg_br,
-        "bqr": avg_bqr,
-    }
-
-
-def poles_from_corner(avg):
-    """Projective soft-corner poles times Wick and curvature normalization.
-
-    I = a00/(ε-1)^2 + bq/(ε(ε-1)) + br/(ε(ε-1)) + bqr/ε^2 + (faces...)
-    The constant a00 produces no pole. The bilinear bqr produces 1/ε^2.
-    Gamma(3ε)~1/(3ε), weight -1/8, 1/[4d(d-1)]=1/48 at d=4 => -1/384.
-    """
-    e = sp.symbols("e")
-    I_corner = (
-        avg["a00"] / (e - 1) ** 2
-        + avg["bq"] / (e * (e - 1))
-        + avg["br"] / (e * (e - 1))
-        + avg["bqr"] / e**2
-    )
-    # Leading Laurent of the corner alone (faces omitted).
-    Iser = sp.series(I_corner, e, 0, 1).removeO()
-    pre = sp.Rational(-1, 384)
-    graph = sp.series(pre * (1 / (3 * e)) * I_corner, e, 0, 0)
-    triple = pre * sp.Rational(1, 3) * avg["bqr"]  # 1/(3ε) * bqr/ε^2
-    # Linear corner piece alone (incomplete for the double pole without faces):
-    double_corner_only = pre * sp.Rational(1, 3) * (-(avg["bq"] + avg["br"]))
-    assert triple == sp.Rational(1, 7776)
-    assert double_corner_only == sp.Rational(1, 144)
-    return {
-        "I_corner_series": Iser,
-        "triple_pole": triple,
-        "double_from_corner_linear_only": double_corner_only,
-        "note": "double pole incomplete without once-soft faces",
-    }
-
-
-def assembly_snapshot():
-    """Known higher poles versus the Y-matching targets. Not a finish-line claim."""
-    target_triple = F(1, 36)
-    target_double = F(-1, 18)
-    mass_ct_triple = F(1, 12)
-    mass_ct_double = F(-1, 16)  # constant piece; also -L/12
-    fffa_triple = F(1, 7776)
-    # Verified doubles among bare graphs so far (faces for FFff(A) open):
-    qq = F(1, 72)  # packet, not re-derived in this review
-    qcc = F(1, 72)  # independently verified
-    ccff = F(1, 144)  # independently verified
-    # FFff(A) double not yet complete; corner-only piece would be +1/144
-    bare_double_verified = qq + qcc + ccff
-    return {
-        "target_triple": target_triple,
-        "target_double": target_double,
-        "mass_ct_triple": mass_ct_triple,
-        "mass_ct_double_const": mass_ct_double,
-        "fffa_triple": fffa_triple,
-        "bare_double_verified_without_ffff": bare_double_verified,
-        "triple_gap_after_mass_ct_and_fffa": target_triple
-        - mass_ct_triple
-        - fffa_triple,
+        "B_averages": b_avgs,
+        "H_averages_d4": [h.subs(d, 4) for h in vals],
+        "corner_laurent": laurent,
+        "corner_double_pole": graph_double,
+        "triple_pole_from_corner": 0,
     }
 
 
 def main():
-    avg = taylor_averages()
-    print("FFff(A) Taylor averages:", avg)
-    poles = poles_from_corner(avg)
-    print("triple pole:", poles["triple_pole"])
-    print("corner-only double (incomplete):", poles["double_from_corner_linear_only"])
-    print("I_corner:", poles["I_corner_series"])
-    snap = assembly_snapshot()
-    print("assembly snapshot:", snap)
-    print("ALL FFff(A) CORNER CHECKS PASSED")
+    out = corner_check()
+    print("B averages (const,q,r,qr):", out["B_averages"])
+    print("H averages at d=4:", out["H_averages_d4"])
+    print("corner projective Laurent:", out["corner_laurent"])
+    print("corner graph double pole:", out["corner_double_pole"])
+    print("corner triple pole:", out["triple_pole_from_corner"])
+    print("CORRECTED FFff(A) CORNER CHECKS PASSED")
 
 
 if __name__ == "__main__":

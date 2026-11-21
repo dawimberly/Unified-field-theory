@@ -18,10 +18,11 @@ SymPy and mpmath own the exact identities. The CcFf simple pole is a separate qu
 | QCc simple pole \(-0.01649742330-L/24\) | Agree (constant recomputed as \(-0.0164974232969\)) |
 | CcFf double pole \(1/(144\varepsilon^2)\) | Agree |
 | CcFf simple pole about \(-0.0247-L/48\) | Agree at the checkpoint's stated precision. This review's extrapolation is \(-0.02480\) |
-| FFff(A) triple pole \(1/7776\) | Derived (soft-corner bilinear only) |
-| FFff(A) double / simple poles | Open (once-soft faces unfinished) |
+| FFff(A) short-short triple pole | None (earlier \(1/7776\) retracted; see correction) |
+| FFff(A) corner double pole \(5/(1728\varepsilon^2)\) | Agree with corrected cycle Wick check |
+| FFff(A) full double / simple / graph triple | Open (faces, long overlaps, FFff(B)) |
 | Projected finish line at \(a_X=0\), \(a_Y=-1\) | Not reached |
-| First corrected equation in disagreement | None |
+| First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
 
 The superseded corner numerator \(2d\varepsilon/3\) is the error the latest QCc note corrects. The numerator before any \(\varepsilon\to 0\) truncation is
 \[
@@ -73,77 +74,49 @@ at \(L=0\). That matches the checkpoint value \(-0.0247\) inside the tolerance w
 
 ## FFff(A)
 
-Class A is the multiplicity-8 matching: fermion pairs \((0,2)\) and \((1,3)\), scalars \((0,3)\) and \((1,2)\), vertex 0 fixed at the origin. The flat Wick weight is \(-1/8\).
+Class A is the multiplicity-8 matching with Wick weight \(-1/8\). The corrected soft-corner calculation is in `FFFF_A_CORNER_CORRECTION.md` (connected cycle, full two-difference Wick covariance). That check was re-run here and passes.
 
-Each parallel pair has spin factor \(N_a=d\,c_a/(4 s_{a1}s_{a2})\) and endpoint difference \(\Delta_a\). The curvature uses the two-constraint moment
+At \(d=4\) the angular averages of the projective density \(H\) are
 \[
-M_{ij}=\frac{\mathbb{E}[(x_i\cdot x_j)\,\Delta_1^2\Delta_2^2]}{\mathbb{E}[\Delta_1^2\Delta_2^2]}.
+\bigl\langle H,\partial_q H,\partial_r H,\partial_q\partial_r H\bigr\rangle
+=\bigl(-\tfrac{32}{3},\,0,\,-8,\,0\bigr).
 \]
-Vertex weights are \(-\lambda_F M_{ii}\) with \(\lambda_F=(4-d)/2\) (the root is omitted). Scalar edges carry the evanescent mass \(-d(4-d)s/3\). The mass profile is
+The earlier bilinear average \(-4/27\) is wrong; the mixed derivative vanishes. There is **no triple pole from the short-short corner**. With unit physical cutoffs the finite-\(d\) corner Laurent series is \(10/(3\varepsilon)-169/3\). Multiplication by \(\Gamma(3\varepsilon-1)\sim-1/(3\varepsilon)\), the Wick factor, and \(1/[4d(d-1)]\) gives the corner double pole
 \[
-B=\frac{2}{3}\sum_e s_e\bigl(M_{ii}+M_{jj}+M_{ij}+d_e s_e\bigr),
++\frac{5}{1728\,\varepsilon^2}.
 \]
-with \(d_e=d-1\) on fermion edges and \(d_e=d\) on scalar edges. The Symanzik polynomial is exactly \(U=qr(v+w+Q+R)\). Each \(N_a\) scales as \(\rho^{-1}\). The radial factor is
-\[
-\Gamma(3\varepsilon-1)\,z^{1-3\varepsilon}\bigl[A+(3\varepsilon-1)B\bigr],
-\]
-equivalently \(\Gamma(3\varepsilon)\,z^{1-3\varepsilon} B\) when \(A=0\) at \(d=4\). Divide by \(4d(d-1)\) and multiply by \(-1/8\).
+The once-soft faces are rational with fifth-order denominators in the spectator effective lengths (printed by the correction script). Their \(r\)-independent \(q\)-linear piece is nonuniform at the spectator fraction endpoint. Short/long overlaps and FFff(B) are still required for the full graph poles.
 
-On the gauge \(v+w=1\), the density multiplying \(q^{\varepsilon-2}r^{\varepsilon-2}\,dq\,dr\,dg\,dh\,dv\) is
+## Counterterm budget (from `COUNTERTERM_BUDGET.md`)
+
+The packet's two-loop insertion into the two-loop bare baseline, combined with the one-loop mass insertion, cancels the triple pole and leaves double pole \((L/12-5/48)/\varepsilon^2\). Against the Y target and the verified bare subtotal \(5/144\), the remaining **bare FFff(A)+FFff(B)** budget is
 \[
-H=(qN_1)(rN_2)\,S^{-2}\,B,\qquad S=1+Q+R.
+\frac{1}{36\varepsilon^3}+\Bigl(\frac{1}{72}-\frac{L}{12}\Bigr)\frac{1}{\varepsilon^2}.
 \]
-At the double-soft corner, \(H\to 32/3\). The exact flat angular averages of the Taylor coefficients are
-\[
-\langle a_{00}\rangle=\frac{32}{3},\qquad
-\langle\partial_q H\rangle=0,\qquad
-\langle\partial_r H\rangle=8,\qquad
-\langle\partial_q\partial_r H\rangle=-\frac{4}{27}.
-\]
-(The root/non-root asymmetry makes \(\partial_q H\) vanish while \(\partial_r H\) does not.) The constant term integrates to \(1/(\varepsilon-1)^2\) and is non-singular. The bilinear coefficient supplies the projective \(1/\varepsilon^2\). With \(\Gamma(3\varepsilon)\sim 1/(3\varepsilon)\) and weight \(-1/384\),
-\[
-\text{FFff(A) triple pole}=\frac{1}{7776\,\varepsilon^3}.
-\]
-The corner linear piece alone would give a double pole \(1/(144\varepsilon^2)\), but that is incomplete: the once-soft faces (integrated \(\partial_r H\) at \(r=0\) with the short-\(q\) overlap subtracted, and the symmetric \(q\)-face) still have to be evaluated. Those faces converge at large pair length without an extra growing tail model for \(H\) itself, but the derivative face has not been reduced to a stable number in this review.
+The runnable asserts in that note were re-run and pass. The simple-pole counterterm formula there cancels the explicit \(L\) and \(L^2\) against the implied FFff higher-pole logarithms; the constant simple pole remains open.
 
 ## Finish line
 
-Not reached. The Y-matching targets for the baseline at \(\xi=1/6\) are
-\[
-\frac{1}{36\varepsilon^3}-\frac{1}{18\varepsilon^2}+\frac{1}{24\varepsilon}
-\]
-(so that at \(a_Y=-1\) the higher poles cancel and the simple pole cancels the known Y residue).
-
-Independently verified pieces in \(h^2 z/K\):
+Not reached. Independently verified pieces in \(h^2 z/K\):
 
 | Piece | Triple | Double | Simple |
 | --- | --- | --- | --- |
 | QCc (doubled) | \(0\) | \(1/72\) | \(-0.01649742330-L/24\) |
 | CcFf | \(0\) | \(1/144\) | \(\approx-0.02480-L/48\) |
-| FFff(A) soft corner | \(1/7776\) | faces open | open |
-| Mass-only \(Z_z\) CT (packet algebra, rechecked) | \(1/12\) | \(-1/16-L/12\) | \(\zeta(2)/24+L/16+L^2/24\) |
+| FFff(A) short-short corner | \(0\) | \(+5/1728\) (corner only) | open |
+| Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
 
-Bare doubles verified without FFff: \(1/72+1/72+1/144=5/144\) (matches the packet's scalar+QFf+CcFf double-pole subtotal; QFf and CCcc add no double pole). After the mass CT constant \(-1/16\), that subtotal is \(5/144-1/16=-1/36\). The target double is \(-1/18\), so FFff(A) faces, FFff(B), and the remaining two-loop counterterms must still supply \(-1/18-(-1/36)=-1/36\) in the double pole.
-
-For triples: mass CT \(1/12\) plus FFff(A) \(1/7776\) overshoots the target \(1/36\) by \(433/7776\). Other counterterms must cancel that excess.
-
-Still open:
-
-1. FFff(A) once-soft faces (completes its double and feeds its simple pole).
-2. FFff(B), the four-vertex spin-trace graph.
-3. The remaining two-loop curvature counterterms beyond mass-only \(Z_z\).
-4. The full projected sum versus \(1/24\).
+Still open: FFff(A) faces and long overlaps, FFff(B), and the projected simple pole versus \(1/24\).
 
 ## What was derived, and what was only run
 
-Derived in this review, with new SymPy, mpmath, or NumPy code:
+Derived in this review, with new SymPy/mpmath/NumPy code:
 
-- QCc corner \(4d\varepsilon/3\), overlap shift \(8/(3\varepsilon)-4/3\), residue \(8\), double pole \(1/72\), logarithm \(-L/24\)
-- QCc tail \(32/(3\varepsilon)+80/3\), geometric pole \(-8/\varepsilon-32\), evanescent face antiderivative, and the simple-pole constant \(-0.0164974232969\)
-- CcFf corner \(H_0\) and \(H_1\) from the Laplacian, overlap \(-4/(3\varepsilon)\), geometric residue \(+2\), tail \(-8/(3\varepsilon)-20/3\), double pole \(1/144\), logarithm \(-L/48\)
-- CcFf simple pole \(-0.02480\) from a new quasi-Monte Carlo of that integrand
-- FFff(A) polynomial \(U\), radial factor, corner value \(32/3\), exact averages \(\langle\partial_r H\rangle=8\) and \(\langle\partial_q\partial_r H\rangle=-4/27\), triple pole \(1/7776\)
+- QCc corner \(4d\varepsilon/3\), overlap, tail, faces, double pole \(1/72\), simple pole constant
+- CcFf corner, overlap, geometric face, tail, double pole \(1/144\), QMC simple pole \(\approx-0.02480\)
+- Re-run of the corrected FFff(A) cycle Wick corner (averages, no triple pole, corner double \(5/1728\))
+- Re-run of the counterterm-budget asserts
 
-Checked by re-running algebra already in the packet (not a new curved integral): mass-only \(Z_z\) Laurent coefficients \(1/12\), \(-1/16-L/12\), and the simple-pole formula with \(\zeta(2)\).
+Retracted: the earlier FFff(A) bilinear \(-4/27\) and triple pole \(1/7776\) (incorrect Wick/assembly for the mixed term).
 
-Not done: the checkpoint QMC scripts were not executed. QQ, the QCc tadpole, CCcc, QFf, and FFff(B) were not re-derived. FFff(A) double and simple poles are not claimed.
+Not done: checkpoint QMC scripts not executed; QQ, QCc tadpole, CCcc, QFf, FFff(B), and full FFff(A) faces not re-derived as complete Laurent series.
