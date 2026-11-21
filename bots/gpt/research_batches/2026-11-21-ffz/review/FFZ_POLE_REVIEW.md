@@ -85,7 +85,13 @@ The earlier bilinear average \(-4/27\) is wrong; the mixed derivative vanishes. 
 \[
 +\frac{5}{1728\,\varepsilon^2}.
 \]
-The once-soft faces are rational with fifth-order denominators in the spectator effective lengths (printed by the correction script). Their \(r\)-independent \(q\)-linear piece is nonuniform at the spectator fraction endpoint. Short/long overlaps and FFff(B) are still required for the full graph poles.
+The once-soft faces are rational with fifth-order denominators in the spectator effective lengths (printed by the correction script). Their \(r\)-independent \(q\)-linear piece is nonuniform at the spectator fraction endpoint.
+
+The long-pair add-back models (`FFFF_A_LONG_PAIR.md`) were re-checked: each long-pair/short-spectator residue is \(+1\) at projective order \(1/\varepsilon^2\), and the two models together contribute
+\[
++\frac{1}{576\,\varepsilon^3}
+\]
+to the graph. The short-short corner still supplies no triple pole. The globally subtracted remainder and FFff(B) remain open; against the bare FFff budget \(1/36\), this add-back leaves \(5/192\) of triple pole still to find.
 
 ## Counterterm budget (from `COUNTERTERM_BUDGET.md`)
 
@@ -104,6 +110,7 @@ Not reached. Independently verified pieces in \(h^2 z/K\):
 | QCc (doubled) | \(0\) | \(1/72\) | \(-0.01649742330-L/24\) |
 | CcFf | \(0\) | \(1/144\) | \(\approx-0.02480-L/48\) |
 | FFff(A) short-short corner | \(0\) | \(+5/1728\) (corner only) | open |
+| FFff(A) long-pair add-backs | \(+1/576\) | open (with remainder) | open |
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
 
 Still open: FFff(A) faces and long overlaps, FFff(B), and the projected simple pole versus \(1/24\).
@@ -116,6 +123,7 @@ Derived in this review, with new SymPy/mpmath/NumPy code:
 - CcFf corner, overlap, geometric face, tail, double pole \(1/144\), QMC simple pole \(\approx-0.02480\)
 - Re-run of the corrected FFff(A) cycle Wick corner (averages, no triple pole, corner double \(5/1728\))
 - Re-run of the counterterm-budget asserts
+- Re-run of the FFff(A) long-pair add-back asserts (triple \(1/576\))
 
 Retracted: the earlier FFff(A) bilinear \(-4/27\) and triple pole \(1/7776\) (incorrect Wick/assembly for the mixed term).
 
