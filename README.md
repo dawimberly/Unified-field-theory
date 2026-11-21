@@ -2,6 +2,10 @@
 
 An exploratory research notebook, not a demonstrated unified theory. Start with [RESEARCH_STATUS.md](RESEARCH_STATUS.md) for current results, limits, and next calculations.
 
+## November 21 FFZ benchmark
+
+[Review packet for the interacting Newton matching calculation](bots/gpt/research_batches/2026-11-21-ffz/README.md). It includes the current pole checks and the unresolved FFff graphs and counterterms.
+
 ## Reproduce the current checks
 
 Requires Python 3.10+ and NumPy/SciPy.

@@ -50,3 +50,8 @@ See [the dated batch](bots/gpt/research_batches/2026-11-01/README.md) and [discu
 The user prefers preserving GR's tested behavior while considering generalizations of quantum dynamics, and is not attached to a particular model or interpretation. The separate Candidate-0 field study found that a size minimum is not a full equilibrium. Grid relaxation was under-resolved; a smooth topology-preserving family improved its energy by 9.7838%, but an omitted orientation deformation still lowers it. All 76 restricted parameter curvatures were positive; this does not establish full field stability. No collapse mechanism, particle identification, gravitational dynamics or unification was derived.
 
 The prior CEV/source-functional findings and open measure, contour, regulator, and interaction questions above remain preserved. This upload did not rerun those calculations or start a background continuation task. Full computation archives are linked; the raw 72-file staging transfer is explicitly incomplete.
+
+
+## Interacting FFZ benchmark
+
+See the [November 21 review packet](bots/gpt/research_batches/2026-11-21-ffz/README.md) for the external-metric Wess–Zumino calculation, exact and numerical checks, and the open three-loop Newton test.
