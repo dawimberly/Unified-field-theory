@@ -1,0 +1,29 @@
+Matter organization and Newtonian pull
+python 3.12.3, numpy 2.5.5, scipy 1.18.1
+amplitude U''(v) = 128; U''(0) = -64
+ring: locked E,C2 = 0, 1; circulating E,C2,w = 4.93480220054, -1, 1; anticirculating E,C2,w = 4.93480220054, -1, -1; folded E,C2,max|F| = 4.93480220054, 0, 3.14159265359
+ring Hessian eigenvalues [-8.586881206085195e-16, 2.0, 2.0000000000000004, 3.9999999999999996]; negative 0, zero 1
+cube orientation energies aligned, Neel, flip = 0, 24, 6
+Neel tilt curvature / eps^2 = -24.0000005647 (expected -24); vacuum Hessian max abs error 3.331e-08
+baseline masses aligned, Neel, flip = 8, 32, 14
+baseline quadrupoles aligned, Neel, flip = 0.000e+00, 0.000e+00, 1.5746719775
+ΔM(Neel-aligned) = 24; fractional monopole 3
+flip vs smeared at R=10.0: common-origin 0.0258266875908, CM-matched 0.000422061256407
+flip vs smeared at R=40.0: common-origin 0.00625314958209, CM-matched 2.82218584773e-05
+flip vs smeared at R=80.0: common-origin 0.00310972719659, CM-matched 7.11701331824e-06
+random-phase Monte Carlo: Phi mean 0.12423 (exact 0.125), rms 0.116093 (exact 0.116927); short-range mean -0.0013879, rms 0.204772, iid-bond rms estimate 0.204124
+Qin density 2312.99 kg/m^3; torque/lever 471.427 aN; spoke fraction 0.0474485
+gap 0.654 mm: point 2961.16 aN, extended 1070.7 aN, extended/point 0.361583, grid change 1.332e-03, skin/extended 0.12209 (mass fraction 0.102669)
+gap 1.554 mm: point 925.437 aN, extended 561.186 aN, extended/point 0.606402, grid change 8.244e-04, skin/extended 0.117804 (mass fraction 0.102669)
+gap 50 mm: point 1.51242 aN, extended 1.5105 aN, extended/point 0.99873, grid change 3.445e-06, skin/extended 0.10356 (mass fraction 0.102669)
+distance ratios 1.554/0.654 mm: extended 0.524129, point 0.312525, skin fraction near 0.12209, far 0.117804
+uniform source rescaling 1.02 -> force ratio 1.02
+toy bound |alpha|/(rho c^2) at |ΔC2|=1, source swap, 1σ: 0.0488323; |alpha| 1.01513e+19 J/m^3; both-wafers reading 0.0244161
+external Si cohesive fraction 1.76981e-10; force resolution for that fraction 8.3358e-08 aN
+N=8: short-range mean 1, locked spanning 1, random spanning mean 0.125, random spanning rms 0.116927
+N=64: short-range mean 1, locked spanning 1, random spanning mean 0.015625, random spanning rms 0.0155024
+N=512: short-range mean 1, locked spanning 1, random spanning mean 0.00195312, random spanning rms 0.00195122
+N=4096: short-range mean 1, locked spanning 1, random spanning mean 0.000244141, random spanning rms 0.000244111
+assumed fluctuation average: variance factor 5.55556e-06 (not applied to the mean)
+On the lattices computed here, arrangements that are stable under the repository Hamiltonian differ gravitationally only through ordinary stress-energy. Opposite windings match in energy, multipoles, and the even pair correlator. The Néel arrangement is stationary but unstable, and its far field differs from the vacuum by ΔM = ΔE/c² with vanishing extra multipoles. The one toy coupling can split a same-stress pair, but that pair is not stable, and the coupling is not part of the action. Matched full active mass leaves no residual.
+wrote /workspace/experiments/matter_organization_gravity_2026_11_19/results.json
