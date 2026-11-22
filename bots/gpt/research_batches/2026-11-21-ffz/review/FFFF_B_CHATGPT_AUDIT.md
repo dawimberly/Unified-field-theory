@@ -118,4 +118,24 @@ So ChatGPT’s qualitative suspect (“\(\varepsilon\) times a triple pole can c
 
 The numerator \(\varepsilon\)-derivative residue splits as explicit \((k-1)\) piece \(+144\) plus \(A,B\) \(d\)-dependence, netting \(+32\). Dropping the explicit \((k-1)\) piece removes \(144\), not \(16\), and is the wrong fix: \(A+(k-1)B\) with \(\Gamma(k-1)\) already equals \(\Gamma(k-1)A+\Gamma(k)B\), so that factor is required once. The note in `FFFF_A_ANALYTIC_DOUBLE.md` that the budget “needs \(+16\) not \(+32\)” is the cancellation requirement, not an independent evaluation that the residue is wrong by half.
 
-**Still open:** identify a concrete missing/double-counted overlap term that removes exactly \(16\) from the slope (or an equivalent \(\delta=1/3\) relative error). Scalar-mass and E-split internals are not that term.
+**Still open:** independent derivation that the coupling-weight insertion has the same soft-soft residue as \(\lambda_F\) (see next section). Scalar-mass and E-split internals are not the \(-16\) term.
+
+## First concrete \(-16\) term: vertex on double-log overlap
+
+Runnable: `ffz_ffff_B_slope16_hunt.py`.
+
+Sector split of the numerator \(\varepsilon\)-derivative residue \(+32\):
+
+| Piece | double-log (40 sectors) | power/log (72) | sum |
+| --- | ---: | ---: | ---: |
+| vertex \(\lambda_F\) | **\-16** | \(-48\) | \(-64\) |
+| scalar curvature mass | \(0\) | \(-128\) | \(-128\) |
+| explicit \((k-1)\) | \(+144\) | \(0\) | \(+144\) |
+| \(B_d\) | \(+77.\overline{3}\) | \(+2.\overline{6}\) | \(+80\) |
+| **full** | \(+205.\overline{3}\) | \(-173.\overline{3}\) | **\(+32\)** |
+
+The fermion-vertex piece on the two overlapping logarithmic endpoints is **exactly \(-16\)**. Doubling that piece (numerator \(32\to 16\), slope \(224\to 208\)) yields B double \(-1/288\), projected residual \(0\), and cancels \(+L/48\).
+
+**Hypothesis (arithmetic match; justification provisional):** the packet assigns the Yukawa *coupling* Weyl weight \(\varepsilon\), equal at this order to \(\lambda_F=(4-d)/2\). The kernel implements the field-weight insertion \(-\lambda_F\sum M_{ii}\) but not a parallel coupling-weight insertion. On the two-log overlap those two \(O(\varepsilon)\) soft factors would each contribute \(-16\); only one is present.
+
+This is the first term that accounts for the full double-pole gap. It still needs an independent check that the coupling-weight soft-soft residue equals the \(\lambda_F\) one (same engineering weight is necessary but not sufficient).
