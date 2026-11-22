@@ -21,6 +21,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_gap_physical_audit.py` — is the gap physical? topology coverage; CcFf±1e-4; \(a_Y\) scan (`FFFF_GAP_PHYSICAL.md`)
 - `ffz_ffff_B_nonoverlap_finite.py` — forest non-overlap \(\Delta c_0=0\) (not a second \(64/3\)); gap stands (`FFFF_B_NONOVERLAP_FINITE.md`)
 - `ffz_finite_eps_crosscheck.py` — independent finite-ε Laurent cross-check of every ledger class (`FFFF_FINITE_EPS_CROSSCHECK.md`)
+- `ffz_ffff_B_literal_coupling.py` — bare-Lagrangian coupling weight; literal global vs overlap-fixed poles (`FFFF_B_LITERAL_COUPLING.md`)
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
@@ -38,6 +39,7 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | FFff(A) full graph higher poles | Numerical inference only (`FFFF_A_REGULATED.md`); conversion exact |
 | FFff(B) triple \(1/48\), bare double \(-1/96\) | Agree (residue / regulated) |
 | FFff(B) overlap-fixed double \(-1/288\) | Applied (vertex-ll \(\Delta a_1=-16\); see `FFFF_B_OVERLAP_FIX.md`) |
+| FFff(B) literal coupling \(\Delta a_1=-16\), \(\Delta c_0=64/3\) | Soft-soft residues confirmed; global doubling refuted; overlap-restricted reading confirmed (`FFFF_B_LITERAL_COUPLING.md`) |
 | Projected double vs Y at \(L=0\) | Cancels after overlap fix |
 | Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple gap \(\approx+0.0097\) stands (`FFFF_SIMPLE_GAP_AUDIT.md`) |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
