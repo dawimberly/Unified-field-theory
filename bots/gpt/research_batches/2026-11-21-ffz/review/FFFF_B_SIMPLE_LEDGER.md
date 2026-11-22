@@ -51,8 +51,8 @@ See `FFFF_B_SOFT_LINEAR_AUDIT.md`. Soft-linear of the extra vertex copy is quadr
 
 ## What is still open
 
-1. Independent operator form of the coupling-weight insertion (still an assembly correction).
-2. FFff(A) simple / projective \(c_0\) — closing the \(\sim+0.009\) overlap-only gap by A alone needs \(c_0^A\approx 12.33\) vs reported \(\sim 14.93\).
-3. Full projected sum versus \(1/24\) once A’s simple is controlled.
+1. Scheme-level identification that the missing piece is exactly one overlap copy of this operator (see `FFFF_B_OVERLAP_RIGOR.md`; global doubling excluded by pl \(=-48\)).
+2. Projected simple versus \(1/24\): FFff(A) re-extraction gives \(c_0^A=15.11\pm 0.58\) (`FFFF_A_SIMPLE_REEXTRACT.md`), **not** \(\approx 12.33\). Gap \(\approx+0.01\) is not closed by A.
+3. Any remaining finite pieces or missing graphs beyond the present ledger.
 
 Homogeneity still predicts \(+L/96+3L^2/32\) in bare B simple from the fixed double/triple.

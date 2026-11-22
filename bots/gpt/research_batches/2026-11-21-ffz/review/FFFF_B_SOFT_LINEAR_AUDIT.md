@@ -18,7 +18,7 @@ The soft-linear measure factor is the standard limit
 
 ## Why soft-linear is excluded from the overlap fix
 
-The overlap assembly that fixed the double pole is a **two-log** correction: both soft axes logarithmic, where two \(O(\varepsilon)\) endpoint factors overlap (`FFFF_B_OVERLAP_FIX.md`). Soft-linear is a **single**-soft channel (one log endpoint × regular). Global \(\lambda_F\) doubling is already ruled out because it shifts power/log by \(-48\). By the same region logic, soft-linear is outside the assembly fix and must not be appended to \(c_0\).
+Derived from sector Taylor inclusion-exclusion (`FFFF_B_OVERLAP_RIGOR.md`): on two log axes the overlap addback depends only on the soft-soft leading \(G(0,0)\); soft-linear is removed by single-axis subtractions and never enters that addback. Global \(\lambda_F\) doubling is separately ruled out because it shifts power/log by exactly \(-48\). Soft-linear of a globally doubled vertex operator must not be appended to the overlap \(c_0\).
 
 If it is wrongly included,
 
