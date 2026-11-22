@@ -17,6 +17,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_ffff_B_soft_linear_audit.py` — soft-linear of extra vertex-ll copy; excluded from overlap \(c_0\) (`FFFF_B_SOFT_LINEAR_AUDIT.md`)
 - `ffz_ffff_B_overlap_rigor.py` — sector inclusion-exclusion: overlap = soft-soft only; coupling \(\equiv\lambda_F\) (`FFFF_B_OVERLAP_RIGOR.md`)
 - `ffz_ffff_A_simple_reextract.py` — FFff(A) projective \(c_0\) with cut/seed error (`FFFF_A_SIMPLE_REEXTRACT.md`)
+- `ffz_simple_gap_audit.py` — full simple-pole ledger + Y/CT/QFf re-derivation; gap stands (`FFFF_SIMPLE_GAP_AUDIT.md`)
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
@@ -35,7 +36,7 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | FFff(B) triple \(1/48\), bare double \(-1/96\) | Agree (residue / regulated) |
 | FFff(B) overlap-fixed double \(-1/288\) | Applied (vertex-ll \(\Delta a_1=-16\); see `FFFF_B_OVERLAP_FIX.md`) |
 | Projected double vs Y at \(L=0\) | Cancels after overlap fix |
-| Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple ledger open (`FFFF_B_SIMPLE_LEDGER.md`) |
+| Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple gap \(\approx+0.0097\) stands (`FFFF_SIMPLE_GAP_AUDIT.md`) |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
 
 The superseded corner numerator \(2d\varepsilon/3\) is the error the latest QCc note corrects. The numerator before any \(\varepsilon\to 0\) truncation is
@@ -148,7 +149,7 @@ Not reached. Independently verified / inferred pieces in \(h^2 z/K\):
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
 | FFff(B) (overlap-fixed) | \(1/48\) | \(-1/288-L/16\) | simple constant open |
 
-Still open: projected simple pole versus \(1/24\). Overlap soft-soft-only is derived from sector inclusion-exclusion (`FFFF_B_OVERLAP_RIGOR.md`); coupling weight \(\equiv\lambda_F\) at this order (ll \(=-16\), pl \(=-48\)). FFff(A) re-extraction gives projective \(c_0=15.11\pm 0.58\) (`FFFF_A_SIMPLE_REEXTRACT.md`) — **not** the \(\approx 12.33\) that would null the gap. Gap \(\approx+0.01\) remains open.
+Gap audit (`FFFF_SIMPLE_GAP_AUDIT.md`): every simple-pole piece re-checked (Y \(1/24\), CT, QQ, CCcc, QCc tadpole pole, QFf derived; QCc/CcFf/A/B within budget). **No piece is off by \(\sim0.01\).** Projected total \(\approx+0.0513\) vs \(1/24\) leaves gap \(\approx+0.0097\pm0.0024\). That residual stands under the present ledger (needs new ideas, not retuning).
 
 ## What was derived, and what was only run
 
@@ -165,4 +166,4 @@ Derived in this review, with new SymPy/mpmath/NumPy code:
 
 Retracted: the earlier FFff(A) bilinear \(-4/27\) and triple pole \(1/7776\) (incorrect Wick/assembly for the mixed term).
 
-Not done: full analytic FFff(A) remainder; independent operator form of the B coupling-weight overlap (assembly fix applied); QQ, QCc tadpole, CCcc, QFf not re-derived as complete Laurent series; projected simple pole versus \(1/24\).
+Not done: full analytic FFff(A) remainder; independent operator form of the B coupling-weight overlap (assembly fix applied). Gap audit re-derived QQ/CCcc/QFf/CT/Y; the \(\approx+0.01\) residual versus \(1/24\) is now a standing result under the present graph+CT list.
