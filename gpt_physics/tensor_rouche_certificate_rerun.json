@@ -1,0 +1,15 @@
+{
+  "center": [
+    "223/50",
+    "718/25"
+  ],
+  "radius": "1/50",
+  "Simpson_panels": 512,
+  "linear_term_lower": 3.443228342173887e-06,
+  "nonlinear_and_center_error_upper": 7.73481038035019e-07,
+  "strict_Rouche_margin": 2.669747304138868e-06,
+  "elapsed_seconds": 0.2630171999335289,
+  "conclusion": "Exactly one zero counted with multiplicity inside |z-(4.46+28.72i)|<.02; all decisive arithmetic is exact rational.",
+  "proof": "On the disk, Re(z)>0 gives |4+z(1-t^2)|>=4. Fourth derivatives bound exact-complex Simpson errors; a uniform second z derivative bounds the Taylor remainder. Rouche compares F to Fprime(center)*(z-center).",
+  "scope": "Fixed L=5 subtractions in the physical-species tensor response. Certifies a response zero, not a physical gravitational mode or quantum equivalence."
+}

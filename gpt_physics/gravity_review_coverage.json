@@ -1,0 +1,487 @@
+{
+  "scope": "Accessible local research inventory, not all account conversations.",
+  "full_current_material": [
+    "Supplied conversation handoff in current context",
+    "611-line Higgs-video transcript libfile_76086256647c819182fb579cd5f1e51e",
+    "Response-pole checkpoint libfile_f5b69f1fc77081919010c98f02bfdcf5",
+    "Matched constraint identity libfile_750ad217f15481919872b2bbcb790f9a",
+    "Earlier Hopfion notebook and discussion PDFs"
+  ],
+  "historical_coverage": "Targeted searches and selected report/transcript passages. Long transcript/compiler outputs partly truncated. No claim of 100% historical coverage.",
+  "local_inventory": [
+    {
+      "path": "C:\\workspace\\physics\\archive\\cursor-transcript-fine-structure-and-pdf-consolidation.jsonl",
+      "bytes": 139830,
+      "sha256": "1dbf0d365161870f0aa36b2492e199f99e5c0167aa2c3f55f261de399578bacc",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\archive\\GEMINI_EXPORT_EXTRACT.md",
+      "bytes": 2450,
+      "sha256": "0a9e7567c77b078d57818ec2cde83cc8e89e3906c0b4d519a671df43e037f008",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\archive\\MASTER_PHYSICS_DOCUMENT.md",
+      "bytes": 536193,
+      "sha256": "ee522a5befc42a2cb06c48dba69c5c2f979fb1fa12d40d1de6cb5bec9c08c2ca",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\archive\\PHYSICS_RESEARCH_ARCHIVE.md",
+      "bytes": 516421,
+      "sha256": "f323fdae61403f51b83858a7f4cb273af3f26c43b044592e076c3f15648412fc",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\archive\\README.txt",
+      "bytes": 303,
+      "sha256": "95fe20ae6ab9212889819792de854882180db5ba245deb22d148f7123726edfe",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\bridge\\sample_inputs\\PLACEHOLDER_RESEARCH_BRIEF.md",
+      "bytes": 554,
+      "sha256": "73e15649022336b560e1aa314d1ee07d1333f70bd72af814c8e696631b5451ed",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\docs\\POSSIBILITY_CLOUD_THEORY.md",
+      "bytes": 8146,
+      "sha256": "348078a4b9aff254a6fd66e3472cee1d0bf41fafa87c1b1548a5e3e518e9c3a5",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\alternative_gravity_routes\\REPORT.md",
+      "bytes": 9804,
+      "sha256": "38518162021884ade9aec9878dfd4bf0bfdbad4416825887d596bdd88c84664b",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\binding_mode_energy\\REPORT.md",
+      "bytes": 7171,
+      "sha256": "ebdd2de4fb69953956ed4c77f8da0415a002681ca40c53a7f68d0508ff025055",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\brane_formula_bridge.md",
+      "bytes": 5143,
+      "sha256": "f847dbc3eaae3c0206e573cfee1863401438b237c586a56b84b0aad79e25f5cf",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\bridge_connection_preflight\\REPORT.md",
+      "bytes": 2334,
+      "sha256": "0c26cf9afaa602f240aefdb997759dd7135a272859df618afc4e840b37e008e4",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\cloud_amplitude_dynamics\\REPORT.md",
+      "bytes": 3692,
+      "sha256": "af68306c7b1029b26038d8db1647dc866b9f5df5e11510d98df72359b2677e17",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\cloud_amplitude_dynamics\\STATIC_SECTOR_AUDIT.md",
+      "bytes": 2214,
+      "sha256": "0595d355a4e46d09fae4c4b8b4114b287f7e246e2d0f1dcd2f6d2d43f6bd8378",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\composite_ratio_control.md",
+      "bytes": 2866,
+      "sha256": "25bfe481be03059c1111836aacc02da99bf35e71d137316dddefdcae1f4e48e6",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\coupling_angle_checks\\REPORT.md",
+      "bytes": 8652,
+      "sha256": "db18440ff5a55147d2de5121f89d53bb9d9c05a37dba07bdc8de0bcedcd8e102",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\cyclic_bose_gas_checks\\REPORT.md",
+      "bytes": 7211,
+      "sha256": "85b20b3295a153e7840b63e1e79eb1d5e07375e6d8d2ca178cd1eba67fa32b6a",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\emergent_gravity_three_routes\\REPORT.md",
+      "bytes": 9188,
+      "sha256": "96620efa2da4acd1d43a392961cbd99828735c168b7b3b0ba7889e8d17156f07",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\gravity_continuation_batch.md",
+      "bytes": 10027,
+      "sha256": "01540f4b0cb1b9b3e93efbbb2b8a78e7c6ab65c76c7aafd808f2b8410a268601",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\gravity_literature_elimination.md",
+      "bytes": 18384,
+      "sha256": "96b26567ef4718e85e666365253c5a399ade998f32f117e05846183196299ef3",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\grok_quartic_claim_review\\REVIEW.md",
+      "bytes": 10129,
+      "sha256": "1cd164497dc239e3b5c8752d27ec1719bc25bc8ea48f016e71ae597acb129d23",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\grok_round2_independent_review\\REVIEW.md",
+      "bytes": 11074,
+      "sha256": "b0d3c23530aa2bbd9f96b83f2103dfd1b21ead36723ab8be229f1884e77028e0",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\grok_round3_measure_review\\REVIEW.md",
+      "bytes": 10020,
+      "sha256": "4d7c54837bb1f6bf3163d08534f15b05f283258c1898814fe297253d56e20661",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\hopf_first_run\\REPORT.md",
+      "bytes": 4148,
+      "sha256": "e5989cca9c5e02bcc46ba1d68e93d3e156b5b1b7ecde657b5b167344cfc356a3",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\hydrogen_cloud_workbench\\CANDIDATE_ACTION.md",
+      "bytes": 13237,
+      "sha256": "3817f150a721725ad5e2fd070ec158504009fbea16e94d414bf577b1b565dbd5",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\hydrogen_cloud_workbench\\REPORT.md",
+      "bytes": 18803,
+      "sha256": "8fe0d4f2f63ed81d71cc1af07e5083586def3acb68d7ad8d941d481d66ef025c",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\induced_gravity_spectrum_audit\\REPORT.md",
+      "bytes": 9922,
+      "sha256": "47ffa2304cbefa73bb319fc6cd11d50b688f5fac6291bf0e7b29b389567cac3f",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\interacting_covariance_audit\\REPORT.md",
+      "bytes": 8284,
+      "sha256": "6efd2421b9869c877e2d178fd12168e5406e66a30e4559bf76e26f2a2ad0e5bd",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\knotted_cloud_dynamics\\REPORT.md",
+      "bytes": 5794,
+      "sha256": "6b2398d0b876946e5e13bee35f50798e00a6d15c6bdad9125293d4ac8fefafc4",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\knotted_cloud_dynamics\\REPRODUCE.md",
+      "bytes": 957,
+      "sha256": "1688989ddbea58dfae195541e3eb4973dd425306d65fb0c563fba43027031ec2",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\magnetoelastic_gravity_checks\\REPORT.md",
+      "bytes": 9181,
+      "sha256": "4d81fb43af87b6bf5d8be8b6cd408b05daef2aa2a049b895a147bcbba34179d8",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\matched_constraint_identity.md",
+      "bytes": 4573,
+      "sha256": "5b103dca4d8bf730987b806bb7788cbba303152b19ffe5c88a6a06b2c5295978",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\metric_spectral_check\\REPORT.md",
+      "bytes": 3271,
+      "sha256": "8ace728c7c08f5e78234ae3d0e8b0c4fb488edf23484bd18aae8246a99904821",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\metric_tensor_ward_check\\REPORT.md",
+      "bytes": 4684,
+      "sha256": "0baa5348921c8513307205d446655fce9c2025f1e90f1caa17325823c278170a",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\ordering_gravity_comparison\\REPORT.md",
+      "bytes": 8340,
+      "sha256": "ae520e3071434bf9c2f6ec4905eef227ba2291f5b0ac662a263c0d3111c63caa",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\pv_scalar_response_control\\REPORT.md",
+      "bytes": 5436,
+      "sha256": "ec2bbc32efa23fd213ce02d353118824b3005d75c1032e1a3a5f4e0cc94d2d08",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\quantum_einstein_bridge_audit\\REPORT.md",
+      "bytes": 9614,
+      "sha256": "1beeb1e6aab374d530cd6843266615e6b89b06ad96767a28782105fc6a5891cb",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\quartic_composite_vertex_audit\\RESEARCH_BRIEF.md",
+      "bytes": 7203,
+      "sha256": "f02251a75840576bb9801fd5c3c8a1a16e422d5b6c782e76103d70034b98e9a7",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\quartic_composite_vertex_audit\\VERTEX_DERIVATION.md",
+      "bytes": 2548,
+      "sha256": "f3f0fa20b631f2f571773366585acc7c672f419f8e90394c17618000679f1430",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\radiation_four_checks\\REPORT.md",
+      "bytes": 3238,
+      "sha256": "800d40fc9263157cc9d89afaea7e8a4fd9bf19c215af2d14532e4672b361f982",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\scalar_full_response_scan\\REPORT.md",
+      "bytes": 3999,
+      "sha256": "b49e2a634aed056c8b30ec157fd89c952291208d6515c2ab7c857314354588b6",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\scalar_matter_audit.md",
+      "bytes": 6580,
+      "sha256": "2b09c3e9ae444ba6d2dda85e6060dd12c52b585b7cc1583ccacf87d27a3cf89d",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\scalar_source_projection_check\\REPORT.md",
+      "bytes": 4064,
+      "sha256": "f428b7f0d01fcb513667fc1f1627074d1c954d41c134ebdaf17e9f32f0c4d245",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\scalar_threshold_transition.md",
+      "bytes": 3200,
+      "sha256": "887492e4bdb406de8983caf62d0151d0fa01470f46de6d6afcc1c14d81d75338",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\screening_density_scan\\REPORT.md",
+      "bytes": 3311,
+      "sha256": "2887e391c74c8056e2d3bef5ea72eec1602326d8d26bf6999e6d2a99f0fd9118",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\screening_independent_audit\\inputs\\gravity_screening_study.md",
+      "bytes": 79180,
+      "sha256": "7309d2402d47d4781b440dee43bd805dbd24270a2ed1bdd71bfb23a57ff4af01",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\screening_independent_audit\\REPORT.md",
+      "bytes": 4381,
+      "sha256": "eb9d7e2242f3e20703136269567c1838a6629cf28500addde1ec170a5aecb2eb",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\spin2_interaction_inventory\\REPORT.md",
+      "bytes": 7378,
+      "sha256": "aeca3b12ed1e6084e5a035a41178868254d3a184ba0ecc21abea1511cc6a03f0",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\spin2_interaction_inventory\\SIMULATION_SPEC.md",
+      "bytes": 3953,
+      "sha256": "ab01a51cf55f1306e5ed7e51bf8a3061ee34b839b6e42d6ee9425c296ab3b409",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\spin_organization_control\\REPORT.md",
+      "bytes": 7432,
+      "sha256": "5c40e39587905cc33d23c5d0936b89cc4b1bcc675eddf220d778736031bded85",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\experiments\\stochastic_regulator_screen.md",
+      "bytes": 6879,
+      "sha256": "12fd94a7d30ead834264513834d41c42e352fcc6884148f50f8ece1115817b07",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round2\\DERIVATION.md",
+      "bytes": 10557,
+      "sha256": "fb9bab02562582a6c200753e7c3ba9f154168fbe94405dffb5ccdbb7e1ceb718",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round2\\DISAGREEMENT_LOG.md",
+      "bytes": 6866,
+      "sha256": "c70f7f049ddeb89e57ddb669b06ffab7ba351ab0334d631b83bcb8c817e59107",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round2\\outputs.txt",
+      "bytes": 1415,
+      "sha256": "7f126346ab88ae726a38e9102b386de485dcb459ccaabf2349b7ecbd4cf33f40",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round2\\README.md",
+      "bytes": 1090,
+      "sha256": "929453a99cc2aa52628794eed637b678042a6e727888e934a9ba1b48ce7a0c0c",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round3\\DERIVATION.md",
+      "bytes": 11467,
+      "sha256": "ad667b48322a689afdb44f440e18c22bd2b99174b74e4603b15f3b12aabdf926",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round3\\DISAGREEMENT_LOG.md",
+      "bytes": 8981,
+      "sha256": "79ef45f381afca37d46bca0106fac9769b78cf10aef46b73ee500d7552bc6840",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round3\\outputs.txt",
+      "bytes": 772,
+      "sha256": "ea3081291792b5c4e4c1942a7e20ab04b7b39601de7dfb31371a5592e8989daf",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round3\\README.md",
+      "bytes": 968,
+      "sha256": "2ba7dc89305fd251b9c918d57422e396e8e77b52ba1ceefb648d13dc283444a0",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round4\\DERIVATION.md",
+      "bytes": 5603,
+      "sha256": "125bdc8906809153dbe3daff58dec1343c002c5c18a31a4ae5a8a9ba02e92239",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round4\\DISAGREEMENT_LOG.md",
+      "bytes": 9626,
+      "sha256": "f22be6908bddc35f4b6a8ea886e42377018da9f17d13cefcd789ad3118873ba5",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round4\\outputs.txt",
+      "bytes": 1451,
+      "sha256": "48e52430d3eb9128bfff59980db4464eae228ea89e7f5fae2a199db0defd5696",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round4\\README.md",
+      "bytes": 504,
+      "sha256": "40319bde35624ae4d0dbc82a1e9465bf91e81685e23885b076e3f2f16ae318ec",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round5\\DERIVATION.md",
+      "bytes": 6190,
+      "sha256": "631225b34329dabd377b0e505dd837d249c98c9bdfa647cba274b787f585556d",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round5\\DISAGREEMENT_LOG.md",
+      "bytes": 10616,
+      "sha256": "e6f34d4fe6dffd795b1b11a15d41ae568d4d8f3ec6d245fb57e12b51cfbda1f5",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round5\\outputs.txt",
+      "bytes": 4131,
+      "sha256": "3385e5576647f319d00b230da272a7243592d972a2b1b2052a298ff32c1d04d7",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round5\\README.md",
+      "bytes": 441,
+      "sha256": "cccb5163e4371429721c7d19823d48b1aad12c6246f6d62f191a23a9827a94cc",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\external_reviews\\grok_quartic_round5\\SLACK_SUMMARY.txt",
+      "bytes": 2956,
+      "sha256": "77d446851c2a49b662377ec2b3e2d3a5abba05c5235447ff1ede0c94c882a996",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\gemini-export\\gemini pdf_files\\f(1).txt",
+      "bytes": 4297,
+      "sha256": "36d6fe0dc459599b781b45745b6050b778a2e4a2cfa0f7a9ff783fd509cd0820",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\gemini-export\\gemini pdf_files\\f.txt",
+      "bytes": 4295,
+      "sha256": "af302599266b7e8bf0f5f71a423ca0f5a2eac8cf08b37582da3ec6de9f99472c",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\README.txt",
+      "bytes": 566,
+      "sha256": "962f0bb4a4d636ce0f701887fab151e68ce2757f8dfd6e1685dbe7ad29539949",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\response_pole_checkpoint_2026_10_30.md",
+      "bytes": 8384,
+      "sha256": "cca742884cf459c828a3b99f9dadca3d4aedb111f617ca3a5e00ca7a31477df6",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\scalar_matching_checkpoint_2026_10_30.md",
+      "bytes": 5137,
+      "sha256": "9a4ee7bcb023f1134f908ead83279a7f2b858404dcf862c6da71c72528026780",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\600-cell.jsonl",
+      "bytes": 6099,
+      "sha256": "ed0cc8896491de9124512ba01113b269c15e022a13441f84f47180e81d6eb9c0",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\600-cell.md",
+      "bytes": 4874,
+      "sha256": "3e8fde47b30dbddabfd9470d6da9f115a16b30c5ca521a8c0ad86e7391f00967",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\cursor-physics-meta-conversation.jsonl",
+      "bytes": 171940,
+      "sha256": "156b33e92c316569102d2ff3128195f7a00de5b9aeb8218ad29f6dfdefecc7c0",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\cursor-physics-meta-conversation.md",
+      "bytes": 30684,
+      "sha256": "ab05753430ec4f91914cb7d1f16be3b26bc69f183ed3abbec1c4da5e8710632a",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\fine-structure-and-consolidation.jsonl",
+      "bytes": 150334,
+      "sha256": "e897d9a8e0bd9bf3fc5979d7a4fc325607cc16d1868e1e16d22411c8011545c7",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\geometry-of-possibility.jsonl",
+      "bytes": 277160,
+      "sha256": "46b42ff48f8092d244db8df079fe8405f09202fc901478872c86c6eff3c7db3b",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    },
+    {
+      "path": "C:\\workspace\\physics\\transcripts\\possibility-cloud-genesis.jsonl",
+      "bytes": 303683,
+      "sha256": "07355f9a1a3227f86a3088d9e7ae05ee0e4ca428c30deb6e607f4451f40be69b",
+      "coverage": "Inventoried; selected scientific documents and excerpts reviewed. This row does not certify full reading."
+    }
+  ]
+}

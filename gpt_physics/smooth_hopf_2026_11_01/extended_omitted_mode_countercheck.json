@@ -1,0 +1,123 @@
+{
+  "parameter_index": 123,
+  "sector": "orientation",
+  "max_new_amplitude_gradient": 9.233370685894475e-08,
+  "max_new_orientation_gradient": 10.239304201063991,
+  "rows": [
+    {
+      "grid": [
+        40,
+        18,
+        36
+      ],
+      "step": -0.01,
+      "energy": 280.5672877976703,
+      "derivative": 10.238239735755615,
+      "perturbed_energy": 280.4960485200309,
+      "energy_change": -0.07123927763939264
+    },
+    {
+      "grid": [
+        40,
+        18,
+        36
+      ],
+      "step": -0.001,
+      "energy": 280.5672877976703,
+      "derivative": 10.238239735755615,
+      "perturbed_energy": 280.5573609608059,
+      "energy_change": -0.009926836864394772
+    },
+    {
+      "grid": [
+        40,
+        18,
+        36
+      ],
+      "step": -0.0001,
+      "energy": 280.5672877976703,
+      "derivative": 10.238239735755615,
+      "perturbed_energy": 280.56626708765106,
+      "energy_change": -0.0010207100192474172
+    },
+    {
+      "grid": [
+        56,
+        24,
+        48
+      ],
+      "step": -0.01,
+      "energy": 280.5673060784862,
+      "derivative": 10.239304201063991,
+      "perturbed_energy": 280.4960557715406,
+      "energy_change": -0.0712503069455579
+    },
+    {
+      "grid": [
+        56,
+        24,
+        48
+      ],
+      "step": -0.001,
+      "energy": 280.5673060784862,
+      "derivative": 10.239304201063991,
+      "perturbed_energy": 280.5573781729604,
+      "energy_change": -0.009927905525785263
+    },
+    {
+      "grid": [
+        56,
+        24,
+        48
+      ],
+      "step": -0.0001,
+      "energy": 280.5673060784862,
+      "derivative": 10.239304201063991,
+      "perturbed_energy": 280.5662852619784,
+      "energy_change": -0.0010208165077756348
+    },
+    {
+      "grid": [
+        72,
+        30,
+        60
+      ],
+      "step": -0.01,
+      "energy": 280.5673061611637,
+      "derivative": 10.23930294948427,
+      "perturbed_energy": 280.49605585534965,
+      "energy_change": -0.0712503058140328
+    },
+    {
+      "grid": [
+        72,
+        30,
+        60
+      ],
+      "step": -0.001,
+      "energy": 280.5673061611637,
+      "derivative": 10.23930294948427,
+      "perturbed_energy": 280.5573782567765,
+      "energy_change": -0.009927904387211584
+    },
+    {
+      "grid": [
+        72,
+        30,
+        60
+      ],
+      "step": -0.0001,
+      "energy": 280.5673061611637,
+      "derivative": 10.23930294948427,
+      "perturbed_energy": 280.56628534478017,
+      "energy_change": -0.0010208163835159212
+    }
+  ],
+  "limitation": "New smooth modes outside the minimized family; energies are numerical quadratures, not interval-certified values.",
+  "monomial_exponents": [
+    3,
+    0,
+    1
+  ],
+  "rotation_component": 1
+}
