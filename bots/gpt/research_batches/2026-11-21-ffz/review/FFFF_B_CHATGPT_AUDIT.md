@@ -97,3 +97,25 @@ in the simple pole. So **\(\ln(z/\mu^2)/\varepsilon\) does not cancel** while th
 ## Relation to prior review notes
 
 Consistent with `FFFF_B_REGULATED.md` (intercept \(-48\), slope \(\sim 224\), double \(\sim -1/96\)), `FFFF_TRIPLE_NORMALIZATION.md` (triples \(1/144+1/48=1/36\)), `FFFF_B_MIXED_PAIR_IBP.md` (E-split \(-1/54\)), and `FFFF_A_ANALYTIC_DOUBLE.md` (projected residual \(\sim -1/144\), uncanceled \(+L/48\)).
+
+## Follow-up: contractions and ε×triple contamination
+
+Runnable: `ffz_ffff_B_contraction_contamination.py`.
+
+### Why a loop (PSE / Tong framing)
+
+The Yukawa vertex is one scalar + two Weyl fermions (no \(\phi^2\psi\) operator). Four scalar legs therefore need four vertices. Pairing those legs into two internal scalars and wiring the fermions as a single 4-cycle gives \(V=4\), \(I=6\), \(L=3\). The 2+2 fermion wiring is FFff(A); the single 4-cycle is FFff(B). Signed weight used in the poles: \(32\times(1/2)^4/2!=+1\). The packet’s “\(2!^2\)” wording would give \(+1/2\); that global rescaling is incompatible with the passing triple sum \(1/36\), so it is flagged as wording ambiguity only.
+
+### Why the double fails while the triple passes
+
+Independent B extraction gives projective slope \(224\) and graph double \(-1/96\). The budget needs double \(-1/288\), i.e. slope \(208\). Difference \(\Delta a_1=-16\).
+
+A relative factor \((1+\delta\varepsilon)\) on the triple density shifts the projective \(1/\varepsilon\) coefficient by \(-48\delta\). Taking \(\delta=1/3\) gives exactly \(\Delta a_1=-16\), and in graph units
+\[
+-\frac1{96}-\Bigl(-\frac1{288}\Bigr)=-\frac1{144}=-\delta\times\Bigl(\frac1{48}\Bigr).
+\]
+So ChatGPT’s qualitative suspect (“\(\varepsilon\) times a triple pole can change the double while leaving the triple intact”) matches this review’s residual **quantitatively** for \(\delta=1/3\).
+
+The numerator \(\varepsilon\)-derivative residue splits as explicit \((k-1)\) piece \(+144\) plus \(A,B\) \(d\)-dependence, netting \(+32\). Dropping the explicit \((k-1)\) piece removes \(144\), not \(16\), and is the wrong fix: \(A+(k-1)B\) with \(\Gamma(k-1)\) already equals \(\Gamma(k-1)A+\Gamma(k)B\), so that factor is required once. The note in `FFFF_A_ANALYTIC_DOUBLE.md` that the budget “needs \(+16\) not \(+32\)” is the cancellation requirement, not an independent evaluation that the residue is wrong by half.
+
+**Still open:** identify a concrete missing/double-counted overlap term that removes exactly \(16\) from the slope (or an equivalent \(\delta=1/3\) relative error). Scalar-mass and E-split internals are not that term.

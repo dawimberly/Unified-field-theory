@@ -10,6 +10,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_ffff_A_regulated_conversion.py` — projective \(\to\) graph conversion and B targets
 - `ffz_ffff_B_gaussian.py` — FFff(B) parity-even Gaussian algebra
 - `ffz_ffff_B_chatgpt_audit.py` — independent FFff(B) poles vs parallel ChatGPT claims (`FFFF_B_CHATGPT_AUDIT.md`)
+- `ffz_ffff_B_contraction_contamination.py` — Wick multiplicity and ε×triple→double shift
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
