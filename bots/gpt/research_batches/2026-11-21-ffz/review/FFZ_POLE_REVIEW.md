@@ -12,6 +12,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_ffff_B_chatgpt_audit.py` — independent FFff(B) poles vs parallel ChatGPT claims (`FFFF_B_CHATGPT_AUDIT.md`)
 - `ffz_ffff_B_contraction_contamination.py` — Wick multiplicity and ε×triple→double shift
 - `ffz_ffff_B_slope16_hunt.py` — locate the −16 slope term (vertex on double-log overlap)
+- `ffz_ffff_B_overlap_fix.py` — apply overlap assembly fix; verify projected double cancels (`FFFF_B_OVERLAP_FIX.md`)
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
@@ -27,8 +28,10 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | FFff(A) corner double pole \(5/(1728\varepsilon^2)\) | Agree with corrected cycle Wick check |
 | FFff(A) long-pair triple add-back \(1/(576\varepsilon^3)\) | Agree |
 | FFff(A) full graph higher poles | Numerical inference only (`FFFF_A_REGULATED.md`); conversion exact |
-| FFff(B) poles | Open (Gaussian setup only); implied targets below |
-| Projected finish line at \(a_X=0\), \(a_Y=-1\) | Not reached |
+| FFff(B) triple \(1/48\), bare double \(-1/96\) | Agree (residue / regulated) |
+| FFff(B) overlap-fixed double \(-1/288\) | Applied (vertex-ll \(\Delta a_1=-16\); see `FFFF_B_OVERLAP_FIX.md`) |
+| Projected double vs Y at \(L=0\) | Cancels after overlap fix |
+| Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple vs \(1/24\) still open |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
 
 The superseded corner numerator \(2d\varepsilon/3\) is the error the latest QCc note corrects. The numerator before any \(\varepsilon\to 0\) truncation is
@@ -115,10 +118,11 @@ With \(c_0\approx 14.93\) the constant simple piece is about \(0.03724\). The hi
 
 ## FFff(B)
 
-`FFFF_B_GAUSSIAN.md` reduces the parity-even four-kinetic contraction and the Weyl covariance tilt; the runnable Gaussian check passes. The graph integral and its poles are not evaluated here. Against the combined bare FFff budget and the A inference above, the **implied B targets** (predictions to check) are
+`FFFF_B_GAUSSIAN.md` reduces the parity-even four-kinetic contraction and the Weyl covariance tilt; the runnable Gaussian check passes. Later notes evaluate the graph poles: bare triple \(1/48\), bare double \(-1/96\) at \(L=0\), and after the two-log overlap assembly fix (`FFFF_B_OVERLAP_FIX.md`) double \(-1/288-L/16\), matching the budget target that used to read
 \[
-\frac{5}{192\varepsilon^3}+\Bigl(\frac{11}{1152}-\frac{5L}{64}\Bigr)\frac{1}{\varepsilon^2}.
+\frac{5}{192\varepsilon^3}+\Bigl(\frac{11}{1152}-\frac{5L}{64}\Bigr)\frac{1}{\varepsilon^2}
 \]
+before the A \(\times 4\) trace correction (post-correction B target is \(1/48\) and \(-1/288-L/16\)).
 
 ## Counterterm budget (from `COUNTERTERM_BUDGET.md`)
 
@@ -138,9 +142,9 @@ Not reached. Independently verified / inferred pieces in \(h^2 z/K\):
 | CcFf | \(0\) | \(1/144\) | \(\approx-0.02480-L/48\) |
 | FFff(A) (regulated inference) | \(1/576\) | \(5/1152-L/192\) | \(\approx 0.03724-5L/384+L^2/128\) |
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
-| FFff(B) (implied target only) | \(5/192\) | \(11/1152-5L/64\) | open |
+| FFff(B) (overlap-fixed) | \(1/48\) | \(-1/288-L/16\) | simple constant open |
 
-Still open: analytic FFff(A) remainder, FFff(B) poles, and the projected simple pole versus \(1/24\).
+Still open: analytic FFff(A) remainder simple constant, and the projected simple pole versus \(1/24\).
 
 ## What was derived, and what was only run
 
@@ -157,4 +161,4 @@ Derived in this review, with new SymPy/mpmath/NumPy code:
 
 Retracted: the earlier FFff(A) bilinear \(-4/27\) and triple pole \(1/7776\) (incorrect Wick/assembly for the mixed term).
 
-Not done: full analytic FFff(A) remainder; FFff(B) graph poles; QQ, QCc tadpole, CCcc, QFf not re-derived as complete Laurent series; projected simple pole versus \(1/24\).
+Not done: full analytic FFff(A) remainder; independent operator form of the B coupling-weight overlap (assembly fix applied); QQ, QCc tadpole, CCcc, QFf not re-derived as complete Laurent series; projected simple pole versus \(1/24\).

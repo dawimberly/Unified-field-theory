@@ -6,7 +6,7 @@ The FFff(A) numerical implementation integrates the product of two coordinate do
 
 The inferred A triple is 1/144 and the B triple is exactly 1/48 for the derived kernel. They sum to 1/36, the independent bare triple target in the projected comparison. This explains the entire 1/192 gap without a change of model. A still relies on the regulated numerical extraction of its projective pole. B now has exact integrated sector coefficients −8,−16,−16,−8 for the four two-log families. The four power/log families integrate to zero exactly.
 
-The corrected inferred A double is 5/288−L/48. The budget target for B becomes **−1/288−L/16**. B's double and simple constants still need independent evaluation. For the bare B simple pole, homogeneity predicts L/96+3L²/32 after using the revised double target. At L=0, a B simple coefficient near −0.04183 would be needed to cancel the projected Newton term, given the present numerical A and CcFf coefficients. This is a target only. The Newton simple-pole test remains open.
+The corrected inferred A double is 5/288−L/48. The budget target for B is **−1/288−L/16**. The field-weight-only regulated/residue extraction gives bare B double −1/96 at L=0; the two-log overlap assembly fix (`FFFF_B_OVERLAP_FIX.md`) subtracts the vertex soft-soft residue −16 from the projective slope and yields **B double −1/288**, matching the budget. Homogeneity still predicts L/96+3L²/32 in the bare B simple pole after that double. The Newton simple-pole constant vs 1/24 remains open.
 
 ## Twenty-check batch
 

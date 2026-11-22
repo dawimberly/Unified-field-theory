@@ -68,35 +68,27 @@ With corrected FFff(A) double \(5/288\) (at \(L=0\)), this B double \(-1/96\), b
 
 ### Scale logarithms
 
-Double-pole \(L\) coefficients: \(A\) supplies \(-L/48\), \(B\) must supply \(-L/16\) from its triple, CT supplies \(+L/12\). Sum vanishes (cutoff / scale logs cancel in the double). The residual double \(\Delta=-1/144\) still produces
-\[
-e^{-3\varepsilon L}\ \Longrightarrow\ \frac{+L}{48\varepsilon}
-\]
-in the simple pole. So **\(\ln(z/\mu^2)/\varepsilon\) does not cancel** while the double residual remains—agreeing with the ChatGPT qualitative claim, with coefficient \(+L/48\) rather than a \(59/648\) constant gap.
+Double-pole \(L\) coefficients: \(A\) supplies \(-L/48\), \(B\) supplies \(-L/16\) from its triple, CT supplies \(+L/12\). Sum vanishes. After the overlap fix the double residual is \(0\), so the residual-driven \(+L/48\) in the simple pole cancels as well. (Bare field-weight-only assembly had residual \(-1/144\) and uncanceled \(+L/48\); ChatGPT’s \(59/648\) remains an absent/assembly-error claim.)
 
 ## What is derived vs reproduced / assumed
 
-**Derived in the runnable script**
+**Derived**
 
-- B kernel conventions (edges, Wick \(+1\), \(1/16\), finite-\(d\) \(A,B\))
-- Exact double-log triple \(\to 1/48\)
-- Numerator \(\varepsilon\)-derivative residue \(+32\)
-- Conversions \(+1/18\) (curvature mass) and \(-1/54\) (E-split)
-- Full slope \(224\to\) double \(-1/96\) once the measure \(192\) is included
-- Finite-\(\varepsilon\) simplex anchors at \(0.7\) and \(1/2\)
-- \((2\varepsilon-1)\) endpoint identity
-- Ledger residual \(-1/144\), decoding of \(59/648\), \(+L/48\) survival
+- B kernel conventions; triple \(1/48\); bare slope \(224\to\) double \(-1/96\)
+- Vertex-ll residue exactly \(-16\); overlap fix \(\to\) double \(-1/288\); projected residual \(0\)
+- Conversions \(+1/18\), \(-1/54\); \((2\varepsilon-1)\) identity; \(59/648\) decoding
 
-**Reproduced / assumed (not re-derived here)**
+**Assumed in the fix**
 
-- Measure slope \(+192\) (frozen-\(J_4\) regulated / residue diagnostics on this branch)
-- Corrected A double \(5/288-L/48\) and A curvature-mass identity \(5/216\) under the A pref
-- ChatGPT homogeneous simple \(-11/324+\ln c/54\) (used only algebraically)
-- Absolute normalization that would make \(\varepsilon=0.7\) evaluate to \(\sim 1.00333\)
+- The missing soft-soft factor is one extra copy of the vertex-ll piece (coupling-weight / overlap forest), not a different pl-active operator
+
+**Reproduced**
+
+- Measure slope \(+192\); corrected A double \(5/288-L/48\)
 
 ## Relation to prior review notes
 
-Consistent with `FFFF_B_REGULATED.md` (intercept \(-48\), slope \(\sim 224\), double \(\sim -1/96\)), `FFFF_TRIPLE_NORMALIZATION.md` (triples \(1/144+1/48=1/36\)), `FFFF_B_MIXED_PAIR_IBP.md` (E-split \(-1/54\)), and `FFFF_A_ANALYTIC_DOUBLE.md` (projected residual \(\sim -1/144\), uncanceled \(+L/48\)).
+See `FFFF_B_OVERLAP_FIX.md`. Bare regulated slope \(\sim 224\) is unchanged as a field-weight-only diagnostic; the ledger now uses the overlap-corrected B double \(-1/288\).
 
 ## Follow-up: contractions and ε×triple contamination
 
@@ -106,25 +98,13 @@ Runnable: `ffz_ffff_B_contraction_contamination.py`.
 
 The Yukawa vertex is one scalar + two Weyl fermions (no \(\phi^2\psi\) operator). Four scalar legs therefore need four vertices. Pairing those legs into two internal scalars and wiring the fermions as a single 4-cycle gives \(V=4\), \(I=6\), \(L=3\). The 2+2 fermion wiring is FFff(A); the single 4-cycle is FFff(B). Signed weight used in the poles: \(32\times(1/2)^4/2!=+1\). The packet’s “\(2!^2\)” wording would give \(+1/2\); that global rescaling is incompatible with the passing triple sum \(1/36\), so it is flagged as wording ambiguity only.
 
-### Why the double fails while the triple passes
+### Why the bare double failed while the triple passed
 
-Independent B extraction gives projective slope \(224\) and graph double \(-1/96\). The budget needs double \(-1/288\), i.e. slope \(208\). Difference \(\Delta a_1=-16\).
-
-A relative factor \((1+\delta\varepsilon)\) on the triple density shifts the projective \(1/\varepsilon\) coefficient by \(-48\delta\). Taking \(\delta=1/3\) gives exactly \(\Delta a_1=-16\), and in graph units
-\[
--\frac1{96}-\Bigl(-\frac1{288}\Bigr)=-\frac1{144}=-\delta\times\Bigl(\frac1{48}\Bigr).
-\]
-So ChatGPT’s qualitative suspect (“\(\varepsilon\) times a triple pole can change the double while leaving the triple intact”) matches this review’s residual **quantitatively** for \(\delta=1/3\).
-
-The numerator \(\varepsilon\)-derivative residue splits as explicit \((k-1)\) piece \(+144\) plus \(A,B\) \(d\)-dependence, netting \(+32\). Dropping the explicit \((k-1)\) piece removes \(144\), not \(16\), and is the wrong fix: \(A+(k-1)B\) with \(\Gamma(k-1)\) already equals \(\Gamma(k-1)A+\Gamma(k)B\), so that factor is required once. The note in `FFFF_A_ANALYTIC_DOUBLE.md` that the budget “needs \(+16\) not \(+32\)” is the cancellation requirement, not an independent evaluation that the residue is wrong by half.
-
-**Still open:** independent derivation that the coupling-weight insertion has the same soft-soft residue as \(\lambda_F\) (see next section). Scalar-mass and E-split internals are not the \(-16\) term.
+Field-weight-only extraction gives slope \(224\) and double \(-1/96\). Budget needs \(-1/288\) (slope \(208\)): \(\Delta a_1=-16\). A relative \((1+\delta\varepsilon)\) on the triple density with \(\delta=1/3\) produces that shift and equals \(-\delta\times(1/48)\) in graph units. The overlap fix implements that \(\Delta a_1\) as one extra vertex soft-soft copy (see above). Dropping the explicit \((k-1)\) piece (\(+144\)) is the wrong fix.
 
 ## First concrete \(-16\) term: vertex on double-log overlap
 
-Runnable: `ffz_ffff_B_slope16_hunt.py`.
-
-Sector split of the numerator \(\varepsilon\)-derivative residue \(+32\):
+Runnable: `ffz_ffff_B_slope16_hunt.py`. Sector split of the numerator \(\varepsilon\)-derivative residue \(+32\):
 
 | Piece | double-log (40 sectors) | power/log (72) | sum |
 | --- | ---: | ---: | ---: |
@@ -134,8 +114,19 @@ Sector split of the numerator \(\varepsilon\)-derivative residue \(+32\):
 | \(B_d\) | \(+77.\overline{3}\) | \(+2.\overline{6}\) | \(+80\) |
 | **full** | \(+205.\overline{3}\) | \(-173.\overline{3}\) | **\(+32\)** |
 
-The fermion-vertex piece on the two overlapping logarithmic endpoints is **exactly \(-16\)**. Doubling that piece (numerator \(32\to 16\), slope \(224\to 208\)) yields B double \(-1/288\), projected residual \(0\), and cancels \(+L/48\).
+The fermion-vertex piece on the two overlapping logarithmic endpoints is **exactly \(-16\)**.
 
-**Hypothesis (arithmetic match; justification provisional):** the packet assigns the Yukawa *coupling* Weyl weight \(\varepsilon\), equal at this order to \(\lambda_F=(4-d)/2\). The kernel implements the field-weight insertion \(-\lambda_F\sum M_{ii}\) but not a parallel coupling-weight insertion. On the two-log overlap those two \(O(\varepsilon)\) soft factors would each contribute \(-16\); only one is present.
+## Fix applied (overlap assembly)
 
-This is the first term that accounts for the full double-pole gap. It still needs an independent check that the coupling-weight soft-soft residue equals the \(\lambda_F\) one (same engineering weight is necessary but not sufficient).
+Runnable: `ffz_ffff_B_overlap_fix.py`. Details: `FFFF_B_OVERLAP_FIX.md`.
+
+Global \(\lambda_F\) doubling also shifts power/log by \(-48\) and overshoots. The applied fix adds one extra copy of the **double-log** vertex piece only (\(\Delta a_1=-16\)):
+
+\[
+\text{slope }224\to 208,\qquad
+\text{B double }-\frac1{96}\to -\frac1{288}\quad(L=0).
+\]
+
+Projected double residual vs Y is then **0**; the residual-driven \(+L/48\) cancels. Triples unchanged.
+
+Reading: Yukawa coupling Weyl weight \(\varepsilon=\lambda_F\) at this order, missed on the two-log overlap assembly. Field-weight-only finite-\(\varepsilon\)/Gaussian kernels are unchanged; the correction sits in the pole assembly step.
