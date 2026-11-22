@@ -6,6 +6,10 @@ The code derives the trace numerator and the weighted moment numerators symbolic
 
 That is below the current budget target 5/192 by 1/192. With FFff(A) the full reported bare triple sum is 13/576 rather than the required 16/576. This discrepancy must be resolved before the simple pole can be interpreted. The independent arithmetic excludes the simple-pole extrapolation as an explanation. Audit the anchor choice in the pole extraction and the common spinor and matter-counterterm normalization before using the result for a projected cancellation claim. The finite-d kernel comparison tests two implementations of the same placement and does not by itself prove correct curvature matching.
 
+## Additional checks
+
+Repeating the polynomial extraction with vertex 1 fixed instead of vertex 0 reproduces the triple coefficient. Separating the sector families shows that the 40 two-log sectors give −48 in the stripped normalization and the 72 power/log sectors sum to zero. This limits the discrepancy audit to the log/log normalization, FFff(A) extrapolation and counterterm conventions. It does not settle the projected simple pole.
+
 ## Runnable check
 
 Save the Python block in FFFF_B_PROJECTIVE.md as fffb.py beside this script. Set OPENBLAS_NUM_THREADS=1 and use NumPy, SciPy and SymPy.
