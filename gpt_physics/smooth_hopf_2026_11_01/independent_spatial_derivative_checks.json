@@ -1,0 +1,17 @@
+[
+  {
+    "axis": 0,
+    "amplitude_max_error": 1.8474627383469056e-10,
+    "orientation_max_error": 1.1872729466233523e-09
+  },
+  {
+    "axis": 1,
+    "amplitude_max_error": 1.5557741206428943e-10,
+    "orientation_max_error": 1.0916472170663383e-09
+  },
+  {
+    "axis": 2,
+    "amplitude_max_error": 2.012680022644986e-10,
+    "orientation_max_error": 3.8921443845651993e-10
+  }
+]

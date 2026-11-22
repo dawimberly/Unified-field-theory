@@ -1,0 +1,46 @@
+{
+  "parameter_index": 11,
+  "monomial_exponents": [
+    0,
+    0,
+    1
+  ],
+  "rotation_component": 2,
+  "parameter_step": 0.01,
+  "rows": [
+    {
+      "grid": [
+        28,
+        12,
+        24
+      ],
+      "base_energy": 310.99444103366585,
+      "orientation_derivative": -20.856136925483387,
+      "perturbed_energy": 310.79114032321246,
+      "energy_change": -0.20330071045339082
+    },
+    {
+      "grid": [
+        40,
+        18,
+        36
+      ],
+      "base_energy": 310.99444016238726,
+      "orientation_derivative": -20.856103823124073,
+      "perturbed_energy": 310.7911397062876,
+      "energy_change": -0.20330045609966874
+    },
+    {
+      "grid": [
+        56,
+        24,
+        48
+      ],
+      "base_energy": 310.99444024885327,
+      "orientation_derivative": -20.856102970961473,
+      "perturbed_energy": 310.7911398018791,
+      "energy_change": -0.20330044697413996
+    }
+  ],
+  "interpretation": "A smooth topology-preserving direction lowers energy. The radius/amplitude-only optimum is not stationary in the enlarged family. Numerical quadrature refinement, not an interval-certified continuum proof."
+}

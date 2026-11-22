@@ -1,0 +1,13 @@
+{
+  "smallest_restricted_hessian_eigenvalue": 0.12029687881978453,
+  "direct_energy_curvature_checks": [
+    {
+      "step": 0.001,
+      "symmetric_curvature": 0.12029693152726395
+    },
+    {
+      "step": 0.0005,
+      "symmetric_curvature": 0.12029840945615433
+    }
+  ]
+}

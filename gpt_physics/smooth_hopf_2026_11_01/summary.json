@@ -1,0 +1,39 @@
+{
+  "radial_control_energy": 310.99444103366585,
+  "order1_energy": 280.78972402876246,
+  "order2_energy": 280.7745686301742,
+  "energy_reduction_from_radial": 30.21987240349165,
+  "larger_family_energy": 280.77272794541716,
+  "max_new_cubic_mode_gradient": 4.4220588537110626,
+  "quadrature_refinement": [
+    {
+      "grid": [
+        28,
+        12,
+        24
+      ],
+      "energy": 280.7745686301742,
+      "max_gradient": 0.0001068834952251592
+    },
+    {
+      "grid": [
+        40,
+        18,
+        36
+      ],
+      "energy": 280.77283621997117,
+      "max_gradient": 0.011209766465434642
+    },
+    {
+      "grid": [
+        56,
+        24,
+        48
+      ],
+      "energy": 280.77288005875397,
+      "max_gradient": 0.01113043216722493
+    }
+  ],
+  "topology": "Exactly inherited charge-one class for all finite parameters: smooth globally nonsingular Cayley rotations tend to identity at infinity; rho is strictly positive. This is an analytic homotopy statement, not an approximate lattice charge estimate.",
+  "limitation": "Finite variational family. Parameter stationarity does not establish full PDE stationarity or dynamical stability. Quadrature and basis refinement are independent gates."
+}

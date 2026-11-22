@@ -1,0 +1,43 @@
+{
+  "certificate": [
+    {
+      "q": "113/10",
+      "cells": 4096,
+      "certified_sign": "negative",
+      "display_lower": -7.140618299273197e-05,
+      "display_upper": -1.6421375683682593e-05
+    },
+    {
+      "q": "283/25",
+      "cells": 2048,
+      "certified_sign": "positive",
+      "display_lower": 3.3460608930263155e-05,
+      "display_upper": 0.00014369190919127865
+    },
+    {
+      "q": "-261/100",
+      "cells": 512,
+      "certified_sign": "negative",
+      "display_lower": -0.00018504786670237684,
+      "display_upper": -3.492518299033192e-05
+    },
+    {
+      "q": "-13/5",
+      "cells": 64,
+      "certified_sign": "positive",
+      "display_lower": 0.00012714945151703794,
+      "display_upper": 0.0013134920892342106
+    }
+  ],
+  "exact_root_interval": [
+    "113/10",
+    "283/25"
+  ],
+  "exact_subthreshold_root_interval": [
+    "-261/100",
+    "-13/5"
+  ],
+  "proof": "All sign comparisons use exact Fraction arithmetic, analytic logarithm tail bounds and exact positive cell integrals. Decimal outputs are display only.",
+  "scope": "Unique positive zero of the fixed L=5 subtraction physical-species limit; not a certificate of microscopic validity.",
+  "elapsed_seconds": 2.9229841998312622
+}
