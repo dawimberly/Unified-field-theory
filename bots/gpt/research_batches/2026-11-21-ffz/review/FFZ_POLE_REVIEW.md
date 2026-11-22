@@ -13,6 +13,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_ffff_B_contraction_contamination.py` — Wick multiplicity and ε×triple→double shift
 - `ffz_ffff_B_slope16_hunt.py` — locate the −16 slope term (vertex on double-log overlap)
 - `ffz_ffff_B_overlap_fix.py` — apply overlap assembly fix; verify projected double cancels (`FFFF_B_OVERLAP_FIX.md`)
+- `ffz_ffff_B_simple_ledger.py` — projected simple-pole ledger vs \(1/24\); vertex-ll \(\Delta c_0=64/3\) (`FFFF_B_SIMPLE_LEDGER.md`)
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
@@ -31,7 +32,7 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | FFff(B) triple \(1/48\), bare double \(-1/96\) | Agree (residue / regulated) |
 | FFff(B) overlap-fixed double \(-1/288\) | Applied (vertex-ll \(\Delta a_1=-16\); see `FFFF_B_OVERLAP_FIX.md`) |
 | Projected double vs Y at \(L=0\) | Cancels after overlap fix |
-| Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple vs \(1/24\) still open |
+| Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple ledger open (`FFFF_B_SIMPLE_LEDGER.md`) |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
 
 The superseded corner numerator \(2d\varepsilon/3\) is the error the latest QCc note corrects. The numerator before any \(\varepsilon\to 0\) truncation is
@@ -144,7 +145,7 @@ Not reached. Independently verified / inferred pieces in \(h^2 z/K\):
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
 | FFff(B) (overlap-fixed) | \(1/48\) | \(-1/288-L/16\) | simple constant open |
 
-Still open: analytic FFff(A) remainder simple constant, and the projected simple pole versus \(1/24\).
+Still open: analytic FFff(A) remainder simple constant, and the projected simple pole versus \(1/24\). The simple ledger (`FFFF_B_SIMPLE_LEDGER.md`) gives B needed \(\approx-0.04173\) and shows that the derived vertex-ll \(W/U\) finite \(\Delta c_0=64/3\) halves the gap under \(c_0=192+64/3\); soft-linear and A’s simple remain uncontrolled.
 
 ## What was derived, and what was only run
 
