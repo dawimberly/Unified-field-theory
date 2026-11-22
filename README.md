@@ -23,6 +23,7 @@ Scripts write results under experiments/ relative to the repository, independent
 - `experiments/`: calculation reports and numerical results.
 - [RESEARCH_STATUS.md](RESEARCH_STATUS.md): verified checks, assumptions, unresolved issues, next work.
 - [docs/POSSIBILITY_CLOUD_ORIGINAL.md](docs/POSSIBILITY_CLOUD_ORIGINAL.md): earlier qualitative Possibility Cloud proposal, preserved verbatim. Its claims are hypotheses, not established conclusions of the current calculations.
+- [docs/GRAVITON_ROADMAP.md](docs/GRAVITON_ROADMAP.md): how an induced \(R\) term relates to a graviton kinetic term, the \(1/24\) matching, three graviton conditions, and what remains open.
 
 Current numerical work concerns a free, leading-N, auxiliary-metric scalar determinant. Equivalence to constrained CEV is not established here. Passing numerical identities does not prove physical unitarity, UV completion, experimental validity, novelty, or unification.
 

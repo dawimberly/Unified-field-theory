@@ -15,6 +15,8 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_ffff_B_overlap_fix.py` — apply overlap assembly fix; verify projected double cancels (`FFFF_B_OVERLAP_FIX.md`)
 - `ffz_ffff_B_simple_ledger.py` — projected simple-pole ledger vs \(1/24\); vertex-ll \(\Delta c_0=64/3\) (`FFFF_B_SIMPLE_LEDGER.md`)
 - `ffz_ffff_B_soft_linear_audit.py` — soft-linear of extra vertex-ll copy; excluded from overlap \(c_0\) (`FFFF_B_SOFT_LINEAR_AUDIT.md`)
+- `ffz_ffff_B_overlap_rigor.py` — sector inclusion-exclusion: overlap = soft-soft only; coupling \(\equiv\lambda_F\) (`FFFF_B_OVERLAP_RIGOR.md`)
+- `ffz_ffff_A_simple_reextract.py` — FFff(A) projective \(c_0\) with cut/seed error (`FFFF_A_SIMPLE_REEXTRACT.md`)
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
@@ -146,7 +148,7 @@ Not reached. Independently verified / inferred pieces in \(h^2 z/K\):
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
 | FFff(B) (overlap-fixed) | \(1/48\) | \(-1/288-L/16\) | simple constant open |
 
-Still open: FFff(A) simple / projective \(c_0\), and the projected simple pole versus \(1/24\). Soft-linear of the extra vertex-ll copy is audited and excluded from overlap \(c_0\) (`FFFF_B_SOFT_LINEAR_AUDIT.md`). Overlap-only B (\(c_0=192+64/3\)) leaves gap \(\approx+0.009\), equivalent to shifting A’s projective \(c_0\) from \(\sim 14.93\) to \(\approx 12.33\).
+Still open: projected simple pole versus \(1/24\). Overlap soft-soft-only is derived from sector inclusion-exclusion (`FFFF_B_OVERLAP_RIGOR.md`); coupling weight \(\equiv\lambda_F\) at this order (ll \(=-16\), pl \(=-48\)). FFff(A) re-extraction gives projective \(c_0=15.11\pm 0.58\) (`FFFF_A_SIMPLE_REEXTRACT.md`) — **not** the \(\approx 12.33\) that would null the gap. Gap \(\approx+0.01\) remains open.
 
 ## What was derived, and what was only run
 
