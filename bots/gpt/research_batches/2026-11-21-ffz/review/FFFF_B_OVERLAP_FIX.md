@@ -38,5 +38,5 @@ Packet notes assign the Yukawa *coupling* Weyl weight \(\varepsilon\), equal at 
 ## What is still open
 
 - Independent derivation of the coupling-weight operator that reproduces \(\mathrm{ll}=-16\) without a hand assembly step.
-- Projected simple pole vs \(1/24\).
+- Projected simple pole vs \(1/24\) — see `FFFF_B_SIMPLE_LEDGER.md` (vertex-ll \(W/U\) finite supplies exact \(\Delta c_0=64/3\); gap not closed).
 - Finite-\(\varepsilon\) absolute normalization vs ChatGPT’s \(\sim 1.00333\).
