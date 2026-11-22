@@ -10,7 +10,7 @@ The active benchmark is a Wess–Zumino / chiral matter theory on an **external*
 
 - Triple and double poles cancel after the FFff(B) two-log overlap assembly fix (\(\Delta a_1=-16\), B double \(-1/288\)).
 - That fix’s soft-soft \(W/U\) finite \(\Delta c_0=64/3\) is derived from the same overlap density; soft-linear is excluded by sector inclusion-exclusion (see review `FFFF_B_OVERLAP_RIGOR.md`).
-- The projected simple pole versus \(1/24\) is **still open**. The remaining gap is at the level of FFff(A)’s numerically extracted simple constant.
+- The projected simple pole versus \(1/24\) is **still open** (gap \(\approx+0.0097\)). Physical audit: \(c_Y=1/24\) is RG-fixed, but baseline\(=1/24\) is a matching test — residual allowed / scheme-absorbable; no missing Wick topology; see `FFFF_GAP_PHYSICAL.md`.
 
 Passing \(1/24\) would fix the coefficient of an induced Einstein–Hilbert term from this matter sector. It would **not** by itself produce a dynamical graviton.
 

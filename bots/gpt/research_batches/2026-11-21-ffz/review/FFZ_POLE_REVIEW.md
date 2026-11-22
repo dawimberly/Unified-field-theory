@@ -18,6 +18,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_ffff_B_overlap_rigor.py` — sector inclusion-exclusion: overlap = soft-soft only; coupling \(\equiv\lambda_F\) (`FFFF_B_OVERLAP_RIGOR.md`)
 - `ffz_ffff_A_simple_reextract.py` — FFff(A) projective \(c_0\) with cut/seed error (`FFFF_A_SIMPLE_REEXTRACT.md`)
 - `ffz_simple_gap_audit.py` — full simple-pole ledger + Y/CT/QFf re-derivation; gap stands (`FFFF_SIMPLE_GAP_AUDIT.md`)
+- `ffz_gap_physical_audit.py` — is the gap physical? topology coverage; CcFf±1e-4; \(a_Y\) scan (`FFFF_GAP_PHYSICAL.md`)
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
 
@@ -149,7 +150,7 @@ Not reached. Independently verified / inferred pieces in \(h^2 z/K\):
 | Combined one- and two-loop CT | \(0\) | \(L/12-5/48\) | see budget note |
 | FFff(B) (overlap-fixed) | \(1/48\) | \(-1/288-L/16\) | simple constant open |
 
-Gap audit (`FFFF_SIMPLE_GAP_AUDIT.md`): every simple-pole piece re-checked (Y \(1/24\), CT, QQ, CCcc, QCc tadpole pole, QFf derived; QCc/CcFf/A/B within budget). **No piece is off by \(\sim0.01\).** Projected total \(\approx+0.0513\) vs \(1/24\) leaves gap \(\approx+0.0097\pm0.0024\). That residual stands under the present ledger (needs new ideas, not retuning).
+Gap audit (`FFFF_SIMPLE_GAP_AUDIT.md`): every simple-pole piece re-checked (Y \(1/24\), CT, QQ, CCcc, QCc tadpole pole, QFf derived; QCc/CcFf/A/B within budget). **No piece is off by \(\sim0.01\).** Projected total \(\approx+0.0513\) vs \(1/24\) leaves gap \(\approx+0.0097\pm0.0024\). Physical follow-up (`FFFF_GAP_PHYSICAL.md`): \(c_Y=1/24\) is RG-fixed, but baseline\(=1/24\) is a matching test (not a t Hooft theorem) — residual is scheme-absorbable (\(\sim+23\%\) of the three-loop \(1/G_{\mathrm{ind}}\) piece); no missing Wick topology; no simultaneous \((a_X,a_Y)\) solution.
 
 ## What was derived, and what was only run
 
