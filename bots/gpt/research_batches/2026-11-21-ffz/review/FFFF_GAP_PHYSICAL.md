@@ -58,7 +58,7 @@ Re-ran the Wick inventory (packet multiplicities). All ten oriented classes map 
 | H tetrahedron | absent (charge bipartite) | 0 |
 | gauge / gaugino | out of model | 0 |
 | extra soft holomorphic masses | packet sets to 0; Y already projected | 0 |
-| FFff(B) non-overlap finite beyond field \(c_0+\Delta c_0(W/U)\) | **assumed** zero (overlap-only) | soft-linear excluded (\(\sim+0.046\) if wrongly kept); empirical \(2\times\Delta c_0\) shifts simple by \(\sim-0.009\) (**not derived**) |
+| FFff(B) non-overlap finite beyond field \(c_0+\Delta c_0(W/U)\) | **derived** zero (forest; see `FFFF_B_NONOVERLAP_FINITE.md`) | soft-linear/pl \(\neq 64/3\); empirical \(2\times\Delta c_0\) **not derived** |
 | pure-metric finite contact | scheme, not a Wick graph | can absorb whole gap |
 
 **No omitted Wick topology of size \(\sim0.01\).** The only \(\sim0.01\)-sized handle still labeled **assumed** is B’s non-overlap finite content (empirical \(2\times\Delta c_0\)), which is not a new graph and is not derived.
@@ -71,7 +71,7 @@ Re-ran the Wick inventory (packet multiplicities). All ten oriented classes map 
 | CcFf simple | \(-0.024786\) | \(\pm1.0\times10^{-4}\) | **reproduced** QMC (power 20, 8 seeds; \(2\times\mathrm{SEM}\)) |
 | FFff(B) field \(c_0\) | \(191.72\pm1.36\) | \(\Rightarrow\) simple \(\pm0.00059\) | **reproduced** numerical |
 | FFff(B) \(\Delta c_0=64/3\) | exact | — | **derived** (overlap \(W/U\)) |
-| FFff(B) beyond that | 0 in ledger | — | **assumed** (overlap-only) |
+| FFff(B) beyond that | 0 | exact | **derived** (forest non-overlap; `FFFF_B_NONOVERLAP_FINITE.md`) |
 
 None of these moves the gap by \(\sim0.01\).
 
