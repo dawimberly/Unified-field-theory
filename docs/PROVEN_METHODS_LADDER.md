@@ -10,7 +10,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | 1 | DREG region / projective diagram ledger (FFff overlap fix \(\Delta a_1=-16\), \(\Delta c_0=64/3\)) | **done** | Higher poles cancel; simple total \(\approx+0.0514\); **gap \(\approx+0.0097\pm0.002\)** | [#4](https://github.com/dawimberly/Unified-field-theory/pull/4)–[#10](https://github.com/dawimberly/Unified-field-theory/pull/10) |
 | 2 | Independent finite-\(\varepsilon\) Laurent fit (no stored \(c_0/a_1\)) | **done** | Gap **\(+0.00954\pm0.0036\)** survives | [#11](https://github.com/dawimberly/Unified-field-theory/pull/11) |
 | 3 | DRED + global Yukawa weight + BPHZ/R | **done** | Higher poles cancel only after R (soft-soft \(-16,64/3\)); **gap \(+0.00975\pm0.0024\)** stands | [#13](https://github.com/dawimberly/Unified-field-theory/pull/13) |
-| 4 | Heat-kernel / Seeley–DeWitt \(a_1\) route to induced \(R\) (BG effective action) | **partial (this PR)** | Full 3-loop interacting HK **infeasible** here; lower-loop HK inputs that fix \(c_Y=1/24\) and CT **verified**; gap **unchanged** vs ledger | *(this branch → stacked PR)* |
+| 4 | Heat-kernel / Seeley–DeWitt \(a_1\) route to induced \(R\) (BG effective action) | **partial** | Full 3-loop interacting HK **infeasible** here; lower-loop HK inputs that fix \(c_Y=1/24\) and CT **verified**; gap **\(+0.00975\)** unchanged | [#14](https://github.com/dawimberly/Unified-field-theory/pull/14) |
 | 5 | Superspace / supergraph method | **next** | — | — |
 | 6 | Background-field method with \(R^*\) operation | **queued** | — | — |
 
