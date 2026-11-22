@@ -45,11 +45,14 @@ exactly (quadrature recovers \(21.333\ldots\) to machine precision; residue stil
 | \(192+64/3\) (derived W/U) | \(\approx -0.03271\) | \(\approx +0.00903\) |
 | \(192+2\cdot(64/3)\) (empirical; **not derived**) | \(\approx -0.04197\) | \(\approx -0.00023\) |
 
+## Soft-linear (audited, excluded)
+
+See `FFFF_B_SOFT_LINEAR_AUDIT.md`. Soft-linear of the extra vertex copy is quadrature-stable at \(\approx-105.304\) (U-rule shift \(+30\)), but it is a **single**-soft channel. The overlap fix only corrects two-log soft-soft, so soft-linear is **not** added to \(c_0\). Including it opens a \(\sim+0.055\) gap.
+
 ## What is still open
 
-1. Soft-linear and other \(O(\varepsilon)\times\mathrm{ll}\) finite pieces of the extra vertex copy (not yet controlled; a naive linear estimate is unstable).
-2. Independent operator form of the coupling-weight insertion (still an assembly correction).
-3. Analytic FFff(A) simple constant — the regulated \(0.03724\) (pre-\(\times4\)) is the noisiest known piece; a \(O(0.01)\) shift in corrected A moves B-needed by the same amount.
-4. Full projected sum versus \(1/24\) once (1)–(3) are settled.
+1. Independent operator form of the coupling-weight insertion (still an assembly correction).
+2. FFff(A) simple / projective \(c_0\) — closing the \(\sim+0.009\) overlap-only gap by A alone needs \(c_0^A\approx 12.33\) vs reported \(\sim 14.93\).
+3. Full projected sum versus \(1/24\) once A’s simple is controlled.
 
 Homogeneity still predicts \(+L/96+3L^2/32\) in bare B simple from the fixed double/triple.
