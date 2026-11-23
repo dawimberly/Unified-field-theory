@@ -1,6 +1,6 @@
 # Overnight autonomous program — plain summary for Dan
 
-Stack started from #29 (two-phase). Rounds 1–2 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
+Stack started from #29 (two-phase). Rounds 1–3 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
 
 ## Round 1 (A–F)
 
@@ -22,12 +22,23 @@ Stack started from #29 (two-phase). Rounds 1–2 below. Standing rules held: no 
 | **I** Running \(1/G_{\mathrm{ind}}(\mu)\) | #38 | Sign \(+\) at confinement; crossover \(=\Lambda_{\mathrm{QCD}}\) by construction | Flag structural coincidence | Band from G |
 | **J** Confinement snap vs #26 | #39 | HI rate-dependence real; FFZ/KFD map **analogy only** | No derived θ dynamics | Map **not** derived |
 
+## Round 3 (L–O)
+
+| Rung | PR | One-line result | Key numbers | Derived vs assumed |
+| --- | --- | --- | --- | --- |
+| **L** UV→IR curvature matching | #40 | Narrowed band; **stays positive** | \(a_1=\boldsymbol{1/3\pm0.29}\in[1/6,3/4]\) | Spectral structure **derived**; QCD ρ / ξ **assumed** |
+| **M** Spectral total \(1/G_{\mathrm{ind}}\) | #41 | Integrated sign **still negative**; not near \(M_{\mathrm{Pl}}^2\) | \(S\sim-265\); \(\Lambda_{\mathrm{UV}}\sim M_{\mathrm{Pl}}\) | Cutoff **assumed** |
+| **N** Confinement ↔ \(h^2z/K\) | #42 | **Ruled out** as derived GAP fix | \(\delta C=0\); GAP \(+0.009651\) stands | Channel split **derived** |
+| **O** Boundary picture note | *(this PR)* | Clean map: derived core vs Dan’s conjecture | See `docs/BOUNDARY_PICTURE.md` | Labels explicit |
+
 ## Revised most promising lead
 
-**Controlled hadronic positivity after confinement (#36):** once free gluons (and their Kabats) are absent from the IR EFT, \(a_1\in[1/6,7/6]\) is positive across ChPT/glueball uncertainty. EE (#37) supports the same qualitative lesson. This is stronger than the free π,N proxy, but **UV→IR curvature matching is still incomplete** — the honest next step is a sharper matching calculation (or lattice EE↔\(a_1\) bridge), not treating \([1/6,7/6]\) as a precision prediction.
+**IR hadronic positivity after confinement remains the strongest positive result** — now sharpened to \(a_1=1/3\pm0.29\in[1/6,3/4]\) (#40). EE (#37) still supports the qualitative lesson.
 
-Still untouched: FFZ three-loop GAP \(+0.009651\) (\(h^2 z/K\)).
+**But Round 3 cuts the overclaim:** the **integrated** spectral \(1/G_{\mathrm{ind}}\) stays negative (#41); confinement does **not** fix the FFZ three-loop GAP (#42). So the honest lead is a **local IR EFT statement**, not “QCD explains Newton” and not “QCD explains \(C-1/24\).”
+
+Still open: true lattice/dispersive matching theorem; FFZ GAP \(+0.009651\).
 
 ## Stack map
 
-`#29 → … → #35(F) → #36(G) → #37(H) → #38(I) → #39(J + Round-2 summary)`
+`#29 → … → #39(J) → #40(L) → #41(M) → #42(N) → #43(O + Round-3 summary)`
