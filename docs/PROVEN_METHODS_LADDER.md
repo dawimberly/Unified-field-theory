@@ -51,6 +51,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight X:** Round-5 summary | **done** | Two-track lead: IR hadronic +; UV SO(10)/E6 Proca (ASSUMED) | [#51](https://github.com/dawimberly/Unified-field-theory/pull/51) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Y:** Minimal broken-gauge spectrum | **done** | \(N_V^{\min}=15\) for \(S>0\); SO(10)/E6 **allowed**, not selected | [#52](https://github.com/dawimberly/Unified-field-theory/pull/52) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Z:** Positivity selection region | **done** | \(S>0\) loose: \(N_V\in[15,69]\) fiducial; \(\Lambda\sim M_{\mathrm{Pl}}\) assumed | [#53](https://github.com/dawimberly/Unified-field-theory/pull/53) |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AA:** GAP vs massive-vector / hadronic \(a_1\) | **done (negative)** | \(\delta C=0\) all sectors; GAP \(+0.009651\) stands | *(stacked)* |
 
 ## How to read status
 
@@ -111,5 +112,6 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - UV consistency: `docs/FFFF_UV_CONSISTENCY.md`, `ffz_uv_consistency.py`
 - Minimal spectrum: `docs/FFFF_MINIMAL_SPECTRUM.md`, `ffz_minimal_spectrum.py`
 - Positivity region: `docs/FFFF_POSITIVITY_REGION.md`, `ffz_positivity_region.py`
+- GAP sectors: `docs/FFFF_GAP_SECTORS.md`, `ffz_gap_sectors.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
