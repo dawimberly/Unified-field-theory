@@ -25,6 +25,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★ | **New idea:** Particle plasticity (elastic distortion / plastic collapse) | **done (exploratory; negative for \(R_0\))** | \(F_c/V_0=O(1)\) across potentials; RCSJ hysteresis + rate-dependent (HB/KFD) yield distinct from DP; no untuned \(R_0\); gravity tiny for BEC/flux | [#26](https://github.com/dawimberly/Unified-field-theory/pull/26) |
 | ★★★★★★★★★★★ | **New idea:** Full SM roster in induced gravity (Sakharov \(a_1\)) | **done (negative)** | SM/SM+\(\nu_R\)/MSSM free \(a_1\) wrong-sign (\(-43/12\), \(-17/4\), \(-35/12\)); \(\Lambda^2\) ≠ \(h^2z/K\) ⇒ \(\delta C=0\); gap stands | [#27](https://github.com/dawimberly/Unified-field-theory/pull/27) |
 | ★★★★★★★★★★★★ | **New idea:** Three-phase E/B/G + Majorana \(a_1\) reconciliation | **done (negative)** | Sakharov \(N=1\) multiplet \(-7/12\) (#27 right for \(1/G\); #22 \(-1/3\) is EE); no derived 120° wave; trace-only photon off clashes with Cassini; Z3 needs assumed shared-Kabat to flip \(a_1\) | [#28](https://github.com/dawimberly/Unified-field-theory/pull/28) |
+| ★★★★★★★★★★★★★ | **New idea:** Two-phase mass/gravity (Cassini-safe) | **done (negative)** | Dirac L–R/Compton real; mass↔gravity lock not derived; UV \(a_1=-43/12\), IR Proca \(-1/12\); MICROSCOPE \(\eta\lesssim10^{-15}\); better than #28 on photons | [#29](https://github.com/dawimberly/Unified-field-theory/pull/29) |
 
 ## How to read status
 
@@ -61,4 +62,5 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Particle plasticity: `docs/FFFF_PARTICLE_PLASTICITY.md`, `ffz_particle_plasticity.py`
 - SM roster / Sakharov \(a_1\): `docs/FFFF_SM_ROSTER.md`, `ffz_sm_roster.py`
 - Three-phase / Majorana reconcile: `docs/FFFF_THREE_PHASE.md`, `ffz_three_phase.py`
+- Two-phase mass/gravity: `docs/FFFF_TWO_PHASE_MASS_GRAVITY.md`, `ffz_two_phase.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
