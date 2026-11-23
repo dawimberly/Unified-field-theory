@@ -27,6 +27,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_superspace_ward.py` — SUSY non-renormalization + partner Ward audit; gap stands (`FFFF_SUPERSPACE_WARD.md`)
 - `ffz_condensate_r.py` — condensate/\(\xi v^2\) finite \(R\) contact; \(v\) free / not predicted (`FFFF_CONDENSATE_R.md`)
 - `ffz_dynamical_condensate.py` — BCS/NJL/soft gap equation; SUSY forbids \(v\); soft/cutoff free (`FFFF_DYNAMICAL_CONDENSATE.md`)
+- `ffz_bgfield_rstar.py` — BG-field + R* IR audit; no missed IR CT; gap stands (`FFFF_BGFIELD_RSTAR.md`)
 - Ladder: `docs/PROVEN_METHODS_LADDER.md`
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
@@ -51,6 +52,7 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | Superspace / supergraph Ward | SUSY forces \(c_Y\) not baseline; inventory/partner Wards PASS; gap stands (`FFFF_SUPERSPACE_WARD.md`) |
 | Condensate \(\xi v^2\) contact (new idea) | Soft vev assumed; gap-absorbing \(v^2/z=3.70\times10^{-4}h^2\) not predicted; tuning (`FFFF_CONDENSATE_R.md`) |
 | Dynamical condensate BCS/NJL (new idea) | SUSY forbids \(v\neq0\); soft/NJL relocates tuning; ratio ≠1 without free input (`FFFF_DYNAMICAL_CONDENSATE.md`) |
+| BG-field + R* (rung 6) | Soft forest ≡ \(\tilde R\); soft-linear not \(1/\varepsilon\); no missed IR CT; gap \(+0.00965\pm0.0024\) (`FFFF_BGFIELD_RSTAR.md`) |
 | Projected double vs Y at \(L=0\) | Cancels after overlap fix |
 | Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple gap \(\approx+0.0097\) stands (`FFFF_SIMPLE_GAP_AUDIT.md`) |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
