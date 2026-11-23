@@ -1,6 +1,6 @@
 # Overnight autonomous program — plain summary for Dan
 
-Stack started from #29 (two-phase). Rounds 1–6 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives. **Fields-only:** “particles” read as locked localized field states.
+Stack started from #29 (two-phase). Rounds 1–7 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives. **Fields-only:** “particles” read as locked localized field states.
 
 ## Round 1 (A–F)
 
@@ -55,15 +55,25 @@ Stack started from #29 (two-phase). Rounds 1–6 below. Standing rules held: no 
 | **Z** Positivity selection region | #53 | \(S>0\) is a **loose** cut; residual freedom large | \(N_V\in[15,69]\) fiducial; \(\Lambda\sim M_{\mathrm{Pl}}\) coin. | Magnitude **assumed** |
 | **AA** GAP vs \(a_1\) sectors | #54 | **Honest negative:** \(\delta C=0\); GAP stands | \(+0.009651\) unchanged | Channel split **derived** |
 
+## Round 7 (AC–AE) — Dan: “negative gravity” in collapse?
+
+| Rung | PR | One-line result | Key numbers | Derived vs assumed |
+| --- | --- | --- | --- | --- |
+| **AC** SEC \(\rho+3p\) dense EOS | #56 | Ordinary NS/quark matter **satisfies** SEC; only bag vacuum \(\rho+3p=-2B\) | \(B^{1/4}\sim\Lambda_{\mathrm{QCD}}\); no nuclear \(\rho+3p<0\) | EOS \(\rho+3p\) **derived**; bag \(B\) **assumed** QCD vac. |
+| **AD** \(G_{\mathrm{ind}}\) across deconfinement | #57 | Local \(a_1\) flips −; **Planck \(G\) unchanged** | \(\Delta G/G\sim10^{-39}\); \((\Lambda_{\mathrm{QCD}}/M_{\mathrm{Pl}})^2\sim6\times10^{-40}\) | \(\Delta a_1\) from #36/#40 **derived**; matching to \(G\) **assumed** |
+| **AE** Bounce vs LQC/AS | #58 | **Honest negative:** no sub-Planck bounce from AC/AD; no derived GRB/FRB | LQC \(\rho_c\sim0.41\,\rho_{\mathrm{Pl}}\); \(10\,M_\odot\) \(R_s\approx29.5\) km; \(\rho_{\mathrm{deconf}}/\rho_{\mathrm{Pl}}\sim10^{-79}\) | Kinematics **derived**; LQC \(\rho_c\) lit.; AS \(G(k)\) lit. |
+
 ## Revised most promising lead
 
-**Still two-track, sharpened:**
+**Still two-track; Round 7 closes the “repulsive gravity in collapse” branch:**
 
-1. **IR (robust):** hadronic \(a_1=1/3\pm0.29>0\) after confinement removes free-gluon Kabats — local field-mode EFT statement (#40).
+1. **IR (robust):** hadronic \(a_1=1/3\pm0.29>0\) after confinement removes free-gluon Kabats — local field-mode EFT statement (#40). Deconfinement restores Kabats and flips local \(a_1\) (#57), but the shift vs \(M_{\mathrm{Pl}}^2\) is \(\sim10^{-39}\) — not a macroscopic \(G\) flip.
 2. **UV (constrained, not unique):** \(S>0\) requires \(N_V\ge15\) massive vector field modes at fiducial scales (#52). SO(10)/E6 are **allowed** examples, **not selected**. Positivity leaves a wide region (#53) — not a derivation of a unique GUT.
+
+**Ruled out (Round 7):** Dan’s “forces as great as a BH interior → negative gravity” as an FFZ/SEC mechanism at nuclear–QCD density. Ordinary dense matter keeps \(\rho+3p>0\) (#56). Bag vacuum is the only SEC-violating candidate and is QCD-scale, not Planck. Neither AC nor AD yields a bounce below \(\rho_{\mathrm{Pl}}\) (#58); LQC-style bounce remains near-Planck.
 
 **Still fails:** FFZ GAP \(+0.009651\) — massive-vector / hadronic \(a_1\) give \(\delta C=0\) (#54). \(\Lambda_{\mathrm{UV}}\sim M_{\mathrm{Pl}}\) for Planck magnitude remains assumed.
 
 ## Stack map
 
-`#51 → #52(Y) → #53(Z) → #54(AA) → #55(AB)`
+`#51 → #52(Y) → #53(Z) → #54(AA) → #55(AB) → #56(AC) → #57(AD) → #58(AE) → #59(AF)`
