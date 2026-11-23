@@ -17,7 +17,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★ | **New idea:** Dynamical condensate (BCS/NJL / soft gap equation) | **done (negative)** | SUSY forbids \(v\neq0\); soft/NJL needs free \(m_s^2/z\) or \(\Lambda/\sqrt{z}\); ratio pred/target \(=0\) or \(O(10^{-2}\)–\(10^6)\) — not 1 without tuning | [#17](https://github.com/dawimberly/Unified-field-theory/pull/17) |
 | ★★★ | **New idea:** Self-consistent loop \(v\leftrightarrow G_{\mathrm{ind}}\leftrightarrow m_s\) (gravity mediation) | **done (negative)** | \(F\sim z\): nontrivial fixed point but \(\delta_R/\mathrm{GAP}\sim87\) (\(h=1\)); \(F=\|y\|v^2\): only \(v=0\); free \(\varphi\) restores tuning | [#19](https://github.com/dawimberly/Unified-field-theory/pull/19) |
 | ★★★★ | **New idea:** Surface / boundary / contact (Sakharov modes at interaction surfaces) | **done (negative)** | Derived GHY/\(\Box R\)/\(a_1(\xi=1/6)\)/vertex = 0; ratio pred/GAP \(=0\); absorbing contact is free scheme coeff; EE consistent, does not fix GAP | [#20](https://github.com/dawimberly/Unified-field-theory/pull/20) |
-| ★★★★★ | **New idea:** Does \(\xi\) run away from \(1/6\)? | **done (negative)** | SUSY+JO: \(\beta_\xi=\Gamma(\xi-1/6)\), \(b=0\) ⇒ \(\xi_*=1/6\) stable; \(\delta\xi=0\), \(\delta c=0\), ratio \(=0\); \(\ln2/72\) not from \(\xi\) | *(this branch → stacked PR)* |
+| ★★★★★ | **New idea:** Does \(\xi\) run away from \(1/6\)? | **done (negative)** | SUSY+JO: \(\beta_\xi=\Gamma(\xi-1/6)\), \(b=0\) ⇒ \(\xi_*=1/6\) stable; \(\delta\xi=0\), \(\delta c=0\), ratio \(=0\); \(\ln2/72\) not from \(\xi\) | [#21](https://github.com/dawimberly/Unified-field-theory/pull/21) |
 
 ## How to read status
 
