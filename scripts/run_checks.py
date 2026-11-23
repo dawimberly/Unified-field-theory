@@ -104,3 +104,6 @@ print('ffz_bounce_criterion PASS',flush=True)
 surface_audit_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_surface_audit.py'
 subprocess.run([sys.executable,str(surface_audit_test)],check=True)
 print('ffz_surface_audit PASS',flush=True)
+edge_modes_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_edge_modes.py'
+subprocess.run([sys.executable,str(edge_modes_test)],check=True)
+print('ffz_edge_modes PASS',flush=True)
