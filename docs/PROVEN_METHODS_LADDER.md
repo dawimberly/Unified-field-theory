@@ -60,7 +60,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AG:** Surface/TD audit of 3-loop pole | **done (negative)** | □R/GHY/Euler/a2 → δC=0; κ=−GAP scheme only | [#60](https://github.com/dawimberly/Unified-field-theory/pull/60) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AH:** Edge modes of original FFZ fields | **done (negative)** | No DW/Kabat on WZ; δC=0; ln2/72 coincidence | [#61](https://github.com/dawimberly/Unified-field-theory/pull/61) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AI:** Sharp phase-lock BC vs smooth | **done (negative)** | Derived δC=0 all S; α=GAP is tuning/scheme | [#62](https://github.com/dawimberly/Unified-field-theory/pull/62) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AJ:** Round 8 summary | **done** | AG–AI table; GAP≠original-field boundary | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AJ:** Round 8 summary | **done** | AG–AI table; GAP≠original-field boundary | [#63](https://github.com/dawimberly/Unified-field-theory/pull/63) |
 
 ## How to read status
 
