@@ -1,6 +1,6 @@
 # Overnight autonomous program — plain summary for Dan
 
-Stack started from #29 (two-phase). Rounds 1–4 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
+Stack started from #29 (two-phase). Rounds 1–5 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
 
 ## Round 1 (A–F)
 
@@ -39,14 +39,25 @@ Stack started from #29 (two-phase). Rounds 1–4 below. Standing rules held: no 
 | **R** Decompose \(S\); minimal flip | #45 | UV gauge Kabats own \(\sim84\%\) of \(|S|\); all-Proca-12 flips; conformal ξ does not | \(\Delta a_1^{\mathrm{UV}}\gtrsim+4.2\); Proca \(\Delta=+14\) | Arithmetic **derived**; spectrum **assumed** |
 | **S** GUT SU(5)/SO(10) | #46 | Broken local \(a_1+\); SU(5) Planck→GUT **fails** (no Higgs) | unbroken more −; not a theorem | Gauge **derived**; Higgs/scales **assumed** |
 
+## Round 5 (U–W)
+
+| Rung | PR | One-line result | Key numbers | Derived vs assumed |
+| --- | --- | --- | --- | --- |
+| **U** UV full-mass survey | #48 | 4 counting survivors; Stueckelberg-SM & asymp. safety fail | \(\Delta\ge4.2\): Higgsing/SO10-E6/KK/TC | Existence **assumed** |
+| **V** Planck→GUT stress | #49 | Short Proca windows **fail**; SO(10)/E6 **flip**; Proca→EW flips but IR-hostile | \(S\sim+373\) (SO10); short \(\sim-117\) | Scales **assumed** |
+| **W** Consistency | #50 | Proca→EW **ruled out** (QCD/QED); SO(10)/E6 tentatively OK | \(m_\gamma\lesssim10^{-18}\) eV; \(\Lambda_{\mathrm{QCD}}\) | IR **derived**; GUT **assumed** |
+
 ## Revised most promising lead
 
-**Still:** IR hadronic positivity (\(a_1=1/3\pm0.29\)) is the strongest *local* positive result (#40).
+**Two-track lead:**
 
-**Round 4 upgrade of the UV story:** the integrated minus sign is **owned by UV gauge Kabats** (#45). The cleanest *arithmetic* fix is complete vector Higgsing / Proca (same lesson as GUT X/Y, #46) — **physically motivated but spectrum-assumed**, and SU(5) fails the honest Planck→GUT stress test without optimistic Higgs. Casimir-like language for confinement mode removal is fair and avoids Le Sage (#44), but does **not** prove Newton is a two-body Casimir force.
+1. **IR (robust):** hadronic \(a_1=1/3\pm0.29>0\) after confinement removes free-gluon Kabats (#40) — local EFT statement.
+2. **UV (conditional):** integrated \(S\) flips under **SO(10)/E6-style long broken Proca bins** (#49) that survive IR/unitarity/unification rough checks (#50). Still **ASSUMED** GUT content — not derived from the SM alone.
 
-**Still fails:** integrated SM \(1/G_{\mathrm{ind}}\) without extra UV assumptions; FFZ GAP \(+0.009651\).
+**Ruled out:** complete Proca→EW as a physical flip (arithmetic yes, QCD/QED no); short high-scale Proca/KK/TC-4 windows; confinement as FFZ ledger fix (#42).
+
+**Still open:** FFZ GAP \(+0.009651\); lattice-grade UV→IR matching; deriving a GUT (or other) spectrum rather than assuming it.
 
 ## Stack map
 
-`#43 → #44(Q) → #45(R) → #46(S) → #47(T)`
+`#47 → #48(U) → #49(V) → #50(W) → #51(X Round-5 summary)`
