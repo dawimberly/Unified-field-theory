@@ -21,6 +21,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★ | **New idea:** Gauge / Kabat / Donnelly–Wall contact (+ \(N=1\) vector) | **done (negative)** | Kabat \(c=1\) HK-derived; SUSY does not cancel (net \(a_1=-1/3\)); \(\Lambda^2\) channel ≠ \(h^2z/K\) ⇒ ratio \(=0\); \(\ln2/72\) not reproduced | [#22](https://github.com/dawimberly/Unified-field-theory/pull/22) |
 | ★★★★★★★ | **New idea:** Scheme-independent test of the Newton gap | **done (negative as “missing term”)** | SI: higher poles\(=0\), \(c_Y=1/24\); \(D=c_0-c_Y\) **not** SI — absorbed by vacuum EH \(\kappa=-\mathrm{GAP}\); no missing matter op forced | [#23](https://github.com/dawimberly/Unified-field-theory/pull/23) |
 | ★★★★★★★★ | **New idea:** Penrose–Diósi collapse with induced \(G\) (\(\kappa=0\)) | **done (exploratory)** | \(\tau(C)/\tau(1/24)=C/(1/24)\approx1.232\); induced UV does **not** supply viable \(R_0\) (Gran Sasso); BEC/flux gravity≪coherence; nanosphere setup-dependent | [#24](https://github.com/dawimberly/Unified-field-theory/pull/24) |
+| ★★★★★★★★★ | **New idea:** Distortion phase as DP \(R_0\) source | **done (negative for \(R_0\))** | GL locked/distorted/collapsed OK; no tuning-free \(R_0\) from \(C_{\mathrm{ledger}}\) (ℓ_P/Compton too small; healing ≫ bound); \(a_0\approx\) bound is coincidence; reversible window is distinct prediction | [#25](https://github.com/dawimberly/Unified-field-theory/pull/25) |
 
 ## How to read status
 
@@ -53,4 +54,5 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Gauge / Kabat contact: `FFFF_GAUGE_CONTACT.md`, `ffz_gauge_contact.py`
 - Scheme-invariant test: `FFFF_SCHEME_INVARIANT.md`, `ffz_scheme_invariant.py`
 - Induced collapse (DP): `docs/FFFF_INDUCED_COLLAPSE.md`, `ffz_induced_collapse.py`
+- Distortion phase: `docs/FFFF_DISTORTION_PHASE.md`, `ffz_distortion_phase.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
