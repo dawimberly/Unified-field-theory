@@ -53,3 +53,6 @@ print('ffz_ee_confinement PASS',flush=True)
 running_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_running_gind.py'
 subprocess.run([sys.executable,str(running_gind_test)],check=True)
 print('ffz_running_gind PASS',flush=True)
+confinement_snap_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_confinement_snap.py'
+subprocess.run([sys.executable,str(confinement_snap_test)],check=True)
+print('ffz_confinement_snap PASS',flush=True)
