@@ -28,7 +28,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★ | **New idea:** Two-phase mass/gravity (Cassini-safe) | **done (negative)** | Dirac L–R/Compton real; mass↔gravity lock not derived; UV \(a_1=-43/12\), IR Proca \(-1/12\); MICROSCOPE \(\eta\lesssim10^{-15}\); better than #28 on photons | [#29](https://github.com/dawimberly/Unified-field-theory/pull/29) |
 | ★★★★★★★★★★★★★★ | **Overnight A:** Derive shared boundary / Kabat edge counting | **done (negative)** | DW: contacts per massless gauge field (UV 12, IR 9), not shared; #28 \(+53/12\) not derivable; IR \(a_1=-1/12\) no flip | [#30](https://github.com/dawimberly/Unified-field-theory/pull/30) |
 | ★★★★★★★★★★★★★★★ | **Overnight B:** IR roster / Appelquist–Carazzone | **done (mixed; hadronic + assumed)** | UV/EW/AC wrong-sign; hadronic proxy \(a_1=+2/3\) **assumed**; QED \(-1/6\); mass-on not a derivation | [#31](https://github.com/dawimberly/Unified-field-theory/pull/31) |
-| ★★★★★★★★★★★★★★★★ | **Overnight C:** Trace / conformal anomaly → \(1/G\) | **done (negative)** | Anomaly ↔ nucleon mass OK; does not fix \(a_1\) sign or derive positive Sakharov \(1/G\); dilaton link to #29 only | *(stacked)* |
+| ★★★★★★★★★★★★★★★★ | **Overnight C:** Trace / conformal anomaly → \(1/G\) | **done (negative)** | Anomaly ↔ nucleon mass OK; does not fix \(a_1\) sign or derive positive Sakharov \(1/G\); dilaton link to #29 only | [#32](https://github.com/dawimberly/Unified-field-theory/pull/32) |
 
 ## How to read status
 
