@@ -42,7 +42,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight O:** Boundary picture note | **done** | Derived core (Kabat/confinement IR) vs Dan conjecture (ontology/yield); GAP open | [#43](https://github.com/dawimberly/Unified-field-theory/pull/43) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight P:** Round-3 summary | **done** | Lead = IR hadronic positivity (narrowed); integrated \(1/G\) and ledger GAP still fail | [#43](https://github.com/dawimberly/Unified-field-theory/pull/43) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Q:** Casimir vs Le Sage | **done (analogy+avoids)** | Casimir-like mode removal **derived**; two-body Casimir=Newton **analogy**; Le Sage fatals avoided | [#44](https://github.com/dawimberly/Unified-field-theory/pull/44) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight R:** Decompose \(S\); minimal UV flip | **done** | UV gauge Kabats dominate \(S\sim-265\); all-Proca-12 flips; conformal ξ does not | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight R:** Decompose \(S\); minimal UV flip | **done** | UV gauge Kabats dominate \(S\sim-265\); all-Proca-12 flips; conformal ξ does not | [#45](https://github.com/dawimberly/Unified-field-theory/pull/45) |
 
 ## How to read status
 
