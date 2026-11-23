@@ -13,12 +13,14 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | 4 | Heat-kernel / Seeley–DeWitt \(a_1\) route to induced \(R\) (BG effective action) | **partial** | Full 3-loop interacting HK **infeasible** here; lower-loop HK inputs that fix \(c_Y=1/24\) and CT **verified**; gap **\(+0.00975\)** unchanged | [#14](https://github.com/dawimberly/Unified-field-theory/pull/14) |
 | 5 | Superspace / supergraph method | **partial** | SUSY forces \(c_Y=1/24\), **not** baseline\(=1/24\); Ward inventory PASS; no missing partner; gap **\(+0.00975\)** stands | [#15](https://github.com/dawimberly/Unified-field-theory/pull/15) |
 | 6 | Background-field method with \(R^*\) operation | **next** | — | — |
+| ★ | **New idea:** Higgs-like condensate / phase locking (\(\xi v^2\) \(R\) contact) | **done (negative)** | Soft/F-term vev **assumed**; tree \(\delta=K v^2/(6 h^2 z)\); gap-absorbing \(v^2/z=3.70\times10^{-4}\,h^2\) **not predicted**; free parameter / tuning | [#16](https://github.com/dawimberly/Unified-field-theory/pull/16) |
 
 ## How to read status
 
 - **done** — method executed; concrete numbers reported; gap still open unless stated otherwise.
 - **partial** — only the feasible subset of the method was run; the blocked part is named in the method’s doc.
 - **next / queued** — not started.
+- **new idea** — not an established peer-reviewed method; exploratory. **done (negative)** = executed and does not close the gap without tuning.
 
 ## Gap summary (standing)
 
@@ -28,11 +30,12 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 \text{GAP}\approx +0.0097\pm 0.002.
 \]
 
-No method above has closed it. After rung 5, the next established attempt is the background-field method with \(R^*\).
+No established method above has closed it. The condensate idea parametrizes the gap but does not predict \(v\). Next established attempt: background-field \(R^*\).
 
 ## Pointers
 
 - Ledger / audits: `bots/gpt/research_batches/2026-11-21-ffz/review/`
 - Heat-kernel rung: `FFFF_HEAT_KERNEL_A1.md`, `ffz_heat_kernel_a1.py`
 - Superspace / Ward rung: `FFFF_SUPERSPACE_WARD.md`, `ffz_superspace_ward.py`
+- Condensate / new idea: `FFFF_CONDENSATE_R.md`, `ffz_condensate_r.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
