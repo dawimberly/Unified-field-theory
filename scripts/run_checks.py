@@ -101,3 +101,6 @@ print('ffz_deconf_gind PASS',flush=True)
 bounce_criterion_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_bounce_criterion.py'
 subprocess.run([sys.executable,str(bounce_criterion_test)],check=True)
 print('ffz_bounce_criterion PASS',flush=True)
+surface_audit_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_surface_audit.py'
+subprocess.run([sys.executable,str(surface_audit_test)],check=True)
+print('ffz_surface_audit PASS',flush=True)
