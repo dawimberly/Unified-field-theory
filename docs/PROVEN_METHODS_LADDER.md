@@ -35,7 +35,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★ | **Overnight G:** Controlled hadronic \(a_1\) | **done (positive band)** | Confinement removes 8 gluon Kabats from IR sum; \(a_1\in[1/6,7/6]\) all \(+\); matching incomplete | [#36](https://github.com/dawimberly/Unified-field-theory/pull/36) |
 | ★★★★★★★★★★★★★★★★★★★★★ | **Overnight H:** EE confined vs deconfined | **done (supports Kabat absence)** | EE \(O(N^2)\to O(1)\) supports gluon edge-mode removal; not a matching proof | [#37](https://github.com/dawimberly/Unified-field-theory/pull/37) |
 | ★★★★★★★★★★★★★★★★★★★★★★ | **Overnight I:** Running \(1/G_{\mathrm{ind}}(\mu)\) | **done** | Sign \(+\) at confinement band; crossover \(=\Lambda_{\mathrm{QCD}}\) by construction (flag) | [#38](https://github.com/dawimberly/Unified-field-theory/pull/38) |
-| ★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight J:** Confinement snap vs #26 yield | **done (analogy only)** | HI rate-dependence empirical; FFZ/KFD map **not** derived | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight J:** Confinement snap vs #26 yield | **done (analogy only)** | HI rate-dependence empirical; FFZ/KFD map **not** derived | [#39](https://github.com/dawimberly/Unified-field-theory/pull/39) |
 
 ## How to read status
 

@@ -20,7 +20,7 @@ Stack started from #29 (two-phase). Rounds 1–2 below. Standing rules held: no 
 | **G** Controlled hadronic \(a_1\) | #36 | Confinement removes free-gluon Kabats from IR sum; **band all positive** | \(a_1\in\boldsymbol{[1/6,\ 7/6]}\); proxy \(+2/3\) inside | EFT absence **derived**; ξ/glueballs/matching **assumed** |
 | **H** EE confined vs deconfined | #37 | EE \(O(N^2)\to O(1)\) **supports** gluon edge-mode removal | Consistency with G; not a proof | Support **derived** as consistency |
 | **I** Running \(1/G_{\mathrm{ind}}(\mu)\) | #38 | Sign \(+\) at confinement; crossover \(=\Lambda_{\mathrm{QCD}}\) by construction | Flag structural coincidence | Band from G |
-| **J** Confinement snap vs #26 | *(this PR)* | HI rate-dependence real; FFZ/KFD map **analogy only** | No derived θ dynamics | Map **not** derived |
+| **J** Confinement snap vs #26 | #39 | HI rate-dependence real; FFZ/KFD map **analogy only** | No derived θ dynamics | Map **not** derived |
 
 ## Revised most promising lead
 
@@ -30,4 +30,4 @@ Still untouched: FFZ three-loop GAP \(+0.009651\) (\(h^2 z/K\)).
 
 ## Stack map
 
-`#29 → … → #35(F) → #36(G) → #37(H) → #38(I) → #39(J+round-2 summary)`
+`#29 → … → #35(F) → #36(G) → #37(H) → #38(I) → #39(J + Round-2 summary)`
