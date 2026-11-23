@@ -31,7 +31,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★ | **Overnight C:** Trace / conformal anomaly → \(1/G\) | **done (negative)** | Anomaly ↔ nucleon mass OK; does not fix \(a_1\) sign or derive positive Sakharov \(1/G\); dilaton link to #29 only | [#32](https://github.com/dawimberly/Unified-field-theory/pull/32) |
 | ★★★★★★★★★★★★★★★★★ | **Overnight D:** Reconcile A–C with FFZ \(h^2z/K\) ledger | **done (negative)** | \(\delta C=0\); GAP \(+0.009651\) stands | [#33](https://github.com/dawimberly/Unified-field-theory/pull/33) |
 | ★★★★★★★★★★★★★★★★★★ | **Overnight E:** \(\Lambda_{\mathrm{ind}}\) / pressure / \(\rho+3p\) | **done (negative for DE)** | Vacuum \(\rho+3p<0\) repulsive (GR); SM \(n_b-n_f=-62\) wrong-sign \(\Lambda\); no untuned DE | [#34](https://github.com/dawimberly/Unified-field-theory/pull/34) |
-| ★★★★★★★★★★★★★★★★★★★ | **Overnight F:** String/KK tower + overnight summary | **done (arithmetic only)** | \(\ge8\) Proca flips UV \(a_1\) arithmetically; spectrum assumed; species bound ≠ sign guarantee | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★ | **Overnight F:** String/KK tower + overnight summary | **done (arithmetic only)** | \(\ge8\) Proca flips UV \(a_1\) arithmetically; spectrum assumed; species bound ≠ sign guarantee | [#35](https://github.com/dawimberly/Unified-field-theory/pull/35) |
 
 ## How to read status
 
