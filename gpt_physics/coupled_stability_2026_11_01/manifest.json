@@ -1,0 +1,17 @@
+{
+  "CANDIDATE_ACTION.md": "3817f150a721725ad5e2fd070ec158504009fbea16e94d414bf577b1b565dbd5",
+  "coupled_hessian_check_2026_11_01.py": "e7569dbdfc85ad3975256b0f5d9260216a95577deb57fc2cd7c813ad243d8f0d",
+  "coupled_stability_test_2026_11_01.py": "b6fd5a2ae5c5f2a25869b5e16c74357d68003194d05a5e7d9c869a921ee21b78",
+  "coupled_vacuum_spectrum_2026_11_01.py": "f18801be17b77af1ac0b81ce466425b8969611a63f0218624181861e030e4b6d",
+  "hessian_implementation_checks.json": "7295cbcd89cb76addfb8ac21732b19c9c651aff1fe359ac33fac5dab07b315f5",
+  "independent_force_crosscheck.json": "8cd935f841d1078e414463f8acccec7c663e30d56596437f0b12864c01d2894a",
+  "knotted_cloud_dynamics.py": "7cbadd08e53329979f0a865682c4579ec560aea3f6773a37c5d77375054c6754",
+  "N32_results.json": "f08eb4bd425b108d7f49f98477c2635d8b63b132e206e1211f043e808aca44ed",
+  "N32_stationary_candidate.npz": "8f880ad608572271266cff5adcdb366c81f82eb7431fcc46906f3efee97d9332",
+  "N48_results.json": "7653b8c25aba5e26c3923a0ed901e62762372ae066fdd0cfd97354d929055270",
+  "N48_stationary_candidate.npz": "1bf5756e4ac19adb517772e7070cb38778d4f1d7e93bcfc3e061a0c3a0915455",
+  "package_coupled_stability_2026_11_01.py": "d5c290d7b94b5f6b103539135682c2861a58c115af2ab4b2de602bf70fded630",
+  "relaxation_energy.png": "0c0fbc0b69fce282a3dc1dfd7a9ded47987c25cdb049819e53cc075138a3e87a",
+  "REPORT.md": "bb6c2504d4ebb6fe3ace2c7d05bd4875ce85e25cff7aad3fde7e783851b0f7b7",
+  "vacuum_spectrum_check.json": "bdfb04701e609bea81fa4d941b6a085b88862dcab3b875c4a80efe9267fc65bd"
+}

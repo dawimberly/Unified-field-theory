@@ -1,0 +1,10 @@
+{
+  "N": 6,
+  "h": 0.7,
+  "modes": 648,
+  "max_eigenvalue_error": 4.831690603168681e-13,
+  "minimum_eigenvalue": 1.3877787807814457e-16,
+  "zero_modes": 2,
+  "negative_modes": 0,
+  "phase_block": "Positive semidefinite discrete Laplacian; one additional constant phase zero mode. No mixed quadratic phase terms at constant phase."
+}
