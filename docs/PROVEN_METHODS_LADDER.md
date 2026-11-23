@@ -11,8 +11,8 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | 2 | Independent finite-\(\varepsilon\) Laurent fit (no stored \(c_0/a_1\)) | **done** | Gap **\(+0.00954\pm0.0036\)** survives | [#11](https://github.com/dawimberly/Unified-field-theory/pull/11) |
 | 3 | DRED + global Yukawa weight + BPHZ/R | **done** | Higher poles cancel only after R (soft-soft \(-16,64/3\)); **gap \(+0.00975\pm0.0024\)** stands | [#13](https://github.com/dawimberly/Unified-field-theory/pull/13) |
 | 4 | Heat-kernel / Seeley–DeWitt \(a_1\) route to induced \(R\) (BG effective action) | **partial** | Full 3-loop interacting HK **infeasible** here; lower-loop HK inputs that fix \(c_Y=1/24\) and CT **verified**; gap **\(+0.00975\)** unchanged | [#14](https://github.com/dawimberly/Unified-field-theory/pull/14) |
-| 5 | Superspace / supergraph method | **next** | — | — |
-| 6 | Background-field method with \(R^*\) operation | **queued** | — | — |
+| 5 | Superspace / supergraph method | **partial** | SUSY forces \(c_Y=1/24\), **not** baseline\(=1/24\); Ward inventory PASS; no missing partner; gap **\(+0.00975\)** stands | *(this branch → stacked PR)* |
+| 6 | Background-field method with \(R^*\) operation | **next** | — | — |
 
 ## How to read status
 
@@ -28,10 +28,11 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 \text{GAP}\approx +0.0097\pm 0.002.
 \]
 
-No method above has closed it. After rung 4, the next established attempt is superspace/supergraphs.
+No method above has closed it. After rung 5, the next established attempt is the background-field method with \(R^*\).
 
 ## Pointers
 
 - Ledger / audits: `bots/gpt/research_batches/2026-11-21-ffz/review/`
 - Heat-kernel rung: `FFFF_HEAT_KERNEL_A1.md`, `ffz_heat_kernel_a1.py`
+- Superspace / Ward rung: `FFFF_SUPERSPACE_WARD.md`, `ffz_superspace_ward.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
