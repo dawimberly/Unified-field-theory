@@ -38,3 +38,6 @@ print('ffz_trace_anomaly PASS',flush=True)
 ledger_reconcile_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ledger_reconcile.py'
 subprocess.run([sys.executable,str(ledger_reconcile_test)],check=True)
 print('ffz_ledger_reconcile PASS',flush=True)
+lambda_pressure_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_lambda_pressure.py'
+subprocess.run([sys.executable,str(lambda_pressure_test)],check=True)
+print('ffz_lambda_pressure PASS',flush=True)
