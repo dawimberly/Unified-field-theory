@@ -29,7 +29,7 @@ Stack started from #29 (two-phase). Rounds 1–3 below. Standing rules held: no 
 | **L** UV→IR curvature matching | #40 | Narrowed band; **stays positive** | \(a_1=\boldsymbol{1/3\pm0.29}\in[1/6,3/4]\) | Spectral structure **derived**; QCD ρ / ξ **assumed** |
 | **M** Spectral total \(1/G_{\mathrm{ind}}\) | #41 | Integrated sign **still negative**; not near \(M_{\mathrm{Pl}}^2\) | \(S\sim-265\); \(\Lambda_{\mathrm{UV}}\sim M_{\mathrm{Pl}}\) | Cutoff **assumed** |
 | **N** Confinement ↔ \(h^2z/K\) | #42 | **Ruled out** as derived GAP fix | \(\delta C=0\); GAP \(+0.009651\) stands | Channel split **derived** |
-| **O** Boundary picture note | *(this PR)* | Clean map: derived core vs Dan’s conjecture | See `docs/BOUNDARY_PICTURE.md` | Labels explicit |
+| **O** Boundary picture note | #43 | Clean map: derived core vs Dan’s conjecture | See `docs/BOUNDARY_PICTURE.md` | Labels explicit |
 
 ## Revised most promising lead
 
@@ -41,4 +41,4 @@ Still open: true lattice/dispersive matching theorem; FFZ GAP \(+0.009651\).
 
 ## Stack map
 
-`#29 → … → #39(J) → #40(L) → #41(M) → #42(N) → #43(O + Round-3 summary)`
+`#29 → … → #39(J) → #40(L) → #41(M) → #42(N) → #43(O + Round-3 summary / P)`
