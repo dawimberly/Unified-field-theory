@@ -29,7 +29,8 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★ | **Overnight A:** Derive shared boundary / Kabat edge counting | **done (negative)** | DW: contacts per massless gauge field (UV 12, IR 9), not shared; #28 \(+53/12\) not derivable; IR \(a_1=-1/12\) no flip | [#30](https://github.com/dawimberly/Unified-field-theory/pull/30) |
 | ★★★★★★★★★★★★★★★ | **Overnight B:** IR roster / Appelquist–Carazzone | **done (mixed; hadronic + assumed)** | UV/EW/AC wrong-sign; hadronic proxy \(a_1=+2/3\) **assumed**; QED \(-1/6\); mass-on not a derivation | [#31](https://github.com/dawimberly/Unified-field-theory/pull/31) |
 | ★★★★★★★★★★★★★★★★ | **Overnight C:** Trace / conformal anomaly → \(1/G\) | **done (negative)** | Anomaly ↔ nucleon mass OK; does not fix \(a_1\) sign or derive positive Sakharov \(1/G\); dilaton link to #29 only | [#32](https://github.com/dawimberly/Unified-field-theory/pull/32) |
-| ★★★★★★★★★★★★★★★★★ | **Overnight D:** Reconcile A–C with FFZ \(h^2z/K\) ledger | **done (negative)** | \(\delta C=0\); GAP \(+0.009651\) stands | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★ | **Overnight D:** Reconcile A–C with FFZ \(h^2z/K\) ledger | **done (negative)** | \(\delta C=0\); GAP \(+0.009651\) stands | [#33](https://github.com/dawimberly/Unified-field-theory/pull/33) |
+| ★★★★★★★★★★★★★★★★★★ | **Overnight E:** \(\Lambda_{\mathrm{ind}}\) / pressure / \(\rho+3p\) | **done (negative for DE)** | Vacuum \(\rho+3p<0\) repulsive (GR); SM \(n_b-n_f=-62\) wrong-sign \(\Lambda\); no untuned DE | *(stacked)* |
 
 ## How to read status
 
@@ -71,4 +72,5 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - IR roster / AC: `docs/FFFF_IR_ROSTER.md`, `ffz_ir_roster.py`
 - Trace anomaly: `docs/FFFF_TRACE_ANOMALY.md`, `ffz_trace_anomaly.py`
 - Ledger reconcile A–C: `docs/FFFF_LEDGER_RECONCILE.md`, `ffz_ledger_reconcile.py`
+- Lambda / pressure: `docs/FFFF_LAMBDA_PRESSURE.md`, `ffz_lambda_pressure.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
