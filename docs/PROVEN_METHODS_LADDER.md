@@ -44,6 +44,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Q:** Casimir vs Le Sage | **done (analogy+avoids)** | Casimir-like mode removal **derived**; two-body Casimir=Newton **analogy**; Le Sage fatals avoided | [#44](https://github.com/dawimberly/Unified-field-theory/pull/44) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight R:** Decompose \(S\); minimal UV flip | **done** | UV gauge Kabats dominate \(S\sim-265\); all-Proca-12 flips; conformal ξ does not | [#45](https://github.com/dawimberly/Unified-field-theory/pull/45) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight S:** GUT SU(5)/SO(10) spectra | **done (conditional)** | Broken local \(a_1+\); SU(5) Planck→GUT does **not** flip (no Higgs); not a theorem | [#46](https://github.com/dawimberly/Unified-field-theory/pull/46) |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight T:** Round-4 summary | **done** | Lead = IR positivity + UV-Kabat diagnosis; Proca/GUT flip assumed, not theorem | *(stacked)* |
 
 ## How to read status
 
