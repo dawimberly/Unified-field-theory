@@ -20,3 +20,6 @@ print('ffz_particle_plasticity PASS',flush=True)
 sm_roster_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_sm_roster.py'
 subprocess.run([sys.executable,str(sm_roster_test)],check=True)
 print('ffz_sm_roster PASS',flush=True)
+three_phase_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_three_phase.py'
+subprocess.run([sys.executable,str(three_phase_test)],check=True)
+print('ffz_three_phase PASS',flush=True)
