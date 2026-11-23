@@ -56,7 +56,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AC:** SEC in collapse (\(\rho+3p\)) | **done** | Ordinary dense matter OK; only bag vacuum \(\rho+3p<0\) | [#56](https://github.com/dawimberly/Unified-field-theory/pull/56) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AD:** Induced \(G\) across deconfinement | **done (tiny)** | Local \(a_1\) flips −; \(\Delta G/G\sim10^{-39}\) vs Planck | [#57](https://github.com/dawimberly/Unified-field-theory/pull/57) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AE:** Bounce criterion (AC/AD vs LQC/AS) | **done (negative)** | No sub-Planck bounce from AC/AD; no derived GRB/FRB | [#58](https://github.com/dawimberly/Unified-field-theory/pull/58) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AF:** Round 7 summary | **done** | AC–AE table; negative-gravity branch closed | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AF:** Round 7 summary | **done** | AC–AE table; negative-gravity branch closed | [#59](https://github.com/dawimberly/Unified-field-theory/pull/59) |
 
 ## How to read status
 
