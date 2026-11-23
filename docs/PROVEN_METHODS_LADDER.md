@@ -50,7 +50,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight W:** UV consistency constraints | **done** | Proca→EW **ruled out** (IR γ/g); SO(10)/E6 tentatively OK (ASSUMED) | [#50](https://github.com/dawimberly/Unified-field-theory/pull/50) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight X:** Round-5 summary | **done** | Two-track lead: IR hadronic +; UV SO(10)/E6 Proca (ASSUMED) | [#51](https://github.com/dawimberly/Unified-field-theory/pull/51) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Y:** Minimal broken-gauge spectrum | **done** | \(N_V^{\min}=15\) for \(S>0\); SO(10)/E6 **allowed**, not selected | [#52](https://github.com/dawimberly/Unified-field-theory/pull/52) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Z:** Positivity selection region | **done** | \(S>0\) loose: \(N_V\in[15,69]\) fiducial; \(\Lambda\sim M_{\mathrm{Pl}}\) assumed | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Z:** Positivity selection region | **done** | \(S>0\) loose: \(N_V\in[15,69]\) fiducial; \(\Lambda\sim M_{\mathrm{Pl}}\) assumed | [#53](https://github.com/dawimberly/Unified-field-theory/pull/53) |
 
 ## How to read status
 
