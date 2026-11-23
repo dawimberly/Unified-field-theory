@@ -36,7 +36,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★ | **Overnight H:** EE confined vs deconfined | **done (supports Kabat absence)** | EE \(O(N^2)\to O(1)\) supports gluon edge-mode removal; not a matching proof | [#37](https://github.com/dawimberly/Unified-field-theory/pull/37) |
 | ★★★★★★★★★★★★★★★★★★★★★★ | **Overnight I:** Running \(1/G_{\mathrm{ind}}(\mu)\) | **done** | Sign \(+\) at confinement band; crossover \(=\Lambda_{\mathrm{QCD}}\) by construction (flag) | [#38](https://github.com/dawimberly/Unified-field-theory/pull/38) |
 | ★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight J:** Confinement snap vs #26 yield | **done (analogy only)** | HI rate-dependence empirical; FFZ/KFD map **not** derived | [#39](https://github.com/dawimberly/Unified-field-theory/pull/39) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight L:** UV→IR curvature matching | **done (positive; narrowed)** | Matched \(a_1=1/3\pm0.29\in[1/6,3/4]\) all \(+\); ρ model **assumed** | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight L:** UV→IR curvature matching | **done (positive; narrowed)** | Matched \(a_1=1/3\pm0.29\in[1/6,3/4]\) all \(+\); ρ model **assumed** | [#40](https://github.com/dawimberly/Unified-field-theory/pull/40) |
 
 ## How to read status
 
