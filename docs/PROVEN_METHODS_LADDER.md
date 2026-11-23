@@ -47,7 +47,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight T:** Round-4 summary | **done** | Lead = IR positivity + UV-Kabat diagnosis; Proca/GUT flip assumed, not theorem | [#47](https://github.com/dawimberly/Unified-field-theory/pull/47) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight U:** UV full-mass mechanisms | **done** | 4 survivors with \(\Delta a_1\ge4.2\); Stueckelberg-SM & asymp. safety fail count | [#48](https://github.com/dawimberly/Unified-field-theory/pull/48) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight V:** Planck→GUT stress (U survivors) | **done** | Short Proca windows fail; SO(10)/E6 flip; full Proca→EW flips but IR-hostile | [#49](https://github.com/dawimberly/Unified-field-theory/pull/49) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight W:** UV consistency constraints | **done** | Proca→EW **ruled out** (IR γ/g); SO(10)/E6 tentatively OK (ASSUMED) | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight W:** UV consistency constraints | **done** | Proca→EW **ruled out** (IR γ/g); SO(10)/E6 tentatively OK (ASSUMED) | [#50](https://github.com/dawimberly/Unified-field-theory/pull/50) |
 
 ## How to read status
 
