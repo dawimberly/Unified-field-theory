@@ -83,3 +83,6 @@ print('ffz_planck_stress PASS',flush=True)
 uv_consistency_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_uv_consistency.py'
 subprocess.run([sys.executable,str(uv_consistency_test)],check=True)
 print('ffz_uv_consistency PASS',flush=True)
+minimal_spectrum_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_minimal_spectrum.py'
+subprocess.run([sys.executable,str(minimal_spectrum_test)],check=True)
+print('ffz_minimal_spectrum PASS',flush=True)
