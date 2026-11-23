@@ -71,3 +71,6 @@ print('ffz_casimir_lesage PASS',flush=True)
 uv_decompose_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_uv_decompose.py'
 subprocess.run([sys.executable,str(uv_decompose_test)],check=True)
 print('ffz_uv_decompose PASS',flush=True)
+gut_spectrum_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_gut_spectrum.py'
+subprocess.run([sys.executable,str(gut_spectrum_test)],check=True)
+print('ffz_gut_spectrum PASS',flush=True)
