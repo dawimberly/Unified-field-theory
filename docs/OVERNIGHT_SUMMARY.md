@@ -1,6 +1,6 @@
 # Overnight autonomous program — plain summary for Dan
 
-Stack started from #29 (two-phase). Rounds 1–5 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
+Stack started from #29 (two-phase). Rounds 1–6 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives. **Fields-only:** “particles” read as locked localized field states.
 
 ## Round 1 (A–F)
 
@@ -47,17 +47,23 @@ Stack started from #29 (two-phase). Rounds 1–5 below. Standing rules held: no 
 | **V** Planck→GUT stress | #49 | Short Proca windows **fail**; SO(10)/E6 **flip**; Proca→EW flips but IR-hostile | \(S\sim+373\) (SO10); short \(\sim-117\) | Scales **assumed** |
 | **W** Consistency | #50 | Proca→EW **ruled out** (QCD/QED); SO(10)/E6 tentatively OK | \(m_\gamma\lesssim10^{-18}\) eV; \(\Lambda_{\mathrm{QCD}}\) | IR **derived**; GUT **assumed** |
 
+## Round 6 (Y–AA)
+
+| Rung | PR | One-line result | Key numbers | Derived vs assumed |
+| --- | --- | --- | --- | --- |
+| **Y** Minimal broken-gauge spectrum | #52 | \(N_V^{\min}=15\) for \(S>0\); SO(10)/E6 **allowed**, not selected | SU(5)-like 12 fails (\(S\sim-54\)) | Arith **derived**; scales **assumed** |
+| **Z** Positivity selection region | #53 | \(S>0\) is a **loose** cut; residual freedom large | \(N_V\in[15,69]\) fiducial; \(\Lambda\sim M_{\mathrm{Pl}}\) coin. | Magnitude **assumed** |
+| **AA** GAP vs \(a_1\) sectors | #54 | **Honest negative:** \(\delta C=0\); GAP stands | \(+0.009651\) unchanged | Channel split **derived** |
+
 ## Revised most promising lead
 
-**Two-track lead:**
+**Still two-track, sharpened:**
 
-1. **IR (robust):** hadronic \(a_1=1/3\pm0.29>0\) after confinement removes free-gluon Kabats (#40) — local EFT statement.
-2. **UV (conditional):** integrated \(S\) flips under **SO(10)/E6-style long broken Proca bins** (#49) that survive IR/unitarity/unification rough checks (#50). Still **ASSUMED** GUT content — not derived from the SM alone.
+1. **IR (robust):** hadronic \(a_1=1/3\pm0.29>0\) after confinement removes free-gluon Kabats — local field-mode EFT statement (#40).
+2. **UV (constrained, not unique):** \(S>0\) requires \(N_V\ge15\) massive vector field modes at fiducial scales (#52). SO(10)/E6 are **allowed** examples, **not selected**. Positivity leaves a wide region (#53) — not a derivation of a unique GUT.
 
-**Ruled out:** complete Proca→EW as a physical flip (arithmetic yes, QCD/QED no); short high-scale Proca/KK/TC-4 windows; confinement as FFZ ledger fix (#42).
-
-**Still open:** FFZ GAP \(+0.009651\); lattice-grade UV→IR matching; deriving a GUT (or other) spectrum rather than assuming it.
+**Still fails:** FFZ GAP \(+0.009651\) — massive-vector / hadronic \(a_1\) give \(\delta C=0\) (#54). \(\Lambda_{\mathrm{UV}}\sim M_{\mathrm{Pl}}\) for Planck magnitude remains assumed.
 
 ## Stack map
 
-`#47 → #48(U) → #49(V) → #50(W) → #51(X)`
+`#51 → #52(Y) → #53(Z) → #54(AA) → #55(AB Round-6 summary)`
