@@ -98,3 +98,6 @@ print('ffz_sec_collapse PASS',flush=True)
 deconf_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_deconf_gind.py'
 subprocess.run([sys.executable,str(deconf_gind_test)],check=True)
 print('ffz_deconf_gind PASS',flush=True)
+bounce_criterion_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_bounce_criterion.py'
+subprocess.run([sys.executable,str(bounce_criterion_test)],check=True)
+print('ffz_bounce_criterion PASS',flush=True)

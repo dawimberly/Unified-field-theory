@@ -55,6 +55,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AB:** Round-6 summary | **done** | Lead: IR +; UV \(N_V\ge15\) allowed region; GAP untouched | [#55](https://github.com/dawimberly/Unified-field-theory/pull/55) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AC:** SEC in collapse (\(\rho+3p\)) | **done** | Ordinary dense matter OK; only bag vacuum \(\rho+3p<0\) | [#56](https://github.com/dawimberly/Unified-field-theory/pull/56) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AD:** Induced \(G\) across deconfinement | **done (tiny)** | Local \(a_1\) flips −; \(\Delta G/G\sim10^{-39}\) vs Planck | [#57](https://github.com/dawimberly/Unified-field-theory/pull/57) |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AE:** Bounce criterion (AC/AD vs LQC/AS) | **done (negative)** | No sub-Planck bounce from AC/AD; no derived GRB/FRB | *(stacked)* |
 
 ## How to read status
 
@@ -118,5 +119,6 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - GAP sectors: `docs/FFFF_GAP_SECTORS.md`, `ffz_gap_sectors.py`
 - SEC collapse: `docs/FFFF_SEC_COLLAPSE.md`, `ffz_sec_collapse.py`
 - Deconfinement \(G_{\mathrm{ind}}\): `docs/FFFF_DECONF_GIND.md`, `ffz_deconf_gind.py`
+- Bounce criterion: `docs/FFFF_BOUNCE_CRITERION.md`, `ffz_bounce_criterion.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
