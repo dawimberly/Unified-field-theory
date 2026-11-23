@@ -86,3 +86,6 @@ print('ffz_uv_consistency PASS',flush=True)
 minimal_spectrum_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_minimal_spectrum.py'
 subprocess.run([sys.executable,str(minimal_spectrum_test)],check=True)
 print('ffz_minimal_spectrum PASS',flush=True)
+positivity_region_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_positivity_region.py'
+subprocess.run([sys.executable,str(positivity_region_test)],check=True)
+print('ffz_positivity_region PASS',flush=True)
