@@ -35,3 +35,6 @@ print('ffz_ir_roster PASS',flush=True)
 trace_anomaly_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_trace_anomaly.py'
 subprocess.run([sys.executable,str(trace_anomaly_test)],check=True)
 print('ffz_trace_anomaly PASS',flush=True)
+ledger_reconcile_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ledger_reconcile.py'
+subprocess.run([sys.executable,str(ledger_reconcile_test)],check=True)
+print('ffz_ledger_reconcile PASS',flush=True)
