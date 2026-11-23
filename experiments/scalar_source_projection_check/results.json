@@ -788,7 +788,7 @@
     },
     {
       "name": "identical-constituent pole cancellation",
-      "error": 0.0,
+      "error": 1.6940658945086007e-21,
       "tolerance": 1e-10
     },
     {
@@ -892,7 +892,7 @@
         },
         {
           "delta": 1e-07,
-          "W_left": -8.31820300188204e-06,
+          "W_left": -8.318203001882042e-06,
           "W_right": 8.318201117680463e-06
         }
       ],
@@ -906,21 +906,21 @@
   "pv": [
     {
       "L": 3.0,
-      "q2": -2.0900298566858524,
-      "external_trace": 4.090029856685852,
-      "conditional_euclidean_W_residue": 771.9055089533874
+      "q2": -2.0900298566858386,
+      "external_trace": 4.090029856685838,
+      "conditional_euclidean_W_residue": 771.9055098024922
     },
     {
       "L": 5.0,
-      "q2": -2.778519511163709,
-      "external_trace": 4.778519511163709,
-      "conditional_euclidean_W_residue": 379.31891583391564
+      "q2": -2.778519511163712,
+      "external_trace": 4.7785195111637115,
+      "conditional_euclidean_W_residue": 379.3189160830151
     },
     {
       "L": 10.0,
-      "q2": -3.747301964001835,
-      "external_trace": 5.747301964001835,
-      "conditional_euclidean_W_residue": 118.1290746777169
+      "q2": -3.7473019640018466,
+      "external_trace": 5.747301964001847,
+      "conditional_euclidean_W_residue": 118.12907451481567
     }
   ]
 }

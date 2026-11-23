@@ -44,3 +44,7 @@ The checkpoint Python blocks run in their stated order. Requirements across the 
 - [ffz_fixed_one_sixth_checkpoint.md](ffz_fixed_one_sixth_checkpoint.md)
 - [ffz_local_weyl_and_curvature_checkpoint.md](ffz_local_weyl_and_curvature_checkpoint.md)
 - [ffz_two_loop_flat_space_checkpoint.md](ffz_two_loop_flat_space_checkpoint.md)
+
+## Consolidation note
+
+Review Python and rung writeups moved to `analysis/ffz/` and `docs/rounds/`. See repo `docs/README.md`.

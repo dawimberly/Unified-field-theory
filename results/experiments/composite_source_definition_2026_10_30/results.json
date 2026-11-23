@@ -1,0 +1,767 @@
+{
+  "scope": "Exact Euclidean flat-source counterexamples and covariant quadratic dictionary, not a literal proof about an inaccessible final publication or a new physical model.",
+  "baseline": "fe85718a13098c30b01be0cd0019dc67a8d0194d",
+  "python": "3.12.14",
+  "curvature_bilinears": [
+    {
+      "Q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "q": "1",
+      "couplings": [
+        "1",
+        "0",
+        "0"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "q": "1",
+      "couplings": [
+        "0",
+        "1",
+        "0"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "q": "1",
+      "couplings": [
+        "0",
+        "0",
+        "1"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "q": "1",
+      "couplings": [
+        "2/7",
+        "-3/11",
+        "5/13"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "q": "1",
+      "couplings": [
+        "0",
+        "1",
+        "2"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "1",
+        "0",
+        "1"
+      ],
+      "q": "3",
+      "couplings": [
+        "1",
+        "0",
+        "0"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "1",
+        "0",
+        "1"
+      ],
+      "q": "3",
+      "couplings": [
+        "0",
+        "1",
+        "0"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "1",
+        "0",
+        "1"
+      ],
+      "q": "3",
+      "couplings": [
+        "0",
+        "0",
+        "1"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "1",
+        "0",
+        "1"
+      ],
+      "q": "3",
+      "couplings": [
+        "2/7",
+        "-3/11",
+        "5/13"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "1",
+        "0",
+        "1"
+      ],
+      "q": "3",
+      "couplings": [
+        "0",
+        "1",
+        "2"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "2",
+        "2",
+        "0"
+      ],
+      "q": "9",
+      "couplings": [
+        "1",
+        "0",
+        "0"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "2",
+        "2",
+        "0"
+      ],
+      "q": "9",
+      "couplings": [
+        "0",
+        "1",
+        "0"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "2",
+        "2",
+        "0"
+      ],
+      "q": "9",
+      "couplings": [
+        "0",
+        "0",
+        "1"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "2",
+        "2",
+        "0"
+      ],
+      "q": "9",
+      "couplings": [
+        "2/7",
+        "-3/11",
+        "5/13"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    },
+    {
+      "Q": [
+        "1",
+        "2",
+        "2",
+        "0"
+      ],
+      "q": "9",
+      "couplings": [
+        "0",
+        "1",
+        "2"
+      ],
+      "bilinear_cases": 25,
+      "maximum_error": "0"
+    }
+  ],
+  "covariant_matching_dictionary": {
+    "convention": "Gamma_ct=integral sqrt(g)[kappa R+alpha R^2+beta Ricci^2], q=Q^2, D=4; topological/boundary terms omitted",
+    "delta_A": "3*kappa*q/2+(9*alpha+3*beta)*q^2",
+    "delta_K2": "-kappa*q/2+beta*q^2/2",
+    "inverse_map": {
+      "kappa": "-2*delta_k1",
+      "beta": "2*delta_k2",
+      "alpha": "(delta_a2-6*delta_k2)/9"
+    },
+    "minimal_scalar_difference_units": "C times difference of sum c log z (curvature squared); C times difference of sum c z log z (Einstein)",
+    "minimal_scalar_coefficients": {
+      "alpha": "1/240",
+      "beta": "1/120",
+      "kappa": "-1/12"
+    },
+    "flat_tadpole": "All displayed terms have vanishing flat first variation under compact-support/periodic boundary conditions; curvature-squared terms begin at q^2 in Hessian."
+  },
+  "canonical_contact_audit": [
+    {
+      "lambda_over_p": "0",
+      "h": 0,
+      "j": 0,
+      "inverse_metric_contact": "-56/11",
+      "inverse_to_covariant_contact": "28/11",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-28/11",
+      "total_contact": "-28/11"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 0,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 0,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 0,
+      "j": 3,
+      "inverse_metric_contact": "14/55",
+      "inverse_to_covariant_contact": "-7/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "7/55",
+      "total_contact": "7/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 0,
+      "j": 4,
+      "inverse_metric_contact": "-266/55",
+      "inverse_to_covariant_contact": "133/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-133/55",
+      "total_contact": "-133/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 1,
+      "j": 0,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 1,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "14/11",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "14/11",
+      "total_contact": "14/11"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 1,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 1,
+      "j": 3,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-14/55",
+      "total_contact": "-14/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 1,
+      "j": 4,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-14/55",
+      "total_contact": "-14/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 2,
+      "j": 0,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 2,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 2,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "14/11",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "14/11",
+      "total_contact": "14/11"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 2,
+      "j": 3,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 2,
+      "j": 4,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 3,
+      "j": 0,
+      "inverse_metric_contact": "14/55",
+      "inverse_to_covariant_contact": "-7/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "7/55",
+      "total_contact": "7/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 3,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-14/55",
+      "total_contact": "-14/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 3,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 3,
+      "j": 3,
+      "inverse_metric_contact": "-7/550",
+      "inverse_to_covariant_contact": "7/25",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "147/550",
+      "total_contact": "147/550"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 3,
+      "j": 4,
+      "inverse_metric_contact": "133/550",
+      "inverse_to_covariant_contact": "42/275",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "217/550",
+      "total_contact": "217/550"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 4,
+      "j": 0,
+      "inverse_metric_contact": "-266/55",
+      "inverse_to_covariant_contact": "133/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-133/55",
+      "total_contact": "-133/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 4,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-14/55",
+      "total_contact": "-14/55"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 4,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 4,
+      "j": 3,
+      "inverse_metric_contact": "133/550",
+      "inverse_to_covariant_contact": "42/275",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "217/550",
+      "total_contact": "217/550"
+    },
+    {
+      "lambda_over_p": "0",
+      "h": 4,
+      "j": 4,
+      "inverse_metric_contact": "-2527/550",
+      "inverse_to_covariant_contact": "707/275",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "-1113/550",
+      "total_contact": "-1113/550"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 0,
+      "j": 0,
+      "inverse_metric_contact": "-56/11",
+      "inverse_to_covariant_contact": "28/11",
+      "stationary_or_cosmological_contact": "14/11",
+      "direct_nilpotent_second_variation": "-14/11",
+      "total_contact": "-14/11"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 0,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 0,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 0,
+      "j": 3,
+      "inverse_metric_contact": "14/55",
+      "inverse_to_covariant_contact": "-7/55",
+      "stationary_or_cosmological_contact": "-7/110",
+      "direct_nilpotent_second_variation": "7/110",
+      "total_contact": "7/110"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 0,
+      "j": 4,
+      "inverse_metric_contact": "-266/55",
+      "inverse_to_covariant_contact": "133/55",
+      "stationary_or_cosmological_contact": "133/110",
+      "direct_nilpotent_second_variation": "-133/110",
+      "total_contact": "-133/110"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 1,
+      "j": 0,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 1,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "14/11",
+      "stationary_or_cosmological_contact": "-7/11",
+      "direct_nilpotent_second_variation": "7/11",
+      "total_contact": "7/11"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 1,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 1,
+      "j": 3,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "7/55",
+      "direct_nilpotent_second_variation": "-7/55",
+      "total_contact": "-7/55"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 1,
+      "j": 4,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "7/55",
+      "direct_nilpotent_second_variation": "-7/55",
+      "total_contact": "-7/55"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 2,
+      "j": 0,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 2,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 2,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "14/11",
+      "stationary_or_cosmological_contact": "-7/11",
+      "direct_nilpotent_second_variation": "7/11",
+      "total_contact": "7/11"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 2,
+      "j": 3,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 2,
+      "j": 4,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 3,
+      "j": 0,
+      "inverse_metric_contact": "14/55",
+      "inverse_to_covariant_contact": "-7/55",
+      "stationary_or_cosmological_contact": "-7/110",
+      "direct_nilpotent_second_variation": "7/110",
+      "total_contact": "7/110"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 3,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "7/55",
+      "direct_nilpotent_second_variation": "-7/55",
+      "total_contact": "-7/55"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 3,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 3,
+      "j": 3,
+      "inverse_metric_contact": "-7/550",
+      "inverse_to_covariant_contact": "7/25",
+      "stationary_or_cosmological_contact": "-147/1100",
+      "direct_nilpotent_second_variation": "147/1100",
+      "total_contact": "147/1100"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 3,
+      "j": 4,
+      "inverse_metric_contact": "133/550",
+      "inverse_to_covariant_contact": "42/275",
+      "stationary_or_cosmological_contact": "-217/1100",
+      "direct_nilpotent_second_variation": "217/1100",
+      "total_contact": "217/1100"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 4,
+      "j": 0,
+      "inverse_metric_contact": "-266/55",
+      "inverse_to_covariant_contact": "133/55",
+      "stationary_or_cosmological_contact": "133/110",
+      "direct_nilpotent_second_variation": "-133/110",
+      "total_contact": "-133/110"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 4,
+      "j": 1,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "-14/55",
+      "stationary_or_cosmological_contact": "7/55",
+      "direct_nilpotent_second_variation": "-7/55",
+      "total_contact": "-7/55"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 4,
+      "j": 2,
+      "inverse_metric_contact": "0",
+      "inverse_to_covariant_contact": "0",
+      "stationary_or_cosmological_contact": "0",
+      "direct_nilpotent_second_variation": "0",
+      "total_contact": "0"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 4,
+      "j": 3,
+      "inverse_metric_contact": "133/550",
+      "inverse_to_covariant_contact": "42/275",
+      "stationary_or_cosmological_contact": "-217/1100",
+      "direct_nilpotent_second_variation": "217/1100",
+      "total_contact": "217/1100"
+    },
+    {
+      "lambda_over_p": "1",
+      "h": 4,
+      "j": 4,
+      "inverse_metric_contact": "-2527/550",
+      "inverse_to_covariant_contact": "707/275",
+      "stationary_or_cosmological_contact": "1113/1100",
+      "direct_nilpotent_second_variation": "-1113/1100",
+      "total_contact": "-1113/1100"
+    }
+  ],
+  "source_convention_warning": "Tadpole stationarity alone does not null the fixed-field seagull. Metric-dependent operator subtractions must be differentiated separately. No published error or quantum equivalence is asserted."
+}

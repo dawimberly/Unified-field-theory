@@ -2,111 +2,58 @@
 from pathlib import Path
 import subprocess
 import sys
-root=Path(__file__).resolve().parent
-repo=root.parent
-for name in ['scalar_full_response_scan','scalar_source_projection_check','metric_tensor_ward_check','metric_spectral_check']:
-    subprocess.run([sys.executable,str(root/(name+'.py'))],check=True)
-    print(name+' PASS',flush=True)
-# Penrose–Diósi / induced-G collapse checks
-collapse_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_induced_collapse.py'
-subprocess.run([sys.executable,str(collapse_test)],check=True)
-print('ffz_induced_collapse PASS',flush=True)
-distortion_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_distortion_phase.py'
-subprocess.run([sys.executable,str(distortion_test)],check=True)
-print('ffz_distortion_phase PASS',flush=True)
-plasticity_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_particle_plasticity.py'
-subprocess.run([sys.executable,str(plasticity_test)],check=True)
-print('ffz_particle_plasticity PASS',flush=True)
-sm_roster_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_sm_roster.py'
-subprocess.run([sys.executable,str(sm_roster_test)],check=True)
-print('ffz_sm_roster PASS',flush=True)
-three_phase_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_three_phase.py'
-subprocess.run([sys.executable,str(three_phase_test)],check=True)
-print('ffz_three_phase PASS',flush=True)
-two_phase_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_two_phase.py'
-subprocess.run([sys.executable,str(two_phase_test)],check=True)
-print('ffz_two_phase PASS',flush=True)
-shared_boundary_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_shared_boundary.py'
-subprocess.run([sys.executable,str(shared_boundary_test)],check=True)
-print('ffz_shared_boundary PASS',flush=True)
-ir_roster_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ir_roster.py'
-subprocess.run([sys.executable,str(ir_roster_test)],check=True)
-print('ffz_ir_roster PASS',flush=True)
-trace_anomaly_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_trace_anomaly.py'
-subprocess.run([sys.executable,str(trace_anomaly_test)],check=True)
-print('ffz_trace_anomaly PASS',flush=True)
-ledger_reconcile_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ledger_reconcile.py'
-subprocess.run([sys.executable,str(ledger_reconcile_test)],check=True)
-print('ffz_ledger_reconcile PASS',flush=True)
-lambda_pressure_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_lambda_pressure.py'
-subprocess.run([sys.executable,str(lambda_pressure_test)],check=True)
-print('ffz_lambda_pressure PASS',flush=True)
-string_kk_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_string_kk_tower.py'
-subprocess.run([sys.executable,str(string_kk_test)],check=True)
-print('ffz_string_kk_tower PASS',flush=True)
-hadronic_a1_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_hadronic_a1.py'
-subprocess.run([sys.executable,str(hadronic_a1_test)],check=True)
-print('ffz_hadronic_a1 PASS',flush=True)
-ee_confinement_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ee_confinement.py'
-subprocess.run([sys.executable,str(ee_confinement_test)],check=True)
-print('ffz_ee_confinement PASS',flush=True)
-running_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_running_gind.py'
-subprocess.run([sys.executable,str(running_gind_test)],check=True)
-print('ffz_running_gind PASS',flush=True)
-confinement_snap_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_confinement_snap.py'
-subprocess.run([sys.executable,str(confinement_snap_test)],check=True)
-print('ffz_confinement_snap PASS',flush=True)
-curvature_match_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_curvature_match.py'
-subprocess.run([sys.executable,str(curvature_match_test)],check=True)
-print('ffz_curvature_match PASS',flush=True)
-spectral_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_spectral_gind.py'
-subprocess.run([sys.executable,str(spectral_gind_test)],check=True)
-print('ffz_spectral_gind PASS',flush=True)
-ledger_confinement_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ledger_confinement.py'
-subprocess.run([sys.executable,str(ledger_confinement_test)],check=True)
-print('ffz_ledger_confinement PASS',flush=True)
-casimir_lesage_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_casimir_lesage.py'
-subprocess.run([sys.executable,str(casimir_lesage_test)],check=True)
-print('ffz_casimir_lesage PASS',flush=True)
-uv_decompose_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_uv_decompose.py'
-subprocess.run([sys.executable,str(uv_decompose_test)],check=True)
-print('ffz_uv_decompose PASS',flush=True)
-gut_spectrum_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_gut_spectrum.py'
-subprocess.run([sys.executable,str(gut_spectrum_test)],check=True)
-print('ffz_gut_spectrum PASS',flush=True)
-uv_higgsing_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_uv_higgsing.py'
-subprocess.run([sys.executable,str(uv_higgsing_test)],check=True)
-print('ffz_uv_higgsing PASS',flush=True)
-planck_stress_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_planck_stress.py'
-subprocess.run([sys.executable,str(planck_stress_test)],check=True)
-print('ffz_planck_stress PASS',flush=True)
-uv_consistency_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_uv_consistency.py'
-subprocess.run([sys.executable,str(uv_consistency_test)],check=True)
-print('ffz_uv_consistency PASS',flush=True)
-minimal_spectrum_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_minimal_spectrum.py'
-subprocess.run([sys.executable,str(minimal_spectrum_test)],check=True)
-print('ffz_minimal_spectrum PASS',flush=True)
-positivity_region_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_positivity_region.py'
-subprocess.run([sys.executable,str(positivity_region_test)],check=True)
-print('ffz_positivity_region PASS',flush=True)
-gap_sectors_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_gap_sectors.py'
-subprocess.run([sys.executable,str(gap_sectors_test)],check=True)
-print('ffz_gap_sectors PASS',flush=True)
-sec_collapse_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_sec_collapse.py'
-subprocess.run([sys.executable,str(sec_collapse_test)],check=True)
-print('ffz_sec_collapse PASS',flush=True)
-deconf_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_deconf_gind.py'
-subprocess.run([sys.executable,str(deconf_gind_test)],check=True)
-print('ffz_deconf_gind PASS',flush=True)
-bounce_criterion_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_bounce_criterion.py'
-subprocess.run([sys.executable,str(bounce_criterion_test)],check=True)
-print('ffz_bounce_criterion PASS',flush=True)
-surface_audit_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_surface_audit.py'
-subprocess.run([sys.executable,str(surface_audit_test)],check=True)
-print('ffz_surface_audit PASS',flush=True)
-edge_modes_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_edge_modes.py'
-subprocess.run([sys.executable,str(edge_modes_test)],check=True)
-print('ffz_edge_modes PASS',flush=True)
-phase_lock_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_phase_lock.py'
-subprocess.run([sys.executable,str(phase_lock_test)],check=True)
-print('ffz_phase_lock PASS',flush=True)
+
+root = Path(__file__).resolve().parent
+repo = root.parent
+ffz_tests = repo / "analysis" / "ffz" / "tests"
+
+for name in [
+    "scalar_full_response_scan",
+    "scalar_source_projection_check",
+    "metric_tensor_ward_check",
+    "metric_spectral_check",
+]:
+    subprocess.run([sys.executable, str(root / (name + ".py"))], check=True)
+    print(name + " PASS", flush=True)
+
+# FFZ overnight / ladder unit tests (analysis/ffz/tests)
+ffz_test_names = [
+    "test_ffz_induced_collapse",
+    "test_ffz_distortion_phase",
+    "test_ffz_particle_plasticity",
+    "test_ffz_sm_roster",
+    "test_ffz_three_phase",
+    "test_ffz_two_phase",
+    "test_ffz_shared_boundary",
+    "test_ffz_ir_roster",
+    "test_ffz_trace_anomaly",
+    "test_ffz_ledger_reconcile",
+    "test_ffz_lambda_pressure",
+    "test_ffz_string_kk_tower",
+    "test_ffz_hadronic_a1",
+    "test_ffz_ee_confinement",
+    "test_ffz_running_gind",
+    "test_ffz_confinement_snap",
+    "test_ffz_curvature_match",
+    "test_ffz_spectral_gind",
+    "test_ffz_ledger_confinement",
+    "test_ffz_casimir_lesage",
+    "test_ffz_uv_decompose",
+    "test_ffz_gut_spectrum",
+    "test_ffz_uv_higgsing",
+    "test_ffz_planck_stress",
+    "test_ffz_uv_consistency",
+    "test_ffz_minimal_spectrum",
+    "test_ffz_positivity_region",
+    "test_ffz_gap_sectors",
+    "test_ffz_sec_collapse",
+    "test_ffz_deconf_gind",
+    "test_ffz_bounce_criterion",
+    "test_ffz_surface_audit",
+    "test_ffz_edge_modes",
+    "test_ffz_phase_lock",
+]
+for name in ffz_test_names:
+    path = ffz_tests / (name + ".py")
+    subprocess.run([sys.executable, str(path)], check=True)
+    print(name.replace("test_", "") + " PASS", flush=True)

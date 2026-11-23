@@ -1,0 +1,926 @@
+{
+  "scope": "Conserved minimally coupled scalar source saturation, conditional on full tensor Ward completion and previous conformal kernel. W=log Z connected source response, not S-matrix normalization.",
+  "checks": [
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 1.5202354861220292e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 3.0404709722440586e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 1.4895204919483638e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.3010426069826053e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 4.468561475845091e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 3.648565166692871e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 1.5202354861220292e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 5.551115123125783e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 3.0404709722440586e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 1.4895204919483638e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 2.0816681711721685e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 4.468561475845091e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 7.771561172376096e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 3.648565166692871e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 7.105427357601002e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 1.5202354861220292e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 3.0404709722440586e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 1.4895204919483638e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 4.468561475845091e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 1.6653345369377348e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 3.7470027081099033e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 3.552713678800501e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "on shell",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress vertex conservation",
+      "error": 3.648565166692871e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "stress trace = 2 U_external",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "scalar projector saturation",
+      "error": 7.105427357601002e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "conformal-to-transverse normalization",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 5.421010862427522e-20,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 5.421010862427522e-20,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.734723475976807e-18,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.3552527156068805e-20,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.3552527156068805e-20,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.6940658945086007e-21,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "identical-constituent pole cancellation",
+      "error": 0.0,
+      "tolerance": 1e-10
+    }
+  ],
+  "dimreg": [
+    {
+      "D": 4.01,
+      "qstar": 1.9900497512437814,
+      "near_root": [
+        {
+          "delta": 0.001,
+          "W_left": -0.00040084648690545286,
+          "W_right": 0.0004004432749424474
+        },
+        {
+          "delta": 1e-05,
+          "W_left": -4.006467956648345e-06,
+          "W_right": 4.006427635550736e-06
+        },
+        {
+          "delta": 1e-07,
+          "W_left": -4.0064480015432234e-08,
+          "W_right": 4.006447607183203e-08
+        }
+      ],
+      "conditional_W_residue_by_probe_mass_squared": {
+        "0.0": 1.5866727243228471,
+        "1.0": 0.0,
+        "2.0": 1.5866727243228471
+      }
+    },
+    {
+      "D": 4.2,
+      "qstar": 1.8181818181818181,
+      "near_root": [
+        {
+          "delta": 0.001,
+          "W_left": -0.01047422209704315,
+          "W_right": 0.010462404152760835
+        },
+        {
+          "delta": 1e-05,
+          "W_left": -0.00010468368952457952,
+          "W_right": 0.00010468250773262326
+        },
+        {
+          "delta": 1e-07,
+          "W_left": -1.0468310453113995e-06,
+          "W_right": 1.046830929245112e-06
+        }
+      ],
+      "conditional_W_residue_by_probe_mass_squared": {
+        "0.0": 34.6059830163444,
+        "1.0": 0.0,
+        "2.0": 34.6059830163444
+      }
+    },
+    {
+      "D": 5.0,
+      "qstar": 1.3333333333333333,
+      "near_root": [
+        {
+          "delta": 0.001,
+          "W_left": -0.118533445235854,
+          "W_right": 0.11833720979073171
+        },
+        {
+          "delta": 1e-05,
+          "W_left": -0.0011843623399973519,
+          "W_right": 0.0011843427164290128
+        },
+        {
+          "delta": 1e-07,
+          "W_left": -1.1843526278164985e-05,
+          "W_right": 1.1843524298279718e-05
+        }
+      ],
+      "conditional_W_residue_by_probe_mass_squared": {
+        "0.0": 210.55156055657298,
+        "1.0": 0.0,
+        "2.0": 210.55156055657298
+      }
+    },
+    {
+      "D": 5.9,
+      "qstar": 1.0256410256410255,
+      "near_root": [
+        {
+          "delta": 0.001,
+          "W_left": -0.08327632468334517,
+          "W_right": 0.08308790434190029
+        },
+        {
+          "delta": 1e-05,
+          "W_left": -0.000831829626454827,
+          "W_right": 0.0008318107844390747
+        },
+        {
+          "delta": 1e-07,
+          "W_left": -8.31820300188204e-06,
+          "W_right": 8.318201117680463e-06
+        }
+      ],
+      "conditional_W_residue_by_probe_mass_squared": {
+        "0.0": 87.50245421174127,
+        "1.0": 0.0,
+        "2.0": 87.50245421174127
+      }
+    }
+  ],
+  "pv": [
+    {
+      "L": 3.0,
+      "q2": -2.0900298566858524,
+      "external_trace": 4.090029856685852,
+      "conditional_euclidean_W_residue": 771.9055089533874
+    },
+    {
+      "L": 5.0,
+      "q2": -2.778519511163709,
+      "external_trace": 4.778519511163709,
+      "conditional_euclidean_W_residue": 379.31891583391564
+    },
+    {
+      "L": 10.0,
+      "q2": -3.747301964001835,
+      "external_trace": 5.747301964001835,
+      "conditional_euclidean_W_residue": 118.1290746777169
+    }
+  ]
+}

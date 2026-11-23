@@ -1,0 +1,14 @@
+{
+  "baseline": "2345a4ecc8eb6e7b96b8b1018b54943fbcfb1cdd",
+  "date": "2026-10-30",
+  "new_numerical_checks_executed": false,
+  "new_work": ["conditional fixed-regulator large-N measure/source sensitivity derivation", "research route decision memo and source-functional input contract"],
+  "read_repository_notes": [
+    {"path": "bots/gpt/research_notes/2026-10-29/gravity_literature_elimination.md", "blob": "9f50cc44cbef50a5feea0e2ce526479cfcffe891"},
+    {"path": "bots/gpt/research_notes/2026-10-29/matched_constraint_identity.md", "blob": "4a13ca21d5092a16f55a97e3433b38ff600b9b58"},
+    {"path": "bots/gpt/research_notes/2026-10-29/stochastic_regulator_screen.md", "blob": "5958ebe45bddb8723d220310947953e13ceda25e"}
+  ],
+  "other_reads": ["RESEARCH_STATUS.md", "experiments/lorentzian_frequency_audit_2026_10_30/REPORT.md"],
+  "primary_retrieval": {"new_papers_read": false, "attempted_urls": ["https://arxiv.org/pdf/hep-th/0107088", "https://arxiv.org/pdf/gr-qc/9602052"], "result": "empty isError tool result; paper contents were not available"},
+  "limitations": ["Saved notes remain conditional research notes, not verified proofs", "No constrained measure, physical regulator or contour selected", "Large-N sensitivity hypotheses not established for CEV", "No full quantum-gravity solution or physical-health claim"]
+}

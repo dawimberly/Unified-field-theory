@@ -20,9 +20,9 @@ For each previously found subthreshold PV root the identical physical constituen
 
 | PV L | q at root | Stress trace | Conditional W residue |
 |---|---:|---:|---:|
-| 3 | -2.09002986 | 4.09002986 | 771.90550895 |
-| 5 | -2.77851951 | 4.77851951 | 379.31891583 |
-| 10 | -3.74730196 | 5.74730196 | 118.12907468 |
+| 3 | -2.09002986 | 4.09002986 | 771.90550980 |
+| 5 | -2.77851951 | 4.77851951 | 379.31891608 |
+| 10 | -3.74730196 | 5.74730196 | 118.12907451 |
 
 ## Checks and limits
 

@@ -81,52 +81,52 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 
 ## Pointers
 
-- Ledger / audits: `bots/gpt/research_batches/2026-11-21-ffz/review/`
-- Heat-kernel rung: `FFFF_HEAT_KERNEL_A1.md`, `ffz_heat_kernel_a1.py`
-- Superspace / Ward rung: `FFFF_SUPERSPACE_WARD.md`, `ffz_superspace_ward.py`
-- BG-field / R*: `FFFF_BGFIELD_RSTAR.md`, `ffz_bgfield_rstar.py`
-- Condensate / new idea: `FFFF_CONDENSATE_R.md`, `ffz_condensate_r.py`
-- Dynamical condensate: `FFFF_DYNAMICAL_CONDENSATE.md`, `ffz_dynamical_condensate.py`
-- Self-consistent loop: `FFFF_SELF_CONSISTENT_LOOP.md`, `ffz_self_consistent_loop.py`
-- Surface / contact: `FFFF_SURFACE_TERM.md`, `ffz_surface_term.py`
-- ξ running: `FFFF_XI_RUNNING.md`, `ffz_xi_running.py`
-- Gauge / Kabat contact: `FFFF_GAUGE_CONTACT.md`, `ffz_gauge_contact.py`
-- Scheme-invariant test: `FFFF_SCHEME_INVARIANT.md`, `ffz_scheme_invariant.py`
-- Induced collapse (DP): `docs/FFFF_INDUCED_COLLAPSE.md`, `ffz_induced_collapse.py`
-- Distortion phase: `docs/FFFF_DISTORTION_PHASE.md`, `ffz_distortion_phase.py`
-- Particle plasticity: `docs/FFFF_PARTICLE_PLASTICITY.md`, `ffz_particle_plasticity.py`
-- SM roster / Sakharov \(a_1\): `docs/FFFF_SM_ROSTER.md`, `ffz_sm_roster.py`
-- Three-phase / Majorana reconcile: `docs/FFFF_THREE_PHASE.md`, `ffz_three_phase.py`
-- Two-phase mass/gravity: `docs/FFFF_TWO_PHASE_MASS_GRAVITY.md`, `ffz_two_phase.py`
-- Shared boundary / Kabat: `docs/FFFF_SHARED_BOUNDARY.md`, `ffz_shared_boundary.py`
-- IR roster / AC: `docs/FFFF_IR_ROSTER.md`, `ffz_ir_roster.py`
-- Trace anomaly: `docs/FFFF_TRACE_ANOMALY.md`, `ffz_trace_anomaly.py`
-- Ledger reconcile A–C: `docs/FFFF_LEDGER_RECONCILE.md`, `ffz_ledger_reconcile.py`
-- Lambda / pressure: `docs/FFFF_LAMBDA_PRESSURE.md`, `ffz_lambda_pressure.py`
-- String/KK tower: `docs/FFFF_STRING_KK_TOWER.md`, `ffz_string_kk_tower.py`
+- Ledger / audits: `analysis/ffz/`
+- Heat-kernel rung: `docs/rounds/FFFF_HEAT_KERNEL_A1.md`, `analysis/ffz/ffz_heat_kernel_a1.py`
+- Superspace / Ward rung: `docs/rounds/FFFF_SUPERSPACE_WARD.md`, `analysis/ffz/ffz_superspace_ward.py`
+- BG-field / R*: `docs/rounds/FFFF_BGFIELD_RSTAR.md`, `analysis/ffz/ffz_bgfield_rstar.py`
+- Condensate / new idea: `docs/rounds/FFFF_CONDENSATE_R.md`, `analysis/ffz/ffz_condensate_r.py`
+- Dynamical condensate: `docs/rounds/FFFF_DYNAMICAL_CONDENSATE.md`, `analysis/ffz/ffz_dynamical_condensate.py`
+- Self-consistent loop: `docs/rounds/FFFF_SELF_CONSISTENT_LOOP.md`, `analysis/ffz/ffz_self_consistent_loop.py`
+- Surface / contact: `docs/rounds/FFFF_SURFACE_TERM.md`, `analysis/ffz/ffz_surface_term.py`
+- ξ running: `docs/rounds/FFFF_XI_RUNNING.md`, `analysis/ffz/ffz_xi_running.py`
+- Gauge / Kabat contact: `docs/rounds/FFFF_GAUGE_CONTACT.md`, `analysis/ffz/ffz_gauge_contact.py`
+- Scheme-invariant test: `docs/rounds/FFFF_SCHEME_INVARIANT.md`, `analysis/ffz/ffz_scheme_invariant.py`
+- Induced collapse (DP): `docs/rounds/FFFF_INDUCED_COLLAPSE.md`, `analysis/ffz/ffz_induced_collapse.py`
+- Distortion phase: `docs/rounds/FFFF_DISTORTION_PHASE.md`, `analysis/ffz/ffz_distortion_phase.py`
+- Particle plasticity: `docs/rounds/FFFF_PARTICLE_PLASTICITY.md`, `analysis/ffz/ffz_particle_plasticity.py`
+- SM roster / Sakharov \(a_1\): `docs/rounds/FFFF_SM_ROSTER.md`, `analysis/ffz/ffz_sm_roster.py`
+- Three-phase / Majorana reconcile: `docs/rounds/FFFF_THREE_PHASE.md`, `analysis/ffz/ffz_three_phase.py`
+- Two-phase mass/gravity: `docs/rounds/FFFF_TWO_PHASE_MASS_GRAVITY.md`, `analysis/ffz/ffz_two_phase.py`
+- Shared boundary / Kabat: `docs/rounds/FFFF_SHARED_BOUNDARY.md`, `analysis/ffz/ffz_shared_boundary.py`
+- IR roster / AC: `docs/rounds/FFFF_IR_ROSTER.md`, `analysis/ffz/ffz_ir_roster.py`
+- Trace anomaly: `docs/rounds/FFFF_TRACE_ANOMALY.md`, `analysis/ffz/ffz_trace_anomaly.py`
+- Ledger reconcile A–C: `docs/rounds/FFFF_LEDGER_RECONCILE.md`, `analysis/ffz/ffz_ledger_reconcile.py`
+- Lambda / pressure: `docs/rounds/FFFF_LAMBDA_PRESSURE.md`, `analysis/ffz/ffz_lambda_pressure.py`
+- String/KK tower: `docs/rounds/FFFF_STRING_KK_TOWER.md`, `analysis/ffz/ffz_string_kk_tower.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
-- Confinement snap: `docs/FFFF_CONFINEMENT_SNAP.md`, `ffz_confinement_snap.py`
-- Running G_ind: `docs/FFFF_RUNNING_GIND.md`, `ffz_running_gind.py`
-- EE confinement: `docs/FFFF_EE_CONFINEMENT.md`, `ffz_ee_confinement.py`
-- Controlled hadronic \(a_1\): `docs/FFFF_HADRONIC_A1.md`, `ffz_hadronic_a1.py`
-- Curvature matching: `docs/FFFF_CURVATURE_MATCH.md`, `ffz_curvature_match.py`
-- Spectral total \(1/G\): `docs/FFFF_SPECTRAL_GIND.md`, `ffz_spectral_gind.py`
-- Ledger ↔ confinement: `docs/FFFF_LEDGER_CONFINEMENT.md`, `ffz_ledger_confinement.py`
+- Confinement snap: `docs/rounds/FFFF_CONFINEMENT_SNAP.md`, `analysis/ffz/ffz_confinement_snap.py`
+- Running G_ind: `docs/rounds/FFFF_RUNNING_GIND.md`, `analysis/ffz/ffz_running_gind.py`
+- EE confinement: `docs/rounds/FFFF_EE_CONFINEMENT.md`, `analysis/ffz/ffz_ee_confinement.py`
+- Controlled hadronic \(a_1\): `docs/rounds/FFFF_HADRONIC_A1.md`, `analysis/ffz/ffz_hadronic_a1.py`
+- Curvature matching: `docs/rounds/FFFF_CURVATURE_MATCH.md`, `analysis/ffz/ffz_curvature_match.py`
+- Spectral total \(1/G\): `docs/rounds/FFFF_SPECTRAL_GIND.md`, `analysis/ffz/ffz_spectral_gind.py`
+- Ledger ↔ confinement: `docs/rounds/FFFF_LEDGER_CONFINEMENT.md`, `analysis/ffz/ffz_ledger_confinement.py`
 - Boundary picture: `docs/BOUNDARY_PICTURE.md`
-- Casimir vs Le Sage: `docs/FFFF_CASIMIR_LESAGE.md`, `ffz_casimir_lesage.py`
-- UV decompose / flip: `docs/FFFF_UV_DECOMPOSE.md`, `ffz_uv_decompose.py`
-- GUT spectra: `docs/FFFF_GUT_SPECTRUM.md`, `ffz_gut_spectrum.py`
-- UV full-mass survey: `docs/FFFF_UV_HIGGSING.md`, `ffz_uv_higgsing.py`
-- Planck stress: `docs/FFFF_PLANCK_STRESS.md`, `ffz_planck_stress.py`
-- UV consistency: `docs/FFFF_UV_CONSISTENCY.md`, `ffz_uv_consistency.py`
-- Minimal spectrum: `docs/FFFF_MINIMAL_SPECTRUM.md`, `ffz_minimal_spectrum.py`
-- Positivity region: `docs/FFFF_POSITIVITY_REGION.md`, `ffz_positivity_region.py`
-- GAP sectors: `docs/FFFF_GAP_SECTORS.md`, `ffz_gap_sectors.py`
-- SEC collapse: `docs/FFFF_SEC_COLLAPSE.md`, `ffz_sec_collapse.py`
-- Deconfinement \(G_{\mathrm{ind}}\): `docs/FFFF_DECONF_GIND.md`, `ffz_deconf_gind.py`
-- Bounce criterion: `docs/FFFF_BOUNCE_CRITERION.md`, `ffz_bounce_criterion.py`
-- Surface/TD audit: `docs/FFFF_SURFACE_AUDIT.md`, `ffz_surface_audit.py`
-- Edge modes (WZ): `docs/FFFF_EDGE_MODES.md`, `ffz_edge_modes.py`
-- Phase-lock BC: `docs/FFFF_PHASE_LOCK.md`, `ffz_phase_lock.py`
+- Casimir vs Le Sage: `docs/rounds/FFFF_CASIMIR_LESAGE.md`, `analysis/ffz/ffz_casimir_lesage.py`
+- UV decompose / flip: `docs/rounds/FFFF_UV_DECOMPOSE.md`, `analysis/ffz/ffz_uv_decompose.py`
+- GUT spectra: `docs/rounds/FFFF_GUT_SPECTRUM.md`, `analysis/ffz/ffz_gut_spectrum.py`
+- UV full-mass survey: `docs/rounds/FFFF_UV_HIGGSING.md`, `analysis/ffz/ffz_uv_higgsing.py`
+- Planck stress: `docs/rounds/FFFF_PLANCK_STRESS.md`, `analysis/ffz/ffz_planck_stress.py`
+- UV consistency: `docs/rounds/FFFF_UV_CONSISTENCY.md`, `analysis/ffz/ffz_uv_consistency.py`
+- Minimal spectrum: `docs/rounds/FFFF_MINIMAL_SPECTRUM.md`, `analysis/ffz/ffz_minimal_spectrum.py`
+- Positivity region: `docs/rounds/FFFF_POSITIVITY_REGION.md`, `analysis/ffz/ffz_positivity_region.py`
+- GAP sectors: `docs/rounds/FFFF_GAP_SECTORS.md`, `analysis/ffz/ffz_gap_sectors.py`
+- SEC collapse: `docs/rounds/FFFF_SEC_COLLAPSE.md`, `analysis/ffz/ffz_sec_collapse.py`
+- Deconfinement \(G_{\mathrm{ind}}\): `docs/rounds/FFFF_DECONF_GIND.md`, `analysis/ffz/ffz_deconf_gind.py`
+- Bounce criterion: `docs/rounds/FFFF_BOUNCE_CRITERION.md`, `analysis/ffz/ffz_bounce_criterion.py`
+- Surface/TD audit: `docs/rounds/FFFF_SURFACE_AUDIT.md`, `analysis/ffz/ffz_surface_audit.py`
+- Edge modes (WZ): `docs/rounds/FFFF_EDGE_MODES.md`, `analysis/ffz/ffz_edge_modes.py`
+- Phase-lock BC: `docs/rounds/FFFF_PHASE_LOCK.md`, `analysis/ffz/ffz_phase_lock.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`

@@ -1,0 +1,29 @@
+{
+  "audit_date": "2026-10-30",
+  "sources": [
+    {
+      "authors": "Batz, Erlich, Mrini",
+      "title": "Background-Independent Composite Gravity",
+      "doi": "10.1088/1361-6382/abefbd",
+      "accessed_version": "arXiv:2011.06541v1",
+      "url": "https://arxiv.org/pdf/2011.06541",
+      "html": "https://arxiv.org/html/2011.06541v1",
+      "record": "https://arxiv.org/abs/2011.06541",
+      "read_targets": ["2.2-2.8: clocks, partition function and free-field source", "2.20-2.32: adiabatic terms and tadpole subtractions", "3.1-3.12: normal ordering, composite expansion and bubble kernel", "4.1-4.4: higher variations and contact convention"],
+      "access_limit": "Publisher DOI and PDF endpoint were blocked or unavailable. Final published wording and equations not compared. Primary arXiv record lists v1 only; no v2 content was available.",
+      "scope": "Version-specific convention audit; no full finite-momentum PV source or measure equivalence inferred."
+    },
+    {
+      "authors": "Hollands, Wald",
+      "title": "Local Wick Polynomials and Time Ordered Products of Quantum Fields in Curved Spacetime",
+      "journal": "Communications in Mathematical Physics 223 (2001), 289-326",
+      "doi": "10.1007/s002200100540",
+      "url": "https://arxiv.org/pdf/gr-qc/0103074",
+      "accessed_version": "arXiv:gr-qc/0103074v2",
+      "publisher_metadata": "https://link.springer.com/article/10.1007/s002200100540",
+      "read_targets": ["Theorem 5.1 and following Wick-square remark", "Theorem 5.2", "equation 81: finite local curvature terms"],
+      "scope": "Local-covariant renormalization assumptions are not assumed proven for the signed Euclidean PV or composite metric path integral."
+    }
+  ],
+  "policy": "Only primary author manuscripts and publisher metadata support the report; secondary search snippets were not used for technical conclusions. Source synopses are limited; independent algebra is derived explicitly."
+}

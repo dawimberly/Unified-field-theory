@@ -1,0 +1,70 @@
+{
+  "L": 30,
+  "scope": "Exact rational local Rouche certificate for A/C; conjugation gives the lower partner. Not a global count.",
+  "center": [
+    "-407974455768306098549850983817917/1000000000000000000000000000000",
+    "6134245718766331349676305755133/500000000000000000000000000000"
+  ],
+  "center_float": [
+    -407.9744557683061,
+    12.268491437532663
+  ],
+  "radius": "1/1000",
+  "rounding_grid_denominator": "1000000000000000000000000000000",
+  "center_value_enclosure": [
+    [
+      -1.536614633976e-18,
+      1.536601536464e-18
+    ],
+    [
+      -7.019944276908e-18,
+      7.019929571561e-18
+    ]
+  ],
+  "center_derivative_enclosure": [
+    [
+      -58.4765297178397,
+      -58.4765297178397
+    ],
+    [
+      -45.713039218605836,
+      -45.713039218605836
+    ]
+  ],
+  "scaled_second_derivative_bound": 592.5931256537951,
+  "rouche_error_upper": 0.0002962965628269061,
+  "linear_term_lower": 0.058476529717839704,
+  "strict_margin": 0.0581802331550128,
+  "exact_inequality": true,
+  "zeros_inside": 1,
+  "midpoint_newton_trace": [
+    {
+      "center": [
+        -407.9744557682577,
+        12.26849143868278
+      ],
+      "scaled_residual_upper": 1.1921249135790687e-07
+    },
+    {
+      "center": [
+        -407.9744557683061,
+        12.268491437532663
+      ],
+      "scaled_residual_upper": 8.803630764618e-18
+    },
+    {
+      "center": [
+        -407.9744557683061,
+        12.268491437532663
+      ],
+      "scaled_residual_upper": 8.539058525405e-18
+    },
+    {
+      "center": [
+        -407.9744557683061,
+        12.268491437532663
+      ],
+      "scaled_residual_upper": 8.556676359986e-18
+    }
+  ]
+}
