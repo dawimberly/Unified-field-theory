@@ -107,3 +107,6 @@ print('ffz_surface_audit PASS',flush=True)
 edge_modes_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_edge_modes.py'
 subprocess.run([sys.executable,str(edge_modes_test)],check=True)
 print('ffz_edge_modes PASS',flush=True)
+phase_lock_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_phase_lock.py'
+subprocess.run([sys.executable,str(phase_lock_test)],check=True)
+print('ffz_phase_lock PASS',flush=True)
