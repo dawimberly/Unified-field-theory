@@ -16,7 +16,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★ | **New idea:** Higgs-like condensate / phase locking (\(\xi v^2\) \(R\) contact) | **done (negative)** | Soft/F-term vev **assumed**; tree \(\delta=K v^2/(6 h^2 z)\); gap-absorbing \(v^2/z=3.70\times10^{-4}\,h^2\) **not predicted**; free parameter / tuning | [#16](https://github.com/dawimberly/Unified-field-theory/pull/16) |
 | ★★ | **New idea:** Dynamical condensate (BCS/NJL / soft gap equation) | **done (negative)** | SUSY forbids \(v\neq0\); soft/NJL needs free \(m_s^2/z\) or \(\Lambda/\sqrt{z}\); ratio pred/target \(=0\) or \(O(10^{-2}\)–\(10^6)\) — not 1 without tuning | [#17](https://github.com/dawimberly/Unified-field-theory/pull/17) |
 | ★★★ | **New idea:** Self-consistent loop \(v\leftrightarrow G_{\mathrm{ind}}\leftrightarrow m_s\) (gravity mediation) | **done (negative)** | \(F\sim z\): nontrivial fixed point but \(\delta_R/\mathrm{GAP}\sim87\) (\(h=1\)); \(F=\|y\|v^2\): only \(v=0\); free \(\varphi\) restores tuning | [#19](https://github.com/dawimberly/Unified-field-theory/pull/19) |
-| ★★★★ | **New idea:** Surface / boundary / contact (Sakharov modes at interaction surfaces) | **done (negative)** | Derived GHY/\(\Box R\)/\(a_1(\xi=1/6)\)/vertex = 0; ratio pred/GAP \(=0\); absorbing contact is free scheme coeff; EE consistent, does not fix GAP | *(this branch → stacked PR)* |
+| ★★★★ | **New idea:** Surface / boundary / contact (Sakharov modes at interaction surfaces) | **done (negative)** | Derived GHY/\(\Box R\)/\(a_1(\xi=1/6)\)/vertex = 0; ratio pred/GAP \(=0\); absorbing contact is free scheme coeff; EE consistent, does not fix GAP | [#20](https://github.com/dawimberly/Unified-field-theory/pull/20) |
 
 ## How to read status
 
