@@ -18,7 +18,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★ | **New idea:** Self-consistent loop \(v\leftrightarrow G_{\mathrm{ind}}\leftrightarrow m_s\) (gravity mediation) | **done (negative)** | \(F\sim z\): nontrivial fixed point but \(\delta_R/\mathrm{GAP}\sim87\) (\(h=1\)); \(F=\|y\|v^2\): only \(v=0\); free \(\varphi\) restores tuning | [#19](https://github.com/dawimberly/Unified-field-theory/pull/19) |
 | ★★★★ | **New idea:** Surface / boundary / contact (Sakharov modes at interaction surfaces) | **done (negative)** | Derived GHY/\(\Box R\)/\(a_1(\xi=1/6)\)/vertex = 0; ratio pred/GAP \(=0\); absorbing contact is free scheme coeff; EE consistent, does not fix GAP | [#20](https://github.com/dawimberly/Unified-field-theory/pull/20) |
 | ★★★★★ | **New idea:** Does \(\xi\) run away from \(1/6\)? | **done (negative)** | SUSY+JO: \(\beta_\xi=\Gamma(\xi-1/6)\), \(b=0\) ⇒ \(\xi_*=1/6\) stable; \(\delta\xi=0\), \(\delta c=0\), ratio \(=0\); \(\ln2/72\) not from \(\xi\) | [#21](https://github.com/dawimberly/Unified-field-theory/pull/21) |
-| ★★★★★★ | **New idea:** Gauge / Kabat / Donnelly–Wall contact (+ \(N=1\) vector) | **done (negative)** | Kabat \(c=1\) HK-derived; SUSY does not cancel (net \(a_1=-1/3\)); \(\Lambda^2\) channel ≠ \(h^2z/K\) ⇒ ratio \(=0\); \(\ln2/72\) not reproduced | *(this branch → stacked PR)* |
+| ★★★★★★ | **New idea:** Gauge / Kabat / Donnelly–Wall contact (+ \(N=1\) vector) | **done (negative)** | Kabat \(c=1\) HK-derived; SUSY does not cancel (net \(a_1=-1/3\)); \(\Lambda^2\) channel ≠ \(h^2z/K\) ⇒ ratio \(=0\); \(\ln2/72\) not reproduced | [#22](https://github.com/dawimberly/Unified-field-theory/pull/22) |
 
 ## How to read status
 
