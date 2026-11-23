@@ -33,6 +33,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★ | **Overnight E:** \(\Lambda_{\mathrm{ind}}\) / pressure / \(\rho+3p\) | **done (negative for DE)** | Vacuum \(\rho+3p<0\) repulsive (GR); SM \(n_b-n_f=-62\) wrong-sign \(\Lambda\); no untuned DE | [#34](https://github.com/dawimberly/Unified-field-theory/pull/34) |
 | ★★★★★★★★★★★★★★★★★★★ | **Overnight F:** String/KK tower + overnight summary | **done (arithmetic only)** | \(\ge8\) Proca flips UV \(a_1\) arithmetically; spectrum assumed; species bound ≠ sign guarantee | [#35](https://github.com/dawimberly/Unified-field-theory/pull/35) |
 | ★★★★★★★★★★★★★★★★★★★★ | **Overnight G:** Controlled hadronic \(a_1\) | **done (positive band)** | Confinement removes 8 gluon Kabats from IR sum; \(a_1\\in[1/6,7/6]\) all \(+\); matching incomplete | [#36](https://github.com/dawimberly/Unified-field-theory/pull/36) |
+| ★★★★★★★★★★★★★★★★★★★★★ | **Overnight H:** EE confined vs deconfined | **done (supports Kabat absence)** | EE \(O(N^2)\to O(1)\) supports gluon edge-mode removal; not a matching proof | [#37](https://github.com/dawimberly/Unified-field-theory/pull/37) |
 
 ## How to read status
 
@@ -77,5 +78,6 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Lambda / pressure: `docs/FFFF_LAMBDA_PRESSURE.md`, `ffz_lambda_pressure.py`
 - String/KK tower: `docs/FFFF_STRING_KK_TOWER.md`, `ffz_string_kk_tower.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
+- EE confinement: `docs/FFFF_EE_CONFINEMENT.md`, `ffz_ee_confinement.py`
 - Controlled hadronic \(a_1\): `docs/FFFF_HADRONIC_A1.md`, `ffz_hadronic_a1.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
