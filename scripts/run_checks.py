@@ -92,3 +92,6 @@ print('ffz_positivity_region PASS',flush=True)
 gap_sectors_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_gap_sectors.py'
 subprocess.run([sys.executable,str(gap_sectors_test)],check=True)
 print('ffz_gap_sectors PASS',flush=True)
+sec_collapse_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_sec_collapse.py'
+subprocess.run([sys.executable,str(sec_collapse_test)],check=True)
+print('ffz_sec_collapse PASS',flush=True)
