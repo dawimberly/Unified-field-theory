@@ -22,6 +22,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★ | **New idea:** Scheme-independent test of the Newton gap | **done (negative as “missing term”)** | SI: higher poles\(=0\), \(c_Y=1/24\); \(D=c_0-c_Y\) **not** SI — absorbed by vacuum EH \(\kappa=-\mathrm{GAP}\); no missing matter op forced | [#23](https://github.com/dawimberly/Unified-field-theory/pull/23) |
 | ★★★★★★★★ | **New idea:** Penrose–Diósi collapse with induced \(G\) (\(\kappa=0\)) | **done (exploratory)** | \(\tau(C)/\tau(1/24)=C/(1/24)\approx1.232\); induced UV does **not** supply viable \(R_0\) (Gran Sasso); BEC/flux gravity≪coherence; nanosphere setup-dependent | [#24](https://github.com/dawimberly/Unified-field-theory/pull/24) |
 | ★★★★★★★★★ | **New idea:** Distortion phase as DP \(R_0\) source | **done (negative for \(R_0\))** | GL locked/distorted/collapsed OK; no tuning-free \(R_0\) from \(C_{\mathrm{ledger}}\) (ℓ_P/Compton too small; healing ≫ bound); \(a_0\approx\) bound is coincidence; reversible window is distinct prediction | [#25](https://github.com/dawimberly/Unified-field-theory/pull/25) |
+| ★★★★★★★★★★ | **New idea:** Particle plasticity (elastic distortion / plastic collapse) | **done (exploratory; negative for \(R_0\))** | \(F_c/V_0=O(1)\) across potentials; RCSJ hysteresis + rate-dependent (HB/KFD) yield distinct from DP; no untuned \(R_0\); gravity tiny for BEC/flux | [#26](https://github.com/dawimberly/Unified-field-theory/pull/26) |
 
 ## How to read status
 
@@ -55,4 +56,5 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Scheme-invariant test: `FFFF_SCHEME_INVARIANT.md`, `ffz_scheme_invariant.py`
 - Induced collapse (DP): `docs/FFFF_INDUCED_COLLAPSE.md`, `ffz_induced_collapse.py`
 - Distortion phase: `docs/FFFF_DISTORTION_PHASE.md`, `ffz_distortion_phase.py`
+- Particle plasticity: `docs/FFFF_PARTICLE_PLASTICITY.md`, `ffz_particle_plasticity.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`

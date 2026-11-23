@@ -14,3 +14,6 @@ print('ffz_induced_collapse PASS',flush=True)
 distortion_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_distortion_phase.py'
 subprocess.run([sys.executable,str(distortion_test)],check=True)
 print('ffz_distortion_phase PASS',flush=True)
+plasticity_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_particle_plasticity.py'
+subprocess.run([sys.executable,str(plasticity_test)],check=True)
+print('ffz_particle_plasticity PASS',flush=True)
