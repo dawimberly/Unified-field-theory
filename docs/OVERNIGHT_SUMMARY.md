@@ -1,6 +1,6 @@
 # Overnight autonomous program — plain summary for Dan
 
-Stack started from #29 (two-phase). Rounds 1–7 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives. **Fields-only:** “particles” read as locked localized field states.
+Stack started from #29 (two-phase). Rounds 1–8 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives. **Fields-only:** “particles” read as locked localized field states.
 
 ## Round 1 (A–F)
 
@@ -63,17 +63,27 @@ Stack started from #29 (two-phase). Rounds 1–7 below. Standing rules held: no 
 | **AD** \(G_{\mathrm{ind}}\) across deconfinement | #57 | Local \(a_1\) flips −; **Planck \(G\) unchanged** | \(\Delta G/G\sim10^{-39}\); \((\Lambda_{\mathrm{QCD}}/M_{\mathrm{Pl}})^2\sim6\times10^{-40}\) | \(\Delta a_1\) from #36/#40 **derived**; matching to \(G\) **assumed** |
 | **AE** Bounce vs LQC/AS | #58 | **Honest negative:** no sub-Planck bounce from AC/AD; no derived GRB/FRB | LQC \(\rho_c\sim0.41\,\rho_{\mathrm{Pl}}\); \(10\,M_\odot\) \(R_s\approx29.5\) km; \(\rho_{\mathrm{deconf}}/\rho_{\mathrm{Pl}}\sim10^{-79}\) | Kinematics **derived**; LQC \(\rho_c\) lit.; AS \(G(k)\) lit. |
 
+## Round 8 (AG–AI) — GAP via original-field boundaries?
+
+| Rung | PR | One-line result | Key numbers | Derived vs assumed |
+| --- | --- | --- | --- | --- |
+| **AG** Surface/TD audit of 3-loop pole | #60 | □R / GHY / Euler / \(a_2\)-TD all \(\delta C=0\); not dropped SI pieces | \(\kappa=-\mathrm{GAP}=-0.00965052\) scheme only | Stokes/Lovelock **derived**; κ **scheme** (#23) |
+| **AH** Edge modes of original FFZ fields | #61 | No DW/Kabat on WZ scalar/Weyl; \(\delta C=0\) | \(\ln2/72=0.009627\) within \(1\sigma\) of GAP | Contacts **derived** absent; \(\ln2/72\) **coincidence** |
+| **AI** Sharp phase-lock BC vs smooth | #62 | Derived \(\delta C=0\) all Robin \(S\); \(\alpha=\mathrm{GAP}\) is tuning | \(\alpha_{\star}=+0.009651\equiv-\kappa\) | Channel split **derived**; contact ansatz **assumed** |
+
 ## Revised most promising lead
 
-**Still two-track; Round 7 closes the “repulsive gravity in collapse” branch:**
+**Still two-track; Round 8 closes the “GAP = original-field boundary/edge” branch:**
 
 1. **IR (robust):** hadronic \(a_1=1/3\pm0.29>0\) after confinement removes free-gluon Kabats — local field-mode EFT statement (#40). Deconfinement restores Kabats and flips local \(a_1\) (#57), but the shift vs \(M_{\mathrm{Pl}}^2\) is \(\sim10^{-39}\) — not a macroscopic \(G\) flip.
 2. **UV (constrained, not unique):** \(S>0\) requires \(N_V\ge15\) massive vector field modes at fiducial scales (#52). SO(10)/E6 are **allowed** examples, **not selected**. Positivity leaves a wide region (#53) — not a derivation of a unique GUT.
 
-**Ruled out (Round 7):** Dan’s “forces as great as a BH interior → negative gravity” as an FFZ/SEC mechanism at nuclear–QCD density. Ordinary dense matter keeps \(\rho+3p>0\) (#56). Bag vacuum is the only SEC-violating candidate and is QCD-scale, not Planck. Neither AC nor AD yields a bounce below \(\rho_{\mathrm{Pl}}\) (#58); LQC-style bounce remains near-Planck.
+**Ruled out (Round 7):** Dan’s “BH-interior → negative gravity” at nuclear–QCD density (#56–#58).
 
-**Still fails:** FFZ GAP \(+0.009651\) — massive-vector / hadronic \(a_1\) give \(\delta C=0\) (#54). \(\Lambda_{\mathrm{UV}}\sim M_{\mathrm{Pl}}\) for Planck magnitude remains assumed.
+**Ruled out (Round 8):** Explaining GAP \(+0.009651\) by total derivatives, GHY/Euler, or Donnelly–Wall edge modes of the *original* FFZ fields, or by a sharp phase-lock BC without a free coefficient. All derived \(\delta C=0\). Matching still requires scheme \(\kappa=-\mathrm{GAP}\) (#23) or tuned \(\alpha=\mathrm{GAP}\) (#62). \(\ln2/72\approx\mathrm{GAP}\) remains a flagged coincidence.
+
+**Still fails:** FFZ GAP \(+0.009651\) as a scheme-independent matter prediction. External sectors (#42/#54) and internal boundary/edge (AG–AI) all give \(\delta C=0\). \(\Lambda_{\mathrm{UV}}\sim M_{\mathrm{Pl}}\) for Planck magnitude remains assumed.
 
 ## Stack map
 
-`#51 → #52(Y) → #53(Z) → #54(AA) → #55(AB) → #56(AC) → #57(AD) → #58(AE) → #59(AF)`
+`#51 → … → #59(AF) → #60(AG) → #61(AH) → #62(AI) → #63(AJ)`
