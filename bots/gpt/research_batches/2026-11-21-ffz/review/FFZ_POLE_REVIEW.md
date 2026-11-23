@@ -25,6 +25,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_dred_yukawa_ledger.py` — DRED + global Yukawa weight + BPHZ/R; gap stands (`FFFF_DRED_YUKAWA.md`)
 - `ffz_heat_kernel_a1.py` — Seeley–DeWitt / HK lower-loop inputs for \(1/24\) and CT; 3-loop HK not done (`FFFF_HEAT_KERNEL_A1.md`)
 - `ffz_superspace_ward.py` — SUSY non-renormalization + partner Ward audit; gap stands (`FFFF_SUPERSPACE_WARD.md`)
+- `ffz_condensate_r.py` — condensate/\(\xi v^2\) finite \(R\) contact; \(v\) free / not predicted (`FFFF_CONDENSATE_R.md`)
 - Ladder: `docs/PROVEN_METHODS_LADDER.md`
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
@@ -47,6 +48,7 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | DRED + global Yukawa + BPHZ | Higher poles cancel only after R (soft-soft remainder \(-16,64/3\)); simple gap \(\sim+0.01\) stands (`FFFF_DRED_YUKAWA.md`) |
 | Heat-kernel / Seeley–DeWitt \(a_1\) | Lower-loop inputs for \(c_Y=1/24\) and CT verified; full 3-loop HK infeasible; gap unchanged (`FFFF_HEAT_KERNEL_A1.md`) |
 | Superspace / supergraph Ward | SUSY forces \(c_Y\) not baseline; inventory/partner Wards PASS; gap stands (`FFFF_SUPERSPACE_WARD.md`) |
+| Condensate \(\xi v^2\) contact (new idea) | Soft vev assumed; gap-absorbing \(v^2/z=3.70\times10^{-4}h^2\) not predicted; tuning (`FFFF_CONDENSATE_R.md`) |
 | Projected double vs Y at \(L=0\) | Cancels after overlap fix |
 | Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple gap \(\approx+0.0097\) stands (`FFFF_SIMPLE_GAP_AUDIT.md`) |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
