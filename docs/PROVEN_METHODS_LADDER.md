@@ -15,6 +15,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | 6 | Background-field method with \(R^*\) operation | **partial** | R* IR ≡ soft forest IE; soft-linear not \(1/\varepsilon\); no missed IR CT; total \(+0.05132\pm0.0024\); **gap \(+0.00965\pm0.0024\)**; pieces unchanged | [#18](https://github.com/dawimberly/Unified-field-theory/pull/18) |
 | ★ | **New idea:** Higgs-like condensate / phase locking (\(\xi v^2\) \(R\) contact) | **done (negative)** | Soft/F-term vev **assumed**; tree \(\delta=K v^2/(6 h^2 z)\); gap-absorbing \(v^2/z=3.70\times10^{-4}\,h^2\) **not predicted**; free parameter / tuning | [#16](https://github.com/dawimberly/Unified-field-theory/pull/16) |
 | ★★ | **New idea:** Dynamical condensate (BCS/NJL / soft gap equation) | **done (negative)** | SUSY forbids \(v\neq0\); soft/NJL needs free \(m_s^2/z\) or \(\Lambda/\sqrt{z}\); ratio pred/target \(=0\) or \(O(10^{-2}\)–\(10^6)\) — not 1 without tuning | [#17](https://github.com/dawimberly/Unified-field-theory/pull/17) |
+| ★★★ | **New idea:** Self-consistent loop \(v\leftrightarrow G_{\mathrm{ind}}\leftrightarrow m_s\) (gravity mediation) | **done (negative)** | \(F\sim z\): nontrivial fixed point but \(\delta_R/\mathrm{GAP}\sim87\) (\(h=1\)); \(F=\|y\|v^2\): only \(v=0\); free \(\varphi\) restores tuning | *(this branch → stacked PR)* |
 
 ## How to read status
 
@@ -41,4 +42,5 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - BG-field / R*: `FFFF_BGFIELD_RSTAR.md`, `ffz_bgfield_rstar.py`
 - Condensate / new idea: `FFFF_CONDENSATE_R.md`, `ffz_condensate_r.py`
 - Dynamical condensate: `FFFF_DYNAMICAL_CONDENSATE.md`, `ffz_dynamical_condensate.py`
+- Self-consistent loop: `FFFF_SELF_CONSISTENT_LOOP.md`, `ffz_self_consistent_loop.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
