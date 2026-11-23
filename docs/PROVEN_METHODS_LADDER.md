@@ -14,6 +14,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | 5 | Superspace / supergraph method | **partial** | SUSY forces \(c_Y=1/24\), **not** baseline\(=1/24\); Ward inventory PASS; no missing partner; gap **\(+0.00975\)** stands | [#15](https://github.com/dawimberly/Unified-field-theory/pull/15) |
 | 6 | Background-field method with \(R^*\) operation | **next** | — | — |
 | ★ | **New idea:** Higgs-like condensate / phase locking (\(\xi v^2\) \(R\) contact) | **done (negative)** | Soft/F-term vev **assumed**; tree \(\delta=K v^2/(6 h^2 z)\); gap-absorbing \(v^2/z=3.70\times10^{-4}\,h^2\) **not predicted**; free parameter / tuning | [#16](https://github.com/dawimberly/Unified-field-theory/pull/16) |
+| ★★ | **New idea:** Dynamical condensate (BCS/NJL / soft gap equation) | **done (negative)** | SUSY forbids \(v\neq0\); soft/NJL needs free \(m_s^2/z\) or \(\Lambda/\sqrt{z}\); ratio pred/target \(=0\) or \(O(10^{-2}\)–\(10^6)\) — not 1 without tuning | *(this branch → stacked PR)* |
 
 ## How to read status
 
@@ -30,7 +31,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 \text{GAP}\approx +0.0097\pm 0.002.
 \]
 
-No established method above has closed it. The condensate idea parametrizes the gap but does not predict \(v\). Next established attempt: background-field \(R^*\).
+No established method above has closed it. Condensate ideas parametrize the gap but do not predict \(v\) (even when “dynamical”). Next established attempt: background-field \(R^*\).
 
 ## Pointers
 
@@ -38,4 +39,5 @@ No established method above has closed it. The condensate idea parametrizes the 
 - Heat-kernel rung: `FFFF_HEAT_KERNEL_A1.md`, `ffz_heat_kernel_a1.py`
 - Superspace / Ward rung: `FFFF_SUPERSPACE_WARD.md`, `ffz_superspace_ward.py`
 - Condensate / new idea: `FFFF_CONDENSATE_R.md`, `ffz_condensate_r.py`
+- Dynamical condensate: `FFFF_DYNAMICAL_CONDENSATE.md`, `ffz_dynamical_condensate.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
