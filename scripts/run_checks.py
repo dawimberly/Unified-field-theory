@@ -32,3 +32,6 @@ print('ffz_shared_boundary PASS',flush=True)
 ir_roster_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ir_roster.py'
 subprocess.run([sys.executable,str(ir_roster_test)],check=True)
 print('ffz_ir_roster PASS',flush=True)
+trace_anomaly_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_trace_anomaly.py'
+subprocess.run([sys.executable,str(trace_anomaly_test)],check=True)
+print('ffz_trace_anomaly PASS',flush=True)
