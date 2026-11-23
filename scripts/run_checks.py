@@ -29,3 +29,6 @@ print('ffz_two_phase PASS',flush=True)
 shared_boundary_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_shared_boundary.py'
 subprocess.run([sys.executable,str(shared_boundary_test)],check=True)
 print('ffz_shared_boundary PASS',flush=True)
+ir_roster_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ir_roster.py'
+subprocess.run([sys.executable,str(ir_roster_test)],check=True)
+print('ffz_ir_roster PASS',flush=True)

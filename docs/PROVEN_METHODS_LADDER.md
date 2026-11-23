@@ -27,6 +27,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★ | **New idea:** Three-phase E/B/G + Majorana \(a_1\) reconciliation | **done (negative)** | Sakharov \(N=1\) multiplet \(-7/12\) (#27 right for \(1/G\); #22 \(-1/3\) is EE); no derived 120° wave; trace-only photon off clashes with Cassini; Z3 needs assumed shared-Kabat to flip \(a_1\) | [#28](https://github.com/dawimberly/Unified-field-theory/pull/28) |
 | ★★★★★★★★★★★★★ | **New idea:** Two-phase mass/gravity (Cassini-safe) | **done (negative)** | Dirac L–R/Compton real; mass↔gravity lock not derived; UV \(a_1=-43/12\), IR Proca \(-1/12\); MICROSCOPE \(\eta\lesssim10^{-15}\); better than #28 on photons | [#29](https://github.com/dawimberly/Unified-field-theory/pull/29) |
 | ★★★★★★★★★★★★★★ | **Overnight A:** Derive shared boundary / Kabat edge counting | **done (negative)** | DW: contacts per massless gauge field (UV 12, IR 9), not shared; #28 \(+53/12\) not derivable; IR \(a_1=-1/12\) no flip | [#30](https://github.com/dawimberly/Unified-field-theory/pull/30) |
+| ★★★★★★★★★★★★★★★ | **Overnight B:** IR roster / Appelquist–Carazzone | **done (mixed; hadronic + assumed)** | UV/EW/AC wrong-sign; hadronic proxy \(a_1=+2/3\) **assumed**; QED \(-1/6\); mass-on not a derivation | *(stacked)* |
 
 ## How to read status
 
@@ -65,4 +66,5 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Three-phase / Majorana reconcile: `docs/FFFF_THREE_PHASE.md`, `ffz_three_phase.py`
 - Two-phase mass/gravity: `docs/FFFF_TWO_PHASE_MASS_GRAVITY.md`, `ffz_two_phase.py`
 - Shared boundary / Kabat: `docs/FFFF_SHARED_BOUNDARY.md`, `ffz_shared_boundary.py`
+- IR roster / AC: `docs/FFFF_IR_ROSTER.md`, `ffz_ir_roster.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
