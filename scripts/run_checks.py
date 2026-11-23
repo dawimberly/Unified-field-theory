@@ -68,3 +68,6 @@ print('ffz_ledger_confinement PASS',flush=True)
 casimir_lesage_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_casimir_lesage.py'
 subprocess.run([sys.executable,str(casimir_lesage_test)],check=True)
 print('ffz_casimir_lesage PASS',flush=True)
+uv_decompose_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_uv_decompose.py'
+subprocess.run([sys.executable,str(uv_decompose_test)],check=True)
+print('ffz_uv_decompose PASS',flush=True)
