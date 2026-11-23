@@ -12,7 +12,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | 3 | DRED + global Yukawa weight + BPHZ/R | **done** | Higher poles cancel only after R (soft-soft \(-16,64/3\)); **gap \(+0.00975\pm0.0024\)** stands | [#13](https://github.com/dawimberly/Unified-field-theory/pull/13) |
 | 4 | Heat-kernel / Seeley–DeWitt \(a_1\) route to induced \(R\) (BG effective action) | **partial** | Full 3-loop interacting HK **infeasible** here; lower-loop HK inputs that fix \(c_Y=1/24\) and CT **verified**; gap **\(+0.00975\)** unchanged | [#14](https://github.com/dawimberly/Unified-field-theory/pull/14) |
 | 5 | Superspace / supergraph method | **partial** | SUSY forces \(c_Y=1/24\), **not** baseline\(=1/24\); Ward inventory PASS; no missing partner; gap **\(+0.00975\)** stands | [#15](https://github.com/dawimberly/Unified-field-theory/pull/15) |
-| 6 | Background-field method with \(R^*\) operation | **next** | — | — |
+| 6 | Background-field method with \(R^*\) operation | **partial** | R* IR ≡ soft forest IE; soft-linear not \(1/\varepsilon\); no missed IR CT; total \(+0.05132\pm0.0024\); **gap \(+0.00965\pm0.0024\)**; pieces unchanged | *(this branch → stacked PR)* |
 | ★ | **New idea:** Higgs-like condensate / phase locking (\(\xi v^2\) \(R\) contact) | **done (negative)** | Soft/F-term vev **assumed**; tree \(\delta=K v^2/(6 h^2 z)\); gap-absorbing \(v^2/z=3.70\times10^{-4}\,h^2\) **not predicted**; free parameter / tuning | [#16](https://github.com/dawimberly/Unified-field-theory/pull/16) |
 | ★★ | **New idea:** Dynamical condensate (BCS/NJL / soft gap equation) | **done (negative)** | SUSY forbids \(v\neq0\); soft/NJL needs free \(m_s^2/z\) or \(\Lambda/\sqrt{z}\); ratio pred/target \(=0\) or \(O(10^{-2}\)–\(10^6)\) — not 1 without tuning | [#17](https://github.com/dawimberly/Unified-field-theory/pull/17) |
 
@@ -31,13 +31,14 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 \text{GAP}\approx +0.0097\pm 0.002.
 \]
 
-No established method above has closed it. Condensate ideas parametrize the gap but do not predict \(v\) (even when “dynamical”). Next established attempt: background-field \(R^*\).
+**Established ladder (1–6) exhausted without closing the gap.** Condensate new-ideas also negative. A genuinely new approach is needed.
 
 ## Pointers
 
 - Ledger / audits: `bots/gpt/research_batches/2026-11-21-ffz/review/`
 - Heat-kernel rung: `FFFF_HEAT_KERNEL_A1.md`, `ffz_heat_kernel_a1.py`
 - Superspace / Ward rung: `FFFF_SUPERSPACE_WARD.md`, `ffz_superspace_ward.py`
+- BG-field / R*: `FFFF_BGFIELD_RSTAR.md`, `ffz_bgfield_rstar.py`
 - Condensate / new idea: `FFFF_CONDENSATE_R.md`, `ffz_condensate_r.py`
 - Dynamical condensate: `FFFF_DYNAMICAL_CONDENSATE.md`, `ffz_dynamical_condensate.py`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
