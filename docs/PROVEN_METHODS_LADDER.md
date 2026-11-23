@@ -53,7 +53,8 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Z:** Positivity selection region | **done** | \(S>0\) loose: \(N_V\in[15,69]\) fiducial; \(\Lambda\sim M_{\mathrm{Pl}}\) assumed | [#53](https://github.com/dawimberly/Unified-field-theory/pull/53) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AA:** GAP vs massive-vector / hadronic \(a_1\) | **done (negative)** | \(\delta C=0\) all sectors; GAP \(+0.009651\) stands | [#54](https://github.com/dawimberly/Unified-field-theory/pull/54) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AB:** Round-6 summary | **done** | Lead: IR +; UV \(N_V\ge15\) allowed region; GAP untouched | [#55](https://github.com/dawimberly/Unified-field-theory/pull/55) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AC:** SEC in collapse (\(\rho+3p\)) | **done** | Ordinary dense matter OK; only bag vacuum \(\rho+3p<0\) | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AC:** SEC in collapse (\(\rho+3p\)) | **done** | Ordinary dense matter OK; only bag vacuum \(\rho+3p<0\) | [#56](https://github.com/dawimberly/Unified-field-theory/pull/56) |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AD:** Induced \(G\) across deconfinement | **done (tiny)** | Local \(a_1\) flips −; \(\Delta G/G\sim10^{-39}\) vs Planck | *(stacked)* |
 
 ## How to read status
 
@@ -116,5 +117,6 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Positivity region: `docs/FFFF_POSITIVITY_REGION.md`, `ffz_positivity_region.py`
 - GAP sectors: `docs/FFFF_GAP_SECTORS.md`, `ffz_gap_sectors.py`
 - SEC collapse: `docs/FFFF_SEC_COLLAPSE.md`, `ffz_sec_collapse.py`
+- Deconfinement \(G_{\mathrm{ind}}\): `docs/FFFF_DECONF_GIND.md`, `ffz_deconf_gind.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`

@@ -95,3 +95,6 @@ print('ffz_gap_sectors PASS',flush=True)
 sec_collapse_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_sec_collapse.py'
 subprocess.run([sys.executable,str(sec_collapse_test)],check=True)
 print('ffz_sec_collapse PASS',flush=True)
+deconf_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_deconf_gind.py'
+subprocess.run([sys.executable,str(deconf_gind_test)],check=True)
+print('ffz_deconf_gind PASS',flush=True)
