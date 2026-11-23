@@ -1,6 +1,6 @@
 # Overnight autonomous program — plain summary for Dan
 
-Stack started from #29 (two-phase). Rounds 1–3 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
+Stack started from #29 (two-phase). Rounds 1–4 below. Standing rules held: no tuning; DERIVED vs ASSUMED labeled; coincidences flagged; honest negatives.
 
 ## Round 1 (A–F)
 
@@ -31,14 +31,22 @@ Stack started from #29 (two-phase). Rounds 1–3 below. Standing rules held: no 
 | **N** Confinement ↔ \(h^2z/K\) | #42 | **Ruled out** as derived GAP fix | \(\delta C=0\); GAP \(+0.009651\) stands | Channel split **derived** |
 | **O** Boundary picture note | #43 | Clean map: derived core vs Dan’s conjecture | See `docs/BOUNDARY_PICTURE.md` | Labels explicit |
 
+## Round 4 (Q–S)
+
+| Rung | PR | One-line result | Key numbers | Derived vs assumed |
+| --- | --- | --- | --- | --- |
+| **Q** Casimir vs Le Sage | #44 | Casimir-like mode removal **yes**; two-body Casimir=Newton **analogy**; Le Sage fatals avoided | κ ≲ \(10^{-15}\) m²/kg lit. | Mode removal **derived** |
+| **R** Decompose \(S\); minimal flip | #45 | UV gauge Kabats own \(\sim84\%\) of \(|S|\); all-Proca-12 flips; conformal ξ does not | \(\Delta a_1^{\mathrm{UV}}\gtrsim+4.2\); Proca \(\Delta=+14\) | Arithmetic **derived**; spectrum **assumed** |
+| **S** GUT SU(5)/SO(10) | #46 | Broken local \(a_1+\); SU(5) Planck→GUT **fails** (no Higgs) | unbroken more −; not a theorem | Gauge **derived**; Higgs/scales **assumed** |
+
 ## Revised most promising lead
 
-**IR hadronic positivity after confinement remains the strongest positive result** — now sharpened to \(a_1=1/3\pm0.29\in[1/6,3/4]\) (#40). EE (#37) still supports the qualitative lesson.
+**Still:** IR hadronic positivity (\(a_1=1/3\pm0.29\)) is the strongest *local* positive result (#40).
 
-**But Round 3 cuts the overclaim:** the **integrated** spectral \(1/G_{\mathrm{ind}}\) stays negative (#41); confinement does **not** fix the FFZ three-loop GAP (#42). So the honest lead is a **local IR EFT statement**, not “QCD explains Newton” and not “QCD explains \(C-1/24\).”
+**Round 4 upgrade of the UV story:** the integrated minus sign is **owned by UV gauge Kabats** (#45). The cleanest *arithmetic* fix is complete vector Higgsing / Proca (same lesson as GUT X/Y, #46) — **physically motivated but spectrum-assumed**, and SU(5) fails the honest Planck→GUT stress test without optimistic Higgs. Casimir-like language for confinement mode removal is fair and avoids Le Sage (#44), but does **not** prove Newton is a two-body Casimir force.
 
-Still open: true lattice/dispersive matching theorem; FFZ GAP \(+0.009651\).
+**Still fails:** integrated SM \(1/G_{\mathrm{ind}}\) without extra UV assumptions; FFZ GAP \(+0.009651\).
 
 ## Stack map
 
-`#29 → … → #39(J) → #40(L) → #41(M) → #42(N) → #43(O + Round-3 summary / P)`
+`#43 → #44(Q) → #45(R) → #46(S) → #47(T Round-4 summary)`
