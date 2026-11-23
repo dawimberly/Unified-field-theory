@@ -41,3 +41,6 @@ print('ffz_ledger_reconcile PASS',flush=True)
 lambda_pressure_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_lambda_pressure.py'
 subprocess.run([sys.executable,str(lambda_pressure_test)],check=True)
 print('ffz_lambda_pressure PASS',flush=True)
+string_kk_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_string_kk_tower.py'
+subprocess.run([sys.executable,str(string_kk_test)],check=True)
+print('ffz_string_kk_tower PASS',flush=True)
