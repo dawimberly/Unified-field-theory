@@ -65,3 +65,6 @@ print('ffz_spectral_gind PASS',flush=True)
 ledger_confinement_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ledger_confinement.py'
 subprocess.run([sys.executable,str(ledger_confinement_test)],check=True)
 print('ffz_ledger_confinement PASS',flush=True)
+casimir_lesage_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_casimir_lesage.py'
+subprocess.run([sys.executable,str(casimir_lesage_test)],check=True)
+print('ffz_casimir_lesage PASS',flush=True)
