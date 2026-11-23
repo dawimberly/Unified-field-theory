@@ -62,3 +62,6 @@ print('ffz_curvature_match PASS',flush=True)
 spectral_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_spectral_gind.py'
 subprocess.run([sys.executable,str(spectral_gind_test)],check=True)
 print('ffz_spectral_gind PASS',flush=True)
+ledger_confinement_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ledger_confinement.py'
+subprocess.run([sys.executable,str(ledger_confinement_test)],check=True)
+print('ffz_ledger_confinement PASS',flush=True)
