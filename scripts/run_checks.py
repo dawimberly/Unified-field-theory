@@ -50,3 +50,6 @@ print('ffz_hadronic_a1 PASS',flush=True)
 ee_confinement_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_ee_confinement.py'
 subprocess.run([sys.executable,str(ee_confinement_test)],check=True)
 print('ffz_ee_confinement PASS',flush=True)
+running_gind_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_running_gind.py'
+subprocess.run([sys.executable,str(running_gind_test)],check=True)
+print('ffz_running_gind PASS',flush=True)
