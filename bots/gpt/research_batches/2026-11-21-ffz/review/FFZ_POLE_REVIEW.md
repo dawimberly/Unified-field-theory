@@ -31,6 +31,7 @@ Runnable checks in this directory (they do not call the checkpoint scripts):
 - `ffz_self_consistent_loop.py` — \(v\leftrightarrow G_{\mathrm{ind}}\leftrightarrow m_s\) fixed point; overshoots gap (`FFFF_SELF_CONSISTENT_LOOP.md`)
 - `ffz_surface_term.py` — Sakharov surface/boundary/contact vs gap; derived sum 0 (`FFFF_SURFACE_TERM.md`)
 - `ffz_xi_running.py` — ξ=1/6 RG-stable in SUSY WZ; δc=0 (`FFFF_XI_RUNNING.md`)
+- `ffz_gauge_contact.py` — Kabat/DW gauge contact; net \(a_1=-1/3\); not \(h^2z/K\) (`FFFF_GAUGE_CONTACT.md`)
 - Ladder: `docs/PROVEN_METHODS_LADDER.md`
 
 SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) regulated remainder are separate quasi-Monte Carlo estimates of integrands written for this review.
@@ -59,6 +60,7 @@ SymPy and mpmath own the exact identities. The CcFf simple pole and the FFff(A) 
 | Self-consistent \(v\)–\(G_{\mathrm{ind}}\)–\(m_s\) loop (new idea) | \(F\sim z\) fixed point overshoots gap (\(\delta_R/\mathrm{GAP}\sim87\)); \(F=\|y\|v^2\) only \(v=0\) (`FFFF_SELF_CONSISTENT_LOOP.md`) |
 | Surface / boundary / contact (new idea) | Derived GHY/\(\Box R\)/\(a_1\)/vertex = 0; ratio pred/GAP \(=0\); scheme contact free; EE does not fix GAP (`FFFF_SURFACE_TERM.md`) |
 | \(\xi\) running from \(1/6\) (new idea) | SUSY+JO: \(\beta_\xi=\Gamma(\xi-1/6)\), stable at \(1/6\); \(\delta c=0\), ratio \(=0\); \(\ln2/72\) not from \(\xi\) (`FFFF_XI_RUNNING.md`) |
+| Gauge / Kabat / DW contact (new idea) | Net \(N=1\) vector \(a_1=-1/3\); SUSY does not cancel contact; \(\Lambda^2\) ≠ \(h^2z/K\) ⇒ ratio \(=0\); \(\ln2/72\) not reproduced (`FFFF_GAUGE_CONTACT.md`) |
 | Projected double vs Y at \(L=0\) | Cancels after overlap fix |
 | Projected finish line at \(a_X=0\), \(a_Y=-1\) | Higher poles OK; simple gap \(\approx+0.0097\) stands (`FFFF_SIMPLE_GAP_AUDIT.md`) |
 | First corrected equation in disagreement | Earlier FFff(A) bilinear \(-4/27\) (now \(0\)) |
