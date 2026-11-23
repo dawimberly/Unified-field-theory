@@ -20,7 +20,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★ | **New idea:** Does \(\xi\) run away from \(1/6\)? | **done (negative)** | SUSY+JO: \(\beta_\xi=\Gamma(\xi-1/6)\), \(b=0\) ⇒ \(\xi_*=1/6\) stable; \(\delta\xi=0\), \(\delta c=0\), ratio \(=0\); \(\ln2/72\) not from \(\xi\) | [#21](https://github.com/dawimberly/Unified-field-theory/pull/21) |
 | ★★★★★★ | **New idea:** Gauge / Kabat / Donnelly–Wall contact (+ \(N=1\) vector) | **done (negative)** | Kabat \(c=1\) HK-derived; SUSY does not cancel (net \(a_1=-1/3\)); \(\Lambda^2\) channel ≠ \(h^2z/K\) ⇒ ratio \(=0\); \(\ln2/72\) not reproduced | [#22](https://github.com/dawimberly/Unified-field-theory/pull/22) |
 | ★★★★★★★ | **New idea:** Scheme-independent test of the Newton gap | **done (negative as “missing term”)** | SI: higher poles\(=0\), \(c_Y=1/24\); \(D=c_0-c_Y\) **not** SI — absorbed by vacuum EH \(\kappa=-\mathrm{GAP}\); no missing matter op forced | [#23](https://github.com/dawimberly/Unified-field-theory/pull/23) |
-| ★★★★★★★★ | **New idea:** Penrose–Diósi collapse with induced \(G\) (\(\kappa=0\)) | **done (exploratory)** | \(\tau(C)/\tau(1/24)=C/(1/24)\approx1.232\); induced UV does **not** supply viable \(R_0\) (Gran Sasso); BEC/flux gravity≪coherence; nanosphere setup-dependent | *(this branch → stacked PR)* |
+| ★★★★★★★★ | **New idea:** Penrose–Diósi collapse with induced \(G\) (\(\kappa=0\)) | **done (exploratory)** | \(\tau(C)/\tau(1/24)=C/(1/24)\approx1.232\); induced UV does **not** supply viable \(R_0\) (Gran Sasso); BEC/flux gravity≪coherence; nanosphere setup-dependent | [#24](https://github.com/dawimberly/Unified-field-theory/pull/24) |
 
 ## How to read status
 
