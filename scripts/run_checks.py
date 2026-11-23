@@ -26,3 +26,6 @@ print('ffz_three_phase PASS',flush=True)
 two_phase_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_two_phase.py'
 subprocess.run([sys.executable,str(two_phase_test)],check=True)
 print('ffz_two_phase PASS',flush=True)
+shared_boundary_test=repo/'bots'/'gpt'/'research_batches'/'2026-11-21-ffz'/'review'/'test_ffz_shared_boundary.py'
+subprocess.run([sys.executable,str(shared_boundary_test)],check=True)
+print('ffz_shared_boundary PASS',flush=True)
