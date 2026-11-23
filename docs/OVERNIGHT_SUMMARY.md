@@ -66,4 +66,4 @@ Stack started from #29 (two-phase). Rounds 1–6 below. Standing rules held: no 
 
 ## Stack map
 
-`#51 → #52(Y) → #53(Z) → #54(AA) → #55(AB Round-6 summary)`
+`#51 → #52(Y) → #53(Z) → #54(AA) → #55(AB)`
