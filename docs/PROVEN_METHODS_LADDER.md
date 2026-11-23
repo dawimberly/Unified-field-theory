@@ -57,7 +57,8 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AD:** Induced \(G\) across deconfinement | **done (tiny)** | Local \(a_1\) flips −; \(\Delta G/G\sim10^{-39}\) vs Planck | [#57](https://github.com/dawimberly/Unified-field-theory/pull/57) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AE:** Bounce criterion (AC/AD vs LQC/AS) | **done (negative)** | No sub-Planck bounce from AC/AD; no derived GRB/FRB | [#58](https://github.com/dawimberly/Unified-field-theory/pull/58) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AF:** Round 7 summary | **done** | AC–AE table; negative-gravity branch closed | [#59](https://github.com/dawimberly/Unified-field-theory/pull/59) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AG:** Surface/TD audit of 3-loop pole | **done (negative)** | □R/GHY/Euler/a2 → δC=0; κ=−GAP scheme only | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AG:** Surface/TD audit of 3-loop pole | **done (negative)** | □R/GHY/Euler/a2 → δC=0; κ=−GAP scheme only | [#60](https://github.com/dawimberly/Unified-field-theory/pull/60) |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AH:** Edge modes of original FFZ fields | **done (negative)** | No DW/Kabat on WZ; δC=0; ln2/72 coincidence | *(stacked)* |
 
 ## How to read status
 
@@ -123,5 +124,6 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - Deconfinement \(G_{\mathrm{ind}}\): `docs/FFFF_DECONF_GIND.md`, `ffz_deconf_gind.py`
 - Bounce criterion: `docs/FFFF_BOUNCE_CRITERION.md`, `ffz_bounce_criterion.py`
 - Surface/TD audit: `docs/FFFF_SURFACE_AUDIT.md`, `ffz_surface_audit.py`
+- Edge modes (WZ): `docs/FFFF_EDGE_MODES.md`, `ffz_edge_modes.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
