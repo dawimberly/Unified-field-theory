@@ -49,6 +49,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight V:** Planck→GUT stress (U survivors) | **done** | Short Proca windows fail; SO(10)/E6 flip; full Proca→EW flips but IR-hostile | [#49](https://github.com/dawimberly/Unified-field-theory/pull/49) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight W:** UV consistency constraints | **done** | Proca→EW **ruled out** (IR γ/g); SO(10)/E6 tentatively OK (ASSUMED) | [#50](https://github.com/dawimberly/Unified-field-theory/pull/50) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight X:** Round-5 summary | **done** | Two-track lead: IR hadronic +; UV SO(10)/E6 Proca (ASSUMED) | [#51](https://github.com/dawimberly/Unified-field-theory/pull/51) |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight Y:** Minimal broken-gauge spectrum | **done** | \(N_V^{\min}=15\) for \(S>0\); SO(10)/E6 **allowed**, not selected | *(stacked)* |
 
 ## How to read status
 
@@ -107,5 +108,6 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 - UV full-mass survey: `docs/FFFF_UV_HIGGSING.md`, `ffz_uv_higgsing.py`
 - Planck stress: `docs/FFFF_PLANCK_STRESS.md`, `ffz_planck_stress.py`
 - UV consistency: `docs/FFFF_UV_CONSISTENCY.md`, `ffz_uv_consistency.py`
+- Minimal spectrum: `docs/FFFF_MINIMAL_SPECTRUM.md`, `ffz_minimal_spectrum.py`
 - Overnight summary: `docs/OVERNIGHT_SUMMARY.md`
 - Graviton context: `docs/GRAVITON_ROADMAP.md`
