@@ -54,7 +54,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AA:** GAP vs massive-vector / hadronic \(a_1\) | **done (negative)** | \(\delta C=0\) all sectors; GAP \(+0.009651\) stands | [#54](https://github.com/dawimberly/Unified-field-theory/pull/54) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AB:** Round-6 summary | **done** | Lead: IR +; UV \(N_V\ge15\) allowed region; GAP untouched | [#55](https://github.com/dawimberly/Unified-field-theory/pull/55) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AC:** SEC in collapse (\(\rho+3p\)) | **done** | Ordinary dense matter OK; only bag vacuum \(\rho+3p<0\) | [#56](https://github.com/dawimberly/Unified-field-theory/pull/56) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AD:** Induced \(G\) across deconfinement | **done (tiny)** | Local \(a_1\) flips −; \(\Delta G/G\sim10^{-39}\) vs Planck | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight AD:** Induced \(G\) across deconfinement | **done (tiny)** | Local \(a_1\) flips −; \(\Delta G/G\sim10^{-39}\) vs Planck | [#57](https://github.com/dawimberly/Unified-field-theory/pull/57) |
 
 ## How to read status
 
