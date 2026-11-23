@@ -1,0 +1,179 @@
+{
+  "scope": "Fixed PV masses [1,L,2L,5L+1], no bare curvature terms; scalar real subthreshold response.",
+  "scanned_L_range": [
+    1.05,
+    150
+  ],
+  "sampled_threshold_sign_changes": 1,
+  "transitions": [
+    {
+      "critical_L": 14.557206455684199,
+      "threshold_residual": 3.59965155078391e-16,
+      "nearby_cases": [
+        {
+          "L": 13.10148581011578,
+          "relative_offset": -0.1,
+          "threshold_kernel": -0.0034406337973117845,
+          "subthreshold_poles_s": [
+            3.975194346751823
+          ],
+          "binding_gaps": [
+            0.024805653248177073
+          ],
+          "threshold_checks": [
+            {
+              "gap_ratio_to_threshold_prediction": 1.0496369255980118,
+              "connected_source_residue": 33.16190701814069,
+              "residue_ratio_to_threshold_prediction": 1.0472112914964822
+            }
+          ],
+          "second_sheet_real_poles_s": []
+        },
+        {
+          "L": 14.120490262013673,
+          "relative_offset": -0.03,
+          "threshold_kernel": -0.001043695572162846,
+          "subthreshold_poles_s": [
+            3.997794502730043
+          ],
+          "binding_gaps": [
+            0.00220549726995678
+          ],
+          "threshold_checks": [
+            {
+              "gap_ratio_to_threshold_prediction": 1.014201332335943,
+              "connected_source_residue": 9.57440028351897,
+              "residue_ratio_to_threshold_prediction": 1.0139778578068033
+            }
+          ],
+          "second_sheet_real_poles_s": []
+        },
+        {
+          "L": 14.411634391127357,
+          "relative_offset": -0.01,
+          "threshold_kernel": -0.0003489253990033915,
+          "subthreshold_poles_s": [
+            3.999755810678626
+          ],
+          "binding_gaps": [
+            0.00024418932137404425
+          ],
+          "threshold_checks": [
+            {
+              "gap_ratio_to_threshold_prediction": 1.004677866184397,
+              "connected_source_residue": 3.156524509526854,
+              "residue_ratio_to_threshold_prediction": 1.0046527681641113
+            }
+          ],
+          "second_sheet_real_poles_s": []
+        },
+        {
+          "L": 14.513534836317145,
+          "relative_offset": -0.003,
+          "threshold_kernel": -0.00010478343588489601,
+          "subthreshold_poles_s": [
+            3.999978050402601
+          ],
+          "binding_gaps": [
+            0.000021949597399206766
+          ],
+          "threshold_checks": [
+            {
+              "gap_ratio_to_threshold_prediction": 1.0013977769876043,
+              "connected_source_residue": 0.9432975869706356,
+              "residue_ratio_to_threshold_prediction": 1.0013954122387239
+            }
+          ],
+          "second_sheet_real_poles_s": []
+        },
+        {
+          "L": 14.542649249228514,
+          "relative_offset": -0.001,
+          "threshold_kernel": -0.00003493782744771475,
+          "subthreshold_poles_s": [
+            3.9999975620290193
+          ],
+          "binding_gaps": [
+            0.0000024379709806510164
+          ],
+          "threshold_checks": [
+            {
+              "gap_ratio_to_threshold_prediction": 1.0004654029073599,
+              "connected_source_residue": 0.3140840916387916,
+              "residue_ratio_to_threshold_prediction": 1.0004648325851715
+            }
+          ],
+          "second_sheet_real_poles_s": []
+        },
+        {
+          "L": 14.552839293747494,
+          "relative_offset": -0.0003,
+          "threshold_kernel": -0.000010482397915015474,
+          "subthreshold_poles_s": [
+            3.9999997806101364
+          ],
+          "binding_gaps": [
+            2.1938986360936497e-7
+          ],
+          "threshold_checks": [
+            {
+              "gap_ratio_to_threshold_prediction": 1.0001395673150166,
+              "connected_source_residue": 0.0941886841218659,
+              "residue_ratio_to_threshold_prediction": 1.0001395551558738
+            }
+          ],
+          "second_sheet_real_poles_s": []
+        },
+        {
+          "L": 14.60087807505125,
+          "relative_offset": 0.003,
+          "threshold_kernel": 0.00010487332879406383,
+          "subthreshold_poles_s": [],
+          "binding_gaps": [],
+          "threshold_checks": [],
+          "second_sheet_real_poles_s": [
+            3.999978074003965
+          ]
+        },
+        {
+          "L": 14.70277852024104,
+          "relative_offset": 0.01,
+          "threshold_kernel": 0.0003499242571664489,
+          "subthreshold_poles_s": [],
+          "binding_gaps": [],
+          "threshold_checks": [],
+          "second_sheet_real_poles_s": [
+            3.9997566848986335
+          ]
+        },
+        {
+          "L": 14.993922649354724,
+          "relative_offset": 0.03,
+          "threshold_kernel": 0.0010526890990200533,
+          "subthreshold_poles_s": [],
+          "binding_gaps": [],
+          "threshold_checks": [],
+          "second_sheet_real_poles_s": [
+            3.9978181293198496
+          ]
+        },
+        {
+          "L": 16.012927101252618,
+          "relative_offset": 0.1,
+          "threshold_kernel": 0.0035410459769123787,
+          "subthreshold_poles_s": [],
+          "binding_gaps": [],
+          "threshold_checks": [],
+          "second_sheet_real_poles_s": [
+            3.976078956623944
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Scan does not prove uniqueness over all L or exclude complex poles.",
+    "Regulators are not coefficient-matched theories or physical positive-norm UV matter.",
+    "No constrained-CEV equivalence or stability proof."
+  ]
+}

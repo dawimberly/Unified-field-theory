@@ -1,0 +1,12 @@
+{
+  "frozen_hopf_integral_relative_error": 3.552713678800501e-15,
+  "unit_vector_max_error": 1.887379141862766e-15,
+  "tangent_derivative_max_error": 1.7763568394002505e-15,
+  "analytic_directional_gradient_relative_error": 1.5764227334886789e-09,
+  "analytic_vs_complex_step_max_error": 6.366462912410498e-12,
+  "radius_controls": [
+    2.7755575615628914e-15,
+    1.2212453270876722e-15,
+    0.0
+  ]
+}

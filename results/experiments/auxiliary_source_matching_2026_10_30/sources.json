@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29 America/Chicago",
+  "sources": [
+    {
+      "title": "Elimination of the auxiliary fields in the antifield formalism",
+      "doi": "10.1016/0370-2693(90)91739-X",
+      "access": "Publisher abstract and bibliographic record only; full paper not retrieved",
+      "url": "https://www.sciencedirect.com/science/article/pii/037026939091739X"
+    },
+    {
+      "title": "Field redefinitions in effective theories at higher orders",
+      "doi": "10.1007/JHEP03(2019)038",
+      "access": "Published open-access PDF Section 2, equations 2.1-2.6, printed pages 5-7",
+      "url": "https://inspirehep.net/files/84c3b1b40fac77e9429e45c460412403"
+    },
+    {
+      "title": "Composite Gravitons from Metric-Independent Quantum Field Theories",
+      "arxiv": "1911.13166v1",
+      "access": "Author manuscript footnote 4 and Section IV equations 4.1-4.2 and associated discussion; no nonperturbative measure inferred",
+      "url": "https://arxiv.org/pdf/1911.13166"
+    }
+  ]
+}

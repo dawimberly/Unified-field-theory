@@ -1,0 +1,127 @@
+{
+  "scope": "Exact finite-dimensional formal Schur algebra only. Two allocations with the same H-B/4 need not define the same composite/source functional. No actual regulated composite model or integration cycle is selected.",
+  "python": "3.12.14",
+  "cases": [
+    {
+      "q": "0",
+      "same_metric_covariance": true,
+      "composite_covariances_equal": true,
+      "metric_term_assignment_contact": [
+        [
+          "2/11",
+          "0"
+        ],
+        [
+          "0",
+          "-2/11"
+        ]
+      ],
+      "bubble_contact_assignment_contact": [
+        [
+          "2/11",
+          "0"
+        ],
+        [
+          "0",
+          "-2/11"
+        ]
+      ],
+      "source_forms_of_composite_difference": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "q": "1",
+      "same_metric_covariance": true,
+      "composite_covariances_equal": false,
+      "metric_term_assignment_contact": [
+        [
+          "2111802/12519407",
+          "60060/12519407"
+        ],
+        [
+          "60060/12519407",
+          "-2490670/12519407"
+        ]
+      ],
+      "bubble_contact_assignment_contact": [
+        [
+          "2/11",
+          "0"
+        ],
+        [
+          "0",
+          "-2/11"
+        ]
+      ],
+      "source_forms_of_composite_difference": [
+        "229044064/60731643357",
+        "1808992/137713477",
+        "2358556/137713477"
+      ]
+    },
+    {
+      "q": "2",
+      "same_metric_covariance": true,
+      "composite_covariances_equal": false,
+      "metric_term_assignment_contact": [
+        [
+          "1846614/12093269",
+          "120120/12093269"
+        ],
+        [
+          "120120/12093269",
+          "-2745470/12093269"
+        ]
+      ],
+      "bubble_contact_assignment_contact": [
+        [
+          "2/11",
+          "0"
+        ],
+        [
+          "0",
+          "-2/11"
+        ]
+      ],
+      "source_forms_of_composite_difference": [
+        "517297048/58664447919",
+        "3873784/133025959",
+        "6013632/133025959"
+      ]
+    },
+    {
+      "q": "3",
+      "same_metric_covariance": true,
+      "composite_covariances_equal": false,
+      "metric_term_assignment_contact": [
+        [
+          "505582/3725681",
+          "60060/3725681"
+        ],
+        [
+          "60060/3725681",
+          "-1025570/3725681"
+        ]
+      ],
+      "bubble_contact_assignment_contact": [
+        [
+          "2/11",
+          "0"
+        ],
+        [
+          "0",
+          "-2/11"
+        ]
+      ],
+      "source_forms_of_composite_difference": [
+        "285980168/18073278531",
+        "1889960/40982491",
+        "3829908/40982491"
+      ]
+    }
+  ],
+  "maximum_algebraic_residual": "0 (Fraction arithmetic)"
+}

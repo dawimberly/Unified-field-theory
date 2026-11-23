@@ -1,0 +1,212 @@
+{
+  "scope": "Free minimally coupled auxiliary-metric model, per scalar, M=1, no bare curvature terms, stationary contacts. DR finite D versus four-species PV families. No physical source projection, constrained measure, interactions, or above-cut continuation.",
+  "dimreg": [
+    {
+      "D": 4.01,
+      "full_spacelike_root": 1.9900497512437811,
+      "factor_root": 1.9900497512437814,
+      "slope": 0.15756242366004966,
+      "expected_slope": 0.15756242366030074
+    },
+    {
+      "D": 4.1,
+      "full_spacelike_root": 1.904761904761905,
+      "factor_root": 1.904761904761905,
+      "slope": 0.015107710822649596,
+      "expected_slope": 0.015107710822449884
+    },
+    {
+      "D": 4.2,
+      "full_spacelike_root": 1.8181818181818181,
+      "factor_root": 1.8181818181818181,
+      "slope": 0.007224184323394068,
+      "expected_slope": 0.007224184323327125
+    },
+    {
+      "D": 4.5,
+      "full_spacelike_root": 1.6,
+      "factor_root": 1.6,
+      "slope": 0.0025759748513102896,
+      "expected_slope": 0.00257597485126507
+    },
+    {
+      "D": 5.0,
+      "full_spacelike_root": 1.3333333333333335,
+      "factor_root": 1.3333333333333333,
+      "slope": 0.0011873576208230267,
+      "expected_slope": 0.0011873576208086458
+    },
+    {
+      "D": 5.5,
+      "full_spacelike_root": 1.1428571428571428,
+      "factor_root": 1.1428571428571428,
+      "slope": 0.001003322952050195,
+      "expected_slope": 0.0010033229520268294
+    },
+    {
+      "D": 5.9,
+      "full_spacelike_root": 1.0256410256410255,
+      "factor_root": 1.0256410256410255,
+      "slope": 0.002857062721916912,
+      "expected_slope": 0.002857062721864257
+    }
+  ],
+  "pv": [
+    {
+      "L": 3.0,
+      "z": [
+        1.0,
+        3.0,
+        6.0,
+        16.0
+      ],
+      "weights": [
+        1.0,
+        -1.9230769230769225,
+        0.9999999999999999,
+        -0.07692307692307691
+      ],
+      "G": 0.0063325239960248724,
+      "einstein_coefficient": 0.0005277103330020727,
+      "low_q_coefficients": [
+        -0.0007915654995031091,
+        -0.0002114416870397537
+      ],
+      "quadratic_truncation_root": -3.743658644542903,
+      "full_roots_in_sampled_domain": [
+        {
+          "q2": -2.0900298566858524,
+          "mass_squared": 2.0900298566858524,
+          "slope": 0.001354468263484684,
+          "quadrature_difference": 1.5396947062923363e-16
+        }
+      ],
+      "spacelike_min": 0.001,
+      "spacelike_max": 11.879999999999999,
+      "spacelike_all_negative": true,
+      "quadrature_difference_at_minus3p9": 4.805184028455756e-16
+    },
+    {
+      "L": 5.0,
+      "z": [
+        1.0,
+        5.0,
+        10.0,
+        26.0
+      ],
+      "weights": [
+        1.0,
+        -2.1428571428571392,
+        1.2499999999999978,
+        -0.10714285714285693
+      ],
+      "G": 0.015592126713866832,
+      "einstein_coefficient": 0.001299343892822236,
+      "low_q_coefficients": [
+        -0.001949015839233354,
+        -0.00036398286873367994
+      ],
+      "quadratic_truncation_root": -5.354691131519752,
+      "full_roots_in_sampled_domain": [
+        {
+          "q2": -2.778519511163709,
+          "mass_squared": 2.778519511163709,
+          "slope": 0.003762376420836438,
+          "quadrature_difference": 3.937118883669904e-17
+        }
+      ],
+      "spacelike_min": 0.001,
+      "spacelike_max": 19.8,
+      "spacelike_all_negative": true,
+      "quadrature_difference_at_minus3p9": 6.245004513516506e-16
+    },
+    {
+      "L": 10.0,
+      "z": [
+        1.0,
+        10.0,
+        20.0,
+        51.0
+      ],
+      "weights": [
+        1.0,
+        -2.3170731707317054,
+        1.451612903225805,
+        -0.13453973249409898
+      ],
+      "G": 0.04206073993834783,
+      "einstein_coefficient": 0.003505061661528986,
+      "low_q_coefficients": [
+        -0.005257592492293479,
+        -0.0005998535799007093
+      ],
+      "quadratic_truncation_root": -8.764793056938563,
+      "full_roots_in_sampled_domain": [
+        {
+          "q2": -3.747301964001835,
+          "mass_squared": 3.747301964001835,
+          "slope": 0.017476370632894977,
+          "quadrature_difference": 1.9460616196425514e-15
+        }
+      ],
+      "spacelike_min": 0.001,
+      "spacelike_max": 39.6,
+      "spacelike_all_negative": true,
+      "quadrature_difference_at_minus3p9": 7.849623728795052e-17
+    },
+    {
+      "L": 30.0,
+      "z": [
+        1.0,
+        30.0,
+        60.0,
+        151.0
+      ],
+      "weights": [
+        1.0,
+        -2.438016528925618,
+        1.5934065934065929,
+        -0.15539006448097353
+      ],
+      "G": 0.15797950311008793,
+      "einstein_coefficient": 0.013164958592507327,
+      "low_q_coefficients": [
+        -0.01974743788876099,
+        -0.0010084051162790764
+      ],
+      "quadratic_truncation_root": -19.582841826137546,
+      "full_roots_in_sampled_domain": [],
+      "spacelike_min": 0.001,
+      "spacelike_max": 118.8,
+      "spacelike_all_negative": true,
+      "quadrature_difference_at_minus3p9": 2.8123336992535997e-14
+    },
+    {
+      "L": 100.0,
+      "z": [
+        1.0,
+        100.0,
+        200.0,
+        501.0
+      ],
+      "weights": [
+        1.0,
+        -2.4812967581047385,
+        1.644518272425249,
+        -0.16322151432051096
+      ],
+      "G": 0.5800634245121467,
+      "einstein_coefficient": 0.048338618709345554,
+      "low_q_coefficients": [
+        -0.07250792806401833,
+        -0.0014756076779619428
+      ],
+      "quadratic_truncation_root": -49.13767334428872,
+      "full_roots_in_sampled_domain": [],
+      "spacelike_min": 0.001,
+      "spacelike_max": 396.0,
+      "spacelike_all_negative": true,
+      "quadrature_difference_at_minus3p9": 6.259714968592789e-13
+    }
+  ]
+}

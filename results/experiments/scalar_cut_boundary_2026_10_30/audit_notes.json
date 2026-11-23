@@ -1,0 +1,15 @@
+{
+  "exact_first_attempt": {
+    "result": "AssertionError at beta2[1]<=0 in real_cut during an exact threshold evaluation",
+    "cause": "Rounded reciprocal interval for 1/s made the exactly vanishing 1-4z/s straddle zero",
+    "correction": "Recognize s[0]==s[1]==4*mass and assign exact zero before branch selection",
+    "no_condition_relaxed": true
+  },
+  "numerical_initial_attempt": {
+    "result": "30 numerical windings and 30 real integrals passed diagnostics; a slow-convergence IntegrationWarning was issued",
+    "maximum_real_integral_relative_discrepancy": 2.2760853450737291e-10,
+    "preserved": "initial_numerical_results.json",
+    "correction": "Factor the real quadratic before taking logarithms on an open/threshold cut; retain remaining warnings in numerical_results.json"
+  },
+  "interpretation": "Neither approximate quadrature nor passing scripts establishes physical health; the count depends on the explicit analytic derivation and exact sign inequalities."
+}

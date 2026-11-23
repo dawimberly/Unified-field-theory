@@ -1,0 +1,275 @@
+{
+  "scope": "Model identity checks, not experiments or a unified theory.",
+  "hopf_derivative_cases": 32,
+  "max_derivative_error": 2.75847844566357e-10,
+  "hopf_invariants": {
+    "gradient_squared": 8,
+    "F_ij_squared": 32,
+    "continuum_reference_energy": 236.8705056261446
+  },
+  "independent_mesh_controls": [
+    {
+      "level": 0,
+      "vertices": 120,
+      "energy": 165.2779750836647,
+      "E2": 60.39412921597875,
+      "E4": 104.88384586768592,
+      "relative_to_continuum": 0.6977566693952383,
+      "chordal_volume": 16.692526771107474
+    },
+    {
+      "level": 1,
+      "vertices": 840,
+      "energy": 217.03795433469048,
+      "E2": 73.8268059284342,
+      "E4": 143.21114840625643,
+      "relative_to_continuum": 0.916272601187604,
+      "chordal_volume": 18.85946500674045
+    },
+    {
+      "level": 2,
+      "vertices": 6480,
+      "energy": 231.75713223472675,
+      "E2": 77.63454727924034,
+      "E4": 154.12258495548747,
+      "relative_to_continuum": 0.9784127898156796,
+      "chordal_volume": 19.511162081551404
+    }
+  ],
+  "theorem_normalizations": [
+    {
+      "v": 1,
+      "R": 1,
+      "kappa": 1,
+      "theorem_parameter": 1.0,
+      "within_explicit_global_minimum_range": true,
+      "energy": 236.8705056261446
+    },
+    {
+      "v": 2,
+      "R": 0.2,
+      "kappa": 1,
+      "theorem_parameter": 0.4,
+      "within_explicit_global_minimum_range": true,
+      "energy": 852.7338202541205
+    },
+    {
+      "v": 0.3,
+      "R": 4,
+      "kappa": 2,
+      "theorem_parameter": 0.8485281374238569,
+      "within_explicit_global_minimum_range": true,
+      "energy": 107.38129588385222
+    },
+    {
+      "v": 1,
+      "R": 2,
+      "kappa": 1,
+      "theorem_parameter": 2.0,
+      "within_explicit_global_minimum_range": false,
+      "energy": 236.8705056261446
+    }
+  ],
+  "amplitude_controls": [
+    {
+      "lam": 1,
+      "r_stationary": 0.0,
+      "energy": 162.8484726179744,
+      "frozen_energy": 236.8705056261446,
+      "numerical_minimizer": 2.020830621240131e-11,
+      "scope": "Amplitude minimization with n fixed to the round-sphere Hopf map only."
+    },
+    {
+      "lam": 4,
+      "r_stationary": 0.0,
+      "energy": 177.65287921960845,
+      "frozen_energy": 236.8705056261446,
+      "numerical_minimizer": 6.532979279356446e-12,
+      "scope": "Amplitude minimization with n fixed to the round-sphere Hopf map only."
+    },
+    {
+      "lam": 8,
+      "r_stationary": 0.0,
+      "energy": 197.39208802178717,
+      "frozen_energy": 236.8705056261446,
+      "numerical_minimizer": 0.00016679142534179188,
+      "scope": "Amplitude minimization with n fixed to the round-sphere Hopf map only."
+    },
+    {
+      "lam": 16,
+      "r_stationary": 0.7071067811865476,
+      "energy": 217.13129682396587,
+      "frozen_energy": 236.8705056261446,
+      "numerical_minimizer": 0.7071067714986132,
+      "scope": "Amplitude minimization with n fixed to the round-sphere Hopf map only."
+    },
+    {
+      "lam": 64,
+      "r_stationary": 0.9354143466934853,
+      "energy": 231.9357034255999,
+      "frozen_energy": 236.8705056261446,
+      "numerical_minimizer": 0.935414346469542,
+      "scope": "Amplitude minimization with n fixed to the round-sphere Hopf map only."
+    },
+    {
+      "lam": 256,
+      "r_stationary": 0.9842509842514764,
+      "energy": 235.63680507600841,
+      "frozen_energy": 236.8705056261446,
+      "numerical_minimizer": 0.9842509842289678,
+      "scope": "Amplitude minimization with n fixed to the round-sphere Hopf map only."
+    }
+  ],
+  "higgs_curvature_controls": [
+    {
+      "xi": 0,
+      "fraction_Einstein_coefficient": 0.0,
+      "kinetic_K": 1.0,
+      "radial_normalization": 1.0,
+      "relative_tree_massive_matter_coupling": 1.0
+    },
+    {
+      "xi": 1,
+      "fraction_Einstein_coefficient": 1.0206392909697304e-32,
+      "kinetic_K": 1.0,
+      "radial_normalization": 1.0,
+      "relative_tree_massive_matter_coupling": 1.0
+    },
+    {
+      "xi": 1000000000000.0,
+      "fraction_Einstein_coefficient": 1.0206392909697305e-20,
+      "kinetic_K": 1.0000000612383575,
+      "radial_normalization": 0.9999999693808226,
+      "relative_tree_massive_matter_coupling": 0.9999999693808226
+    },
+    {
+      "xi": 1000000000000000.0,
+      "fraction_Einstein_coefficient": 1.0206392909697304e-17,
+      "kinetic_K": 1.0612383574581838,
+      "radial_normalization": 0.9707190009287199,
+      "relative_tree_massive_matter_coupling": 0.9707190009287199
+    },
+    {
+      "xi": 2600000000000000.0,
+      "fraction_Einstein_coefficient": 2.653662156521299e-17,
+      "kinetic_K": 1.4139712964173228,
+      "radial_normalization": 0.8409684506085976,
+      "relative_tree_massive_matter_coupling": 0.8409684506085976
+    },
+    {
+      "xi": 9.797780752197767e+31,
+      "fraction_Einstein_coefficient": 1.0,
+      "kinetic_K": 5.878668451318661e+32,
+      "radial_normalization": 4.124397513515823e-17,
+      "relative_tree_massive_matter_coupling": 0.0
+    }
+  ],
+  "higgs_exact_coupling_derivative_controls": [
+    {
+      "f": 0,
+      "numeric_derivative": 1.000000000001,
+      "analytic": 1
+    },
+    {
+      "f": 0.1,
+      "numeric_derivative": 0.8999999999925733,
+      "analytic": 0.9
+    },
+    {
+      "f": 0.5,
+      "numeric_derivative": 0.500000000019929,
+      "analytic": 0.5
+    },
+    {
+      "f": 0.9,
+      "numeric_derivative": 0.10000000001397778,
+      "analytic": 0.09999999999999998
+    },
+    {
+      "f": 1,
+      "numeric_derivative": 0.0,
+      "analytic": 0
+    }
+  ],
+  "Higgs_mass_GeV": 125,
+  "Higgs_Compton_range_m": 1.5786158432e-18,
+  "graphene_Dirac_controls": [
+    {
+      "t": 0.5,
+      "angle": 0,
+      "speed": 0.7500000000493223,
+      "expected": 0.75
+    },
+    {
+      "t": 0.5,
+      "angle": 0.3,
+      "speed": 0.7499999999364941,
+      "expected": 0.75
+    },
+    {
+      "t": 0.5,
+      "angle": 1.1,
+      "speed": 0.7500000001154367,
+      "expected": 0.75
+    },
+    {
+      "t": 0.5,
+      "angle": 2.3,
+      "speed": 0.7500000000534722,
+      "expected": 0.75
+    },
+    {
+      "t": 1,
+      "angle": 0,
+      "speed": 1.5000000000986446,
+      "expected": 1.5
+    },
+    {
+      "t": 1,
+      "angle": 0.3,
+      "speed": 1.4999999998729883,
+      "expected": 1.5
+    },
+    {
+      "t": 1,
+      "angle": 1.1,
+      "speed": 1.5000000002308733,
+      "expected": 1.5
+    },
+    {
+      "t": 1,
+      "angle": 2.3,
+      "speed": 1.5000000001069445,
+      "expected": 1.5
+    },
+    {
+      "t": 2,
+      "angle": 0,
+      "speed": 3.0000000001972893,
+      "expected": 3.0
+    },
+    {
+      "t": 2,
+      "angle": 0.3,
+      "speed": 2.9999999997459765,
+      "expected": 3.0
+    },
+    {
+      "t": 2,
+      "angle": 1.1,
+      "speed": 3.0000000004617466,
+      "expected": 3.0
+    },
+    {
+      "t": 2,
+      "angle": 2.3,
+      "speed": 3.000000000213889,
+      "expected": 3.0
+    }
+  ],
+  "exclusions": [
+    "No transfer of compact fixed-amplitude stability to the full field model.",
+    "Higgs metric-coupling action already assumes spacetime curvature.",
+    "Graphene cone is not a 3+1-dimensional universal spin-2 mode."
+  ]
+}

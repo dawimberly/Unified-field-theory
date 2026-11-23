@@ -1,0 +1,495 @@
+{
+  "model": {
+    "name": "Candidate 0 static energy, lattice transcription",
+    "potential": "\u03bb(\u03c1\u00b2-v\u00b2)\u00b2/4",
+    "v": 1.0,
+    "lambda": 64.0,
+    "kappa": 1.0,
+    "gradient_normalization": "E = J h with J = v\u00b2 a, h_\u03b8 = \u03a3_bonds (1/2) wrap(\u0394\u03b8)\u00b2, h_n = \u03a3_bonds (1 - n_i\u00b7n_j). This matches \u222b(1/2)\u03c1\u00b2(|\u2207\u03b8|\u00b2+|\u2207n|\u00b2) on a cubic lattice of spacing a at \u03c1=v.",
+    "metric": "imposed flat background; no dynamical metric in the matter action",
+    "observable_phase": "cos(\u03b8_i-\u03b8_j), not the global phase",
+    "observable_orientation": "n_i\u00b7n_j, not a global rotation"
+  },
+  "ring": {
+    "n_sites": 4,
+    "laplacian_eigenvalues": [
+      -8.586881206085195e-16,
+      2.0,
+      2.0000000000000004,
+      3.9999999999999996
+    ],
+    "configurations": {
+      "locked": {
+        "theta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "nearest_neighbor_abs_delta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "nearest_neighbor_energy": 0.0,
+        "C2": 1.0,
+        "winding": 0.0,
+        "max_abs_force": 0.0,
+        "energy_under_global_phase_shift": 0.0,
+        "C2_under_global_phase_shift": 1.0
+      },
+      "circulating": {
+        "theta": [
+          0.0,
+          1.5707963267948966,
+          3.141592653589793,
+          4.71238898038469
+        ],
+        "nearest_neighbor_abs_delta": [
+          1.5707963267948966,
+          1.5707963267948966,
+          1.5707963267948966,
+          1.5707963267948966
+        ],
+        "nearest_neighbor_energy": 4.934802200544679,
+        "C2": -1.0,
+        "winding": 1.0,
+        "max_abs_force": 0.0,
+        "energy_under_global_phase_shift": 4.934802200544679,
+        "C2_under_global_phase_shift": -1.0
+      },
+      "anticirculating": {
+        "theta": [
+          -0.0,
+          -1.5707963267948966,
+          -3.141592653589793,
+          -4.71238898038469
+        ],
+        "nearest_neighbor_abs_delta": [
+          1.5707963267948966,
+          1.5707963267948966,
+          1.5707963267948966,
+          1.5707963267948966
+        ],
+        "nearest_neighbor_energy": 4.934802200544679,
+        "C2": -1.0,
+        "winding": -1.0,
+        "max_abs_force": 0.0,
+        "energy_under_global_phase_shift": 4.934802200544679,
+        "C2_under_global_phase_shift": -1.0
+      },
+      "folded": {
+        "theta": [
+          0.0,
+          1.5707963267948966,
+          0.0,
+          -1.5707963267948966
+        ],
+        "nearest_neighbor_abs_delta": [
+          1.5707963267948966,
+          1.5707963267948966,
+          1.5707963267948966,
+          1.5707963267948966
+        ],
+        "nearest_neighbor_energy": 4.934802200544679,
+        "C2": 0.0,
+        "winding": 0.0,
+        "max_abs_force": 3.141592653589793,
+        "energy_under_global_phase_shift": 4.934802200544679,
+        "C2_under_global_phase_shift": 0.0
+      }
+    },
+    "long_wave_check": {
+      "delta": 0.01,
+      "bond_energy": 5e-05,
+      "C2": 0.9998000066665778,
+      "C2_plus_4_bond_energy": 1.0000000066665777,
+      "deviation_from_1": 6.666577734293355e-09
+    },
+    "stable_critical_windings": {
+      "locked_max_force": 0.0,
+      "circulating_max_force": 0.0,
+      "anticirculating_max_force": 0.0,
+      "folded_max_force": 3.141592653589793,
+      "hessian_eigenvalues": [
+        -8.586881206085195e-16,
+        2.0,
+        2.0000000000000004,
+        3.9999999999999996
+      ],
+      "n_negative_hessian_eigenvalues": 0,
+      "n_zero_hessian_eigenvalues": 1
+    }
+  },
+  "orientation": {
+    "n_sites": 8,
+    "n_edges": 12,
+    "aligned_energy": 0.0,
+    "neel_energy": 24.0,
+    "single_flip_energy": 6.0,
+    "aligned_skyrme": 0.0,
+    "neel_skyrme": 0.0,
+    "mean_neighbor_dot_aligned": 1.0,
+    "mean_neighbor_dot_neel": -1.0,
+    "rotation_invariance_aligned_abs_diff": 2.6645352591003757e-15,
+    "rotation_invariance_neel_abs_diff": 0.0,
+    "neel_tilt_curvature_over_eps2": -24.000000564683432,
+    "vacuum_orientation_eigenvalues": [
+      0.0,
+      2.0,
+      2.0,
+      2.0,
+      4.0,
+      4.0,
+      4.0,
+      6.0
+    ],
+    "vacuum_orientation_eigenvalue_abs_error": 3.330669165377771e-08,
+    "amplitude_U_second_at_v": 128.0,
+    "amplitude_U_second_at_0": -64.0,
+    "amplitude_gap_omega2_minus_k2": 128.0,
+    "kappa_skyrme_recorded": 1.0,
+    "note": "Skyrme density built from n\u00b7(\u0394n\u00d7\u0394n) is identically zero on both collinear arrangements, so it does not change \u0394E. Vacuum stability of the two-derivative term is the hypercube Laplacian. The N\u00e9el curvature -24 is the two-derivative term."
+  },
+  "newtonian_baseline": {
+    "units": "c=1, a=1, rest energy per site \u03b5_0=1, J/\u03b5_0 = j_over_rest. Illustrative, not a material prediction.",
+    "j_over_rest": 1.0,
+    "delta_E_neel_minus_aligned": 24.0,
+    "delta_M_from_delta_E_over_c2": 24.0,
+    "fractional_monopole_neel_vs_aligned": 3.0,
+    "aligned": {
+      "mass": 8.0,
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dipole_about_origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quadrupole_frobenius": 0.0,
+      "quadrupole_trace": 0.0,
+      "quadrupole_eigenvalues": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_direct_R80": -0.09999999946597815,
+      "potential_multipole_R80": -0.1,
+      "multipole_relative_error": 5.340218573664703e-09
+    },
+    "neel": {
+      "mass": 32.0,
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dipole_about_origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quadrupole_frobenius": 0.0,
+      "quadrupole_trace": 0.0,
+      "quadrupole_eigenvalues": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "potential_direct_R80": -0.39999999919892026,
+      "potential_multipole_R80": -0.4,
+      "multipole_relative_error": 2.0026993992201667e-09
+    },
+    "single_flip": {
+      "mass": 14.0,
+      "center_of_mass": [
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "dipole_about_origin": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "quadrupole_frobenius": 1.574671977503471,
+      "quadrupole_trace": 5.329070518200751e-15,
+      "quadrupole_eigenvalues": [
+        -0.6428571428571409,
+        -0.6428571428571408,
+        1.285714285714287
+      ],
+      "potential_direct_R80": -0.1753124932946848,
+      "potential_multipole_R80": -0.1753124934885052,
+      "multipole_relative_error": 1.105570975166688e-09
+    },
+    "flip_smeared_same_total_mass": {
+      "mass": 14.0,
+      "quadrupole_frobenius": 0.0,
+      "mass_minus_flip": 0.0
+    },
+    "flip_versus_smeared_fractional_potential": [
+      {
+        "R": 10.0,
+        "direction": "body diagonal",
+        "fractional_difference_common_origin": 0.025826687590760074,
+        "fractional_difference_cm_matched": 0.0004220612564065423
+      },
+      {
+        "R": 40.0,
+        "direction": "body diagonal",
+        "fractional_difference_common_origin": 0.006253149582089472,
+        "fractional_difference_cm_matched": 2.8221858477348772e-05
+      },
+      {
+        "R": 80.0,
+        "direction": "body diagonal",
+        "fractional_difference_common_origin": 0.0031097271965884114,
+        "fractional_difference_cm_matched": 7.1170133182373116e-06
+      }
+    ]
+  },
+  "multipole_control": {
+    "quadrupole_zz": 6.799999999999999,
+    "quadrupole_zz_expected": 6.8,
+    "trace": -8.881784197001252e-16,
+    "relative_error_at_R100": 9.999999928123059e-09,
+    "direct": -0.034003400340034004,
+    "approx": -0.0340034
+  },
+  "statistics": {
+    "sample_spanning_exact": {
+      "4": {
+        "mean_Phi": 0.25,
+        "variance_Phi": 0.046875,
+        "rms_Phi": 0.21650635094610965
+      },
+      "8": {
+        "mean_Phi": 0.125,
+        "variance_Phi": 0.013671875,
+        "rms_Phi": 0.11692679333668567
+      },
+      "64": {
+        "mean_Phi": 0.015625,
+        "variance_Phi": 0.000240325927734375,
+        "rms_Phi": 0.015502449088269086
+      },
+      "512": {
+        "mean_Phi": 0.001953125,
+        "variance_Phi": 3.807246685028076e-06,
+        "rms_Phi": 0.0019512167191340064
+      }
+    },
+    "monte_carlo": {
+      "n_sites": 8,
+      "n_samples": 20000,
+      "seed": 0,
+      "Phi_mean": 0.12422966007457603,
+      "Phi_mean_exact": 0.125,
+      "Phi_rms": 0.11609311781205009,
+      "Phi_rms_exact": 0.11692679333668567,
+      "short_range_mean": -0.0013878976019183248,
+      "short_range_mean_exact": 0.0,
+      "short_range_rms": 0.20477200497263728,
+      "iid_bond_rms_estimate": 0.2041241452319315,
+      "n_bonds": 12
+    }
+  },
+  "scaling_at_fixed_density_beta_1": [
+    {
+      "N": 8,
+      "short_range_mean_shift_if_DeltaC_is_1": 1.0,
+      "sample_spanning_locked_mean_shift": 1.0,
+      "sample_spanning_random_mean_shift": 0.125,
+      "sample_spanning_random_rms": 0.11692679333668567
+    },
+    {
+      "N": 64,
+      "short_range_mean_shift_if_DeltaC_is_1": 1.0,
+      "sample_spanning_locked_mean_shift": 1.0,
+      "sample_spanning_random_mean_shift": 0.015625,
+      "sample_spanning_random_rms": 0.015502449088269086
+    },
+    {
+      "N": 512,
+      "short_range_mean_shift_if_DeltaC_is_1": 1.0,
+      "sample_spanning_locked_mean_shift": 1.0,
+      "sample_spanning_random_mean_shift": 0.001953125,
+      "sample_spanning_random_rms": 0.0019512167191340064
+    },
+    {
+      "N": 4096,
+      "short_range_mean_shift_if_DeltaC_is_1": 1.0,
+      "sample_spanning_locked_mean_shift": 1.0,
+      "sample_spanning_random_mean_shift": 0.000244140625,
+      "sample_spanning_random_rms": 0.00024411082085840083
+    }
+  ],
+  "fluctuation_time_average_assumption": {
+    "assumed_correlation_time_s": 1.0,
+    "assumed_duration_s": 360000.0,
+    "variance_reduction_factor_2tau_over_T": 5.555555555555556e-06,
+    "rms_reduction_factor": 0.0023570226039551583,
+    "applied_to_mean_shift": false,
+    "justification": "Not implied by the static Hamiltonian. Recorded only so the fluctuation formula is explicit."
+  },
+  "qin_geometry": {
+    "source": "Qin et al., Nature Communications (2026), DOI 10.1038/s41467-026-78187-4",
+    "wafer_m": [
+      0.002598,
+      0.002597,
+      0.000487
+    ],
+    "mass_kg": 7.6e-06,
+    "volume_m3": 3.285791922e-09,
+    "density_kg_m3": 2312.9888259552426,
+    "published_equivalent_force_aN": 471.0,
+    "published_force_uncertainty_aN_1sigma": 23.0,
+    "published_G_fractional_uncertainty": 0.053,
+    "torque_cross_check_aNm": 11.17,
+    "lever_arm_m": 0.023694,
+    "torque_over_lever_aN": 471.42736557778346,
+    "spoke_torque_fraction": 0.047448522829006266,
+    "gaps": [
+      {
+        "gap_m": 0.000654,
+        "center_separation_m": 0.001141,
+        "point_force_N": 2.961158262544733e-15,
+        "extended_force_N": 1.0707038590009533e-15,
+        "extended_over_point": 0.3615827875680045,
+        "resolution_forces_N": [
+          1.0762521716320961e-15,
+          1.072129967933842e-15,
+          1.0707038590009533e-15
+        ],
+        "relative_change_last_two_grids": 0.0013319359231780536,
+        "skin_thickness_m": 5e-05,
+        "skin_mass_fraction": 0.1026694045174538,
+        "skin_force_N": 1.3072198064161915e-16,
+        "skin_force_over_extended": 0.12208976323630001,
+        "skin_resolution_forces_N": [
+          1.3156701429792428e-16,
+          1.309378031411293e-16,
+          1.3072198064161915e-16
+        ],
+        "skin_relative_change_last_two_grids": 0.001651003897361755
+      },
+      {
+        "gap_m": 0.001554,
+        "center_separation_m": 0.0020410000000000003,
+        "point_force_N": 9.25437084596732e-16,
+        "extended_force_N": 5.6118647655297e-16,
+        "extended_over_point": 0.606401543544705,
+        "resolution_forces_N": [
+          5.629775007999803e-16,
+          5.616491108662702e-16,
+          5.6118647655297e-16
+        ],
+        "relative_change_last_two_grids": 0.0008243860688551254,
+        "skin_thickness_m": 5e-05,
+        "skin_mass_fraction": 0.1026694045174538,
+        "skin_force_N": 6.611010916953765e-17,
+        "skin_force_over_extended": 0.11780417371354379,
+        "skin_resolution_forces_N": [
+          6.636031560410253e-17,
+          6.61745470537815e-17,
+          6.611010916953765e-17
+        ],
+        "skin_relative_change_last_two_grids": 0.0009747054581108436
+      },
+      {
+        "gap_m": 0.05,
+        "center_separation_m": 0.050487000000000004,
+        "point_force_N": 1.5124247576147295e-18,
+        "extended_force_N": 1.510503566080399e-18,
+        "extended_over_point": 0.9987297275288191,
+        "resolution_forces_N": [
+          1.51052364048309e-18,
+          1.5105087704521532e-18,
+          1.510503566080399e-18
+        ],
+        "relative_change_last_two_grids": 3.4454547947269334e-06,
+        "skin_thickness_m": 5e-05,
+        "skin_mass_fraction": 0.1026694045174538,
+        "skin_force_N": 1.564283166312983e-19,
+        "skin_force_over_extended": 0.10356037558866124,
+        "skin_resolution_forces_N": [
+          1.5643058315420413e-19,
+          1.5642890284704822e-19,
+          1.564283166312983e-19
+        ],
+        "skin_relative_change_last_two_grids": 3.7475040488029813e-06
+      }
+    ],
+    "uniform_source_rescaling": {
+      "factor": 1.02,
+      "force_ratio": 1.0199999999999998
+    },
+    "distance_ratios_0.654_to_1.554": {
+      "extended": 0.5241285644347998,
+      "point": 0.31252537100176414,
+      "skin_over_its_near_value": 0.5057306265178296,
+      "skin_fraction_of_extended_near": 0.12208976323630001,
+      "skin_fraction_of_extended_far": 0.11780417371354379
+    },
+    "grids": [
+      [
+        8,
+        4
+      ],
+      [
+        12,
+        6
+      ],
+      [
+        16,
+        8
+      ]
+    ]
+  },
+  "qin_bound": {
+    "protocol": "source wafer swapped, test wafer unchanged, geometric kernel identical to the measured channel",
+    "delta_C2": 1.0,
+    "fractional_force_1sigma": 0.04883227176220807,
+    "alpha_over_rho_c2_1sigma": 0.04883227176220807,
+    "alpha_J_per_m3_1sigma": 1.015130483456822e+19,
+    "alpha_over_rho_c2_if_both_wafers_change": 0.024416135881104035,
+    "G_inference_fractional_uncertainty": 0.053,
+    "chemical_binding_fraction_Si_external_reference": 1.769809217311041e-10,
+    "chemical_reference": "4.63 eV/atom cohesive energy over 28.085 u c\u00b2; comparison scale only, not a model input",
+    "force_resolution_aN_for_chemical_fraction": 8.335801413535004e-08,
+    "assumption": "Bound applies only if |\u0394C2| is maintained at matched ordinary inertial mass and the toy coefficient contributes to active gravitational mass. That split is not a consequence of the Candidate-0 action and does not embed in one conserved minimally coupled stress tensor."
+  },
+  "flags": {
+    "action_defines_extra_organization_coupling": false,
+    "toy_coefficient_is_assumed": true,
+    "stable_matched_pair_split_by_toy_C2": false,
+    "unstable_folded_pair_split_by_toy_C2": true,
+    "C2_double_counts_nearest_neighbor_energy_on_matched_pair": false,
+    "C2_repeats_gradient_energy_in_long_wave_limit": true,
+    "nonlocal_C2_embeds_in_one_conserved_stress_tensor": false,
+    "signal_survives_matching_of_full_active_mass": false,
+    "one_over_sqrt_N_used_as_mean_shift": false,
+    "earth_or_moon_interior_used": false,
+    "rho_plus_3p_used_as_equilibrium_wafer_prediction": false
+  },
+  "conclusion": {
+    "stable_arrangements_differ_only_by_ordinary_mass_energy": true,
+    "additional_signal_among_stable_states_of_this_hamiltonian": false,
+    "additional_signal_if_the_assumed_coupling_acts_on_a_held_C2_difference": true,
+    "plain_statement": "On the lattices computed here, arrangements that are stable under the repository Hamiltonian differ gravitationally only through ordinary stress-energy. Opposite windings match in energy, multipoles, and the even pair correlator. The N\u00e9el arrangement is stationary but unstable, and its far field differs from the vacuum by \u0394M = \u0394E/c\u00b2 with vanishing extra multipoles. The one toy coupling can split a same-stress pair, but that pair is not stable, and the coupling is not part of the action. Matched full active mass leaves no residual."
+  },
+  "constants": {
+    "c_m_per_s": 299792458.0,
+    "G_SI": 6.6743e-11
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1"
+  }
+}

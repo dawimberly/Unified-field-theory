@@ -1,0 +1,129 @@
+{
+  "scope": "Exact rational matrix Schur identities for formal Euclidean-sign quadratic algebra. No auxiliary integration cycle, positive measure, constrained CEV equivalence or source-gauge prescription is defined.",
+  "versions": {
+    "python": "3.12.14"
+  },
+  "cases": [
+    {
+      "D": 3,
+      "symmetric_components": 6,
+      "V": 11,
+      "noncommuting_test": "1/10",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "5/539",
+        "1/49",
+        "1/539"
+      ]
+    },
+    {
+      "D": 3,
+      "symmetric_components": 6,
+      "V": 17,
+      "noncommuting_test": "1/10",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "5/833",
+        "11/833",
+        "1/833"
+      ]
+    },
+    {
+      "D": 4,
+      "symmetric_components": 10,
+      "V": 11,
+      "noncommuting_test": "3/20",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "36/539",
+        "36/539",
+        "39/539"
+      ]
+    },
+    {
+      "D": 4,
+      "symmetric_components": 10,
+      "V": 17,
+      "noncommuting_test": "3/20",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "36/833",
+        "36/833",
+        "39/833"
+      ]
+    },
+    {
+      "D": 5,
+      "symmetric_components": 15,
+      "V": 11,
+      "noncommuting_test": "39/200",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "90/539",
+        "90/539",
+        "90/539"
+      ]
+    },
+    {
+      "D": 5,
+      "symmetric_components": 15,
+      "V": 17,
+      "noncommuting_test": "39/200",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "90/833",
+        "90/833",
+        "90/833"
+      ]
+    },
+    {
+      "D": 6,
+      "symmetric_components": 21,
+      "V": 11,
+      "noncommuting_test": "1/4",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "172/539",
+        "163/539",
+        "160/539"
+      ]
+    },
+    {
+      "D": 6,
+      "symmetric_components": 21,
+      "V": 17,
+      "noncommuting_test": "1/4",
+      "auxiliary_minus_composite_error": "0",
+      "auxiliary_vs_four_amplitude_error": "0",
+      "hessian_normalization_error": "0",
+      "source_contact_quadratic_forms": [
+        "172/833",
+        "163/833",
+        "160/833"
+      ]
+    }
+  ],
+  "identities": {
+    "P": "(D-2) I_sym/2 - vv^T/2",
+    "H": "V P^-1/2",
+    "reduced_covariance": "(B^-1-P/(2V))^-1",
+    "composite_covariance": "P reduced_covariance P/V^2",
+    "auxiliary_covariance": "(H-B/4)^-1",
+    "source_contact": "auxiliary_covariance-composite_covariance=2P/V",
+    "chain_amplitude": "(2V P^-1-B)^-1=auxiliary_covariance/4"
+  }
+}

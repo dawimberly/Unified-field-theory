@@ -2,7 +2,7 @@
 
 ## Result
 
-The full 10 by 10 metric Hessian passes the longitudinal Ward check in 40 momentum/spectrum cases. Maximum absolute longitudinal component: 1.8474e-13. Maximum scalar-projector mismatch with 2A/3: 1.509e-13. The three subthreshold scalar roots are reproduced directly from the tensor coefficient, with positive connected-source residues.
+The full 10 by 10 metric Hessian passes the longitudinal Ward check in 40 momentum/spectrum cases. Maximum absolute longitudinal component: 1.9185e-13. Maximum scalar-projector mismatch with 2A/3: 1.5438e-13. The three subthreshold scalar roots are reproduced directly from the tensor coefficient, with positive connected-source residues.
 
 This verifies the tensor-projection identity for this four-dimensional PV free determinant. Sixteen additional finite-D tensor tests at D=4.01,4.2,5,5.9 check the longitudinal, mixed longitudinal/transverse-trace and transverse-trace bilinears using exact dimensionally integrated loop moments. Their conservation components vanish and the scalar coefficient agrees with the prior full kernel within 1e-10. This supports the channel-specific DR source cancellation within this determinant model. It does not establish constrained CEV equivalence or a Lorentzian UV-complete theory.
 
@@ -22,9 +22,9 @@ The transverse scalar polarization is diag(1,1,1,0)/sqrt(3). Its eigenvalue is K
 
 | PV L | q at root | K0 derivative | Connected-source residue |
 |---|---:|---:|---:|
-| 3 | -2.090029857 | 0.000902978842 | 771.90551 |
-| 5 | -2.778519511 | 0.00250825095 | 379.318916 |
-| 10 | -3.747301964 | 0.0116509138 | 118.129074 |
+| 3 | -2.090029857 | 0.00090297884 | 771.905511 |
+| 5 | -2.778519511 | 0.00250825095 | 379.318915 |
+| 10 | -3.747301964 | 0.0116509138 | 118.129075 |
 
 ## Remaining questions
 

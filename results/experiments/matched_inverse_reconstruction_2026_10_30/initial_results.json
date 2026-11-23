@@ -1,0 +1,2368 @@
+{
+  "scope": "Explicitly Lref=10 matched inverse scalar response. Conformal bounded inventory is complete from prior validated count; slit reconstruction outside that region remains diagnostic.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "pole_residues": [
+    {
+      "L": 3,
+      "common_massless_residue": -190.2011237017294,
+      "isolated": [
+        {
+          "q": [
+            -3.8559544984800516,
+            0.0
+          ],
+          "residual": 7.199780051661553e-21,
+          "residue": [
+            42.52356484768333,
+            0.0
+          ],
+          "independent_derivative_relative_error": 3.1570124119084664e-14
+        },
+        {
+          "q": [
+            -17.46621046520196,
+            12.765409846021509
+          ],
+          "residual": 9.772866314664846e-20,
+          "residue": [
+            56.394429245513514,
+            10.970381115142613
+          ],
+          "independent_derivative_relative_error": 2.4072382204331722e-14
+        },
+        {
+          "q": [
+            -17.46621046520196,
+            -12.765409846021509
+          ],
+          "residual": 9.772866314664846e-20,
+          "residue": [
+            56.394429245513514,
+            -10.970381115142613
+          ],
+          "independent_derivative_relative_error": 2.4072382204331722e-14
+        }
+      ]
+    },
+    {
+      "L": 5,
+      "common_massless_residue": -190.2011237017294,
+      "isolated": [
+        {
+          "q": [
+            -3.7957424506517916,
+            0.0
+          ],
+          "residual": 3.176373552203626e-20,
+          "residue": [
+            51.22413997703731,
+            0.0
+          ],
+          "independent_derivative_relative_error": 3.1932139224477574e-14
+        },
+        {
+          "q": [
+            -25.38223293636976,
+            30.448007263581488
+          ],
+          "residual": 3.090451682267672e-19,
+          "residue": [
+            47.103304364979685,
+            20.599648717186717
+          ],
+          "independent_derivative_relative_error": 5.804313931124808e-14
+        },
+        {
+          "q": [
+            -25.38223293636976,
+            -30.448007263581488
+          ],
+          "residual": 3.090451682267672e-19,
+          "residue": [
+            47.103304364979685,
+            -20.599648717186717
+          ],
+          "independent_derivative_relative_error": 5.804313931124808e-14
+        }
+      ]
+    },
+    {
+      "L": 10,
+      "common_massless_residue": -190.2011237017294,
+      "isolated": [
+        {
+          "q": [
+            -3.747301964001776,
+            0.0
+          ],
+          "residual": 6.591158845429522e-20,
+          "residue": [
+            57.220118706348984,
+            0.0
+          ],
+          "independent_derivative_relative_error": 3.222042858214147e-14
+        }
+      ]
+    },
+    {
+      "L": 30,
+      "common_massless_residue": -190.2011237017294,
+      "isolated": [
+        {
+          "q": [
+            -3.7136858055899915,
+            0.0
+          ],
+          "residual": 4.2944570425793027e-19,
+          "residue": [
+            60.984961137733904,
+            0.0
+          ],
+          "independent_derivative_relative_error": 3.257658899580296e-14
+        },
+        {
+          "q": [
+            34.27684339947051,
+            0.0
+          ],
+          "residual": 2.168404344971009e-19,
+          "residue": [
+            76.30230108195981,
+            0.0
+          ],
+          "independent_derivative_relative_error": 1.342873295201441e-13
+        }
+      ]
+    },
+    {
+      "L": 100,
+      "common_massless_residue": -190.2011237017294,
+      "isolated": [
+        {
+          "q": [
+            -3.7016942466970897,
+            0.0
+          ],
+          "residual": 2.8900764160316728e-18,
+          "residue": [
+            62.260846393294486,
+            0.0
+          ],
+          "independent_derivative_relative_error": 3.3085513495567653e-14
+        },
+        {
+          "q": [
+            27.599360810303313,
+            0.0
+          ],
+          "residual": 6.776263578034403e-18,
+          "residue": [
+            71.43258602886627,
+            0.0
+          ],
+          "independent_derivative_relative_error": 1.1298991256514235e-13
+        }
+      ]
+    }
+  ],
+  "stable_uv_wrapper_checks": [
+    {
+      "L": 3,
+      "R": 256,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 3,
+      "R": 256,
+      "lower_cut": true,
+      "relative_error": 0.0
+    },
+    {
+      "L": 3,
+      "R": 1024,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 3,
+      "R": 1024,
+      "lower_cut": true,
+      "relative_error": 2.3523359286582743e-20
+    },
+    {
+      "L": 3,
+      "R": 4096,
+      "lower_cut": false,
+      "relative_error": 7.368855950729579e-20
+    },
+    {
+      "L": 3,
+      "R": 4096,
+      "lower_cut": true,
+      "relative_error": 8.361772021911566e-20
+    },
+    {
+      "L": 5,
+      "R": 416,
+      "lower_cut": false,
+      "relative_error": 6.103594851747929e-20
+    },
+    {
+      "L": 5,
+      "R": 416,
+      "lower_cut": true,
+      "relative_error": 1.2385907164443794e-19
+    },
+    {
+      "L": 5,
+      "R": 1664,
+      "lower_cut": false,
+      "relative_error": 7.100047134050305e-20
+    },
+    {
+      "L": 5,
+      "R": 1664,
+      "lower_cut": true,
+      "relative_error": 0.0
+    },
+    {
+      "L": 5,
+      "R": 6656,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 5,
+      "R": 6656,
+      "lower_cut": true,
+      "relative_error": 0.0
+    },
+    {
+      "L": 10,
+      "R": 816,
+      "lower_cut": false,
+      "relative_error": 9.913707629897625e-20
+    },
+    {
+      "L": 10,
+      "R": 816,
+      "lower_cut": true,
+      "relative_error": 3.579160722362885e-20
+    },
+    {
+      "L": 10,
+      "R": 3264,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 10,
+      "R": 3264,
+      "lower_cut": true,
+      "relative_error": 8.967104350241968e-20
+    },
+    {
+      "L": 10,
+      "R": 13056,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 10,
+      "R": 13056,
+      "lower_cut": true,
+      "relative_error": 0.0
+    },
+    {
+      "L": 30,
+      "R": 2416,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 30,
+      "R": 2416,
+      "lower_cut": true,
+      "relative_error": 7.914667093222474e-20
+    },
+    {
+      "L": 30,
+      "R": 9664,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 30,
+      "R": 9664,
+      "lower_cut": true,
+      "relative_error": 6.395693243811054e-20
+    },
+    {
+      "L": 30,
+      "R": 38656,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 30,
+      "R": 38656,
+      "lower_cut": true,
+      "relative_error": 0.0
+    },
+    {
+      "L": 100,
+      "R": 8016,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 100,
+      "R": 8016,
+      "lower_cut": true,
+      "relative_error": 3.85491268274328e-20
+    },
+    {
+      "L": 100,
+      "R": 32064,
+      "lower_cut": false,
+      "relative_error": 6.151351466332432e-20
+    },
+    {
+      "L": 100,
+      "R": 32064,
+      "lower_cut": true,
+      "relative_error": 8.511355350934529e-20
+    },
+    {
+      "L": 100,
+      "R": 128256,
+      "lower_cut": false,
+      "relative_error": 0.0
+    },
+    {
+      "L": 100,
+      "R": 128256,
+      "lower_cut": true,
+      "relative_error": 0.0
+    }
+  ],
+  "conformal_cauchy": [
+    {
+      "L": 3,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "exact_difference": [
+        -188.64911862589204,
+        0.0
+      ],
+      "pole_difference": [
+        -188.5517853858039,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            -0.09736422117870563,
+            -2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -0.097332906406786,
+            2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            -0.09733324007778324,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 5.492738581471628e-14,
+      "omitting_extra_poles_error": 0.00013798930954528828
+    },
+    {
+      "L": 3,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "exact_difference": [
+        92.73136762602606,
+        0.0
+      ],
+      "pole_difference": [
+        92.56229753222372,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.1690832790587176,
+            -5.421010862427522e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.16906934805583806,
+            0.0
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.16907009378295526,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 2.0903526762111468e-13,
+      "omitting_extra_poles_error": 0.0003719601606374317
+    },
+    {
+      "L": 3,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "exact_difference": [
+        150.33018061252423,
+        71.17360994010637
+      ],
+      "pole_difference": [
+        150.26275443165815,
+        70.81957935733811
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.06755682174556936,
+            0.354089019602354
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.06742638992338057,
+            0.35402911588970837
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.0674261808624716,
+            0.3540305827280003
+          ]
+        }
+      ],
+      "relative_closure_error": 2.43030970314225e-13,
+      "omitting_extra_poles_error": 0.0005663364684391559
+    },
+    {
+      "L": 5,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "exact_difference": [
+        -188.45317429704113,
+        0.0
+      ],
+      "pole_difference": [
+        -188.3596914429118,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            -0.09319749665288433,
+            2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -0.09348532611141862,
+            0.0
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            -0.09348285429057407,
+            2.710505431213761e-20
+          ]
+        }
+      ],
+      "relative_closure_error": 8.556827660123947e-13,
+      "omitting_extra_poles_error": 0.0001558940020788289
+    },
+    {
+      "L": 5,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "exact_difference": [
+        92.46071365647076,
+        0.0
+      ],
+      "pole_difference": [
+        92.2985554752466,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.16162654482016098,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.16216284667062555,
+            5.421010862427522e-20
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.16215818153805328,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 3.3949784086724596e-12,
+      "omitting_extra_poles_error": 0.000576314681805847
+    },
+    {
+      "L": 5,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "exact_difference": [
+        150.0341060745386,
+        70.61371907570555
+      ],
+      "pole_difference": [
+        149.96880700636922,
+        70.27419811006709
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.06519493796048914,
+            0.3384203797196486
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.06529980959500127,
+            0.3395305725076711
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.0652990681921842,
+            0.3395209662767734
+          ]
+        }
+      ],
+      "relative_closure_error": 3.851922660167422e-12,
+      "omitting_extra_poles_error": 0.0006784752789046213
+    },
+    {
+      "L": 10,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "exact_difference": [
+        -188.27590899216443,
+        0.0
+      ],
+      "pole_difference": [
+        -188.185989947751,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            -0.08991904441308757,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -0.08991904441352222,
+            0.0
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            -0.08991904441324838,
+            2.710505431213761e-20
+          ]
+        }
+      ],
+      "relative_closure_error": 8.413241549931319e-16,
+      "omitting_extra_poles_error": 8.413241549931319e-16
+    },
+    {
+      "L": 10,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "exact_difference": [
+        92.19481901315355,
+        0.0
+      ],
+      "pole_difference": [
+        92.03947725650097,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.15534175665193747,
+            -5.421010862427522e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.155341756652745,
+            0.0
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.1553417566523119,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 2.9732046519972335e-15,
+      "omitting_extra_poles_error": 2.9732046519972335e-15
+    },
+    {
+      "L": 10,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "exact_difference": [
+        149.8204376329923,
+        70.07145513131638
+      ],
+      "pole_difference": [
+        149.75597208658272,
+        69.745857813881
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.06446554640954483,
+            0.32559731743407105
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.0644655464097095,
+            0.3255973174357351
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.0644655464094196,
+            0.32559731743483206
+          ]
+        }
+      ],
+      "relative_closure_error": 3.519257708919852e-15,
+      "omitting_extra_poles_error": 3.519257708919852e-15
+    },
+    {
+      "L": 30,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "exact_difference": [
+        -188.14123098328915,
+        0.0
+      ],
+      "pole_difference": [
+        -188.0460837161258,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            -0.0951472671641431,
+            -2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -0.09514726716369172,
+            -2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            -0.09514726716344926,
+            2.710505431213761e-20
+          ]
+        }
+      ],
+      "relative_closure_error": 4.604999596919043e-16,
+      "omitting_extra_poles_error": 0.00023415522814064117
+    },
+    {
+      "L": 30,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "exact_difference": [
+        91.97996726342373,
+        0.0
+      ],
+      "pole_difference": [
+        91.81497632044896,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.16499094297571051,
+            -5.421010862427522e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.16499094297487257,
+            0.0
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.16499094297448924,
+            -5.421010862427522e-20
+          ]
+        }
+      ],
+      "relative_closure_error": 2.983544386569479e-15,
+      "omitting_extra_poles_error": 0.0009690405099703447
+    },
+    {
+      "L": 30,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "exact_difference": [
+        149.69122705672433,
+        69.64333289218875
+      ],
+      "pole_difference": [
+        149.62462147528763,
+        69.29785512672487
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.06660558143691542,
+            0.34547776546590453
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.06660558143674405,
+            0.3454777654641814
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.06660558143648691,
+            0.34547776546338216
+          ]
+        }
+      ],
+      "relative_closure_error": 3.2663754876726064e-15,
+      "omitting_extra_poles_error": 0.0010599316495047003
+    },
+    {
+      "L": 100,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "exact_difference": [
+        -188.09069519284748,
+        0.0
+      ],
+      "pole_difference": [
+        -187.99505522187675,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            -0.095639970969707,
+            5.421010862427522e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -0.09563997096968666,
+            2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            -0.09563997096945413,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 6.769832719330759e-15,
+      "omitting_extra_poles_error": 0.00032714621754787327
+    },
+    {
+      "L": 100,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "exact_difference": [
+        91.89654122924577,
+        0.0
+      ],
+      "pole_difference": [
+        91.73068228555019,
+        0.0
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.16585894369552215,
+            2.710505431213761e-20
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.165858943695488,
+            0.0
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.16585894369512047,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 5.108018511104008e-15,
+      "omitting_extra_poles_error": 0.0013742411285342408
+    },
+    {
+      "L": 100,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "exact_difference": [
+        149.64987622664796,
+        69.47994075092761
+      ],
+      "pole_difference": [
+        149.58296006194902,
+        69.13264820145933
+      ],
+      "outer_boundaries": [
+        {
+          "nodes": 128,
+          "value": [
+            0.06691616469901523,
+            0.3472925494687115
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.0669161646989985,
+            0.3472925494686406
+          ]
+        },
+        {
+          "nodes": 512,
+          "value": [
+            0.06691616469875176,
+            0.34729254946787425
+          ]
+        }
+      ],
+      "relative_closure_error": 2.6781173570955237e-15,
+      "omitting_extra_poles_error": 0.001487731179322964
+    }
+  ],
+  "slit_cut_diagnostics": [
+    {
+      "L": 3,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 256.0,
+      "exact_difference": [
+        -188.64911862589204,
+        0.0
+      ],
+      "pole_difference": [
+        -189.17790055550103,
+        0.0
+      ],
+      "cut_difference": [
+        0.5287819266603443,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 7.137746023587021e-12,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            2.9486526224491675e-09,
+            -5.240560765564226e-26
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            2.9486526208819233e-09,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            2.948652621157319e-09,
+            8.271806125530277e-25
+          ]
+        }
+      ],
+      "relative_closure_error": 2.7218687933941938e-18,
+      "relative_error_without_outer": 1.5630357367037684e-11,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 3,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 1024.0,
+      "exact_difference": [
+        -188.64911862589204,
+        0.0
+      ],
+      "pole_difference": [
+        -189.17790055550103,
+        0.0
+      ],
+      "cut_difference": [
+        0.5287819296083953,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 1.7898978766536298e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            6.015469023200156e-13,
+            -1.3505298697383722e-27
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            6.015468785911943e-13,
+            -1.2924697071141057e-26
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            6.015468827619852e-13,
+            -1.2924697071141057e-26
+          ]
+        }
+      ],
+      "relative_closure_error": 3.016124879166539e-18,
+      "relative_error_without_outer": 3.191722198351186e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 3,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 256.0,
+      "exact_difference": [
+        92.73136762602606,
+        0.0
+      ],
+      "pole_difference": [
+        93.5629042403454,
+        0.0
+      ],
+      "cut_difference": [
+        -0.8315366084515998,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 1.3144929877067372e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -5.867740407463108e-09,
+            6.361374339702239e-25
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -5.867740404347194e-09,
+            1.6543612251060553e-24
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -5.867740404895041e-09,
+            -1.6543612251060553e-24
+          ]
+        }
+      ],
+      "relative_closure_error": 3.2175998856321124e-18,
+      "relative_error_without_outer": 6.327675582189371e-11,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 3,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 1024.0,
+      "exact_difference": [
+        92.73136762602606,
+        0.0
+      ],
+      "pole_difference": [
+        93.5629042403454,
+        0.0
+      ],
+      "cut_difference": [
+        -0.8315366143181386,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 3.437419245266029e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.2015840380253622e-12,
+            -8.614361085013449e-27
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.2015839906456e-12,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.2015839990022519e-12,
+            -2.5849394142282115e-26
+          ]
+        }
+      ],
+      "relative_closure_error": 3.1427719813150866e-18,
+      "relative_error_without_outer": 1.2954580934885105e-14,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 3,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 256.0,
+      "exact_difference": [
+        150.33018061252423,
+        71.17360994010637
+      ],
+      "pole_difference": [
+        150.90769478623,
+        72.91704908492484
+      ],
+      "cut_difference": [
+        -0.5775141736268113,
+        -1.7434391330441676
+      ],
+      "cut_quadrature_error_estimate": 3.104848351144835e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -7.897013410527122e-11,
+            -1.1774293164404525e-08
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -7.897013405448548e-11,
+            -1.1774293158148765e-08
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -7.897013406273082e-11,
+            -1.177429315924821e-08
+          ]
+        }
+      ],
+      "relative_closure_error": 4.300219144891659e-18,
+      "relative_error_without_outer": 7.079139354962474e-11,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 3,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 1024.0,
+      "exact_difference": [
+        150.33018061252423,
+        71.17360994010637
+      ],
+      "pole_difference": [
+        150.90769478623,
+        72.91704908492484
+      ],
+      "cut_difference": [
+        -0.5775141737057774,
+        -1.7434391448160556
+      ],
+      "cut_quadrature_error_estimate": 7.47832926291731e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -4.027750940507699e-15,
+            -2.4051733545576923e-12
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -4.027750715601953e-15,
+            -2.4051732596997123e-12
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -4.027750762596151e-15,
+            -2.4051732764213106e-12
+          ]
+        }
+      ],
+      "relative_closure_error": 3.736055362313369e-18,
+      "relative_error_without_outer": 1.4457227742083476e-14,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 5,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 416.0,
+      "exact_difference": [
+        -188.45317429704113,
+        0.0
+      ],
+      "pole_difference": [
+        -188.97498165149838,
+        0.0
+      ],
+      "cut_difference": [
+        0.5218073519031536,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 2.300456786299286e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            2.5541047032243946e-09,
+            -1.2028551082809988e-26
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            2.554104702629256e-09,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            2.5541047027337756e-09,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 1.2518886647193502e-18,
+      "relative_error_without_outer": 1.3552992562289222e-11,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 5,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 1664.0,
+      "exact_difference": [
+        -188.45317429704113,
+        0.0
+      ],
+      "pole_difference": [
+        -188.97498165149838,
+        0.0
+      ],
+      "cut_difference": [
+        0.5218073544567293,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 3.198127173249558e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            5.290638129469529e-13,
+            1.5623390227902139e-27
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            5.29063803867477e-13,
+            -3.2311742677852644e-27
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            5.290638054753552e-13,
+            -3.2311742677852644e-27
+          ]
+        }
+      ],
+      "relative_closure_error": 1.4728101937874707e-18,
+      "relative_error_without_outer": 2.8059243406942e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 5,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 416.0,
+      "exact_difference": [
+        92.46071365647076,
+        0.0
+      ],
+      "pole_difference": [
+        93.2894923036868,
+        0.0
+      ],
+      "cut_difference": [
+        -0.8287786421236312,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 4.10945375004349e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -5.092415192178374e-09,
+            2.2350638255445883e-25
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -5.092415190992337e-09,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -5.0924151912011e-09,
+            -8.271806125530277e-25
+          ]
+        }
+      ],
+      "relative_closure_error": 1.7035656052138932e-17,
+      "relative_error_without_outer": 5.5076546185559826e-11,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 5,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 1664.0,
+      "exact_difference": [
+        92.46071365647076,
+        0.0
+      ],
+      "pole_difference": [
+        93.2894923036868,
+        0.0
+      ],
+      "cut_difference": [
+        -0.8287786472149891,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 5.88951021836662e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.057310031837843e-12,
+            1.2345673166708835e-28
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.0573100136706565e-12,
+            -6.462348535570529e-27
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.0573100168693458e-12,
+            1.2924697071141057e-26
+          ]
+        }
+      ],
+      "relative_closure_error": 1.696060910917797e-17,
+      "relative_error_without_outer": 1.1452163495843176e-14,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 5,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 416.0,
+      "exact_difference": [
+        150.0341060745386,
+        70.61371907570555
+      ],
+      "pole_difference": [
+        150.58466347926202,
+        72.35248294304043
+      ],
+      "cut_difference": [
+        -0.5505574046812346,
+        -1.7387638571291928
+      ],
+      "cut_quadrature_error_estimate": 9.65864715249669e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -4.216140753751272e-11,
+            -1.020568954328162e-08
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -4.216140752535898e-11,
+            -1.0205689540903258e-08
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -4.216140752753943e-11,
+            -1.020568954132158e-08
+          ]
+        }
+      ],
+      "relative_closure_error": 1.1806508195452967e-17,
+      "relative_error_without_outer": 6.154703195173889e-11,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 5,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 1664.0,
+      "exact_difference": [
+        150.0341060745386,
+        70.61371907570555
+      ],
+      "pole_difference": [
+        150.58466347926202,
+        72.35248294304043
+      ],
+      "cut_difference": [
+        -0.5505574047233939,
+        -1.7387638673327666
+      ],
+      "cut_quadrature_error_estimate": 1.3285597240236228e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -2.1808214792881354e-15,
+            -2.1157076082018725e-12
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -2.1808214297733338e-15,
+            -2.1157075718843752e-12
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -2.180821440901498e-15,
+            -2.1157075782862814e-12
+          ]
+        }
+      ],
+      "relative_closure_error": 1.15767596609286e-17,
+      "relative_error_without_outer": 1.2759837543046773e-14,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 10,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 816.0,
+      "exact_difference": [
+        -188.27590899216443,
+        0.0
+      ],
+      "pole_difference": [
+        -188.78220091450473,
+        0.0
+      ],
+      "cut_difference": [
+        0.5060393183350638,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 1.3108201427522306e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            0.000252604005224251,
+            1.6440214674491425e-23
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            0.00025260400522422787,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            0.0002526040052242332,
+            5.293955920339377e-23
+          ]
+        }
+      ],
+      "relative_closure_error": 4.2972838826089775e-17,
+      "relative_error_without_outer": 1.3416692904817197e-06,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 10,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 3264.0,
+      "exact_difference": [
+        -188.27590899216443,
+        0.0
+      ],
+      "pole_difference": [
+        -188.78220091450473,
+        0.0
+      ],
+      "cut_difference": [
+        0.5062788387248934,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 1.3116520817944132e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            1.3083615394562859e-05,
+            5.299125799167834e-25
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            1.3083615394553863e-05,
+            -6.617444900424222e-24
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            1.3083615394555986e-05,
+            -6.617444900424222e-24
+          ]
+        }
+      ],
+      "relative_closure_error": 4.304654866970228e-17,
+      "relative_error_without_outer": 6.949171284150308e-08,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 10,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 816.0,
+      "exact_difference": [
+        92.19481901315355,
+        0.0
+      ],
+      "pole_difference": [
+        93.00337135045466,
+        0.0
+      ],
+      "cut_difference": [
+        -0.8080477443770547,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 6.64142690802726e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -0.0005045929240638521,
+            3.1019272970738538e-24
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -0.000504592924063806,
+            -5.293955920339377e-23
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -0.0005045929240638167,
+            -5.293955920339377e-23
+          ]
+        }
+      ],
+      "relative_closure_error": 1.115403324792401e-16,
+      "relative_error_without_outer": 5.473115837252659e-06,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 10,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 3264.0,
+      "exact_difference": [
+        92.19481901315355,
+        0.0
+      ],
+      "pole_difference": [
+        93.00337135045466,
+        0.0
+      ],
+      "cut_difference": [
+        -0.8085261783138392,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 6.65798895342123e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -2.615898727941935e-05,
+            1.34416849539867e-24
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -2.615898727940153e-05,
+            1.3234889800848443e-23
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -2.6158987279405713e-05,
+            -1.3234889800848443e-23
+          ]
+        }
+      ],
+      "relative_closure_error": 1.1229296630163711e-16,
+      "relative_error_without_outer": 2.8373597940809936e-07,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 10,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 816.0,
+      "exact_difference": [
+        149.8204376329923,
+        70.07145513131638
+      ],
+      "pole_difference": [
+        150.3440781554501,
+        71.76795099056824
+      ],
+      "cut_difference": [
+        -0.5236388814906785,
+        -1.6954858566344129
+      ],
+      "cut_quadrature_error_estimate": 9.149821779456767e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.6409671041992231e-06,
+            -0.001010002617441925
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.6409671041990287e-06,
+            -0.0010100026174418325
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.6409671041990842e-06,
+            -0.0010100026174418538
+          ]
+        }
+      ],
+      "relative_closure_error": 6.429822817053725e-17,
+      "relative_error_without_outer": 6.10654282029137e-06,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 10,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 3264.0,
+      "exact_difference": [
+        149.8204376329923,
+        70.07145513131638
+      ],
+      "pole_difference": [
+        150.3440781554501,
+        71.76795099056824
+      ],
+      "cut_difference": [
+        -0.5236405004725295,
+        -1.6964435302974996
+      ],
+      "cut_quadrature_error_estimate": 1.1587437622789804e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -2.1985253199707134e-08,
+            -5.232895435518148e-05
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -2.1985253199697268e-08,
+            -5.2328954355145696e-05
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -2.1985253199693244e-08,
+            -5.232895435515413e-05
+          ]
+        }
+      ],
+      "relative_closure_error": 6.448894209493376e-17,
+      "relative_error_without_outer": 3.1638393944104024e-07,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 30,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 2416.0,
+      "exact_difference": [
+        -188.14123098328915,
+        0.0
+      ],
+      "pole_difference": [
+        -188.6319632723883,
+        0.0
+      ],
+      "cut_difference": [
+        0.49074276554380775,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 6.260601376195077e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            6.146510527919632e-12,
+            -4.76767809592949e-29
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            6.146510529646115e-12,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            6.146510529339501e-12,
+            8.077935669463161e-28
+          ]
+        }
+      ],
+      "relative_closure_error": 5.568397071807905e-08,
+      "relative_error_without_outer": 5.568393804839883e-08,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 30,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 9664.0,
+      "exact_difference": [
+        -188.14123098328915,
+        0.0
+      ],
+      "pole_difference": [
+        -188.6319632723883,
+        0.0
+      ],
+      "cut_difference": [
+        0.49074276554995294,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 6.262655864354025e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            1.3006289006546597e-15,
+            -8.08890576642639e-31
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            1.3006289273181232e-15,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            1.3006289227007933e-15,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 5.568397071800529e-08,
+      "relative_error_without_outer": 5.568397071107161e-08,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 30,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 2416.0,
+      "exact_difference": [
+        91.97996726342373,
+        0.0
+      ],
+      "pole_difference": [
+        92.76516008702383,
+        0.0
+      ],
+      "cut_difference": [
+        -0.7852136983169248,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 6.521712477352377e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.228645723440032e-11,
+            -5.525970641073188e-28
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.2286457237850007e-11,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.2286457237243866e-11,
+            -1.6155871338926322e-27
+          ]
+        }
+      ],
+      "relative_closure_error": 2.269486469523195e-07,
+      "relative_error_without_outer": 2.2694851337479234e-07,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 30,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 9664.0,
+      "exact_difference": [
+        91.97996726342373,
+        0.0
+      ],
+      "pole_difference": [
+        92.76516008702383,
+        0.0
+      ],
+      "cut_difference": [
+        -0.7852136983292086,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 6.525815304744786e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -2.600911470423767e-15,
+            -1.7365725122550828e-29
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -2.6009115237588177e-15,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -2.6009115143363822e-15,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 2.2694864695216862e-07,
+      "relative_error_without_outer": 2.2694864692387892e-07,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 30,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 2416.0,
+      "exact_difference": [
+        149.69122705672433,
+        69.64333289218875
+      ],
+      "pole_difference": [
+        150.1953264070231,
+        71.29113819562636
+      ],
+      "cut_difference": [
+        -0.5040995590138585,
+        -1.6478471559325374
+      ],
+      "cut_quadrature_error_estimate": 1.573658752436369e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.7506691797428258e-14,
+            -2.4581651925102852e-11
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.750669180482653e-14,
+            -2.4581651932007147e-11
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.7506691805518002e-14,
+            -2.4581651930791017e-11
+          ]
+        }
+      ],
+      "relative_closure_error": 2.535027905971713e-07,
+      "relative_error_without_outer": 2.535026417080746e-07,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 30,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 9664.0,
+      "exact_difference": [
+        149.69122705672433,
+        69.64333289218875
+      ],
+      "pole_difference": [
+        150.1953264070231,
+        71.29113819562636
+      ],
+      "cut_difference": [
+        -0.504099559013876,
+        -1.6478471559571137
+      ],
+      "cut_quadrature_error_estimate": 1.5744820232043467e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -9.235912292699082e-19,
+            -5.202284527320156e-15
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -9.235913025601923e-19,
+            -5.202284633837638e-15
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -9.235912464185394e-19,
+            -5.2022846150218914e-15
+          ]
+        }
+      ],
+      "relative_closure_error": 2.5350279059654217e-07,
+      "relative_error_without_outer": 2.53502790565021e-07,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 100,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 8016.0,
+      "exact_difference": [
+        -188.09069519284748,
+        0.0
+      ],
+      "pole_difference": [
+        -188.57575605884705,
+        0.0
+      ],
+      "cut_difference": [
+        0.4850608660006613,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 2.490901342807743e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            3.812546668135406e-14,
+            -3.019858152799186e-31
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            3.8125466703567857e-14,
+            1.262177448353619e-29
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            3.812546669978319e-14,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 6.0136366347957965e-15,
+      "relative_error_without_outer": 5.810956310450247e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 100,
+      "q": [
+        0.5,
+        0.0
+      ],
+      "R": 32064.0,
+      "exact_difference": [
+        -188.09069519284748,
+        0.0
+      ],
+      "pole_difference": [
+        -188.57575605884705,
+        0.0
+      ],
+      "cut_difference": [
+        0.4850608660006994,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 2.4909138577472426e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            8.125951548280322e-18,
+            -7.727793901853784e-33
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            8.125951890130214e-18,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            8.125951832861107e-18,
+            0.0
+          ]
+        }
+      ],
+      "relative_closure_error": 6.013784199647887e-15,
+      "relative_error_without_outer": 6.013710417221842e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 100,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 8016.0,
+      "exact_difference": [
+        91.89654122924577,
+        0.0
+      ],
+      "pole_difference": [
+        92.67315159106434,
+        0.0
+      ],
+      "cut_difference": [
+        -0.7766103618187251,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 4.205313529375713e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -7.623865847336162e-14,
+            2.1308488904700377e-30
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -7.6238658516947e-14,
+            0.0
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -7.623865850931561e-14,
+            -5.048709793414476e-29
+          ]
+        }
+      ],
+      "relative_closure_error": 2.6552272900260526e-15,
+      "relative_error_without_outer": 1.8256244964666544e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 100,
+      "q": [
+        2.0,
+        0.0
+      ],
+      "R": 32064.0,
+      "exact_difference": [
+        91.89654122924577,
+        0.0
+      ],
+      "pole_difference": [
+        92.67315159106434,
+        0.0
+      ],
+      "cut_difference": [
+        -0.7766103618188014,
+        0.0
+      ],
+      "cut_quadrature_error_estimate": 4.205338547898386e-11,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.6251250910911898e-17,
+            5.525011527960883e-32
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.6251251591633646e-17,
+            -7.888609052210118e-31
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.6251251466659158e-17,
+            3.944304526105059e-31
+          ]
+        }
+      ],
+      "relative_closure_error": 2.655755843730878e-15,
+      "relative_error_without_outer": 2.655604828386642e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 100,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 8016.0,
+      "exact_difference": [
+        149.64987622664796,
+        69.47994075092761
+      ],
+      "pole_difference": [
+        150.14699874380636,
+        71.10979990027045
+      ],
+      "cut_difference": [
+        -0.49712251715844297,
+        -1.6298591493426178
+      ],
+      "cut_quadrature_error_estimate": 1.0367024995499567e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -3.273482986743932e-17,
+            -1.5249367540326016e-13
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -3.273482984746818e-17,
+            -1.524936754910523e-13
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -3.273482970645772e-17,
+            -1.5249367547554402e-13
+          ]
+        }
+      ],
+      "relative_closure_error": 4.670765037502416e-16,
+      "relative_error_without_outer": 1.3583706100099484e-15,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    },
+    {
+      "L": 100,
+      "q": [
+        1.0,
+        2.0
+      ],
+      "R": 32064.0,
+      "exact_difference": [
+        149.64987622664796,
+        69.47994075092761
+      ],
+      "pole_difference": [
+        150.14699874380636,
+        71.10979990027045
+      ],
+      "cut_difference": [
+        -0.497122517158443,
+        -1.6298591493427703
+      ],
+      "cut_quadrature_error_estimate": 1.0367075082579486e-10,
+      "outer_boundaries": [
+        {
+          "nodes": 64,
+          "value": [
+            -1.739256059869102e-21,
+            -3.2503371313456453e-17
+          ]
+        },
+        {
+          "nodes": 128,
+          "value": [
+            -1.7392499294387996e-21,
+            -3.250337266163212e-17
+          ]
+        },
+        {
+          "nodes": 256,
+          "value": [
+            -1.7392514937499747e-21,
+            -3.25033724298124e-17
+          ]
+        }
+      ],
+      "relative_closure_error": 4.66699936391435e-16,
+      "relative_error_without_outer": 4.668880894585411e-16,
+      "interpretation": "Diagnostic closure with known poles; no proof that the uncounted collar contains no further poles."
+    }
+  ]
+}

@@ -1,12 +1,15 @@
 # Quantum-to-Einstein gravity research
 
-An exploratory research notebook, not a demonstrated unified theory. Start with [RESEARCH_STATUS.md](RESEARCH_STATUS.md) for current results, limits, and next calculations.
+An exploratory research notebook, not a demonstrated unified theory.
 
-## November 21 FFZ benchmark
+## Start here
 
-[Review packet for the interacting Newton matching calculation](bots/gpt/research_batches/2026-11-21-ffz/README.md). It includes the current pole checks and the unresolved FFff graphs and counterterms.
+1. [docs/README.md](docs/README.md) — documentation map  
+2. [docs/OVERNIGHT_SUMMARY.md](docs/OVERNIGHT_SUMMARY.md) — overnight program through Round 8  
+3. [docs/INDEX.md](docs/INDEX.md) — every doc with a one-line summary  
+4. [RESEARCH_STATUS.md](RESEARCH_STATUS.md) — pre-overnight verified checks and limits  
 
-## Reproduce the current checks
+## Reproduce checks
 
 Requires Python 3.10+ and NumPy/SciPy.
 
@@ -15,17 +18,25 @@ python -m pip install -r requirements.txt
 python scripts/run_checks.py
 ```
 
-Scripts write results under experiments/ relative to the repository, independent of the working directory. Existing reports describe the original exploratory runs; scripts are the executable reproduction source. See each report for conventions and scope.
+Scripts write results under `experiments/` (live paths for CI). Organized copies also live under `results/experiments/`.
 
-## Contents
+## Layout (consolidated)
 
-- `scripts/`: full scalar-response scan, source projection, metric tensor/contact Ward check, continuum spectral check.
-- `experiments/`: calculation reports and numerical results.
-- [RESEARCH_STATUS.md](RESEARCH_STATUS.md): verified checks, assumptions, unresolved issues, next work.
-- [docs/POSSIBILITY_CLOUD_ORIGINAL.md](docs/POSSIBILITY_CLOUD_ORIGINAL.md): earlier qualitative Possibility Cloud proposal, preserved verbatim. Its claims are hypotheses, not established conclusions of the current calculations.
+| Path | Contents |
+| --- | --- |
+| `docs/` | Overviews, ladder, boundary picture, INDEX |
+| `docs/rounds/` | Per-rung `FFFF_*.md` notes |
+| `analysis/ffz/` | FFZ Python modules + `tests/` |
+| `scripts/` | Scalar/metric scans + `run_checks.py` |
+| `results/` | Organized json/npz/png copies |
+| `experiments/` | Pre-FFZ experiment reports + live CI results |
+| `gpt_physics/` | Imported local archive (smooth_hopf, coupled_stability, …) |
+| `bots/gpt/research_batches/2026-11-01/` | Earlier local work (paths kept from `main`) |
+| `bots/gpt/research_batches/2026-11-21-ffz/` | Original FFZ packet checkpoints (review code moved to `analysis/ffz/`) |
 
-Current numerical work concerns a free, leading-N, auxiliary-metric scalar determinant. Equivalence to constrained CEV is not established here. Passing numerical identities does not prove physical unitarity, UV completion, experimental validity, novelty, or unification.
+## November 21 FFZ benchmark
 
-## November 1 field and dimension follow-up
+Original packet notes: [bots/gpt/research_batches/2026-11-21-ffz/README.md](bots/gpt/research_batches/2026-11-21-ffz/README.md).  
+Runnable analysis: `analysis/ffz/`. Overnight lead and ruled-out branches: [docs/OVERNIGHT_SUMMARY.md](docs/OVERNIGHT_SUMMARY.md).
 
-[Latest discussion, reports, and computation archive links](bots/gpt/research_batches/2026-11-01/README.md). The field model is a separate exploratory line from the CEV calculations. Its best tested configuration is not a certified full equilibrium. Raw-file transfer coverage is explicitly documented in the batch.
+Current numerical work includes free leading-N auxiliary-metric scalar checks and the interacting FFZ Newton simple-pole ledger. Passing identities do not prove physical unitarity, UV completion, experimental validity, novelty, or unification.

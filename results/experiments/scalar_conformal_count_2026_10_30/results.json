@@ -1,0 +1,224 @@
+{
+  "scope": "Free scalar PV determinant or explicitly Lref=10 matched version, whole first-sheet conformal disk |w|<4/5. Not global first-sheet control or physical viability.",
+  "versions": {
+    "python": "3.12.14"
+  },
+  "map": {
+    "q_of_w": "16w/(1-w)^2",
+    "w_of_q": "(sqrt(1+q/4)-1)/(sqrt(1+q/4)+1)",
+    "principal_sqrt": "positive at q=0, Re sqrt>0 off cut",
+    "function": "G(w)=4(1-w)^4 A(q(w))/(C w), removable at w=0"
+  },
+  "counts": [
+    {
+      "L": 3,
+      "matched_to_L10": false,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 1,
+      "accepted_arc_boxes": 259,
+      "total_interval_boxes": 514,
+      "maximum_bisection_depth": 10,
+      "log_tail_bound": "4.64659734319314015108956746083422600237978116216098280920375E-11",
+      "minimum_component_gap_after_tail": "0.000299259157461658209530687363058318588294148024076533770955271",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 963.0174767918147,
+      "polynomial_second_derivative_bound": 5002.575787022231,
+      "elapsed_seconds": 7.079663957999969
+    },
+    {
+      "L": 3,
+      "matched_to_L10": true,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 3,
+      "accepted_arc_boxes": 99,
+      "total_interval_boxes": 194,
+      "maximum_bisection_depth": 7,
+      "log_tail_bound": "4.64659734319314015108956746083422600237978116216098280920375E-11",
+      "minimum_component_gap_after_tail": "1.10651676518007057971529920802045503221982486817981426260439",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 881.8821760006208,
+      "polynomial_second_derivative_bound": 4912.304207551531,
+      "elapsed_seconds": 2.6046153310001046
+    },
+    {
+      "L": 5,
+      "matched_to_L10": false,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 1,
+      "accepted_arc_boxes": 172,
+      "total_interval_boxes": 340,
+      "maximum_bisection_depth": 9,
+      "log_tail_bound": "1.20633035558765257948948998364869082840092389918869028391348E-10",
+      "minimum_component_gap_after_tail": "0.000677990891191142036605111725389977054388871699377076168272971",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 1022.3925643675778,
+      "polynomial_second_derivative_bound": 5819.149230242807,
+      "elapsed_seconds": 4.555710708999982
+    },
+    {
+      "L": 5,
+      "matched_to_L10": true,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 3,
+      "accepted_arc_boxes": 103,
+      "total_interval_boxes": 202,
+      "maximum_bisection_depth": 7,
+      "log_tail_bound": "1.20633035558765257948948998364869082840092389918869028391348E-10",
+      "minimum_component_gap_after_tail": "0.0416536185268449320091439819489921135092521052902309423878309",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 958.7026797072085,
+      "polynomial_second_derivative_bound": 5752.273136400613,
+      "elapsed_seconds": 2.914656251999986
+    },
+    {
+      "L": 10,
+      "matched_to_L10": false,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 1,
+      "accepted_arc_boxes": 116,
+      "total_interval_boxes": 228,
+      "maximum_bisection_depth": 8,
+      "log_tail_bound": "4.55218043314685349520524189140727249599316388468159237158753E-10",
+      "minimum_component_gap_after_tail": "0.00706113080944411177644217316014043637287238974684914627224576",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 899.8309589519428,
+      "polynomial_second_derivative_bound": 5861.428011443572,
+      "elapsed_seconds": 3.0040127449999545
+    },
+    {
+      "L": 10,
+      "matched_to_L10": true,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 1,
+      "accepted_arc_boxes": 116,
+      "total_interval_boxes": 228,
+      "maximum_bisection_depth": 8,
+      "log_tail_bound": "4.55218043314685349520524189140727249599316388468159237158753E-10",
+      "minimum_component_gap_after_tail": "0.00706113080944411177644217316014043637287238974684914627224576",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 899.8309589519428,
+      "polynomial_second_derivative_bound": 5861.428011443572,
+      "elapsed_seconds": 3.1950830470000255
+    },
+    {
+      "L": 30,
+      "matched_to_L10": false,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 0,
+      "accepted_arc_boxes": 56,
+      "total_interval_boxes": 108,
+      "maximum_bisection_depth": 7,
+      "log_tail_bound": "3.93043278449958767476481764218972544375098744426710577320483E-9",
+      "minimum_component_gap_after_tail": "0.863470386919365650086169288846432439587829411310333301481324",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 698.4528188981925,
+      "polynomial_second_derivative_bound": 4360.058212319167,
+      "elapsed_seconds": 1.5631344700000227
+    },
+    {
+      "L": 30,
+      "matched_to_L10": true,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 2,
+      "accepted_arc_boxes": 68,
+      "total_interval_boxes": 132,
+      "maximum_bisection_depth": 5,
+      "log_tail_bound": "3.93043278449958767476481764218972544375098744426710577320483E-9",
+      "minimum_component_gap_after_tail": "4.50488848703509364760134118422800711501589469132963182083619",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 705.9405689456871,
+      "polynomial_second_derivative_bound": 4652.940730122338,
+      "elapsed_seconds": 1.9034261890000153
+    },
+    {
+      "L": 100,
+      "matched_to_L10": false,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 0,
+      "accepted_arc_boxes": 35,
+      "total_interval_boxes": 66,
+      "maximum_bisection_depth": 6,
+      "log_tail_bound": "4.30270141078260402217510559781203293345973123571785574959940E-8",
+      "minimum_component_gap_after_tail": "2.28191295787213851609535310254343084723846730784711301198054",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 2332.0687455990064,
+      "polynomial_second_derivative_bound": 3968.5821282546794,
+      "elapsed_seconds": 1.0628306270000394
+    },
+    {
+      "L": 100,
+      "matched_to_L10": true,
+      "N": 128,
+      "w_radius": "4/5",
+      "path_center": [
+        "0",
+        "0"
+      ],
+      "path_radius": "4/5",
+      "zeros_excluding_massless": 2,
+      "accepted_arc_boxes": 58,
+      "total_interval_boxes": 112,
+      "maximum_bisection_depth": 5,
+      "log_tail_bound": "4.30270141078260402217510559781203293345973123571785574959940E-8",
+      "minimum_component_gap_after_tail": "1.58915206175885101171658895047998408498197560129540040316414",
+      "decimal_precision": 60,
+      "polynomial_derivative_bound": 639.1897215899738,
+      "polynomial_second_derivative_bound": 3374.6271842227998,
+      "elapsed_seconds": 1.62300401899995
+    }
+  ]
+}
