@@ -37,7 +37,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★ | **Overnight I:** Running \(1/G_{\mathrm{ind}}(\mu)\) | **done** | Sign \(+\) at confinement band; crossover \(=\Lambda_{\mathrm{QCD}}\) by construction (flag) | [#38](https://github.com/dawimberly/Unified-field-theory/pull/38) |
 | ★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight J:** Confinement snap vs #26 yield | **done (analogy only)** | HI rate-dependence empirical; FFZ/KFD map **not** derived | [#39](https://github.com/dawimberly/Unified-field-theory/pull/39) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight L:** UV→IR curvature matching | **done (positive; narrowed)** | Matched \(a_1=1/3\pm0.29\in[1/6,3/4]\) all \(+\); ρ model **assumed** | [#40](https://github.com/dawimberly/Unified-field-theory/pull/40) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight M:** Spectral total \(1/G_{\mathrm{ind}}\) | **done (negative)** | Integrated \(S<0\); hadronic IR does not flip UV Kabats; \(\Lambda\sim M_{\mathrm{Pl}}\) **assumed** | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight M:** Spectral total \(1/G_{\mathrm{ind}}\) | **done (negative)** | Integrated \(S<0\); hadronic IR does not flip UV Kabats; \(\Lambda\sim M_{\mathrm{Pl}}\) **assumed** | [#41](https://github.com/dawimberly/Unified-field-theory/pull/41) |
 
 ## How to read status
 
