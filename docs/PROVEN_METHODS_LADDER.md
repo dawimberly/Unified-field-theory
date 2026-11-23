@@ -45,7 +45,7 @@ Prescription throughout: \(\xi=1/6\), \(a_X=0\), \(a_Y=-1\), \(L=0\), units \(h^
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight R:** Decompose \(S\); minimal UV flip | **done** | UV gauge Kabats dominate \(S\sim-265\); all-Proca-12 flips; conformal ξ does not | [#45](https://github.com/dawimberly/Unified-field-theory/pull/45) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight S:** GUT SU(5)/SO(10) spectra | **done (conditional)** | Broken local \(a_1+\); SU(5) Planck→GUT does **not** flip (no Higgs); not a theorem | [#46](https://github.com/dawimberly/Unified-field-theory/pull/46) |
 | ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight T:** Round-4 summary | **done** | Lead = IR positivity + UV-Kabat diagnosis; Proca/GUT flip assumed, not theorem | [#47](https://github.com/dawimberly/Unified-field-theory/pull/47) |
-| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight U:** UV full-mass mechanisms | **done** | 4 survivors with \(\Delta a_1\ge4.2\); Stueckelberg-SM & asymp. safety fail count | *(stacked)* |
+| ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ | **Overnight U:** UV full-mass mechanisms | **done** | 4 survivors with \(\Delta a_1\ge4.2\); Stueckelberg-SM & asymp. safety fail count | [#48](https://github.com/dawimberly/Unified-field-theory/pull/48) |
 
 ## How to read status
 
