@@ -1435,3 +1435,150 @@ The source of truth for experimental rows is `results/stage15_datapoints.csv` (s
 ### 15.7 Verdict
 
 The ultra-local continuous model has been ruled out since the 2023 paper and stays ruled out. Two windows remain if one uses only absolute, on-Earth force noise and the Pedalino 2025 coherence floor: about **10 orders** in the ultra-local discrete model, and about **3.7 orders** in the non-local / Diósi–Penrose-like model. Janse 2024 did the large move on the upper side (~15 orders of FOM below Cavendish, conservative); Pedalino did the large move on the non-local lower side (~5 orders above 2011). A $10^6\,\mathrm{amu}$, $0.1\,\mathrm{s}$ interferometer would essentially close the non-local conservative window from below; closing the discrete window from below wants a MAQRO-class mass and time, or a ten-order improvement in an *absolute* FOM. Treating Asenbaum 2017 as an absolute acceleration measurement would already close both remaining windows — that is a temptation, not a result. The 2026 dimensionless relativistic accounting is a separate, still-open window of ~4.5 orders and still sits on the 2011 floor.
+
+---
+
+## Stage 17 — Experiment survey against the Oppenheim windows
+
+Scripts: `scripts/stage17_run.py` (reuses the Stage-15 formulae), `scripts/stage17_fig.py`. Data: 11 new rows in `results/stage15_datapoints.csv` (every one has a `caveat` starting with "Stage 17." and a source URL). Results: `results/stage17.json`. Figure: `figures/stage17_window.png`.
+
+The question was simple: which existing or planned experiments move the two open windows from Stage 15? Those were ultra-local discrete, 10.1 orders, and non-local / DP-like, 3.7 orders. We used the same Oppenheim 2023 formulae, the same $r_N=10^{-15}$ m volume convention, and the same $\lambda=1/\tau$ rule. Nothing was fitted.
+
+**Selection rule, fixed before computing.** A coherence row counts toward the conservative floor only if two things hold:
+1. Interference or coherence of a **centre-of-mass superposition** was demonstrated.
+2. The superposition is **larger than the object** (Δx > particle size). This is the regime Oppenheim used.
+
+Rows that fail either test are kept in the CSV as `lower_coherence_flagged` and reported, but not used. Ceilings count only if the measurement is absolute, as in Stage 15.
+
+### 17.1 New datapoints (CITED inputs → DERIVED bounds)
+
+**Coherence (lower side).** Values are the discrete lower bound $M\tau$ [kg] and the non-local lower bound $NM^2\tau/R$ [kg s/m].
+
+| Row | Inputs (CITED unless marked) | Discrete $M\tau$ | Non-local | Used? |
+|---|---|---|---|---|
+| Kovachy 2015, Rb, 10 m fountain ([Nature 528, 530](https://www.nature.com/articles/nature16155)) | 87 u; 54 cm; "timescale of 1 s" (τ = 1 s ASSUMED; 2.08 s pulse sequence) | 1.44e-25 | 2.6e-40 | yes. Below floor |
+| Xu 2019, Cs lattice ([arXiv:1907.03054](https://arxiv.org/abs/1907.03054)) | 133 u; 20 s; 3.9 µm (= 9 × 433 nm, DERIVED consistent) | **4.41e-24** | 6.2e-37 | yes |
+| **Panda 2024, Cs lattice** ([Nat. Phys. 20, 1234; arXiv:2210.07289](https://arxiv.org/abs/2210.07289)) | 133 u; **70 s**; Δz = 1.9 µm; contrast non-zero at 2.9 fit-σ | **1.55e-23** | 2.8e-36 | **yes. New discrete floor** |
+| Pedalino 2026, 0.4–1 MDa ([Nature, publ. 21 Jan 2026](https://www.nature.com/articles/s41586-025-09917-9)) | V = 0.66 ± 0.09, but quantum and classical predictions converge | 4.1e-24 | 9.2e-29 | **no**. Not discriminating |
+| Rossi 2025, levitated SiO₂ ([PRL 135, 083601; arXiv:2408.01264](https://arxiv.org/abs/2408.01264)) | 1.2 fg; ξ = 73 ± 34 pm; τ = 26.5 µs DERIVED (2 × 11.0 µs pulses + 4.5 µs spacing) | 3.2e-23 | 3.3e-20 | **no**. Δx ≪ 100 nm size |
+| Youssefi 2023, Al drum ([Nat. Phys. 19, 1697; arXiv:2208.13082](https://arxiv.org/abs/2208.13082)) | 2.3 ng; 1.8 MHz; T₁ = 7.7 ms; Δx = x_zpf = 1.42 fm DERIVED | 1.8e-14 | 1.9e+3 | **no**. Δx ≈ 1.4 r_N |
+| Bild 2023, 16 µg phonon cat ([Science 380, 274](https://www.science.org/doi/10.1126/science.adf7553)) | Δx ≈ 2 × 10⁻¹⁸ m < r_N | — | — | no. Below the smearing scale, not computed |
+
+Pedalino 2025 (172 kDa) stays the non-local floor at 1.47e-29 and still sits at 3.51e-24 on the discrete side. Note the journal date: the paper was published on 21 January 2026; the CSV keeps 2025, the arXiv year.
+
+**Force noise (upper side).**
+
+| Row | Inputs | FOM [m²/s³] | Discrete upper | Non-local upper |
+|---|---|---|---|---|
+| Amaral 2025, Leiden mag-lev ([PRL 134, 251001; arXiv:2409.03814](https://arxiv.org/abs/2409.03814)) | 0.43 mg; 0.2 fN/√Hz at 26.7 Hz; N from the Fuchs mean atomic mass (DERIVED) | 0.88 | 1.2e-13 | 2.0e-25 |
+| (Stage 15 ceiling) Gisler 2022 | — | **0.298** | **4.0e-14** | **6.7e-26** |
+
+This is an honest negative. No absolute force-noise measurement since 2022 beats Gisler; Leiden 2025 is 3.0× worse in FOM. Two other recent papers do not give a drop-in $D_2$:
+- Mohanta and Shikano ([arXiv:2608.26096](https://arxiv.org/abs/2608.26096), Aug 2026) give a torque-diffusion bound $D_\tau\lesssim2.4\times10^{-23}\,\mathrm{N^2m^2s}$ from Yan et al.
+- Angeli et al. ([arXiv:2501.13030](https://arxiv.org/abs/2501.13030)) propose a 2.55 kg osmium, 10 mK, Q = 2 × 10¹⁰ torsion test.
+
+**Projections** (year ASSUMED unless stated):
+- **MUSCLE, 1 MDa at 25 m/s.** Pedalino Fig. 3c says MDa clusters need v ≈ 25 m/s for an unambiguous quantum test. With τ = 0.983 m / 25 m/s = 39 ms (DERIVED) and d = 133 nm (ASSUMED), the bounds are 6.5e-23 (discrete) and 9.2e-27 (non-local).
+- **MAGIS-100.** Sr, up to 9 s, more than 1 m separation, commissioning in 2028 (CITED: [arXiv:2104.02835](https://arxiv.org/abs/2104.02835), [Fermilab, 7 Jan 2026](https://news.fnal.gov/2026/01/fermilab-completes-laser-lab-construction-for-worlds-largest-vertical-atom-interferometer/)). Bounds are 1.3e-24 and 1.9e-39.
+- **Cs lattice at 700 s.** This is Müller's "potentially 10 times longer" ([Berkeley News](https://news.berkeley.edu/2024/06/26/with-a-new-incredibly-precise-instrument-berkeley-researchers-narrow-search-for-dark-energy/)). Bounds are 1.5e-22 and 2.8e-35.
+- **Neumeier / Romero-Isart, flagged.** The proposal is "above 1e8 amu, several nm, milliseconds" ([PNAS 121, e2306953121](https://arxiv.org/abs/2207.12539)). Δx < size, so this row is flagged.
+- **MAQRO.** The 2023 research campaign ([QST 8, 014006](https://wigner.hu/~diosi/prints/2023qst8_014006.pdf)) envisages implementation *before 2040*. The Stage-15 row's placeholder year of 2035 is therefore optimistic. MAQRO-PF is a pathfinder white paper ([arXiv:2512.01777](https://arxiv.org/abs/2512.01777)).
+
+### 17.2 How far each window is now closed (DERIVED, conservative)
+
+| Class | Table 1 (2023) | Stage 15 | **Stage 17** | Binding floor / ceiling |
+|---|---|---|---|---|
+| Ultra-local continuous | empty | empty | **empty** | ruled out |
+| Ultra-local discrete | 24 | 10.06 | **9.41 orders** | Panda 2024 1.55e-23 kg / Gisler 4.0e-14 kg |
+| Non-local / DP-like | 26 | 3.66 | **3.66 orders** (unchanged) | Pedalino 1.47e-29 / Gisler 6.7e-26 |
+
+**Correction to Stage 15.** Stage 15 set aside atom-interferometer coherences as "not mass-density superpositions." That was wrong for *spatial* atom interferometers: an atom split by 1.9 µm to 54 cm is a centre-of-mass superposition far larger than the atom. Once these are included, the discrete floor moves to Panda 2024, a gain of 0.64 orders (4.4×). Xu 2019 already beat Pedalino, by 1.26×, in 2019.
+
+**Coincidence flag.** Xu 2019 and Pedalino 2025 land within 26% of each other on the discrete axis. That is accidental: one is 133 u for 20 s, the other 1.7 × 10⁵ u for 12 ms.
+
+Atoms do nothing for the non-local window. With N = 1 and a tiny $M^2$, their values sit 7 or more orders below the floor.
+
+### 17.3 The temptation, kept out of the result
+
+If the flagged rows were used, the picture would change completely:
+- Youssefi's drum would leave the discrete window open by only **0.35 orders**.
+- It would rule out the non-local model by **28 orders**.
+- Rossi's 73 pm state alone would rule out the non-local model by **5.7 orders**.
+
+This is the same kind of temptation as Asenbaum in Stage 15, and it is not a result. These rows have Δx much smaller than the object. The $V=r_N^2\Delta x$ convention then treats a pm-to-fm collective displacement of $10^{7}$–$10^{13}$ nuclei as a full which-path separation of each nucleus. The answer becomes a statement about the smearing convention, not about the experiment.
+
+Two checks show this:
+- Smearing Rossi's mass over its geometric radius (50 nm) instead of the $r_N$ convention drops its non-local value to 2.8e-26, back inside the window.
+- Youssefi's Δx exceeds $r_N$ by only 1.4×. That is a coincidence flag, and with $A^{1/3}$ nuclear radii (Al ≈ 3.6 fm) the row would fail outright.
+
+The honest statement is narrower: **the tracker's lower-side formulae are only trustworthy for Δx ≫ object size**. A defensible treatment of collective mechanical modes needs the model's own decoherence functional, which neither Oppenheim 2023 nor Janse 2024 gives.
+
+### 17.4 Which near-term experiment gets closest (≤ 2030)
+
+Remaining gap against today's ceiling:
+
+| Projection | Discrete left | Non-local left |
+|---|---|---|
+| Stage-15 generic 1e6 amu, 0.1 s (ASSUMED target, no named apparatus) | 8.38 | 0.15 |
+| **MUSCLE 1 MDa at 25 m/s (named in Pedalino 2026)** | 8.79 | **0.86** |
+| Cs lattice 700 s | **8.41** | 3.66 |
+| MAGIS-100 (2028, CITED schedule) | 9.41 | 3.66 |
+| Neumeier 1e8 amu (flagged) | 8.38 | "closed", but convention-sensitive |
+
+The **closest named near-term experiment is the Vienna MUSCLE slow-beam step to 1 MDa**. It would raise the non-local floor by 2.8 orders and leave **0.86 orders**.
+
+What closes the window, from below and from above (DERIVED; non-local value ∝ M³ at fixed v, d):
+- **From below** at 25 m/s: Na clusters of **1.9 MDa** (2.9 MDa at today's 160 m/s), i.e. a factor 4.6 × 10³ in $NM^2\tau/R$.
+- **From above:** an absolute FOM of **6.5 × 10⁻⁵**, 3.7 orders below Gisler.
+
+The large atom fountains, MAGIS-100 and the 10 m Stanford fountain, do not help either window, because the mass term is a single atom. This is an honest negative for the "long time, large separation" route.
+
+The discrete window from below needs $M\tau\ge4\times10^{-14}$ kg s. Examples:
+- 2.4 × 10¹¹ amu for 100 s, beyond even MAQRO's 3 × 10¹⁰ amu;
+- a Cs hold time of 1.8 × 10¹¹ s, which is absurd.
+
+From above it needs Asenbaum-level *absolute* force noise. No experiment I found is on track for that before 2030.
+
+### 17.5 Projected closing year (ASSUMED trend; not a schedule)
+
+These are two-point log-linear rates (DERIVED):
+
+| Quantity | Rate |
+|---|---|
+| Non-local floor, Gerlich 2011 → Pedalino 2025 | 0.35 orders/yr |
+| Best absolute FOM, Teufel 2009 → Gisler 2022 | 0.27 orders/yr |
+| Discrete floor, Gerlich 2011 → Panda 2024 | 0.17 orders/yr |
+
+What these rates give, if they continued:
+
+| Window | Driver | Year (ASSUMED) |
+|---|---|---|
+| Non-local | floor alone | 2035.6 |
+| Non-local | ceiling alone | 2035.4 |
+| Non-local | both sides together | **≈ 2031** |
+| Discrete | both sides together | ≈ 2046 |
+
+**Coincidence flag:** two independent trends land on the same year, within 0.2 yr. That is an accident of the two rates and gaps, not a physical link.
+
+The caveats are real:
+- the ceiling side has **stalled since 2022** (Leiden 2025 did not improve on Gisler);
+- the slow-beam MDa step has no published date;
+- MAQRO is "before 2040" at best.
+
+**Best estimate:** the non-local window could close in the **early-to-mid 2030s**, most plausibly from below via a ~2 MDa slow-cluster interferometer. No verified schedule supports any specific year. The discrete window is not projected to close before the 2040s.
+
+### 17.6 Follow-up note (not mixed into the units)
+
+A Zenodo note by D. Nguyen ([doi:10.5281/zenodo.24085732](https://doi.org/10.5281/zenodo.24085732), v2, 13 Nov 2026, not peer-reviewed) recomputes the *relativistic, dimensionless* Oppenheim–Sajjad floor with Pedalino. It finds:
+- the floor rises to (3.1–8.3) × 10⁻⁶⁸;
+- the full-positivity scalar window shrinks from ~5.1 to ~1.4 orders (≈ 0.9 with a two-coupling factor).
+
+It also states that the 0.1 s Gerlich 2011 coherence time is not supported by that experiment's measured velocities. That is the same suspicion flagged in Stage 15 §15.2, reached independently. This is a separate window in separate units and is not combined with the Newtonian $D_2$ numbers above.
+
+### 17.7 Verdict
+
+- **Non-local:** still **3.66 orders** open. Nothing in the 2023–26 literature moves it under the conservative rules. The nearest named step, MUSCLE at 1 MDa and 25 m/s, would leave 0.86 orders. About 2 MDa would close it.
+- **Discrete:** **9.41 orders** open (down from 10.06), thanks to 70 s lattice-held Cs atoms. Previously excluded, they turn out to be legitimate mass superpositions.
+- **Continuous:** ruled out.
+- **Ceiling:** unchanged since 2022.
+- **Biggest caution:** levitated and mechanical quantum states look like they would close everything, but only through the $r_N$ smearing convention. They are excluded until the model's decoherence functional for Δx < object size is worked out.

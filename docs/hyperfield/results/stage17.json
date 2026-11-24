@@ -1,0 +1,578 @@
+{
+  "stage": 17,
+  "baseline_stage15": {
+    "ultralocal_discrete": {
+      "units": "kg",
+      "lower": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 3.509466044231068e-24
+      },
+      "upper": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 3.999512254572799e-14
+      },
+      "gap": {
+        "orders": 10.056765987051214,
+        "ratio_upper_over_lower": 11396355468.796398,
+        "status": "open"
+      }
+    },
+    "nonlocal_DP_like": {
+      "units": "kg s m^-1",
+      "lower": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 1.4692162272940612e-29
+      },
+      "upper": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 6.689671881065285e-26
+      },
+      "gap": {
+        "orders": 3.6583191003373106,
+        "ratio_upper_over_lower": 4553.224880578697,
+        "status": "open"
+      }
+    },
+    "ultralocal_continuous": {
+      "units": "kg^2 s m^-3",
+      "lower": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 5.638773141413186e-05
+      },
+      "upper": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 2.98e-56
+      },
+      "gap": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 5.284837544028513e-52,
+        "status": "ruled_out"
+      }
+    }
+  },
+  "current_stage17": {
+    "ultralocal_discrete": {
+      "units": "kg",
+      "lower": {
+        "id": "panda2024",
+        "short_name": "Panda 2024 Cs lattice 70 s",
+        "year": 2024,
+        "value": 1.544857763457329e-23
+      },
+      "upper": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 3.999512254572799e-14
+      },
+      "gap": {
+        "orders": 9.413118532122008,
+        "ratio_upper_over_lower": 2588919413.2811637,
+        "status": "open"
+      }
+    },
+    "nonlocal_DP_like": {
+      "units": "kg s m^-1",
+      "lower": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 1.4692162272940612e-29
+      },
+      "upper": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 6.689671881065285e-26
+      },
+      "gap": {
+        "orders": 3.6583191003373106,
+        "ratio_upper_over_lower": 4553.224880578697,
+        "status": "open"
+      }
+    },
+    "ultralocal_continuous": {
+      "units": "kg^2 s m^-3",
+      "lower": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 5.638773141413186e-05
+      },
+      "upper": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 2.98e-56
+      },
+      "gap": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 5.284837544028513e-52,
+        "status": "ruled_out"
+      }
+    }
+  },
+  "change": {
+    "ultralocal_discrete": {
+      "stage15_gap_orders": 10.056765987051214,
+      "stage17_gap_orders": 9.413118532122008,
+      "closed_by_stage17_orders": 0.6436474549292068,
+      "table1_2023_gap_orders": 24.0
+    },
+    "nonlocal_DP_like": {
+      "stage15_gap_orders": 3.6583191003373106,
+      "stage17_gap_orders": 3.6583191003373106,
+      "closed_by_stage17_orders": 0.0,
+      "table1_2023_gap_orders": 26.0
+    },
+    "ultralocal_continuous": {
+      "stage15_gap_orders": 0.0,
+      "stage17_gap_orders": 0.0,
+      "closed_by_stage17_orders": 0.0,
+      "table1_2023_gap_orders": 0.0
+    }
+  },
+  "survey_rows": [
+    {
+      "id": "kovachy2015",
+      "role": "lower_coherence",
+      "year": 2015,
+      "short_name": "Kovachy 2015 Rb 54 cm",
+      "citation": "Kovachy et al., Nature 528, 530 (2015)",
+      "source": "https://www.nature.com/articles/nature16155",
+      "applicability": "absolute",
+      "inputs": {
+        "mass_kg": 1.443158e-25,
+        "mass_amu": 86.909,
+        "N": 1.0,
+        "tau_s": 1.0,
+        "delocalization_m": 0.54,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED: 54 cm separation, 'timescale of 1 second' (abstract), pulse sequence 2.08 s (Kasevich talks). tau=1.0 s ASSUMED (conservative; 2.08 s would raise M*tau by 2.1x). Single atom: N=1.",
+      "ultralocal_discrete": {
+        "lower_bound": 1.443158e-25,
+        "orders_below_current_ceiling": 11.44269315063428,
+        "orders_vs_current_floor": -2.0295746185122736
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 2.557583623378534e-40,
+        "orders_below_current_ceiling": 14.417574974345987,
+        "orders_vs_current_floor": -10.759255874008677
+      }
+    },
+    {
+      "id": "xu2019",
+      "role": "lower_coherence",
+      "year": 2019,
+      "short_name": "Xu 2019 Cs lattice 20 s",
+      "citation": "Xu et al., Science 366, 745 (2019); arXiv:1907.03054",
+      "source": "https://arxiv.org/abs/1907.03054",
+      "applicability": "absolute",
+      "inputs": {
+        "mass_kg": 2.206939e-25,
+        "mass_amu": 132.905,
+        "N": 1.0,
+        "tau_s": 20.0,
+        "delocalization_m": 3.9e-06,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED: 20 s interrogation, 3.9 um = 9 lattice sites (9 x 866 nm/2 = 3.90 um, DERIVED consistent).",
+      "ultralocal_discrete": {
+        "lower_bound": 4.413878e-24,
+        "orders_below_current_ceiling": 9.957186706760647,
+        "orders_vs_current_floor": -0.5440681746386398
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 6.18855305821866e-37,
+        "orders_below_current_ceiling": 11.033815697997213,
+        "orders_vs_current_floor": -7.375496597659901
+      }
+    },
+    {
+      "id": "panda2024",
+      "role": "lower_coherence",
+      "year": 2024,
+      "short_name": "Panda 2024 Cs lattice 70 s",
+      "citation": "Panda et al., Nat. Phys. 20, 1234 (2024); arXiv:2210.07289",
+      "source": "https://arxiv.org/abs/2210.07289",
+      "applicability": "absolute",
+      "inputs": {
+        "mass_kg": 2.206939e-25,
+        "mass_amu": 132.905,
+        "N": 1.0,
+        "tau_s": 70.0,
+        "delocalization_m": 1.9e-06,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED: coherent phase accumulation up to 70 s, T=0.267 ms, Delta z=1.9 um, U0=7 Er; contrast nonzero at 2.9 fit-sigma at 70 s (99.9% combined with 60 s). A 2.9-sigma fringe is a weak but real coherence claim; at 30 s it is 3.0 sigma.",
+      "ultralocal_discrete": {
+        "lower_bound": 1.544857763457329e-23,
+        "orders_below_current_ceiling": 9.413118532122008,
+        "orders_vs_current_floor": 0.0
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 2.752713178871493e-36,
+        "orders_below_current_ceiling": 10.385643854667348,
+        "orders_vs_current_floor": -6.727324754330038
+      }
+    },
+    {
+      "id": "pedalino2026_MDa",
+      "role": "lower_coherence_flagged",
+      "year": 2026,
+      "short_name": "Pedalino 0.4-1 MDa (not discriminating)",
+      "citation": "Pedalino et al., Nature (publ. 21 Jan 2026), s41586-025-09917-9",
+      "source": "https://www.nature.com/articles/s41586-025-09917-9",
+      "applicability": "not_quantum_discriminating",
+      "inputs": {
+        "mass_kg": 6.642156e-22,
+        "mass_amu": 400000.0,
+        "N": 17398.87,
+        "tau_s": 0.00614375,
+        "delocalization_m": 1.33e-07,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED: V=0.66+-0.09 for 400 kDa-1 MDa, but quantum and classical (moire) predictions converge there; not evidence of coherence. Excluded. Lower end 400 kDa used.",
+      "ultralocal_discrete": {
+        "lower_bound": 4.0807755871890495e-24,
+        "orders_below_current_ceiling": 9.99126431940233,
+        "orders_vs_current_floor": -0.5781457872803223
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 9.238942835307441e-29,
+        "orders_below_current_ceiling": 2.8597825367807648,
+        "orders_vs_current_floor": 0.798536563556546
+      }
+    },
+    {
+      "id": "rossi2025",
+      "role": "lower_coherence_flagged",
+      "year": 2025,
+      "short_name": "Rossi 2025 levitated delocalisation 73 pm",
+      "citation": "Rossi et al., Phys. Rev. Lett. 135, 083601 (2025); arXiv:2408.01264",
+      "source": "https://arxiv.org/abs/2408.01264",
+      "applicability": "convention_sensitive",
+      "inputs": {
+        "mass_kg": 1.2e-18,
+        "mass_amu": 722656900.0,
+        "N": 36078730.0,
+        "tau_s": 2.65e-05,
+        "delocalization_m": 7.3e-11,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED m=1.2 fg, xi=73+-34 pm, period 18 us, r=2.45, Gamma_tot=23.7e3 phonons/s. tau DERIVED = two pulses pi/(2 Omega_e) + spacing pi/(2 Omega_m) = 2x11.0+4.5 = 26.5 us. Delta x < particle size (100 nm): r_N-smearing convention dominates; excluded from conservative floor.",
+      "ultralocal_discrete": {
+        "lower_bound": 3.179999920500002e-23,
+        "orders_below_current_ceiling": 9.099579922685079,
+        "orders_vs_current_floor": 0.3135386094369284
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 3.294215275881388e-20,
+        "orders_below_current_ceiling": -5.6923471600014866,
+        "orders_vs_current_floor": 9.350666260338798
+      }
+    },
+    {
+      "id": "youssefi2023",
+      "role": "lower_coherence_flagged",
+      "year": 2023,
+      "short_name": "Youssefi 2023 drum, 7.7 ms",
+      "citation": "Youssefi et al., Nat. Phys. 19, 1697 (2023); arXiv:2208.13082",
+      "source": "https://arxiv.org/abs/2208.13082",
+      "applicability": "convention_sensitive",
+      "inputs": {
+        "mass_kg": 2.3e-12,
+        "mass_amu": 1385092000000000.0,
+        "N": 51337750000000.0,
+        "tau_s": 0.0077,
+        "delocalization_m": 1.42e-15,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED m_eff=2.3 ng, f=1.8 MHz, thermal decoherence 20.5 Hz (T1=7.7 ms). Delta x DERIVED = x_zpf = sqrt(hbar/(2 m omega)) = 1.42 fm, only 1.4 r_N (COINCIDENCE flag: just over the 1 fm smearing; an Al nucleus is ~3.6 fm, so with A^{1/3} radii it fails). Excluded.",
+      "ultralocal_discrete": {
+        "lower_bound": 1.7710004073300934e-14,
+        "orders_below_current_ceiling": 0.3537883707343329,
+        "orders_vs_current_floor": 9.059330161387674
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 1860.4608965662312,
+        "orders_below_current_ceiling": -28.44421572962908,
+        "orders_vs_current_floor": 32.10253482996639
+      }
+    },
+    {
+      "id": "proj_muscle_1MDa",
+      "role": "projection_lower",
+      "year": 2030,
+      "short_name": "MUSCLE 1 MDa at 25 m/s",
+      "citation": "Pedalino et al., Nature (2026), Fig. 3c: MDa quantum test needs v~25 m/s",
+      "source": "https://www.nature.com/articles/s41586-025-09917-9",
+      "applicability": "projection",
+      "inputs": {
+        "mass_kg": 1.660539e-21,
+        "mass_amu": 1000000.0,
+        "N": 43497.17,
+        "tau_s": 0.03932,
+        "delocalization_m": 1.33e-07,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED: unambiguous quantum test of MDa clusters 'if their velocities can be reduced to about 25 m/s'. ASSUMED: same L=0.983 m and d=133 nm, tau=L/v=39.3 ms; year 2030 ASSUMED (no published schedule).",
+      "ultralocal_discrete": {
+        "lower_bound": 6.529239334941522e-23,
+        "orders_below_current_ceiling": 8.787144443474286,
+        "orders_vs_current_floor": 0.6259740886477206
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 9.238939502821085e-27,
+        "orders_below_current_ceiling": 0.8597826934307973,
+        "orders_vs_current_floor": 2.7985364069065133
+      }
+    },
+    {
+      "id": "proj_magis100",
+      "role": "projection_lower",
+      "year": 2028,
+      "short_name": "MAGIS-100 Sr 9 s, >1 m",
+      "citation": "Abe et al., arXiv:2104.02835; MAGIS-100 Experiment Facts (OSTI 2568735, 2025); Fermilab news 7 Jan 2026",
+      "source": "https://arxiv.org/abs/2104.02835",
+      "applicability": "projection",
+      "inputs": {
+        "mass_kg": 1.459713e-25,
+        "mass_amu": 87.906,
+        "N": 1.0,
+        "tau_s": 9.0,
+        "delocalization_m": 1.0,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED design targets: up to 9 s for a full launch, separation >1 m; installation end-2027, commissioning 2028. Single atom, so the mass term stays tiny.",
+      "ultralocal_discrete": {
+        "lower_bound": 1.3137418313741831e-24,
+        "orders_below_current_ceiling": 10.483497003137522,
+        "orders_vs_current_floor": -1.0703784710155153
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 1.9176860299007004e-39,
+        "orders_below_current_ceiling": 13.542627312280258,
+        "orders_vs_current_floor": -9.884308211942948
+      }
+    },
+    {
+      "id": "proj_lattice_700s",
+      "role": "projection_lower",
+      "year": 2030,
+      "short_name": "Cs lattice 700 s",
+      "citation": "Berkeley News 26 Jun 2024 (Mueller: 70 s 'and potentially 10 times longer')",
+      "source": "https://news.berkeley.edu/2024/06/26/with-a-new-incredibly-precise-instrument-berkeley-researchers-narrow-search-for-dark-energy/",
+      "applicability": "projection",
+      "inputs": {
+        "mass_kg": 2.206939e-25,
+        "mass_amu": 132.905,
+        "N": 1.0,
+        "tau_s": 700.0,
+        "delocalization_m": 1.9e-06,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. ASSUMED: 10x the 70 s hold at the same 1.9 um; year 2030 ASSUMED.",
+      "ultralocal_discrete": {
+        "lower_bound": 1.544857763457329e-22,
+        "orders_below_current_ceiling": 8.413118532122008,
+        "orders_vs_current_floor": 1.0
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 2.752713178871493e-35,
+        "orders_below_current_ceiling": 9.385643854667348,
+        "orders_vs_current_floor": -5.727324754330038
+      }
+    },
+    {
+      "id": "proj_neumeier",
+      "role": "projection_lower_flagged",
+      "year": 2030,
+      "short_name": "Neumeier/Romero-Isart 1e8 amu, ms",
+      "citation": "Neumeier et al., PNAS 121, e2306953121 (2024); arXiv:2207.12539",
+      "source": "https://arxiv.org/abs/2207.12539",
+      "applicability": "convention_sensitive",
+      "inputs": {
+        "mass_kg": 1.660539e-19,
+        "mass_amu": 100000000.0,
+        "N": 4992511.0,
+        "tau_s": 0.001,
+        "delocalization_m": 5e-09,
+        "FOM": null,
+        "sqrt_SF": null,
+        "sqrt_Sa": null
+      },
+      "caveat": "Stage 17. CITED: >1e8 amu, 'several nanometers', 'milliseconds'. ASSUMED tau=1 ms, dx=5 nm, year 2030. dx < 100 nm particle size, so flagged like Rossi.",
+      "ultralocal_discrete": {
+        "lower_bound": 1.660539e-22,
+        "orders_below_current_ceiling": 8.381757951765795,
+        "orders_vs_current_floor": 1.0313605803562116
+      },
+      "nonlocal_DP_like": {
+        "lower_bound": 8.05058035311436e-22,
+        "orders_below_current_ceiling": -4.080422372311503,
+        "orders_vs_current_floor": 7.7387414726488135
+      }
+    },
+    {
+      "id": "amaral2025",
+      "role": "upper_diffusion",
+      "year": 2025,
+      "short_name": "Leiden 2025 mag-lev 0.43 mg",
+      "citation": "Amaral et al., Phys. Rev. Lett. 134, 251001 (2025); arXiv:2409.03814",
+      "source": "https://arxiv.org/abs/2409.03814",
+      "applicability": "absolute",
+      "inputs": {
+        "mass_kg": 4.3e-07,
+        "mass_amu": 2.589521e+20,
+        "N": 4.07425e+18,
+        "tau_s": null,
+        "delocalization_m": null,
+        "FOM": 0.8813953,
+        "sqrt_SF": 2e-16,
+        "sqrt_Sa": 4.651163e-10
+      },
+      "caveat": "Stage 17. CITED: 0.43 mg magnet, 0.2 fN/sqrt(Hz) at 26.7 Hz, Q~9.3e6. N DERIVED with the same mean atomic mass as the Fuchs 2024 row (63.6 u). FOM DERIVED = S_a N. Not better than Gisler 2022.",
+      "ultralocal_discrete": {
+        "upper_bound": 1.182936679017741e-13,
+        "orders_above_current_floor": 9.884072998370428,
+        "orders_vs_current_ceiling": 0.4709544662484195
+      },
+      "nonlocal_DP_like": {
+        "upper_bound": 1.9786058236621146e-25,
+        "orders_above_current_floor": 4.129273566585731,
+        "orders_vs_current_ceiling": 0.47095446624841963
+      }
+    }
+  ],
+  "near_term_projections_by_2030": [
+    {
+      "id": "proj_neumeier",
+      "year": 2030,
+      "short_name": "Neumeier/Romero-Isart 1e8 amu, ms",
+      "role": "projection_lower_flagged",
+      "ultralocal_discrete_gap_left_orders": 8.381757951765795,
+      "nonlocal_DP_like_gap_left_orders": -4.080422372311503
+    },
+    {
+      "id": "proj_1e6amu",
+      "year": 2028,
+      "short_name": "1e6 amu interferometry",
+      "role": "projection_lower",
+      "ultralocal_discrete_gap_left_orders": 8.381757951765795,
+      "nonlocal_DP_like_gap_left_orders": 0.14848333634275138
+    },
+    {
+      "id": "proj_muscle_1MDa",
+      "year": 2030,
+      "short_name": "MUSCLE 1 MDa at 25 m/s",
+      "role": "projection_lower",
+      "ultralocal_discrete_gap_left_orders": 8.787144443474286,
+      "nonlocal_DP_like_gap_left_orders": 0.8597826934307973
+    },
+    {
+      "id": "proj_magis100",
+      "year": 2028,
+      "short_name": "MAGIS-100 Sr 9 s, >1 m",
+      "role": "projection_lower",
+      "ultralocal_discrete_gap_left_orders": 9.413118532122008,
+      "nonlocal_DP_like_gap_left_orders": 3.6583191003373106
+    },
+    {
+      "id": "proj_lattice_700s",
+      "year": 2030,
+      "short_name": "Cs lattice 700 s",
+      "role": "projection_lower",
+      "ultralocal_discrete_gap_left_orders": 8.413118532122008,
+      "nonlocal_DP_like_gap_left_orders": 3.6583191003373106
+    }
+  ],
+  "closing": {
+    "nonlocal_from_below": {
+      "factor_in_N_M2_tau_over_R_needed": 4553.224880578697,
+      "Na_cluster_mass_Da_needed_at_25_m_per_s": 1934571.6578284265,
+      "Na_cluster_mass_Da_needed_at_160_m_per_s": 2850809.16952675,
+      "note": "same L=0.983 m, d=133 nm (ASSUMED); N = M/23 u"
+    },
+    "nonlocal_from_above": {
+      "FOM_needed_m2_s3": 6.544811816150082e-05,
+      "best_absolute_FOM_now": 0.298
+    },
+    "discrete_from_below": {
+      "M_tau_needed_kg_s": 3.999512254572799e-14,
+      "e.g._mass_amu_at_100_s": 240856257767.05826,
+      "atoms_hold_time_needed_Cs_s": 181224376635.2344
+    }
+  },
+  "trend_extrapolation": {
+    "assumption": "ASSUMED: past log-linear rates continue; not a schedule.",
+    "nonlocal_floor_rate_orders_per_yr_2011_2025": 0.34526802736357803,
+    "absolute_FOM_rate_orders_per_yr_2009_2022": 0.2728440796148987,
+    "discrete_floor_rate_orders_per_yr_2011_2024": 0.16837603843770327,
+    "nonlocal_close_year_floor_only": 2035.5955918602476,
+    "nonlocal_close_year_ceiling_only": 2035.408094122844,
+    "nonlocal_close_year_both": 2030.918536555157,
+    "discrete_close_year_both": 2046.3342913139782,
+    "note": "No absolute FOM record since Gisler 2022 (Leiden 2025 is 0.88, worse), so the ceiling-side rate has stalled for 3+ years."
+  },
+  "flagged_temptation": {
+    "ultralocal_discrete": {
+      "lower_if_flagged_used": {
+        "id": "youssefi2023",
+        "short_name": "Youssefi 2023 drum, 7.7 ms",
+        "year": 2023,
+        "value": 1.7710004073300934e-14
+      },
+      "gap": {
+        "orders": 0.3537883707343329,
+        "ratio_upper_over_lower": 2.258335028054761,
+        "status": "open"
+      }
+    },
+    "nonlocal_DP_like": {
+      "lower_if_flagged_used": {
+        "id": "youssefi2023",
+        "short_name": "Youssefi 2023 drum, 7.7 ms",
+        "year": 2023,
+        "value": 1860.4608965662312
+      },
+      "gap": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 3.595706791479525e-29,
+        "status": "ruled_out"
+      }
+    }
+  },
+  "r_N_m": 1e-15
+}
