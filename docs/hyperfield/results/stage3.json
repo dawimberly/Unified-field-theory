@@ -1,0 +1,117 @@
+{
+ "helium_bruteforce_grid": [
+  {
+   "D": 3,
+   "pts_per_axis": 32,
+   "grid_points": 1073741824.0,
+   "memory_bytes": 17179869184.0
+  },
+  {
+   "D": 3,
+   "pts_per_axis": 100,
+   "grid_points": 1000000000000.0,
+   "memory_bytes": 16000000000000.0
+  },
+  {
+   "D": 13,
+   "pts_per_axis": 32,
+   "grid_points": 1.361129467683754e+39,
+   "memory_bytes": 2.1778071482940062e+40
+  },
+  {
+   "D": 13,
+   "pts_per_axis": 100,
+   "grid_points": 1e+52,
+   "memory_bytes": 1.6e+53
+  }
+ ],
+ "helium_hylleraas": [
+  {
+   "D": 3,
+   "internal_coords": 3,
+   "basis_K": 500,
+   "flops": 125000000,
+   "seconds_on_laptop": 0.0125
+  },
+  {
+   "D": 3,
+   "internal_coords": 3,
+   "basis_K": 2000,
+   "flops": 8000000000,
+   "seconds_on_laptop": 0.8
+  },
+  {
+   "D": 13,
+   "internal_coords": 3,
+   "basis_K": 500,
+   "flops": 125000000,
+   "seconds_on_laptop": 0.0125
+  },
+  {
+   "D": 13,
+   "internal_coords": 3,
+   "basis_K": 2000,
+   "flops": 8000000000,
+   "seconds_on_laptop": 0.8
+  }
+ ],
+ "N_electron_internal_coords": [
+  {
+   "N": 2,
+   "D3": 3,
+   "D13": 3
+  },
+  {
+   "N": 3,
+   "D3": 6,
+   "D13": 6
+  },
+  {
+   "N": 6,
+   "D3": 15,
+   "D13": 21
+  },
+  {
+   "N": 10,
+   "D3": 27,
+   "D13": 55
+  },
+  {
+   "N": 26,
+   "D3": 75,
+   "D13": 260
+  }
+ ],
+ "lattice_SM_d14": {
+  "per_site_reals": 6316,
+  "spinor_complex_components": 64,
+  "cases": [
+   {
+    "L": 8,
+    "sites": 4398046511104.0,
+    "reals_per_site": 6316,
+    "memory_bytes": 2.222244941130629e+17,
+    "one_sweep_flops": 2.7778061764132864e+19,
+    "seconds_per_sweep_exa": 27.778061764132865
+   },
+   {
+    "L": 16,
+    "sites": 7.205759403792794e+16,
+    "reals_per_site": 6316,
+    "memory_bytes": 3.640926111548423e+21,
+    "one_sweep_flops": 4.5511576394355284e+23,
+    "seconds_per_sweep_exa": 455115.76394355285
+   },
+   {
+    "L": 32,
+    "sites": 1.1805916207174113e+21,
+    "reals_per_site": 6316,
+    "memory_bytes": 5.965293341160936e+25,
+    "one_sweep_flops": 7.45661667645117e+27,
+    "seconds_per_sweep_exa": 7456616676.45117
+   }
+  ]
+ },
+ "reference_4d_lattice_sites": 859963392,
+ "gauge_coupling_mass_dim_d14": -5.0
+}

@@ -1,0 +1,423 @@
+{
+ "species": {
+  "units": {
+   "real scalar, coupling xi": "6*(1/6 - xi)  (xi=0: +1, conformal xi=1/6: 0)",
+   "Weyl fermion": "+1  (Dirac = +2; D^2 = -box + R/4, tr a1 = 4(1/6-1/4)R, fermion loop sign)",
+   "massless gauge vector + 2 FP ghosts (Feynman gauge)": "-4  (tr a1 = 4/6 - 1 = -1/3 for A_mu, ghosts -2*(1/6))",
+   "massive vector (R_xi: vector + ghosts + eaten Goldstone with the doublet xi)": "-4 + 6(1/6 - xi)  (= -3 at xi=0)"
+  },
+  "table": [
+   {
+    "xi": 0.0,
+    "nuR": false,
+    "phase": "above",
+    "higgs": 4.0,
+    "fermions": 45,
+    "vectors": -48,
+    "N_eff": 1.0
+   },
+   {
+    "xi": 0.0,
+    "nuR": false,
+    "phase": "below",
+    "higgs": 1.0,
+    "fermions": 45,
+    "vectors": -45.0,
+    "N_eff": 1.0
+   },
+   {
+    "xi": 0.0,
+    "nuR": true,
+    "phase": "above",
+    "higgs": 4.0,
+    "fermions": 48,
+    "vectors": -48,
+    "N_eff": 4.0
+   },
+   {
+    "xi": 0.0,
+    "nuR": true,
+    "phase": "below",
+    "higgs": 1.0,
+    "fermions": 48,
+    "vectors": -45.0,
+    "N_eff": 4.0
+   },
+   {
+    "xi": 0.16666666666666666,
+    "nuR": false,
+    "phase": "above",
+    "higgs": 0.0,
+    "fermions": 45,
+    "vectors": -48,
+    "N_eff": -3.0
+   },
+   {
+    "xi": 0.16666666666666666,
+    "nuR": false,
+    "phase": "below",
+    "higgs": 0.0,
+    "fermions": 45,
+    "vectors": -48.0,
+    "N_eff": -3.0
+   },
+   {
+    "xi": 0.16666666666666666,
+    "nuR": true,
+    "phase": "above",
+    "higgs": 0.0,
+    "fermions": 48,
+    "vectors": -48,
+    "N_eff": 0.0
+   },
+   {
+    "xi": 0.16666666666666666,
+    "nuR": true,
+    "phase": "below",
+    "higgs": 0.0,
+    "fermions": 48,
+    "vectors": -48.0,
+    "N_eff": 0.0
+   },
+   {
+    "xi": -1.0,
+    "nuR": false,
+    "phase": "above",
+    "higgs": 28.0,
+    "fermions": 45,
+    "vectors": -48,
+    "N_eff": 25.0
+   },
+   {
+    "xi": -1.0,
+    "nuR": false,
+    "phase": "below",
+    "higgs": 7.0,
+    "fermions": 45,
+    "vectors": -27.0,
+    "N_eff": 25.0
+   },
+   {
+    "xi": -1.0,
+    "nuR": true,
+    "phase": "above",
+    "higgs": 28.0,
+    "fermions": 48,
+    "vectors": -48,
+    "N_eff": 28.0
+   },
+   {
+    "xi": -1.0,
+    "nuR": true,
+    "phase": "below",
+    "higgs": 7.0,
+    "fermions": 48,
+    "vectors": -27.0,
+    "N_eff": 28.0
+   },
+   {
+    "xi": 1.0,
+    "nuR": false,
+    "phase": "above",
+    "higgs": -20.0,
+    "fermions": 45,
+    "vectors": -48,
+    "N_eff": -23.0
+   },
+   {
+    "xi": 1.0,
+    "nuR": false,
+    "phase": "below",
+    "higgs": -5.0,
+    "fermions": 45,
+    "vectors": -63.0,
+    "N_eff": -23.0
+   },
+   {
+    "xi": 1.0,
+    "nuR": true,
+    "phase": "above",
+    "higgs": -20.0,
+    "fermions": 48,
+    "vectors": -48,
+    "N_eff": -20.0
+   },
+   {
+    "xi": 1.0,
+    "nuR": true,
+    "phase": "below",
+    "higgs": -5.0,
+    "fermions": 48,
+    "vectors": -63.0,
+    "N_eff": -20.0
+   }
+  ],
+  "vector_ambiguity": {
+   "vectors_as_2_scalars_N_eff_xi0": 73,
+   "vectors_as_2_scalars_N_eff_xi0_nuR": 76
+  },
+  "refs": "Larsen & Wilczek, NPB 458, 249 (1996); Kabat, NPB 453, 281 (1995); Visser, MPLA 17, 977 (2002) (from memory, UNVERIFIED citations)",
+  "note": "EWSB conserves N_eff (Goldstones are eaten 1:1): above = below, checked in table"
+ },
+ "quadratic": {
+  "formula": "Mbar^2 = 1/(8 pi G) = N_eff Lambda^2/(96 pi^2) (proper-time cutoff; other regulators change the O(1) prefactor)",
+  "rows": [
+   {
+    "xi": 0.0,
+    "nuR": false,
+    "N_eff": 1.0,
+    "sign": "correct (attractive)",
+    "Lambda_GeV": 7.495221207465933e+19,
+    "Lambda_over_Mbar": 30.781195923884734,
+    "Lambda_over_MPl": 6.139145383667597,
+    "Mbar2_from_GUT_cutoff_fraction": 7.120181786148119e-08
+   },
+   {
+    "xi": 0.0,
+    "nuR": true,
+    "N_eff": 4.0,
+    "sign": "correct (attractive)",
+    "Lambda_GeV": 3.747610603732967e+19,
+    "Lambda_over_Mbar": 15.390597961942367,
+    "Lambda_over_MPl": 3.0695726918337987,
+    "Mbar2_from_GUT_cutoff_fraction": 2.8480727144592475e-07
+   },
+   {
+    "xi": 0.16666666666666666,
+    "nuR": false,
+    "N_eff": -3.0,
+    "sign": "wrong (repulsive) or zero",
+    "Lambda_GeV": null
+   },
+   {
+    "xi": 0.16666666666666666,
+    "nuR": true,
+    "N_eff": 0.0,
+    "sign": "wrong (repulsive) or zero",
+    "Lambda_GeV": null
+   },
+   {
+    "xi": -1.0,
+    "nuR": false,
+    "N_eff": 25.0,
+    "sign": "correct (attractive)",
+    "Lambda_GeV": 1.4990442414931868e+19,
+    "Lambda_over_Mbar": 6.156239184776948,
+    "Lambda_over_MPl": 1.2278290767335196,
+    "Mbar2_from_GUT_cutoff_fraction": 1.7800454465370295e-06
+   },
+   {
+    "xi": -1.0,
+    "nuR": true,
+    "N_eff": 28.0,
+    "sign": "correct (attractive)",
+    "Lambda_GeV": 1.4164636668837229e+19,
+    "Lambda_over_Mbar": 5.817099247982434,
+    "Lambda_over_MPl": 1.1601894248324771,
+    "Mbar2_from_GUT_cutoff_fraction": 1.993650900121473e-06
+   },
+   {
+    "xi": 1.0,
+    "nuR": false,
+    "N_eff": -23.0,
+    "sign": "wrong (repulsive) or zero",
+    "Lambda_GeV": null
+   },
+   {
+    "xi": 1.0,
+    "nuR": true,
+    "N_eff": -20.0,
+    "sign": "wrong (repulsive) or zero",
+    "Lambda_GeV": null
+   },
+   {
+    "case": "vectors_as_2_scalars_N_eff_xi0",
+    "N_eff": 73,
+    "Lambda_GeV": 8.772492886105798e+18,
+    "Lambda_over_MPl": 0.7185326185082848
+   },
+   {
+    "case": "vectors_as_2_scalars_N_eff_xi0_nuR",
+    "N_eff": 76,
+    "Lambda_GeV": 8.597608369164976e+18,
+    "Lambda_over_MPl": 0.7042082717660867
+   }
+  ]
+ },
+ "ffz_sm": {
+  "sums": {
+   "sum_d": -62.0,
+   "sum_d_m2": -278230.8112081536,
+   "sum_d_m4": -9939011092.793697,
+   "sum_d_m4lnm2": -103192653487.91713,
+   "sum_u": 1.0,
+   "sum_u_m2": 130777.56010507682
+  },
+  "conditions": "finite & Lambda_cc-free induced G requires sum_d = sum_d m^2 = sum_d m^4 = 0 (vacuum energy), sum_u = sum_u m^2 = 0 (G finite); then 1/(16 pi G) = -(1/(192 pi^2)) sum_u m^2 ln m^2  (DERIVED from J(m) expansion)",
+  "induced_if_finite_GeV2": -0.0,
+  "sm_finite_part_Mbar2_fraction": 2.5406248889663092e-34,
+  "cc_note": "SM sum_d m^4 = -9.94e+09 GeV^4 vs observed vacuum energy 2.5e-47 GeV^4: ratio 3.9e+56 (the cosmological-constant problem is inherited)"
+ },
+ "ffz_repo": {
+  "C_ledger": 0.05131719,
+  "target": 0.041666666666666664,
+  "gap": 0.009650523333333334,
+  "kappa": -0.00965,
+  "G_ind_over_GN": "(1/24)/C_ledger = 0.8119 with G_N<->1/24 identification ASSUMED in repo (ffz_distortion_phase.py)",
+  "relation": "The repo coefficient is a multi-loop residue in its own h^2 z/K model whose normalisation to G_N is an ASSUMED identification. It does not fix the one-loop N_eff found here; at one loop the SM gives N_eff=+1 (xi=0) and needs Lambda=7.5e19 GeV. kappa=-0.00965 would move C to 1/24, i.e. lower 1/G_ind by 18.8% -- a percent-level statement about a quantity whose overall size is not derived."
+ },
+ "extensions": {
+  "found": 8,
+  "positive_G": 8,
+  "examples": [
+   {
+    "a": 5,
+    "b": 63,
+    "cW": 1,
+    "eW": 2,
+    "mass_ratios_sq": [
+     1.0,
+     0.003727912684439139,
+     1.252645215729373,
+     0.6823920169152299
+    ],
+    "F": 0.21045673431160106,
+    "sign_ok": true,
+    "masses_over_Mbar": [
+     67.09715032045852,
+     4.096726220456432,
+     75.0962270062846,
+     55.42695807360085
+    ],
+    "xi": [
+     0.2537418620193244,
+     0.17033794745878375
+    ]
+   },
+   {
+    "a": 5,
+    "b": 63,
+    "cW": 1,
+    "eW": 2,
+    "mass_ratios_sq": [
+     1.0,
+     0.002960477182197563,
+     0.4491924129759733,
+     1.072031309131625
+    ],
+    "F": 0.18603941136920207,
+    "sign_ok": true,
+    "masses_over_Mbar": [
+     71.36462874723647,
+     3.8829685223218005,
+     47.82987181754292,
+     73.89018356883716
+    ],
+    "xi": [
+     0.25296926763126776,
+     0.1703992644737089
+    ]
+   },
+   {
+    "a": 5,
+    "b": 65,
+    "cW": 2,
+    "eW": 2,
+    "mass_ratios_sq": [
+     1.0,
+     0.00676404341616596,
+     0.27618928565747297,
+     1.0837264198552239
+    ],
+    "F": 0.4588722425912296,
+    "sign_ok": true,
+    "masses_over_Mbar": [
+     45.44013315273191,
+     3.7371694378354934,
+     23.880477624275976,
+     47.30416990048764
+    ],
+    "xi": [
+     0.25681010727745945,
+     0.17255306867096465
+    ]
+   },
+   {
+    "a": 5,
+    "b": 67,
+    "cW": 2,
+    "eW": 3,
+    "mass_ratios_sq": [
+     1.0,
+     0.009495961173757086,
+     1.0874549873167572,
+     0.21440157489578263
+    ],
+    "F": 0.6660720625047704,
+    "sign_ok": true,
+    "masses_over_Mbar": [
+     37.71593513411431,
+     3.6753131229629847,
+     39.33059575108971,
+     17.4638046906225
+    ],
+    "xi": [
+     0.2595869989434974,
+     0.17465768664600767
+    ]
+   },
+   {
+    "a": 10,
+    "b": 64,
+    "cW": 3,
+    "eW": 3,
+    "mass_ratios_sq": [
+     1.0,
+     0.006818433987748859,
+     0.5918384090064652,
+     1.1475582201961894
+    ],
+    "F": 0.39644126502427984,
+    "sign_ok": true,
+    "masses_over_Mbar": [
+     48.88730116252068,
+     4.036810684994852,
+     37.609506589624196,
+     52.37010283624826
+    ],
+    "xi": [
+     0.2534326221010755,
+     0.17133865279670693
+    ]
+   },
+   {
+    "a": 5,
+    "b": 69,
+    "cW": 1,
+    "eW": 5,
+    "mass_ratios_sq": [
+     1.0,
+     0.018507311335831948,
+     1.3746105578371564,
+     0.3527783366498092
+    ],
+    "F": 1.1099693015550725,
+    "sign_ok": true,
+    "masses_over_Mbar": [
+     29.216622243975046,
+     3.9746754358972627,
+     34.25467433770565,
+     17.35325543349483
+    ],
+    "xi": [
+     0.26885629057616395,
+     0.17616983401622
+    ]
+   }
+  ],
+  "wrong_sign_examples": [],
+  "parameter_count": "Per choice of integer multiplicities: 4 masses + 2 xi = 6 continuous parameters vs 6 equations (3 vacuum-energy sums, sum_u=0, sum_u m^2=0, target G) -> isolated solutions. The target equation only sets the overall heavy scale, so 1/G is an input, not an output; what is \"predicted\" are heavy mass ratios and xi values at ~M_Pl, all unobservable. Multiplicities are free discrete choices (each choice gives different solutions).",
+  "tuning": "sum_d m^4 ln m^2 = 0 is the cosmological-constant condition, needed to (rho_vac,obs)/Mbar^4 ~ 1e-120 relative accuracy; imposed by hand, not by a symmetry -> standard tuning. Without it, sum_d m^4 ln m^2 ~ Mbar^4 gives rho_vac ~ 1e120 too large.",
+  "dof_constraint": "heavy sector must supply net bosonic dof a+b-2(cW+eW) = 62 to cancel the SM fermion excess"
+ }
+}

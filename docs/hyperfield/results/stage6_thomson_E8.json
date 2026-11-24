@@ -1,0 +1,97 @@
+{
+ "E8_riesz1": {
+  "N": 240,
+  "d": 8,
+  "E_ref": 21351.248340494887,
+  "E_min_found": 21351.248340494923,
+  "rel_diff": 1.7038717123588056e-15,
+  "all_start_energies": [
+   21351.24834049494,
+   21351.248340494927,
+   21351.248340494923,
+   21351.248340494953
+  ],
+  "n_starts_hitting_ref": 4,
+  "matches_ref_innerproducts": true,
+  "max_ip_found": 0.5000011147802969,
+  "max_ip_ref": 0.49999999999999994,
+  "n_distinct_ip_found": 5,
+  "seconds": 481.7414393424988
+ },
+ "E8_harmonic": {
+  "N": 240,
+  "d": 8,
+  "E_ref": 8860.763888888887,
+  "E_min_found": 8860.76388888889,
+  "rel_diff": 4.105716902866153e-16,
+  "all_start_energies": [
+   8860.763888888903,
+   8878.729867784456,
+   8860.763888888896,
+   8860.76388888889
+  ],
+  "n_starts_hitting_ref": 3,
+  "matches_ref_innerproducts": true,
+  "max_ip_found": 0.5000000299387093,
+  "max_ip_ref": 0.49999999999999994,
+  "n_distinct_ip_found": 5,
+  "seconds": 127.88869619369507
+ },
+ "E8_gauss2": {
+  "N": 240,
+  "d": 8,
+  "E_ref": 1203.083033490244,
+  "E_min_found": 1205.3560341923685,
+  "rel_diff": 0.0018893132384474138,
+  "all_start_energies": [
+   1205.3867468254552,
+   1205.3716290767593,
+   1205.3590086822608,
+   1205.3560341923685
+  ],
+  "n_starts_hitting_ref": 0,
+  "matches_ref_innerproducts": false,
+  "max_ip_found": 0.6691713507798658,
+  "max_ip_ref": 0.49999999999999994,
+  "n_distinct_ip_found": 11573,
+  "seconds": 543.3293223381042
+ },
+ "E8_gauss6": {
+  "N": 240,
+  "d": 8,
+  "E_ref": 16.750217467974274,
+  "E_min_found": 16.750217467974302,
+  "rel_diff": 1.696796443672755e-15,
+  "all_start_energies": [
+   16.750217467974302,
+   16.750217467974302,
+   16.750217467974302,
+   16.750217467974302
+  ],
+  "n_starts_hitting_ref": 4,
+  "matches_ref_innerproducts": true,
+  "max_ip_found": 0.5000000138904731,
+  "max_ip_ref": 0.49999999999999994,
+  "n_distinct_ip_found": 5,
+  "seconds": 64.33253788948059
+ },
+ "E8_log": {
+  "N": 240,
+  "d": 8,
+  "E_ref": -9014.70763662523,
+  "E_min_found": -9014.707636625193,
+  "rel_diff": 4.035603764132318e-15,
+  "all_start_energies": [
+   -9011.447177659305,
+   -9011.45165263089,
+   -9014.707636625193,
+   -9014.707636625179
+  ],
+  "n_starts_hitting_ref": 2,
+  "matches_ref_innerproducts": true,
+  "max_ip_found": 0.5000010504448612,
+  "max_ip_ref": 0.49999999999999994,
+  "n_distinct_ip_found": 5,
+  "seconds": 625.4539473056793
+ }
+}

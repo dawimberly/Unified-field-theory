@@ -1,0 +1,1190 @@
+{
+ "partA": {
+  "2": {
+   "h_norm": 0.5,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 4.0,
+    "min_norm": 1.0,
+    "kissing": 4,
+    "center_density": 0.25,
+    "packing_density": 0.7853981633974483,
+    "delta_over_best_lattice": 0.8660108078148816,
+    "kiss_over_best_lattice": 0.6666666666666666,
+    "aut_order": 8,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 8
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 16.0,
+    "min_norm": 2.0,
+    "kissing": 4,
+    "center_density": 0.25000000000000006,
+    "packing_density": 0.7853981633974485,
+    "delta_over_best_lattice": 0.8660108078148817,
+    "kiss_over_best_lattice": 0.6666666666666666,
+    "aut_order": 8,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 8
+   },
+   "D_d^+": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 4.0,
+    "min_norm": 0.5,
+    "kissing": 2,
+    "center_density": 0.12500000000000003,
+    "packing_density": 0.39269908169872425,
+    "delta_over_best_lattice": 0.43300540390744086,
+    "kiss_over_best_lattice": 0.3333333333333333,
+    "aut_order": 4,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 4
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 1.0,
+    "min_norm": 0.5,
+    "kissing": 4,
+    "center_density": 0.25000000000000006,
+    "packing_density": 0.7853981633974485,
+    "delta_over_best_lattice": 0.8660108078148817,
+    "kiss_over_best_lattice": 0.6666666666666666,
+    "aut_order": 8,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 8
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "3": {
+   "h_norm": 0.75,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 8.0,
+    "min_norm": 1.0,
+    "kissing": 6,
+    "center_density": 0.125,
+    "packing_density": 0.5235987755982988,
+    "delta_over_best_lattice": 0.707093562620206,
+    "kiss_over_best_lattice": 0.5,
+    "aut_order": 48,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 48
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 32.0,
+    "min_norm": 2.0,
+    "kissing": 12,
+    "center_density": 0.17677669529663692,
+    "packing_density": 0.7404804896930611,
+    "delta_over_best_lattice": 0.9999813061242048,
+    "kiss_over_best_lattice": 1.0,
+    "aut_order": 48,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 48
+   },
+   "D_d^+": {
+    "lattice": false,
+    "reason": "2h=(1,...,1) has odd coordinate sum, not in D_d: D_d u (D_d+h) not closed"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 2.0,
+    "min_norm": 0.75,
+    "kissing": 8,
+    "center_density": 0.16237976320958225,
+    "packing_density": 0.6801747615878316,
+    "delta_over_best_lattice": 0.9185414821223117,
+    "kiss_over_best_lattice": 0.6666666666666666,
+    "aut_order": 48,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 48
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "4": {
+   "h_norm": 1.0,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 16.0,
+    "min_norm": 1.0,
+    "kissing": 8,
+    "center_density": 0.0625,
+    "packing_density": 0.30842513753404244,
+    "delta_over_best_lattice": 0.5,
+    "kiss_over_best_lattice": 0.3333333333333333,
+    "aut_order": 384,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 384
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 64.0,
+    "min_norm": 2.0,
+    "kissing": 24,
+    "center_density": 0.12500000000000003,
+    "packing_density": 0.616850275068085,
+    "delta_over_best_lattice": 1.0000000000000002,
+    "kiss_over_best_lattice": 1.0,
+    "aut_order": 1152,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 1152
+   },
+   "D_d^+": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 16.0,
+    "min_norm": 1.0,
+    "kissing": 8,
+    "center_density": 0.0625,
+    "packing_density": 0.30842513753404244,
+    "delta_over_best_lattice": 0.5,
+    "kiss_over_best_lattice": 0.3333333333333333,
+    "aut_order": 384,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 384
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 4.0,
+    "min_norm": 1.0,
+    "kissing": 24,
+    "center_density": 0.125,
+    "packing_density": 0.6168502750680849,
+    "delta_over_best_lattice": 1.0,
+    "kiss_over_best_lattice": 1.0,
+    "aut_order": 1152,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 1152
+   },
+   "criterion_h_on_first_shell_of_Zd": true,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "5": {
+   "h_norm": 1.25,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 32.0,
+    "min_norm": 1.0,
+    "kissing": 10,
+    "center_density": 0.03125,
+    "packing_density": 0.16449340668482265,
+    "delta_over_best_lattice": 0.353546781310103,
+    "kiss_over_best_lattice": 0.25,
+    "aut_order": 3840,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 3840
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 128.0,
+    "min_norm": 2.0,
+    "kissing": 40,
+    "center_density": 0.08838834764831847,
+    "packing_density": 0.46525761330925886,
+    "delta_over_best_lattice": 0.999981306124205,
+    "kiss_over_best_lattice": 1.0,
+    "aut_order": 3840,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 3840
+   },
+   "D_d^+": {
+    "lattice": false,
+    "reason": "2h=(1,...,1) has odd coordinate sum, not in D_d: D_d u (D_d+h) not closed"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 8.0,
+    "min_norm": 1.0,
+    "kissing": 10,
+    "center_density": 0.0625,
+    "packing_density": 0.3289868133696453,
+    "delta_over_best_lattice": 0.707093562620206,
+    "kiss_over_best_lattice": 0.25,
+    "aut_order": 3840,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 3840
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "6": {
+   "h_norm": 1.5,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 64.0,
+    "min_norm": 1.0,
+    "kissing": 12,
+    "center_density": 0.015625,
+    "packing_density": 0.08074551218828077,
+    "delta_over_best_lattice": 0.2165027019537204,
+    "kiss_over_best_lattice": 0.16666666666666666,
+    "aut_order": 46080,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 46080
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 256.0,
+    "min_norm": 2.0,
+    "kissing": 60,
+    "center_density": 0.06250000000000003,
+    "packing_density": 0.32298204875312325,
+    "delta_over_best_lattice": 0.8660108078148819,
+    "kiss_over_best_lattice": 0.8333333333333334,
+    "aut_order": 46080,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 46080
+   },
+   "D_d^+": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 64.0,
+    "min_norm": 1.5,
+    "kissing": 32,
+    "center_density": 0.05273437499999998,
+    "packing_density": 0.2725161036354475,
+    "delta_over_best_lattice": 0.730696619093806,
+    "kiss_over_best_lattice": 0.4444444444444444,
+    "aut_order": 23040,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 23040
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 16.0,
+    "min_norm": 1.0,
+    "kissing": 12,
+    "center_density": 0.03125,
+    "packing_density": 0.16149102437656154,
+    "delta_over_best_lattice": 0.4330054039074408,
+    "kiss_over_best_lattice": 0.16666666666666666,
+    "aut_order": 46080,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5",
+    "aut_bruteforce": 46080
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "7": {
+   "h_norm": 1.75,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 128.0,
+    "min_norm": 1.0,
+    "kissing": 14,
+    "center_density": 0.0078125,
+    "packing_density": 0.036912234143214075,
+    "delta_over_best_lattice": 0.125,
+    "kiss_over_best_lattice": 0.1111111111111111,
+    "aut_order": 645120,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 512.0,
+    "min_norm": 2.0,
+    "kissing": 84,
+    "center_density": 0.044194173824159244,
+    "packing_density": 0.20880712857129838,
+    "delta_over_best_lattice": 0.7071067811865479,
+    "kiss_over_best_lattice": 0.6666666666666666,
+    "aut_order": 645120,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": false,
+    "reason": "2h=(1,...,1) has odd coordinate sum, not in D_d: D_d u (D_d+h) not closed"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 32.0,
+    "min_norm": 1.0,
+    "kissing": 14,
+    "center_density": 0.015625,
+    "packing_density": 0.07382446828642815,
+    "delta_over_best_lattice": 0.25,
+    "kiss_over_best_lattice": 0.1111111111111111,
+    "aut_order": 645120,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "8": {
+   "h_norm": 2.0,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 256.0,
+    "min_norm": 1.0,
+    "kissing": 16,
+    "center_density": 0.00390625,
+    "packing_density": 0.0158543442438155,
+    "delta_over_best_lattice": 0.0625,
+    "kiss_over_best_lattice": 0.06666666666666667,
+    "aut_order": 10321920,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 1024.0,
+    "min_norm": 2.0,
+    "kissing": 112,
+    "center_density": 0.031250000000000014,
+    "packing_density": 0.12683475395052404,
+    "delta_over_best_lattice": 0.5000000000000002,
+    "kiss_over_best_lattice": 0.4666666666666667,
+    "aut_order": 10321920,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": true,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 256.0,
+    "min_norm": 2.0,
+    "kissing": 240,
+    "center_density": 0.06250000000000001,
+    "packing_density": 0.25366950790104803,
+    "delta_over_best_lattice": 1.0000000000000002,
+    "kiss_over_best_lattice": 1.0,
+    "aut_order": 696729600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 64.0,
+    "min_norm": 1.0,
+    "kissing": 16,
+    "center_density": 0.0078125,
+    "packing_density": 0.031708688487631,
+    "delta_over_best_lattice": 0.125,
+    "kiss_over_best_lattice": 0.06666666666666667,
+    "aut_order": 10321920,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": true,
+   "criterion_even_unimodular": true
+  },
+  "9": {
+   "h_norm": 2.25,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 512.0,
+    "min_norm": 1.0,
+    "kissing": 18,
+    "center_density": 0.001953125,
+    "packing_density": 0.006442400200661536,
+    "delta_over_best_lattice": 0.044198348042543564,
+    "kiss_over_best_lattice": 0.0661764705882353,
+    "aut_order": 185794560,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 2048.0,
+    "min_norm": 2.0,
+    "kissing": 144,
+    "center_density": 0.022097086912079622,
+    "packing_density": 0.07288743790408558,
+    "delta_over_best_lattice": 0.5000472258900118,
+    "kiss_over_best_lattice": 0.5294117647058824,
+    "aut_order": 185794560,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": false,
+    "reason": "2h=(1,...,1) has odd coordinate sum, not in D_d: D_d u (D_d+h) not closed"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 128.0,
+    "min_norm": 1.0,
+    "kissing": 18,
+    "center_density": 0.00390625,
+    "packing_density": 0.012884800401323072,
+    "delta_over_best_lattice": 0.08839669608508713,
+    "kiss_over_best_lattice": 0.0661764705882353,
+    "aut_order": 185794560,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "10": {
+   "h_norm": 2.5,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 1024.0,
+    "min_norm": 1.0,
+    "kissing": 20,
+    "center_density": 0.0009765625,
+    "packing_density": 0.00249039457019272,
+    "delta_over_best_lattice": 0.027066588137472283,
+    "kiss_over_best_lattice": 0.05952380952380952,
+    "aut_order": 3715891200,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 4096.0,
+    "min_norm": 2.0,
+    "kissing": 180,
+    "center_density": 0.01562500000000001,
+    "packing_density": 0.039846313123083545,
+    "delta_over_best_lattice": 0.4330654101995568,
+    "kiss_over_best_lattice": 0.5357142857142857,
+    "aut_order": 3715891200,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 1024.0,
+    "min_norm": 2.0,
+    "kissing": 180,
+    "center_density": 0.03125000000000003,
+    "packing_density": 0.0796926262461671,
+    "delta_over_best_lattice": 0.8661308203991138,
+    "kiss_over_best_lattice": 0.5357142857142857,
+    "aut_order": 1857945600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 256.0,
+    "min_norm": 1.0,
+    "kissing": 20,
+    "center_density": 0.001953125,
+    "packing_density": 0.00498078914038544,
+    "delta_over_best_lattice": 0.054133176274944565,
+    "kiss_over_best_lattice": 0.05952380952380952,
+    "aut_order": 3715891200,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "11": {
+   "h_norm": 2.75,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 2048.0,
+    "min_norm": 1.0,
+    "kissing": 22,
+    "center_density": 0.00048828125,
+    "packing_density": 0.0009199725973583493,
+    "delta_over_best_lattice": 0.015220737219451374,
+    "kiss_over_best_lattice": 0.0502283105022831,
+    "aut_order": 81749606400,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 8192.0,
+    "min_norm": 2.0,
+    "kissing": 220,
+    "center_density": 0.011048543456039813,
+    "packing_density": 0.0208166035871325,
+    "delta_over_best_lattice": 0.34440596808104157,
+    "kiss_over_best_lattice": 0.502283105022831,
+    "aut_order": 81749606400,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": false,
+    "reason": "2h=(1,...,1) has odd coordinate sum, not in D_d: D_d u (D_d+h) not closed"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 512.0,
+    "min_norm": 1.0,
+    "kissing": 22,
+    "center_density": 0.0009765625,
+    "packing_density": 0.0018399451947166987,
+    "delta_over_best_lattice": 0.030441474438902747,
+    "kiss_over_best_lattice": 0.0502283105022831,
+    "aut_order": 81749606400,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "12": {
+   "h_norm": 3.0,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 4096.0,
+    "min_norm": 1.0,
+    "kissing": 24,
+    "center_density": 0.000244140625,
+    "packing_density": 0.00032599188692738996,
+    "delta_over_best_lattice": 0.006591269573434126,
+    "kiss_over_best_lattice": 0.031746031746031744,
+    "aut_order": 1961990553600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 16384.0,
+    "min_norm": 2.0,
+    "kissing": 264,
+    "center_density": 0.007812500000000007,
+    "packing_density": 0.010431740381676487,
+    "delta_over_best_lattice": 0.21092062634989223,
+    "kiss_over_best_lattice": 0.3492063492063492,
+    "aut_order": 1961990553600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 4096.0,
+    "min_norm": 2.0,
+    "kissing": 264,
+    "center_density": 0.015625000000000017,
+    "packing_density": 0.020863480763352982,
+    "delta_over_best_lattice": 0.4218412526997845,
+    "kiss_over_best_lattice": 0.3492063492063492,
+    "aut_order": 980995276800,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 1024.0,
+    "min_norm": 1.0,
+    "kissing": 24,
+    "center_density": 0.00048828125,
+    "packing_density": 0.0006519837738547799,
+    "delta_over_best_lattice": 0.013182539146868252,
+    "kiss_over_best_lattice": 0.031746031746031744,
+    "aut_order": 1961990553600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  },
+  "13": {
+   "h_norm": 3.25,
+   "Z^d": {
+    "lattice": true,
+    "det_gram": 1.0,
+    "integral": true,
+    "even": false,
+    "unimodular": true,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 8192.0,
+    "min_norm": 1.0,
+    "kissing": 26,
+    "center_density": 0.0001220703125,
+    "packing_density": 0.00011116073666788122,
+    "delta_over_best_lattice": 0.0038051843048628434,
+    "kiss_over_best_lattice": 0.02832244008714597,
+    "aut_order": 51011754393600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d": {
+    "lattice": true,
+    "det_gram": 4.0,
+    "integral": true,
+    "even": true,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": true,
+    "det_after_sqrt2": 32768.0,
+    "min_norm": 2.0,
+    "kissing": 312,
+    "center_density": 0.005524271728019907,
+    "packing_density": 0.005030560684771263,
+    "delta_over_best_lattice": 0.1722029840405208,
+    "kiss_over_best_lattice": 0.33986928104575165,
+    "aut_order": 51011754393600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "D_d^+": {
+    "lattice": false,
+    "reason": "2h=(1,...,1) has odd coordinate sum, not in D_d: D_d u (D_d+h) not closed"
+   },
+   "BCC Z^d u (Z^d+h)": {
+    "lattice": true,
+    "det_gram": 0.25,
+    "integral": false,
+    "even": false,
+    "unimodular": false,
+    "even_after_sqrt2_scaling": false,
+    "det_after_sqrt2": 2048.0,
+    "min_norm": 1.0,
+    "kissing": 26,
+    "center_density": 0.000244140625,
+    "packing_density": 0.00022232147333576245,
+    "delta_over_best_lattice": 0.007610368609725687,
+    "kiss_over_best_lattice": 0.02832244008714597,
+    "aut_order": 51011754393600,
+    "aut_source": "standard (Conway-Sloane ch.4/8); brute-force checked for d<=5"
+   },
+   "criterion_h_on_first_shell_of_Zd": false,
+   "criterion_h_on_first_shell_of_Dd": false,
+   "criterion_even_unimodular": false
+  }
+ },
+ "partA_selection": {
+  "h_norm_equals_Zd_min": [
+   4
+  ],
+  "h_norm_equals_Dd_min": [
+   8
+  ],
+  "even_unimodular": [
+   8
+  ],
+  "best_lattice_kissing_reached": [
+   [
+    3,
+    "D_d"
+   ],
+   [
+    4,
+    "D_d"
+   ],
+   [
+    4,
+    "BCC Z^d u (Z^d+h)"
+   ],
+   [
+    5,
+    "D_d"
+   ],
+   [
+    8,
+    "D_d^+"
+   ]
+  ]
+ },
+ "partB_splitting": {
+  "S9_l1": {
+   "total": 10,
+   "m_multiplicity": {
+    "-1": 1,
+    "0": 8,
+    "1": 1
+   },
+   "rule": "E -> E - m*hbar*Omega (DERIVED: J12 eigenvalue m couples to rotation)"
+  },
+  "S9_l2": {
+   "total": 54,
+   "m_multiplicity": {
+    "-2": 1,
+    "-1": 8,
+    "0": 36,
+    "1": 8,
+    "2": 1
+   },
+   "rule": "E -> E - m*hbar*Omega (DERIVED: J12 eigenvalue m couples to rotation)"
+  },
+  "S9_l3": {
+   "total": 210,
+   "m_multiplicity": {
+    "-3": 1,
+    "-2": 8,
+    "-1": 36,
+    "0": 120,
+    "1": 36,
+    "2": 8,
+    "3": 1
+   },
+   "rule": "E -> E - m*hbar*Omega (DERIVED: J12 eigenvalue m couples to rotation)"
+  },
+  "Z9_shell1": {
+   "total": 18,
+   "pattern": "velocity along e1: 2 modes shift by +/- m1*v, 16 unshifted (Doppler k.v, DERIVED)"
+  },
+  "Lambda9_shell1": {
+   "total": 2,
+   "pattern": "both modes along the stacking normal: shift +/- m1*v_normal; no shift for v inside the E8 layer"
+  },
+  "E8xS1_shell1": {
+   "total": 2,
+   "pattern": "circle modes: shift +/- m1*v_circle"
+  },
+  "note": "A flat lattice torus has NO continuous rotation isometry: rigid \"churn\" of a lattice is not a symmetry, it is a time-dependent modulus (shear) of the metric. The continuous churn available on T^9 is translation (brane sliding along a cycle, U(1)^9). On S^9 it is SO(10) rotation. A rotation of the compact space with the brane co-moving is pure gauge (unobservable); only the brane velocity RELATIVE to the bulk geometry is physical."
+ },
+ "partB_lorentz": {
+  "v_max_over_c": 3.741657386773941e-08,
+  "source": "GW170817/GRB170817A, arXiv:1710.05834 (upper side +7e-16 applies since c_g>c_gamma)",
+  "sme_note": "All SM fields share the same induced brane metric, so SM-only SME coefficients (photon, electron) vanish identically: churn is invisible to them (DERIVED). Only the gravity-vs-matter comparison sees it.",
+  "rows": [
+   {
+    "space": "Z9 hypercubic",
+    "M_D_TeV": 6.0,
+    "radius_m": 5.798754359276739e-17,
+    "m1_GeV": 3.402920147571348,
+    "Omega_max_rad_s": 1.9344165927296243e+17,
+    "hbarOmega_max_eV": 127.32561309603965,
+    "Omega_over_omegaKK": 3.7416573876090356e-08,
+    "max_shell1_splitting_eV": 127.32561306762204
+   },
+   {
+    "space": "Z9 hypercubic",
+    "M_D_TeV": 10.0,
+    "radius_m": 3.105891214476174e-17,
+    "m1_GeV": 6.353312681406336,
+    "Omega_max_rad_s": 3.611590321472354e+17,
+    "hbarOmega_max_eV": 237.71919330174183,
+    "Omega_over_omegaKK": 3.741657387609035e-08,
+    "max_shell1_splitting_eV": 237.7191932486857
+   },
+   {
+    "space": "Lambda9 laminated",
+    "M_D_TeV": 6.0,
+    "radius_m": 5.798754359276739e-17,
+    "m1_GeV": 3.402920147571348,
+    "Omega_max_rad_s": 1.9344165927296243e+17,
+    "hbarOmega_max_eV": 127.32561309603965,
+    "Omega_over_omegaKK": 3.7416573876090356e-08,
+    "max_shell1_splitting_eV": 127.32561306762204
+   },
+   {
+    "space": "Lambda9 laminated",
+    "M_D_TeV": 10.0,
+    "radius_m": 3.105891214476174e-17,
+    "m1_GeV": 6.353312681406336,
+    "Omega_max_rad_s": 3.611590321472354e+17,
+    "hbarOmega_max_eV": 237.71919330174183,
+    "Omega_over_omegaKK": 3.741657387609035e-08,
+    "max_shell1_splitting_eV": 237.7191932486857
+   },
+   {
+    "space": "E8 x circle",
+    "M_D_TeV": 6.0,
+    "radius_m": 7.890886945571364e-17,
+    "m1_GeV": 2.5006945576725905,
+    "Omega_max_rad_s": 1.421539394382484e+17,
+    "hbarOmega_max_eV": 93.56742265869357,
+    "Omega_over_omegaKK": 3.741657387609035e-08,
+    "max_shell1_splitting_eV": 93.56742263781042
+   },
+   {
+    "space": "E8 x circle",
+    "M_D_TeV": 10.0,
+    "radius_m": 4.226465706288629e-17,
+    "m1_GeV": 4.668841394037432,
+    "Omega_max_rad_s": 2.6540394337183184e+17,
+    "hbarOmega_max_eV": 174.69204893575022,
+    "Omega_over_omegaKK": 3.741657387609035e-08,
+    "max_shell1_splitting_eV": 174.692048896761
+   },
+   {
+    "space": "S9 sphere (flux-stabilized, ASSUMED)",
+    "M_D_TeV": 6.0,
+    "radius_m": 2.542314263152835e-16,
+    "m1_GeV": 2.328512056042429,
+    "Omega_max_rad_s": 4.412203012163106e+16,
+    "hbarOmega_max_eV": 29.041647788759523,
+    "Omega_over_omegaKK": 1.2472191292030115e-08,
+    "max_shell1_splitting_eV": 29.041647782277774
+   },
+   {
+    "space": "S9 sphere (flux-stabilized, ASSUMED)",
+    "M_D_TeV": 10.0,
+    "radius_m": 1.3616978828792329e-16,
+    "m1_GeV": 4.347373588833743,
+    "Omega_max_rad_s": 8.23766181234711e+16,
+    "hbarOmega_max_eV": 54.22127501785393,
+    "Omega_over_omegaKK": 1.2472191292030117e-08,
+    "max_shell1_splitting_eV": 54.221275005752375
+   }
+  ]
+ },
+ "partB_cubic_invariant": {
+  "counts": {
+   "Z4": {
+    "shell": 8,
+    "zero_sum_triangles": 0
+   },
+   "D4": {
+    "shell": 24,
+    "zero_sum_triangles": 32
+   },
+   "BCC4": {
+    "shell": 24,
+    "zero_sum_triangles": 32
+   },
+   "Z8": {
+    "shell": 16,
+    "zero_sum_triangles": 0
+   },
+   "D8": {
+    "shell": 112,
+    "zero_sum_triangles": 448
+   },
+   "BCC8": {
+    "shell": 16,
+    "zero_sum_triangles": 0
+   },
+   "E8=D8+": {
+    "shell": 240,
+    "zero_sum_triangles": 2240
+   },
+   "Z9": {
+    "shell": 18,
+    "zero_sum_triangles": 0
+   },
+   "D9": {
+    "shell": 144,
+    "zero_sum_triangles": 672
+   },
+   "BCC9": {
+    "shell": 18,
+    "zero_sum_triangles": 0
+   },
+   "Lambda9": {
+    "shell": 272,
+    "zero_sum_triangles": 2464
+   }
+  },
+  "landau": "ASSUMED mapping: density on S^{d-1} rho = rho0 + A sum_{k in shell} cos(k.x). F = r A^2 - w A^3 + u A^4 with w proportional to #zero-sum triangles (Landau-Alexander-McTague). w != 0 -> first-order (DERIVED): coexistence at r_c = w^2/(4u), ordered-phase spinodal r_s = 9w^2/(32u), disordered spinodal r = 0: hysteresis window 0<r<r_s, r_s/r_c = 9/8 universal."
+ },
+ "partB_multifield": {
+  "hbarOmega_max_GeV": 2.9041647788759525e-08,
+  "rule": "Omega*tau<1 -> fluid co-rotates (locked); >1 -> lags (free). tau=1/Gamma (unstable) or 1/m (stable, ASSUMED)",
+  "rows": [
+   {
+    "field": "photon",
+    "mass_GeV": 0.0,
+    "width_GeV": null,
+    "Gamma_over_m": null,
+    "coupling": 0.007815552950371238,
+    "yukawa": null,
+    "tau_s": Infinity,
+    "response_rate_GeV": 0.0,
+    "Omega_tau_at_max_churn": Infinity,
+    "state": "free (lags churn)",
+    "note": "m<1e-18 eV; alpha_em(mZ)"
+   },
+   {
+    "field": "neutrino",
+    "mass_GeV": 4.5e-10,
+    "width_GeV": null,
+    "Gamma_over_m": null,
+    "coupling": null,
+    "yukawa": 2.584664540118158e-12,
+    "tau_s": 1.4626932375555556e-15,
+    "response_rate_GeV": 4.5e-10,
+    "Omega_tau_at_max_churn": 64.53699508613228,
+    "state": "free (lags churn)",
+    "note": "m<0.45 eV (KATRIN 2024, upper bound)"
+   },
+   {
+    "field": "electron",
+    "mass_GeV": 0.00051099895,
+    "width_GeV": null,
+    "Gamma_over_m": null,
+    "coupling": null,
+    "yukawa": 2.9350241468946925e-06,
+    "tau_s": 1.2880886680882613e-21,
+    "response_rate_GeV": 0.00051099895,
+    "Omega_tau_at_max_churn": 5.6833087012721894e-05,
+    "state": "locked (follows churn)",
+    "note": "stable (tau>6.6e28 yr)"
+   },
+   {
+    "field": "muon",
+    "mass_GeV": 0.1056583755,
+    "width_GeV": 2.9959837019080415e-19,
+    "Gamma_over_m": 2.8355382975844082e-18,
+    "coupling": null,
+    "yukawa": 0.0006068699033807536,
+    "tau_s": 2.1969811e-06,
+    "response_rate_GeV": 2.9959837019080415e-19,
+    "Omega_tau_at_max_churn": 96935266270.85413,
+    "state": "free (lags churn)",
+    "note": "tau=2.197 us"
+   },
+   {
+    "field": "tau",
+    "mass_GeV": 1.77693,
+    "width_GeV": 2.2673508677230455e-12,
+    "Gamma_over_m": 1.2759933524241503e-12,
+    "coupling": null,
+    "yukawa": 0.01020615102504924,
+    "tau_s": 2.903e-13,
+    "response_rate_GeV": 2.2673508677230455e-12,
+    "Omega_tau_at_max_churn": 12808.625344309494,
+    "state": "free (lags churn)",
+    "note": "tau=290.3 fs"
+   },
+   {
+    "field": "Higgs",
+    "mass_GeV": 125.2,
+    "width_GeV": 0.0037,
+    "Gamma_over_m": 2.955271565495208e-05,
+    "coupling": null,
+    "yukawa": null,
+    "tau_s": 1.778951234864865e-22,
+    "response_rate_GeV": 0.0037,
+    "Omega_tau_at_max_churn": 7.849093996962033e-06,
+    "state": "locked (follows churn)",
+    "note": "Gamma measured 3.7(+1.9-1.4) MeV (CMS 2022); SM 4.1 MeV"
+   },
+   {
+    "field": "W",
+    "mass_GeV": 80.369,
+    "width_GeV": 2.085,
+    "Gamma_over_m": 0.02594283865669599,
+    "coupling": 0.0338,
+    "yukawa": null,
+    "tau_s": 3.156891879616307e-25,
+    "response_rate_GeV": 2.085,
+    "Omega_tau_at_max_churn": 1.3928847860316319e-08,
+    "state": "locked (follows churn)",
+    "note": "alpha_2(mZ)"
+   },
+   {
+    "field": "Z",
+    "mass_GeV": 91.188,
+    "width_GeV": 2.4955,
+    "Gamma_over_m": 0.027366539456946087,
+    "coupling": 0.0338,
+    "yukawa": null,
+    "tau_s": 2.6375954994990987e-25,
+    "response_rate_GeV": 2.4955,
+    "Omega_tau_at_max_churn": 1.1637606807757775e-08,
+    "state": "locked (follows churn)",
+    "note": ""
+   },
+   {
+    "field": "top",
+    "mass_GeV": 172.57,
+    "width_GeV": 1.42,
+    "Gamma_over_m": 0.008228544938285913,
+    "coupling": null,
+    "yukawa": 0.9911901326404232,
+    "tau_s": 4.635295471126761e-25,
+    "response_rate_GeV": 1.42,
+    "Omega_tau_at_max_churn": 2.0451864639971498e-08,
+    "state": "locked (follows churn)",
+    "note": "decays before hadronizing"
+   },
+   {
+    "field": "gluon/light quarks",
+    "mass_GeV": 0.0,
+    "width_GeV": 0.33,
+    "Gamma_over_m": null,
+    "coupling": 0.118,
+    "yukawa": null,
+    "tau_s": 1.9945816875757577e-24,
+    "response_rate_GeV": 0.33,
+    "Omega_tau_at_max_churn": 8.800499329927129e-08,
+    "state": "locked (follows churn)",
+    "note": "confined: lock time ~1/Lambda_QCD (Lambda~0.33 GeV, ASSUMED proxy); QGP eta/s ~ 0.08-0.2 near KSS 1/4pi=0.0796"
+   }
+  ],
+  "fermi_check": "for weak decays Gamma ~ G_F^2 m^5 -> Gamma/m ~ (m/M_W)^4: muon/tau ratio (m_tau/m_mu)^4*BR-correction; layer order = mass hierarchy (DERIVED, not new)",
+  "fermi_ratio_check": {
+   "measured": 450000.39446166804,
+   "predicted_m4_over_BR": 448908.11839079374
+  }
+ }
+}

@@ -1,0 +1,3828 @@
+{
+  "constants": {
+    "G": 6.6743e-11,
+    "u": 6.689671881065285e-26,
+    "m_N_kg": 1.67262192369e-27,
+    "r_N_m": 1e-15,
+    "R_E_m": 6371000.0,
+    "h_atm_m_ASSUMED": 10000.0,
+    "V_b_atmosphere_m3": 1.2751611797744707e+18,
+    "V_b_reproduces_table1_1e-41_m3": 2244856335927947.8,
+    "K_disc_kg_s3_per_m2": 1.342118206232483e-13,
+    "K_nl_kg_s4_per_m3": 2.244856335927948e-25,
+    "K_cont_table1_kg2_s4_per_m5": 1.0000000000000002e-55,
+    "notes": {
+      "r_N": "CITED Oppenheim 2023, r_N ~ 10^{-15} m (very conservative nuclear radius).",
+      "V": "DERIVED Oppenheim convention V = r_N^2 * Delta x (nuclear size in y,z; delocalization in x). The smearing-length vs wavepacket-volume choice can move the continuous and non-local lower bounds by many orders; the discrete lower bound M/lambda does not depend on V.",
+      "FOM": "CITED Janse: FOM_D2 = sigma_a^2 N Delta T = S_a N, units m^2 s^{-3}.",
+      "Table1_vs_formula": "Plugging the stated Cavendish FOM into Eqs. (46)\u2013(47) gives uppers ~2 orders weaker (larger) than the rounded Table 1 values. We use the formulas as DERIVED and quote Table 1 / Janse rounded windows as CITED."
+    }
+  },
+  "table1_reproduction": {
+    "published": {
+      "ultralocal_continuous_D2": {
+        "upper": 1e-41,
+        "lower": 1e-09,
+        "units": "kg^2 s m^{-3}",
+        "status": "ruled_out"
+      },
+      "ultralocal_discrete_lP3_over_mP_D2": {
+        "upper": 0.1,
+        "lower": 1e-25,
+        "units": "kg",
+        "status": "open"
+      },
+      "nonlocal_lP2_D2": {
+        "upper": 1e-09,
+        "lower": 1e-35,
+        "units": "kg s m^{-1}",
+        "status": "open"
+      }
+    },
+    "recomputed_from_stated_Cavendish_and_Gerlich": {
+      "FOM_Cavendish": 100000000000000.0,
+      "ultralocal_continuous_D2_atm_Vb": {
+        "upper": 1.7604490879537135e-44,
+        "lower": 9.999999999999996e-10,
+        "note": "V_b = pi R_E^2 * 10 km (ASSUMED tropopause). Upper is a few orders below the published 1e-41; either way the window is empty."
+      },
+      "ultralocal_continuous_D2_table1_Vb": {
+        "upper": 1.0000000000000001e-41,
+        "lower": 9.999999999999996e-10,
+        "V_b_m3": 2244856335927947.8,
+        "implied_h_m": 17.60449087953713,
+        "note": "V_b chosen to reproduce the published 1e-41 upper bound; the implied height is ~18 m, not an atmospheric scale. We keep the published Table 1 number as CITED."
+      },
+      "ultralocal_discrete": {
+        "upper": 13.42118206232483,
+        "lower": 9.999999999999999e-26,
+        "note": "Formula+Cavendish numbers give upper ~10^{+1} kg; Table 1 quotes 10^{-1} (about 2 orders more conservative)."
+      },
+      "nonlocal": {
+        "upper": 2.244856335927948e-11,
+        "lower": 2.15443469003188e-34,
+        "note": "Formula+Cavendish numbers give upper ~10^{-11}; Table 1 quotes 10^{-9} (about 2 orders more conservative)."
+      }
+    },
+    "janse_published_2024_conservative_rounded": {
+      "ultralocal_discrete": {
+        "upper": 1e-16,
+        "lower": 1e-25,
+        "units": "kg",
+        "note": "Janse Eqs. (4)\u2013(5); 15-order FOM improvement applied to Table 1, excluding open circles."
+      },
+      "nonlocal": {
+        "upper": 1e-24,
+        "lower": 1e-35,
+        "units": "kg s m^{-1}"
+      }
+    }
+  },
+  "current_windows": {
+    "ultralocal_continuous": {
+      "parameter": "D2",
+      "units": "kg^2 s m^{-3}",
+      "table1_2023": {
+        "upper": 1e-41,
+        "lower": 1e-09,
+        "gap": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 9.999999999999999e-33,
+          "status": "ruled_out"
+        }
+      },
+      "lower_now": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 5.638773141413186e-05,
+        "citation": "Pedalino et al., Nature (2025), arXiv:2507.21211; journal 10.1038/s41586-025-09917-9"
+      },
+      "upper_conservative_absolute": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 2.98e-56,
+        "FOM": 0.298,
+        "applicability": "absolute",
+        "citation": "Gisler et al., Phys. Rev. Lett. 129 (2022)"
+      },
+      "upper_aggressive_including_differential": {
+        "id": "asenbaum2017",
+        "short_name": "Asenbaum 2017",
+        "year": 2017,
+        "value": 2.4100000000000003e-66,
+        "FOM": 2.41e-11,
+        "applicability": "differential",
+        "citation": "Asenbaum et al., Phys. Rev. Lett. 118, 183602 (2017)"
+      },
+      "gap_conservative": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 5.284837544028513e-52,
+        "status": "ruled_out"
+      },
+      "gap_aggressive": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 4.2739793560767505e-62,
+        "status": "ruled_out"
+      }
+    },
+    "ultralocal_discrete": {
+      "parameter": "(l_P^3/m_P) D2",
+      "units": "kg",
+      "table1_2023": {
+        "upper": 0.1,
+        "lower": 1e-25,
+        "gap": {
+          "orders": 24.0,
+          "ratio_upper_over_lower": 1e+24,
+          "status": "open"
+        }
+      },
+      "lower_now": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 3.509466044231068e-24,
+        "citation": "Pedalino et al., Nature (2025), arXiv:2507.21211; journal 10.1038/s41586-025-09917-9"
+      },
+      "upper_conservative_absolute": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 3.999512254572799e-14,
+        "FOM": 0.298,
+        "applicability": "absolute",
+        "citation": "Gisler et al., Phys. Rev. Lett. 129 (2022)"
+      },
+      "upper_aggressive_including_differential": {
+        "id": "asenbaum2017",
+        "short_name": "Asenbaum 2017",
+        "year": 2017,
+        "value": 3.2345048770202837e-24,
+        "FOM": 2.41e-11,
+        "applicability": "differential",
+        "citation": "Asenbaum et al., Phys. Rev. Lett. 118, 183602 (2017)"
+      },
+      "gap_conservative": {
+        "orders": 10.056765987051214,
+        "ratio_upper_over_lower": 11396355468.796398,
+        "status": "open"
+      },
+      "gap_aggressive": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 0.9216515664362187,
+        "status": "ruled_out"
+      }
+    },
+    "nonlocal_DP_like": {
+      "parameter": "l_P^2 D2",
+      "units": "kg s m^{-1}",
+      "table1_2023": {
+        "upper": 1e-09,
+        "lower": 1e-35,
+        "gap": {
+          "orders": 26.0,
+          "ratio_upper_over_lower": 1e+26,
+          "status": "open"
+        }
+      },
+      "lower_now": {
+        "id": "pedalino2025",
+        "short_name": "Pedalino 2025 172 kDa",
+        "year": 2025,
+        "value": 1.4692162272940612e-29,
+        "citation": "Pedalino et al., Nature (2025), arXiv:2507.21211; journal 10.1038/s41586-025-09917-9"
+      },
+      "upper_conservative_absolute": {
+        "id": "gisler2022",
+        "short_name": "Gisler 2022 nanowire",
+        "year": 2022,
+        "value": 6.689671881065285e-26,
+        "FOM": 0.298,
+        "applicability": "absolute",
+        "citation": "Gisler et al., Phys. Rev. Lett. 129 (2022)"
+      },
+      "upper_aggressive_including_differential": {
+        "id": "asenbaum2017",
+        "short_name": "Asenbaum 2017",
+        "year": 2017,
+        "value": 5.4101037695863544e-36,
+        "FOM": 2.41e-11,
+        "applicability": "differential",
+        "citation": "Asenbaum et al., Phys. Rev. Lett. 118, 183602 (2017)"
+      },
+      "gap_conservative": {
+        "orders": 3.6583191003373106,
+        "ratio_upper_over_lower": 4553.224880578697,
+        "status": "open"
+      },
+      "gap_aggressive": {
+        "orders": 0.0,
+        "ratio_upper_over_lower": 3.6823060275821e-07,
+        "status": "ruled_out"
+      }
+    }
+  },
+  "history": {
+    "ultralocal_continuous": {
+      "lower_running_max": [
+        {
+          "year": 2011,
+          "id": "gerlich2011",
+          "short_name": "Gerlich 2011 organics",
+          "value": 9.999999999999996e-10,
+          "best_so_far": 9.999999999999996e-10,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "fein2019",
+          "short_name": "Fein 2019 25 kDa",
+          "value": 1.114889110336469e-07,
+          "best_so_far": 1.114889110336469e-07,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2025,
+          "id": "pedalino2025",
+          "short_name": "Pedalino 2025 172 kDa",
+          "value": 5.638773141413186e-05,
+          "best_so_far": 5.638773141413186e-05,
+          "applicability": "absolute"
+        }
+      ],
+      "upper_running_min_absolute": [
+        {
+          "year": 1798,
+          "id": "cavendish1798",
+          "short_name": "Cavendish 1798",
+          "value": 1.0000000000000001e-41,
+          "best_so_far": 1.0000000000000001e-41,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2001,
+          "id": "mamin2001",
+          "short_name": "Mamin 2001",
+          "value": 2.1100000000000006e-54,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2007,
+          "id": "corbitt2007",
+          "short_name": "Corbitt 2007",
+          "value": 4.7000000000000005e-52,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "maiwald2009",
+          "short_name": "Maiwald 2009",
+          "value": 1.3000000000000002e-53,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "teufel2009",
+          "short_name": "Teufel 2009",
+          "value": 1.0500000000000001e-52,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2010,
+          "id": "biercuk2010",
+          "short_name": "Biercuk 2010",
+          "value": 5.220000000000001e-49,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "krause2012",
+          "short_name": "Krause 2012",
+          "value": 2.8900000000000005e-49,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "nichol2012",
+          "short_name": "Nichol 2012",
+          "value": 3.0700000000000003e-49,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "gieseler2013",
+          "short_name": "Gieseler 2013",
+          "value": 4.0100000000000005e-52,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "moser2013",
+          "short_name": "Moser 2013",
+          "value": 7.230000000000001e-50,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2014,
+          "id": "guzman2014",
+          "short_name": "Guzman 2014",
+          "value": 7.240000000000002e-47,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2015,
+          "id": "ranjit2015",
+          "short_name": "Ranjit 2015",
+          "value": 3.780000000000001e-48,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "martynov2016",
+          "short_name": "aLIGO 2016",
+          "value": 1.8500000000000003e-55,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "norte2016",
+          "short_name": "Norte 2016",
+          "value": 1.3100000000000002e-53,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "reinhardt2016",
+          "short_name": "Reinhardt 2016",
+          "value": 3.0000000000000004e-52,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "weber2016",
+          "short_name": "Weber 2016",
+          "value": 7.950000000000002e-50,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "ranjit2016",
+          "short_name": "Ranjit 2016",
+          "value": 2.1400000000000002e-49,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "kampel2017",
+          "short_name": "Kampel 2017",
+          "value": 2.8900000000000005e-53,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "hempston2017",
+          "short_name": "Hempston 2017",
+          "value": 4.0600000000000007e-51,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "shaniv2017",
+          "short_name": "Shaniv 2017",
+          "value": 3.7800000000000005e-45,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "heritier2018",
+          "short_name": "Heritier 2018",
+          "value": 4.330000000000001e-53,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "rider2018",
+          "short_name": "Rider 2018",
+          "value": 2.6000000000000003e-51,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "debonis2018",
+          "short_name": "De Bonis 2018",
+          "value": 1.0800000000000001e-50,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "blums2018",
+          "short_name": "Blums 2018",
+          "value": 1.4400000000000004e-43,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "tebbenjohanns2019",
+          "short_name": "Tebbenjohanns 2019",
+          "value": 8.630000000000001e-53,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "cripe2019",
+          "short_name": "Cripe 2019",
+          "value": 1.6000000000000002e-52,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "timberlake2019",
+          "short_name": "Timberlake 2019",
+          "value": 1.4600000000000002e-47,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "monteiro2020",
+          "short_name": "Monteiro 2020",
+          "value": 1.9700000000000003e-53,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "tebbenjohanns2020",
+          "short_name": "Tebbenjohanns 2020",
+          "value": 5.520000000000001e-53,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "delic2020",
+          "short_name": "Delic 2020",
+          "value": 4.020000000000001e-52,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "kawasaki2020",
+          "short_name": "Kawasaki 2020",
+          "value": 3.580000000000001e-51,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "affolter2020",
+          "short_name": "Affolter 2020",
+          "value": 6.430000000000001e-48,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "fogliano2021",
+          "short_name": "Fogliano 2021",
+          "value": 3.0100000000000004e-55,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "lewandowski2021",
+          "short_name": "Lewandowski 2021",
+          "value": 1.0300000000000002e-52,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "westphal2021",
+          "short_name": "Westphal 2021",
+          "value": 1.1500000000000002e-51,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "halg2021",
+          "short_name": "Halg 2021",
+          "value": 1.6800000000000003e-50,
+          "best_so_far": 1.8500000000000003e-55,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "gisler2022",
+          "short_name": "Gisler 2022 nanowire",
+          "value": 2.98e-56,
+          "best_so_far": 2.98e-56,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "seis2022",
+          "short_name": "Seis 2022 membrane",
+          "value": 8.46e-56,
+          "best_so_far": 2.98e-56,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "liang2022",
+          "short_name": "Liang 2022",
+          "value": 1.2100000000000003e-53,
+          "best_so_far": 2.98e-56,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "priel2022",
+          "short_name": "Priel 2022",
+          "value": 5.140000000000001e-50,
+          "best_so_far": 2.98e-56,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2023,
+          "id": "timberlake2023",
+          "short_name": "Timberlake 2023",
+          "value": 4.760000000000001e-54,
+          "best_so_far": 2.98e-56,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2024,
+          "id": "fuchs2024",
+          "short_name": "Fuchs 2024 mag-lev",
+          "value": 5.920000000000001e-55,
+          "best_so_far": 2.98e-56,
+          "applicability": "absolute"
+        }
+      ],
+      "upper_running_min_including_differential": [
+        {
+          "year": 1798,
+          "id": "cavendish1798",
+          "short_name": "Cavendish 1798",
+          "value": 1.0000000000000001e-41,
+          "best_so_far": 1.0000000000000001e-41,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2001,
+          "id": "mamin2001",
+          "short_name": "Mamin 2001",
+          "value": 2.1100000000000006e-54,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2007,
+          "id": "corbitt2007",
+          "short_name": "Corbitt 2007",
+          "value": 4.7000000000000005e-52,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "maiwald2009",
+          "short_name": "Maiwald 2009",
+          "value": 1.3000000000000002e-53,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "teufel2009",
+          "short_name": "Teufel 2009",
+          "value": 1.0500000000000001e-52,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2010,
+          "id": "biercuk2010",
+          "short_name": "Biercuk 2010",
+          "value": 5.220000000000001e-49,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "krause2012",
+          "short_name": "Krause 2012",
+          "value": 2.8900000000000005e-49,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "nichol2012",
+          "short_name": "Nichol 2012",
+          "value": 3.0700000000000003e-49,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "gieseler2013",
+          "short_name": "Gieseler 2013",
+          "value": 4.0100000000000005e-52,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "moser2013",
+          "short_name": "Moser 2013",
+          "value": 7.230000000000001e-50,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2014,
+          "id": "guzman2014",
+          "short_name": "Guzman 2014",
+          "value": 7.240000000000002e-47,
+          "best_so_far": 2.1100000000000006e-54,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2015,
+          "id": "biedermann2015",
+          "short_name": "Biedermann 2015",
+          "value": 1.7000000000000002e-62,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "differential"
+        },
+        {
+          "year": 2015,
+          "id": "hamilton2015",
+          "short_name": "Hamilton 2015",
+          "value": 6.93e-55,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "differential"
+        },
+        {
+          "year": 2015,
+          "id": "ranjit2015",
+          "short_name": "Ranjit 2015",
+          "value": 3.780000000000001e-48,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "martynov2016",
+          "short_name": "aLIGO 2016",
+          "value": 1.8500000000000003e-55,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "norte2016",
+          "short_name": "Norte 2016",
+          "value": 1.3100000000000002e-53,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "reinhardt2016",
+          "short_name": "Reinhardt 2016",
+          "value": 3.0000000000000004e-52,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "weber2016",
+          "short_name": "Weber 2016",
+          "value": 7.950000000000002e-50,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "ranjit2016",
+          "short_name": "Ranjit 2016",
+          "value": 2.1400000000000002e-49,
+          "best_so_far": 1.7000000000000002e-62,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "asenbaum2017",
+          "short_name": "Asenbaum 2017",
+          "value": 2.4100000000000003e-66,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "differential"
+        },
+        {
+          "year": 2017,
+          "id": "kampel2017",
+          "short_name": "Kampel 2017",
+          "value": 2.8900000000000005e-53,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "hempston2017",
+          "short_name": "Hempston 2017",
+          "value": 4.0600000000000007e-51,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "shaniv2017",
+          "short_name": "Shaniv 2017",
+          "value": 3.7800000000000005e-45,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "armano2018",
+          "short_name": "LISA Pathfinder 2018",
+          "value": 1.7800000000000002e-60,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "differential_L1"
+        },
+        {
+          "year": 2018,
+          "id": "heritier2018",
+          "short_name": "Heritier 2018",
+          "value": 4.330000000000001e-53,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "rider2018",
+          "short_name": "Rider 2018",
+          "value": 2.6000000000000003e-51,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "debonis2018",
+          "short_name": "De Bonis 2018",
+          "value": 1.0800000000000001e-50,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "blums2018",
+          "short_name": "Blums 2018",
+          "value": 1.4400000000000004e-43,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "tebbenjohanns2019",
+          "short_name": "Tebbenjohanns 2019",
+          "value": 8.630000000000001e-53,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "cripe2019",
+          "short_name": "Cripe 2019",
+          "value": 1.6000000000000002e-52,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "timberlake2019",
+          "short_name": "Timberlake 2019",
+          "value": 1.4600000000000002e-47,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "monteiro2020",
+          "short_name": "Monteiro 2020",
+          "value": 1.9700000000000003e-53,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "tebbenjohanns2020",
+          "short_name": "Tebbenjohanns 2020",
+          "value": 5.520000000000001e-53,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "delic2020",
+          "short_name": "Delic 2020",
+          "value": 4.020000000000001e-52,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "kawasaki2020",
+          "short_name": "Kawasaki 2020",
+          "value": 3.580000000000001e-51,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "affolter2020",
+          "short_name": "Affolter 2020",
+          "value": 6.430000000000001e-48,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "fogliano2021",
+          "short_name": "Fogliano 2021",
+          "value": 3.0100000000000004e-55,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "lewandowski2021",
+          "short_name": "Lewandowski 2021",
+          "value": 1.0300000000000002e-52,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "westphal2021",
+          "short_name": "Westphal 2021",
+          "value": 1.1500000000000002e-51,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "halg2021",
+          "short_name": "Halg 2021",
+          "value": 1.6800000000000003e-50,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "gisler2022",
+          "short_name": "Gisler 2022 nanowire",
+          "value": 2.98e-56,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "seis2022",
+          "short_name": "Seis 2022 membrane",
+          "value": 8.46e-56,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "liang2022",
+          "short_name": "Liang 2022",
+          "value": 1.2100000000000003e-53,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "priel2022",
+          "short_name": "Priel 2022",
+          "value": 5.140000000000001e-50,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2023,
+          "id": "timberlake2023",
+          "short_name": "Timberlake 2023",
+          "value": 4.760000000000001e-54,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2024,
+          "id": "fuchs2024",
+          "short_name": "Fuchs 2024 mag-lev",
+          "value": 5.920000000000001e-55,
+          "best_so_far": 2.4100000000000003e-66,
+          "applicability": "absolute"
+        }
+      ]
+    },
+    "ultralocal_discrete": {
+      "lower_running_max": [
+        {
+          "year": 2011,
+          "id": "gerlich2011",
+          "short_name": "Gerlich 2011 organics",
+          "value": 9.999999999999999e-26,
+          "best_so_far": 9.999999999999999e-26,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "fein2019",
+          "short_name": "Fein 2019 25 kDa",
+          "value": 3.334819583704896e-25,
+          "best_so_far": 3.334819583704896e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2025,
+          "id": "pedalino2025",
+          "short_name": "Pedalino 2025 172 kDa",
+          "value": 3.509466044231068e-24,
+          "best_so_far": 3.509466044231068e-24,
+          "applicability": "absolute"
+        }
+      ],
+      "upper_running_min_absolute": [
+        {
+          "year": 1798,
+          "id": "cavendish1798",
+          "short_name": "Cavendish 1798",
+          "value": 13.42118206232483,
+          "best_so_far": 13.42118206232483,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2001,
+          "id": "mamin2001",
+          "short_name": "Mamin 2001",
+          "value": 2.8318694151505393e-12,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2007,
+          "id": "corbitt2007",
+          "short_name": "Corbitt 2007",
+          "value": 6.30795556929267e-10,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "maiwald2009",
+          "short_name": "Maiwald 2009",
+          "value": 1.7447536681022278e-11,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "teufel2009",
+          "short_name": "Teufel 2009",
+          "value": 1.409224116544107e-10,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2010,
+          "id": "biercuk2010",
+          "short_name": "Biercuk 2010",
+          "value": 7.005857036533561e-07,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "krause2012",
+          "short_name": "Krause 2012",
+          "value": 3.8787216160118756e-07,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "nichol2012",
+          "short_name": "Nichol 2012",
+          "value": 4.120302893133723e-07,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "gieseler2013",
+          "short_name": "Gieseler 2013",
+          "value": 5.381894006992257e-10,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "moser2013",
+          "short_name": "Moser 2013",
+          "value": 9.703514631060851e-08,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2014,
+          "id": "guzman2014",
+          "short_name": "Guzman 2014",
+          "value": 9.716935813123176e-05,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2015,
+          "id": "ranjit2015",
+          "short_name": "Ranjit 2015",
+          "value": 5.073206819558785e-06,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "martynov2016",
+          "short_name": "aLIGO 2016",
+          "value": 2.4829186815300937e-13,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "norte2016",
+          "short_name": "Norte 2016",
+          "value": 1.7581748501645527e-11,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "reinhardt2016",
+          "short_name": "Reinhardt 2016",
+          "value": 4.026354618697449e-10,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "weber2016",
+          "short_name": "Weber 2016",
+          "value": 1.066983973954824e-07,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "ranjit2016",
+          "short_name": "Ranjit 2016",
+          "value": 2.8721329613375135e-07,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "kampel2017",
+          "short_name": "Kampel 2017",
+          "value": 3.878721616011876e-11,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "hempston2017",
+          "short_name": "Hempston 2017",
+          "value": 5.448999917303881e-09,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "shaniv2017",
+          "short_name": "Shaniv 2017",
+          "value": 0.005073206819558786,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "heritier2018",
+          "short_name": "Heritier 2018",
+          "value": 5.811371832986651e-11,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "rider2018",
+          "short_name": "Rider 2018",
+          "value": 3.4895073362044557e-09,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "debonis2018",
+          "short_name": "De Bonis 2018",
+          "value": 1.4494876627310816e-08,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "blums2018",
+          "short_name": "Blums 2018",
+          "value": 0.19326502169747756,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "tebbenjohanns2019",
+          "short_name": "Tebbenjohanns 2019",
+          "value": 1.1582480119786328e-10,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "cripe2019",
+          "short_name": "Cripe 2019",
+          "value": 2.1473891299719727e-10,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "timberlake2019",
+          "short_name": "Timberlake 2019",
+          "value": 1.9594925810994253e-05,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "monteiro2020",
+          "short_name": "Monteiro 2020",
+          "value": 2.6439728662779916e-11,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "tebbenjohanns2020",
+          "short_name": "Tebbenjohanns 2020",
+          "value": 7.408492498403306e-11,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "delic2020",
+          "short_name": "Delic 2020",
+          "value": 5.395315189054581e-10,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "kawasaki2020",
+          "short_name": "Kawasaki 2020",
+          "value": 4.804783178312289e-09,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "affolter2020",
+          "short_name": "Affolter 2020",
+          "value": 8.629820066074865e-06,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "fogliano2021",
+          "short_name": "Fogliano 2021",
+          "value": 4.0397758007597734e-13,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "lewandowski2021",
+          "short_name": "Lewandowski 2021",
+          "value": 1.3823817524194575e-10,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "westphal2021",
+          "short_name": "Westphal 2021",
+          "value": 1.5434359371673555e-09,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "halg2021",
+          "short_name": "Halg 2021",
+          "value": 2.2547585864705715e-08,
+          "best_so_far": 2.4829186815300937e-13,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "gisler2022",
+          "short_name": "Gisler 2022 nanowire",
+          "value": 3.999512254572799e-14,
+          "best_so_far": 3.999512254572799e-14,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "seis2022",
+          "short_name": "Seis 2022 membrane",
+          "value": 1.1354320024726805e-13,
+          "best_so_far": 3.999512254572799e-14,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "liang2022",
+          "short_name": "Liang 2022",
+          "value": 1.6239630295413045e-11,
+          "best_so_far": 3.999512254572799e-14,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "priel2022",
+          "short_name": "Priel 2022",
+          "value": 6.898487580034963e-08,
+          "best_so_far": 3.999512254572799e-14,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2023,
+          "id": "timberlake2023",
+          "short_name": "Timberlake 2023",
+          "value": 6.388482661666619e-12,
+          "best_so_far": 3.999512254572799e-14,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2024,
+          "id": "fuchs2024",
+          "short_name": "Fuchs 2024 mag-lev",
+          "value": 7.945339780896299e-13,
+          "best_so_far": 3.999512254572799e-14,
+          "applicability": "absolute"
+        }
+      ],
+      "upper_running_min_including_differential": [
+        {
+          "year": 1798,
+          "id": "cavendish1798",
+          "short_name": "Cavendish 1798",
+          "value": 13.42118206232483,
+          "best_so_far": 13.42118206232483,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2001,
+          "id": "mamin2001",
+          "short_name": "Mamin 2001",
+          "value": 2.8318694151505393e-12,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2007,
+          "id": "corbitt2007",
+          "short_name": "Corbitt 2007",
+          "value": 6.30795556929267e-10,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "maiwald2009",
+          "short_name": "Maiwald 2009",
+          "value": 1.7447536681022278e-11,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "teufel2009",
+          "short_name": "Teufel 2009",
+          "value": 1.409224116544107e-10,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2010,
+          "id": "biercuk2010",
+          "short_name": "Biercuk 2010",
+          "value": 7.005857036533561e-07,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "krause2012",
+          "short_name": "Krause 2012",
+          "value": 3.8787216160118756e-07,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "nichol2012",
+          "short_name": "Nichol 2012",
+          "value": 4.120302893133723e-07,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "gieseler2013",
+          "short_name": "Gieseler 2013",
+          "value": 5.381894006992257e-10,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "moser2013",
+          "short_name": "Moser 2013",
+          "value": 9.703514631060851e-08,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2014,
+          "id": "guzman2014",
+          "short_name": "Guzman 2014",
+          "value": 9.716935813123176e-05,
+          "best_so_far": 2.8318694151505393e-12,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2015,
+          "id": "biedermann2015",
+          "short_name": "Biedermann 2015",
+          "value": 2.281600950595221e-20,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "differential"
+        },
+        {
+          "year": 2015,
+          "id": "hamilton2015",
+          "short_name": "Hamilton 2015",
+          "value": 9.300879169191106e-13,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "differential"
+        },
+        {
+          "year": 2015,
+          "id": "ranjit2015",
+          "short_name": "Ranjit 2015",
+          "value": 5.073206819558785e-06,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "martynov2016",
+          "short_name": "aLIGO 2016",
+          "value": 2.4829186815300937e-13,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "norte2016",
+          "short_name": "Norte 2016",
+          "value": 1.7581748501645527e-11,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "reinhardt2016",
+          "short_name": "Reinhardt 2016",
+          "value": 4.026354618697449e-10,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "weber2016",
+          "short_name": "Weber 2016",
+          "value": 1.066983973954824e-07,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "ranjit2016",
+          "short_name": "Ranjit 2016",
+          "value": 2.8721329613375135e-07,
+          "best_so_far": 2.281600950595221e-20,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "asenbaum2017",
+          "short_name": "Asenbaum 2017",
+          "value": 3.2345048770202837e-24,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "differential"
+        },
+        {
+          "year": 2017,
+          "id": "kampel2017",
+          "short_name": "Kampel 2017",
+          "value": 3.878721616011876e-11,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "hempston2017",
+          "short_name": "Hempston 2017",
+          "value": 5.448999917303881e-09,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "shaniv2017",
+          "short_name": "Shaniv 2017",
+          "value": 0.005073206819558786,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "armano2018",
+          "short_name": "LISA Pathfinder 2018",
+          "value": 2.3889704070938196e-18,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "differential_L1"
+        },
+        {
+          "year": 2018,
+          "id": "heritier2018",
+          "short_name": "Heritier 2018",
+          "value": 5.811371832986651e-11,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "rider2018",
+          "short_name": "Rider 2018",
+          "value": 3.4895073362044557e-09,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "debonis2018",
+          "short_name": "De Bonis 2018",
+          "value": 1.4494876627310816e-08,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "blums2018",
+          "short_name": "Blums 2018",
+          "value": 0.19326502169747756,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "tebbenjohanns2019",
+          "short_name": "Tebbenjohanns 2019",
+          "value": 1.1582480119786328e-10,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "cripe2019",
+          "short_name": "Cripe 2019",
+          "value": 2.1473891299719727e-10,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "timberlake2019",
+          "short_name": "Timberlake 2019",
+          "value": 1.9594925810994253e-05,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "monteiro2020",
+          "short_name": "Monteiro 2020",
+          "value": 2.6439728662779916e-11,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "tebbenjohanns2020",
+          "short_name": "Tebbenjohanns 2020",
+          "value": 7.408492498403306e-11,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "delic2020",
+          "short_name": "Delic 2020",
+          "value": 5.395315189054581e-10,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "kawasaki2020",
+          "short_name": "Kawasaki 2020",
+          "value": 4.804783178312289e-09,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "affolter2020",
+          "short_name": "Affolter 2020",
+          "value": 8.629820066074865e-06,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "fogliano2021",
+          "short_name": "Fogliano 2021",
+          "value": 4.0397758007597734e-13,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "lewandowski2021",
+          "short_name": "Lewandowski 2021",
+          "value": 1.3823817524194575e-10,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "westphal2021",
+          "short_name": "Westphal 2021",
+          "value": 1.5434359371673555e-09,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "halg2021",
+          "short_name": "Halg 2021",
+          "value": 2.2547585864705715e-08,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "gisler2022",
+          "short_name": "Gisler 2022 nanowire",
+          "value": 3.999512254572799e-14,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "seis2022",
+          "short_name": "Seis 2022 membrane",
+          "value": 1.1354320024726805e-13,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "liang2022",
+          "short_name": "Liang 2022",
+          "value": 1.6239630295413045e-11,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "priel2022",
+          "short_name": "Priel 2022",
+          "value": 6.898487580034963e-08,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2023,
+          "id": "timberlake2023",
+          "short_name": "Timberlake 2023",
+          "value": 6.388482661666619e-12,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2024,
+          "id": "fuchs2024",
+          "short_name": "Fuchs 2024 mag-lev",
+          "value": 7.945339780896299e-13,
+          "best_so_far": 3.2345048770202837e-24,
+          "applicability": "absolute"
+        }
+      ]
+    },
+    "nonlocal_DP_like": {
+      "lower_running_max": [
+        {
+          "year": 2011,
+          "id": "gerlich2011",
+          "short_name": "Gerlich 2011 organics",
+          "value": 2.15443469003188e-34,
+          "best_so_far": 2.15443469003188e-34,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "fein2019",
+          "short_name": "Fein 2019 25 kDa",
+          "value": 4.6112581017504043e-32,
+          "best_so_far": 4.6112581017504043e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2025,
+          "id": "pedalino2025",
+          "short_name": "Pedalino 2025 172 kDa",
+          "value": 1.4692162272940612e-29,
+          "best_so_far": 1.4692162272940612e-29,
+          "applicability": "absolute"
+        }
+      ],
+      "upper_running_min_absolute": [
+        {
+          "year": 1798,
+          "id": "cavendish1798",
+          "short_name": "Cavendish 1798",
+          "value": 2.244856335927948e-11,
+          "best_so_far": 2.244856335927948e-11,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2001,
+          "id": "mamin2001",
+          "short_name": "Mamin 2001",
+          "value": 4.736646868807971e-24,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2007,
+          "id": "corbitt2007",
+          "short_name": "Corbitt 2007",
+          "value": 1.0550824778861355e-21,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "maiwald2009",
+          "short_name": "Maiwald 2009",
+          "value": 2.9183132367063326e-23,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "teufel2009",
+          "short_name": "Teufel 2009",
+          "value": 2.3570991527243454e-22,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2010,
+          "id": "biercuk2010",
+          "short_name": "Biercuk 2010",
+          "value": 1.1718150073543888e-18,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "krause2012",
+          "short_name": "Krause 2012",
+          "value": 6.48763481083177e-19,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "nichol2012",
+          "short_name": "Nichol 2012",
+          "value": 6.891708951298801e-19,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "gieseler2013",
+          "short_name": "Gieseler 2013",
+          "value": 9.001873907071071e-22,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "moser2013",
+          "short_name": "Moser 2013",
+          "value": 1.6230311308759064e-19,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2014,
+          "id": "guzman2014",
+          "short_name": "Guzman 2014",
+          "value": 1.6252759872118344e-16,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2015,
+          "id": "ranjit2015",
+          "short_name": "Ranjit 2015",
+          "value": 8.485556949807643e-18,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "martynov2016",
+          "short_name": "aLIGO 2016",
+          "value": 4.152984221466704e-25,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "norte2016",
+          "short_name": "Norte 2016",
+          "value": 2.940761800065612e-23,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "reinhardt2016",
+          "short_name": "Reinhardt 2016",
+          "value": 6.734569007783844e-22,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "weber2016",
+          "short_name": "Weber 2016",
+          "value": 1.7846607870627187e-19,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "ranjit2016",
+          "short_name": "Ranjit 2016",
+          "value": 4.803992558885809e-19,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "kampel2017",
+          "short_name": "Kampel 2017",
+          "value": 6.48763481083177e-23,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "hempston2017",
+          "short_name": "Hempston 2017",
+          "value": 9.11411672386747e-21,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "shaniv2017",
+          "short_name": "Shaniv 2017",
+          "value": 8.485556949807643e-15,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "heritier2018",
+          "short_name": "Heritier 2018",
+          "value": 9.720227934568015e-23,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "rider2018",
+          "short_name": "Rider 2018",
+          "value": 5.836626473412665e-21,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "debonis2018",
+          "short_name": "De Bonis 2018",
+          "value": 2.424444842802184e-20,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "blums2018",
+          "short_name": "Blums 2018",
+          "value": 3.232593123736245e-13,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "tebbenjohanns2019",
+          "short_name": "Tebbenjohanns 2019",
+          "value": 1.937311017905819e-22,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "cripe2019",
+          "short_name": "Cripe 2019",
+          "value": 3.591770137484717e-22,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "timberlake2019",
+          "short_name": "Timberlake 2019",
+          "value": 3.277490250454804e-17,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "monteiro2020",
+          "short_name": "Monteiro 2020",
+          "value": 4.4223669817780577e-23,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "tebbenjohanns2020",
+          "short_name": "Tebbenjohanns 2020",
+          "value": 1.2391606974322274e-22,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "delic2020",
+          "short_name": "Delic 2020",
+          "value": 9.02432247043035e-22,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "kawasaki2020",
+          "short_name": "Kawasaki 2020",
+          "value": 8.036585682622053e-21,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "affolter2020",
+          "short_name": "Affolter 2020",
+          "value": 1.4434426240016706e-17,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "fogliano2021",
+          "short_name": "Fogliano 2021",
+          "value": 6.757017571143123e-25,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "lewandowski2021",
+          "short_name": "Lewandowski 2021",
+          "value": 2.3122020260057867e-22,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "westphal2021",
+          "short_name": "Westphal 2021",
+          "value": 2.58158478631714e-21,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "halg2021",
+          "short_name": "Halg 2021",
+          "value": 3.7713586443589527e-20,
+          "best_so_far": 4.152984221466704e-25,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "gisler2022",
+          "short_name": "Gisler 2022 nanowire",
+          "value": 6.689671881065285e-26,
+          "best_so_far": 6.689671881065285e-26,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "seis2022",
+          "short_name": "Seis 2022 membrane",
+          "value": 1.899148460195044e-25,
+          "best_so_far": 6.689671881065285e-26,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "liang2022",
+          "short_name": "Liang 2022",
+          "value": 2.716276166472817e-23,
+          "best_so_far": 6.689671881065285e-26,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "priel2022",
+          "short_name": "Priel 2022",
+          "value": 1.1538561566669653e-19,
+          "best_so_far": 6.689671881065285e-26,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2023,
+          "id": "timberlake2023",
+          "short_name": "Timberlake 2023",
+          "value": 1.0685516159017033e-23,
+          "best_so_far": 6.689671881065285e-26,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2024,
+          "id": "fuchs2024",
+          "short_name": "Fuchs 2024 mag-lev",
+          "value": 1.3289549508693451e-24,
+          "best_so_far": 6.689671881065285e-26,
+          "applicability": "absolute"
+        }
+      ],
+      "upper_running_min_including_differential": [
+        {
+          "year": 1798,
+          "id": "cavendish1798",
+          "short_name": "Cavendish 1798",
+          "value": 2.244856335927948e-11,
+          "best_so_far": 2.244856335927948e-11,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2001,
+          "id": "mamin2001",
+          "short_name": "Mamin 2001",
+          "value": 4.736646868807971e-24,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2007,
+          "id": "corbitt2007",
+          "short_name": "Corbitt 2007",
+          "value": 1.0550824778861355e-21,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "maiwald2009",
+          "short_name": "Maiwald 2009",
+          "value": 2.9183132367063326e-23,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2009,
+          "id": "teufel2009",
+          "short_name": "Teufel 2009",
+          "value": 2.3570991527243454e-22,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2010,
+          "id": "biercuk2010",
+          "short_name": "Biercuk 2010",
+          "value": 1.1718150073543888e-18,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "krause2012",
+          "short_name": "Krause 2012",
+          "value": 6.48763481083177e-19,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2012,
+          "id": "nichol2012",
+          "short_name": "Nichol 2012",
+          "value": 6.891708951298801e-19,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "gieseler2013",
+          "short_name": "Gieseler 2013",
+          "value": 9.001873907071071e-22,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2013,
+          "id": "moser2013",
+          "short_name": "Moser 2013",
+          "value": 1.6230311308759064e-19,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2014,
+          "id": "guzman2014",
+          "short_name": "Guzman 2014",
+          "value": 1.6252759872118344e-16,
+          "best_so_far": 4.736646868807971e-24,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2015,
+          "id": "biedermann2015",
+          "short_name": "Biedermann 2015",
+          "value": 3.8162557710775114e-32,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "differential"
+        },
+        {
+          "year": 2015,
+          "id": "hamilton2015",
+          "short_name": "Hamilton 2015",
+          "value": 1.555685440798068e-24,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "differential"
+        },
+        {
+          "year": 2015,
+          "id": "ranjit2015",
+          "short_name": "Ranjit 2015",
+          "value": 8.485556949807643e-18,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "martynov2016",
+          "short_name": "aLIGO 2016",
+          "value": 4.152984221466704e-25,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "norte2016",
+          "short_name": "Norte 2016",
+          "value": 2.940761800065612e-23,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "reinhardt2016",
+          "short_name": "Reinhardt 2016",
+          "value": 6.734569007783844e-22,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "weber2016",
+          "short_name": "Weber 2016",
+          "value": 1.7846607870627187e-19,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2016,
+          "id": "ranjit2016",
+          "short_name": "Ranjit 2016",
+          "value": 4.803992558885809e-19,
+          "best_so_far": 3.8162557710775114e-32,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "asenbaum2017",
+          "short_name": "Asenbaum 2017",
+          "value": 5.4101037695863544e-36,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "differential"
+        },
+        {
+          "year": 2017,
+          "id": "kampel2017",
+          "short_name": "Kampel 2017",
+          "value": 6.48763481083177e-23,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "hempston2017",
+          "short_name": "Hempston 2017",
+          "value": 9.11411672386747e-21,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2017,
+          "id": "shaniv2017",
+          "short_name": "Shaniv 2017",
+          "value": 8.485556949807643e-15,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "armano2018",
+          "short_name": "LISA Pathfinder 2018",
+          "value": 3.995844277951747e-30,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "differential_L1"
+        },
+        {
+          "year": 2018,
+          "id": "heritier2018",
+          "short_name": "Heritier 2018",
+          "value": 9.720227934568015e-23,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "rider2018",
+          "short_name": "Rider 2018",
+          "value": 5.836626473412665e-21,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "debonis2018",
+          "short_name": "De Bonis 2018",
+          "value": 2.424444842802184e-20,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2018,
+          "id": "blums2018",
+          "short_name": "Blums 2018",
+          "value": 3.232593123736245e-13,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "tebbenjohanns2019",
+          "short_name": "Tebbenjohanns 2019",
+          "value": 1.937311017905819e-22,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "cripe2019",
+          "short_name": "Cripe 2019",
+          "value": 3.591770137484717e-22,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2019,
+          "id": "timberlake2019",
+          "short_name": "Timberlake 2019",
+          "value": 3.277490250454804e-17,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "monteiro2020",
+          "short_name": "Monteiro 2020",
+          "value": 4.4223669817780577e-23,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "tebbenjohanns2020",
+          "short_name": "Tebbenjohanns 2020",
+          "value": 1.2391606974322274e-22,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "delic2020",
+          "short_name": "Delic 2020",
+          "value": 9.02432247043035e-22,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "kawasaki2020",
+          "short_name": "Kawasaki 2020",
+          "value": 8.036585682622053e-21,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2020,
+          "id": "affolter2020",
+          "short_name": "Affolter 2020",
+          "value": 1.4434426240016706e-17,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "fogliano2021",
+          "short_name": "Fogliano 2021",
+          "value": 6.757017571143123e-25,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "lewandowski2021",
+          "short_name": "Lewandowski 2021",
+          "value": 2.3122020260057867e-22,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "westphal2021",
+          "short_name": "Westphal 2021",
+          "value": 2.58158478631714e-21,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2021,
+          "id": "halg2021",
+          "short_name": "Halg 2021",
+          "value": 3.7713586443589527e-20,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "gisler2022",
+          "short_name": "Gisler 2022 nanowire",
+          "value": 6.689671881065285e-26,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "seis2022",
+          "short_name": "Seis 2022 membrane",
+          "value": 1.899148460195044e-25,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "liang2022",
+          "short_name": "Liang 2022",
+          "value": 2.716276166472817e-23,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2022,
+          "id": "priel2022",
+          "short_name": "Priel 2022",
+          "value": 1.1538561566669653e-19,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2023,
+          "id": "timberlake2023",
+          "short_name": "Timberlake 2023",
+          "value": 1.0685516159017033e-23,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        },
+        {
+          "year": 2024,
+          "id": "fuchs2024",
+          "short_name": "Fuchs 2024 mag-lev",
+          "value": 1.3289549508693451e-24,
+          "best_so_far": 5.4101037695863544e-36,
+          "applicability": "absolute"
+        }
+      ]
+    }
+  },
+  "projections": [
+    {
+      "id": "proj_1e6amu",
+      "year": 2028,
+      "short_name": "1e6 amu interferometry",
+      "role": "projection_lower",
+      "citation": "Near-term ground goal discussed e.g. in Kaltenbaek, arXiv:1508.07796; Pedalino et al. 2025 outlook",
+      "caveat": "ASSUMED: 1e6 amu (carbon-like N~8e4), tau=0.1 s, Delta x=100 nm. This is a representative 'heavier slower beam' target, not a funded schedule.",
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.660539e-22,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.7524929404395913e-26,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 0.22059118164168,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 1.660539e-21,
+        "lambda_Hz": 10.0,
+        "N_constituents": 80000.0
+      },
+      "ultralocal_continuous": {
+        "projected_lower": 0.22059118164168,
+        "vs_current_conservative_upper": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 1.3509152894609357e-55,
+          "status": "ruled_out"
+        }
+      },
+      "ultralocal_discrete": {
+        "projected_lower": 1.660539e-22,
+        "vs_current_conservative_upper": {
+          "orders": 8.381757951765795,
+          "ratio_upper_over_lower": 240856267.42719075,
+          "status": "open"
+        }
+      },
+      "nonlocal_DP_like": {
+        "projected_lower": 4.7524929404395913e-26,
+        "vs_current_conservative_upper": {
+          "orders": 0.14848333634275138,
+          "ratio_upper_over_lower": 1.4076132179265288,
+          "status": "open"
+        }
+      }
+    },
+    {
+      "id": "proj_1e8amu",
+      "year": 2032,
+      "short_name": "1e8 amu interferometry",
+      "role": "projection_lower",
+      "citation": "Kaltenbaek, arXiv:1508.07796 (ground-based 1e6-1e8 amu 'over the next years')",
+      "caveat": "ASSUMED: 1e8 amu, tau=1 s, Delta x=100 nm. Optimistic ground-based step beyond 1e6 amu.",
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.660539e-19,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.75249294043959e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 2205911.8164167996,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 1.660539e-19,
+        "lambda_Hz": 1.0,
+        "N_constituents": 8000000.0
+      },
+      "ultralocal_continuous": {
+        "projected_lower": 2205911.8164167996,
+        "vs_current_conservative_upper": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 1.350915289460936e-62,
+          "status": "ruled_out"
+        }
+      },
+      "ultralocal_discrete": {
+        "projected_lower": 1.660539e-19,
+        "vs_current_conservative_upper": {
+          "orders": 5.381757951765796,
+          "ratio_upper_over_lower": 240856.2674271908,
+          "status": "open"
+        }
+      },
+      "nonlocal_DP_like": {
+        "projected_lower": 4.75249294043959e-19,
+        "vs_current_conservative_upper": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 1.4076132179265293e-07,
+          "status": "ruled_out"
+        }
+      }
+    },
+    {
+      "id": "proj_maqro",
+      "year": 2035,
+      "short_name": "MAQRO 3e10 amu / 100 s",
+      "role": "projection_lower",
+      "citation": "Kaltenbaek, arXiv:1508.07796; MAQRO M4 proposal (~1e10 amu, ~100 s)",
+      "caveat": "MAQRO aims at several 10^10 amu and ~100 s coherence in space. Year 2035 is a placeholder, not a launch date. N~2.5e9 assumes ~12 u constituents. If demonstrated, this would close both remaining 2023-model windows from below even against the conservative Gisler-level upper bound.",
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 4.9816e-15,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.3366295168309949e-09,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 6204084639999999.0,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 4.9816e-17,
+        "lambda_Hz": 0.01,
+        "N_constituents": 2500000000.0
+      },
+      "ultralocal_continuous": {
+        "projected_lower": 6204084639999999.0,
+        "vs_current_conservative_upper": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 4.803287145353969e-72,
+          "status": "ruled_out"
+        }
+      },
+      "ultralocal_discrete": {
+        "projected_lower": 4.9816e-15,
+        "vs_current_conservative_upper": {
+          "orders": 0.9046381790988063,
+          "ratio_upper_over_lower": 8.02856964544082,
+          "status": "open"
+        }
+      },
+      "nonlocal_DP_like": {
+        "projected_lower": 1.3366295168309949e-09,
+        "vs_current_conservative_upper": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 5.00488115579385e-17,
+          "status": "ruled_out"
+        }
+      }
+    },
+    {
+      "id": "proj_thermal_maglev",
+      "year": 2030,
+      "short_name": "thermal-limited mag-lev / SQUID",
+      "role": "projection_upper",
+      "citation": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Sec. III; Fuchs 2024; Angeli et al., arXiv:2501.13030",
+      "caveat": "ASSUMED FOM = Gisler/1e4 (four more orders from vibration isolation toward the thermal floor of a mK magnetic-levitation / SQUID torsion-like sensor). Janse argue FOM ~ 4 N kT omega / (m Q); lowering m does not help, but T, omega, Q do. Angeli et al. 2025 propose a related mK torsion test of LOCC-gravity diffusion (a different but neighbouring bound).",
+      "bounds": {
+        "FOM_m2_per_s3": 2.98e-05,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.999512254572799e-18,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.689671881065285e-30,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.246138282102066e-63,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.9800000000000004e-60
+      },
+      "ultralocal_continuous": {
+        "projected_upper": 2.9800000000000004e-60,
+        "vs_current_lower": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 5.284837544028513e-56,
+          "status": "ruled_out"
+        }
+      },
+      "ultralocal_discrete": {
+        "projected_upper": 3.999512254572799e-18,
+        "vs_current_lower": {
+          "orders": 6.0567659870512145,
+          "ratio_upper_over_lower": 1139635.5468796398,
+          "status": "open"
+        }
+      },
+      "nonlocal_DP_like": {
+        "projected_upper": 6.689671881065285e-30,
+        "vs_current_lower": {
+          "orders": 0.0,
+          "ratio_upper_over_lower": 0.4553224880578696,
+          "status": "ruled_out"
+        }
+      }
+    }
+  ],
+  "closing": {
+    "ultralocal_continuous": {
+      "from_below_coherence": {
+        "need_lower_at_least": 2.98e-56,
+        "current_lower": 5.638773141413186e-05,
+        "factor_needed": 5.284837544028513e-52,
+        "orders_needed": 0.0
+      },
+      "from_above_force_noise": {
+        "need_upper_at_most": 5.638773141413186e-05,
+        "current_upper": 2.98e-56,
+        "current_FOM": 0.298,
+        "FOM_needed": 5.638773141413185e+50,
+        "FOM_improvement_orders": 0.0
+      }
+    },
+    "ultralocal_discrete": {
+      "from_below_coherence": {
+        "need_lower_at_least": 3.999512254572799e-14,
+        "current_lower": 3.509466044231068e-24,
+        "factor_needed": 11396355468.796398,
+        "orders_needed": 10.056765987051214
+      },
+      "from_above_force_noise": {
+        "need_upper_at_most": 3.509466044231068e-24,
+        "current_upper": 3.999512254572799e-14,
+        "current_FOM": 0.298,
+        "FOM_needed": 2.6148710508015826e-11,
+        "FOM_improvement_orders": 10.056765987051214
+      }
+    },
+    "nonlocal_DP_like": {
+      "from_below_coherence": {
+        "need_lower_at_least": 6.689671881065285e-26,
+        "current_lower": 1.4692162272940612e-29,
+        "factor_needed": 4553.224880578697,
+        "orders_needed": 3.6583191003373106
+      },
+      "from_above_force_noise": {
+        "need_upper_at_most": 1.4692162272940612e-29,
+        "current_upper": 6.689671881065285e-26,
+        "current_FOM": 0.298,
+        "FOM_needed": 6.544811816150082e-05,
+        "FOM_improvement_orders": 3.6583191003373106
+      }
+    }
+  },
+  "followups_2024_2026": {
+    "janse2024": {
+      "citation": "Janse, Uitenbroek, van Everdingen, Plugge, Hensen, Oosterkamp, Phys. Rev. Research 6, 033076 (2024), arXiv:2403.08912",
+      "role": "Tightens the upper side of the 2023 Newtonian D2 window by compiling low force-noise experiments. Conservative (absolute, on Earth) improvement of at least 15 orders of FOM relative to Cavendish. Aggressive inclusion of Asenbaum 2017 would drop below the discrete lower bound and leave ~1 order (on the 2011 floor) for the non-local model, but those points are differential."
+    },
+    "layton2023_2024": {
+      "citation": "Layton, Oppenheim, Russo, Weller-Davies, JHEP 08, 163 (2023); Layton, Oppenheim, Weller-Davies, Quantum 8, 1565 (2024)",
+      "role": "Theory of the weak-field / 'healthier' semi-classical CQ dynamics. No new experimental D2 number."
+    },
+    "grudka2024": {
+      "citation": "Grudka, Morris, Oppenheim, Russo, Sajjad, arXiv:2402.17844 (2024)",
+      "role": "Formal renormalisability of pure postquantum-classical gravity via a quadratic-gravity path integral. Relativistic corrections alter the gravitational two-point function and give milder stochastic acceleration fluctuations than a naive Newtonian extrapolation. They argue current upper and lower bounds are already tight enough that tabletop tests of the quantum vs classical nature of spacetime may be possible in the near term \u2014 a caveat on the Newtonian D2 mapping used in this tracker."
+    },
+    "angeli2025": {
+      "citation": "Angeli, Donadi, Di Bartolomeo, Gaona-Reyes, Vinante, Bassi, arXiv:2501.13030 (2025)",
+      "role": "If gravity is an LOCC channel it must inject a minimum diffusion into the motion of quantum systems. They propose a millikelvin torsion-pendulum protocol to look for that diffusion without preparing a macroscopic superposition. Related in spirit to the upper side of the tradeoff, but the bound is setup-dependent and is not the same parameter as Oppenheim's D2."
+    },
+    "oppenheim_sajjad2026": {
+      "citation": "Oppenheim and Sajjad, arXiv:2605.05375 (2026)",
+      "role": "Linearised relativistic theory: dimensionless diffusion constants for scalar and tensor channels. Matter-wave floor still quoted as D \u2273 10^{-71} from the 2011 molecular-superposition analysis; LVK tensor ceiling D \u2272 3.3e-67; window 10^{-71} \u2272 D_{2,tensor} \u2272 10^{-67} (~4.5 orders). Full-positivity scalar ceiling D \u2272 1.3e-66 (~5.1 orders). LISA Pathfinder constrains the scalar channel under transverse positivity only. These are dimensionless couplings of the relativistic theory, not the dimensionful Newtonian D2 of Table 1; we report them separately and do not mix units."
+    },
+    "carney2026": {
+      "citation": "Fabiano, Fujita, Matsumura, Carney, arXiv:2603.26075 (2026)",
+      "role": "Classification of non-quantized, Galilei-invariant Newtonian models. Any non-entangling model must inject a quantifiable minimal noise; measuring below that threshold would be equivalent to showing that Newtonian gravity is entangling. Does not directly replace the 2023 D2 windows."
+    },
+    "bild2023_not_used": {
+      "citation": "Bild et al., Science 380, 274 (2023)",
+      "role": "16 \u00b5g mechanical-oscillator cat, decoherence ~1 MHz (Janse). A phonon cat is not a centre-of-mass mass-density superposition of the kind entering Oppenheim's M/lambda bound, so we do not promote it to a D2 floor."
+    },
+    "wang2021_not_used": {
+      "citation": "Wang et al., Nat. Commun. 12, 233 (2021)",
+      "role": "Hour-scale ion-qubit coherence is a spin superposition, not a mass-density superposition (Janse correctly set it aside)."
+    }
+  },
+  "datapoints": [
+    {
+      "id": "gerlich2011",
+      "role": "lower_coherence",
+      "year": 2011,
+      "short_name": "Gerlich 2011 organics",
+      "citation": "Gerlich et al., Nat. Commun. 2, 263 (2011)",
+      "experiment_type": "matter-wave",
+      "element": "organic",
+      "mass_kg": 1e-24,
+      "applicability": "absolute",
+      "FOM": null,
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 9.999999999999999e-26,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.15443469003188e-34,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 9.999999999999996e-10,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 1e-24,
+        "lambda_Hz": 10.0,
+        "N_constituents": 1000.0
+      },
+      "caveat": "Oppenheim et al. 2023 Table 1 floor: M=1e-24 kg, tau=0.1 s, N~1e3, Delta x~1e-7 m, nuclear size 1e-15 m in the other two directions. The 0.1 s flight time is the number they use; it should be checked against the actual beam velocity of that experiment before tightening the floor.",
+      "source": "Oppenheim et al., Nat. Commun. 14, 7910 (2023), Table 1 and p. 9"
+    },
+    {
+      "id": "fein2019",
+      "role": "lower_coherence",
+      "year": 2019,
+      "short_name": "Fein 2019 25 kDa",
+      "citation": "Fein et al., Nat. Phys. 15, 1242 (2019)",
+      "experiment_type": "matter-wave",
+      "element": "oligoporphyrin",
+      "mass_kg": 4.446425e-23,
+      "applicability": "absolute",
+      "FOM": null,
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.334819583704896e-25,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.6112581017504043e-32,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 1.114889110336469e-07,
+        "V_m3": 2.6600000000000006e-37,
+        "R_m": 6.431227591379635e-13,
+        "delocalization_m": 2.66e-07,
+        "M_kg": 4.446425e-23,
+        "lambda_Hz": 133.3333,
+        "N_constituents": 2000.0
+      },
+      "caveat": "Mass 26,777 Da and tau=7.5 ms (lambda=133 Hz) as used by Janse et al. 2024 and in the Fein macroscopicity accounting. N~2000 atoms is the published 'up to 2000 atoms' scale. Delocalization taken as the 266 nm KDTLI grating period of the Vienna setup (same family as Fein); this enters only the continuous and non-local bounds via V=r_N^2 Delta x.",
+      "source": "Fein et al., Nat. Phys. 15, 1242 (2019); Janse et al., Phys. Rev. Research 6, 033076 (2024)"
+    },
+    {
+      "id": "pedalino2025",
+      "role": "lower_coherence",
+      "year": 2025,
+      "short_name": "Pedalino 2025 172 kDa",
+      "citation": "Pedalino et al., Nature (2025), arXiv:2507.21211; journal 10.1038/s41586-025-09917-9",
+      "experiment_type": "matter-wave",
+      "element": "Na",
+      "mass_kg": 2.856127e-22,
+      "applicability": "absolute",
+      "FOM": null,
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.509466044231068e-24,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.4692162272940612e-29,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 5.638773141413186e-05,
+        "V_m3": 1.3300000000000003e-37,
+        "R_m": 5.104468722001471e-13,
+        "delocalization_m": 1.33e-07,
+        "M_kg": 2.856127e-22,
+        "lambda_Hz": 81.38352,
+        "N_constituents": 7482.0
+      },
+      "caveat": "Mean mass 172 kDa (range 143-197 kDa), N=172000/22.99, v=160 m/s, L=0.983 m, flight time 2L/v=12.3 ms, grating period d=133 nm used as Delta x. Visibility ~0.10 is stated to be limited by photodepletion, not residual decoherence, so lambda=1/tau is conservative (a weaker lower bound on D2).",
+      "source": "Pedalino et al., arXiv:2507.21211 (2025); Nature 10.1038/s41586-025-09917-9"
+    },
+    {
+      "id": "asenbaum2017",
+      "role": "upper_diffusion",
+      "year": 2017,
+      "short_name": "Asenbaum 2017",
+      "citation": "Asenbaum et al., Phys. Rev. Lett. 118, 183602 (2017)",
+      "experiment_type": "atom interferometer",
+      "element": "Rb",
+      "mass_kg": 1.44e-19,
+      "applicability": "differential",
+      "FOM": 2.41e-11,
+      "bounds": {
+        "FOM_m2_per_s3": 2.41e-11,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.2345048770202837e-24,
+        "nonlocal_lP2_D2_kg_s_per_m": 5.4101037695863544e-36,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 4.2426823019684495e-69,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.4100000000000003e-66
+      },
+      "caveat": "Best FOM in Janse et al. 2024, 25 orders below Cavendish. Measures a phase shift / curvature across the wavefunction, not an absolute acceleration. Janse plot it as an open circle and question whether it can bound D2. Also resembles a matter-wave interferometer, so using the same apparatus for both sides of the tradeoff is itself a caveat.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "biedermann2015",
+      "role": "upper_diffusion",
+      "year": 2015,
+      "short_name": "Biedermann 2015",
+      "citation": "Biedermann et al., Phys. Rev. A 91, 033629 (2015)",
+      "experiment_type": "atom interferometer",
+      "element": "Cs",
+      "mass_kg": 2.21e-17,
+      "applicability": "differential",
+      "FOM": 1.7e-07,
+      "bounds": {
+        "FOM_m2_per_s3": 1.7e-07,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.281600950595221e-20,
+        "nonlocal_lP2_D2_kg_s_per_m": 3.8162557710775114e-32,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.992763449521313e-65,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.7000000000000002e-62
+      },
+      "caveat": "Atom interferometer; Janse open circle. Same differential / phase-shift caveat as Asenbaum.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "armano2018",
+      "role": "upper_diffusion",
+      "year": 2018,
+      "short_name": "LISA Pathfinder 2018",
+      "citation": "Armano et al., Phys. Rev. Lett. 120, 061101 (2018)",
+      "experiment_type": "massive",
+      "element": "Au",
+      "mass_kg": 1.93,
+      "applicability": "differential_L1",
+      "FOM": 1.78e-05,
+      "bounds": {
+        "FOM_m2_per_s3": 1.78e-05,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.3889704070938196e-18,
+        "nonlocal_lP2_D2_kg_s_per_m": 3.995844277951747e-30,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 3.13359937655761e-63,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.7800000000000002e-60
+      },
+      "caveat": "Differential acceleration between two test masses, and measured at L1, far from the large Earth background potential Phi_b that Oppenheim et al. assume when mapping sigma_a to D2(Phi). Janse open circle; 19 orders below Cavendish if applicable.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "gisler2022",
+      "role": "upper_diffusion",
+      "year": 2022,
+      "short_name": "Gisler 2022 nanowire",
+      "citation": "Gisler et al., Phys. Rev. Lett. 129 (2022)",
+      "experiment_type": "nanowire",
+      "element": "Si3N4",
+      "mass_kg": 9.3e-15,
+      "applicability": "absolute",
+      "FOM": 0.298,
+      "bounds": {
+        "FOM_m2_per_s3": 0.298,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.999512254572799e-14,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.689671881065285e-26,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.246138282102066e-59,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.98e-56
+      },
+      "caveat": "Best on-Earth absolute (Janse filled) point: 15 orders of FOM below Cavendish. Soft-clamped SiN string at millikelvin temperature. This is the conservative 2024 upper-bound experiment.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "seis2022",
+      "role": "upper_diffusion",
+      "year": 2022,
+      "short_name": "Seis 2022 membrane",
+      "citation": "Seis et al., Nat. Commun. 13, 1507 (2022)",
+      "experiment_type": "membrane",
+      "element": "Si3N4",
+      "mass_kg": 1.5e-11,
+      "applicability": "absolute",
+      "FOM": 0.846,
+      "bounds": {
+        "FOM_m2_per_s3": 0.846,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.1354320024726805e-13,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.899148460195044e-25,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.4893399284088417e-58,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 8.46e-56
+      },
+      "caveat": "On-Earth absolute, slightly worse FOM than Gisler 2022.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "martynov2016",
+      "role": "upper_diffusion",
+      "year": 2016,
+      "short_name": "aLIGO 2016",
+      "citation": "Martynov et al., Phys. Rev. D 93, 112004 (2016)",
+      "experiment_type": "massive",
+      "element": "SiO2",
+      "mass_kg": 40.0,
+      "applicability": "absolute",
+      "FOM": 1.85,
+      "bounds": {
+        "FOM_m2_per_s3": 1.85,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.4829186815300937e-13,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.152984221466704e-25,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 3.25683081271437e-58,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.8500000000000003e-55
+      },
+      "caveat": "Janse plot this as a filled 'massive' point (aLIGO test-mass force/acceleration noise). LIGO is still a differential interferometer between two mirrors; we follow Janse's classification but flag the differential nature.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "fogliano2021",
+      "role": "upper_diffusion",
+      "year": 2021,
+      "short_name": "Fogliano 2021",
+      "citation": "Fogliano et al., Nat. Commun. 12, 4124 (2021)",
+      "experiment_type": "nanowire",
+      "element": "SiC",
+      "mass_kg": 1.6e-14,
+      "applicability": "absolute",
+      "FOM": 3.01,
+      "bounds": {
+        "FOM_m2_per_s3": 3.01,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 4.0397758007597734e-13,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.757017571143123e-25,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.2989517547406774e-58,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 3.0100000000000004e-55
+      },
+      "caveat": "On-Earth absolute nano-optomechanical force sensor at dilution temperature.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "fuchs2024",
+      "role": "upper_diffusion",
+      "year": 2024,
+      "short_name": "Fuchs 2024 mag-lev",
+      "citation": "Fuchs et al., Sci. Adv. 10, eadk2949 (2024)",
+      "experiment_type": "magnetic levitation",
+      "element": "Nd2Fe14B",
+      "mass_kg": 4e-07,
+      "applicability": "absolute",
+      "FOM": 5.92,
+      "bounds": {
+        "FOM_m2_per_s3": 5.92,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 7.945339780896299e-13,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.3289549508693451e-24,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.0421858600685984e-57,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 5.920000000000001e-55
+      },
+      "caveat": "Milligram levitated mass, SQUID readout. Not yet at the thermal floor; Janse highlight this class as improvable.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "hamilton2015",
+      "role": "upper_diffusion",
+      "year": 2015,
+      "short_name": "Hamilton 2015",
+      "citation": "Hamilton et al., Phys. Rev. Lett. 114, 100405 (2015)",
+      "experiment_type": "atom interferometer",
+      "element": "Cs",
+      "mass_kg": 4.41e-18,
+      "applicability": "differential",
+      "FOM": 6.93,
+      "bounds": {
+        "FOM_m2_per_s3": 6.93,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 9.300879169191106e-13,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.555685440798068e-24,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.2199912179519234e-57,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 6.93e-55
+      },
+      "caveat": "Atom interferometer; Janse open circle.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "mamin2001",
+      "role": "upper_diffusion",
+      "year": 2001,
+      "short_name": "Mamin 2001",
+      "citation": "Mamin and Rugar, Appl. Phys. Lett. 79, 3358 (2001)",
+      "experiment_type": "nanobeam",
+      "element": "Si",
+      "mass_kg": 6.85e-13,
+      "applicability": "absolute",
+      "FOM": 21.1,
+      "bounds": {
+        "FOM_m2_per_s3": 21.1,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.8318694151505393e-12,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.736646868807971e-24,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 3.714547575582336e-57,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.1100000000000006e-54
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "timberlake2023",
+      "role": "upper_diffusion",
+      "year": 2023,
+      "short_name": "Timberlake 2023",
+      "citation": "Timberlake et al., arXiv:2310.03880 (2023)",
+      "experiment_type": "magnetic levitation",
+      "element": "Nd2Fe14B",
+      "mass_kg": 2.3e-08,
+      "applicability": "absolute",
+      "FOM": 47.6,
+      "bounds": {
+        "FOM_m2_per_s3": 47.6,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 6.388482661666619e-12,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.0685516159017033e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 8.379737658659676e-57,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 4.760000000000001e-54
+      },
+      "caveat": "Magnetic levitation; vibration-limited, not thermal-limited.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "liang2022",
+      "role": "upper_diffusion",
+      "year": 2022,
+      "short_name": "Liang 2022",
+      "citation": "Liang et al., Fundamental Research 3, 57 (2023)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 4.68e-18,
+      "applicability": "absolute",
+      "FOM": 121.0,
+      "bounds": {
+        "FOM_m2_per_s3": 121.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.6239630295413045e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.716276166472817e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.1301433964239935e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.2100000000000003e-53
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "maiwald2009",
+      "role": "upper_diffusion",
+      "year": 2009,
+      "short_name": "Maiwald 2009",
+      "citation": "Maiwald et al., Nat. Phys. 5, 551 (2009)",
+      "experiment_type": "trapped ion",
+      "element": "Mg+",
+      "mass_kg": 4.04e-26,
+      "applicability": "absolute",
+      "FOM": 130.0,
+      "bounds": {
+        "FOM_m2_per_s3": 130.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.7447536681022278e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.9183132367063326e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.2885838143398276e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.3000000000000002e-53
+      },
+      "caveat": "Single ion; tiny N.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "norte2016",
+      "role": "upper_diffusion",
+      "year": 2016,
+      "short_name": "Norte 2016",
+      "citation": "Norte et al., Phys. Rev. Lett. 116, 147202 (2016)",
+      "experiment_type": "membrane",
+      "element": "Si3N4",
+      "mass_kg": 2.3e-11,
+      "applicability": "absolute",
+      "FOM": 131.0,
+      "bounds": {
+        "FOM_m2_per_s3": 131.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.7581748501645527e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.940761800065612e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.3061883052193647e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.3100000000000002e-53
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "monteiro2020",
+      "role": "upper_diffusion",
+      "year": 2020,
+      "short_name": "Monteiro 2020",
+      "citation": "Monteiro et al., Phys. Rev. A 101, 053835 (2020)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 9.42e-13,
+      "applicability": "absolute",
+      "FOM": 197.0,
+      "bounds": {
+        "FOM_m2_per_s3": 197.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.6439728662779916e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.4223669817780577e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 3.4680847032688156e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.9700000000000003e-53
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "kampel2017",
+      "role": "upper_diffusion",
+      "year": 2017,
+      "short_name": "Kampel 2017",
+      "citation": "Kampel et al., Phys. Rev. X 7, 021008 (2017)",
+      "experiment_type": "membrane",
+      "element": "Si3N4",
+      "mass_kg": 1e-11,
+      "applicability": "absolute",
+      "FOM": 289.0,
+      "bounds": {
+        "FOM_m2_per_s3": 289.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.878721616011876e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.48763481083177e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.087697864186232e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.8900000000000005e-53
+      },
+      "caveat": "Some Table I entries marked dagger (review-paper value) in Janse.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "heritier2018",
+      "role": "upper_diffusion",
+      "year": 2018,
+      "short_name": "Heritier 2018",
+      "citation": "Heritier et al., Nano Lett. 18, 1814 (2018)",
+      "experiment_type": "nanowire",
+      "element": "C",
+      "mass_kg": 4.1e-15,
+      "applicability": "absolute",
+      "FOM": 433.0,
+      "bounds": {
+        "FOM_m2_per_s3": 433.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 5.811371832986651e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 9.720227934568015e-23,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 7.622744550839579e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 4.330000000000001e-53
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "tebbenjohanns2020",
+      "role": "upper_diffusion",
+      "year": 2020,
+      "short_name": "Tebbenjohanns 2020",
+      "citation": "Tebbenjohanns et al., Phys. Rev. Lett. 124, 013603 (2020)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 3.49e-18,
+      "applicability": "absolute",
+      "FOM": 552.0,
+      "bounds": {
+        "FOM_m2_per_s3": 552.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 7.408492498403306e-11,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.2391606974322274e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 9.717678965504498e-56,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 5.520000000000001e-53
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "tebbenjohanns2019",
+      "role": "upper_diffusion",
+      "year": 2019,
+      "short_name": "Tebbenjohanns 2019",
+      "citation": "Tebbenjohanns et al., Phys. Rev. Lett. 122, 223601 (2019)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 3.49e-18,
+      "applicability": "absolute",
+      "FOM": 863.0,
+      "bounds": {
+        "FOM_m2_per_s3": 863.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.1582480119786328e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.937311017905819e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.5192675629040547e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 8.630000000000001e-53
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "lewandowski2021",
+      "role": "upper_diffusion",
+      "year": 2021,
+      "short_name": "Lewandowski 2021",
+      "citation": "Lewandowski et al., Phys. Rev. Applied 15, 014050 (2021)",
+      "experiment_type": "magnetic levitation",
+      "element": "SiO2/B2O3",
+      "mass_kg": 2.5e-10,
+      "applicability": "absolute",
+      "FOM": 1030.0,
+      "bounds": {
+        "FOM_m2_per_s3": 1030.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.3823817524194575e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.3122020260057867e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.813262560592325e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.0300000000000002e-52
+      },
+      "caveat": "Borosilicate assumed 80% SiO2 / 20% B2O3 in Janse.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "teufel2009",
+      "role": "upper_diffusion",
+      "year": 2009,
+      "short_name": "Teufel 2009",
+      "citation": "Teufel et al., Nat. Nanotechnol. 4, 820 (2009)",
+      "experiment_type": "nanowire",
+      "element": "Al",
+      "mass_kg": 5.5e-15,
+      "applicability": "absolute",
+      "FOM": 1050.0,
+      "bounds": {
+        "FOM_m2_per_s3": 1050.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.409224116544107e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.3570991527243454e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.848471542351399e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.0500000000000001e-52
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "cripe2019",
+      "role": "upper_diffusion",
+      "year": 2019,
+      "short_name": "Cripe 2019",
+      "citation": "Cripe et al., Nature 568, 364 (2019)",
+      "experiment_type": "nanobeam",
+      "element": "GaAs",
+      "mass_kg": 5e-11,
+      "applicability": "absolute",
+      "FOM": 1600.0,
+      "bounds": {
+        "FOM_m2_per_s3": 1600.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.1473891299719727e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 3.591770137484717e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.8167185407259416e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.6000000000000002e-52
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "reinhardt2016",
+      "role": "upper_diffusion",
+      "year": 2016,
+      "short_name": "Reinhardt 2016",
+      "citation": "Reinhardt et al., Phys. Rev. X 6, 021001 (2016)",
+      "experiment_type": "membrane",
+      "element": "Si3N4",
+      "mass_kg": 4e-12,
+      "applicability": "absolute",
+      "FOM": 3000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 3000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 4.026354618697449e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.734569007783844e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.28134726386114e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 3.0000000000000004e-52
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "gieseler2013",
+      "role": "upper_diffusion",
+      "year": 2013,
+      "short_name": "Gieseler 2013",
+      "citation": "Gieseler et al., Nat. Phys. 9, 806 (2013)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 3e-18,
+      "applicability": "absolute",
+      "FOM": 4010.0,
+      "bounds": {
+        "FOM_m2_per_s3": 4010.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 5.381894006992257e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 9.001873907071071e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 7.059400842694391e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 4.0100000000000005e-52
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "delic2020",
+      "role": "upper_diffusion",
+      "year": 2020,
+      "short_name": "Delic 2020",
+      "citation": "Delic et al., Science 367, 892 (2020)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 2.83e-18,
+      "applicability": "absolute",
+      "FOM": 4020.0,
+      "bounds": {
+        "FOM_m2_per_s3": 4020.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 5.395315189054581e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 9.02432247043035e-22,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 7.077005333573929e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 4.020000000000001e-52
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "corbitt2007",
+      "role": "upper_diffusion",
+      "year": 2007,
+      "short_name": "Corbitt 2007",
+      "citation": "Corbitt et al., Phys. Rev. Lett. 98, 150802 (2007)",
+      "experiment_type": "mesoscopic",
+      "element": "SiO2",
+      "mass_kg": 0.001,
+      "applicability": "absolute",
+      "FOM": 4700.0,
+      "bounds": {
+        "FOM_m2_per_s3": 4700.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 6.30795556929267e-10,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.0550824778861355e-21,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 8.274110713382453e-55,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 4.7000000000000005e-52
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "westphal2021",
+      "role": "upper_diffusion",
+      "year": 2021,
+      "short_name": "Westphal 2021",
+      "citation": "Westphal et al., Nature 591, 225 (2021)",
+      "experiment_type": "mesoscopic",
+      "element": "Au",
+      "mass_kg": 0.000218,
+      "applicability": "absolute",
+      "FOM": 11500.0,
+      "bounds": {
+        "FOM_m2_per_s3": 11500.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.5434359371673555e-09,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.58158478631714e-21,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.0245164511467705e-54,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.1500000000000002e-51
+      },
+      "caveat": "Cavendish-type measurement of gravity between millimetre-sized masses. Relevant as a modern torsion/source-mass experiment, but not competitive in FOM_D2 with Gisler or LIGO.",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "rider2018",
+      "role": "upper_diffusion",
+      "year": 2018,
+      "short_name": "Rider 2018",
+      "citation": "Rider et al., Phys. Rev. A 97, 013842 (2018)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 1.53e-13,
+      "applicability": "absolute",
+      "FOM": 26000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 26000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.4895073362044557e-09,
+        "nonlocal_lP2_D2_kg_s_per_m": 5.836626473412665e-21,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 4.577167628679655e-54,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.6000000000000003e-51
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "kawasaki2020",
+      "role": "upper_diffusion",
+      "year": 2020,
+      "short_name": "Kawasaki 2020",
+      "citation": "Kawasaki et al., Rev. Sci. Instrum. 91, 083201 (2020)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 8.4e-14,
+      "applicability": "absolute",
+      "FOM": 35800.0,
+      "bounds": {
+        "FOM_m2_per_s3": 35800.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 4.804783178312289e-09,
+        "nonlocal_lP2_D2_kg_s_per_m": 8.036585682622053e-21,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 6.302407734874295e-54,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 3.580000000000001e-51
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "hempston2017",
+      "role": "upper_diffusion",
+      "year": 2017,
+      "short_name": "Hempston 2017",
+      "citation": "Hempston et al., Appl. Phys. Lett. 111, 133111 (2017)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 7.6e-19,
+      "applicability": "absolute",
+      "FOM": 40600.0,
+      "bounds": {
+        "FOM_m2_per_s3": 40600.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 5.448999917303881e-09,
+        "nonlocal_lP2_D2_kg_s_per_m": 9.11411672386747e-21,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 7.147423297092077e-54,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 4.0600000000000007e-51
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "debonis2018",
+      "role": "upper_diffusion",
+      "year": 2018,
+      "short_name": "De Bonis 2018",
+      "citation": "De Bonis et al., Nano Lett. 18, 5324 (2018)",
+      "experiment_type": "nanotube",
+      "element": "C",
+      "mass_kg": 8.6e-21,
+      "applicability": "absolute",
+      "FOM": 108000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 108000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.4494876627310816e-08,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.424444842802184e-20,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.9012850149900107e-53,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.0800000000000001e-50
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "halg2021",
+      "role": "upper_diffusion",
+      "year": 2021,
+      "short_name": "Halg 2021",
+      "citation": "Halg et al., Phys. Rev. Applied 15, L021001 (2021)",
+      "experiment_type": "membrane",
+      "element": "Si3N4",
+      "mass_kg": 1.4e-11,
+      "applicability": "absolute",
+      "FOM": 168000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 168000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.2547585864705715e-08,
+        "nonlocal_lP2_D2_kg_s_per_m": 3.7713586443589527e-20,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.9575544677622386e-53,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.6800000000000003e-50
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "priel2022",
+      "role": "upper_diffusion",
+      "year": 2022,
+      "short_name": "Priel 2022",
+      "citation": "Priel et al., Sci. Adv. 8, eabq2361 (2022)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 5.85e-13,
+      "applicability": "absolute",
+      "FOM": 514000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 514000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 6.898487580034963e-08,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.1538561566669653e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 9.048708312082087e-53,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 5.140000000000001e-50
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "moser2013",
+      "role": "upper_diffusion",
+      "year": 2013,
+      "short_name": "Moser 2013",
+      "citation": "Moser et al., Nat. Nanotechnol. 8, 493 (2013)",
+      "experiment_type": "nanotube",
+      "element": "C",
+      "mass_kg": 1e-20,
+      "applicability": "absolute",
+      "FOM": 723000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 723000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 9.703514631060851e-08,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.6230311308759064e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.2728046905905348e-52,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 7.230000000000001e-50
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "weber2016",
+      "role": "upper_diffusion",
+      "year": 2016,
+      "short_name": "Weber 2016",
+      "citation": "Weber et al., Nat. Commun. 7, 12496 (2016)",
+      "experiment_type": "nanotube",
+      "element": "C",
+      "mass_kg": 9.6e-18,
+      "applicability": "absolute",
+      "FOM": 795000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 795000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.066983973954824e-07,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.7846607870627187e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.3995570249232022e-52,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 7.950000000000002e-50
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "ranjit2016",
+      "role": "upper_diffusion",
+      "year": 2016,
+      "short_name": "Ranjit 2016",
+      "citation": "Ranjit et al., Phys. Rev. A 93, 053801 (2016)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 3.75e-17,
+      "applicability": "absolute",
+      "FOM": 2140000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 2140000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 2.8721329613375135e-07,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.803992558885809e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 3.767361048220947e-52,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.1400000000000002e-49
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "krause2012",
+      "role": "upper_diffusion",
+      "year": 2012,
+      "short_name": "Krause 2012",
+      "citation": "Krause et al., Nat. Photonics 6, 768 (2012)",
+      "experiment_type": "membrane",
+      "element": "Si3N4",
+      "mass_kg": 1e-11,
+      "applicability": "absolute",
+      "FOM": 2890000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 2890000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.8787216160118756e-07,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.48763481083177e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.087697864186232e-52,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.8900000000000005e-49
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "nichol2012",
+      "role": "upper_diffusion",
+      "year": 2012,
+      "short_name": "Nichol 2012",
+      "citation": "Nichol et al., Phys. Rev. B 85, 054414 (2012)",
+      "experiment_type": "nanowire",
+      "element": "Si",
+      "mass_kg": 2.66e-17,
+      "applicability": "absolute",
+      "FOM": 3070000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 3070000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 4.120302893133723e-07,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.891708951298801e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.404578700017901e-52,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 3.0700000000000003e-49
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "biercuk2010",
+      "role": "upper_diffusion",
+      "year": 2010,
+      "short_name": "Biercuk 2010",
+      "citation": "Biercuk et al., Nat. Nanotechnol. 5, 646 (2010)",
+      "experiment_type": "trapped ion",
+      "element": "Be+",
+      "mass_kg": 1.95e-24,
+      "applicability": "absolute",
+      "FOM": 5220000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 5220000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 7.005857036533561e-07,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.1718150073543888e-18,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 9.189544239118384e-52,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 5.220000000000001e-49
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "ranjit2015",
+      "role": "upper_diffusion",
+      "year": 2015,
+      "short_name": "Ranjit 2015",
+      "citation": "Ranjit et al., Phys. Rev. A 91, 051805 (2015)",
+      "experiment_type": "optical levitation",
+      "element": "SiO2",
+      "mass_kg": 3.75e-14,
+      "applicability": "absolute",
+      "FOM": 37800000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 37800000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 5.073206819558785e-06,
+        "nonlocal_lP2_D2_kg_s_per_m": 8.485556949807643e-18,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 6.654497552465037e-51,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 3.780000000000001e-48
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "affolter2020",
+      "role": "upper_diffusion",
+      "year": 2020,
+      "short_name": "Affolter 2020",
+      "citation": "Affolter et al., Phys. Rev. A 102, 052609 (2020)",
+      "experiment_type": "trapped ion",
+      "element": "Be+",
+      "mass_kg": 1.5e-24,
+      "applicability": "absolute",
+      "FOM": 64300000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 64300000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 8.629820066074865e-06,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.4434426240016706e-17,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.1319687635542377e-50,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 6.430000000000001e-48
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "timberlake2019",
+      "role": "upper_diffusion",
+      "year": 2019,
+      "short_name": "Timberlake 2019",
+      "citation": "Timberlake et al., Appl. Phys. Lett. 115, 224101 (2019)",
+      "experiment_type": "magnetic levitation",
+      "element": "Nd2Fe14B",
+      "mass_kg": 4e-06,
+      "applicability": "absolute",
+      "FOM": 146000000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 146000000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.9594925810994253e-05,
+        "nonlocal_lP2_D2_kg_s_per_m": 3.277490250454804e-17,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.5702556684124216e-50,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.4600000000000002e-47
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "guzman2014",
+      "role": "upper_diffusion",
+      "year": 2014,
+      "short_name": "Guzman 2014",
+      "citation": "Guzman Cervantes et al., Appl. Phys. Lett. 104, 221111 (2014)",
+      "experiment_type": "mesoscopic",
+      "element": "SiO2",
+      "mass_kg": 2.5e-05,
+      "applicability": "absolute",
+      "FOM": 724000000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 724000000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 9.716935813123176e-05,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.6252759872118344e-16,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.2745651396784886e-49,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 7.240000000000002e-47
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "shaniv2017",
+      "role": "upper_diffusion",
+      "year": 2017,
+      "short_name": "Shaniv 2017",
+      "citation": "Shaniv and Ozeri, Nat. Commun. 8, 14157 (2017)",
+      "experiment_type": "trapped ion",
+      "element": "Sr+",
+      "mass_kg": 1.44e-25,
+      "applicability": "absolute",
+      "FOM": 37800000000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 37800000000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 0.005073206819558786,
+        "nonlocal_lP2_D2_kg_s_per_m": 8.485556949807643e-15,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 6.654497552465037e-48,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 3.7800000000000005e-45
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "blums2018",
+      "role": "upper_diffusion",
+      "year": 2018,
+      "short_name": "Blums 2018",
+      "citation": "Blums et al., Sci. Adv. 4, eaao4453 (2018)",
+      "experiment_type": "trapped ion",
+      "element": "Yb+",
+      "mass_kg": 2.89e-25,
+      "applicability": "absolute",
+      "FOM": 1440000000000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 1440000000000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 0.19326502169747756,
+        "nonlocal_lP2_D2_kg_s_per_m": 3.232593123736245e-13,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 2.5350466866533476e-46,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.4400000000000004e-43
+      },
+      "caveat": "",
+      "source": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Table I"
+    },
+    {
+      "id": "cavendish1798",
+      "role": "upper_diffusion",
+      "year": 1798,
+      "short_name": "Cavendish 1798",
+      "citation": "Cavendish, Phil. Trans. R. Soc. 88, 469 (1798)",
+      "experiment_type": "massive",
+      "element": "Pb",
+      "mass_kg": 1.0,
+      "applicability": "absolute",
+      "FOM": 100000000000000.0,
+      "bounds": {
+        "FOM_m2_per_s3": 100000000000000.0,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 13.42118206232483,
+        "nonlocal_lP2_D2_kg_s_per_m": 2.244856335927948e-11,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 1.7604490879537135e-44,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 1.0000000000000001e-41
+      },
+      "caveat": "The first upper bound used by Oppenheim et al. 2023: N=1e26, sigma_a=1e-7 m/s^2, Delta T=100 s, giving FOM=1e14 m^2/s^3. A modern kg-scale torsion balance is of the same class but can be much quieter.",
+      "source": "Oppenheim et al. 2023 p. 9; Janse et al. 2024 Table I"
+    },
+    {
+      "id": "proj_1e6amu",
+      "role": "projection_lower",
+      "year": 2028,
+      "short_name": "1e6 amu interferometry",
+      "citation": "Near-term ground goal discussed e.g. in Kaltenbaek, arXiv:1508.07796; Pedalino et al. 2025 outlook",
+      "experiment_type": "matter-wave",
+      "element": "cluster/polymer",
+      "mass_kg": 1.660539e-21,
+      "applicability": "projection",
+      "FOM": null,
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.660539e-22,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.7524929404395913e-26,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 0.22059118164168,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 1.660539e-21,
+        "lambda_Hz": 10.0,
+        "N_constituents": 80000.0
+      },
+      "caveat": "ASSUMED: 1e6 amu (carbon-like N~8e4), tau=0.1 s, Delta x=100 nm. This is a representative 'heavier slower beam' target, not a funded schedule.",
+      "source": "projection; MAQRO/Vienna near-term language"
+    },
+    {
+      "id": "proj_1e8amu",
+      "role": "projection_lower",
+      "year": 2032,
+      "short_name": "1e8 amu interferometry",
+      "citation": "Kaltenbaek, arXiv:1508.07796 (ground-based 1e6-1e8 amu 'over the next years')",
+      "experiment_type": "matter-wave",
+      "element": "nanoparticle",
+      "mass_kg": 1.660539e-19,
+      "applicability": "projection",
+      "FOM": null,
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 1.660539e-19,
+        "nonlocal_lP2_D2_kg_s_per_m": 4.75249294043959e-19,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 2205911.8164167996,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 1.660539e-19,
+        "lambda_Hz": 1.0,
+        "N_constituents": 8000000.0
+      },
+      "caveat": "ASSUMED: 1e8 amu, tau=1 s, Delta x=100 nm. Optimistic ground-based step beyond 1e6 amu.",
+      "source": "projection"
+    },
+    {
+      "id": "proj_maqro",
+      "role": "projection_lower",
+      "year": 2035,
+      "short_name": "MAQRO 3e10 amu / 100 s",
+      "citation": "Kaltenbaek, arXiv:1508.07796; MAQRO M4 proposal (~1e10 amu, ~100 s)",
+      "experiment_type": "matter-wave",
+      "element": "nanoparticle",
+      "mass_kg": 4.9816e-17,
+      "applicability": "projection",
+      "FOM": null,
+      "bounds": {
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 4.9816e-15,
+        "nonlocal_lP2_D2_kg_s_per_m": 1.3366295168309949e-09,
+        "ultralocal_continuous_D2_kg2_s_per_m3": 6204084639999999.0,
+        "V_m3": 1e-37,
+        "R_m": 4.641588833612786e-13,
+        "delocalization_m": 1e-07,
+        "M_kg": 4.9816e-17,
+        "lambda_Hz": 0.01,
+        "N_constituents": 2500000000.0
+      },
+      "caveat": "MAQRO aims at several 10^10 amu and ~100 s coherence in space. Year 2035 is a placeholder, not a launch date. N~2.5e9 assumes ~12 u constituents. If demonstrated, this would close both remaining 2023-model windows from below even against the conservative Gisler-level upper bound.",
+      "source": "Kaltenbaek, arXiv:1508.07796"
+    },
+    {
+      "id": "proj_thermal_maglev",
+      "role": "projection_upper",
+      "year": 2030,
+      "short_name": "thermal-limited mag-lev / SQUID",
+      "citation": "Janse et al., Phys. Rev. Research 6, 033076 (2024), Sec. III; Fuchs 2024; Angeli et al., arXiv:2501.13030",
+      "experiment_type": "magnetic levitation",
+      "element": "Nd2Fe14B",
+      "mass_kg": 4e-07,
+      "applicability": "projection",
+      "FOM": 2.98e-05,
+      "bounds": {
+        "FOM_m2_per_s3": 2.98e-05,
+        "ultralocal_discrete_lP3_over_mP_D2_kg": 3.999512254572799e-18,
+        "nonlocal_lP2_D2_kg_s_per_m": 6.689671881065285e-30,
+        "ultralocal_continuous_D2_kg2_s_per_m3_atm": 5.246138282102066e-63,
+        "ultralocal_continuous_D2_kg2_s_per_m3_table1_Vb": 2.9800000000000004e-60
+      },
+      "caveat": "ASSUMED FOM = Gisler/1e4 (four more orders from vibration isolation toward the thermal floor of a mK magnetic-levitation / SQUID torsion-like sensor). Janse argue FOM ~ 4 N kT omega / (m Q); lowering m does not help, but T, omega, Q do. Angeli et al. 2025 propose a related mK torsion test of LOCC-gravity diffusion (a different but neighbouring bound).",
+      "source": "projection, scaled from Gisler and Janse thermal-floor discussion"
+    }
+  ],
+  "verdict_one_liner": "The ultra-local continuous model is ruled out (Oppenheim 2023 Table 1: upper 10^{-41} < lower 10^{-9} kg^2 s m^{-3}) and stays ruled out. The ultra-local discrete window, using formula bounds, Pedalino 2025 for the floor and Gisler 2022 for a conservative absolute ceiling, is still open by about 10 orders of magnitude; Janse's rounded conservative window was 9 orders on the 2011 floor. The non-local / Diosi-Penrose-like window is much tighter: about 3\u20134 orders remain conservatively (Pedalino floor vs Gisler ceiling). Including Asenbaum 2017 as if it were an absolute acceleration measurement would already close both remaining windows, but that point is differential and its applicability is questioned (Janse 2024). A 10^6 amu, 0.1 s interferometer would essentially close the non-local conservative window from below; closing the discrete conservative window from below wants MAQRO-scale mass and time (several 10^{10} amu, ~100 s), or a ~10-order improvement in an absolute FOM. The 2026 Oppenheim\u2013Sajjad dimensionless relativistic window is a separate accounting (~4.5 orders on the tensor channel) and still uses the 2011 matter-wave floor."
+}

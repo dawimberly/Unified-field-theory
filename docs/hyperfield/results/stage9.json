@@ -1,0 +1,228 @@
+{
+ "kk_reduction": {
+  "isometry": "DERIVED: Killing vectors of a flat metric on R^8/Gamma are the 8 constant translations -> continuous isometry U(1)^8; KK reduction of pure gravity gives 8 abelian graviphotons g_{mu i} (+ 36 metric moduli). Rotations are not isometries; only the finite point group Aut(E8)=W(E8), order 696,729,600, survives as a DISCRETE global symmetry. No non-abelian gauge group.",
+  "root_states_point_particle": "the 240 states with momentum k = root (|k|^2=2) are the first KK shell: massive spin-2 (graviton KK) states carrying U(1)^8 charges; mass M = sqrt2/R at equal volume, never massless",
+  "MD_rows": {
+   "6.0": {
+    "R_m": 1.4761216450601895e-16,
+    "M_root_KK_GeV": 1.8905114821511273,
+    "lambda_m": 1.0437756250783019e-16
+   },
+   "10.0": {
+    "R_m": 7.794911908513468e-17,
+    "M_root_KK_GeV": 3.580059597582145,
+    "lambda_m": 5.511835069261646e-17
+   }
+  },
+  "string_enhancement": "closed string on T^8 with lattice Gamma_8 at the self-dual point (G_ij = C_ij/2, B_ij = antisymmetrised Cartan matrix, alpha'=1; Elitzur-Gross-Rabinovici-Seiberg 1987, from memory): winding+momentum states with p_R=0, p_L^2=2 are massless -> E8 gauge bosons. Near the point, along an overall scale t: M_root ~ (sqrt2/sqrt(alpha')) |t - 1/t| (circle-analog, ASSUMED form). Requires R ~ sqrt(alpha') ~ 1/M_string, i.e. R^-1 ~ M_s ~ TeV-Planck, NOT the ADD radius R^-1 ~ GeV.",
+  "heterotic": "heterotic E8xE8: the E8xE8 roots live in the 16-dimensional INTERNAL left-moving lattice Gamma_8+Gamma_8, massless at any radius; that lattice is not a geometric spacetime torus. Dan's geometric E8 torus is a different object."
+ },
+ "branchings": {
+  "E8 > E6 x SU(3)": {
+   "sub_roots": 6,
+   "centralizer_roots": 72,
+   "expected_centralizer_roots": 72,
+   "remaining_roots": 162,
+   "distinct_subalgebra_weights": 6,
+   "multiplicities": [
+    27
+   ]
+  },
+  "E8 > SU(5) x SU(5)": {
+   "sub_roots": 20,
+   "centralizer_roots": 20,
+   "expected_centralizer_roots": 20,
+   "remaining_roots": 200,
+   "distinct_subalgebra_weights": 30,
+   "multiplicities": [
+    5,
+    10
+   ]
+  },
+  "E8 > SO(10) x SU(4)": {
+   "sub_roots": 12,
+   "centralizer_roots": 40,
+   "expected_centralizer_roots": 40,
+   "remaining_roots": 188,
+   "distinct_subalgebra_weights": 14,
+   "multiplicities": [
+    10,
+    16
+   ]
+  },
+  "dimension_checks": {
+   "E8 > E6 x SU(3)": "248 = (78,1)+(1,8)+(27,3)+(27b,3b) = 78+8+81+81 = 248",
+   "E8 > SU(5) x SU(5)": "248 = (24,1)+(1,24)+(10,5)+(10b,5b)+(5,10b)+(5b,10) = 248",
+   "E8 > SO(10) x SU(4)": "248 = (45,1)+(1,15)+(10,6)+(16,4)+(16b,4b) = 248",
+   "E8 > SO(16)": "248 = 120 + 128 = 248",
+   "E6 > SO(10) x U(1)": "27 = 16 + 10 + 1 = 27",
+   "SO(10) 16 > SM": "Q(3,2)+u^c(3b,1)+d^c(3b,1)+L(1,2)+e^c(1,1)+nu^c(1,1) = 6+3+3+2+1+1 = 16 (one generation + nu_R)"
+  }
+ },
+ "chirality": {
+  "flat_torus": "DERIVED (index theorem): Dirac index on flat T^n vanishes -> zero net chiral zero modes; KK reduction on R^8/Gamma_8 gives a NON-CHIRAL 4D spectrum (Witten 1983 no-go for smooth/flat). Lattice shape (E8 vs Z8) is irrelevant.",
+  "fixes": "chirality needs orbifold fixed points, singularities, fluxes or a domain wall (Stage 5 kink, Q=1)",
+  "heterotic_Z3": "heterotic E8xE8 on T^6/Z3, standard embedding: E6xSU(3)xE8, net 36 generations of 27 = 9 untwisted [(27,3): 3 x 3] + 27 twisted (one per fixed point) (Dixon-Harvey-Vafa-Witten 1985; from memory)",
+  "calabi_yau": "standard embedding on CY3: N_gen = |chi|/2; three generations need |chi| = 6 (e.g. Tian-Yau/Z3) (from memory)",
+  "three_flag": "COINCIDENCE/FEATURE: the \"3\" of E8 > E6 x SU(3) is the SU(3) holonomy of a 6-dim compact space, not the generation number; it multiplies untwisted 27s (giving 9 on T^6/Z3), and N_gen is set by topology (chi or fixed points). Not a prediction of 3.",
+  "lisi": "Distler & Garibaldi, Commun. Math. Phys. 298, 419 (2010), arXiv:0905.2658 (verified): no subgroup SL(2,C).G of any real or complex form of E8 gives a chiral gauge theory; 3 generations need >= 180 states in the fermionic (-1) eigenspace, real E8 forms provide only 112 or 128.",
+  "dims_note": "heterotic uses 6 compact dims (10D string); Dan's 8 compact dims (12D total) has no known consistent string/M-theory with an E8-torus; E8 here is a lattice, not a gauge group."
+ },
+ "couplings": {
+  "rows": [
+   {
+    "M_D_TeV": 6.0,
+    "gD2_hat": 1.0,
+    "V8_MD8": 4.00068517786745e+35,
+    "g4_squared": 2.4995718371747665e-36,
+    "alpha4": 1.9890960674982714e-37,
+    "alpha_em_over_alpha4": 3.66867776762718e+34,
+    "gD2_hat_needed_for_alpha_em": 3.6686777676271803e+34
+   },
+   {
+    "M_D_TeV": 6.0,
+    "gD2_hat": 12.566370614359172,
+    "V8_MD8": 4.00068517786745e+35,
+    "g4_squared": 3.1410546083152755e-35,
+    "alpha4": 2.4995718371747665e-36,
+    "alpha_em_over_alpha4": 2.919441006646028e+33,
+    "gD2_hat_needed_for_alpha_em": 3.6686777676271803e+34
+   },
+   {
+    "M_D_TeV": 10.0,
+    "gD2_hat": 1.0,
+    "V8_MD8": 1.4402466640322822e+35,
+    "g4_squared": 6.94325510326324e-36,
+    "alpha4": 5.525266854161864e-37,
+    "alpha_em_over_alpha4": 1.320723996345785e+34,
+    "gD2_hat_needed_for_alpha_em": 1.320723996345785e+34
+   },
+   {
+    "M_D_TeV": 10.0,
+    "gD2_hat": 12.566370614359172,
+    "V8_MD8": 1.4402466640322822e+35,
+    "g4_squared": 8.725151689764654e-35,
+    "alpha4": 6.94325510326324e-36,
+    "alpha_em_over_alpha4": 1.0509987623925699e+33,
+    "gD2_hat_needed_for_alpha_em": 1.320723996345785e+34
+   }
+  ],
+  "formula": "1/g4^2 = V8/g_D^2, g_D^2 = gD2_hat / M_D^8 (dimensionless bulk coupling ASSUMED O(1)-4pi)",
+  "verdict": "bulk gauge fields give alpha_4 ~ 1e-37: excluded by ~35 orders unless g_D is non-perturbatively huge (gD2_hat ~ 1e33: tuning). Bulk SM gauge fields would also have KK copies at ~2-4 GeV, excluded (UED-type limits >~ TeV, from memory). => SM gauge fields must be brane-confined; then the bulk lattice does not set the gauge group."
+ },
+ "kk_spectrum": {
+  "E8_shells_norm_count": [
+   [
+    2,
+    240
+   ],
+   [
+    4,
+    2160
+   ],
+   [
+    6,
+    6720
+   ],
+   [
+    8,
+    17520
+   ],
+   [
+    10,
+    30240
+   ],
+   [
+    12,
+    60480
+   ]
+  ],
+  "E8_bruteforce_check": {
+   "2": 240,
+   "4": 2160
+  },
+  "Z8_shells_norm_count": [
+   [
+    1,
+    16
+   ],
+   [
+    2,
+    112
+   ],
+   [
+    3,
+    448
+   ],
+   [
+    4,
+    1136
+   ],
+   [
+    5,
+    2016
+   ],
+   [
+    6,
+    3136
+   ],
+   [
+    7,
+    5504
+   ],
+   [
+    8,
+    9328
+   ],
+   [
+    9,
+    12112
+   ],
+   [
+    10,
+    14112
+   ],
+   [
+    11,
+    21312
+   ],
+   [
+    12,
+    31808
+   ]
+  ],
+  "E8_masses_over_M1": [
+   1.0,
+   1.4142135623730951,
+   1.7320508075688772,
+   2.0,
+   2.23606797749979,
+   2.449489742783178
+  ],
+  "Z8_masses_over_M1z": [
+   1.0,
+   1.4142135623730951,
+   1.7320508075688772,
+   2.0,
+   2.23606797749979,
+   2.449489742783178,
+   2.6457513110645907,
+   2.8284271247461903,
+   3.0,
+   3.1622776601683795,
+   3.3166247903554,
+   3.4641016151377544
+  ],
+  "ratio_2160_240": 9.0,
+  "ratio_note": "E8 shell degeneracies 240 sigma3(k): 240, 2160, 6720, 17520 (ratio 9 = sigma3(2)); Z8: 16, 112, 448, 1136",
+  "M1_E8_GeV": {
+   "6.0": 1.8905114821511273,
+   "10.0": 3.580059597582145
+  },
+  "weyl_shape_effect_1TeV": {
+   "6.0": 3.574033664145252e-06,
+   "10.0": 1.2816826722240029e-05
+  },
+  "observability": "each KK graviton couples as 1/Mbar (2.4e18 GeV): individual shells unresolvable; summed monojet/diphoton rates are shape-independent up to (M1/E)^2 ~ 4e-6 at 1 TeV (Weyl law). Gravity deviation at r~lambda=1e-16 m unmeasurable (Stage 7). n=8 collider bound UNVERIFIED (CMS covers n<=7)."
+ }
+}

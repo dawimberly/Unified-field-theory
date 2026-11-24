@@ -1,0 +1,368 @@
+{
+ "add_derivation": {
+  "volume_convention": "Eq(Mbar**2, M_star**(n + 2)*(2*pi*R)**n)",
+  "pdg_convention": "Mbar^2 = M_D^(n+2) R^n  =>  M_D = (2 pi)^(n/(n+2)) M_star",
+  "note": "DERIVED: dimensional reduction of the bulk Einstein-Hilbert term over a flat n-torus of radius R"
+ },
+ "add_table": [
+  {
+   "n": 1,
+   "R_for_MD_1TeV": 1169996065362.1902,
+   "R_for_MD_3TeV": 43333187606.007034,
+   "R_for_MD_10TeV": 1169996065.36219,
+   "alpha_naive_2n": 2,
+   "alpha_spin2_8n_over_3": 2.6666666666666665,
+   "limits_R_m": {
+    "SN1987A cooling (HR03)": 490.0,
+    "NS heating (HR03)": 8.3,
+    "torsion balance": 3e-05
+   },
+   "R_max_m": 3e-05,
+   "strongest": "torsion balance",
+   "MD_min_TeV_implied": 339120.76415316213,
+   "KK_mass_min_eV": 0.006577566013333333,
+   "hierarchy_solved_MD_le_10TeV": false
+  },
+  {
+   "n": 2,
+   "R_for_MD_1TeV": 0.000480491197274,
+   "R_for_MD_3TeV": 5.338791080822223e-05,
+   "R_for_MD_10TeV": 4.80491197274e-06,
+   "alpha_naive_2n": 4,
+   "alpha_spin2_8n_over_3": 5.333333333333333,
+   "limits_R_m": {
+    "LHC monojet (ATLAS)": 3.8304464068399236e-06,
+    "SN1987A cooling (HR03)": 1e-06,
+    "NS heating (HR03)": 5.9e-08,
+    "torsion balance": 3.7e-05
+   },
+   "R_max_m": 5.9e-08,
+   "strongest": "NS heating (HR03)",
+   "MD_min_TeV_implied": 90.2436623695227,
+   "KK_mass_min_eV": 3.3445250915254237,
+   "hierarchy_solved_MD_le_10TeV": false
+  },
+  {
+   "n": 3,
+   "R_for_MD_1TeV": 3.5715147427090664e-09,
+   "R_for_MD_3TeV": 5.723350670020806e-10,
+   "R_for_MD_10TeV": 7.694595257652712e-11,
+   "alpha_naive_2n": 6,
+   "alpha_spin2_8n_over_3": 8.0,
+   "limits_R_m": {
+    "LHC monojet (ATLAS)": 1.0088367730900684e-10,
+    "SN1987A cooling (HR03)": 1.1e-09,
+    "NS heating (HR03)": 1.3e-10
+   },
+   "R_max_m": 1.0088367730900684e-10,
+   "strongest": "LHC monojet (ATLAS)",
+   "MD_min_TeV_implied": 8.500000000000007,
+   "KK_mass_min_eV": 1955.9852065620803,
+   "hierarchy_solved_MD_le_10TeV": true
+  },
+  {
+   "n": 4,
+   "R_for_MD_1TeV": 9.737241758673713e-12,
+   "R_for_MD_3TeV": 1.8739330501782445e-12,
+   "R_for_MD_10TeV": 3.079186208511254e-13,
+   "alpha_naive_2n": 8,
+   "alpha_spin2_8n_over_3": 10.666666666666666,
+   "limits_R_m": {
+    "LHC monojet (ATLAS)": 5.146931992147367e-13,
+    "SN1987A cooling (HR03)": 3.8e-11,
+    "NS heating (HR03)": 5.9e-12
+   },
+   "R_max_m": 5.146931992147367e-13,
+   "strongest": "LHC monojet (ATLAS)",
+   "MD_min_TeV_implied": 7.099999999999996,
+   "KK_mass_min_eV": 383387.5806034744,
+   "hierarchy_solved_MD_le_10TeV": true
+  },
+  {
+   "n": 5,
+   "R_for_MD_1TeV": 2.816994871685004e-13,
+   "R_for_MD_3TeV": 6.050848785118117e-14,
+   "R_for_MD_10TeV": 1.1214658578302289e-14,
+   "alpha_naive_2n": 10,
+   "alpha_spin2_8n_over_3": 13.333333333333334,
+   "limits_R_m": {
+    "LHC monojet (ATLAS)": 2.0947591339162457e-14,
+    "SN1987A cooling (HR03)": 4.9e-12,
+    "NS heating (HR03)": 9.4e-13
+   },
+   "R_max_m": 2.0947591339162457e-14,
+   "strongest": "LHC monojet (ATLAS)",
+   "MD_min_TeV_implied": 6.399999999999995,
+   "KK_mass_min_eV": 9420031.983872456,
+   "hierarchy_solved_MD_le_10TeV": true
+  },
+  {
+   "n": 6,
+   "R_for_MD_1TeV": 2.6547245047892697e-14,
+   "R_for_MD_3TeV": 6.135610552301819e-15,
+   "R_for_MD_10TeV": 1.232213961774809e-15,
+   "alpha_naive_2n": 12,
+   "alpha_spin2_8n_over_3": 16.0,
+   "limits_R_m": {
+    "LHC monojet (ATLAS)": 2.4900999321892965e-15,
+    "SN1987A cooling (HR03)": 1.2e-12,
+    "NS heating (HR03)": 2.8e-13
+   },
+   "R_max_m": 2.4900999321892965e-15,
+   "strongest": "LHC monojet (ATLAS)",
+   "MD_min_TeV_implied": 5.900000000000001,
+   "KK_mass_min_eV": 79244602.93708377,
+   "hierarchy_solved_MD_le_10TeV": true
+  },
+  {
+   "n": 7,
+   "R_for_MD_1TeV": 4.912799404400506e-15,
+   "R_for_MD_3TeV": 1.1964303423130429e-15,
+   "R_for_MD_10TeV": 2.54457201192346e-16,
+   "alpha_naive_2n": 14,
+   "alpha_spin2_8n_over_3": 18.666666666666668,
+   "limits_R_m": {
+    "SN1987A cooling (HR03)": 4.4e-13,
+    "NS heating (HR03)": 1.2e-13
+   },
+   "R_max_m": 1.2e-13,
+   "strongest": "NS heating (HR03)",
+   "MD_min_TeV_implied": 0.08328358067463032,
+   "KK_mass_min_eV": 1644391.5033333334,
+   "hierarchy_solved_MD_le_10TeV": true
+  }
+ ],
+ "add_notes": {
+  "n1": "R(1 TeV)=1.17e+12 m: solar-system scale, excluded by planetary 1/r^2 tests (DERIVED)",
+  "n7": "ATLAS table stops at n=6; for n=7 only astrophysical limits are used (collider limit not verified)",
+  "pdg_ns_n2": "PDG listing quotes R<1.6e-10 m for n=2 from NS heating (Hannestad-Raffelt 2002 M>1700 TeV); the 2003 paper Table V gives 5.9e-8 m. Unresolved convention/revision difference; the weaker 2003 value is used.",
+  "astro_caveat": "SN/NS bounds assume KK gravitons decay to SM photons on our brane; they weaken if KK gravitons decay to other branes (ASSUMED)."
+ },
+ "yukawa_check": [
+  {
+   "n": 1,
+   "r_over_R": 3.0,
+   "full_sum": 0.13972185731001585,
+   "lowest_shell": 0.13276551564763717,
+   "ratio": 1.052395696491256
+  },
+  {
+   "n": 1,
+   "r_over_R": 10.0,
+   "full_sum": 0.00012107197602583405,
+   "lowest_shell": 0.00012106647936662628,
+   "ratio": 1.0000454019910097
+  },
+  {
+   "n": 2,
+   "r_over_R": 3.0,
+   "full_sum": 0.37131278255858424,
+   "lowest_shell": 0.26553103129527433,
+   "ratio": 1.3983781132747497
+  },
+  {
+   "n": 2,
+   "r_over_R": 10.0,
+   "full_sum": 0.00024599325165218354,
+   "lowest_shell": 0.00024213295873325256,
+   "ratio": 1.015942864363144
+  },
+  {
+   "n": 3,
+   "r_over_R": 3.0,
+   "full_sum": 0.7815385184607531,
+   "lowest_shell": 0.39829654694291156,
+   "ratio": 1.9622025961796052
+  },
+  {
+   "n": 3,
+   "r_over_R": 10.0,
+   "full_sum": 0.000375085066187701,
+   "lowest_shell": 0.00036319943809987883,
+   "ratio": 1.032724797565776
+  },
+  {
+   "n": 6,
+   "r_over_R": 3.0,
+   "full_sum": 6.526796214109108,
+   "lowest_shell": 0.7965930938858231,
+   "ratio": 8.193387896788124
+  },
+  {
+   "n": 6,
+   "r_over_R": 10.0,
+   "full_sum": 0.0007913123581984769,
+   "lowest_shell": 0.0007263988761997577,
+   "ratio": 1.089363411929162
+  }
+ ],
+ "rs": {
+  "x1_first_J1_zero": 3.8317059702075125,
+  "rs1": [
+   {
+    "Lambda_pi_TeV": 0.246,
+    "k_rc": 11.723718176005184,
+    "m1_TeV_k0p1": 0.09425996686710482,
+    "m1_TeV_k0p01": 0.009425996686710481,
+    "tuning_v2_over_Lam2": 1.0
+   },
+   {
+    "Lambda_pi_TeV": 1,
+    "k_rc": 11.277312833973564,
+    "m1_TeV_k0p1": 0.3831705970207513,
+    "m1_TeV_k0p01": 0.03831705970207513,
+    "tuning_v2_over_Lam2": 0.060516
+   },
+   {
+    "Lambda_pi_TeV": 3,
+    "k_rc": 10.927613681407504,
+    "m1_TeV_k0p1": 1.1495117910622539,
+    "m1_TeV_k0p01": 0.11495117910622538,
+    "tuning_v2_over_Lam2": 0.006724000000000001
+   },
+   {
+    "Lambda_pi_TeV": 10,
+    "k_rc": 10.544377235094135,
+    "m1_TeV_k0p1": 3.831705970207513,
+    "m1_TeV_k0p01": 0.3831705970207513,
+    "tuning_v2_over_Lam2": 0.00060516
+   },
+   {
+    "Lambda_pi_TeV": 11.75,
+    "k_rc": 10.493043989387743,
+    "m1_TeV_k0p1": 4.502254514993828,
+    "m1_TeV_k0p01": 0.45022545149938276,
+    "tuning_v2_over_Lam2": 0.00043832322317790857
+   },
+   {
+    "Lambda_pi_TeV": 30,
+    "k_rc": 10.194678082528077,
+    "m1_TeV_k0p1": 11.49511791062254,
+    "m1_TeV_k0p01": 1.1495117910622539,
+    "tuning_v2_over_Lam2": 6.724000000000001e-05
+   }
+  ],
+  "lhc": {
+   "atlas_diphoton": {
+    "0.01": 2.2,
+    "0.05": 3.9,
+    "0.1": 4.5
+   },
+   "cms_diphoton": "2.2-5.6 TeV for k/Mbar 0.01-0.2 (PDG 2026 review)",
+   "cms_dilepton": "2.47-4.78 TeV for k/Mbar 0.01-0.1 (PDG 2026 review)"
+  },
+  "Lambda_pi_min_TeV": {
+   "0.01": 57.41567899795963,
+   "0.05": 20.356468008367504,
+   "0.1": 11.74411615867356
+  },
+  "krc_max_allowed": {
+   "0.01": 9.988056757227792,
+   "0.05": 10.318118236865491,
+   "0.1": 10.493203423766074
+  },
+  "rs2": {
+   "ell_max_m": 4.4e-05,
+   "M5_min_GeV": 298476796.5462805,
+   "deviation_at": {
+    "52um": 0.47731755424063116,
+    "100um": 0.12906666666666664,
+    "1000um": 0.0012906666666666665
+   },
+   "note": "V=-GMm/r(1+2 l^2/(3 r^2)); Mbar^2 = M5^3/k (ASSUMED convention)"
+  }
+ },
+ "split": {
+  "photon_in_bulk": {
+   "hydrogen_R_max_m": 4.47213595499958e-17,
+   "source": "stage 2 (DERIVED, r_p-degeneracy limited)"
+  },
+  "UED_all_in_bulk": {
+   "hydrogen_R_max_m": 4.47213595499958e-17,
+   "LHC_mUED_inv_R_min_TeV": 1.86,
+   "LHC_R_max_m": 1.0608977440860215e-19,
+   "LHC_source": "arXiv:2110.00500 recast of ATLAS Run 2 (phenomenology paper)",
+   "hydrogen_weaker_by": 421.54260200189117
+  },
+  "gluons_only": {
+   "hydrogen": "no tree-level effect: Coulomb potential unchanged (DERIVED)"
+  },
+  "higgs_only": {
+   "hydrogen_ratio_higgs_to_coulomb_at_a0": 0.0,
+   "note": "Higgs-exchange e-p force is Yukawa with range 1.6e-18 m: exp(-a0 m_h) underflows to 0"
+  },
+  "nuR_in_bulk": {
+   "mnu_eV_for_Mstar_1TeV": 7.150054688449762e-05,
+   "mnu_eV_for_Mstar_10TeV": 0.0007150054688449762,
+   "Mstar_TeV_for_mnu_0p05eV": 699.2953505764127,
+   "note": "m_nu = y v/sqrt2 * M*/Mbar (volume suppression, any n); ASSUMED y=1"
+  },
+  "gravity_only": {
+   "hydrogen_fractional_shift_n2_R30um": 5.5e-27,
+   "source": "stage 2"
+  }
+ },
+ "dgp": {
+  "Hubble_length_m": 1.372506806603264e+26,
+  "rows": [
+   {
+    "bound": "LLR r_c>120 Mpc",
+    "r_c_m": 3.70284e+24,
+    "M5_max_GeV": 0.054059640465015296
+   },
+   {
+    "bound": "normal-branch cosmology H0 r_c>3.5 (Lombriser+2009)",
+    "r_c_m": 4.803773823111424e+26,
+    "M5_max_GeV": 0.010678836849461065
+   },
+   {
+    "bound": "SPT+Planck PR4 H0 r_c>0.71 (2026)",
+    "r_c_m": 9.744798326883174e+25,
+    "M5_max_GeV": 0.01817441818095571
+   },
+   {
+    "bound": "self-accelerating needs r_c~1/H0 (excluded)",
+    "r_c_m": 1.372506806603264e+26,
+    "M5_max_GeV": 0.016213619104766458
+   }
+  ]
+ },
+ "induced": {
+  "ADD_or_RS1": [
+   {
+    "M_D_TeV": 1,
+    "M_ind2_GeV2": 1678132.1040762195,
+    "induced_fraction_of_Mbar2": 2.8302722599938767e-31,
+    "N_KK_below_MD_n2": 1.8627209701480941e+31,
+    "N_KK_below_MD_n6": 3.064053180829178e+31
+   },
+   {
+    "M_D_TeV": 3,
+    "M_ind2_GeV2": 15103188.936685976,
+    "induced_fraction_of_Mbar2": 2.547245033994489e-30,
+    "N_KK_below_MD_n2": 2.0696899668312154e+30,
+    "N_KK_below_MD_n6": 3.4045035342546424e+30
+   },
+   {
+    "M_D_TeV": 10,
+    "M_ind2_GeV2": 167813210.40762195,
+    "induced_fraction_of_Mbar2": 2.830272259993877e-29,
+    "N_KK_below_MD_n2": 1.8627209701480942e+29,
+    "N_KK_below_MD_n6": 3.064053180829178e+29
+   }
+  ],
+  "ffz_gap": {
+   "gap": 0.009651,
+   "kappa_bare": -0.00965,
+   "target": 0.041666666666666664,
+   "gap_fraction_of_target": 0.231624
+  }
+ },
+ "coincidences": {
+  "TeV2_over_Mbar_GeV": 4.106776180698152e-13,
+  "dark_energy_quarter_GeV": 2.25e-12,
+  "ratio": 5.47875,
+  "R_n2_MD1TeV_m": 0.000480491197274,
+  "dark_energy_length_m": 8.770088017777778e-05
+ }
+}
