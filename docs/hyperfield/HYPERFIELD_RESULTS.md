@@ -1689,6 +1689,128 @@ It also states that the 0.1 s Gerlich 2011 coherence time is not supported by th
 
 ---
 
+## Stage 18 — Common-mode vs differential noise: does shared-platform CMRR close the ground gap?
+
+**Question.** Stage 16 put a per-mass acceleration-noise requirement of $\le 0.90$ fm s$^{-2}/\sqrt{\rm Hz}$ on the trapped cheap point: diamond, $m=5.6\times10^{-15}$ kg, $\Delta x=3.85\,\mu$m, $D=11\,\mu$m, $t_{\rm int}=2.5$ s, 3 s total, 1 K. Both masses sit on one chip, in one cryostat, on one platform. How much of the ground noise cancels as common mode, how much CMRR is realistic, and does that close the gap?
+
+**Short answer: no.** Common-mode noise does not cancel in a BMV entanglement test. The PPT witness's built-in CMRR is **1.006** (DERIVED). So the requirement applies to each mass's acceleration *relative to its own trap*, whatever the correlation, and it is **0.44 fm s$^{-2}/\sqrt{\rm Hz}$**, not 0.90, once the noise model is made exact. On the ground, the best inertial floor is **6.0 orders** above it. Surface noise from the 5 µm plate is **7–8 orders** above it (extrapolated). That surface noise is the binding source.
+
+Scripts: `scripts/stage18_run.py` (about 1 s) and `scripts/stage18_fig.py`. Data: `results/stage18.json`. Figure: `figures/stage18_noise.png`.
+
+### 18.1 The witness does not reject common mode (DERIVED)
+
+**Model.** A uniform acceleration $a_k(t)$ of mass $k$ relative to its trap gives the R branch the phase $\theta_k=\kappa\int a_k w\,dt$.
+- $\kappa=m\Delta x/\hbar=2.05\times10^{14}$ rad per (m/s).
+- $w(t)$ is the split profile: a 0.25 s linear ramp, a 2.5 s hold, then a 0.25 s ramp (ramp shape ASSUMED).
+- $\theta_1,\theta_2$ are jointly Gaussian with correlation $c$, averaged exactly on the 4×4 QGEM state together with the Stage 16 gas and blackbody local decoherence ($\gamma t=0.092$).
+- The allowance rule is carried over from Stage 16 (ASSUMED): noise may move $\lambda_{\min}$ from −0.0733 to −0.0704, the Stage 16 value, i.e. $N_{5\sigma}=5.0\times10^3$.
+
+| correlation | allowed $\sigma^2$ (rad²) | allowed $\sqrt{S_a}$ (fm s⁻²/√Hz) |
+|---|---|---|
+| independent, $c=0$ | 0.0110 | **0.442** |
+| common mode, $c=+1$ | 0.0111 | 0.445 |
+| anti-correlated (rotation), $c=-1$ | 0.0111 | 0.445 |
+
+- **Intrinsic CMRR = 1.006** in amplitude.
+- At large $\sigma$, common-mode noise does saturate rather than wash out completely (panel a). Even so, it drives $\lambda_{\min}$ positive, to +0.04 with gas and blackbody included, so the entanglement is gone.
+- **Reason.** A shared random phase is a mixture of local unitaries $u_\theta\otimes u_\theta$. It damps the single-qubit coherences exactly as much as independent noise does. Only the $|LR\rangle\langle RL|$ coherence is protected, and that coherence alone is a separable (PPT-boundary) state.
+- **Why atom gradiometers get CMRR and BMV does not.** McGuirk et al. (arXiv:physics/0105088) state that vibration "couple[s] to the two accelerometers in a common-mode way… cancelled in the subtraction". Asenbaum et al. (PRL 125, 191101 (2020), arXiv:2005.11624) extract "the contrast and phase of each interferometer… from a single shot". Both work because each shot reads an analogue phase from about $10^5$–$10^6$ atoms. A BMV shot has one particle per arm and returns two bits, so there is no phase difference to subtract. This agrees with Toroš et al. (PRR 3, 023178 (2021), arXiv:2007.15029): the dephasing is set by the "relative accelerations between the interferometric mass and the associated apparatus".
+
+**Trap-frequency mismatch (DERIVED).** In a Stern–Gerlach-in-trap split $\Delta x\propto\omega^{-2}$, so a common $a$ gives $\theta_2=(1+2\Delta\omega/\omega)\theta_1$. The allowed $\sqrt{S_a}$ for each mismatch is:
+
+| $\Delta\omega/\omega$ | allowed $\sqrt{S_a}$ (fm s⁻²/√Hz) |
+|---|---|
+| $10^{-4}$ | 0.445 |
+| $10^{-3}$ | 0.445 |
+| $10^{-2}$ | 0.441 |
+| $10^{-1}$ | 0.403 |
+
+Mismatch is irrelevant because there is no CMRR for it to spoil. In a hypothetical differential readout it would cap CMRR at $\omega/2\Delta\omega$ (5×10³ at $10^{-4}$).
+
+**Correction to Stage 16.** The Stage 12/16 code put noise only on the entangling $\sin(\Phi/2)$ term. The exact model also damps the $1-e^{-2\gamma t}$ term. The requirement is therefore **0.44, not 0.90, fm s⁻²/√Hz**: 0.31 orders tighter, and 2.6 orders below LPF's 1.74 fm.
+
+### 18.2 Source ledger
+
+Each entry is per-mass noise along the split axis, which is parallel to the plate. For each source, $\int S_a(f)|W(f)|^2df$ over 1 mHz–300 Hz is converted to the white ASD that gives the same phase variance. Drifts below 1 mHz are assumed to be tracked out by calibration (ASSUMED). The third column moves that cut-off to 0.1 Hz, an aggressive ASSUMED variant.
+
+| source | kind | white-equivalent ASD (m s⁻²/√Hz) | orders over 0.44 fm | orders with cut-off at 0.1 Hz |
+|---|---|---|---|---|
+| seismic, quiet site, NLNM, no isolation [1] | common | 3.2e-8 | +7.9 | +7.9 |
+| seismic behind aLIGO-class active isolation, 1e-11 m/√Hz at 1 Hz, sensor-noise limited [2] | common | 3.9e-10 | +6.0 | +5.8 |
+| tilt × g, using the ring-laser G resolution 9.1e-11 rad s⁻¹/√Hz as an upper bound [3] | common | 1.1e-8 | +7.4 | +6.2 |
+| rotation α·D/2 [3] | anti-correlated | 8.7e-16 | **+0.3** | +0.3 |
+| trap-drive current noise, chip wires, ε g 2δI/I with δI/I=1e-7 and ε=1e-3 (ASSUMED) | common | 2.0e-9 | +6.7 | +6.5 |
+| trap current noise, persistent superconducting coil, δI/I=1e-10 (ASSUMED) | common | 2.0e-12 | +3.7 | +3.5 |
+| magnetic Johnson noise from a 1 µm Au plate at 1 K, σ=1e9 S/m, B₀=1 T (ASSUMED) [4] | differential | 5.9e-9 | +7.1 | +7.0 |
+| surface E-field noise on Schut's $p=10^{-2}$ e·cm dipole, white from 1 MHz [5,6] | differential | 4.0e-8 | **+8.0** | +7.8 |
+| same, with 1/f extrapolated to 1 Hz | differential | 2.2e-4 | +11.7 | +11.2 |
+| Newtonian noise from NLNM ground motion, 2πGρξ (ASSUMED prefactor) | common | 1.1e-12 | +3.4 | +1.7 |
+| one 70 kg person moving 0.3 m at 1 Hz, 2 m away (absolute δg) | common | 4.4e-11 | +5.0 | — |
+
+**Derived limits that follow from the ledger:**
+- **Gravity-gradient noise is absolute on the ground.** The traps are clamped to the floor, so each mass feels the full $\delta(Gm/r^2)$ relative to its trap. The tidal (differential) part at 2 m is only 7e-16. The DERIVED exclusion radius for one walking person is **92 m**. In Toroš's free-fall capsule only the gradient survives, because the capsule falls with the masses.
+- **Pulse-tube line at 1.4 Hz.** The allowed amplitude is $a_0=8.6\times10^{-15}$ m s⁻², i.e. **1.1×10⁻¹⁶ m** of displacement. A running pulse tube is excluded; this needs a wet cryostat or a cooler that is off during the shot.
+- **Plate vibration.** Coupled through the image-dipole stiffness ($k/m=2\times10^5$ s⁻²) and ε=1e-3, the allowed plate motion is δz ≤ **2×10⁻¹⁸ m/√Hz**.
+
+**Best demonstrated acceleration sensors, which a feed-forward correction would need to beat:**
+
+| sensor | white-equivalent ASD (m s⁻²/√Hz) | orders over 0.44 fm |
+|---|---|---|
+| aLIGO ISI, GS13-limited [2] | 3.9e-10 | +6.0 |
+| LPF readout, 34.8 fm/√Hz × (2πf)², in space [7] | 4.2e-12 | +4.0 |
+| LPF 1.74 fm, mHz band only [8] | 1.74e-15 | +0.6 |
+| Asenbaum 2020, differential, η 5.4e-11/√Hz | 5.3e-10 | +6.1 |
+| McGuirk 2002, differential, 4e-9 g/√Hz | 3.9e-8 | +8.0 |
+
+The superconducting gravity gradiometer CMRR is above 10⁹ (design value, Moody–Chan–Paik, J. Appl. Phys. 60, 4308 (1986), https://pubs.aip.org/aip/jap/article-abstract/60/12/4308/564806). Its achieved performance is 2×10⁻¹¹ s⁻²/√Hz (Moody–Paik–Canavan, RSI 73, 3957 (2002), https://doi.org/10.1063/1.1511798). These are classical difference measurements. No dual levitated-particle CMRR has been reported. The closest experiment found is Penny et al. (arXiv:2111.03123), who sympathetically cooled two co-levitated particles; it gives no CMRR figure.
+
+### 18.3 Bottom line: residual floor vs 0.44 fm (0.68 fm Pino point in brackets)
+
+| scenario | total white-equivalent ASD (m s⁻²/√Hz) | orders over 0.44 fm | orders over 0.68 fm (Pino) |
+|---|---|---|---|
+| A. Ground, best isolation, intrinsic CMRR, with plate surface noise | 4.2e-8 | **+8.0** | +7.8 |
+| B. As A, plus perfect feed-forward of common mode down to the best ground sensor | 4.1e-8 | +8.0 | +7.8 |
+| C. Space-grade (LPF) reference, inertial only, plate noise ignored | 4.2e-12 | +4.0 | +3.8 |
+| D. Ground, inertial only, drifts below 0.1 Hz tracked, plate noise ignored | 6.8e-10 | **+6.2** | +6.0 |
+
+**Binding sources:**
+- **Overall: surface electric-field noise on the permanent dipole at 5 µm.** Fixing it needs one of two things:
+  - a plate–sphere distance of about **2.3 mm**, since $a\propto z^{-3}$; this would erase the gravitational phase;
+  - a dipole of at most **1e-10 e·cm**.
+  
+  Independently, the net charge must be exactly zero: one stray electron already gives 2e-9 m s⁻²/√Hz.
+  
+  This is the least certain entry. It extrapolates 6 decades in frequency and 1.3 decades in distance from a cryogenic ion-trap point, $S_E=3.2\times10^{-14}$ V²m⁻²Hz⁻¹ at about 100 µm and 1 MHz (DERIVED from $\dot n$=2.1 quanta/s). Even 6 orders of optimism leaves it binding.
+- **Robust, measured-based binding: inertial isolation.** The floor is the active isolation's own inertial sensor, 6.0 orders over the requirement, with tilt a close second.
+
+**Does thermal noise alone kill it?** Gas does not. Non-gas damping does.
+- **Gas.** At the Stage 16 pressure (8.4e-16 Pa He), Epstein damping is 8.0e-15 s⁻¹. That is above $\gamma_{\max}$, but He at 4 K has $\lambda_{\rm dB}=0.45\,{\rm nm}\ll\Delta x$, so each collision fully decoheres. The long-wavelength formula (3.3e6 s⁻¹) saturates at the collision rate, 0.031 s⁻¹, which is already in the budget.
+- **Requirement on non-gas damping.** $\gamma\le m S_a/4kT=$ **2.0e-23 s⁻¹ at 1 K** (Q ≥ 3.2e25 at 100 Hz). $\gamma_{\max}$ scales as $1/T$, so it is 1.3e-21 s⁻¹ at 15 mK.
+- **The normal-metal plate fails this.** Its eddy-current damping, equivalent to the Johnson force noise, is 3.5e-9 s⁻¹: 14.2 orders too high in γ. The fix needs σ·t ≤ 5.7e-12 S, versus 10³ S for 1 µm of Au. That means no normal metal near the particle.
+- **Neither alternative plate works cleanly.** A superconducting plate would be in its normal or vortex state at the assumed 1 T: Nb's upper critical field is a few tenths of a tesla (approximate value, not checked this stage). An insulating plate loses the electromagnetic screening that Stage 12 assumed.
+
+**Coincidences flagged.**
+- The rotation term is within a factor 2 of the requirement (+0.3 orders). It uses the instrument resolution of the G ring laser, which is an upper bound on ambient rotation, so this is not a detection.
+- LPF's mHz floor is within 0.6 orders, but in the wrong band and in space.
+
+**Honest negatives.**
+- The premise that "the witness only needs differential noise" is false for single-particle BMV.
+- No realistic CMRR exists, because the witness itself provides about 1.
+- With a space-grade reference, perfect calibration and no plate, the residual is still 4.0 orders. On the ground it is 6–8 orders.
+
+**References (all opened this stage):**
+- [1] Peterson 1993 NLNM. The coefficient table was checked against the GFZ NMSOP table (T=0.8 s: −169.2 dB; 1.24 s: −163.7 dB): https://gfzpublic.gfz.de/rest/items/item_4017_4/component/file_4018/content
+- [2] Matichard et al., CQG 32, 185003 (2015), https://doi.org/10.1088/0264-9381/32/18/185003. The 0.01 nm/√Hz at 1 Hz figure is quoted in RSI 96, 064504 (2025), https://pubs.aip.org/aip/rsi/article/96/6/064504/3350986
+- [3] G Wettzell, 9.1e-11 rad/(s√Hz): https://syrte.obspm.fr/jsr/journees2005/pdf/s5_01_Kluegel.pdf
+- [4] Varpula & Poutanen, J. Appl. Phys. 55, 4015 (1984). The thin-film form $S_B=\mu_0^2kT\sigma t/8\pi z^2$ was used with its prefactor ASSUMED; the formula was not re-checked against the paper.
+- [5] Labaziewicz et al., PRL 100, 013001 (2008), arXiv:0706.3763
+- [6] Sedlacek et al., PRA 97, 020302 (2018), https://doi.org/10.1103/physreva.97.020302, β=4.0(2) at 5 K
+- [7] Armano et al., PRL 116, 231101 (2016), https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.231101
+- [8] Armano et al., PRL 120, 061101 (2018), https://sci.esa.int/web/lisa-pathfinder/-/59964-armano-et-al
+- Also: Schlamminger et al., PRL 100, 041101 (2008), arXiv:0712.0607. This torsion balance reached Δa=(0.6±3.1)×10⁻¹⁵ m s⁻², but only after long integration at a fixed signal frequency. It is not a 1 Hz noise floor.
+
+![Stage 18](figures/stage18_noise.png)
+
 ## Stage 19 — Spin-free superposition and readout for the heavy BMV masses
 
 **Question.** Stage 16 left the Pb Meissner sphere (1e-14 kg, 15 mK, 1 s hold) needing $\Delta x=2.69\,\mu$m, i.e. $F\equiv\Delta x/2z_{\rm zpf}(100\,{\rm Hz})=4.65\times10^5$, with no which-path tag. Which routes create and read out a spatial superposition without an embedded spin, and what gap do they leave inside the *unchanged* Stage 16 budget? Scripts: `scripts/stage19_run.py` (imports `stage16_run.evaluate/min_dx_point`), `scripts/stage19_fig.py`; output `results/stage19.json`, `figures/stage19_tagging.png`.
