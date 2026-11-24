@@ -1,0 +1,1093 @@
+{
+ "stage": 19,
+ "w_ref_Hz": 100.0,
+ "transient_penalty": 1.7320508075688772,
+ "routes": [
+  {
+   "key": "romero_isart_2012",
+   "cls": "a",
+   "status": "proposed",
+   "name": "Flux-qubit magnetomechanics (Romero-Isart 2012)",
+   "tag": "yes (flux qubit, external to the sphere)",
+   "m": 3.806772538109871e-13,
+   "dx": 1.042199779254164e-14,
+   "F": 0.011098551372390799,
+   "t_coh": null,
+   "readout": "flux qubit state (which-path tag) / SQUID",
+   "gap_dx_orders": 7.122049023156121,
+   "req": {
+    "m": 3.806772538109871e-13,
+    "t": 0.5,
+    "dx": 1.3803842646028865e-07,
+    "F": 146999.31797432128,
+    "N5": 9659.006926157437,
+    "sqrt_Sa_fm": 0.5318493703108961,
+    "P_req_Pa": 1.3983300863099756e-17,
+    "Q_min_100Hz": 4.833705367199596e+21
+   },
+   "notes": "DERIVED l_s/x_zp = 8 g0/w_t = 0.371; l_s = 1.04e-14 m. 2t*/T2 = 3.6 with the paper's own T2 = 10 us (condition 2t* << T2 violated; needs ~1 ms qubits). Superposition << zero-point width; any BMV use needs amplification (route b).",
+   "src": "https://arxiv.org/abs/1112.5609",
+   "gap_noise_vs_LPF_orders": 0.5147605988929354,
+   "gap_noise_vs_ground_orders": 4.450302609666017
+  },
+  {
+   "key": "pino_2018",
+   "cls": "a",
+   "status": "proposed",
+   "name": "On-chip SC double slit, magnetic skatepark (Pino 2018)",
+   "tag": "no (position fringes via SQUID)",
+   "m": 3.3210781332e-14,
+   "dx": 6.07e-07,
+   "F": 190926.00862873922,
+   "t_coh": 0.483,
+   "readout": "SQUID position measurement of interference fringes",
+   "gap_dx_orders": 0.5453719362845735,
+   "gap_cat_orders": 0.7796717600901895,
+   "req": {
+    "m": 3.3210781332e-14,
+    "t": 0.5,
+    "dx": 1.2302687708123811e-06,
+    "F": 386969.202556496,
+    "N5": 9986.798873089372,
+    "sqrt_Sa_fm": 0.6776558359692167,
+    "P_req_Pa": 1.0538583388534908e-16,
+    "Q_min_100Hz": 1.1376159904769388e+23
+   },
+   "notes": "Expansion state (xi = 607 nm over 483 ms) vs Stage 16 requirement at the same mass and a 0.5 s hold, with the sqrt(3) transient penalty. The d = 0.5 um cat exists only ~84 ms. Pino propose a DP-collapse test of ONE sphere; a two-sphere gravity witness from fringe correlations is NOT in the paper (ASSUMED possible).",
+   "src": "https://arxiv.org/abs/1603.01553",
+   "gap_noise_vs_LPF_orders": 0.4095400654607207,
+   "gap_noise_vs_ground_orders": 4.345082076233802,
+   "gap_vacuum_orders": 0.9772177636861149
+  },
+  {
+   "key": "hexapole_2026",
+   "cls": "a",
+   "status": "proposed",
+   "name": "Magnetic higher-order (hexapole) double-well traps (2026)",
+   "tag": "no (position statistics)",
+   "m": 4.750088092227766e-14,
+   "dx": 1.3291754660497086e-10,
+   "F": 50.0,
+   "t_coh": null,
+   "readout": "pulsed cavity-magnetomechanical position measurement",
+   "gap_dx_orders": 3.8164176835365438,
+   "req": {
+    "m": 4.750088092227766e-14,
+    "t": 0.5,
+    "dx": 8.709635899560796e-07,
+    "F": 327633.03724848747,
+    "N5": 9706.612602615347,
+    "sqrt_Sa_fm": 0.6745987440066855,
+    "P_req_Pa": 5.568786981865254e-17,
+    "Q_min_100Hz": 2.407807046127193e+22
+   },
+   "gap_Q_orders": 3.585026652029182,
+   "notes": "CITED: nonlinearity ~100 z_zpf, Q >= 1e11 needed vs 2e7 demonstrated, ppb field stability. A 1-um particle is ASSUMED Pb here.",
+   "src": "https://arxiv.org/abs/2607.03622",
+   "gap_noise_vs_LPF_orders": 0.41150372001446534,
+   "gap_noise_vs_ground_orders": 4.3470457307875465
+  },
+  {
+   "key": "hofer_2023",
+   "cls": "a",
+   "status": "demonstrated (classical only)",
+   "name": "Meissner-levitated PbSn sphere (Hofer 2023)",
+   "tag": "no",
+   "m": 5.6e-09,
+   "dx": 0.0,
+   "F": 0.0,
+   "t_coh": null,
+   "readout": "SQUID (thermal motion)",
+   "gap_dx_orders": null,
+   "notes": "CITED: 100 um, 5.6 ug, Q up to 2.6e7, 15 mK. Thermal state, no ground state, no superposition.",
+   "src": "https://doi.org/10.1103/PhysRevLett.131.043603"
+  },
+  {
+   "key": "chalmers_2026",
+   "cls": "a",
+   "status": "demonstrated (components)",
+   "name": "Flux-tunable resonator + chip levitation (Chalmers thesis 2026)",
+   "tag": "no",
+   "m": null,
+   "dx": 0.0,
+   "F": 0.0,
+   "t_coh": null,
+   "readout": "dispersive SQUID resonator, 20 GHz/Phi0",
+   "gap_dx_orders": null,
+   "notes": "CITED: chip levitation at 40 mK, 20 GHz/Phi0 responsivity, 1.6% flux transfer. Readout/cooling hardware, no quantum state yet.",
+   "src": "https://doi.org/10.63959/chalmers.dt/5848"
+  },
+  {
+   "key": "rossi_2025",
+   "cls": "b",
+   "status": "demonstrated",
+   "name": "Stiffness-modulation delocalisation (Rossi 2025)",
+   "tag": "no",
+   "F": 3.5,
+   "readout": "position / quadratures after recompression",
+   "gap_dx_orders": 5.3615294389524575,
+   "gap_dx_best_mass_1s": 3.9315294389524578,
+   "gap_dx_stage12_cheap": 5.3922152056841295,
+   "notes": "CITED: xi = 73 pm = 3.5 x 21 pm initial, 1.2 fg silica, optical (not SC). The only demonstrated coherent CoM expansion.",
+   "src": "https://arxiv.org/abs/2408.01264",
+   "m": null,
+   "dx": null,
+   "t_coh": null,
+   "gap_noise_vs_LPF_lead": 0.3106710460419039,
+   "gap_noise_vs_LPF_best_mass_1s": 2.6338591418522523
+  },
+  {
+   "key": "weiss_2021",
+   "cls": "b",
+   "status": "proposed",
+   "name": "Bang-bang inverted-potential loop (Weiss 2021)",
+   "tag": "no",
+   "F": 1000.0,
+   "readout": "position / quadratures after recompression",
+   "gap_dx_orders": 2.905597483302733,
+   "gap_dx_best_mass_1s": 1.4755974833027334,
+   "gap_dx_stage12_cheap": 2.936283250034405,
+   "notes": "CITED: eta = 1e3 example; gravity coupling g/w0 ~ 1e-23 for 100 nm silica, \"a formidable task\".",
+   "src": "https://arxiv.org/abs/2012.12260",
+   "m": null,
+   "dx": null,
+   "t_coh": null,
+   "gap_noise_vs_LPF_lead": 0.3106710460419039,
+   "gap_noise_vs_LPF_best_mass_1s": 2.6338591418522523
+  },
+  {
+   "key": "roda_llordes_2024_XL",
+   "cls": "b",
+   "status": "proposed",
+   "name": "Wide double-well loop, size XL (Roda-Llordes 2024)",
+   "tag": "no",
+   "F": 7071.067811865475,
+   "readout": "position / quadratures after recompression",
+   "gap_dx_orders": 2.056112481134724,
+   "gap_dx_best_mass_1s": 0.6261124811347242,
+   "gap_dx_stage12_cheap": 2.086798247866396,
+   "notes": "CITED Table 1: sqrt(2) eta = 1e4, w/W = 1e-3, D/X_W = 1e6, 77 dB squeezing.",
+   "src": "https://arxiv.org/abs/2303.07959",
+   "m": null,
+   "dx": null,
+   "t_coh": null,
+   "gap_noise_vs_LPF_lead": 0.3106710460419039,
+   "gap_noise_vs_LPF_best_mass_1s": 2.6338591418522523
+  },
+  {
+   "key": "roda_llordes_2024_XXL",
+   "cls": "b",
+   "status": "proposed",
+   "name": "Wide double-well loop, size XXL (Roda-Llordes 2024)",
+   "tag": "no",
+   "F": 70710.67811865475,
+   "readout": "position / quadratures after recompression",
+   "gap_dx_orders": 1.056112481134724,
+   "gap_dx_best_mass_1s": -0.3738875188652758,
+   "gap_dx_stage12_cheap": 1.0867982478663958,
+   "notes": "CITED Table 1: sqrt(2) eta = 1e5, w/W = 1e-4, D/X_W = 1e8, 97 dB squeezing. At W = 2pi 100 Hz: w = 2pi 0.01 Hz (DERIVED), loop time ~ 1/w ~ 16 s >> 1 s hold, and D = 1e8 X_W = 0.29 mm at 1e-14 kg.",
+   "src": "https://arxiv.org/abs/2303.07959",
+   "m": null,
+   "dx": null,
+   "t_coh": null,
+   "gap_noise_vs_LPF_lead": 0.3106710460419039,
+   "gap_noise_vs_LPF_best_mass_1s": 2.6338591418522523
+  },
+  {
+   "key": "lami_pedernales_plenio_2024",
+   "cls": "c",
+   "status": "proposed",
+   "name": "LOCC-inequality test with coherent states (LPP 2024)",
+   "tag": "none needed",
+   "F": null,
+   "m": 0.0001,
+   "dx": null,
+   "t_coh": 100.0,
+   "readout": "displacement + ground-state (zero-phonon) detection",
+   "gap_dx_orders": 0.0,
+   "gap_TQ_vs_hofer_orders": 3.761117911084863,
+   "gap_TQ_vs_torsion_orders": 8.330993219041424,
+   "gap_ground_state_torsion_orders": 3.778151250383644,
+   "checks": {
+    "rho_implied": 2984.155182973038,
+    "gamma_recomputed": 0.0002383678571428571,
+    "gamma_paper": 0.00016,
+    "gamma_Pb_100Hz": 1.0091541599999996e-08,
+    "t_needed_Pb_100Hz_s": 495464.43924880633,
+    "runs_5sigma": 2475.0,
+    "total_time_days": 2.8645833333333335
+   },
+   "notes": "No delocalisation, but needs w ~ mHz, T/Q < 1e-13 K and ground state of a mHz mode. In the Stage 16 100 Hz Pb trap the coupling is 1.01e-08 s^-1, so a 1% fidelity drop needs 5.0e+05 s (DERIVED): does not rescue it.",
+   "src": "https://arxiv.org/abs/2302.03075"
+  },
+  {
+   "key": "krisnanda_2020",
+   "cls": "c",
+   "status": "proposed",
+   "name": "CV entanglement of two released Os spheres (Krisnanda 2020)",
+   "tag": "none (Gaussian, quadratures)",
+   "m": 7.9e-08,
+   "dx": 3.3e-11,
+   "F": null,
+   "t_coh": 1.0,
+   "readout": "position/momentum quadratures",
+   "gap_dx_orders": null,
+   "notes": "Stage 16 (c''): works only in space at 2.7 K; joint gap 15.6, needs sqrt(S_a) = 0.0087 fm/s^2/rtHz.",
+   "src": "https://arxiv.org/abs/1906.08808"
+  },
+  {
+   "key": "hanif_2024",
+   "cls": "c",
+   "status": "proposed",
+   "name": "No-disturbance test (Hanif, Das, Ulbricht, Bose 2024)",
+   "tag": "REQUIRES embedded spins (Stern-Gerlach)",
+   "m": null,
+   "dx": null,
+   "F": null,
+   "t_coh": null,
+   "readout": "spin",
+   "gap_dx_orders": null,
+   "notes": "Honest negative: needs no entanglement but still needs spin-tagged superpositions. Not a spin-free route.",
+   "src": "https://arxiv.org/abs/2307.08133"
+  },
+  {
+   "key": "grossardt_2020",
+   "cls": "c",
+   "status": "analysis",
+   "name": "Acceleration-noise constraint (Grossardt 2020)",
+   "tag": "n/a",
+   "m": null,
+   "dx": null,
+   "F": null,
+   "t_coh": null,
+   "readout": "n/a",
+   "gap_dx_orders": null,
+   "notes": "S_a << 2 G hbar / d^3, mass-independent; reproduced in Stage 16. Applies to every route above.",
+   "src": "https://arxiv.org/abs/2007.05762"
+  },
+  {
+   "key": "kotler_2021",
+   "cls": "d",
+   "status": "demonstrated",
+   "name": "Deterministic CV entanglement of two 70 pg drums (Kotler 2021)",
+   "tag": "none (quadrature tomography)",
+   "m": 7e-14,
+   "dx": null,
+   "F": null,
+   "t_coh": null,
+   "readout": "near-quantum-limited quadratures",
+   "gap_dx_orders": null,
+   "notes": "Shows a spin-free entanglement READOUT exists for massive oscillators. Coupling is electromechanical; dx ~ zero-point.",
+   "src": "https://www.science.org/doi/10.1126/science.abf2998"
+  },
+  {
+   "key": "youssefi_2023",
+   "cls": "d",
+   "status": "demonstrated",
+   "name": "Squeezed drum with 7.7 ms quantum lifetime (Youssefi 2023)",
+   "tag": "none",
+   "m": 2.3e-12,
+   "dx": 1.42e-15,
+   "F": null,
+   "t_coh": 0.0077,
+   "readout": "microwave quadratures",
+   "gap_dx_orders": null,
+   "notes": "Coherence ingredient only; x_zpf 1.4 fm (Stage 17).",
+   "src": "https://arxiv.org/abs/2208.13082"
+  },
+  {
+   "key": "torsion_cooling",
+   "cls": "d",
+   "status": "demonstrated",
+   "name": "Torsion-pendulum cooling (Shin 2025; Agafonova 2024)",
+   "tag": "none",
+   "m": 1e-06,
+   "dx": null,
+   "F": null,
+   "t_coh": null,
+   "readout": "optical lever",
+   "gap_dx_orders": null,
+   "notes": "CITED: 6000 phonons (10 mK, Q 1.4e7, cm-scale); 1 mg at 18 Hz to 240 uK (2.8e5 phonons). No torsion ground state yet.",
+   "src": "https://arxiv.org/abs/2409.02275 ; https://arxiv.org/abs/2408.09445"
+  }
+ ],
+ "checks": {
+  "ri_ls_over_xzp": 0.37142857142857144,
+  "ri_mass_kg": 3.806772538109871e-13,
+  "ri_2tstar_over_T2": 3.5714285714285716,
+  "lpp_gamma_ratio_recomputed_over_paper": 1.4897991071428567,
+  "pino_mass_kg": 3.3210781332e-14,
+  "pino_F": 190926.00862873922,
+  "lead_zpf_m": 2.896897629542263e-12,
+  "free_expansion_F_formula": "F = sqrt(w_ref * W) * t (ground state of trap W released, long t; DERIVED)",
+  "free_expansion_W_needed_for_lead_1s_Hz": 163996745.6092051
+ },
+ "requirements": {
+  "stage16_lead_1e14kg_1s": {
+   "m": 1e-14,
+   "t": 1.0,
+   "dx": 2.6915348039269138e-06,
+   "F": 464554.6974941261,
+   "N5": 9534.650538912272,
+   "sqrt_Sa_fm": 0.8508993702594461,
+   "P_req_Pa": 1.0595679834616285e-16,
+   "Q_min_100Hz": 7.188826413218011e+22
+  },
+  "lead_min_F_at_1s": {
+   "m": 3.162277660168379e-07,
+   "t": 1.0,
+   "dx": 1.7782794100389227e-11,
+   "F": 17259.843596164792,
+   "N5": 9787.657467963156,
+   "sqrt_Sa_fm": 0.004042873069884367,
+   "P_req_Pa": 1.8193176694544982e-16,
+   "Q_min_100Hz": 1.0070109397142358e+20
+  },
+  "lead_min_F_any_hold": {
+   "m": 3.162277660168379e-07,
+   "t": 5.0,
+   "dx": 7.943282347242821e-12,
+   "F": 7709.688937498693,
+   "N5": 9829.202764328213,
+   "sqrt_Sa_fm": 0.004721058624426056,
+   "P_req_Pa": 2.480876333957215e-16,
+   "Q_min_100Hz": 7.384746891237717e+19
+  },
+  "stage12_cheap_point": {
+   "m": 5.6234e-15,
+   "dx": 3.852e-06,
+   "t": 2.5,
+   "F": 498565.9592041115,
+   "N5": 5048.551439368427,
+   "sqrt_Sa_fm": 0.8987705825261808
+  },
+  "lead_curve": [
+   {
+    "m": 1e-14,
+    "t": 0.5,
+    "dx": 3.890451449942805e-06,
+    "F": 671485.8354448536,
+    "N5": 9594.022396800798,
+    "sqrt_Sa_fm": 0.7197266195724543,
+    "P_req_Pa": 1.5838200319061637e-16,
+    "Q_min_100Hz": 1.0047991756779896e+23
+   },
+   {
+    "m": 1e-14,
+    "t": 1.0,
+    "dx": 2.6915348039269138e-06,
+    "F": 464554.6974941261,
+    "N5": 9534.650538912272,
+    "sqrt_Sa_fm": 0.8508993702594461,
+    "P_req_Pa": 1.0595679834616285e-16,
+    "Q_min_100Hz": 7.188826413218011e+22
+   },
+   {
+    "m": 1e-14,
+    "t": 2.5,
+    "dx": 1.659586907437563e-06,
+    "F": 286442.10456615157,
+    "N5": 9928.894392003756,
+    "sqrt_Sa_fm": 0.9647923187829677,
+    "P_req_Pa": 5.1789948824002317e-17,
+    "Q_min_100Hz": 5.591736875677023e+22
+   },
+   {
+    "m": 1e-14,
+    "t": 5.0,
+    "dx": 1.1748975549395302e-06,
+    "F": 202785.48039772725,
+    "N5": 9732.861659508428,
+    "sqrt_Sa_fm": 1.0121322417738037,
+    "P_req_Pa": 2.856675919292912e-17,
+    "Q_min_100Hz": 5.080891046586408e+22
+   },
+   {
+    "m": 3.1622776601683796e-14,
+    "t": 0.5,
+    "dx": 1.2589254117941661e-06,
+    "F": 386399.7670711748,
+    "N5": 9975.475960709507,
+    "sqrt_Sa_fm": 0.6957064341629955,
+    "P_req_Pa": 7.192881808711552e-17,
+    "Q_min_100Hz": 3.4006533327806502e+22
+   },
+   {
+    "m": 3.1622776601683796e-14,
+    "t": 1.0,
+    "dx": 8.912509381337477e-07,
+    "F": 273550.08618505194,
+    "N5": 9851.787623194923,
+    "sqrt_Sa_fm": 0.8051858405568619,
+    "P_req_Pa": 4.8290107139883965e-17,
+    "Q_min_100Hz": 2.538762900567798e+22
+   },
+   {
+    "m": 3.1622776601683796e-14,
+    "t": 2.5,
+    "dx": 5.62341325190349e-07,
+    "F": 172598.43596164792,
+    "N5": 9886.060717587767,
+    "sqrt_Sa_fm": 0.9014862081280428,
+    "P_req_Pa": 2.4100698289814648e-17,
+    "Q_min_100Hz": 2.0253320149904384e+22
+   },
+   {
+    "m": 3.1622776601683796e-14,
+    "t": 5.0,
+    "dx": 3.981071705534969e-07,
+    "F": 122190.33513034414,
+    "N5": 9827.989143178376,
+    "sqrt_Sa_fm": 0.9420075946948685,
+    "P_req_Pa": 1.3191541726607373e-17,
+    "Q_min_100Hz": 1.854836327249431e+22
+   },
+   {
+    "m": 1e-13,
+    "t": 0.5,
+    "dx": 4.466835921509635e-07,
+    "F": 243801.77093899407,
+    "N5": 9472.28619950458,
+    "sqrt_Sa_fm": 0.6291058343479242,
+    "P_req_Pa": 3.4377144159870383e-17,
+    "Q_min_100Hz": 1.31512482461094e+22
+   },
+   {
+    "m": 1e-13,
+    "t": 1.0,
+    "dx": 3.162277660168379e-07,
+    "F": 172598.43596164795,
+    "N5": 9423.833173417359,
+    "sqrt_Sa_fm": 0.7266135241544648,
+    "P_req_Pa": 2.2990511812720524e-17,
+    "Q_min_100Hz": 9.85842297356853e+21
+   },
+   {
+    "m": 1e-13,
+    "t": 2.5,
+    "dx": 1.995262314968883e-07,
+    "F": 108902.25081579626,
+    "N5": 9498.570002685605,
+    "sqrt_Sa_fm": 0.8125035730001496,
+    "P_req_Pa": 1.1453907935286448e-17,
+    "Q_min_100Hz": 7.884312735500818e+21
+   },
+   {
+    "m": 1e-13,
+    "t": 5.0,
+    "dx": 1.4125375446227555e-07,
+    "F": 77096.88937498695,
+    "N5": 9456.821087149383,
+    "sqrt_Sa_fm": 0.8486753795198592,
+    "P_req_Pa": 6.271672075999204e-18,
+    "Q_min_100Hz": 7.226553045166219e+21
+   },
+   {
+    "m": 3.162277660168379e-13,
+    "t": 0.5,
+    "dx": 1.6218100973589333e-07,
+    "F": 157411.6444529001,
+    "N5": 9574.062435688009,
+    "sqrt_Sa_fm": 0.546287478479964,
+    "P_req_Pa": 1.5889873856804157e-17,
+    "Q_min_100Hz": 5.515335161068813e+21
+   },
+   {
+    "m": 3.162277660168379e-13,
+    "t": 1.0,
+    "dx": 1.148153621496884e-07,
+    "F": 111438.91010340529,
+    "N5": 9532.73602303217,
+    "sqrt_Sa_fm": 0.6308159611940577,
+    "P_req_Pa": 1.0641085976639724e-17,
+    "Q_min_100Hz": 4.136271659928866e+21
+   },
+   {
+    "m": 3.162277660168379e-13,
+    "t": 2.5,
+    "dx": 7.244359600749892e-08,
+    "F": 70313.19879061141,
+    "N5": 9613.102441721594,
+    "sqrt_Sa_fm": 0.7052855292236017,
+    "P_req_Pa": 5.3288690109579605e-18,
+    "Q_min_100Hz": 3.308906191255499e+21
+   },
+   {
+    "m": 3.162277660168379e-13,
+    "t": 5.0,
+    "dx": 5.128613839913659e-08,
+    "F": 49777.93267037737,
+    "N5": 9572.352522905156,
+    "sqrt_Sa_fm": 0.7366507918023975,
+    "P_req_Pa": 2.9437190081962513e-18,
+    "Q_min_100Hz": 3.0331303970317407e+21
+   },
+   {
+    "m": 1e-12,
+    "t": 0.5,
+    "dx": 6.165950018614835e-08,
+    "F": 106423.33294306144,
+    "N5": 9643.472109413538,
+    "sqrt_Sa_fm": 0.4534626614837308,
+    "P_req_Pa": 7.436488033291263e-18,
+    "Q_min_100Hz": 2.5312284087594244e+21
+   },
+   {
+    "m": 1e-12,
+    "t": 1.0,
+    "dx": 4.365158322401665e-08,
+    "F": 75341.94991714983,
+    "N5": 9602.665723470496,
+    "sqrt_Sa_fm": 0.5236152188567256,
+    "P_req_Pa": 5.040118507275225e-18,
+    "Q_min_100Hz": 1.8984094181857852e+21
+   },
+   {
+    "m": 1e-12,
+    "t": 2.5,
+    "dx": 2.7542287033381633e-08,
+    "F": 47537.556647684454,
+    "N5": 9684.1838787569,
+    "sqrt_Sa_fm": 0.5854207202540674,
+    "P_req_Pa": 2.6147168075915815e-18,
+    "Q_min_100Hz": 1.5187217828662139e+21
+   },
+   {
+    "m": 1e-12,
+    "t": 5.0,
+    "dx": 1.9498445997580494e-08,
+    "F": 33654.01282865047,
+    "N5": 9643.277771030373,
+    "sqrt_Sa_fm": 0.611452382382505,
+    "P_req_Pa": 1.525948244764572e-18,
+    "Q_min_100Hz": 1.3921598947918762e+21
+   },
+   {
+    "m": 3.1622776601683794e-12,
+    "t": 0.5,
+    "dx": 2.4547089156850335e-08,
+    "F": 75341.94991714985,
+    "N5": 9889.63507112137,
+    "sqrt_Sa_fm": 0.35766446167236027,
+    "P_req_Pa": 3.661471141135868e-18,
+    "Q_min_100Hz": 1.286657102622746e+21
+   },
+   {
+    "m": 3.1622776601683794e-12,
+    "t": 1.0,
+    "dx": 1.7378008287493763e-08,
+    "F": 53338.015831127035,
+    "N5": 9847.801689846707,
+    "sqrt_Sa_fm": 0.4129954958097,
+    "P_req_Pa": 2.6508054241577464e-18,
+    "Q_min_100Hz": 9.649921289987184e+20
+   },
+   {
+    "m": 3.1622776601683794e-12,
+    "t": 2.5,
+    "dx": 1.0964781961431873e-08,
+    "F": 33654.01282865048,
+    "N5": 9931.626561783498,
+    "sqrt_Sa_fm": 0.4617431025025374,
+    "P_req_Pa": 1.6268679980052662e-18,
+    "Q_min_100Hz": 7.719933655173915e+20
+   },
+   {
+    "m": 3.1622776601683794e-12,
+    "t": 5.0,
+    "dx": 7.762471166286927e-09,
+    "F": 23825.216509652782,
+    "N5": 9889.61200643885,
+    "sqrt_Sa_fm": 0.48227497642393763,
+    "P_req_Pa": 1.1677083473590795e-18,
+    "Q_min_100Hz": 7.076604829313942e+20
+   },
+   {
+    "m": 1e-11,
+    "t": 0.5,
+    "dx": 1.0471285480508984e-08,
+    "F": 57152.71366612161,
+    "N5": 9628.97644936637,
+    "sqrt_Sa_fm": 0.26713124481741574,
+    "P_req_Pa": 2.3748702168476947e-18,
+    "Q_min_100Hz": 7.293987681891679e+20
+   },
+   {
+    "m": 1e-11,
+    "t": 1.0,
+    "dx": 7.413102413009192e-09,
+    "F": 40461.022706044634,
+    "N5": 9588.341785661607,
+    "sqrt_Sa_fm": 0.3084566059640311,
+    "P_req_Pa": 2.1152709626550383e-18,
+    "Q_min_100Hz": 5.470490273512111e+20
+   },
+   {
+    "m": 1e-11,
+    "t": 2.5,
+    "dx": 4.6773514128719815e-09,
+    "F": 25529.179441558663,
+    "N5": 9669.793054288026,
+    "sqrt_Sa_fm": 0.3448649788228255,
+    "P_req_Pa": 1.8494194712308152e-18,
+    "Q_min_100Hz": 4.3763919827573316e+20
+   },
+   {
+    "m": 1e-11,
+    "t": 5.0,
+    "dx": 3.3113112148259078e-09,
+    "F": 18073.27496443764,
+    "N5": 9628.973686017958,
+    "sqrt_Sa_fm": 0.3601997260131025,
+    "P_req_Pa": 1.731530503831157e-18,
+    "Q_min_100Hz": 4.0116925794707584e+20
+   },
+   {
+    "m": 3.1622776601683794e-11,
+    "t": 0.5,
+    "dx": 4.6773514128719815e-09,
+    "F": 45398.01415611273,
+    "N5": 9653.511878581467,
+    "sqrt_Sa_fm": 0.1889795682666793,
+    "P_req_Pa": 2.577707348841936e-18,
+    "Q_min_100Hz": 4.6087664044565476e+20
+   },
+   {
+    "m": 3.1622776601683794e-11,
+    "t": 1.0,
+    "dx": 3.3113112148259078e-09,
+    "F": 32139.3327412314,
+    "N5": 9612.76678728368,
+    "sqrt_Sa_fm": 0.21821481044412913,
+    "P_req_Pa": 2.9497044517031928e-18,
+    "Q_min_100Hz": 3.456574764568166e+20
+   },
+   {
+    "m": 3.1622776601683794e-11,
+    "t": 2.5,
+    "dx": 2.089296130854041e-09,
+    "F": 20278.548039772726,
+    "N5": 9694.442919234787,
+    "sqrt_Sa_fm": 0.24397157575269035,
+    "P_req_Pa": 3.3188037066725263e-18,
+    "Q_min_100Hz": 2.7652597928953073e+20
+   },
+   {
+    "m": 3.1622776601683794e-11,
+    "t": 5.0,
+    "dx": 1.4791083881682072e-09,
+    "F": 14356.112598188312,
+    "N5": 9653.511530071271,
+    "sqrt_Sa_fm": 0.2548200004462459,
+    "P_req_Pa": 3.4879446341369866e-18,
+    "Q_min_100Hz": 2.534821471147281e+20
+   },
+   {
+    "m": 1e-10,
+    "t": 0.5,
+    "dx": 2.1877616239495518e-09,
+    "F": 37760.42345506076,
+    "N5": 9824.524920875072,
+    "sqrt_Sa_fm": 0.12713894624358502,
+    "P_req_Pa": 4.213003901642743e-18,
+    "Q_min_100Hz": 3.220009746645852e+20
+   },
+   {
+    "m": 1e-10,
+    "t": 1.0,
+    "dx": 1.5488166189124795e-09,
+    "F": 26732.332601570164,
+    "N5": 9783.000912825508,
+    "sqrt_Sa_fm": 0.14680740978263243,
+    "P_req_Pa": 5.393396330956132e-18,
+    "Q_min_100Hz": 2.4150073064905664e+20
+   },
+   {
+    "m": 1e-10,
+    "t": 2.5,
+    "dx": 9.772372209558112e-10,
+    "F": 16866.96159004804,
+    "N5": 9866.238928948882,
+    "sqrt_Sa_fm": 0.1641356740091189,
+    "P_req_Pa": 6.572456868573295e-18,
+    "Q_min_100Hz": 1.9320058435021203e+20
+   },
+   {
+    "m": 1e-10,
+    "t": 5.0,
+    "dx": 6.918309709189363e-10,
+    "F": 11940.894353043674,
+    "N5": 9824.524875068637,
+    "sqrt_Sa_fm": 0.17143412036603872,
+    "P_req_Pa": 7.109022478026063e-18,
+    "Q_min_100Hz": 1.7710053560323968e+20
+   },
+   {
+    "m": 3.1622776601683795e-10,
+    "t": 0.5,
+    "dx": 1.0715193052376049e-09,
+    "F": 32887.953970681476,
+    "N5": 9910.937236762686,
+    "sqrt_Sa_fm": 0.08188688807876919,
+    "P_req_Pa": 7.619230883878098e-18,
+    "Q_min_100Hz": 2.454627905931928e+20
+   },
+   {
+    "m": 3.1622776601683795e-10,
+    "t": 1.0,
+    "dx": 7.585775750291851e-10,
+    "F": 23282.888370563596,
+    "N5": 9869.019508016243,
+    "sqrt_Sa_fm": 0.09455483375988237,
+    "P_req_Pa": 1.005553793441644e-17,
+    "Q_min_100Hz": 1.8409709290935792e+20
+   },
+   {
+    "m": 3.1622776601683795e-10,
+    "t": 2.5,
+    "dx": 4.78630092322638e-10,
+    "F": 14690.509418119542,
+    "N5": 9953.046849327262,
+    "sqrt_Sa_fm": 0.10571551795031503,
+    "P_req_Pa": 1.2491229798176616e-17,
+    "Q_min_100Hz": 1.472776743102934e+20
+   },
+   {
+    "m": 3.1622776601683795e-10,
+    "t": 5.0,
+    "dx": 3.38844156139202e-10,
+    "F": 10400.084213013197,
+    "N5": 9910.937230592863,
+    "sqrt_Sa_fm": 0.11041625737972635,
+    "P_req_Pa": 1.3598652992781738e-17,
+    "Q_min_100Hz": 1.3500453477923593e+20
+   },
+   {
+    "m": 1e-09,
+    "t": 0.5,
+    "dx": 5.495408738576248e-10,
+    "F": 29994.170505499795,
+    "N5": 9634.414016858527,
+    "sqrt_Sa_fm": 0.050892753485457985,
+    "P_req_Pa": 1.3454828735658964e-17,
+    "Q_min_100Hz": 2.00956706555706e+20
+   },
+   {
+    "m": 1e-09,
+    "t": 1.0,
+    "dx": 3.8904514499428046e-10,
+    "F": 21234.24656546761,
+    "N5": 9593.756109272701,
+    "sqrt_Sa_fm": 0.0587658898500521,
+    "P_req_Pa": 1.789099364914199e-17,
+    "Q_min_100Hz": 1.5071752991272092e+20
+   },
+   {
+    "m": 1e-09,
+    "t": 2.5,
+    "dx": 2.4547089156850336e-10,
+    "F": 13397.90382498513,
+    "N5": 9675.25797288334,
+    "sqrt_Sa_fm": 0.06570226223202573,
+    "P_req_Pa": 2.232686845655797e-17,
+    "Q_min_100Hz": 1.2057402392821308e+20
+   },
+   {
+    "m": 1e-09,
+    "t": 5.0,
+    "dx": 1.7378008287493763e-10,
+    "F": 9484.98953248233,
+    "N5": 9634.414016023677,
+    "sqrt_Sa_fm": 0.06862377480221005,
+    "P_req_Pa": 2.4343312193242313e-17,
+    "Q_min_100Hz": 1.1052618860026813e+20
+   },
+   {
+    "m": 3.1622776601683795e-09,
+    "t": 0.5,
+    "dx": 2.8840315031266117e-10,
+    "F": 27992.18862309599,
+    "N5": 9528.398324447164,
+    "sqrt_Sa_fm": 0.03076123496373512,
+    "P_req_Pa": 2.272593645677185e-17,
+    "Q_min_100Hz": 1.7394296449036485e+20
+   },
+   {
+    "m": 3.1622776601683795e-09,
+    "t": 1.0,
+    "dx": 2.0417379446695316e-10,
+    "F": 19816.951931406413,
+    "N5": 9488.2232801471,
+    "sqrt_Sa_fm": 0.035520014573902914,
+    "P_req_Pa": 3.0278466901032164e-17,
+    "Q_min_100Hz": 1.3045722336727918e+20
+   },
+   {
+    "m": 3.1622776601683795e-09,
+    "t": 2.5,
+    "dx": 1.2882495516931322e-10,
+    "F": 12503.651366331796,
+    "N5": 9568.757179486149,
+    "sqrt_Sa_fm": 0.03971258357456059,
+    "P_req_Pa": 3.7830861851588496e-17,
+    "Q_min_100Hz": 1.043657786935841e+20
+   },
+   {
+    "m": 3.1622776601683795e-09,
+    "t": 5.0,
+    "dx": 9.120108393559115e-11,
+    "F": 8851.907274203591,
+    "N5": 9528.398324331056,
+    "sqrt_Sa_fm": 0.041478440763641225,
+    "P_req_Pa": 4.126383263580962e-17,
+    "Q_min_100Hz": 9.566863046904637e+19
+   },
+   {
+    "m": 1e-08,
+    "t": 0.5,
+    "dx": 1.5488166189124796e-10,
+    "F": 26732.332601570168,
+    "N5": 9353.82814587866,
+    "sqrt_Sa_fm": 0.018207857359016394,
+    "P_req_Pa": 3.6917522485766466e-17,
+    "Q_min_100Hz": 1.5699893866218596e+20
+   },
+   {
+    "m": 1e-08,
+    "t": 1.0,
+    "dx": 1.0964781961431873e-10,
+    "F": 18925.042172036316,
+    "N5": 9314.448038193326,
+    "sqrt_Sa_fm": 0.02102462269519456,
+    "P_req_Pa": 4.921267859548653e-17,
+    "Q_min_100Hz": 1.1774920399657548e+20
+   },
+   {
+    "m": 1e-08,
+    "t": 2.5,
+    "dx": 6.918309709189363e-11,
+    "F": 11940.894353043672,
+    "N5": 9393.388379819617,
+    "sqrt_Sa_fm": 0.02350624277387381,
+    "P_req_Pa": 6.150777115807774e-17,
+    "Q_min_100Hz": 9.41993631972294e+19
+   },
+   {
+    "m": 1e-08,
+    "t": 5.0,
+    "dx": 4.897788193684476e-11,
+    "F": 8453.505819013653,
+    "N5": 9353.82814586221,
+    "sqrt_Sa_fm": 0.024551469854410403,
+    "P_req_Pa": 6.709647960650683e-17,
+    "Q_min_100Hz": 8.634941626411762e+19
+   },
+   {
+    "m": 3.162277660168379e-08,
+    "t": 0.5,
+    "dx": 8.317637711026709e-11,
+    "F": 25529.17944155866,
+    "N5": 9696.937425663173,
+    "sqrt_Sa_fm": 0.010613742538993763,
+    "P_req_Pa": 5.820819356708306e-17,
+    "Q_min_100Hz": 1.4610911299255699e+20
+   },
+   {
+    "m": 3.162277660168379e-08,
+    "t": 1.0,
+    "dx": 5.888436553555884e-11,
+    "F": 18073.274964437638,
+    "N5": 9655.99471154412,
+    "sqrt_Sa_fm": 0.012255694223995334,
+    "P_req_Pa": 7.760606461163887e-17,
+    "Q_min_100Hz": 1.0958183474440934e+20
+   },
+   {
+    "m": 3.162277660168379e-08,
+    "t": 2.5,
+    "dx": 3.7153522909717275e-11,
+    "F": 11403.46557762195,
+    "N5": 9738.067510110532,
+    "sqrt_Sa_fm": 0.013702282698152862,
+    "P_req_Pa": 9.700390675059306e-17,
+    "Q_min_100Hz": 8.766546779552349e+19
+   },
+   {
+    "m": 3.162277660168379e-08,
+    "t": 5.0,
+    "dx": 2.6302679918953815e-11,
+    "F": 8073.03538304708,
+    "N5": 9696.937425660793,
+    "sqrt_Sa_fm": 0.014311567520020697,
+    "P_req_Pa": 1.0582112137385923e-16,
+    "Q_min_100Hz": 8.036001214589531e+19
+   },
+   {
+    "m": 1e-07,
+    "t": 0.5,
+    "dx": 4.570881896148752e-11,
+    "F": 24948.06437075101,
+    "N5": 9629.215689450944,
+    "sqrt_Sa_fm": 0.006119580649362549,
+    "P_req_Pa": 8.980881334426224e-17,
+    "Q_min_100Hz": 1.3898600636601359e+20
+   },
+   {
+    "m": 1e-07,
+    "t": 1.0,
+    "dx": 3.235936569296281e-11,
+    "F": 17661.876999817272,
+    "N5": 9588.58146058953,
+    "sqrt_Sa_fm": 0.007066283070474224,
+    "P_req_Pa": 1.1974281969959842e-16,
+    "Q_min_100Hz": 1.04239504774509e+20
+   },
+   {
+    "m": 1e-07,
+    "t": 2.5,
+    "dx": 2.0417379446695317e-11,
+    "F": 11143.891010340527,
+    "N5": 9670.035858165245,
+    "sqrt_Sa_fm": 0.007900344646918179,
+    "P_req_Pa": 1.4967681258532808e-16,
+    "Q_min_100Hz": 8.339160381960665e+19
+   },
+   {
+    "m": 1e-07,
+    "t": 5.0,
+    "dx": 1.445439770745928e-11,
+    "F": 7889.270662406861,
+    "N5": 9629.215689450599,
+    "sqrt_Sa_fm": 0.00825164086426598,
+    "P_req_Pa": 1.632831793491144e-16,
+    "Q_min_100Hz": 7.644230350130592e+19
+   },
+   {
+    "m": 3.162277660168379e-07,
+    "t": 0.5,
+    "dx": 2.5118864315095823e-11,
+    "F": 24380.17709389941,
+    "N5": 9829.202764328262,
+    "sqrt_Sa_fm": 0.003501230782795841,
+    "P_req_Pa": 1.364496045871106e-16,
+    "Q_min_100Hz": 1.3426812529523155e+20
+   },
+   {
+    "m": 3.162277660168379e-07,
+    "t": 1.0,
+    "dx": 1.7782794100389227e-11,
+    "F": 17259.843596164792,
+    "N5": 9787.657467963156,
+    "sqrt_Sa_fm": 0.004042873069884367,
+    "P_req_Pa": 1.8193176694544982e-16,
+    "Q_min_100Hz": 1.0070109397142358e+20
+   },
+   {
+    "m": 3.162277660168379e-07,
+    "t": 2.5,
+    "dx": 1.1220184543019653e-11,
+    "F": 10890.225081579625,
+    "N5": 9870.93822578008,
+    "sqrt_Sa_fm": 0.0045200695043323535,
+    "P_req_Pa": 2.2741392312334454e-16,
+    "Q_min_100Hz": 8.056087517713878e+19
+   },
+   {
+    "m": 3.162277660168379e-07,
+    "t": 5.0,
+    "dx": 7.943282347242821e-12,
+    "F": 7709.688937498693,
+    "N5": 9829.202764328213,
+    "sqrt_Sa_fm": 0.004721058624426056,
+    "P_req_Pa": 2.480876333957215e-16,
+    "Q_min_100Hz": 7.384746891237717e+19
+   },
+   {
+    "m": 1e-06,
+    "t": 0.5,
+    "dx": 1.4125375446227554e-11,
+    "F": 24380.177093899405,
+    "N5": 9421.470392684188,
+    "sqrt_Sa_fm": 0.001992414493177935,
+    "P_req_Pa": 2.0509423637898105e-16,
+    "Q_min_100Hz": 1.3111579633727667e+20
+   },
+   {
+    "m": 1e-06,
+    "t": 1.0,
+    "dx": 1e-11,
+    "F": 17259.843596164792,
+    "N5": 9381.782288730265,
+    "sqrt_Sa_fm": 0.002300642087947185,
+    "P_req_Pa": 2.7345848790174683e-16,
+    "Q_min_100Hz": 9.833684725295751e+19
+   },
+   {
+    "m": 1e-06,
+    "t": 2.5,
+    "dx": 6.309573444801943e-12,
+    "F": 10890.225081579623,
+    "N5": 9461.340050366574,
+    "sqrt_Sa_fm": 0.002572196050273478,
+    "P_req_Pa": 3.418227364868338e-16,
+    "Q_min_100Hz": 7.8669477802366e+19
+   },
+   {
+    "m": 1e-06,
+    "t": 5.0,
+    "dx": 4.466835921509635e-12,
+    "F": 7709.688937498693,
+    "N5": 9421.470392684188,
+    "sqrt_Sa_fm": 0.0026865711545406676,
+    "P_req_Pa": 3.728973963219542e-16,
+    "Q_min_100Hz": 7.211368798550218e+19
+   }
+  ]
+ },
+ "combinations": {
+  "tag_then_inflate": {
+   "desc": "flux-qubit tag (RI 2012) amplified by an XXL inverted/double-well loop; both branches and widths scale by the same cosh factor (DERIVED for an inverted harmonic potential)",
+   "amplification_needed": 22940857.672910005,
+   "amplification_XXL": 70710.67811865475,
+   "gap_orders": 2.511124648347943
+  },
+  "inflate_only_CV": {
+   "desc": "XXL loop + CV witness (no tag) at the Stage 16 Pb point",
+   "gap_orders": 1.056112481134724,
+   "gap_best_mass_1s": -0.3738875188652758,
+   "best_mass": 3.162277660168379e-07,
+   "sqrt_Sa_needed_fm": 0.004042873069884367
+  }
+ },
+ "demonstrated_gap": {
+  "lead_1e14": 5.122968811592626,
+  "cheap_point": 5.153654578324298,
+  "note": "vs Rossi 2025 (3.5, optical silica). For superconductors no coherent CoM state has been shown at all."
+ },
+ "ranking_proposed": [
+  [
+   "pino_2018",
+   0.5453719362845735
+  ],
+  [
+   "roda_llordes_2024_XXL",
+   1.056112481134724
+  ],
+  [
+   "roda_llordes_2024_XL",
+   2.056112481134724
+  ],
+  [
+   "weiss_2021",
+   2.905597483302733
+  ],
+  [
+   "hexapole_2026",
+   3.8164176835365438
+  ],
+  [
+   "romero_isart_2012",
+   7.122049023156121
+  ]
+ ]
+}

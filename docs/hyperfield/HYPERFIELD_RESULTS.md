@@ -1686,3 +1686,44 @@ It also states that the 0.1 s Gerlich 2011 coherence time is not supported by th
 - **Continuous:** ruled out.
 - **Ceiling:** unchanged since 2022.
 - **Biggest caution:** levitated and mechanical quantum states look like they would close everything, but only through the $r_N$ smearing convention. They are excluded until the model's decoherence functional for Δx < object size is worked out.
+
+---
+
+## Stage 19 — Spin-free superposition and readout for the heavy BMV masses
+
+**Question.** Stage 16 left the Pb Meissner sphere (1e-14 kg, 15 mK, 1 s hold) needing $\Delta x=2.69\,\mu$m, i.e. $F\equiv\Delta x/2z_{\rm zpf}(100\,{\rm Hz})=4.65\times10^5$, with no which-path tag. Which routes create and read out a spatial superposition without an embedded spin, and what gap do they leave inside the *unchanged* Stage 16 budget? Scripts: `scripts/stage19_run.py` (imports `stage16_run.evaluate/min_dx_point`), `scripts/stage19_fig.py`; output `results/stage19.json`, `figures/stage19_tagging.png`.
+
+**Assumptions (ASSUMED, flagged).** (i) A coherent Gaussian of spread $\sigma$ entangles like a cat of $\Delta x=2\sigma$ (Pedernales & Plenio 2023 argue the rate is set by delocalisation; O(1), ~0.3 orders). (ii) For transient expansions the time-averaged $\Delta x^2$ is $\Delta x_{\max}^2/3$ (DERIVED for linear growth): a $\sqrt3$ (0.24 order) penalty applied to every loop/expansion route. (iii) Pino's coherence length $\xi$ is used as $\Delta x$.
+
+**Required F (DERIVED, Stage 16 code).** Pb lead point $F=4.65\times10^5$ ($\sqrt{S_a}\le0.85$ fm s⁻² Hz⁻½). Minimum over mass at 1 s: $1.73\times10^4$ at $3.2\times10^{-7}$ kg ($\sqrt{S_a}\le0.004$ fm); any hold: $7.7\times10^3$ (5 s). Stage 12 cheap diamond point, spin removed: $F=4.99\times10^5$.
+
+| Route | Class | Status | F provided | Readout / tag | Gap (orders) at its point | Other binding gap |
+|---|---|---|---|---|---|---|
+| Romero-Isart et al., PRL 109, 147205 (2012), [arXiv:1112.5609](https://arxiv.org/abs/1112.5609) | a, flux qubit | proposed | 0.011 ($l_s=8x_{zp}g_0/\omega_t=0.37x_{zp}$ at 28 kHz; 10 fm, 3.8e-13 kg) | qubit tag | **7.12** | own numbers give $2t^*/T_2=3.6$, violating their $2t^*\ll T_2$ (flag) |
+| Pino et al., QST 3, 025001 (2018), [arXiv:1603.01553](https://arxiv.org/abs/1603.01553) | a, SC double slit | proposed | $1.9\times10^5$ ($\xi=607$ nm, 3.3e-14 kg Nb, 483 ms) | SQUID position fringes, no tag | **0.55** (vs 1.23 μm needed at 0.5 s, ×√3) ; cat $d=0.5\,\mu$m lives 84 ms → 0.78 | vacuum 0.98 (their 1e-17 mbar vs 1.1e-16 Pa needed); noise 0.41 vs LPF, 4.35 vs ground |
+| Hexapole/double-well Meissner traps, QST 2026, [arXiv:2607.03622](https://arxiv.org/abs/2607.03622) | a/b | proposed | ~50 ($D<100z_{\rm zpf}$) | pulsed position | 3.82 | Q ≥ 1e11 vs 2.6e7: 3.59; ppb field stability |
+| Hofer et al., PRL 131, 043603 (2023); Chalmers thesis 2026 (doi:10.63959/chalmers.dt/5848) | a | demonstrated, classical | 0 | SQUID, 20 GHz/Φ0 resonator | n/a | no ground state, no qubit coupling demonstrated anywhere |
+| Rossi et al., PRL 135, 083601 (2025), [arXiv:2408.01264](https://arxiv.org/abs/2408.01264) | b | **demonstrated** (optical silica) | 3.5 | position | 5.36 (5.12 without √3) | not SC |
+| Weiss et al., PRL 127, 023601 (2021), [arXiv:2012.12260](https://arxiv.org/abs/2012.12260) | b, loop | proposed | 1e3 | position | 2.91 | authors call gravity entanglement "a formidable task" |
+| Roda-Llordes et al., PRL 132, 023601 (2024), [arXiv:2303.07959](https://arxiv.org/abs/2303.07959), XL / XXL | b, double-well loop | proposed | 7.1e3 / **7.1e4** | position after recompression | XL 2.06, **XXL 1.06** at Pb point; XXL 1.09 at Stage 12 cheap point; XXL −0.37 at 3.2e-7 kg | XXL needs 97 dB squeezing and ω=2π·0.01 Hz under a 100 Hz Ω: loop ~16 s > 1 s hold (DERIVED); at the heavy mass noise 2.63 orders below LPF |
+| Neumeier et al., PNAS 121 (2024), [arXiv:2207.12539](https://arxiv.org/abs/2207.12539) | b, cubic | proposed | few nm at >1e8 amu (silica, ms) | position | not competitive | — |
+| Lami, Pedernales, Plenio, PRX 14, 021022 (2024), [arXiv:2302.03075](https://arxiv.org/abs/2302.03075) | c, LOCC inequality | proposed | none needed (coherent states) | displacement + zero-phonon detection | 0 in Δx | T/Q < 1e-13 K: 3.76 vs Hofer, 8.33 vs best torsion; torsion ground state 3.78 (6000 phonons, Shin 2025, [arXiv:2409.02275](https://arxiv.org/abs/2409.02275)). In the 100 Hz Pb trap γ=(8π/3)Gρ/ω = 1.0e-8 s⁻¹, so 1% fidelity loss needs 5e5 s (DERIVED): no rescue |
+| Krisnanda et al., npj QI 6, 12 (2020), [arXiv:1906.08808](https://arxiv.org/abs/1906.08808) | c, Gaussian CV | proposed | — | quadratures | Stage 16 c″: joint 15.6 | needs 0.009 fm noise |
+| Hanif, Das, Ulbricht, Bose, PRL 133, 180201 (2024), [arXiv:2307.08133](https://arxiv.org/abs/2307.08133) | c | proposed | — | **spin** | not spin-free | honest negative |
+| Großardt, PRA 102, 040202 (2020), [arXiv:2007.05762](https://arxiv.org/abs/2007.05762) | c | analysis | — | — | — | $S_a\ll2G\hbar/d^3$ applies to all routes |
+| Kotler et al., Science 372, 622 (2021), [doi](https://www.science.org/doi/10.1126/science.abf2998) | d | **demonstrated** | ~1 (70 pg drums) | quadrature tomography of CV entanglement | — | shows the spin-free *readout* exists; coupling electromechanical |
+
+**Combinations (DERIVED).** *Tag-then-inflate* (Romero-Isart flux-qubit tag amplified by an XXL loop, which scales branch separation and width alike): needs ×2.3e7 amplification vs 7.1e4 available, **2.51 orders** left. A tag costs ~1.5 orders more than going tagless. *Inflate-only + CV witness* (XXL loop on the Pb sphere, Kotler-type quadrature readout): **1.06 orders** at the Stage 16 lead point; at $\ge3\times10^{-7}$ kg the delocalisation is covered on paper (−0.37) but the acceleration noise requirement (0.004 fm) is 2.63 orders below LISA Pathfinder.
+
+**Findings.**
+1. **Most promising spin-free route: Pino-type on-chip SC free expansion (proposed).** At its own design mass (3.3e-14 kg Nb, 0.5 s) its 607 nm coherent state is **0.55 orders** short of the Stage 16 requirement (0.31 without the √3 penalty), plus a 0.98-order vacuum gap against the 1e-17 mbar it already assumes and a 0.41-order noise gap vs LPF. The readout (SQUID position fringes) is native and needs no tag, but a *two-sphere* gravity witness from fringe correlations is not in Pino's paper (ASSUMED feasible).
+2. **Runner-up: Roda-Llordes XXL double-well loop, 1.06 orders** at the Pb lead point and 1.09 at the Stage 12 cheap point (spin removed). Native to dielectrics ("in the dark"); Meissner implementation is only proposed (hexapole traps, which themselves need Q ≥ 1e11).
+3. **Demonstrated status: nothing spin-free exists for superconductors.** No Meissner sphere has reached a ground state or coupled to a qubit. The only demonstrated coherent CoM expansion is Rossi's ×3.5 in optical silica, leaving **5.12 orders** at the Pb point (5.15 at the cheap point). Stage 16's 5.1-order conclusion stands.
+4. **Gravity-only witnesses do not rescue the 100 Hz designs.** LPP's no-delocalisation test needs mHz modes, T/Q < 1e-13 K (≥3.8 orders) and a torsion ground state (3.8 orders); in the Stage 16 trap it would need 5e5 s per run. Hanif 2024 needs spins.
+5. **The flux-qubit tag is tiny.** Romero-Isart's own numbers give a superposition of 0.37 zero-point widths (7.1 orders short), and their timing inconsistency ($2t^*=36\,\mu$s > $T_2=10\,\mu$s) means ~1 ms qubits would be needed.
+
+**Coincidences flagged.** Roda-Llordes XL ($7.1\times10^3$) is within 8% of the 5 s heavy-mass requirement ($7.7\times10^3$); Pino's $F=1.9\times10^5$ sits within a factor 2 of the requirement at its own mass. Both are proposals designed for other purposes; neither was tuned to this budget. LPP's quoted γ = 1.6e-4 Hz vs 2.4e-4 Hz recomputed from their m and R (×1.49) is flagged, not resolved.
+
+**Net.** Spin-free routes cut the *proposal-level* delocalisation gap from 5.1 orders (vs demonstrated) to **0.55 orders** (Pino-type expansion) or **1.06 orders** (XXL loop at the Pb point), but every one is unbuilt, and the same budget's acceleration noise (0.4–2.6 orders beyond LPF, 4+ beyond ground) and vacuum (≈1 order) remain binding.
+
+![Stage 19](figures/stage19_tagging.png)
