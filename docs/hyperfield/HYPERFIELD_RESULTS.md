@@ -1437,6 +1437,110 @@ The source of truth for experimental rows is `results/stage15_datapoints.csv` (s
 The ultra-local continuous model has been ruled out since the 2023 paper and stays ruled out. Two windows remain if one uses only absolute, on-Earth force noise and the Pedalino 2025 coherence floor: about **10 orders** in the ultra-local discrete model, and about **3.7 orders** in the non-local / Diósi–Penrose-like model. Janse 2024 did the large move on the upper side (~15 orders of FOM below Cavendish, conservative); Pedalino did the large move on the non-local lower side (~5 orders above 2011). A $10^6\,\mathrm{amu}$, $0.1\,\mathrm{s}$ interferometer would essentially close the non-local conservative window from below; closing the discrete window from below wants a MAQRO-class mass and time, or a ten-order improvement in an *absolute* FOM. Treating Asenbaum 2017 as an absolute acceleration measurement would already close both remaining windows — that is a temptation, not a result. The 2026 dimensionless relativistic accounting is a separate, still-open window of ~4.5 orders and still sits on the 2011 floor.
 
 ---
+## Stage 16 — Heavier trapped test masses: do they close the 7.3-order mass gap?
+
+Scripts: `scripts/stage16_run.py`, `scripts/stage16_fig.py` · Results: `results/stage16.json` · Figure: `figures/stage16_mass.png`
+
+The Stage 12 cheapest workable gravity-entanglement point (diamond, $m=5.6\times10^{-15}$ kg, $d=11\,\mu$m, $\Delta x=3.85\,\mu$m, 3 s) is $7.3$ orders heavier than the heaviest object ever interfered (172 kDa, Pedalino 2025). This stage asks whether going *heavier* helps: bigger diamonds in diamagnetic traps, Meissner-levitated superconducting (SC) spheres, silica, and dense osmium spheres released in space. Every candidate gets the same budget: the PPT witness, gas, blackbody, Casimir, internal heating, and a new acceleration-noise channel. No parameters are fitted. The Stage 12 physics library is reused unchanged.
+
+**Short answer: no.** By the Stage 12 metric (mass versus demonstrated interference), a heavier test mass cannot close any of the 7.3 orders; the best heavier point sits at $7.54$. The fair metric is the joint gap over mass, superposition size and time. On that metric the best candidate is a superconducting Pb (or Nb) sphere of $10^{-14}$ kg ($6\times10^{12}$ amu) in a Meissner trap, and it closes **$0.20$ orders** of an $11.23$-order joint gap ($11.23\to11.03$). That is inside the resolution of the hold-time grid. It comes from a shorter hold (1 s instead of 2.5 s), not from the extra mass. Above about $10^{-13}$ kg every option gets *worse*.
+
+### 16.1 Inputs (CITED / ASSUMED / DERIVED)
+
+**Candidates and environments (ASSUMED from the cited platform):**
+
+- (a) Diamond with one NV spin, Stern–Gerlach split, diamagnetic chip trap (Elahi et al., arXiv:2411.02325: 62–785 Hz, weak axis down to 0.01 Hz). $T_{\rm env}=T_{\rm int}=1$ K, residual He at 4 K (Stage 12). Window-grade $\tan\delta=10^{-5}$, so ${\rm Im}\,\chi=2.9\times10^{-6}$ (Stage 13). Diamond volume susceptibility $-2.2\times10^{-5}$ (Heremans et al., PRB 49, 15122 (1994)) makes diamagnetic levitation size-independent ($B\nabla B\approx1.97\times10^3$ T²/m for any radius, DERIVED). Mass does not limit the trap.
+- (b) Pb sphere, Meissner trap, SC plate, 15 mK. Hofer et al., PRL 131, 043603 (2023), https://doi.org/10.1103/PhysRevLett.131.043603: 100 μm PbSn sphere, 5.6 μg, $\rho=10.9\times10^3$, trap up to 240 Hz, $Q$ up to $2.6\times10^7$, 15 mK. Gutierrez Latorre et al., PRApplied 19, 054047 (2023), arXiv:2210.13451: 48 μm Pb, 700 ng, 30–160 Hz chip trap. Pb $\rho=11340$ kg m⁻³, $T_c=7.2$ K, $\theta_D=105$ K (Van Sciver, *Helium Cryogenics*, Table 2.1, https://www.jlab.org/sites/default/files/magnet-group/materials/low_temperature_materials_properties.pdf).
+- (b′) Nb sphere in the Pino et al. environment (QST 3, 025001 (2018), arXiv:1603.01553, App. A): $\rho=8570$, $T_c=9.2$ K, 50 mK, $P=10^{-17}$ mbar. Their case study was $R=1\,\mu$m, $2\times10^{13}$ amu ($3.3\times10^{-14}$ kg), a 0.5 μm superposition, 596 ms. $\theta_D$(Nb) $=275$ K (Van Sciver).
+- (c) Silica in the same trap and environment as (a). $\varepsilon=3.8$; $\tan\delta=10^{-3}$ is ASSUMED.
+- (c′) Osmium spheres released in space, Krisnanda et al., npj QI 6, 12 (2020), arXiv:1906.08808: 100 μg Os, $\rho=22590$, $D=3R$. This was run at the MAQRO requirement of 20 K and $10^{-15}$ mbar (BPS2023 white paper, arXiv:2202.01535), and (c″) at Krisnanda's optimistic 2.7 K.
+
+**Design rules (ASSUMED, identical for every candidate):**
+
+- Healthy witness: $N_{5\sigma}\le10^4$ shots (Stage 12 PPT formula). Hold $t\in\{0.5,1,2.5,5\}$ s on Earth (to 100 s in space), plus $2\times0.25$ s split and recombine.
+- Trap geometry: the Stage 12 plate geometry held at its cheap-point surface gap of $4.27\,\mu$m and a 1 μm plate, so $D=2(R+s)+W$ grows with $R$.
+- Trap frequency: 100 Hz, used for the zero-point width and the Casimir-stiffness cut ($k_{\rm Cas}\le0.1\,m\omega^2$).
+- Gas: residual **He** (not N₂, see 16.2), allowed 40% of what is left of $|\Phi|/2$, which sets the required pressure (as in Stage 12). Short-wavelength rate from van de Kamp. Long-wavelength $\Lambda$ from Romero-Isart, PRA 84, 052121 (2011), eq. 26, arXiv:1110.4495, interpolated.
+- Acceleration and force noise: allowed 10% of $|\Phi|/2$. This replaces Stage 12's fixed $10^{-3}$ Hz GGN term.
+- Conductors: $\chi_E=1$; blackbody scattering × 1.25 for the magnetic dipole (DERIVED); ${\rm Im}\,\chi=10^{-6}$ for SC and $10^{-3}$ for Os (both ASSUMED). Sphere–plate Casimir uses the CP formula for $R<s$ and PFA for $R\ge s$. Released spheres use Krisnanda's PFA sphere–sphere term with $f_0=1$. $T_{\rm int}$ of a SC is capped at $T_c/2$ (ASSUMED).
+- Heat: Debye phonons only. For metals this is a lower bound on $C$, so the heat budgets are conservative.
+
+**Rule for each mass:** take the smallest $\Delta x$ that passes every cut, and the hold that minimises the score. Nothing is tuned to a target.
+
+**State-of-the-art ledger** for the joint gap $\sum\max(0,\log_{10}{\rm req}/{\rm SOA})$ over $(m,\Delta x,t)$, minimised over these points:
+
+| point | mass (kg) | $\Delta x$ | $t$ | note |
+|---|---|---|---|---|
+| Pedalino 2025 | $2.86\times10^{-22}$ | 133 nm | 10 ms | Stage 12 ledger |
+| Rossi et al., PRL 2025 (arXiv:2408.01264) | $1.2\times10^{-18}$ | coherence length 73 ± 34 pm | 26 μs (DERIVED) | 3.5 × the 21 pm ground state; $t$ from their two $\pi/2\Omega_e$ pulses plus spacing, 18 μs period, $r=2.45$ |
+| Bild et al., Science 380, 274 (2023) (arXiv:2211.00449) | $1.62\times10^{-8}$ | $2.1\times10^{-18}$ m | ~80 μs | lifetime from Physics Today 2023; an internal HBAR phonon mode, **not a centre-of-mass displacement**, so it is excluded from the headline joint gap and only reported alongside |
+
+### 16.2 Cross-checks before trusting anything (DERIVED vs CITED)
+
+- **Stage 12 reproduced exactly** with `stage12_lib`: $\Phi=-0.511$, $C=0.138$, $N_{5\sigma}=5.2\times10^3$.
+- **Correction to Stage 12.** It used N₂ ("air") as the residual gas at 4 K. In a 4 K can the residual gas is He. At the same $P$, the He rate is $2.65\times$ higher ($0.088$ versus $0.033$ s⁻¹). Under Stage 16 rules the cheap point needs $P=8.4\times10^{-16}$ Pa, not $2.4\times10^{-15}$. It still works: $C=0.141$, $N=5.0\times10^3$.
+- **Acceleration noise reproduces Großardt.** For white, uncorrelated acceleration noise $S_a$ on each mass, $\Gamma=m^2S_a\Delta x^2/4\hbar^2$, and the entanglement condition becomes $S_a\ll2G\hbar/d^3$, *independent of mass* (DERIVED). At the unshielded $d=157\,\mu$m this gives $0.060$ fm s⁻² Hz⁻½. Großardt, PRA 102, 040202 (2020), arXiv:2007.05762, quotes $0.07$. The same physics, not a coincidence. With the plate at $d=11\,\mu$m the limit is $3.25$ fm s⁻² Hz⁻½.
+- **Gas.** Pino's $1/\gamma_a=1.6$ s (He, 50 mK, $10^{-15}$ Pa, $R=1\,\mu$m) is reproduced: $1.61$ s. The effective long-wavelength scale $\lambda_{\rm eff}=0.455$ nm (He, 4 K) matches the He thermal wavelength $0.436$ nm. The long-wavelength $\Lambda$ agrees with Epstein damping × fluctuation–dissipation to $0.92$.
+- **Casimir for released spheres.** For 100 μg Os at $D=3R$ we get a Casimir/gravity curvature ratio of $0.083$, where Krisnanda quote "$\sim10^{-2}$". The difference is our $f_0=1$ upper bound. The ratio ≤ 0.1 requires $m\ge9.1\times10^{-8}$ kg at $D=3R$, which is why they chose 100 μg. Their own Earth estimate (gas coherence $\sim10^{-4}$ s) is consistent with our infeasibility on the ground.
+- **Thermal ceiling.** The witness-derived $T_{\rm int}$ ceiling at the cheap point is $15.7$ K with window-grade diamond, consistent with Stage 13's "12–14 K". Stage 14's 4 K line, and its $1.82$ aW, was a conservative safe window. To the true ceiling the budget is $436$ aW.
+- **Citation fix.** Stage 12 cited Krisnanda et al. as arXiv:1906.09008. That ID is an unrelated mathematics paper; the correct ID is **arXiv:1906.08808**.
+
+### 16.3 Results
+
+**The structural reason (DERIVED).** In the parallel geometry with small $\Delta x$, $|\Phi|\simeq Gm^2t\Delta x^2/\hbar D^3$.
+
+- **Plate-limited regime** ($R\ll s$, $D\approx11\,\mu$m fixed): $m\Delta x\sqrt t$ is what is needed. Extra mass buys an equal and opposite cut in $\Delta x$, and the joint gap is flat (11.0–11.2 from $2.5\times10^{-15}$ to $3\times10^{-13}$ kg).
+- **Large-$R$ regime** ($D\to2R$, $D^3=6m/\pi\rho$): $m\Delta x^2=6\Phi\hbar/(\pi\rho Gt)$, which is mass-independent. In zero-point units the needed delocalisation is $\Delta x/2z_{\rm zpf}=\tfrac12\sqrt{12\Phi\omega/\pi\rho Gt}$, also mass-independent. Only density helps. At $\Phi=0.5$, $t=2.5$ s and 100 Hz this is $8.9\times10^3$ (Os), $1.26\times10^4$ (Pb), $2.26\times10^4$ (diamond) and $2.86\times10^4$ (silica). Rossi 2025 demonstrated $3.5$, so the gap is $3.4$–$3.9$ orders whatever the mass. This is the same physics as Krisnanda's requirement $\eta=2Gm/\omega^2L^3\sim1$; it is not new.
+
+**Best point per candidate** (score = joint gap + acceleration-noise gap versus LISA Pathfinder + vacuum gap as number density versus $1.8\times10^7$ m⁻³, i.e. $10^{-15}$ Pa at 4 K):
+
+| candidate | best $m$ (kg) | $\Delta x$ | hold | joint gap | mass gap | needed $\sqrt{S_a}$ (fm s⁻² Hz⁻½) | needed $P$ (Pa) | $T_{\rm int}$ ceiling | heat budget | score |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Stage 12 cheap point (Stage 16 rules) | $5.6\times10^{-15}$ | 3.85 μm | 2.5 s | 11.23 | 7.29 | 0.90 | $8.4\times10^{-16}$ (4 K) | 15.7 K | 436 aW | 11.60 |
+| (a) diamond + NV | $7.4\times10^{-15}$ | 3.98 μm | 1 s | 11.06 | 7.41 | 0.79 | $9.9\times10^{-16}$ (4 K) | 11.2 K | 292 aW | 11.41 |
+| **(b) Pb, Meissner** | $1.0\times10^{-14}$ ($R=0.59\,\mu$m) | 2.69 μm | 1 s | **11.03** | 7.54 | 0.85 | $1.1\times10^{-16}$ (15 mK; $n=5\times10^8$ m⁻³) | 3.6 K ($T_c/2$) | 2.3 fW (1250 × Stage 14) | **11.34** |
+| (b′) Nb, Pino env. | $1.0\times10^{-14}$ | 2.75 μm | 1 s | 11.04 | 7.54 | 0.84 | $1.6\times10^{-16}$ (50 mK) | 4.6 K | 0.75 fW | 11.35 |
+| (c) silica | $7.4\times10^{-15}$ | 4.07 μm | 1 s | 11.07 | 7.41 | 0.76 | $7.0\times10^{-16}$ | 4.0 K | 284 aW | 11.58 |
+| (c′) Os, space, 20 K | — | — | — | infeasible | — | — | — | — | — | — |
+| (c″) Os, space, 2.7 K | $7.9\times10^{-8}$ | 33 pm | 1 s | 15.58 | 14.44 | 0.0087 | $1.6\times10^{-17}$ | 16.5 K | 80 nW | 19.52 |
+
+**Going heavier along each line** (best hold per mass; heat budgets relative to Stage 14's 1.82 aW):
+
+| point | $\Delta x$ | joint gap | $\sqrt{S_a}$ needed | $P$ needed | expansion $\Delta x/2z_{\rm zpf}$ | heat budget |
+|---|---|---|---|---|---|---|
+| diamond $10^{-12}$ kg | 83 nm | 11.5 | 0.36 fm | $5.7\times10^{-17}$ | (spin; HD $7\times10^{-6}$) | × $1.5\times10^5$ |
+| diamond $10^{-9}$ kg | 0.91 nm | 14.5 | 0.031 fm | $6.8\times10^{-19}$ | (spin; $\partial_xB=1.6\times10^6$ T/m) | × $3.8\times10^8$ |
+| Pb $10^{-12}$ kg | 62 nm | 11.5 | 0.45 fm | $7.4\times10^{-18}$ | $1.1\times10^5$ | × $1.9\times10^5$ |
+| Pb $10^{-8}$ kg | 69 pm | 15.0 (12.1 including Bild) | 0.024 fm | $6.2\times10^{-17}$ | $1.2\times10^4$ | × $6.2\times10^8$ |
+| Pb $10^{-6}$ kg | 10 pm | 16.7 (12.7 including Bild) | 0.0023 fm | $2.7\times10^{-16}$ | $1.7\times10^4$ | × $1.2\times10^{11}$ |
+
+What heavier masses really buy, and what they cost:
+
+1. **Heat stops being a problem (real win).** The budget scales with volume and with $1/\theta_D^3$. A Pb sphere's phonon heat capacity per volume is about $1.7\times10^3$ times diamond's (DERIVED). At $10^{-14}$ kg Pb already has $1.25\times10^3\times$ the Stage 14 budget. At μg it is $10^{11}\times$. SC spheres are also read out by SQUID, so no laser is needed (Hofer, Gutierrez Latorre). The Stage 14 "no photons in XHV" problem largely goes away.
+2. **Gas gets easier only at the very heavy end.** Below $\lambda_{\rm He}$ (0.45 nm at 4 K, 7.4 nm at 15 mK) collisions enter the long-wavelength regime, where $\Gamma\propto\Delta x^2$, like $\Phi$. Pb's required pressure therefore recovers from $2.3\times10^{-18}$ Pa ($2\times10^{-11}$ kg) to $2.7\times10^{-16}$ Pa (1 μg). In between, required vacuum gets 1–3 orders *harder* than QGEM XHV (diamond at $10^{-9}$ kg: $6.8\times10^{-19}$ Pa).
+3. **Acceleration noise gets harder, and it is binding for everything (new).** The uncorrelated per-mass noise must be below $\sqrt{S_a}\approx0.9$ fm s⁻² Hz⁻½ at the cheap point, falling to $0.002$ fm at 1 μg as $D$ grows. The best demonstrated free-mass value anywhere is LISA Pathfinder's $1.74$ fm s⁻² Hz⁻½ above 2 mHz, in space, with 2 kg masses (Armano et al., PRL 120, 061101 (2018), https://sci.esa.int/web/lisa-pathfinder/-/59964-armano-et-al). On the ground, the thermal force noise implied by the best levitated dampings is $1.5\times10^4$ fm (Fuchs et al., Sci. Adv. 10, eadk2949 (2024): 0.43 mg, $\gamma/2\pi=2.9\,\mu$Hz, <100 mK) and $9\times10^4$ fm (Hofer 2023, $Q=2.6\times10^7$ at 240 Hz, taken as simultaneous maxima). If a trap's damping is thermal at the bath temperature, the cheap point needs $\gamma_m\le8\times10^{-23}$ s⁻¹ ($Q\ge7.6\times10^{24}$ at 100 Hz). The requirement scales as $D^{-3}$, so heavier is strictly worse. Caveat: correlated (common-mode) noise partly cancels in the parallel geometry (Toroš et al. 2021), so this is the differential part, which is the part a common platform does not remove.
+4. **Delocalisation without a spin is the real cost for SC, silica and Os.** No Stage 16 SC point has a demonstrated which-path qubit. Romero-Isart et al., PRL 109, 147205 (2012) proposed flux-qubit magnetomechanics; Pino 2018 proposed a 0.5 μm superposition at $3.3\times10^{-14}$ kg in 0.6 s. The best Pb point needs 2.7 μm, $4.6\times10^5$ zero-point widths at 100 Hz. Rossi demonstrated 3.5. That is 5.1 orders of coherent expansion that the joint metric *does not see*, because it compares against Pedalino's 133 nm in a different object. The diamond's spin does this job, at the price of Humpty-Dumpty precision $1.7\times10^{-6}$ and a 1 K XHV with $T_{\rm int}\lesssim11$ K.
+5. **Space is not a shortcut at MAQRO temperatures.** Blackbody *scattering* scales as $R^6T^9$ against gravity's $R^3$. At 20 K, Os spheres heavy enough to satisfy the Casimir cut ($\gtrsim10^{-7}$ kg) are blackbody-dead. Gas is not the problem: there is "no gas budget left". At 2.7 K the Krisnanda point works ($7.9\times10^{-8}$ kg, 33 pm, 1 s), but needs $\sqrt{S_a}\le0.009$ fm s⁻² Hz⁻½, 2.3 orders below LISA Pathfinder. Its joint gap is 15.6.
+6. **Lighter, not heavier, is the only direction that nibbles the mass gap.** The lowest-mass workable diamond is $2.5\times10^{-15}$ kg at a 5 s hold and 5.0 μm. Its mass gap is $6.94$, which is $0.35$ orders better than 7.29. The joint gap is unchanged (11.26), because the spent time and $\Delta x$ cancel the saving.
+
+### 16.4 Coincidences flagged
+
+- The required Pb delocalisation at $10^{-8}$ kg sits $7.5$ orders above Bild's $2.1\times10^{-18}$ m. That is numerically close to the 7.3 mass gap, but it is a coincidence of where Bild's mass lands; no physics ties them.
+- The near-equality of the best joint gaps (11.01–11.07 for four different materials) is *not* a coincidence. It is the plate-limited invariant $m\Delta x\sqrt t$ at fixed $D$.
+- Our 0.060 versus Großardt's 0.07 fm s⁻² Hz⁻½ is the same formula, not a coincidence.
+
+### 16.5 Verdict
+
+Heavier trapped test masses do not close the binding gap. They convert it.
+
+- **Mass versus delocalisation:** the entangling phase needs $m\Delta x\sqrt t$ at fixed separation, or $m\Delta x^2t$ once the spheres touch-scale. Every order of mass is paid back in superposition size, coherent-expansion factor ($\sim10^4$ zero-point widths, mass-independent, against 3.5 demonstrated), vacuum and acceleration noise.
+- **Best candidate:** a $10^{-14}$ kg Pb or Nb Meissner sphere, which closes **0.20 orders** of the 11.23-order joint gap and **0** of the 7.3-order mass gap (it is 7.54). The diamond-spin baseline is within 0.07 of it on the full score. The two differ in what the score does not capture: Pb lacks a demonstrated which-path qubit and 5 orders of coherent expansion; diamond lacks the cold XHV and $T_{\rm int}$ control.
+- **What heavier genuinely buys:** a thermal budget 3–11 orders larger than Stage 14's 1.82 aW, laser-free SQUID readout, and long-wavelength gas suppression for sub-nm $\Delta x$.
+- **What it costs:** an acceleration-noise requirement that tightens as $D^{-3}$, which is already $\le0.9$ fm s⁻² Hz⁻½ (uncorrelated) at the cheap point, below anything demonstrated on the ground by more than 4 orders.
+
+The mass gap is a gap in macroscopic delocalisation, and going heavier does not change its size.
+
+---
 
 ## Stage 17 — Experiment survey against the Oppenheim windows
 
