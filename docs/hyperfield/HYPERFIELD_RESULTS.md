@@ -1849,3 +1849,65 @@ The superconducting gravity gradiometer CMRR is above 10⁹ (design value, Moody
 **Net.** Spin-free routes cut the *proposal-level* delocalisation gap from 5.1 orders (vs demonstrated) to **0.55 orders** (Pino-type expansion) or **1.06 orders** (XXL loop at the Pb point), but every one is unbuilt, and the same budget's acceleration noise (0.4–2.6 orders beyond LPF, 4+ beyond ground) and vacuum (≈1 order) remain binding.
 
 ![Stage 19](figures/stage19_tagging.png)
+
+---
+
+## Stage 20 — The real vacuum gap: species, temperature and demonstrated densities
+
+**Question.** Stages 12/16/19 quoted vacuum requirements as pressures: 8.4e-16 Pa (cheap diamond point, He at 4 K), 1.1e-16 Pa (Pb Meissner, 15 mK), 1.05e-16 Pa (Pino Nb, 50 mK, "0.98 orders short of 1e-17 mbar"). What is the gap against what has actually been demonstrated, species by species? Scripts: `scripts/stage20_run.py` (calls `stage16_run.evaluate` unchanged), `scripts/stage20_fig.py`; `results/stage20.json`; `figures/stage20_vacuum.png`.
+
+**1. The right figure of merit is impingement flux, not pressure (DERIVED).** All three points are deep in the short-wavelength (saturated) regime: the He thermal wavelength is 0.44 nm at 4 K, 3.9 nm at 50 mK and 7.1 nm at 15 mK, against $R=0.6$–$1\,\mu$m and $\Delta x=1.2$–$3.9\,\mu$m ($\Delta x/\lambda_{\rm th}=268$–$8830$, $R/\lambda_{\rm th}\ge59$). The Stage 16 interpolation gives saturated fraction 1.000 for He and H₂ in every case; the rate would only halve for $\Delta x\le\lambda_{\rm eff}=0.45$–$7.4$ nm. Every collision is a full which-path measurement, and the Stage 12/16 rate $\Gamma=(16\pi/3)nR^2\sqrt{2\pi kT/m_a}$ is identically $(32\pi^2/3)R^2J$ with $J=n\bar v/4$. **The requirement is a flux, independent of species and gas temperature.** A pressure needed at 15 mK cannot be compared with a pressure measured at 4 K: at fixed flux, $P\propto\sqrt{T m_a}$.
+
+| Design (Stage 16 budget, 40% gas rule) | $R$ | $\Gamma_{\rm gas}$ allowed | $J_{\rm req}$ (m⁻² s⁻¹) | $n_{\rm req}$ He at design T | $n_{\rm req}$ He at 4 K / H₂ at 4 K / H₂ at 300 K |
+|---|---|---|---|---|---|
+| Stage 12 cheap diamond (5.6e-15 kg, 3.85 μm, 2.5 s, gas 4 K) | 0.73 μm | 0.031 s⁻¹ | **5.5e8** | 1.5e7 (4 K) | 1.5e7 / 1.1e7 / 1.2e6 |
+| Stage 16 Pb (1e-14 kg, 2.69 μm, 1 s, 15 mK) | 0.59 μm | 0.042 s⁻¹ | **1.1e9** | 5.1e8 (15 mK) | 3.1e7 / 2.2e7 / 2.6e6 |
+| Stage 19 Pino Nb (3.3e-14 kg, 1.23 μm, 0.5 s, 50 mK) | 0.97 μm | 0.062 s⁻¹ | **6.2e8** | 1.5e8 (50 mK) | 1.7e7 / 1.2e7 / 1.4e6 |
+
+**2. Demonstrated limits, converted properly.** Lifetime limits are *upper limits on density* under a single-species assumption, not measurements. I reconverted them with the Langevin capture rate for $\bar p$ + neutral, which is velocity independent, so the density limit does not depend on the temperature assumed (DERIVED; every capture ASSUMED to annihilate): $k_{\rm He}=1.18\times10^{-15}$, $k_{\rm H_2}=2.54\times10^{-15}$ m³ s⁻¹.
+
+| Source | Kind | $n$ (m⁻³) | species, T | $J$ (m⁻² s⁻¹) | gap vs cheap / Pb / Pino (orders; − = margin) |
+|---|---|---|---|---|---|
+| BASE reservoir trap, 405 d, $\tau>10.2$ a (Sellner et al., NJP 19, 083023 (2017), [link](https://iopscience.iop.org/article/10.1088/1367-2630/aa7e73)) | upper limit, 68% CL | < 2.6e6 (He) / < 1.2e6 (H₂) | 6.2 K can | < 1.2e8 / < 7.8e7 | **−0.67 / −0.98 / −0.72** (He); −0.85 / −1.16 / −0.90 (H₂) |
+| Gabrielse et al., PRL 65, 1317 (1990), [link](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.1317); Fei thesis, [INSPIRE](https://inspirehep.net/literature/306801) | upper limit | < 1e8 ("100 cm⁻³", "<5e-17 Torr at 4.2 K") | He, 4.2 K | < 3.7e9 | +0.83 / +0.51 / +0.78 |
+| MPIK CSR, RSI 87, 063115 (2016), [doi](https://doi.org/10.1063/1.4953888) | upper limit | < 1.4e8 | H₂, ~6 K | < 8.8e9 | +1.20 / +0.89 / +1.15 |
+| MPIK CryPTEx, RSI 83, 083115 (2012), [doi](https://doi.org/10.1063/1.4742770) | conservative upper limit | < 1.8e9 (1e-15 mbar at 4 K) | H₂, 4 K | < 9.3e10 | +2.22 / +1.91 / +2.17 |
+| Room-temperature XHV gauge plateau ~1e-14 Torr (Redhead, Vacuum 53, 137 (1999), via [Stutzman 2006](https://www.jlab.org/accel/inj_group/docs/2006/XHV.pdf)) | measured, gauge-limited | 3.2e8 | H₂, 300 K | 1.4e11 | +2.41 / +2.10 / +2.36 |
+| MAQRO requirement/Astrium estimate 1e-13 Pa ([arXiv:1307.7021](https://arxiv.org/abs/1307.7021)) | proposed | 3.6e8 | H₂, 20 K (ASSUMED) | 4.1e10 | +1.88 / +1.56 / +1.83 |
+| MAQRO QPPF study "at best 1e-11 Pa" with cover ([Commun. Phys. 4, 155 (2021)](https://www.nature.com/articles/s42005-021-00656-7)) | study estimate | 3.6e10 | H₂, 20 K | 4.1e12 | +3.88 / +3.56 / +3.83 |
+| Solar wind at 1 AU, 5 cm⁻³ at 400 km/s ([NASA](https://pwg.gsfc.nasa.gov/Education/wsolwind.html)) | environment, directed | 5e6 | p⁺, 1 keV | 2e12 ($nv$) | +3.56 / +3.24 / +3.51 unless shadowed |
+| Pino 2018 assumption 1e-17 mbar at 50 mK | assumed | 1.45e9 | He, 50 mK | 5.9e9 | +1.03 / +0.71 / +0.98 |
+| Stage 12/16 SOA convention 1e-15 Pa at 4 K | convention | 1.8e7 | He, 4 K | 6.6e8 | +0.08 / −0.24 / +0.03 |
+
+Checks: my Langevin reconversion of BASE gives 2.2e-18 mbar (He) and 1.0e-18 mbar (H₂) at 6.2 K, against their quoted 2.7e-18 and 1.2e-18 (within 20%). Gabrielse's $\tau>3.4$ months gives $n<9.5\times10^7$ m⁻³ (quoted 1e8). The INSPIRE abstract's "more than 10³ days" is a lost superscript of "103 days" (= 3.4 months, DERIVED). **Correction to Stage 19:** its "0.98-order vacuum gap" for Pino was measured against Pino's own assumption: a 4 K Penning-trap pressure re-used at 50 mK, which is 9.5× more flux than the 4 K density it came from. It was not a gap against the demonstrated state of the art.
+
+**3. What can be in the gas phase at each temperature (vapour pressures).** ITS-90 Table 3 is used where valid (Preston-Thomas 1990, [text](https://mx.omega.com/techref/intltemp.html)). Below that I used a zero-entropy extrapolation, $p=(mkT/2\pi\hbar^2)^{3/2}kT\,e^{-L_0/T}$, with $L_0$ fitted at the bottom of each ITS-90 range. The fitted values are $L_0=59.8$ J/mol (⁴He) and 19.9 J/mol (³He), against literature ≈59.6 and 21.1 J/mol. Check: the ⁴He extrapolation reproduces Donnelly & Barenghi's 15.58 Pa at 1.000 K to 0.05% ([table](https://pages.uoregon.edu/rjd/vapor18.htm)). H₂ comes from Souers et al. 1977, normal-H₂ solid fit ([OSTI 7110677](https://www.osti.gov/servlets/purl/7110677)).
+
+| T | ³He SVP | ⁴He SVP | solid H₂ SVP | He on graphite ($E_b$=12.2 meV, [RMP 53, 199](https://doi.org/10.1103/revmodphys.53.199)), full monolayer |
+|---|---|---|---|---|
+| 4 K | 2.0e5 Pa | 8.2e4 Pa | 3.7e-5 Pa ($n$=6.7e17) | $n$=5.9e12 m⁻³: needs coverage ≤ 2.6e-6 monolayer |
+| 1 K | 1.16e3 Pa | 15.6 Pa | 3e-35 Pa (extrap.) | 2e-34 m⁻³ |
+| 100 mK | 1.7e-9 Pa ($n$=1.2e15, fatal) | 3.7e-30 Pa | 0 | 0 |
+| 50 mK | 1.2e-20 Pa ($n$=1.7e4) | 4e-62 Pa | 0 | 0 |
+| 15 mK | 2e-70 Pa | 3e-209 Pa | 0 | 0 |
+
+The equilibrium flux falls below the (common) requirement at **³He 61 mK, ⁴He 0.17 K, multilayer H₂ 1.94 K, and He on graphite 2.95 K (full monolayer) to 3.44 K (1e-3 monolayer)**. These crossovers are DERIVED and the same to ±2% for all three designs.
+
+What cryosorption buys at 4 K is only ≈1.7e16 He atoms per gram of charcoal (ASSUMED 1000 m²/g with uniform graphite binding; real pore sites bind more strongly). At ≤1 K every surface is a perfect He pump. Hydrogen is the trap at 4 K: one multilayer of condensed H₂ gives 0.09 mPa. CERN found that condensed H₂ under 300 K radiation stalls at 1e-8–1e-7 Pa even below 3 K, through phonon-stimulated desorption ([CERN Courier](http://cds.cern.ch/record/2746077)).
+
+**4. Bottom line per design.**
+- **Stage 12 cheap diamond (gas 4 K):** BASE-class upper limit passes with **0.67 orders margin** (He) and 0.85 (H₂). The next-best demonstrated limit, Gabrielse, is 0.83 orders short. Binding species: He or H₂ at 4 K. Two conditions: H₂ must never be condensed beyond a sub-monolayer within view, and He inventory must stay below a few e16 atoms per gram of sorbent. The cheap point's own 4 K gas temperature is the weak spot; walls ≤1.9 K remove H₂ as an equilibrium source.
+- **Stage 16 Pb Meissner (15 mK):** passes BASE by **0.98 orders** (He) and fails Gabrielse by 0.51. At 15 mK there is no equilibrium source for any species: ³He gives 7e-46 m⁻³. The binding sources are non-thermal: leaks from the mixture circuit, gas beamed through apertures from ≥2 K stages, and radiation-stimulated desorption. Allowed leak into a 10 cm cold box (s = 1, ASSUMED): 1.1e7 atoms/s = **4.7e-13 mbar L/s**, at the detection floor of the best He leak detectors (≤5e-13, [Pfeiffer ASM 340](https://heliumleakdetection.net/helium-leak-detectors/pfeiffer-adixen-leak-detectors/pfeiffer-asm-340-helium-leak-detector/)). So the sample vacuum must be sealed separately from the dilution circuit, not merely "inside the IVC".
+- **Stage 19 Pino Nb (50 mK):** passes BASE by **0.72 orders**, fails Gabrielse by 0.78. At 50 mK, ³He liquid in view still gives only 1.7e4 m⁻³. The ³He margin vanishes at 61 mK, and at 100 mK ³He vapour is 6.9 orders over.
+
+**Does a 15 mK dilution-refrigerator chamber close it?** *Plausibly, but undemonstrated.* At 15–50 mK the equilibrium gas density of every species is zero for practical purposes (DERIVED), so the reachable flux is set by engineering: a sealed can with no warm line of sight, like BASE's indium-sealed 1.2 L copper can at 6.2 K. With that, the requirement is met with 0.7–1.0 orders to spare. **Honest negatives.**
+- No gas density has ever been measured or bounded below about 1e8 m⁻³ in a mK chamber. The best bounds are all from 4–6 K sealed Penning traps or storage rings.
+- Levitation experiments' own damping gives no useful bound: Hofer 2023's $Q=2.6\times10^7$ with Epstein drag implies only $n\lesssim5\times10^{20}$ m⁻³ (DERIVED).
+- BASE's bound comes from a hermetic can without the optical, microwave and loading access a BMV chamber needs.
+- Quantum reflection of mK He atoms off surfaces (sticking s < 1) would raise the steady-state density by 1/s; this is not quantified here.
+
+**Coincidences flagged.** The three requirements land within a factor 2 ($J=5.5$e8–1.1e9). This is by construction (same 40% rule, $N_5\le10^4$, similar $R$ and $t$), not physics. The Stage 16 convention (1e-15 Pa at 4 K, He) happens to sit within ±0.24 orders of all three: also not independent, since the Stage 12 cheap point was selected under that same 1e-15 Pa assumption. The ³He crossover (61 mK) lies just above Pino's 50 mK design temperature; this is not tuned, but the margin is thin.
+
+**Net.** In flux terms the vacuum is **not** co-binding against the best demonstrated limit: −0.67 (cheap), −0.98 (Pb), −0.72 (Pino) orders, i.e. margins. It **is** binding against everything else: +0.5 to +0.8 vs Gabrielse 1990, +0.9 to +1.2 vs CSR, +2.1 to +2.4 vs room-temperature XHV, +1.6 to +3.9 for MAQRO-style space vacuum. The real gap is therefore 0 to 0.8 orders, conditional on reproducing a BASE-class sealed cryogenic can around a levitated sphere with optical or SQUID access. That has never been done.
+
+![Stage 20](figures/stage20_vacuum.png)

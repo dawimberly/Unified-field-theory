@@ -1,0 +1,521 @@
+{
+ "stage": 20,
+ "designs": {
+  "stage12_cheap_diamond": {
+   "m": 5.6234e-15,
+   "dx": 3.852e-06,
+   "t": 2.5,
+   "R": 7.258848800183689e-07,
+   "T_gas": 4.0,
+   "P_req_Pa_He": 8.397533531920405e-16,
+   "n_req_He": 15205771.944789017,
+   "Gamma_gas_allowed": 0.030673150549212644,
+   "J_req": 552960891.5701054,
+   "N5": 5048.551439368427,
+   "n_req": {
+    "He4@0.015K": 248309212.6078727,
+    "He4@0.05K": 136004556.98167804,
+    "He4@1.0K": 30411543.46607757,
+    "He4@4.0K": 15205771.733038785,
+    "He4@6.2K": 12213569.766856002,
+    "He4@300.0K": 1755811.2806611892,
+    "He3@0.015K": 215545710.87499106,
+    "He3@0.05K": 118059248.01971918,
+    "He3@1.0K": 26398850.394459955,
+    "He3@4.0K": 13199425.197229978,
+    "He3@6.2K": 10602033.448817795,
+    "He3@300.0K": 1524138.3381538112,
+    "H2@0.015K": 176219500.87748012,
+    "H2@0.05K": 96519395.70289727,
+    "H2@1.0K": 21582392.99388794,
+    "H2@4.0K": 10791196.49694397,
+    "H2@6.2K": 8667697.608330332,
+    "H2@300.0K": 1246060.0404777497
+   },
+   "regime": {
+    "He4": {
+     "lambda_th": 4.363135547599501e-10,
+     "dx_over_lambda": 8828.513251483291,
+     "R_over_lambda": 1663.6771241675826,
+     "saturated_fraction": 0.9999999860743519
+    },
+    "H2": {
+     "lambda_th": 6.148052553384033e-10,
+     "dx_over_lambda": 6265.3986226577845,
+     "R_over_lambda": 1180.6744879219107,
+     "saturated_fraction": 0.9999999723501267
+    }
+   },
+   "dx_for_half_rate": 4.545629034079743e-10,
+   "check_Gamma_from_J": 1.0000000139256484
+  },
+  "stage16_Pb_meissner": {
+   "m": 1e-14,
+   "dx": 2.6915348e-06,
+   "t": 1.0,
+   "R": 5.948846717578074e-07,
+   "T_gas": 0.015,
+   "P_req_Pa_He": 1.059567980507633e-16,
+   "n_req_He": 511627976.1704498,
+   "Gamma_gas_allowed": 0.04244695990673089,
+   "J_req": 1139337953.2041492,
+   "N5": 9534.650586280612,
+   "n_req": {
+    "He4@0.015K": 511624084.75413847,
+    "He4@0.05K": 280228052.1827765,
+    "He4@1.0K": 62660897.388304666,
+    "He4@4.0K": 31330448.694152333,
+    "He4@6.2K": 25165221.97433121,
+    "He4@300.0K": 3617728.597480122,
+    "He3@0.015K": 444117138.8322507,
+    "He3@0.05K": 243252975.11307725,
+    "He3@1.0K": 54393018.80819053,
+    "He3@4.0K": 27196509.404095266,
+    "He3@6.2K": 21844762.032047898,
+    "He3@300.0K": 3140382.405094518,
+    "H2@0.015K": 363088183.0979371,
+    "H2@0.05K": 198871588.2463061,
+    "H2@1.0K": 44469039.01120887,
+    "H2@4.0K": 22234519.505604435,
+    "H2@6.2K": 17859195.835761115,
+    "H2@300.0K": 2567421.164372541
+   },
+   "regime": {
+    "He4": {
+     "lambda_th": 7.124970513478429e-09,
+     "dx_over_lambda": 377.76083352322337,
+     "R_over_lambda": 83.49293104195364,
+     "saturated_fraction": 0.9999923940509657
+    },
+    "H2": {
+     "lambda_th": 1.0039727778404078e-08,
+     "dx_over_lambda": 268.0884242488742,
+     "R_over_lambda": 59.253067900648865,
+     "saturated_fraction": 0.9999848982287562
+    }
+   },
+   "dx_for_half_rate": 7.422981128983827e-09,
+   "check_Gamma_from_J": 1.0000076060068852
+  },
+  "stage19_Pino_Nb": {
+   "m": 3.3210781332e-14,
+   "dx": 1.2302687708e-06,
+   "t": 0.5,
+   "R": 9.743983816172927e-07,
+   "T_gas": 0.05,
+   "P_req_Pa_He": 1.0538583388324601e-16,
+   "n_req_He": 152661297.52492633,
+   "Gamma_gas_allowed": 0.06203927868164092,
+   "J_req": 620676300.3675275,
+   "N5": 9986.798873445807,
+   "n_req": {
+    "He4@0.015K": 278717077.0631048,
+    "He4@0.05K": 152659630.26936823,
+    "He4@1.0K": 34135731.07022919,
+    "He4@4.0K": 17067865.535114594,
+    "He4@6.2K": 13709239.500912834,
+    "He4@300.0K": 1970827.3522381496,
+    "He3@0.015K": 241941367.69076875,
+    "He3@0.05K": 132516744.6778856,
+    "He3@1.0K": 29631644.92567357,
+    "He3@4.0K": 14815822.462836785,
+    "He3@6.2K": 11900354.97573833,
+    "He3@300.0K": 1710783.8174369042,
+    "H2@0.015K": 197799282.95956138,
+    "H2@0.05K": 108339129.13529897,
+    "H2@1.0K": 24225365.736965653,
+    "H2@4.0K": 12112682.868482826,
+    "H2@6.2K": 9729141.00483157,
+    "H2@300.0K": 1398652.1429454256
+   },
+   "regime": {
+    "He4": {
+     "lambda_th": 3.902507071791302e-09,
+     "dx_over_lambda": 315.25087544179405,
+     "R_over_lambda": 249.6852314914656,
+     "saturated_fraction": 0.9999890787279742
+    },
+    "H2": {
+     "lambda_th": 5.498985375443141e-09,
+     "dx_over_lambda": 223.72650349172054,
+     "R_over_lambda": 177.19603073844686,
+     "saturated_fraction": 0.9999783156563108
+    }
+   },
+   "dx_for_half_rate": 4.065734208279606e-09,
+   "check_Gamma_from_J": 1.0000109213913015
+  }
+ },
+ "limits": [
+  {
+   "key": "BASE_2017_He",
+   "label": "BASE reservoir trap, 405 d pbar storage (He-only assumption)",
+   "n": 2627902.089696749,
+   "T": 6.2,
+   "species": "He4",
+   "kind": "upper limit (lifetime, 68% CL)",
+   "J": 118976442.61393689,
+   "P_at_T_Pa": 2.249490443187391e-16,
+   "src": "https://iopscience.iop.org/article/10.1088/1367-2630/aa7e73",
+   "note": "tau>10.2 a; Langevin k_He=1.18e-15 m^3/s; quoted p_He<2.7e-18 mbar; DERIVED p at 6.2 K = 2.2e-18 mbar"
+  },
+  {
+   "key": "BASE_2017_H2",
+   "label": "BASE reservoir trap (H2-only assumption)",
+   "n": 1225458.0456733154,
+   "T": 6.2,
+   "species": "H2",
+   "kind": "upper limit (lifetime, 68% CL)",
+   "J": 78178820.27471977,
+   "P_at_T_Pa": 1.0489950036865068e-16,
+   "src": "https://iopscience.iop.org/article/10.1088/1367-2630/aa7e73",
+   "note": "k_H2=2.54e-15; quoted p_H<1.2e-18 mbar; DERIVED 1e-18 mbar"
+  },
+  {
+   "key": "Gabrielse_1990",
+   "label": "TRAP/Gabrielse 1990, 59 d pbar storage at 4.2 K",
+   "n": 100000000.0,
+   "T": 4.2,
+   "species": "He4",
+   "kind": "upper limit (lifetime)",
+   "J": 3726323879.4441934,
+   "P_at_T_Pa": 5.7987258e-15,
+   "src": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.65.1317 ; https://inspirehep.net/literature/306801",
+   "note": "quoted n<100 cm^-3, p<5e-17 Torr at 4.2 K; Langevin He with tau>3.4 months gives n<9.5e+07 m^-3 (consistent). INSPIRE abstract \"more than 10^3 days\" is a lost superscript of \"103 days\" = 3.4 months (DERIVED)."
+  },
+  {
+   "key": "CSR_2016",
+   "label": "MPIK Cryogenic Storage Ring, ~6 K (OH- detachment on H2)",
+   "n": 140000000.0,
+   "T": 6.0,
+   "species": "H2",
+   "kind": "upper limit (collision rate)",
+   "J": 8786147325.844336,
+   "P_at_T_Pa": 1.15974516e-14,
+   "src": "https://doi.org/10.1063/1.4953888",
+   "note": "n<140 cm^-3 at (5.5+-1) K, 35 m ring"
+  },
+  {
+   "key": "CryPTEx_2012",
+   "label": "MPIK cryogenic Paul trap, 4 K, 30 h ion storage",
+   "n": 1810742629.00998,
+   "T": 4.0,
+   "species": "H2",
+   "kind": "upper limit (conservative)",
+   "J": 92785805431.76204,
+   "P_at_T_Pa": 1e-13,
+   "src": "https://doi.org/10.1063/1.4742770",
+   "note": "p_H2 < ~1e-15 mbar at 4 K"
+  },
+  {
+   "key": "XHV_RT_plateau",
+   "label": "Room-temperature XHV gauge plateau ~1e-14 Torr (Redhead 1999)",
+   "n": 321882438.37982476,
+   "T": 300.0,
+   "species": "H2",
+   "kind": "measured (gauge-limited)",
+   "J": 142840950135.1357,
+   "P_at_T_Pa": 1.33322e-12,
+   "src": "https://www.jlab.org/accel/inj_group/docs/2006/XHV.pdf",
+   "note": "Redhead, Vacuum 53, 137 (1999) via Stutzman 2006"
+  },
+  {
+   "key": "MAQRO_req",
+   "label": "MAQRO requirement / early Astrium estimate 1e-13 Pa (~16-20 K)",
+   "n": 362148525.801996,
+   "T": 20.0,
+   "species": "H2",
+   "kind": "proposed",
+   "J": 41495073658.497826,
+   "P_at_T_Pa": 1e-13,
+   "src": "https://arxiv.org/abs/1307.7021",
+   "note": "outgassing directly to space behind thermal shields"
+  },
+  {
+   "key": "MAQRO_QPPF",
+   "label": "MAQRO QPPF study: \"at best 1e-11 Pa\" with cover",
+   "n": 36214852580.1996,
+   "T": 20.0,
+   "species": "H2",
+   "kind": "study estimate",
+   "J": 4149507365849.7827,
+   "P_at_T_Pa": 1e-11,
+   "src": "https://www.nature.com/articles/s42005-021-00656-7",
+   "note": "Gasbarri et al., Commun. Phys. 4, 155 (2021)"
+  },
+  {
+   "key": "Pino_assumed",
+   "label": "Pino 2018 assumption 1e-17 mbar at 50 mK",
+   "n": 1448594103.207984,
+   "T": 0.05,
+   "species": "He4",
+   "kind": "assumed",
+   "J": 5889625352.340169,
+   "P_at_T_Pa": 1e-15,
+   "src": "https://arxiv.org/abs/1603.01553",
+   "note": "pressure taken from 4 K Penning-trap limits, applied at 50 mK"
+  },
+  {
+   "key": "Stage16_SOA",
+   "label": "Stage 16 SOA 1e-15 Pa at 4 K (He)",
+   "n": 18107426.2900998,
+   "T": 4.0,
+   "species": "He4",
+   "kind": "Stage 12/16 convention",
+   "J": 658480132.4919385,
+   "P_at_T_Pa": 1e-15,
+   "src": "HYPERFIELD Stage 16",
+   "note": ""
+  }
+ ],
+ "solar_wind": {
+  "n": 5000000.0,
+  "v": 400000.0,
+  "J": 2000000000000.0,
+  "src": "https://pwg.gsfc.nasa.gov/Education/wsolwind.html ; http://hdl.handle.net/2060/19750016535",
+  "note": "directed flux n v (not n vbar/4); must be shadowed by the spacecraft/shields"
+ },
+ "langevin": {
+  "k_He": 1.1821883654134508e-15,
+  "k_H2": 2.535113533142834e-15
+ },
+ "vapour": [
+  {
+   "T": 0.015,
+   "He3": {
+    "P_Pa": 1.5093261689027187e-70,
+    "n": 7.288003293633253e-46,
+    "J": 1.8696641109924734e-45,
+    "how": "extrapolated (DERIVED)"
+   },
+   "He4": {
+    "P_Pa": 2.567985977034779e-209,
+    "n": 1.2399897811511247e-184,
+    "J": 2.7613387667816507e-184,
+    "how": "extrapolated (DERIVED)"
+   },
+   "H2": {
+    "P_Pa": 0.0,
+    "n": 0.0,
+    "J": 0.0,
+    "how": "Souers 1977 fit (4-14 K), extrapolated"
+   },
+   "He_on_graphite": {
+    "n_at_full_monolayer": 0.0,
+    "theta_max": 1.0
+   }
+  },
+  {
+   "T": 0.05,
+   "He3": {
+    "P_Pa": 1.1541367855768022e-20,
+    "n": 16718.75741881973,
+    "J": 78306.60590613562,
+    "how": "extrapolated (DERIVED)"
+   },
+   "He4": {
+    "P_Pa": 3.635401540408895e-62,
+    "n": 5.266221234229547e-38,
+    "J": 2.141115307832873e-37,
+    "how": "extrapolated (DERIVED)"
+   },
+   "H2": {
+    "P_Pa": 0.0,
+    "n": 0.0,
+    "J": 0.0,
+    "how": "Souers 1977 fit (4-14 K), extrapolated"
+   },
+   "He_on_graphite": {
+    "n_at_full_monolayer": 0.0,
+    "theta_max": 1.0
+   }
+  },
+  {
+   "T": 0.1,
+   "He3": {
+    "P_Pa": 1.675076149834703e-09,
+    "n": 1213252716537442.0,
+    "J": 8036383888109349.0,
+    "how": "extrapolated (DERIVED)"
+   },
+   "He4": {
+    "P_Pa": 3.67588806395507e-30,
+    "n": 2.6624348867489637e-06,
+    "J": 1.5308581468774548e-05,
+    "how": "extrapolated (DERIVED)"
+   },
+   "H2": {
+    "P_Pa": 0.0,
+    "n": 0.0,
+    "J": 0.0,
+    "how": "Souers 1977 fit (4-14 K), extrapolated"
+   },
+   "He_on_graphite": {
+    "n_at_full_monolayer": 0.0,
+    "theta_max": 1.0
+   }
+  },
+  {
+   "T": 1.0,
+   "He3": {
+    "P_Pa": 1160.109971431833,
+    "n": 8.402642318444679e+25,
+    "J": 1.7600511077281395e+27,
+    "how": "ITS-90"
+   },
+   "He4": {
+    "P_Pa": 15.573050423787642,
+    "n": 1.1279514506429686e+24,
+    "J": 2.050908861271865e+25,
+    "how": "extrapolated (DERIVED)"
+   },
+   "H2": {
+    "P_Pa": 3.386887150277904e-35,
+    "n": 2.4531123770617323e-12,
+    "J": 6.285101042900412e-11,
+    "how": "Souers 1977 fit (4-14 K), extrapolated"
+   },
+   "He_on_graphite": {
+    "n_at_full_monolayer": 1.9070109974252364e-34,
+    "theta_max": 1.0
+   }
+  },
+  {
+   "T": 4.0,
+   "He3": {
+    "P_Pa": 199999.99999999997,
+    "n": 3.6214852580199593e+27,
+    "J": 1.517141608183788e+29,
+    "how": "ITS-90"
+   },
+   "He4": {
+    "P_Pa": 81616.16863969539,
+    "n": 1.477858757723639e+27,
+    "J": 5.374262553935101e+28,
+    "how": "ITS-90"
+   },
+   "H2": {
+    "P_Pa": 3.721922163111373e-05,
+    "n": 6.739443122602798e+17,
+    "J": 3.453415456586147e+19,
+    "how": "Souers 1977 fit (4-14 K)"
+   },
+   "He_on_graphite": {
+    "n_at_full_monolayer": 5869503198709.567,
+    "theta_max": 2.5906403350085628e-06
+   }
+  }
+ ],
+ "T_crossover_K": {
+  "stage12_cheap_diamond": {
+   "He3": 0.06073592593141456,
+   "He4": 0.17203950409294355,
+   "H2": 1.937140147424527,
+   "graphite_1.0": 2.9535320946082644,
+   "graphite_0.001": 3.437224115664456
+  },
+  "stage16_Pb_meissner": {
+   "He3": 0.061813198946532213,
+   "He4": 0.17492365344958272,
+   "H2": 1.9672318345830258,
+   "graphite_1.0": 2.997742893871066,
+   "graphite_0.001": 3.497041754220493
+  },
+  "stage19_Pino_Nb": {
+   "He3": 0.06090560804538933,
+   "He4": 0.17249413750866557,
+   "H2": 1.941888414626747,
+   "graphite_1.0": 2.96051015733301,
+   "graphite_0.001": 3.446646891852855
+  }
+ },
+ "leak_allowance": {
+  "stage12_cheap_diamond": {
+   "Q_atoms_s": 5529608.915701054,
+   "Q_mbarL_s": 2.2903347059561233e-13,
+   "A_m2": 0.01,
+   "note": "mbar L/s at 300 K; Pfeiffer ASM 340 hard-vacuum minimum detectable He leak <=5e-13 mbar L/s (https://heliumleakdetection.net/helium-leak-detectors/pfeiffer-adixen-leak-detectors/pfeiffer-asm-340-helium-leak-detector/)"
+  },
+  "stage16_Pb_meissner": {
+   "Q_atoms_s": 11393379.532041492,
+   "Q_mbarL_s": 4.719077417260066e-13,
+   "A_m2": 0.01,
+   "note": "mbar L/s at 300 K; Pfeiffer ASM 340 hard-vacuum minimum detectable He leak <=5e-13 mbar L/s (https://heliumleakdetection.net/helium-leak-detectors/pfeiffer-adixen-leak-detectors/pfeiffer-asm-340-helium-leak-detector/)"
+  },
+  "stage19_Pino_Nb": {
+   "Q_atoms_s": 6206763.003675275,
+   "Q_mbarL_s": 2.5708083402783797e-13,
+   "A_m2": 0.01,
+   "note": "mbar L/s at 300 K; Pfeiffer ASM 340 hard-vacuum minimum detectable He leak <=5e-13 mbar L/s (https://heliumleakdetection.net/helium-leak-detectors/pfeiffer-adixen-leak-detectors/pfeiffer-asm-340-helium-leak-detector/)"
+  }
+ },
+ "charcoal_He_capacity_4K": {
+  "theta_max": 2.5906403350085628e-06,
+  "atoms_per_g": 1.6502378934004544e+16,
+  "note": "ASSUMED 1000 m^2/g and uniform graphite binding (real charcoal has stronger pore sites)"
+ },
+ "checks": {
+  "L0_fit_K": {
+   "He3": 2.396807400560891,
+   "He4": 7.1960930208016025
+  },
+  "L0_fit_J_per_mol": {
+   "He3": 19.928165534509283,
+   "He4": 59.831646417105624
+  },
+  "He4_1K_extrap_vs_DonnellyBarenghi": 0.9995539424767421,
+  "He4_4p2K_ITS90_Pa": 99233.21291389778,
+  "He3_0p65K_ITS90_Pa": 115.9056197261537,
+  "He4_1p25K_ITS90_Pa": 114.73433963428174,
+  "ITS90_roundtrip": [
+   0.65,
+   1.25,
+   4.0
+  ],
+  "H2_svp_4p2K_Pa": 0.00012047188218488229,
+  "H2_svp_3K_Pa": 1.1663778383025532e-08,
+  "H2_svp_2K_Pa": 1.8623521491252053e-15,
+  "CERN_H2_radiation_floor_Pa": "1e-8..1e-7 (condensed H2 under 300 K radiation, http://cds.cern.ch/record/2746077)"
+ },
+ "gaps_orders": {
+  "stage12_cheap_diamond": {
+   "BASE_2017_He": -0.6672334372878886,
+   "BASE_2017_H2": -0.849605304097179,
+   "Gabrielse_1990": 0.8285861829045391,
+   "CSR_2016": 1.2011040645257944,
+   "CryPTEx_2012": 2.22478712531352,
+   "XHV_RT_plateau": 2.4121583136260303,
+   "MAQRO_req": 1.8753021231455105,
+   "MAQRO_QPPF": 3.8753021231455103,
+   "Pino_assumed": 1.027393252859346,
+   "Stage16_SOA": 0.07584825936337426,
+   "solar_wind_unshielded": 3.5583355789630917
+  },
+  "stage16_Pb_meissner": {
+   "BASE_2017_He": -0.9811915852646361,
+   "BASE_2017_H2": -1.1635634520739266,
+   "Gabrielse_1990": 0.5146280349277916,
+   "CSR_2016": 0.887145916549047,
+   "CryPTEx_2012": 1.9108289773367724,
+   "XHV_RT_plateau": 2.0982001656492826,
+   "MAQRO_req": 1.561343975168763,
+   "MAQRO_QPPF": 3.561343975168763,
+   "Pino_assumed": 0.7134351048825984,
+   "Stage16_SOA": -0.2381098886133733,
+   "solar_wind_unshielded": 3.244377430986344
+  },
+  "stage19_Pino_Nb": {
+   "BASE_2017_He": -0.7174041833783765,
+   "BASE_2017_H2": -0.899776050187667,
+   "Gabrielse_1990": 0.7784154368140512,
+   "CSR_2016": 1.1509333184353066,
+   "CryPTEx_2012": 2.174616379223032,
+   "XHV_RT_plateau": 2.3619875675355426,
+   "MAQRO_req": 1.8251313770550226,
+   "MAQRO_QPPF": 3.8251313770550226,
+   "Pino_assumed": 0.9772225067688581,
+   "Stage16_SOA": 0.02567751327288639,
+   "solar_wind_unshielded": 3.5081648328726036
+  }
+ }
+}
