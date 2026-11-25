@@ -3812,3 +3812,52 @@ Notes on the table:
 - The thin-plate formula is new here. It is checked only through its two limits (slab and HBAR conventions), not against a published membrane CSL number.
 
 ![Stage 36 frequency coverage](figures/stage36_frequency_coverage.png)
+
+## Stage 37 — Deep-dive: the Vinante 2017 8174 Hz cantilever excess
+
+**Question.** The Vinante 2017 excess at 8174 Hz is the one standing "unexplained excess" in the resonant-release data. This stage asks:
+- What is known about it since?
+- Did anything later test near 8174 Hz?
+- What would a frequency-selective release at 8174 Hz predict that existing data could already check?
+
+All inputs were fetched this session (`results/stage37_sources.csv`).
+
+**Files:** `scripts/stage37_run.py`, `results/stage37.json`, `results/stage37_sources.csv`, `figures/stage37_8174Hz.png`.
+
+### 37.1 What is known (CITED)
+- **2017.** A *"nonthermal force noise of unknown origin"*, S_F0 = 1.87 ± 0.16 ± 0.1 aN²/Hz. Read as white CSL, this is λ = 10⁻⁷·⁷ at r_C = 100 nm.
+  - It survived these checks: SQUID back-action (3× coupling gives 2.12 ± 0.20, consistent), ³He-flow vibration, magnetic effects, thermal gradients, and a 1/Q systematic (that would need 10× the statistical error).
+  - The fit used 8100–8240 Hz. The noise bandwidth was about 20 Hz.
+- **2018 (Adler–Vinante).** Bulk heating (≤3.1×10⁻¹¹) *"rul[es] out a collapse model white noise interpretation"*. That leaves only colored or narrow-band readings.
+- **2020.** The **same cantilever, magnet and SQUID**, now with a multilayer mass, at **3532.7 Hz**.
+  - S_F0 = (−1.51 ± 1.77)×10⁻³⁶ N²/Hz, giving λ < 2.0×10⁻¹⁰ (CITED).
+  - The authors: the 2017 excess *"is incompatible with a CSL effect for r_C = 10⁻⁷ m"*, but the work gives *"no substantial new insight into the origin"*. The old absolute level *"is compatible with the error bar"*.
+- **Since 2020:** no later explanation or re-test was found. The search was not exhaustive.
+
+### 37.2 What a resonant release at 8174 Hz must look like (DERIVED)
+- **It cannot be white.** The 2020 bound needs the release spectrum at 3532.7 Hz to be ≤ **1.0 %** of its value at 8174 Hz (2.0×10⁻¹⁰ / 10⁻⁷·⁷).
+  - **Lorentzian line:** HWHM ≤ **467 Hz**.
+  - **Gaussian line:** σ ≤ **1530 Hz**.
+- **It cannot be too narrow either.** The 2017 excess was a constant floor across the ~20 Hz noise band, and the fits pass χ², so HWHM ≳ **10 Hz** (ASSUMED reading of the fit).
+- **Allowed: a line at 8174 Hz with 10 Hz ≲ HWHM ≲ 470 Hz.** That is Q_release ≈ 9–400. This is a genuine, narrow but open hole: no other experiment samples 7.7–8.6 kHz.
+
+### 37.3 Tests existing data could do — none reach it
+| prediction for λ = 10⁻⁷·⁷ on-line | existing data | verdict |
+|---|---|---|
+| LIGO test-mass force at 8174 Hz → DARM 8×10⁻²⁶ m/√Hz | LIGO ASD ≈ 2×10⁻¹⁹ at 5 kHz (file ends at 5 kHz, uncalibrated above) | **6.4 orders short** |
+| f₀/2 = 4087 Hz (if release is nonlinear) | LIGO bound ≈ 10³ there | untestable |
+| 2f₀ = 16.3 kHz, 3f₀ = 24.5 kHz | nothing published | untestable |
+| bulk heating (GHz) | 3.1×10⁻¹¹ | blind to a kHz line (no conflict) |
+
+**Harmonics.** A linear stochastic release predicts **no harmonics**. Harmonics would need a nonlinear gate (do-si-do element 2). Even so, no dataset is sensitive at 4.1 / 16.3 / 24.5 kHz.
+
+### 37.4 Two honest hints that cut the other way (DERIVED from the CITED table)
+1. **The pulse tube matters.** With the pulse tube on, S_F0 rises from 1.87 to 2.58 aN²/Hz: **+0.71 ± 0.26, 2.8σ** (statistical only). A fundamental release should not care about the cryocooler. At least part of the floor looks environmental.
+2. **2020 versus an instrument-like floor.** Suppose the 2017 floor came from the setup and did not couple to mass. It would then appear at 3532.7 Hz with the same absolute size, 1.87×10⁻³⁶. The 2020 value sits **1.9σ** below that: weak tension, as the authors say ("compatible").
+
+**Verdict.** Not excluded, not supported.
+- A do-si-do line at 8174 Hz, 10–470 Hz wide, can explain 2017 and survive 2020. The pulse-tube dependence leans instrumental.
+- **The single decisive test** is to re-measure at about 8.17 kHz with a different mass geometry, using the same SQUID chain. A mass-coupled release scales with the CSL geometry factor; an instrument floor does not.
+- Cheaper alternative: the raw 2017/2020 spectra, to check whether the 2017 floor is flat over 8100–8240 Hz and whether the 2020 floor varies across 3515–3550 Hz. → **data request (Vinante/Southampton).**
+
+![Stage 37: 8174 Hz line shapes](figures/stage37_8174Hz.png)
