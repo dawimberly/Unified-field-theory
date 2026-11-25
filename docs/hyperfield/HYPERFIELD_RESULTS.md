@@ -3914,3 +3914,25 @@ All inputs were fetched this session (`results/stage37_sources.csv`).
   - For Device II (2,1), the mode temperature of Device II is ASSUMED to apply.
   - Q ≥ 5×10⁶ is a quoted lower bound, which makes the result conservative.
   - The Al coverage is partial ("avoid depositing Al over the edges"), so the min-over-two-models choice is the conservative one.
+
+## Stage 41 — LISA Pathfinder archive (blocked: login) → fallback narrow-line scan with superconducting drums
+
+**LPF archive.** The ESA COSMOS "LISA Pathfinder Archive" portal offers only "SIGN IN" and "Self Registration", with no anonymous data link (checked this session). Per the instructions I did not register, and the item is moved to the data-request list. Anyone can self-register; it is a sign-up rather than a request to a group, but it needs Dan's account decision.
+
+**Fallback.** Two published superconducting drum resonators with measured heating, converted with the Stage 36 thin-plate formula (mode wavelength ≫ r_C) and all measured heating attributed to the effect. Sources are in `results/stage41_sources.csv`.
+
+**Files:** `scripts/stage41_run.py`, `results/stage41.json`, `results/stage41_bounds.csv`, `results/stage41_sources.csv`, `figures/stage41_frequency_coverage.png`.
+
+| device | f | h, ρ | heating (s⁻¹) | λ_max (s⁻¹) |
+|---|---|---|---|---|
+| Youssefi/Kippenberg 2023 vacuum-gap Al drum | **1.8 MHz** | 180 nm (FEM caption, ASSUMED = device), 2716 kg/m³ | 130 (quoted motional heating) | **3.7×10⁻⁸** |
+| Teufel 2011 Al drum | **10.56 MHz** | 100 nm, 2716 kg/m³ (DERIVED from 48 pg, ⌀15 µm) | n_m Γ_m = 30 × 2π·32 Hz = 6.0×10³ | 1.4×10⁻⁵ |
+
+**Reading.**
+- 1.8 MHz adds a fourth strong membrane point near Seis (1.49 MHz, 2.9×10⁻⁹), inside Adler's band.
+- 10.56 MHz is the **first mechanical point in the 4.6 MHz – 5.6 GHz window** below the GHz HBARs. It is weak (10⁻⁵) because Teufel's heating is large.
+- Still narrow lines (±0.1 %): the decade coverage is unchanged.
+- **Flags:**
+  - The Youssefi thickness comes from a simulation caption.
+  - The Al density is derived from Teufel's quoted mass and geometry.
+  - Upper limits only; no excess claimed.
