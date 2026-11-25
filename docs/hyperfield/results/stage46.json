@@ -1,0 +1,189 @@
+{
+ "stage": 46,
+ "results": {
+  "clock": {
+   "offsets_ns": [
+    0.0,
+    0.0,
+    -0.14999999999999858,
+    -0.5900000000000034,
+    -0.14999999999999858,
+    0.28999999999999204,
+    -0.14000000000000057,
+    0.15000000000000568,
+    0.5499999999999972,
+    0.0,
+    -0.5,
+    -0.09999999999999432
+   ],
+   "mean_ns": -0.05333333333333338,
+   "sem_ns": 0.08908910532084524,
+   "scatter_ns": 0.3086137136331175,
+   "tg95_stat_ns": [
+    -0.22794797976219003,
+    0.12128131309552329
+   ],
+   "tg95_ns": [
+    -0.52794797976219,
+    0.4212813130955233
+   ],
+   "note": "ASSUMED: the CONUSS calculation has t = 0 at excitation and no fitted time offset",
+   "tg_over_tau": 0.003744311913207021
+  },
+  "release": {
+   "dip_ceiling": 41.13,
+   "per_channel": [
+    [
+     1.332,
+     41.13,
+     0.0
+    ],
+    [
+     1.48,
+     46.26,
+     0.7999042612297287
+    ],
+    [
+     1.628,
+     61.48,
+     3.1731094963011675
+    ],
+    [
+     1.776,
+     71.93,
+     4.802544102509877
+    ],
+    [
+     1.924,
+     97.48,
+     8.786472733001025
+    ],
+    [
+     2.072,
+     121.0,
+     12.45387004764493
+    ],
+    [
+     2.22,
+     138.8,
+     15.229366314679861
+    ],
+    [
+     2.368,
+     180.8,
+     21.778290090829692
+    ],
+    [
+     2.516,
+     209.5,
+     26.253388004532077
+    ],
+    [
+     2.664,
+     104.4,
+     9.865485888499997
+    ],
+    [
+     2.812,
+     132.1,
+     14.184657045627386
+    ],
+    [
+     2.96,
+     186.2,
+     22.62029457633467
+    ]
+   ],
+   "tg95_ns": 1.924,
+   "tg_over_tau": 0.013645390070921986,
+   "logic": "a release gate t_g removes all nuclear counts before t_g; the data exceed the prompt-tail/background ceiling by >5 sigma in every column from t = 1.92 ns to 3 ns, so t_g < that time"
+  }
+ },
+ "minima": [
+  [
+   8.3,
+   8.288,
+   8.288
+  ],
+  [
+   19.9,
+   19.98,
+   19.98
+  ],
+  [
+   31.0,
+   30.93,
+   30.78
+  ],
+  [
+   51.0,
+   51.06,
+   50.47
+  ],
+  [
+   60.0,
+   59.79,
+   59.64
+  ],
+  [
+   70.0,
+   70.45,
+   70.74
+  ],
+  [
+   77.0,
+   76.51,
+   76.37
+  ],
+  [
+   81.5,
+   81.25,
+   81.4
+  ],
+  [
+   99.5,
+   99.45,
+   100.0
+  ],
+  [
+   106.0,
+   106.7,
+   106.7
+  ],
+  [
+   116.0,
+   115.9,
+   115.4
+  ],
+  [
+   142.0,
+   141.9,
+   141.8
+  ]
+ ],
+ "sources": {
+  "marxglowna21": {
+   "ref": "Marx-Glowna, Uschmann, Schulze, Marschner, Wille, Schlage, Stoehlker, Roehlsberger, Paulus, \"Advanced X-ray polarimeter design for nuclear resonant scattering\", J. Synchrotron Rad. 28, 120 (2021), PMC7842219",
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7842219.1/PMC7842219.1.pdf",
+   "location": "Fig. 6 and text p.4",
+   "quote": "\"Time spectrum of a 9.3 um-thick foil of 57Fe (95% enrichment) magnetized at 45 deg to the polarization direction. The red line is a fit to the data via the program package CONUSS\" ; \"The use of the polarimeter makes it possible to fit the time spectrum already 1.5 ns after excitation\" ; \"The total data collection time was 69 min\" ; axis \"time after excitation [ns]\", \"photons/channel\"; arrow \"non-resonantly scattered photons\" at 0",
+   "values": {}
+  },
+  "esrf_tau": {
+   "ref": "ESRF Spotlight 47, Nuclear forward scattering in pulsed magnetic fields",
+   "url": "https://www.esrf.fr/news/spotlight/spotlight47/spotlight47nfs",
+   "location": "para 1",
+   "quote": "\"(tau 57Fe = 141 ns)\"",
+   "values": {
+    "tau": 141.0
+   }
+  },
+  "digitization": {
+   "ref": "DIGITIZED (this stage)",
+   "url": "data/stage46_marxglowna2021_fig6_digitized.csv",
+   "location": "Fig. 6 raster",
+   "quote": "x ticks 0/50/100/150 ns at px 300/638/976/1313 (6.757 px/ns, 0.148 ns/px); y decade ticks (right frame) 1e4/1e3/1e2/1 at px 72/189/307/541.5 (117.4 px/decade); black = data, red = calculated",
+   "values": {}
+  }
+ }
+}

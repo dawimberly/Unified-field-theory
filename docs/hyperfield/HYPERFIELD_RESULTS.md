@@ -4092,3 +4092,41 @@ All are honest upper limits; nothing is claimed.
 - **Flags:** the data are digitized, not raw; the ±5 ps systematic is ASSUMED; the jitter is modelled as Gaussian (real detectors have tails); there is one emitter and one trace.
 
 **Files:** `scripts/stage45_run.py`, `data/stage45_ollivier2020_fig2b_digitized.csv`, `results/stage45.json`, `results/stage45_sources.csv`, `figures/stage45_short_time_gate.png`.
+
+## Stage 46: release and clock gate from ⁵⁷Fe nuclear forward scattering (locked to the synchrotron pulse)
+
+**Data (found within the time budget).** Marx-Glowna et al., J. Synchrotron Rad. 28, 120 (2021), Fig. 6, open access (PMC7842219; PDF via the PMC open-data bucket, because the journal site is behind a browser check).
+- A 9.3 µm ⁵⁷Fe foil measured with a polarimeter: "makes it possible to fit the time spectrum already 1.5 ns after excitation".
+- The prompt (non-resonant) photons sit in the same spectrum at t = 0. The paper's CONUSS calculation is overlaid.
+- DIGITIZED from the 1385×724 embedded jpeg: 0.148 ns/px, 117 px/decade, file `data/stage46_marxglowna2021_fig6_digitized.csv`.
+- τ(⁵⁷Fe) = 141 ns (ESRF, CITED).
+
+**Model (ASSUMED).**
+- **(a) Clock gate:** the whole coherent response is delayed by t_g, so every beat minimum shifts by t_g.
+- **(b) Release gate:** no emission for t < t_g, then the normal response with free normalisation. That would leave no nuclear counts before t_g.
+
+**What standard QM / NFS predicts.**
+- Coherent forward emission starts at t = 0⁺ with its *fastest* (speed-up) decay. Hyperfine and thickness beats set the minima. There is no delayed onset.
+- So a QM short-time effect cannot fake a gate here. The early-time structure is the opposite: enhanced, not suppressed.
+
+**Results (DERIVED, 95 %).**
+
+| gate | method | limit | t_g/τ |
+|---|---|---|---|
+| clock (a) | 12 beat minima, data minus calculation | mean −0.05 ± 0.09 ns (scatter 0.31 ns) → stat [−0.23, +0.12] ns; with ±0.3 ns prompt-position systematic → **[−0.53, +0.42] ns** | **< 3.7×10⁻³** |
+| release (b) | first time the data exceed the prompt-tail/background ceiling (41 counts at the 1.2–1.5 ns dip) by > 5σ in every column through 3 ns | **t_g < 1.9 ns** | **< 1.4×10⁻²** |
+
+**Comparison with Stage 45 (QD).**
+- Relative to the lifetime, these limits are about 10× (clock) and 15× (release) tighter: 0.0037 vs 0.039, and 0.014 vs 0.21.
+- In absolute time they are weaker: about 0.5 ns vs 10 ps, and 1.9 ns vs 53 ps.
+
+**Flags.**
+- The clock result ASSUMES the CONUSS calculation has t = 0 at the excitation with no fitted time offset. The paper does not say. A constant shift cannot easily be absorbed into the non-periodic hyperfine-plus-thickness beat pattern, but this is not proven.
+- The data are digitized, not raw.
+- The prompt-tail ceiling is taken from the dip, not modelled.
+- Between 1.6 and 3 ns the data sit *above* the calculation (see figure). This is most likely the prompt tail plus the digitization of a connected-line plot. It is the opposite sign from a gate.
+- The gate limit is set by the time resolution and prompt suppression, not by count statistics.
+
+**Fallback not needed:** a usable spectrum was found.
+
+**Files:** `scripts/stage46_run.py`, `data/stage46_marxglowna2021_fig6_digitized.csv`, `results/stage46.json`, `results/stage46_sources.csv`, `figures/stage46_nfs_gate.png`.
