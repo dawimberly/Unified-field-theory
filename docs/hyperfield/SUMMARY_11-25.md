@@ -11,7 +11,7 @@ Plain-language recap. Full details, tables and sources are in [HYPERFIELD_RESULT
 ## The short version
 1. **Big G (Stage 30): no.** The ~500 ppm spread between G measurements is not caused by quantum-gravity noise; that noise is ≥ 3.9 orders too small. The weak "bigger test mass → bigger G" trend comes from three old experiments and is tangled up with measurement method.
 2. **Your do-si-do idea (Stage 31) survives in two places:**
-   - **Angle-dependent release timing** is the strongest survivor. The H₂ data allow an extra term up to ~485 zeptoseconds, and show a 1.8σ hint that is not significant yet.
+   - **Angle-dependent release timing** is the strongest survivor. The H₂ data allow an extra term up to ~489 zeptoseconds (conservative; 425 zs with the matched fit), and show a 1.3σ hint that is not significant (Stage 52, which replaced the earlier 485 zs and 1.8σ).
    - **A resonant ("lets go at one frequency") release** is the second.
 3. **Can the existing H₂ data settle it (Stage 32)? Probably not.** Re-binning gives about 1.4σ. New data, or the authors' event file, are needed.
 4. **Hunting for the resonant release frequency (Stages 33–37).** We now have limits over ~10.8 of the 25.7 decades from 20 µHz to 4 MeV.
@@ -31,7 +31,7 @@ Plain-language recap. Full details, tables and sources are in [HYPERFIELD_RESULT
 
 ### Stage 31 — The do-si-do model, all 7 elements
 - **Angle (probability laws, lab orientation):** tightly constrained (10⁻² down to 10⁻¹⁸).
-- **Angle × release time:** our re-analysis of the Grundmann 2020 H₂ "birth delay" data gives a slope of 504.5 ± 36 zs against the light-travel 246.8. The residual is **+235 ± 128 zs (1.8σ)**, so |d₁| < 485 zs. **Open.**
+- **Angle × release time:** our re-analysis of the Grundmann 2020 H₂ "birth delay" data gives a slope of **441 ± 35.8 (stat) ± 32 (fit model) zs** against the light-travel 246.8 (Stage 52, see `STAGE52_grundmann_504_audit.md`). The residual over the paper's nondipole model is **+171 ± 130 zs (1.3σ)**, so |d₁| < 425 zs (matched fit), or < 489 zs as a conservative bound. **Open.** *(Corrected 2026-11-25. The earlier 504.5 ± 36 zs, +235 ± 128 zs (1.8σ) and < 485 zs came from a Gaussian+constant per-row fit at |cosα| ≤ 0.4. A pure-Gaussian fit reproduces the paper's own points and gives 441.)*
 - **Gate threshold:** ≤ 24.86 µeV, with no amplitude gate.
 - **Amplitude:** < 2×10⁻²⁰ eV.
 - **Openness spread:** intrinsic < 10⁻³⁰.
@@ -126,7 +126,7 @@ Tightest limits by region:
 - Nuclear decay "spread" limits: not quantified in any fetchable source (Stage 38).
 
 ## Open questions
-1. Does the 1.8σ H₂ angle residual grow or vanish with bond-length-split data? (Needs the Frankfurt event file.)
+1. Does the 1.3σ H₂ angle residual (Stage 52; 1.8σ with the older Stage 31 fit) grow or vanish with bond-length-split data? (Needs the Frankfurt event file.)
 2. Is the 8174 Hz floor mass-coupled? Re-measure near 8.17 kHz with a different mass geometry.
 3. Does the do-si-do picture *predict* a release frequency f₀? Without one, the resonant element can only be cornered, not tested. Candidates so far: 8174 Hz (Stage 37 window), or none.
 4. Would a non-mass-proportional coupling, or a sub-nm smearing length, change Stage 35? Both are outside the current parametrization; sub-nm is excluded by others.

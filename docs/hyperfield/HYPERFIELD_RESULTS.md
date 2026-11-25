@@ -811,9 +811,9 @@ Formula: M̄² = 1/(8πG) = N_eff Λ²/(96π²). The O(1) prefactor depends on t
 - **So induced gravity does not bridge the quantum gap here.** It *re-expresses* 1/G as (species count) × (cutoff or heavy mass)², with no predicted number.
 - **What would be a real prediction:**
   - a theory that fixes the heavy spectrum by symmetry (e.g. a broken-SUSY or conformal sector), so that Σd m^k = 0 holds automatically, and that yields a dimensionless ratio such as M_heavy/M̄ or N_species without input from G;
-  - or, at low energy, a measured Higgs ξ. If induced-gravity readings are right, the SM-only sign condition gives ξ < 1/24, and with ν_R ξ < 1/6. The current LHC limit on |ξ| is ~1e15 (from memory), so this is untestable for decades.
+  - or, at low energy, a measured Higgs ξ. If induced-gravity readings are right, the SM-only sign condition gives ξ < 1/24, and with ν_R ξ < 1/6. The current LHC limit is ξ < 2.6×10¹⁵ (CITED: Atkins & Calmet, PRL 110, 051301 (2013), arXiv:1211.0281, abstract: "the recent discovery of the Higgs boson at the Large Hadron Collider at CERN implies that the non-minimal coupling is smaller than 2.6×10¹⁵"; fetched 2026-11-25), so this is untestable for decades. *(Corrected 2026-11-25: this replaces "~1e15 (from memory)". No other Stage 8 number used the 1e15 value, so only this sentence changes, and the conclusion stands: the limit is still about 10¹⁶ times the ξ < 1/24 condition.)*
 - **Unverified:**
-  - Larsen–Wilczek / Kabat / Visser citations (from memory).
+  - Larsen–Wilczek / Kabat / Visser citations (from memory). (The Atkins–Calmet ξ bound was verified on 2026-11-25.)
   - The regulator-dependent O(1) prefactor.
   - The vector counting ambiguity: it changes N_eff from +1 to +73.
 
@@ -3169,7 +3169,7 @@ So the gradual-release picture by itself is **not new physics**. It is what QM a
   - **What standard physics predicts.** The light-travel time R cosβ/c gives a slope of **246.8 zs** (CITED value 247 zs).
   - **Our reanalysis** (DERIVED) of their public Fig. 3 histogram:
     - Method: a Poisson-likelihood Gaussian+constant fit to the central fringe per cosβ row, parametric-bootstrap errors, and their Eq. 2, τ_b = cosα₀·R/v_ph with v_ph = E_e/p_e. That gives 9204 zs per unit cosα₀.
-    - Result: slope **504.5 ± 36.2 zs** (stat), χ² = 13.9/13.
+    - Result: slope **504.5 ± 36.2 zs** (stat), χ² = 13.9/13. *(Historical Stage 31 value, superseded by Stage 52 (`STAGE52_grundmann_504_audit.md`): 441 ± 35.8 (stat) ± 32 (fit model) zs. The 504.5 comes from the Gaussian+constant per-row fit at |cosα| ≤ 0.4; a pure-Gaussian fit that reproduces the paper's points gives 441.)*
     - Window variants (ASSUMED |cosα| ≤ 0.3 / 0.4 / 0.5): 480.7, 504.5, 523.0. A tilted-envelope variant gives 582 ± 47.
     - The paper's own dashed fit (DIGITIZED) is about 440 zs, inside our errors, so the reanalysis reproduces their result.
   - **The comparison model.** The paper's refined model, nondipole tilt plus travel time (their red line, DIGITIZED), is about **270 zs**.
@@ -3178,7 +3178,7 @@ So the gradual-release picture by itself is **not new physics**. It is what QM a
     - With only our narrower systematics (momentum zero ±0.04 a.u. → ±50 zs, R ±2.7 % → ±14 zs, window ±24 zs), the residual over light-travel alone is 3.8σ. Our estimate is less complete than the authors', so we do **not** use it as the headline.
   - The authors themselves wrote: "more theoretical work including electron-electron correlation is needed to clarify the deviation."
   - **Bound (95 %).**
-    - The extra angle-dependent release term beyond light-travel plus nondipole is **|d₁| < 485 zs per unit cosβ**, about 2× the light-travel term.
+    - The extra angle-dependent release term beyond light-travel plus nondipole is **|d₁| < 485 zs per unit cosβ**, about 2× the light-travel term. *(Superseded by Stage 52: |d₁| < 425 zs with the matched fit, < 489 zs conservative; residual +171 ± 130 zs, 1.3σ.)*
     - The cos² (P₂) term: |d₂| < 102 zs (fit c = −2.7 ± 48.6 zs).
   - **What this test cannot see.** It is blind to any delay that does not depend on angle. CITED note [19]: "our interferometric technique is blind to this absolute delay".
 
@@ -3214,7 +3214,7 @@ So the gradual-release picture by itself is **not new physics**. It is what QM a
 - Otherwise the extrinsic case cannot be separated from Λ₀.
 
 **(6) Release time τ.**
-- angle-dependent: < 485 zs (see 1d);
+- angle-dependent: < 485 zs (see 1d; Stage 52 update: < 425 zs matched fit, < 489 zs conservative);
 - channel-dependent: < 1.5 as;
 - random lock jitter: < 2.7 ± 0.2 ps for the whole detector (CITED: Korzh et al., arXiv:1804.06839);
 - plastic stage after locking: the Born rule holds to 1 % within about 10⁻¹³ s (Papaliolios).
@@ -3233,7 +3233,7 @@ So the gradual-release picture by itself is **not new physics**. It is what QM a
 |---|---|---|---|
 | 1 angle: probability laws | Papaliolios (via Valentini–Varma); Marx 2013 | generic ≲ 1e-2; 2.4e-10 at 90° | constrained |
 | 1 angle: lab orientation | Pruttivarasin 2015 | 1e-18 (4.6e-17 eV) | excluded beyond 1e-18 |
-| **1+6 angle-dependent release time** | Grundmann 2020 reanalysis | \|d₁\| < 485 zs/cosβ (≈ 2× light-travel); residual +235 ± 128 zs (1.8σ) | **open, with real room** |
+| **1+6 angle-dependent release time** | Grundmann 2020 reanalysis | \|d₁\| < 485 zs/cosβ (≈ 2× light-travel); residual +235 ± 128 zs (1.8σ). *Stage 52: < 425 (matched) / < 489 zs (conservative); +171 ± 130 zs (1.3σ)* | **open, with real room** |
 | 2 gate threshold | Dixit 2021 | R1: E_th ≤ 24.86 µeV, no amplitude gate; R2: not separable from Λ₀ | R1 excluded; R2 untestable alone |
 | 3 resonant release | LPF; Vinante; Majorana | 3e-8 / 2e-8 / 5e-20 to 1.7e-13 s⁻¹ | constrained in 3 bands; **≈20 decades unverified here** |
 | 4 amplitude | Bollinger/Heinzen 1989 | 2.4e-20 eV = 1.9e-14 of transition | excluded |
@@ -3258,7 +3258,7 @@ These references come from the reference lists of the papers fetched this stage.
 Element (1d), an angle-*dependent* release time beyond light travel, did not match any of these in what we checked. That does not prove nobody has proposed it.
 
 ### 31.5 Flags, coincidences and honest negatives
-- **Coincidence flag.** Our fitted slope is 2.04 × R/c (504.5 against 246.8 zs).
+- **Coincidence flag.** Our fitted slope is 2.04 × R/c (504.5 against 246.8 zs). *(Stage 52: the matched fit gives 441 zs = 1.79 × R/c, so the "2×" itself is a fit-model artefact.)*
   - It is tempting to read "exactly 2×" into this. For a free non-relativistic electron, v_ph = v/2, so a phase-versus-group velocity mix-up would give exactly a factor of 2.
   - But the paper's Eq. 1–2 use the phase velocity consistently, and that is the right choice for a phase delay. Their own fit is about 440 zs, which is 1.8×. Within the errors (±128) the factor is anything from about 1.5 to 2.5.
   - We treat it as a coincidence, not a signal.
@@ -3275,7 +3275,7 @@ Element (1d), an angle-*dependent* release time beyond light travel, did not mat
 
 ### 31.6 What survives, and the single best test
 **Survivor: the angle-dependent release time, (1)+(6).** This is Dan's original angle-of-incidence idea, put in timing form.
-- The best existing data allow an extra term of up to **485 zs per unit cosβ**, about 2× the light-travel effect.
+- The best existing data allow an extra term of up to **485 zs per unit cosβ**, about 2× the light-travel effect. *(Stage 52 update: < 489 zs conservative, < 425 zs with the matched fit.)*
 - The data even show a 1.4–1.8σ excess over the best standard model, which the authors say needs more theory (electron–electron correlation, nondipole effects).
 
 **Best test.** Repeat the Grundmann COLTRIMS birth-time measurement in a way that separates the hook term from known physics:
@@ -4269,7 +4269,7 @@ All are honest upper limits; nothing is claimed.
 | molecular-frame RABBITT; chiral forward/backward delays (Nature 2025) | angle to polarization or molecular axis; PECD | not referenced to k, or the standard-theory term (tens of as) swamps d₁ |
 | solids (streaking) | fixed incidence angle | no d₁ lever found |
 
-**Combination (independent sets only).** Grundmann 235 ± 128 zs is combined with the He floor (centre 0 ASSUMED, the most favourable case). The result is 235 ± 128 zs, and the He weight is 8×10⁻⁵. **|d₁| < 485 zs is unchanged.**
+**Combination (independent sets only).** Grundmann 235 ± 128 zs is combined with the He floor (centre 0 ASSUMED, the most favourable case). The result is 235 ± 128 zs, and the He weight is 8×10⁻⁵. **|d₁| < 485 zs is unchanged.** *(Stage 52 later revised this to < 489 zs conservative, < 425 zs matched fit, with the Grundmann residual now +171 ± 130 zs.)*
 
 **Headline.** No newer or independent dataset tightens d₁. Grundmann 2020 remains the only measurement with zeptosecond resolution referenced to the photon direction. The best independent candidate is about 60× too weak even under optimistic assumptions. The element stays "open, with real room": d₁ is allowed up to about 2× the light-travel term.
 
