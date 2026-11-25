@@ -4338,3 +4338,27 @@ Details are in `STAGE52_grundmann_504_audit.md`. The script is `scripts/stage52_
   - Residual over the nondipole model: +171 ± 130 zs (1.3σ), down from 1.8σ.
   - Conservative bound: |d₁| < 489 zs (95 %), replacing 485.
 - **Coincidence flag.** 2.04 ≈ v_g/v_ph = 2, and 2.04 ≈ span/slope. Neither is the cause.
+
+## Stage 53 — LISA Pathfinder Δg above 30 mHz (archive data) → λ(f), and the first entry into 0.19–9.3 Hz
+
+Full write-up: `STAGE53_lpf_highfreq.md`.
+
+**Data.** The LISA Pathfinder Legacy Archive (https://lpf.esac.esa.int/lpfsa/, backend `/lpfsa-sl/`) serves its Δg products over plain HTTPS without login. I used all 17 Level-4 "Δg_noise" segments (glitch-cleaned, noise-only; 2.1 GB, Mar 2016 – Jun 2017, fs = 10 Hz).
+
+**Checks.**
+- The formula reproduces Helou to 1.009.
+- Our ASD over 2–20 mHz is 5.73 fm for Apr 2016 vs the CITED 5.2, and 1.98 fm for Feb 2017 vs the CITED 1.74.
+
+**Results.** The bounds are DERIVED, 95 % CL, from the tightest of the 17 segments, with all power attributed to the effect.
+
+| band | λ_max (s⁻¹) |
+|---|---|
+| 32–36 mHz (best above 30 mHz) | 1.3×10⁻⁸ |
+| 0.09–0.10 Hz | 2.5×10⁻⁷ |
+| 0.18–0.20 Hz | 3.5×10⁻⁶ |
+| 0.28–0.32 Hz | 2.2×10⁻⁵ |
+| 1.00–1.12 Hz | 1.9×10⁻³ |
+
+- **Shape and cut.** Above about 50 mHz the bound rises as f⁴, because it is the readout noise. A robust cut is set at 1.12 Hz, the lowest per-segment −3 dB point of the on-board low-pass (ASSUMED rule).
+- **The window is entered for the first time.** 0.19–1.12 Hz is covered (0.77 of 1.69 dec), but only weakly. 1.12–9.3 Hz stays empty.
+- **Flags.** A 1.000 Hz line (instrumental) and a 70 mHz bump (L2 cross-talk residual) are both left in.
