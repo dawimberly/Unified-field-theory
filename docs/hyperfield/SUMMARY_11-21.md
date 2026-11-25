@@ -1,6 +1,6 @@
 # What stands between today's experiments and a test of quantum gravity: an audited gap budget
 
-*Summary of HYPERFIELD Stages 11–20, covering gravity-mediated entanglement (BMV/QGEM) and Oppenheim classical-gravity tests. Every number below is taken from `HYPERFIELD_RESULTS.md` and `results/stage11.json`–`results/stage20.json`, always at its latest corrected value. Where a value was superseded, the old value is noted. The full derivations, scripts and source checks are in the per-stage sections.*
+*Summary of HYPERFIELD Stages 11–21, covering gravity-mediated entanglement (BMV/QGEM) and Oppenheim classical-gravity tests. Every number below is taken from `HYPERFIELD_RESULTS.md` and `results/stage11.json`–`results/stage21.json` (plus `results/summary21_pb_pino.json`, produced for this summary by `scripts/summary21_pb_pino.py` with the unchanged Stage 21 code), always at its latest corrected value. Where a value was superseded, the old value is noted. The full derivations, scripts and source checks are in the per-stage sections.*
 
 ---
 
@@ -15,7 +15,7 @@ We rebuilt the feasibility budget of the Bose–Marletto–Vedral (BMV) gravity-
 
 **Path tagging.** Without an embedded spin, the needed coherent expansion is 3.9–4.7e5 zero-point widths. The demonstrated record is 3.5, leaving **5.0–5.2 orders**. The best spin-free proposals reduce this to **0.55 orders** (Pino free expansion) and **1.06 orders** (Roda-Llordes double-well loop), but none is built.
 
-**Acceleration noise.** The exact requirement at the cheap point is **0.44 fm s⁻² Hz⁻½ per mass, relative to its own trap**. The PPT witness rejects common mode by only a factor of 1.006. The best ground inertial floor is **6.0–6.2 orders** above this. Including surface electric-field noise from the 5 μm plate, it is **8.0 orders** above. A space-grade (LISA Pathfinder readout) reference leaves **4.0 orders**.
+**Acceleration noise.** The per-mass requirement is set relative to each mass's own trap. The PPT witness rejects common mode by only a factor of 1.006, so a shared platform does not help. With the exact witness model and the Stage 16 shot cap ($N_{5\sigma}\le10^4$), the cheap point needs **1.27 fm s⁻² Hz⁻½**. The Pb and Pino points need **0.52** and **0.33**. No protocol change can push this past a hard ceiling, $\sqrt{2G\hbar/D^3}=3.25$ fm s⁻² Hz⁻½ at $D=11\,\mu$m. That ceiling is independent of mass, superposition size and hold time, and caps all protocol levers at **+0.87 orders** relative to Stage 18. The best ground redesign combines 10⁴ shots, one echo swap, a neutral dipole and a non-metal plate, and still leaves **+6.0 orders**; isolated seismic noise and tilt are the binding sources. For Pb and Pino the ground inertial residual is **+7.2/+7.3**, and echo is infeasible for them. Releasing the masses in drag-free space, with no plate at $D=273\,\mu$m, leaves **+2.0 orders**. That figure rests on ASSUMED electrode distance (1 mm), dipole and spacecraft jitter.
 
 **Vacuum.** Expressed as an impingement flux, which is species- and temperature-independent in the saturated regime, the vacuum requirement is *met* by the best demonstrated cryogenic upper limit (BASE 2017), with **0.67–0.98 orders of margin**. It is still 0.5–0.8 orders short against every other demonstration. No such limit has been shown in a levitation chamber.
 
@@ -23,7 +23,7 @@ We rebuilt the feasibility budget of the Bose–Marletto–Vedral (BMV) gravity-
 
 **Oppenheim windows.** The ultra-local continuous model is excluded. The discrete window is open by **9.41 orders** and the non-local (Diósi–Penrose-like) window by **3.66 orders**. The closest named near-term experiment, a 1 MDa slow-cluster interferometer, would leave **0.86 orders**.
 
-**Corrections.** We found and corrected eight errors in our own earlier stages and several inconsistencies in published papers. None reverses the headline. The binding obstacles to BMV are coherent delocalisation and differential acceleration noise, not vacuum or mass per se. The nearest decisive measurement on quantum-versus-classical gravity is the Oppenheim non-local window, not BMV.
+**Corrections.** We found and corrected eight errors in our own earlier stages and several inconsistencies in published papers. None reverses the headline. The binding obstacles to BMV are coherent delocalisation and per-mass acceleration noise, not vacuum or mass per se. On the ground the noise gap is about 6 orders after every lever we found. In space it is about 2 orders, under stated assumptions. The nearest decisive measurement on quantum-versus-classical gravity is the Oppenheim non-local window, not BMV.
 
 ---
 
@@ -127,23 +127,58 @@ A clean positive result would rule out a classical gravitational channel and man
 
 ![Stage 19: spin-free tagging routes](figures/stage19_tagging.png)
 
-### 3.4 Acceleration noise (Stages 16, 18)
+### 3.4 Acceleration noise (Stages 16, 18, 21)
 
-- **Requirement.** For uncorrelated white noise, $\Gamma=m^2S_a\Delta x^2/4\hbar^2$. The plate-free limit is $S_a\ll2G\hbar/d^3$, independent of mass; this reproduces Großardt 2020 (0.060 vs 0.07 fm at 157 μm). With the exact witness model, the cheap point needs **0.44 fm s⁻² Hz⁻½**. Stage 16's 0.90 put noise only on the $\sin(\Phi/2)$ term and is superseded. The Pb and Pino values (0.85 and 0.68) are still Stage 16-rule values, not exact-model corrected; the correction tightened the cheap point by 0.31 orders.
-- **No common-mode rescue.** The PPT witness's built-in CMRR is **1.006**. The requirement applies to each mass relative to its own trap, whatever the correlation between masses.
-- **Floors** (Stage 18; cheap / Pino; Pb added here from the same floors):
-  - ground, inertial-only: **+6.2** / +6.0 / +5.9;
-  - ground with surface E-field noise on the permanent dipole at 5 μm: **+8.0** / +7.8 / (+7.7, cheap-geometry specific);
-  - LPF-grade space reference, inertial only: **+4.0** / +3.8 / +3.7.
-- **Other derived limits:**
-  - LPF's 1.74 fm is within 0.6 orders, but only in the mHz band and only in space.
-  - The exclusion radius for one walking person is 92 m.
-  - A running pulse tube is excluded.
-  - Normal-metal plate eddy damping is 14.2 orders too high.
-- **Space Os option:** needs 0.0087 fm, 2.3 orders below LPF.
-- **Status:** the requirement is far below every demonstrated sensor on the ground. **This is the binding engineering obstacle.**
+- **Requirement and its ceiling.**
+  - For uncorrelated white noise, $\Gamma=m^2S_a\Delta x^2/4\hbar^2$. Combined with $\Phi\propto Gm^2\Delta x^2t/\hbar D^3$, this gives $S_{\rm req}\propto G\hbar/D^3$, **independent of $m$, $\Delta x$ and $t$** (Stage 21.0). This is Großardt's $2G\hbar/d^3$ (our 0.060 vs his 0.07 fm at 157 μm).
+  - At $D=11\,\mu$m the ceiling is **$\sqrt{2G\hbar/D^3}=3.25$ fm s⁻² Hz⁻½**. No protocol, shot-count, mass or hold change can loosen the requirement by more than **0.87 orders** relative to Stage 18. Separating the masses tightens it as $D^{-3/2}$.
+- **Exact requirement, cheap point.**
+  - 0.44 fm s⁻² Hz⁻½ at Stage 18's $N_{5\sigma}=5049$. Stage 16's 0.90 put noise only on the $\sin(\Phi/2)$ term and is superseded.
+  - **1.27 fm s⁻² Hz⁻½** under the Stage 16 shot cap $N_5\le10^4$, which Stage 21 adopts for every design (0.39 of the ceiling). The cap is itself worth +0.46 orders.
+- **Pb and Pino recomputed.** These use the exact Stage 18/21 model, run through the unchanged `stage21_run.proto` with each point's own κ, Φ, gas exponent and hold, at $N_5\le10^4$ (`results/summary21_pb_pino.json`):
+
+  | Point | Exact requirement (fm s⁻² Hz⁻½) | Stage 16-rule value | Fraction of its own ceiling | Echo |
+  |---|---|---|---|---|
+  | Pb | **0.52** | 0.85 | 0.15 of 3.37 fm ($D=10.7\,\mu$m) | infeasible (no slack) |
+  | Pino | **0.33** | 0.68 | 0.11 of 3.04 fm ($D=11.5\,\mu$m) | infeasible (no slack) |
+
+  Both points were chosen at the shot cap by the smallest healthy Δx. That leaves noise little slack, so even one echo swap's extra gas exposure makes them infeasible. The same code reproduces the cheap point's Stage 21 numbers exactly (1.27 fm; +6.92 baseline; +5.98 with echo).
+- **No common-mode rescue.**
+  - The PPT witness's built-in CMRR is **1.006** (Stage 18).
+  - A decoherence-free subspace exists only for states that are already entangled.
+  - In a one-trap relative-mode scheme, CM-mode noise kills the entanglement unless relative-mode squeezing beats it ($e^{2r}=2n+1$) (Stage 21.2).
+- **Levers** (Stage 21; + loosens):
+  - **Survive:**
+    - shot cap 10⁴: +0.46;
+    - one echo swap: +0.98 against 1/f tilt, but −0.10 to −0.36 against seismic;
+    - hold 5 s: +0.15;
+    - neutral dipole plus non-metal plate: +2.5 on the plate source (+7.5 → +5.0);
+    - release in drag-free space with no plate.
+  - **Fail:**
+    - shorter shots with more repetitions (infeasible below 1 s);
+    - two or more echo swaps;
+    - a stiffer trap (0; a separately mounted Stern–Gerlach source makes it worse);
+    - removing the plate on the ground (−2.09, since Casimir–Polder sets $D=273\,\mu$m);
+    - a trapped drop tower or Einstein-Elevator (−3.9);
+    - a trapped ISS experiment (−5.7);
+    - relative-mode readout or a DFS (0).
+- **Residual floors, cheap point** (orders over the design's own requirement):
+  - ground baseline at 10⁴ shots: +6.9 (tilt binding), +7.5 with plate surface noise. Stage 18 gave +6.2 inertial and +8.0 with plate noise at 0.44 fm.
+  - **best ground redesign** (echo, neutral dipole, non-metal plate): **+6.0**, with isolated seismic +5.6 and tilt +5.9;
+  - space, trapped, LPF-grade readout: +3.5;
+  - **space, released, drag-free, no plate, $D=273\,\mu$m: +2.0** for white electrode E-field noise, or +5.7 if that noise is 1/f. Spacecraft self-gravity jitter is +1.7.
+
+  The space figure assumes electrodes at 1 mm, $p=10^{-2}$ e·cm, and 500 kg of spacecraft at 0.5 m with $10^{-9}$ m/√Hz jitter. Closing it needs $p\le10^{-4}$ e·cm at 1 mm and jitter $\le1.9\times10^{-11}$ m/√Hz.
+- **Pb and Pino floors** (inertial spectra only):
+  - ground isolated seismic: +5.9 (Pb) and +6.1 (Pino);
+  - with tilt: **+7.2 and +7.3**.
+
+  The plate E-field, Johnson and released-space entries depend on the diamond's dipole and geometry and were not transferred to superconducting spheres.
+- **Space Os option** (Stage 16, Stage 16 rules): needs 0.0087 fm, 2.3 orders below LPF.
+- **Status:** the requirement is below every demonstrated sensor by about 6 orders on the ground, after all levers. **This is the binding engineering obstacle.** Only a released, plate-free space configuration brings it to about 2 orders, and that rests on assumptions.
 
 ![Stage 18: common-mode vs differential noise](figures/stage18_noise.png)
+![Stage 21: levers and redesigns](figures/stage21_redesign.png)
 
 ### 3.5 Vacuum (Stages 12, 16, 20)
 
@@ -191,9 +226,13 @@ Orders of magnitude, $\log_{10}$(required/demonstrated). Positive means short; n
 | Path tag / delocalisation, vs best proposal | Humpty-Dumpty 1.7 (1 MHz packet) to 0 (100 Hz packet); spin-free XXL 1.09 | XXL loop 1.06; tag+inflate 2.51 | Pino expansion 0.55 | proposed only |
 | Internal temperature | 0 if dark protocol works (ceiling 15.7 K, 436 aW) | 0 (3.6 K, 2.3 fW) | 0 (4.6 K, 0.75 fW) | protocol not demonstrated |
 | Blackbody at 4 K (window-grade) | 0 (C = 0.138 unchanged) | 0 | 0 | measured loss tangents |
-| Acceleration noise, ground inertial-only | **+6.2** (0.44 fm) | +5.9 (0.85 fm, uncorrected) | +6.0 (0.68 fm, uncorrected) | demonstrated sensors |
-| Acceleration noise, ground incl. plate surface noise | +8.0 | (+7.7) | +7.8 | extrapolated surface-noise data |
-| Acceleration noise, space (LPF readout reference) | +4.0 | +3.7 | +3.8 | LPF demonstrated in space |
+| Acceleration-noise requirement, exact model, $N_5\le10^4$ (fm s⁻² Hz⁻½) | 1.27 (0.44 at $N_5$=5049) | 0.52 | 0.33 | DERIVED |
+| Hard ceiling $\sqrt{2G\hbar/D^3}$; max loosening | 3.25 fm; +0.41 left (+0.87 vs Stage 18) | 3.37 fm; +0.81 | 3.04 fm; +0.97 | DERIVED |
+| Acceleration noise, ground baseline (isolated seismic + tilt) | +6.9 | +7.2 | +7.3 | demonstrated sensors / bounds |
+| Acceleration noise, ground with plate surface noise | +7.5 | not transferred | not transferred | extrapolated surface-noise data |
+| **Acceleration noise, best redesign, ground** | **+6.0** (echo + neutral dipole + non-metal plate) | +7.2 (echo infeasible) | +7.3 (echo infeasible) | proposed redesign |
+| Acceleration noise, space, trapped (LPF readout reference) | +3.5 | not recomputed | not recomputed | LPF demonstrated in space |
+| **Acceleration noise, best redesign, space** (released, drag-free, no plate, $D$=273 μm) | **+2.0** (ASSUMED 1 mm electrodes, $p$, jitter) | n/a (diamond design) | n/a | proposed |
 | Vacuum (flux) vs best demonstrated upper limit (BASE) | −0.67 | −0.98 | −0.72 | upper limit, hermetic 6.2 K can |
 | Vacuum vs next demonstrated (Gabrielse 1990) | +0.83 | +0.51 | +0.78 | upper limit |
 | Vacuum, space (MAQRO requirement / QPPF estimate) | +1.88 / +3.88 | +1.56 / +3.56 | +1.83 / +3.83 | proposed / study |
@@ -205,7 +244,7 @@ Oppenheim windows (not per design): continuous **excluded**; discrete **9.41**; 
 
 **Reading the table.** For BMV, two axes dominate:
 - delocalisation without a demonstrated tag, about 5 orders against what exists;
-- differential acceleration noise, 6–8 orders on the ground and 4 in space.
+- per-mass acceleration noise: +6.0 on the ground after the best redesign (+7.2/+7.3 for Pb/Pino), and +2.0 in space for a released, plate-free design. The requirement can never be loosened past $\sqrt{2G\hbar/D^3}$.
 
 Vacuum and temperature are at or below zero on paper, but only if hardware that has never been assembled around a levitated particle works as its components do.
 
@@ -233,6 +272,9 @@ Vacuum and temperature are at or below zero on paper, but only if hardware that 
 | 15 | "1e6 amu, 0.1 s closes non-local to 0.15" | generic target; named MUSCLE step leaves 0.86 | 17 |
 | 16 | acceleration-noise requirement 0.90 fm s⁻² Hz⁻½ | 0.44 (exact witness model; 0.31 orders tighter) | 18 |
 | 16 | premise that a shared platform cancels common mode | witness CMRR = 1.006; no rescue | 18 |
+| 18 | noise requirement 0.44 fm at $N_5=5049$ (noise gets 4% of slack) | 1.27 fm at the Stage 16 cap $N_5\le10^4$, used for all designs (+0.46) | 21 |
+| 16/19 | Pb 0.85, Pino 0.68 fm (Stage 16 rules) | 0.52 and 0.33 fm (exact model, $N_5\le10^4$) | this summary |
+| 18 | ground floor +6.2 inertial / +8.0 with plate | +6.9 / +7.5 at $N_5\le10^4$; best redesign +6.0 | 21 |
 | 19 | Pino "vacuum 0.98 orders short" | unit artifact (pressure at 50 mK vs 4 K); −0.72 margin vs BASE in flux | 20 |
 | 15/17 | Pedalino 2025 dated 2025 | journal publication 21 Jan 2026 (CSV keeps the arXiv year) | 17 |
 
@@ -246,26 +288,30 @@ Vacuum and temperature are at or below zero on paper, but only if hardware that 
 - Stage 18's rotation term sits within a factor 2 of the requirement, but it uses an instrument resolution, i.e. an upper bound. LPF's mHz floor is within 0.6 orders, but in the wrong band.
 - Roda-Llordes XL ($7.1\times10^3$) is within 8% of the heavy-mass 5 s requirement ($7.7\times10^3$). Pino's F is within a factor 2 of the requirement at its own mass. Neither was designed against this budget.
 - The three vacuum requirements cluster within a factor 2, and the 1e-15 Pa-at-4 K convention sits within ±0.24 orders of all three. Both follow from the shared rules and from the cheap point having been chosen under that convention.
+- The 2-swap echo requirement (0.687 fm) is within 1% of the old Pino figure (0.68 fm). The calculations are unrelated.
+- In space, self-gravity jitter (+1.7) and electrode E-field (+2.0) land within a factor 2 of each other. Both use ASSUMED parameters.
+- The no-plate trap-surface E-field and space 1 mm E-field residuals are identical (+4.995). That is $z^{-3}/m$ algebra mirroring the 100 μm/1 mm cases.
 - The ³He vapour crossover (61 mK) lies just above Pino's 50 mK design temperature. This is not tuned, but the margin is thin.
 
 ## 7. Conclusions, and what would change the picture
 
-1. **BMV is not mass-limited in the way usually stated.** It is limited by *coherent delocalisation of a massive object*, about 5 orders against anything demonstrated, and by *differential acceleration noise*, 6–8 orders on the ground and 4 in space. Heavier masses convert the gap; they do not shrink it.
+1. **BMV is not mass-limited in the way usually stated.** It is limited by *coherent delocalisation of a massive object*, about 5 orders against anything demonstrated, and by *per-mass acceleration noise*. Noise is about 6 orders on the ground after every protocol lever we found, and about 2 orders in space if the masses are released drag-free with no plate. The requirement cannot be loosened beyond $\sqrt{2G\hbar/D^3}$ (3.25 fm s⁻² Hz⁻½ at 11 μm), whatever the mass, size or hold time. Heavier masses convert the gap; they do not shrink it.
 2. **Vacuum is not the obstacle on paper.** Measured as a flux, the best demonstrated cryogenic limit beats all three designs by 0.7–1.0 orders. Building that environment around a levitated, optically or SQUID-accessed particle is the open experimental question.
 3. **Internal temperature** is a protocol problem: dark loading, dark pump-down and dark hold. It is not a materials limit for clean diamond.
 4. **The nearest decisive physics is Oppenheim's non-local window (3.66 orders).** A ~2 MDa slow-cluster interferometer would close it from below. A 3.7-order better *absolute* force-noise measurement would close it from above.
 
 **What would change this budget:**
 - a demonstrated coherent centre-of-mass expansion of ≥1e4–1e5 zero-point widths for any object ≥1e-15 kg, or a demonstrated which-path tag on a Meissner sphere;
-- a measurement of cryogenic surface electric-field noise at 5 μm. If it is far below our 6-decade extrapolation, the ground floor drops from +8.0 to about +6;
-- a dual-levitation experiment reporting relative acceleration noise between co-trapped particles;
+- a measurement of cryogenic surface electric-field noise at 5 μm. Stage 21's neutral-dipole redesign already removes the permanent-dipole channel. The remaining induced-dipole term (+5.1) sits just under seismic, so this measurement mostly tests whether that redesign's patch-field assumption (10 mV) holds;
+- a dual-levitation experiment reporting relative acceleration noise between co-trapped particles (Stage 21 shows relative-mode schemes give no rejection, so what matters is each mass against its own trap);
+- for space: a demonstrated dipole ≤1e-4 e·cm on a micron particle and electrode or self-gravity noise at the levels Stage 21 assumes;
 - a BASE-class gas-density bound measured inside a levitation cryostat;
 - THz loss measured on the actual NV-bearing, surface-treated microdiamonds at 1–10 K;
 - any new absolute force-noise result beating Gisler 2022, or a MDa-class slow-beam interference result.
 
 ---
 
-## References (all opened during Stages 11–20)
+## References (all opened during Stages 11–21)
 
 - Bose et al., PRL 119, 240401 (2017) — https://arxiv.org/abs/1707.06050
 - Marletto & Vedral, PRL 119, 240402 (2017) — https://arxiv.org/abs/1707.06036
@@ -309,3 +355,6 @@ Vacuum and temperature are at or below zero on paper, but only if hardware that 
 - Cole, Frankl & Goodstein, RMP 53, 199 (1981) — https://doi.org/10.1103/revmodphys.53.199
 - Pfeiffer ASM 340 specification — https://heliumleakdetection.net/helium-leak-detectors/pfeiffer-adixen-leak-detectors/pfeiffer-asm-340-helium-leak-detector/
 - NASA solar wind — https://pwg.gsfc.nasa.gov/Education/wsolwind.html
+- ZARM Bremen Drop Tower user guide — https://www.zarm.uni-bremen.de/fileadmin/user_upload/Research/Testing_and_Facilities/ZARM_BDT_PUG.pdf ; ESA drop-tower guide — https://wsn.spaceflight.esa.int/docs/EUG2LGPr3/EUG2LGPr3-4-DropTower.pdf
+- Hannover Einstein-Elevator — https://www.hcmr.uni-hannover.de/en/details/einstein-elevator ; Sci. Rep. (2023) — https://www.nature.com/articles/s41598-023-46483-4
+- ISS microgravity requirements, SSP 41000E — https://gipoc.grc.nasa.gov/pims/MMAP/PIMS_ORIG/MEIT/MEIT_pdfs/ISS_Requirements.pdf

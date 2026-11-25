@@ -1,0 +1,98 @@
+{
+ "cheap_check": {
+  "m": 5.6234e-15,
+  "dx": 3.852e-06,
+  "t_hold": 2.5,
+  "D": 1.099996976003674e-05,
+  "Phi": 0.5112191875704638,
+  "stage16_rule_req": 8.987705825261808e-16,
+  "ceiling_sqrt_2Ghbar_D3": 3.2521360320603615e-15,
+  "swap0": {
+   "req_white": 1.2736018497495764e-15,
+   "residual": {
+    "seismic_nlnm": 7.396975470807,
+    "seismic_iso_flat": 5.490091854567794,
+    "seismic_iso_passive": 5.4881780815682575,
+    "tilt": 6.922386882652353
+   },
+   "inertial_total": 6.92268327557746,
+   "ratio_to_ceiling": 0.39162010358548793
+  },
+  "swap1": {
+   "req_white": 1.0067089417663496e-15,
+   "residual": {
+    "seismic_nlnm": 7.757355798936183,
+    "seismic_iso_flat": 5.593456720663302,
+    "seismic_iso_passive": 5.591462980582493,
+    "tilt": 5.943963080393562
+   },
+   "inertial_total": 5.9833838104182115,
+   "ratio_to_ceiling": 0.3095531465602803
+  },
+  "best_ground_inertial": 5.9833838104182115
+ },
+ "pb": {
+  "m": 1e-14,
+  "dx": 2.6915348e-06,
+  "t_hold": 1.0,
+  "D": 1.0737969343515616e-05,
+  "Phi": 0.35372466588942414,
+  "stage16_rule_req": 8.508993703147662e-16,
+  "ceiling_sqrt_2Ghbar_D3": 3.3718845815965143e-15,
+  "swap0": {
+   "req_white": 5.180150780523828e-16,
+   "residual": {
+    "seismic_nlnm": 7.930563796223776,
+    "seismic_iso_flat": 5.881435836133548,
+    "seismic_iso_passive": 5.876380025482769,
+    "tilt": 7.151231582917614
+   },
+   "inertial_total": 7.151857528712114,
+   "ratio_to_ceiling": 0.1536277608313372
+  },
+  "swap1": {
+   "req_white": 0.0,
+   "residual": {
+    "seismic_nlnm": Infinity,
+    "seismic_iso_flat": Infinity,
+    "seismic_iso_passive": Infinity,
+    "tilt": Infinity
+   },
+   "inertial_total": Infinity,
+   "ratio_to_ceiling": 0.0
+  },
+  "best_ground_inertial": 7.151857528712114
+ },
+ "pino": {
+  "m": 3.3210781332e-14,
+  "dx": 1.2302687708e-06,
+  "t_hold": 0.5,
+  "D": 1.1496996763234586e-05,
+  "Phi": 0.34466265934244955,
+  "stage16_rule_req": 6.776558359692748e-16,
+  "ceiling_sqrt_2Ghbar_D3": 3.0435421903116495e-15,
+  "swap0": {
+   "req_white": 3.2889921227053957e-16,
+   "residual": {
+    "seismic_nlnm": 8.087714871945026,
+    "seismic_iso_flat": 6.07893108113918,
+    "seismic_iso_passive": 6.073398861394156,
+    "tilt": 7.248528394437413
+   },
+   "inertial_total": 7.249520521244814,
+   "ratio_to_ceiling": 0.10806461409258837
+  },
+  "swap1": {
+   "req_white": 0.0,
+   "residual": {
+    "seismic_nlnm": Infinity,
+    "seismic_iso_flat": Infinity,
+    "seismic_iso_passive": Infinity,
+    "tilt": Infinity
+   },
+   "inertial_total": Infinity,
+   "ratio_to_ceiling": 0.0
+  },
+  "best_ground_inertial": 7.249520521244814
+ }
+}
