@@ -2771,3 +2771,69 @@ What I did not find in these sources: the explicit volume-law constant used as a
 - Lock-in fails for DP.
 - The LPF reanalysis gains only about 1 order.
 - The gains above rest on ASSUMED ε, run counts and source geometry.
+
+## Stage 28 — LISA Pathfinder pressure-free white floor: the public-data reanalysis proposed in Stage 27
+
+**Files:** `scripts/stage28_run.py`, `scripts/stage28_fig.py`, `results/stage28.json`, `figures/stage28_lpf.png`.
+**Labels:** DERIVED means computed here. CITED means taken from a source. ASSUMED means our choice, stated.
+
+### 28.1 Data actually used
+- **Not raw time series.**
+  - The ESA LPF Legacy Archive (https://lpf.esac.esa.int/lpfsa/) is a single-page GWT web app with CAS login (`auth_method: "cas"`). It has an anonymous role, but no documented scripted or TAP interface (`tap_adql_interface_active: "false"`; `/lpf-tap/` returns 404). I did not reverse-engineer its private query backend.
+  - The HEASARC mirror (https://heasarc.gsfc.nasa.gov/FTP/lpf/data/) downloads freely, but it contains only NASA DRS (ST7) telemetry. It has no LTP interferometric Δg, so it is useless at the fm s⁻² level.
+  - Getting raw Δg needs someone to drive the ESA web UI by hand. That is a possible follow-up.
+- **Used instead: published per-run white (Brownian) Δg PSD floors.** These are S_Brown,k with 1σ bars for the 13 noise runs plus the cold run, **digitized** from Fig. 3 of Armano et al. 2024 (PRD 110, 042004, arXiv:2405.05207v3). The script downloads the figure and calibrates pixels against the printed log grid.
+  - Grid residual is ≤ 3e-4 decades. Digitized run times match Table 1 to 0.4% rms (max 1.0%).
+  - ASSUMED: 2% digitization error on S, added in quadrature. Where an error bar is hidden inside the marker, σ is taken as half the marker size, which is conservative.
+- **Temperatures** and mean times come from Table 1; t_v = launch + 62.4 d (CITED).
+- **Validation.** With the floor fixed at zero, our fit gives γ = 0.789 and T_a = 6.91 kK. The paper gives 0.80 ± 0.02 and 7.0 ± 0.2 kK. Our a = 25.4 against the paper's 27.0 ± 0.7 is a 2.3σ offset, probably from different weighting. The paper fits scaled data.
+
+### 28.2 Model and fit (DERIVED; outgassing model ASSUMED, in the paper's own form)
+- **There is no pressure gauge in the LPF GRS.** "Pressure" is inferred from S_Brown itself, so the extrapolation to zero pressure has to go through a model of P(t, T):
+  S_k = a·(t_v/(t_k−t_v))^γ·exp[−T_a(1/T_k − 1/293 K)] + **S_0**,
+  with a, γ, T_a and S_0 all floated.
+- The 284 K runs (10 and 11) provide the temperature lever arm: about 11 K lower temperature means 2.5× less gas noise at the same age.
+- The 95% upper limit comes from the profile likelihood, using Δχ² = 2.71 one-sided.
+
+| Variant | S_0 best [fm² s⁻⁴ Hz⁻¹] | 68% | 95% upper | χ²/dof | Floor vs 0 |
+|---|---|---|---|---|---|
+| A: all 13 runs (**baseline**) | **1.13** | 0.16–1.90 | **2.26** | 6.6/9 | 1.15σ |
+| B: drop runs 1–2 | 1.54 | 0.42–2.22 | 2.49 | 5.1/7 | 1.3σ |
+| C: 13 runs + cold run (274.8 ± 0.5 K) | 1.21 | 0.98–1.42 | 1.55 | 6.6/10 | **4.4σ** |
+| D: runs 8–13 only | 1.01 | 0–2.04 | 2.45 | 2.6/2 | 0.6σ |
+| Model-independent: cold-run level (95%) | — | — | 1.86 | — | — |
+
+- **Coincidence/anomaly flag.** Every variant prefers a non-zero pressure-free floor of about 1.0–1.5 fm² s⁻⁴ Hz⁻¹, which is about 1.1 (fm s⁻²)²/Hz in Δg. That is about 37% of the run-10 PSD.
+  - Without the cold run the preference is 1.2σ, i.e. not significant.
+  - With the cold run it is 4.4σ. But the paper itself excludes that run (temperature not measured directly, poor data quality). The result also hinges on the Arrhenius law holding down to 275 K.
+  - Ordinary explanations are far more likely: the single-activation outgassing model breaking down, a second gas species, white actuation or electrostatic noise, or bias from the paper's "minimum-PSD point = Brownian" step.
+  - Reading it as CQ would need κ ≈ 1e9 at the plateau. Nothing excludes that, but this data cannot test the volume law or the anti-correlation that would identify it.
+
+### 28.3 Bound on the CQ volume-law noise and κ (Stage 26 conventions)
+- **Conversion.** Γ = S_0/4 (differential, one-sided to two-sided per axis). V = M/ρ = 9.74e-5 m³. The plateau DP rate at κ = 1 is Γ_DP = (4π/3)Għ/V = 3.03e-40 m² s⁻³.
+- **Baseline bound.** S_0 ≤ 2.26 fm² s⁻⁴ Hz⁻¹ gives **Γ ≤ 5.7e-31 m² s⁻³**, i.e. **Γ·V ≤ 5.5e-35 m⁵ s⁻³**. The minimum CQ value is (4π/3)Għ = 2.95e-44, so the bound is **9.27 orders short**. Stage 26 was 9.40, so the gain is **0.13 orders**.
+- **Spread across variants:** 9.11–9.31 orders short (gain 0.09–0.29). The model-independent cold-run limit gives 9.19 (gain 0.21).
+- **κ at the plateau (0.63–52 µm):** allowed κ ∈ [1.3e-10, 1.9e9]. Stage 26 had [1.0e-10, 2.5e9].
+- **ℓ exclusion.** LPF alone still excludes only ℓ < 5.6e-14 m, inside the incoherent regime the X-rays already exclude. The 1.8–52 µm band left after Stage 26 S4 survives.
+
+### 28.4 Verdict against the Stage 27 projection (9.4 → 8.4)
+**Not achieved.** The real gain is 0.1–0.3 orders, not 1.0.
+
+Stage 27 assumed a 5% intercept error. The real one is 0.86 fm² s⁻⁴ Hz⁻¹, about 28% of the final PSD, for two reasons:
+1. With no pressure gauge, the pressure model (γ, T_a) must float, and it is strongly degenerate with S_0.
+2. The data prefer S_0 ≈ 1.1 rather than 0, so the upper limit sits above the statistical width.
+
+**What would help:**
+- raw Δg from the ESA archive, to refit S_Brown with full covariance and use the 10 Hz data above the readout rise;
+- an independent gas-species and pressure handle (housekeeping temperatures across the cold run);
+- or LISA's own TMs.
+
+None of these reaches the 9-order gap.
+
+### 28.5 Honest caveats
+- Digitized figure data, not raw telemetry.
+- The outgassing model is ASSUMED.
+- The cold-run temperature is a proxy.
+- The Stage 26 Γ = S/4 convention is carried over unchanged.
+- The anti-correlation term (+4Għ/d³) is neglected, at 1e-3 of the total.
+- No tuning: all fits float every gas parameter. The 2% digitization error is the only ASSUMED number in the error budget.
