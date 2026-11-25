@@ -2837,3 +2837,124 @@ None of these reaches the 9-order gap.
 - The Stage 26 Γ = S/4 convention is carried over unchanged.
 - The anti-correlation term (+4Għ/d³) is neglected, at 1e-3 of the total.
 - No tuning: all fits float every gas parameter. The 2% digitization error is the only ASSUMED number in the error budget.
+
+## Stage 29 — Stress test of the three "possibly new" Stage 27 claims
+
+**Question.** Stage 27 named three results it had not found in the literature. Are they right, and are they new?
+1. The volume law.
+2. The −2Għ/d³ cross-correlation.
+3. Source-mass modulation for the matter-sourced kernel, with ℓ ≥ 2.5 µm from LPF.
+
+**Files:** `scripts/stage29_run.py`, `scripts/stage29_fig.py`, `results/stage29.json`, `figures/stage29_checks.png` (runtime 13 s).
+
+**Labels:** DERIVED means computed here. CITED means taken from a source. ASSUMED means our choice, stated.
+
+**Method.**
+- Everything was re-derived from the Diósi master equation, −(G/2ħ)∫∫[m(x),[m(y),ρ]]/|x−y|, and Tilloy–Diósi Eq. 11, D = γ/4 + V∘γ⁻¹∘Vᵀ. No Stage 27 code was reused.
+- Γ is the two-sided acceleration PSD per axis.
+- Units were checked by exponent vectors (kg, m, s). All pass.
+
+### 29.1 Claim 1, the volume law: confirmed for spheres and cubes, already known, scope corrected
+- **Re-derivation (DERIVED).**
+  - Γ_ij = 4πGħ(κ+1/4κ) ∫d³k/(2π)³ (k_ik_j/k²)|μ̃/M|² = 4πGħ(κ+1/4κ)·N_ij/V_eff.
+  - V_eff = M²/∫ρ², and N_ij is the **magnetostatic demagnetization tensor** of the body shape (trace 1).
+  - The classical-field term has the same 1/k² kernel, C_Φ = πGħ/(κk²), so the (κ+1/4κ) factor multiplies the same structure.
+- **Numbers.**
+  - Independent radial integral for a sphere: ΓV = 2.9483e-44 m⁵ s⁻³, ratio to (4π/3)Għ = 1.00000.
+  - Spheroid N from the k-space integral matches Osborn's analytic demagnetizing factors to 1e-12.
+- **Correction 1, shape.** The law ΓV = (4π/3)Għ(κ+1/4κ) is exact only where N = 1/3, which means spheres and cubes (cubic symmetry).
+  - c/a = 0.1 plate: ×2.58 along the normal, ×0.21 in-plane.
+  - c/a = 10 rod: ×1.47 transverse, ×0.06 axial.
+  - Long rod: ×1.5 transverse, → 0 axial.
+  - Impact:
+    - LPF (cubes), MAQRO, levitated spheres, Westphal spheres and Stage 28 are unchanged.
+    - A nanowire read transversely is ×1.5 (+0.18 orders) above an isotropic estimate.
+- **Correction 2, composition.** Mass and composition independence holds only for **homogeneous** bodies. In general V → V_eff ≤ V by Cauchy–Schwarz.
+  - Example (ASSUMED): a 10 µm silica sphere with a 1 µm Au shell has Γ ×2.31 above the volume law.
+- **Smaller corrections.**
+  - Finite ℓ/R deficit: 0.17% at ℓ/R = 1e-3, 1.7% at 1e-2, 17% at 0.1.
+  - Lattice graininess at ℓ ≥ 4.5 Å: below 1e-30 relative (Au, Si, Pt-Au).
+- **Scaling exponents, rechecked numerically.**
+  - CQ: R⁻³, ρ⁰.
+  - Gas: R⁻⁴, P¹, T^0.5, ρ⁻².
+  - Blackbody: R⁻⁴, T⁵.
+- **Literature: already known (CITED).**
+  - Diósi, arXiv:quant-ph/0607110, Eq. 8: "ω_G² = (4π/3M) G ∫ f²(r) dr … At constant mass density ω_G² = (4π/3) G f̄ = GM/R³". Eq. 13 gives the decoherence time 2ħR³/(GM²|x−y|²). So Γ = ħω_G²/M = (4π/3)Għ/V; the ∫f² form *is* the V_eff law. Original source: Diósi, PRA 40, 1165 (1989).
+  - Diósi, arXiv:1302.5365: ω_G "does not depend on the size but on the density".
+  - Nimmrichter–Hornberger–Hammerer, arXiv:1405.2868, Eq. 11: "D_DP = (Għ/2π²)∫d³k (k_x²/k²)|ρ̃(k)|²". This is the shape-dependent form, and our N_ij is its G = 0 term.
+  - **The volume scaling as the CQ signature** is already in Oppenheim et al., arXiv:2203.01982, Sec. V: "masses with smaller volume should yield larger uncertainty and this would be the effect to look for".
+  - We did not find the demagnetization-tensor reading stated explicitly. It is a one-line consequence of NHH Eq. 11.
+- **Verdict:** confirmed (constant); already known; corrected in scope (shape, homogeneity).
+
+### 29.2 Claim 2, the cross-correlation: confirmed, already known, wording corrected, KTM attribution wrong
+- **Re-derivation (DERIVED).** Cross term of the same double commutator: Γ^AB_ij = Għ(κ+1/4κ)(δ_ij − 3n_in_j)/d³ for non-overlapping spheres.
+- **Numbers.** Independent Fourier integral (4πGħ∫(k_z²/k²)F²cos(k_zd)) at d/R = 2.5, 3 and 5:
+  - longitudinal −2.0000 Għ/d³, transverse +1.0000 Għ/d³;
+  - ρ_long = −0.1280, −0.07407 and −0.01600 respectively, equal to −(3/2π)V/d³ to 1e-7;
+  - point-like limit: self term 1/(6√π)ℓ⁻³ ✓, zero crossing d = 1.936ℓ ✓, far field −12√π(ℓ/d)³ ✓ (ratio 1.000003).
+- **Correction 1, κ.** The cross term is **−2Għ(κ+1/4κ)/d³**, so |Γ_AB| ≥ 2Għ/d³ with equality only at κ = 1/2. Only the correlation *coefficient* is κ-independent. Even that holds only inside the one-parameter DP family, where all three Tilloy–Diósi terms share the 1/k² kernel.
+- **Correction 2, KTM.** The Stage 27 line "exactly the Kafri–Taylor–Milburn mutual noise" is **wrong**.
+  - KTM (arXiv:1401.0946, Eq. 16) has only self terms, −(K/2ħ)Σ_k[x_k,[x_k,ρ]], so its noises are uncorrelated (ρ = 0).
+  - *Coincidence flag:* KTM's self-noise magnitude ħK = 2Għm₁m₂/d³ equals |Γ_AB|M_AM_B, because both come from the tidal constant. They are not the same physics.
+  - Tilloy–Diósi with local monitoring (γ = γ₀δ) gives a cross term ∝ (δ_ij − n_in_j)/d, i.e. **zero longitudinal correlation**.
+  - So the sign and axis pattern discriminates kernels:
+    - DP: anti-correlated along d, correlated transverse;
+    - KTM: none;
+    - local-γ TD: transverse only.
+  - We did not find this pattern stated in this form.
+- **Literature: already known (CITED).**
+  - Gaona-Reyes, Carlesso & Bassi, arXiv:2007.11980 (PRD 103, 056011), Eq. 47, Tilloy–Diósi two-particle term: "− m₁m₂(η₁₂[x̂₁,[x̂₂,ρ̂]] + η₂₁[x̂₂,[x̂₁,ρ̂]])". They also write: "the corresponding term in Eq. (47) contains also position operators of different particles … the TD model cannot be reduced to that of KTM".
+  - Kryhin & Sudhir, arXiv:2309.09105 (PRL 134, 061501): Eq. 6 is ε × the Diósi kernel, and Eq. 8 is "L_G ≈ −ε Gm₁m₂/(ħR³)[x̂₁,[x̂₂,ρ̂Q]]". They propose measuring S_x₁x₂.
+  - *Flag on KS:* expanding their Eq. 6 directly, with both x along +d, gives +2εGm₁m₂/(ħR³)[x̂₁,[x̂₂,ρ̂]]. Their Eq. 8 has half the magnitude and the opposite sign. Their main-text H_G = Gm₁m₂x₁x₂/(2R³) is 4× below the K = 2Gm₁m₂/R³ implied by their appendix μ. This is absorbed in their free ε, and the sign depends on axis convention. Flagged, not resolved.
+- **Verdict:** confirmed (−2Għ/d³ at κ = 1/2); already known (Gaona-Reyes 2021, Kryhin–Sudhir 2023); "independent of κ" corrected to "≥, equality at κ = 1/2"; KTM attribution wrong.
+
+### 29.3 Claim 3, source-mass modulation: DP part confirmed, concept already known, LPF bound corrected from 2.5 µm to 5.5 nm
+- **Rechecked (DERIVED).**
+  - DP: Γ_AA contains no term from body B (B enters only through cross terms), so there is no modulation handle. **Confirmed.**
+  - Matter-sourced kernel (D₀ = δ/(D̂ρ), ⟨δmδm⟩ = (D̂/4)ρδ):
+    - Self term Γ = πρG²D̂/(15R): Monte Carlo/analytic = 1.0009.
+    - Source term G²D̂M_s/(4r⁴) longitudinal, 0 transverse: confirmed.
+    - LPF ceiling: D̂ ≤ 1.169e-15. **The units are kg s, not kg.** This is a label error in Stages 26–27; Oppenheim also writes "kg s".
+- **Correction (DERIVED, ASSUMED kernel reading).** The X-ray heating lower bound on D̂ used the *isolated* nucleus, ∫(∂μ)²/μ = m/ℓ². In a field theory the denominator m(x) is the **total** smeared density. In liquid Xe (a = 4.20 Å) it includes the neighbours once ℓ ≳ a/3.
+  - Lattice integral (ASSUMED simple cubic; the liquid is the same at ℓ > a) relative to the isolated case:
+    - 0.98 at ℓ = 0.15a;
+    - 0.40 at 0.3a;
+    - 0.090 at 0.5a;
+    - 0.011 at a;
+    - 1.8e-4 at 4a.
+  - For ℓ ≥ 0.5a it equals the dense formula m²/(16π^{3/2}ρℓ⁵) to 0.3%. So D̂_min ∝ ℓ⁻⁵, not ℓ⁻².
+  - Cross-check: the dense limit gives η = √3 = 1.732 ≥ 1, so the Stage 26 bound ℓ ≥ η^{1/3}R₀ is untouched.
+- **Result.** The matter-sourced kernel needs **ℓ ≥ 5.5 nm**, not 2.5 µm. Our script reproduces Stage 27's 2.51 µm when it uses the isolated formula.
+  - Beyond about 2 µm, molecule interferometry is the binding lower bound: D̂ ≥ M_λ/λ ≈ 1e-25 kg s, falling as (Δx/ℓ)² for ℓ > Δx. M_λ and λ are CITED from Oppenheim App. F; Δx = 100 nm is ASSUMED.
+  - Window: 1.3 orders at 10 nm, 6.3 at 100 nm, 11.3 at 1 µm, 14.1 at 10 µm, 15.1 at 50 µm. Stage 27 had 1.2 and 2.6 orders at 10 and 50 µm.
+  - The Stage 27 source-mass lock-in (10 kg at 5 cm, D̂ = 1.18e-17) now covers 100% of the window at 10 nm but only **32 / 18 / 14 / 13%** at 0.1 / 1 / 10 / 50 µm. Stage 27 had "whole window for ℓ ≲ 24 µm".
+- **Literature: already known in concept (CITED).**
+  - Oppenheim et al., arXiv:2203.01982, Sec. V / App. F: "the discrete models appear less constrained due to the suppression of the noise away from the mass density … ⟨D₂⟩ = (l_P³/m_P) D₂ m(x)". They give the Cavendish/torsion squeeze "10⁻¹ kg s ≥ (l_P³/m_P)D₂ ≥ 10⁻²⁵ kg s". So matter-sourced noise tested with source masses is already in the paper.
+  - Carney & Taylor, arXiv:2301.08378, give source-mass-sourced noise Γ_incoh = G²Mm²ℓ²σ²/(d⁶v²) and write that "the entire remaining parameter space can be tested by … atom interferometers coupled to oscillating source masses".
+  - What is ours: the LPF self-noise ceiling 1.17e-15 kg s, which is 14 orders below Oppenheim's 10⁻¹, and the lock-in numbers.
+- **Open points (honest).**
+  - For ℓ > a, neighbouring nuclei get strongly correlated kicks. Collective X-ray emission was not modelled. The same open point applies to the Stage 26 DP X-ray mapping for ℓ > a.
+  - The LPF ceiling uses the TM self-term only. Spacecraft masses would tighten it.
+  - The D̂ normalisation mapping to Oppenheim's (l_P³/m_P)D₂ was inherited from Stage 26 and not re-derived.
+- **Verdict:** DP no-modulation confirmed; matter-sourced modulation already known in concept; the Stage 27 bound **ℓ ≥ 2.5 µm is corrected to ℓ ≥ 5.5 nm**, with a window 10–14 orders wider and lock-in coverage 13–32% rather than complete.
+
+### 29.4 What changes in Stage 27 and in what Dan has been told
+- **No DP number changes.**
+  - The volume constant 2.95e-44 m⁵ s⁻³ stands for the LPF cubes and the spheres.
+  - The Stage 26/27/28 DP shortfalls, the 1.8–52 µm gap and the tuning gains all stand.
+- **Novelty claims withdrawn.** None of the three is new:
+  - (1) Diósi 1989/2007, NHH 2014, and the signature use in Oppenheim 2023;
+  - (2) Gaona-Reyes–Carlesso–Bassi 2021 Eq. 47 and Kryhin–Sudhir 2023;
+  - (3) Oppenheim 2023 App. F (matter-sourced) and Carney–Taylor 2023 (oscillating source mass).
+  - What survives as possibly ours:
+    - the demagnetization-tensor statement;
+    - the kernel-discriminating sign pattern (DP / KTM / local-γ);
+    - the LPF numbers for the discrete kernel.
+- **Corrections.**
+  - "Independent of the model's free parameters" → the coefficient is κ-independent; the magnitude is ≥ 2Għ/d³.
+  - "Exactly KTM" → KTM predicts zero correlation.
+  - Discrete kernel ℓ_min: 2.5 µm → 5.5 nm.
+  - D̂ in kg s.
+- **Honest negatives.**
+  - Nothing here helps close the 1.8–52 µm DP gap.
+  - The discrete-kernel window got *larger*, so that model is less constrained than Stage 27 said.
