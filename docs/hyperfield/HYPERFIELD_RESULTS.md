@@ -4214,3 +4214,41 @@ All are honest upper limits; nothing is claimed.
 - The circulating-ratio "path test" is, on reflection, not a test of physical path dependence at all.
 
 **Files:** `scripts/stage48_run.py` (Table S1 transcribed in full), `results/stage48.json`, `results/stage48_sources.csv`, `figures/stage48_eta_path.png`.
+
+## Stage 49: η at x ≈ 1–4 from transmon primary thermometry of propagating microwaves
+
+**Data.** Scigliuzzo et al., PRX 10, 041054 (2020), open-access full text from Chalmers.
+- A transmon at ω_ge/2π = 5.332 GHz measures the thermal occupation n_r of a coaxial line and converts it to T_r with plain Bose–Einstein (their Eq. E3). This is compared with the mixing-chamber RuO₂ thermometer T_MX while the base plate is heated (CITED).
+- Fig. 4(d) is vector art, so its 14 points were read **exactly from the PDF drawing coordinates** (PyMuPDF), with axes calibrated from the tick marks (DIGITIZED; marker-centre precision ≪ 0.1 mK). File: `data/stage49_scigliuzzo2020_fig4d_digitized.csv`.
+- **Fallback not needed:** primary-thermometer data were found, so the qubit thermal-population fallback was not used.
+
+**Model.** Same η as Stage 31: n = 1/((1+η)e^x − 1), with x = ħω/kT. The paper's T_r then reads ħω/[k ln(1+1/n_r)].
+- Fit model: n_r = n_BE(T_MX + δT; η) + n₀.
+- n₀ is the residual occupation from hotter stages, which sets the 35 mK floor (ASSUMED constant).
+- δT is a RuO₂ offset nuisance (ASSUMED).
+- Points span x = 1.2 (212 mK) to 4.3 (60 mK). Below that the floor dominates.
+
+**Results.**
+
+| fit | η | other parameters | rms |
+|---|---|---|---|
+| η, n₀ | +0.002 ± 0.009 | n₀ = 5.4e-4 | 2.4 mK |
+| η, n₀, δT | **−0.032 ± 0.005** | n₀ = 6.5e-4, δT = −3.7 ± 0.4 mK | 0.85 mK |
+| n₀, δT (η = 0) | — | δT = −1.8 mK | 1.8 mK |
+
+**Systematics (DERIVED mapping).**
+- An occupation-scale error s gives η-equivalent s/(1+n). The paper's 1 % calibration check (CITED) gives 0.0075.
+- A T_MX calibration error ε gives η-equivalent x·ε. With an ASSUMED 1 %, that is 0.014 at x ≈ 1.4.
+- Total σ_η = 0.017.
+
+**95 % bound: |η| < 6.6×10⁻² at x ≈ 1.2–4.3. That is 730× weaker than FIRAS (9×10⁻⁵).**
+- **Plain answer:** the lab data do **not** beat FIRAS in FIRAS's own regime (x ≳ 1). FIRAS stays the best x ≳ 1 bound by nearly three orders of magnitude.
+- Stage 48's lab advantage (2.3e-5) exists only at x < 1, and only under the ladder reading.
+
+**Flags.**
+1. **The 6.5σ η in the three-parameter fit is not evidence.** The data show T_r 2–4 % *below* T_MX at 60–150 mK and 1.4 % *above* at 212 mK. A constant η plus offset reproduces that shape, but so would a few-percent RuO₂ calibration nonlinearity, plate–attenuator gradients, or the exponential-tail extrapolation the authors used for each step. Once the 1 % scale and ASSUMED 1 % thermometer systematics are included, η = −0.032 ± 0.017 (1.9σ).
+2. **No error bars.** None are published for Fig. 4(d), so the uncertainty comes from the fit-residual scatter.
+3. **Two transitions.** The thermometer senses both the g–e (5.332 GHz) and e–f (≈5.115 GHz) transitions. The paper's T_r conversion is taken as given.
+4. **RuO₂ calibration uncertainty is not stated in the paper.** The 1 % is ASSUMED.
+
+**Files:** `scripts/stage49_run.py`, `data/stage49_scigliuzzo2020_fig4d_digitized.csv`, `results/stage49.json`, `results/stage49_sources.csv`, `figures/stage49_transmon_eta.png`.
