@@ -3690,3 +3690,74 @@ Spot values: 20 Hz 2.1×10⁻⁵; 50 Hz 4.2×10⁻⁶; 100 Hz 2.7×10⁻⁵; 300
   - LIGO below 10 Hz and above 5 kHz (uncalibrated).
 
 ![Stage 34 frequency coverage](figures/stage34_frequency_coverage.png)
+
+## Stage 35 — The biggest open window, 13 GHz – 14.5 keV (THz, IR, optical, UV, soft X-ray)
+
+**Goal.** Convert published bounds in 13 GHz – 14.5 keV into λ(f) for a resonant release. Sources tried: qubit quasiparticles, low-threshold cryogenic detectors (and their unexplained low-energy excess, LEE), CMB/FIRAS, and optical-to-X-ray spontaneous emission.
+- **Parametrization:** unchanged (λ per nucleon, CSL-equivalent, mass-proportional, r_C = 100 nm).
+- **Rules:** unchanged. Every input was fetched this session (`results/stage35_sources.csv`, 12 sources with quotes).
+
+**Files:**
+- `scripts/stage35_run.py`, `scripts/stage3x_fig.py` (generic figure)
+- `results/stage35.json`, `results/stage35_bounds.csv` (all bands, Stages 31–35), `results/stage35_bulk_tail.csv`, `results/stage35_sources.csv`
+- `figures/stage35_frequency_coverage.png`
+
+### 35.1 The main finding is structural (DERIVED)
+At r_C = 100 nm, mass-proportional noise is almost invisible to ordinary matter across most of this window. There are two reasons.
+
+1. **No photons from neutral matter below ≈12.4 keV.** Donadi 2021 (CITED): emission is coherent for particles closer than both the photon wavelength and r_C. A charge-weighted sum over an atom (ΣQ = 0) then *"add[s] coherently to zero"*. Independent electron/nucleus emission needs λ_k ≪ 0.1 nm, which means E ≫ hc/0.1 nm = **12.4 keV**. Majorana 2022 and the 2022 review restrict the formula to 10–10⁵ keV for the same reason.
+   - So **no laboratory detector spectrum from 30 eV to 10 keV bounds anything here**. That includes SuperCDMS, CRESST, EDELWEISS, SENSEI and DAMIC.
+   - ⚑ **Correction to Stage 33.** Stage 33's suggestion for this window (*"calorimeters staring at a cold massive sample, 1/E favours low energies"*) was **wrong** for neutral matter.
+2. **No phonons far above ~10 GHz.** ccb18 Eq. 19 weights acoustic phonons as x⁴e^(−x²), where x = q r_C = 2πf r_C/v_s and v_s = 4000 m/s (ASSUMED, as in Adler–Vinante and Stage 33). This weight falls as e^(−x²).
+   - **Qubits:** pair-breaking needs 2Δ = 410 µeV, i.e. 99 GHz (Δ = 205 µeV, CITED Serniak 2018). There the weight is ≈10⁻¹⁰⁰, so qubit quasiparticle rates give **no bound** (structural negative).
+
+### 35.2 New bounds
+| band | λ_max (s⁻¹) | how |
+|---|---|---|
+| 13.0 – 20.6 GHz | 4.0×10⁻¹⁰ → 10⁻⁸ | bulk-heating tail. 10 pW/kg residual (CITED) read band-limited (DERIVED), 0.05-decade bins |
+| 20.6 – 25.9 – 32.6 – 36.6 GHz | 10⁻⁸ → 10⁻⁶ → 10⁻³ → 1 | same tail; steep e^(x²) wall |
+| 60 – 630 GHz | 3×10⁸ (useless) | FIRAS: 2× the 50 ppm rms vs free-charge emission of the ionized intergalactic gas (DERIVED) |
+| 1 – 2 keV | **55** | total CXB (Hickox & Markevitch 2006, +2σ), all of it attributed to the free-charge emission of the diffuse ionized gas |
+| 2 – 8 keV | **37** | same |
+
+Notes on the table:
+- **Free charges do radiate.** In the intergalactic gas they are metres apart, ≫ λ_k, so they emit incoherently: Donadi Eq. 44 / Majorana Eq. 2, with E dΓ/dE = 1.04×10⁻²⁰ λ per e² (DERIVED).
+- **Cosmic inputs:**
+  - n_b = 0.253 m⁻³ (Planck Ω_b h² = 0.0224, CITED).
+  - Charge per baryon e²×1.5, the all-He conservative case (ASSUMED).
+  - Ionized fraction 0.5 (ASSUMED, not fetched).
+  - Only emission since z ≈ 0.1 counted (ASSUMED).
+- **Check of the Stage 33 convention.** Stage 33 put the white bound 3.1×10⁻¹¹ on the half-max band. Read band-limited, it is 4.0×10⁻¹¹ (1.30× weaker). That is a small convention flag, not an error.
+
+### 35.3 Low-energy excess (LEE) as a coincidence candidate — **no**
+- **Structural.** In this parametrization nothing can deposit discrete 30 eV – 1 keV events in a neutral crystal. One 30 eV event would need about 2×10⁵ coherent 37 GHz phonons.
+- **Phenomenology (EXCESS 2022, CITED).**
+  - Rates and shapes are *"not compatible between these different detectors"*.
+  - At EDELWEISS the *"absolute rate decreases slowly over time"*, with *"sudden increases … after warming-up the detectors above 10 K"*.
+  - A stationary, universal noise cannot do this.
+- **Energy is not the discriminator.** EDELWEISS RED20 (10⁵ → 10⁴ /keV/kg/day over 0.2 → 1 keV) carries only about 2×10⁻¹⁷ W/kg. That is 2×10⁻⁶ of the bulk-heating residual.
+- **Verdict:** the LEE is not a do-si-do signature here. It could only become one in a non-mass-proportional coupling, or with r_C below the atomic size, which the review cites as excluded (*"values of r_C smaller than 1 nm are already excluded"*, Donadi 2021).
+
+### 35.4 Coverage after Stage 35
+- **Window 13 GHz – 14.5 keV (8.43 dec):**
+  - Formally covered: 2.37 dec.
+  - Covered with λ ≤ 1 s⁻¹: **only 0.45 dec** (13 – 36.6 GHz).
+  - Covered inside Adler's band (≤10⁻⁶): **0.30 dec** (13 – 25.9 GHz).
+- **Stage-31 gap (20.36 dec):**
+  - Formal coverage: 4.17 → 6.54 dec.
+  - With λ ≤ 1: 3.92 dec. The LIGO 1–5 kHz part also drops out under that cut.
+  - Open: 13.82 dec formally.
+- **Whole span:** 10.84 / 25.66 dec covered.
+- **Open inside the window:**
+  - 36.6 – 60 GHz;
+  - 630 GHz – 1 keV (5.6 dec);
+  - 8 – 14.5 keV.
+- **Honest reading:** most of this window is not merely untested but **untestable with neutral laboratory matter** in this parametrization. The only probes are free charges, and only astrophysical plasmas have many of them. A frequency-selective release hiding at optical frequencies is bounded only at λ ~ 10¹–10⁸.
+
+### 35.5 Dropped
+- Qubit quasiparticle rates: 10⁻¹⁰⁰ suppression.
+- Cryogenic detector spectra, and optical/IR/UV lab spontaneous emission: neutral-atom cancellation.
+- Optical/UV extragalactic background, and 13.6 eV – 1 keV: not fetched; Galactic H I absorbs.
+- ⚑ The IGEX band (Stage 33) starts at 14.5 keV, where λ_k = 0.086 nm. That is marginal against the 0.1 nm condition.
+
+![Stage 35 frequency coverage](figures/stage35_frequency_coverage.png)
