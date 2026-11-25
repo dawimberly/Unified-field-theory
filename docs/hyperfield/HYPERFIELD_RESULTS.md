@@ -4319,3 +4319,22 @@ All are honest upper limits; nothing is claimed.
 **Liang 2024 ETH repository retry (once).** HTTP 500 from the JavaScript front end; no files reached, and I made no further attempts.
 
 **Files:** `scripts/stage51_run.py`, `scripts/stage51_fig.py`, `results/stage51.json`, `results/stage51_sources.csv`, `figures/stage51_fb_visibility.png`.
+
+## Stage 52 — Audit of the Grundmann 504.5 zs slope
+
+Details are in `STAGE52_grundmann_504_audit.md`. The script is `scripts/stage52_run.py`; all inputs were re-fetched on 2026-11-25.
+
+- **No convention error.**
+  - Eq. 2 (CITED: τb = cos α0 · R/v_ph, v_ph = E_e/p_e) gives 9204.3 zs per unit cos α0.
+  - This matches the paper's own Fig. 3C axes: 200 zs sits level with 0.022.
+  - Phase velocity is the correct choice, R is not R/2, and the slope is per unit cos β (the CITED ±247 zs is at cos β = ±1).
+- **The 504.5 vs ~445 difference is the per-row fit model.**
+  - The paper's dashed fit, digitized, is 445.2 zs.
+  - A pure Gaussian with |cos α| ≤ 0.25 reproduces their points (scale 0.99) and gives **441.0 ± 35.8 zs**.
+  - Gaussian + constant with |cos α| ≤ 0.4 gives 504.5 ± 36.2 (reproduced).
+  - Fit-model systematic: ±32 zs.
+- **Corrected numbers.**
+  - Slope: **441 ± 36 ± 32 zs**, which is 1.79 × R/c. The paper's own figure is at 1.80 ×.
+  - Residual over the nondipole model: +171 ± 130 zs (1.3σ), down from 1.8σ.
+  - Conservative bound: |d₁| < 489 zs (95 %), replacing 485.
+- **Coincidence flag.** 2.04 ≈ v_g/v_ph = 2, and 2.04 ≈ span/slope. Neither is the cause.
