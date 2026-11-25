@@ -3615,3 +3615,78 @@ A resonant release can no longer hide at 2 mHz–0.19 Hz above about 5×10⁻⁸
   3. conversion of existing Ge spectra over 100 keV–1 MeV.
 
 ![Stage 33 frequency coverage](figures/stage33_frequency_coverage.png)
+
+## Stage 34 — Filling the two cheapest Stage-33 windows: LIGO force noise (10 Hz – 5 kHz) and germanium 100 keV – 1 MeV
+
+**Goal.** Stage 33 named two cheap fills: (1) convert public LIGO noise spectra across 35 Hz – 3 kHz, and 0.19 – 30 Hz where data exist; (2) re-analyse existing Ge spectra over 100 keV – 1 MeV.
+- **Parametrization:** unchanged (λ per nucleon, CSL-equivalent, mass-proportional, r_C = 100 nm).
+- **Rules:** unchanged. Every input was fetched this session (`results/stage34_sources.csv`).
+
+**Files:**
+- `scripts/stage34_run.py`, `scripts/stage34_fig.py`
+- `results/stage34.json`, `results/stage34_bounds.csv` (all bands, Stages 31–34), `results/stage34_ligo_curve.csv`, `results/stage34_sources.csv`
+- `data/stage34/`: the fetched LIGO DCC displacement ASDs for O3a L1 and O3b H1 (G1902347, G2100674), the GWTC-1 GW150914 PSD (P1900011) and its README
+- `figures/stage34_frequency_coverage.png`
+
+### 34.1 Conversion (DERIVED, no free parameters)
+1. **Data, CITED.** The DCC files give the calibrated DARM displacement ASD, 10 Hz – 5 kHz. GWTC-1 gives strain PSDs for 20 – 1024 Hz; these are multiplied by a = 4 km (CITED, Carlesso 2016).
+2. **Displacement → force per test mass.** Four independent free masses, so S_x = 4S_F/(m²ω⁴), which gives S_F = m²ω⁴S_x/4. This is Carlesso 2016 Eq. 15 in the free-mass limit (pendulum resonance below 1 Hz, CITED). Test mass: m = 40 kg (CITED).
+3. **Force → λ.** Stage 33 slab formula, one-sided S_F = 16πħ²λρ²A r_C²/m₀², with fused silica ρ = 2200 kg/m³ and faces A = π(0.17 m)² (CITED, Carlesso–Ferialdi–Bassi 2018).
+- **ASSUMED:** rigid-body response below 5 kHz (internal mirror modes not modelled), and all measured noise attributed to the effect.
+- **No line removal, no smoothing.** Lines make λ(f) locally weaker.
+
+### 34.2 Validation against the published 30–35 Hz bound
+| check | result |
+|---|---|
+| published 95 fN/√Hz → λ | **1.013×10⁻⁵** vs review 1.0×10⁻⁵ (ratio 1.01) |
+| O1 GW150914 H1 PSD, min over 30–35 Hz | 108 fN/√Hz → **1.31×10⁻⁵** (ratio 1.31 to published) |
+| O1 GW150914 L1 PSD, min over 30–35 Hz | 124 fN/√Hz → 1.72×10⁻⁵ |
+
+The pipeline reproduces the published LIGO bound. The O1 BayesWave PSD differs from the spectrum Carlesso read by 14 % in amplitude. This is the expected PSD-estimate difference, not a coincidence.
+
+### 34.3 New bounds, envelope of O3a-L1 / O3b-H1 / O1 (each alone is valid)
+| band | λ_min (s⁻¹) | median | max |
+|---|---|---|---|
+| 10 – 30 Hz | 3.5×10⁻⁶ (25.8 Hz) | 1.6×10⁻⁵ | 6.8×10⁻² (10 Hz) |
+| 30 – 35 Hz | 2.6×10⁻⁶ | 3.2×10⁻⁶ | 4.4×10⁻⁶ — **O3 is ≈4× tighter than the published 1.0×10⁻⁵** |
+| 35 Hz – 1 kHz | **2.2×10⁻⁶ (35.2 Hz, best)** | 2.5×10⁻² | 1.07 |
+| 1 – 2 kHz | 0.22 | 7.5 | 3.9×10³ |
+| 2 – 3 kHz ⚑ | 31 | 172 | 6.1×10³ |
+| 3 – 5 kHz ⚑ | 356 | 3.3×10³ | 3.7×10⁴ |
+
+Spot values: 20 Hz 2.1×10⁻⁵; 50 Hz 4.2×10⁻⁶; 100 Hz 2.7×10⁻⁵; 300 Hz 1.6×10⁻³; 1 kHz 0.95; 2 kHz 62; 3 kHz 715; 5 kHz 3.7×10⁴.
+
+⚑ Above 2 kHz the calibration uncertainty is "larger and unquantified" (DCC abstract). These bands are counted separately.
+
+**Honest note.** The free-mass response makes λ(f) ∝ f⁴S_x(f). Above about 1 kHz, λ > 1 s⁻¹, so the coverage there is formal but physically weak. It is 10–15 orders above the bulk-heating and X-ray numbers. Above about 100 Hz, LIGO is a poor detector of mass-coupled force noise.
+
+### 34.4 Germanium 100 keV – 1 MeV — **dropped (honest negative)**
+- No count-rate spectrum in this range could be fetched as numbers. GERDA, CDEX and Majorana spectra exist only as plots, and quote background indices only near Q_ββ = 2039 keV.
+- The conversion also needs the detection efficiency for photons emitted inside the detector and its surroundings. That comes only from collaboration Monte Carlo: Donadi 2021 gives its fitted efficiency functions only for 1000–3800 keV, and the efficiency "strongly depends on the geometry of the apparatus".
+- Digitizing a plot would still leave the efficiency unverifiable, so the window stays **open**.
+- **Best path:** ask the Majorana/LNGS Ge groups for the binned 100–1000 keV spectrum together with the efficiency MC. Alternatively, an author-run extension of the Donadi 2021 analysis below 1 MeV.
+
+### 34.5 Coverage after Stage 34
+- **Stage-31 gap (20 mHz – 19 keV, 20.36 decades):** Stage 33 covered 1.54 decades; Stage 34 covers **4.17**, so **+2.63 decades are new**. Counting only 10 Hz – 2 kHz, where the calibration uncertainty is quantified, the gain is +2.23. **Open: 16.19 decades.**
+- **Window 35 Hz – 3 kHz:** fully covered (1.93 / 1.93 decades).
+- **Window 0.19 – 30 Hz:** 0.48 of 2.20 decades covered, all of it LIGO 10–30 Hz. 0.19–10 Hz stays open (LIGO is uncalibrated below 10 Hz).
+- **Whole span (20 µHz – 3.8 MeV):** 8.47 of 25.66 decades covered, 17.19 open.
+- **Remaining open windows:**
+
+  | window | width |
+  |---|---|
+  | 0.19 – 9.3 Hz | 1.69 dec |
+  | 5 – 8.2 kHz | 0.21 dec |
+  | 8.2 kHz – 4.6 MHz, minus the ion lines | ≈2.7 dec |
+  | 4.6 MHz – 5.6 GHz | 3.08 dec |
+  | **13 GHz – 14.5 keV** | **8.43 dec** |
+  | 100 keV – 1 MeV | 1.00 dec |
+
+### 34.6 Flags
+- The best new number, 2.2×10⁻⁶ s⁻¹ at 35 Hz, sits at the edge of Adler's 10⁻⁸±² band. It excludes nothing new there; the cantilevers (2×10⁻¹⁰) and LPF are far stronger at nearby frequencies.
+- No excess search was done. The whole measured LIGO noise is attributed to the effect, so this stage gives upper limits only; it cannot detect anything.
+- Dropped:
+  - Ge 100 keV – 1 MeV (above);
+  - LIGO below 10 Hz and above 5 kHz (uncalibrated).
+
+![Stage 34 frequency coverage](figures/stage34_frequency_coverage.png)
