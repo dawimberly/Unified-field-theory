@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
-"""Stage 30 figure: (a) G residual vs test-body volume; (b) |z| vs volume (the actual CQ prediction); (c) CQ-predicted ppm vs 500 ppm."""
+"""Stage 30 figure (verification pass: all geometries from fetched sources; open square = V from mass x handbook density): (a) G residual vs test-body volume; (b) |z| vs volume (the actual CQ prediction); (c) CQ-predicted ppm vs 500 ppm."""
 import json, os
 import numpy as np
 import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 d = json.load(open(os.path.join(ROOT, 'results/stage30.json')))
-T = [t for t in d['table'] if t['method'] != 'AI' and t['geo'] != 'UNKNOWN']
+T = [t for t in d['table'] if t['method'] != 'AI' and t['V_eff'] == t['V_eff']]
 col = {'TB-dyn': 'C0', 'TB-comp': 'C1', 'SUSP': 'C2', 'STAT': 'C3'}
 fig, ax = plt.subplots(1, 3, figsize=(17, 5))
 for t in T:
-    mk = 'o' if t['geo'].startswith('CITED') else 's'
+    mk = 'o' if t['dims_V'] else 's'
     ax[0].errorbar(t['V_eff'], t['ppm'], yerr=t['u_ppm'], fmt=mk, color=col[t['method']], mfc='white' if mk == 's' else col[t['method']], capsize=2)
     ax[0].annotate(t['id'], (t['V_eff'], t['ppm']), fontsize=7, xytext=(3, 3), textcoords='offset points')
     ax[1].plot(t['V_eff'], abs(t['ppm'] / t['u_ppm']), mk, color=col[t['method']], mfc='white' if mk == 's' else col[t['method']])
 for m, c in col.items(): ax[0].plot([], [], 'o', color=c, label=m)
-ax[0].plot([], [], 'ks', mfc='white', label='geometry ASSUMED'); ax[0].plot([], [], 'ko', label='geometry CITED')
+ax[0].plot([], [], 'ks', mfc='white', label='V = cited mass / handbook density'); ax[0].plot([], [], 'ko', label='V from cited dimensions')
 st = d['statistics']['macro_subset']['log10_Veff']
 ax[0].axhline(0, color='gray', lw=0.8); ax[0].set_xscale('log')
 ax[0].set_xlabel('test-body volume V_eff [m^3]'); ax[0].set_ylabel('(G - CODATA)/CODATA [ppm]')
-ax[0].set_title('signed residual: Spearman %.2f (p=%.2f), WLS perm p=%.3f; LEE -> %.2f' % (st['spearman_rho_ppm'], st['spearman_p_ppm'], st['wls_perm_p'],
-                d['statistics']['look_elsewhere']['bonferroni']), fontsize=9)
+sv = d['statistics']['sensitivity_verified_volumes']['drop_3_old_dumbbells_NIST_TRD_LANL']
+ax[0].set_title('signed: Spearman %.2f (p=%.2f), WLS perm p=%.3f, LEE %.2f;\nwithout NIST-82/TR&D-96/LANL-97: perm p=%.2f' % (st['spearman_rho_ppm'], st['spearman_p_ppm'], st['wls_perm_p'],
+                d['statistics']['look_elsewhere']['bonferroni'], sv['wls_perm_p']), fontsize=9)
 ax[0].legend(fontsize=7)
 a = d['statistics_extra']['abs_residual_vs_logV']
 ax[1].set_xscale('log'); ax[1].set_xlabel('V_eff [m^3]'); ax[1].set_ylabel('|z| = |G - CODATA|/u')

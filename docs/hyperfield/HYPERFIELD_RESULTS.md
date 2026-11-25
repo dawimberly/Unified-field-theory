@@ -2965,83 +2965,103 @@ None of these reaches the 9-order gap.
 - The volume law, from Stages 27 and 29: Γ_ii V = 4πGħ(κ+1/4κ)N_ii.
 - Prior art: Oppenheim et al. (arXiv:2203.01982, Sec. V) already floated exactly this: "it is perhaps intriguing that different experiments to measure Newton's constant G yield results whose relative uncertainty differ by as much as 5·10⁻⁴ … masses with smaller volume should yield larger uncertainty and this would be the effect to look for".
 
+**Verification pass (Stage 30v, this revision).** Dan: "recheck it yeah? nothing from memory when its like this."
+- The first version had 10 of 16 geometries marked ASSUMED, meaning recalled and not checked. Every one has now been re-read from a document fetched during this pass.
+- Each row of `results/stage30_G_table.csv` now has `source` (document plus page, table or line) and `quote` columns.
+- Documents used:
+  - CODATA-98 (RMP 72, 351, NIST PDF), Sec. III.Q;
+  - CODATA-02 (RMP 77, 1, NIST PDF), item (h);
+  - CODATA-06 (arXiv:0801.0028), p. 58;
+  - CODATA 2022 (arXiv:2409.03787), Table XXX;
+  - Gundlach & Merkowitz (gr-qc/0006043);
+  - Schlamminger et al. 2006 (gr-qc/0609027);
+  - Parks & Faller 2010 (arXiv:1008.3203);
+  - Kleinevoß PhD thesis (Wuppertal WUB-DIS 2002-2);
+  - Quinn, Speake, Parks & Davis, Phil. Trans. A 372, 20140032 (2014);
+  - Li et al., Nature 560, 582 (2018), Extended Data Tables 1, 2 and 4;
+  - Rosi et al. 2014 (arXiv:1412.7954).
+- **Not re-fetched:**
+  - UCI-14: the publisher PDF is behind Cloudflare. The plate dimensions from Stage 30 are corroborated by a search snippet ("40.5902 mm wide, 40.5900 mm high, and 2.9430 mm thick").
+  - HUST-09: still taken from the Luo review, PMC4173272, as fetched in Stage 30.
+  - Both were already CITED, not ASSUMED.
+- **Handbook densities.** For JILA-18, UWup-02 and HUST-05 the papers give mass and material but no dimensions, so V = m/ρ uses a handbook density (W 19300, Cu 8960, Pyrex 2230 kg/m³). These rows are labelled `V_how = m/rho (ASSUMED-handbook)`, and a sensitivity run drops them.
+- **Naming correction.** The task called JILA-18 "Newman et al."; that is wrong. CODATA 2022 Table XXX lists JILA-18 as "Parks and Faller (2019)", which is the revised JILA-10 (PRL 105, 110801). Newman et al. is UCI-14.
+
 **Files:** `scripts/stage30_run.py`, `scripts/stage30_fig.py`, `results/stage30.json`, `results/stage30_G_table.csv`, `figures/stage30_bigG.png`.
 
-**Labels:** DERIVED means computed here. CITED means taken from a source. ASSUMED means our choice, stated.
+**Labels:** DERIVED means computed here. CITED means taken from a fetched source, with a quote in the CSV. ASSUMED means our choice, stated.
 
 ### 30.1 Data
-**The values.** These are the 16 CODATA input values (CITED). CODATA 2022 (arXiv:2409.03787, Table XXX) is the same set as CODATA 2018: "there is no new relevant input datum for the 2022 adjustment".
-- Recomputed weighted mean: 6.674290; χ² = 197.8 for 15 degrees of freedom, so the Birge ratio is 3.63 (CODATA uses an expansion factor of 3.9).
+**The values.** These are the 16 CODATA input values (CITED). CODATA 2022 (Table XXX) is the same set as CODATA 2018: "there is no new relevant input datum for the 2022 adjustment".
+- Recomputed weighted mean: 6.674290; χ² = 197.8 for 15 degrees of freedom, so the Birge ratio is 3.63 (CODATA uses 3.9).
 - DerSimonian–Laird excess scatter: τ = **83 ppm**. The median quoted error is 39 ppm.
 
-**Test-body geometry, per suspended body.**
-- **CITED this stage:**
-  - UCI-14: fused-silica plate, 40.59 × 40.59 × 2.943 mm, 10.60 g (Newman et al. 2014, Table 3).
-  - HUST-09: glass/quartz block, 91.47 × 12.01 × 26.22 mm, 63.38 g.
-  - HUST-05: Cu sphere, 32.26 g (Luo et al. review, PMC4173272).
-  - BIPM-01/14: Cu-Te cylinders, 1.2 kg, h = d.
-- **ASSUMED** (recalled from the original papers, not re-checked):
-  - NIST-82/LANL-97: W dumbbell, 7 g.
-  - UWash-00: Pyrex plate, 76 × 42 × 1.5 mm.
-  - UWup-02: bobs ~3.2 kg.
-  - MSL-03: Cu ~0.5 kg.
-  - UZur-06: Cu cylinders ~1.1 kg.
-  - HUST-T/A-18: taken to be like HUST-09.
-  - JILA-18: Cu bobs ~0.78 kg.
-- **Excluded from the volume tests:**
-  - TR&D-96: geometry not found.
-  - LENS-14: atoms are point-like, so the volume law does not apply.
+**Verified test-body geometry, per suspended body, and what changed.**
+
+| id | ppm | u | verified test body (CITED) | V_eff (m³) before → now | source mass / distance (CITED) | change |
+|---|---|---|---|---|---|---|
+| NIST-82 | −273 | 64 | W dumbbell: 2 W **disks** 2.5 mm × 7.2 mm dia + W rod ~1 × 29 mm, ~7 g | 1.81e-7 → **1.02e-7** | 2 W spheres ~10.2 cm, ~10.5 kg, centres ~14 cm apart | was "W sphere 3.5 g"; V ×0.56 |
+| TR&D-96 | −210 | 75 | 1.6 g spheres, 7.2 mm dia, on 23 cm beam (version-3 apparatus) | — → **1.95e-7** | brass 8.0 kg (also bronze 4.9, steel 4.3 kg) at 19.2–47.2 cm | was UNKNOWN; **now included** |
+| LANL-97 | −48 | 105 | "the same dumbbell test mass and tungsten source masses" as NIST-82 | 1.81e-7 → **1.02e-7** | as NIST-82 | V ×0.56 |
+| UWash-00 | −7 | 14 | Pyrex plate 1.506 × 76 × 41.6 mm | 4.79e-6 → 4.76e-6 | #316 SS spheres 124.89 mm, ≈8.140 kg, at ρ = 16.76 cm | 42 → 41.6 mm |
+| BIPM-01 | +193 | 40 | Cu-0.7%Te cylinders h = d = 55 mm, ~1.2 kg | 1.35e-4 → 1.31e-4 | Cu-Te h = d = 118 mm, ~11 kg (PRL 2001: 12 kg); separation ~107 mm | dimensions now explicit |
+| UWup-02 | −12 | 147 | 2 pendulum bodies m ≈ 3.3 kg: OFHC-Cu mirror ~198 mm dia in Al mount | 3.76e-4 → 3.68e-4 (Cu lower bound; Al upper 1.22e-3) | 2 brass cylinders 440 × 430 mm, ~576 kg, at 0.915 m | was "~3.2 kg brass"; source r 0.4 → 0.915 m |
+| MSL-03 | −64 | 40 | 532 g horizontal Cu cylinder, 19 mm dia × 220 mm | 5.58e-5 → **6.24e-5** | Cu and SS cylinders; mass and distance not in fetched sources | was "Cu ~0.5 kg, h = d"; now a needle, L/d = 11.6 |
+| HUST-05 | −312 | 130 | Cu test mass ~32 g (32.26 g sphere) | 3.60e-6 (unchanged) | 2 SS cylinders 6.25 kg, 100 × 100 mm, faces 60 mm apart | — |
+| UZur-06 | −7 | 18 | 2 Au-plated Cu cylinders, 45 mm dia × 77 mm, 1.1 kg | 1.228e-4 → 1.225e-4 | 2 field masses of 7.5 t each; signal 784.9 µg | source "13.5 t total" → 2 × 7.5 t |
+| HUST-09 | −121 | 27 | glass/quartz block 91.47 × 12.01 × 26.22 mm, 63.38 g | 2.88e-5 (unchanged) | SS316 spheres 778.18 g | — |
+| BIPM-14 | +186 | 24 | **new** Mk II test masses "similar in size" to Mk I, ~1.2 kg | 1.35e-4 → 1.31e-4 | Mk I sources cut to 115 mm height, ~11.2 kg | flag: Mk II test masses are new bodies |
+| LENS-14 | −358 | 148 | ⁸⁷Rb atoms, 1e5 detected, T = 160 ms, 1.9 s per shot | point-like | 24 W cylinders 99.90 × 150.11 mm, ~516 kg; Δφ = 0.547870 rad | atom numbers now CITED |
+| UCI-14 | +7 | 19 | fused-silica plate 40.59 × 40.59 × 2.943 mm, 10.60 g | 4.85e-6 (unchanged) | 2 OFHC Cu rings 59 kg | — |
+| HUSTT-18 | −17 | 12 | TOS pendulum 1: 91.006 × 11.087 × 30.668 mm, 68.10 g | 2.86e-5 → **3.09e-5** | SS spheres 57.15 mm, 778.0–778.2 g; centre distance 157.19 mm | was "HUST-09-like" |
+| HUSTA-18 | +28 | 12 | AAF pendulum 3: **91.052 × 4.002 × 49.924 mm, 40.04 g** | 2.86e-5 → **1.82e-5** | SS spheres 127.0 mm, ~8.542 kg; 342.29 mm horizontal, 139.79 mm vertical | **same-body assumption false**: V ×0.64 |
+| JILA-18 | −255 | 37 | 2 OFHC Cu bobs, 780 g each (shape not given) | 8.71e-5 (unchanged) | 4 × 120 kg W-alloy cylinders; ΔF = 480 nN per bob | source "~120 kg" → 4 × 120 kg |
 
 **Shapes.**
-- V_eff = V for homogeneous bodies (coatings neglected).
-- The shape factor is the equivalent-spheroid N along the plate normal: UCI 0.90, UWash 0.96, HUST blocks 0.71 (thinnest axis). Cylinders with h = d are taken as N = 1/3 (the true value is 0.31).
+- N_rel is the equivalent-spheroid demagnetization factor along the signal direction. The values are UWash 0.96, UCI 0.90, HUSTA 0.91, HUSTT 0.74, HUST-09 0.71, MSL 0.49 (transverse to a needle), BIPM 1/3, UZur 0.20 (axial).
+- Where the shape or orientation is not given (NIST/LANL disk orientation, UWup mirror thickness, JILA bob shape), the row is excluded from the CQ-proxy test. Its physics N_rel is set to an upper value: N_axis(disk) = 0.63 or 1.
 
-**Table.**
+### 30.2 Statistics (DERIVED; n = 15 macroscopic bodies, TR&D-96 now included)
 
-| id | method | ppm vs CODATA | u (ppm) | test body | V_eff (m³) | geometry |
-|---|---|---|---|---|---|---|
-| NIST-82 | TB dyn | −273 | 64 | W sphere 3.5 g | 1.8e-7 | ASSUMED |
-| TR&D-96 | TB dyn | −210 | 75 | ? | — | UNKNOWN |
-| LANL-97 | TB dyn | −48 | 105 | W sphere 3.5 g | 1.8e-7 | ASSUMED |
-| UWash-00 | TB comp (AAF) | −7 | 14 | Pyrex plate | 4.8e-6 | ASSUMED |
-| BIPM-01 | TB comp | +193 | 40 | Cu-Te 1.2 kg | 1.35e-4 | CITED |
-| UWup-02 | suspended | −12 | 147 | ~3.2 kg bob | 3.8e-4 | ASSUMED |
-| MSL-03 | TB comp | −64 | 40 | Cu ~0.5 kg | 5.6e-5 | ASSUMED |
-| HUST-05 | TB dyn | −312 | 130 | Cu sphere 32 g | 3.6e-6 | CITED |
-| UZur-06 | beam balance | −7 | 18 | Cu ~1.1 kg | 1.2e-4 | ASSUMED |
-| HUST-09 | TB dyn | −121 | 27 | quartz block 63 g | 2.9e-5 | CITED |
-| BIPM-14 | TB comp | +186 | 24 | Cu-Te 1.2 kg | 1.35e-4 | CITED |
-| LENS-14 | atom interferometer | −358 | 148 | ⁸⁷Rb atoms | point-like | — |
-| UCI-14 | TB dyn (4 K) | +7 | 19 | SiO₂ plate 10.6 g | 4.8e-6 | CITED |
-| HUSTT-18 | TB dyn | −17 | 12 | quartz block | 2.9e-5 | ASSUMED |
-| HUSTA-18 | TB AAF | +28 | 12 | quartz block | 2.9e-5 | ASSUMED |
-| JILA-18 | suspended | −255 | 37 | Cu ~0.78 kg | 8.7e-5 | ASSUMED |
+**Before and after verification.**
 
-### 30.2 Statistics (DERIVED; n = 14 macroscopic bodies)
-**Signed residual vs log V_eff.**
-- Spearman ρ = +0.45, p = 0.11.
-- Weighted regression with τ: slope +70 ± 29 ppm per decade, permutation p = **0.066**. Jackknife slopes run from +44 to +90, with no sign change.
-- Adding method fixed effects gives +82 ± 39 per decade, p = 0.034.
-- Documented-geometry subset (n = 5): Spearman 0.87, p = 0.054.
+| test | before (n = 14) | after (n = 15) |
+|---|---|---|
+| Spearman ρ (ppm vs log V) | +0.45, p = 0.11 | **+0.50, p = 0.059** |
+| WLS with τ, slope per decade | +70 ± 29 ppm, perm p = 0.066 | **+69 ± 25 ppm, perm p = 0.035** |
+| jackknife slope range | +44 … +90 | +54 … +86 (no sign change) |
+| with method fixed effects | +82 ± 39, p = 0.034 | +75 ± 33, p = 0.023 |
+| density (perm p) | 0.34 | 0.35 |
+| log mass (perm p) | 0.18 | 0.086 |
+| CQ proxy log(3N/V) (perm p) | 0.13 (n = 14) | 0.045 (n = 11, shape-verified only) |
+| look-elsewhere, Bonferroni(5) / Šidák | 0.33 / 0.29 | **0.18 / 0.16** |
+| "documented" subset | n = 5 CITED: ρ = 0.87, p = 0.054 | n = 12 with V from cited dimensions: ρ = 0.59, p = 0.042; WLS perm p = 0.0022 |
+| \|z\| vs log V (the CQ prediction) | ρ = +0.15, p = 0.60 | ρ = +0.09, p = **0.76** |
+| \|ppm\| vs log V | ρ = −0.08, p = 0.79 | ρ = −0.20, p = 0.47 |
+| method: Kruskal–Wallis / RE χ² | p = 0.085 / 18.1 on 4 dof, p = 0.0012 | unchanged |
 
-**Other variables (permutation p):** density p = 0.34; log mass p = 0.18; CQ proxy log(3N/V) p = 0.13. Method alone gives Kruskal–Wallis p = 0.085, and a random-effects group χ² of 18.1 on 4 degrees of freedom, p = 0.0012.
+**Sensitivity of the signed trend (WLS permutation p).**
+- UWup V_eff at the Al upper bound: 0.033.
+- HUSTT pendulum 2 instead of pendulum 1: 0.032.
+- Dropping TR&D-96: 0.077.
+- Dropping the three handbook-density rows: 0.0026.
+- **Dropping the three old W/7 mm dumbbell time-of-swing results (NIST-82, TR&D-96, LANL-97): ρ = +0.30, slope +55 ± 45, perm p = 0.38.**
+- **Dropping all dynamic torsion runs: perm p = 0.74.**
+- Within class: TB-dyn ρ = +0.45, p = 0.31 (n = 7); TB-comp ρ = +0.67, p = 0.22 (n = 5).
 
-**Look-elsewhere.** The five primary tests have minimum p = 0.066, which becomes **0.33 Bonferroni** (0.29 Šidák). With the extra looks (fixed effects, subsets, |z|) the effective trials factor is about 7–8, so even p = 0.034 becomes about 0.25.
+**Same-volume pairs.**
+- BIPM-14 vs UZur-06: V ratio 1.07, ΔG = +193 ppm (6.5σ).
+- BIPM-14 vs JILA-18: V ratio 1.50, ΔG = +440 ppm (9.9σ).
+- BIPM-01 vs BIPM-14: V ratio ≈ 1.0, ΔG = +7 ppm (0.2σ).
+- UCI-14 vs UWash-00: V ratio 1.02, ΔG = +14 ppm (0.6σ).
+- HUSTT-18 vs HUSTA-18 is **no longer a same-body pair**: V ratio 1.70, ΔG = −45 ppm (2.7σ). The smaller AAF body gives the *higher* G, which is opposite to the overall trend.
 
-**Volume uncertainty.** Smearing the ASSUMED volumes by a factor 3 (1σ log-normal) gives median Spearman p = 0.16. Only 9.6% of draws reach p < 0.05.
-
-**The test that matches the CQ hypothesis.** CQ predicts more scatter at small V, not a signed shift. Spearman of |z| vs log V gives ρ = +0.15, p = 0.60, and |ppm| gives ρ = −0.08, p = 0.79. **Null.**
-
-**Same-volume pairs (no statistics needed).**
-- BIPM-14 vs UZur-06: volume ratio 1.10, ΔG = +193 ppm (6.5σ).
-- BIPM-14 vs JILA-18: volume ratio 1.55, ΔG = +440 ppm (9.9σ).
-- HUSTT-18 vs HUSTA-18: same body, ΔG = −45 ppm (2.7σ).
-
-The largest disagreements occur at nearly equal test-body volume, so volume cannot be the driver.
-
-**Coincidence flag.** The weak positive trend (bigger V gives higher G) is carried by the BIPM pair, which has big Cu-Te bodies and sits high, and by the small-dumbbell dynamic results, which sit low.
-- Volume and method are confounded: the median log V is −5.4 for dynamic torsion balances and −4.3 for compensation balances.
-- Its sign has no CQ meaning, because CQ noise has zero mean (30.3).
+**Coincidence flag.**
+- After verification the signed trend (bigger V gives higher G) got nominally *stronger*: p 0.066 → 0.035, Bonferroni 0.33 → 0.18. On the dimension-only subset it reaches p = 0.002. That subset was chosen after looking, so with about 10 looks it is about 0.02.
+- The trend is carried entirely by three pre-2000 dynamic experiments with ~0.1–0.2 cm³ tungsten or bronze-like bodies at −48 to −273 ppm. Without them, p = 0.38.
+- Volume is confounded with method: median log₁₀V is −5.4 for dynamic torsion runs, −4.2 for compensation balances, and −3.7 to −3.9 for suspended and beam balances.
+- Log mass tracks log V almost as well (dimension subset p = 0.004), so the data cannot tell "volume" from "mass" from "old time-of-swing apparatus".
+- The sign has no CQ meaning, because CQ noise has zero mean (30.3).
 
 ### 30.3 Physics: what CQ noise can do to a G measurement
 **Ceilings used.**
@@ -3049,29 +3069,45 @@ The largest disagreements occur at nearly equal test-body volume, so volume cann
 - Atoms: the X-ray ceiling Γ ≤ Għ/(6√π R₀³) = 7.3e-18 m² s⁻³.
 - Matter-sourced kernel: D̂ ≤ 1.17e-15 kg s (Stage 29).
 
-**Assumptions.**
-- Signal acceleration GM_s/r² from the ASSUMED source geometry.
+**Inputs.**
+- Signal acceleration a_sig, now from verified numbers only:
+  - GM_s/r² with cited M_s and r for NIST, LANL, TR&D, UWash, BIPM, UWup, HUST-05 and HUST-18;
+  - JILA: 480 nN / 0.78 kg = 6.2e-7 m s⁻²;
+  - UZur: 784.9 µg · g / (4 · 1.1 kg) = 1.7e-6 m s⁻² (the factor 4 is conservative);
+  - LENS: Δφ/(k_eff T²) = 1.33e-6 m s⁻² (DERIVED).
+- **Dropped from the physics table** because no source-distance number was found in a fetched source: MSL-03, HUST-09, UCI-14. Before verification they sat at 1e-4 to 1e-3 ppm.
 - Integration time T = 1 day (ASSUMED; shorter than any real campaign, so conservative).
+- LENS uses 1e5 atoms per shot (CITED) and 1e5 s / 1.9 s = 5.3e4 shots (DERIVED). Before verification this was 1e5 atoms and 1e5 shots, ASSUMED.
 
 **Mean bias: none at linear order (DERIVED/CITED).**
 - White force noise has zero mean, so it adds variance only.
-- CQ models reproduce the Newtonian mean: Tilloy–Diósi Eq. 10 has a unitary pair potential plus a double commutator, and Kryhin–Sudhir Eq. 5 has a Poisson equation sourced by ⟨f⟩.
-- DP self-noise does not depend on where the source mass is (Stage 29), so any heating shift cancels in the near–far difference that defines G.
+- CQ models reproduce the Newtonian mean: Tilloy–Diósi Eq. 10 and Kryhin–Sudhir Eq. 5.
+- DP self-noise does not depend on where the source mass is (Stage 29), so any heating shift cancels in the near–far difference.
 
-**Second order.** The only rectification path is the amplitude-dependent torsion period in time-of-swing runs. With deliberately generous inputs (Q = 1e5, period 500 s, A = 1 mrad, c_A = 1 rad⁻², signal frequency shift 1e-3), it is ≤ 5e-5 ppm.
+**Second order.** The time-of-swing rectification bound, with the same generous inputs as before, is now ≤ 1.6e-4 ppm (NIST/LANL), up from ≤ 5e-5. The change comes from the smaller verified disk volume and the larger N.
 
-**Excess scatter at the maximum allowed noise.**
-- Torsion and suspended bodies: 2.5e-7 to 1.2e-3 ppm.
-- LENS atoms: 0.036 ppm. This assumes 1e5 atoms per shot and 1e5 shots, and requires the noise to stay white from X-ray frequencies down to Hz.
-- At the DP floor (κ = 1/2): ≤ 2e-8 ppm.
-- Matter-sourced kernel: ≤ 6e-5 ppm.
+**Excess scatter at the maximum allowed noise, before → now.**
+- Torsion and suspended bodies: 2.5e-7–1.2e-3 → **1.1e-6–1.1e-3 ppm**.
+- LENS atoms: 0.036 → **0.057 ppm**.
+- DP floor: ≤ 2e-8 ppm (unchanged).
+- Matter-sourced kernel: ≤ 6e-5 → ≤ 6.1e-5 ppm.
 
-**Distance from 500 ppm.** Every experiment is **at least 4.1 orders** (LENS) and typically 6–9 orders below 500 ppm, and also far below τ = 83 ppm. Producing 500 ppm in a day would need ΓV = 1e-23 to 3e-16 m⁵ s⁻³, which is **11.3–18.6 orders above** the Stage 28 bound. Noise that large would also show directly in each balance's own noise spectrum.
+**Distance from 500 ppm.** Every experiment is **at least 3.9 orders** below 500 ppm (LENS; it was 4.1), and torsion and suspended bodies are 5.6–8.7 orders below. Producing 500 ppm in a day would need ΓV = 1.5e-23 to 1.5e-17 m⁵ s⁻³, which is **11.3–17.3 orders above** the Stage 28 bound (was 11.3–18.6).
 
-### 30.4 Verdict
-- **No CQ explanation.** At the maximum allowed strength the noise is ≥ 4 orders too small; it has no linear mean-bias mechanism; and the scatter test it actually predicts is null (p = 0.60).
-- **The data show no significant volume trend.** The weak signed trend (+70 ppm per decade, p = 0.066, about 0.3 after look-elsewhere) is confounded with method and contradicted by same-volume pairs that differ by 193–440 ppm.
-- **Method is the stronger, already-known pattern.** Dynamic torsion runs sit at −110 ± 38 ppm, compensation runs at +66 ± 39, suspended bodies at −200 ± 80 (random-effects p = 0.001). That points to method-specific systematics, not gravity noise.
-- **Honest negatives.**
-  - The CQ idea (Oppenheim's own speculation) is excluded for G by 11–19 orders in ΓV.
-  - 10 of 16 geometries are ASSUMED. The conclusion does not depend on them, because the physics margin is ≥ 4 orders and the same-volume pairs are CITED or near-CITED (BIPM).
+### 30.4 Verdict (unchanged in substance after verification)
+- **No CQ explanation.**
+  - At the maximum allowed strength the noise is ≥ 3.9 orders too small (≥ 5.6 for macroscopic bodies).
+  - It has no linear mean-bias mechanism.
+  - The scatter test it actually predicts is null (p = 0.76).
+- **The volume trend is not robust evidence of anything new.**
+  - The signed trend strengthened on verified geometry: +69 ± 25 ppm per decade, permutation p = 0.035, about 0.18 after look-elsewhere.
+  - But it comes entirely from the three old small-dumbbell time-of-swing results. Without them, p = 0.38.
+  - It is confounded with method (within-class p = 0.22–0.31).
+  - It is contradicted by same-volume pairs that differ by 193–440 ppm.
+  - HUST's two 2018 bodies point the opposite way.
+- **Method remains the stronger, already-known pattern.** Dynamic torsion runs sit at −110 ± 38 ppm, compensation runs at +66 ± 39, suspended bodies at −200 ± 80 (random-effects p = 0.001).
+- **Honest negatives and open items.**
+  - The CQ idea (Oppenheim's own speculation) is excluded for G by 11–17 orders in ΓV.
+  - The verification found two of the earlier assumptions wrong: the HUST-18 AAF body is not the TOS body (V ×0.64), and NIST/LANL use disks, not spheres (V ×0.56). MSL-03 is a 220 mm needle, not an h = d cylinder.
+  - The smallest margin moved by only 0.2 orders (4.1 → 3.9, LENS). Individual rows moved by up to 1 order (UWup-02, because the verified source distance is 0.915 m, not the assumed 0.4 m).
+  - Not verified, and therefore dropped from the physics: the source distances for MSL-03, HUST-09 and UCI-14.
