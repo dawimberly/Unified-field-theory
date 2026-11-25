@@ -1999,6 +1999,186 @@ The space requirement is $1.0\times10^{-17}$ m s⁻²/√Hz. Meeting it needs $p
 
 ![Stage 21](figures/stage21_redesign.png)
 
+## Stage 22 — Designing the experiment that closes the non-local Oppenheim window
+
+**Question.** Stages 15 and 17 left the non-local (Diósi–Penrose-like) window of Oppenheim et al. open by **3.66 orders**:
+- floor: $l_P^2D_2 \ge 1.47\times10^{-29}$ kg² s m⁻¹ from Pedalino 2025 (172 kDa Na);
+- ceiling: $l_P^2D_2 \le 6.69\times10^{-26}$ from Gisler 2022 (FOM 0.298 m² s⁻³).
+
+This stage designs the interferometer that closes the window from below. It includes every real constraint, finds the cheapest point, compares the other routes and the ceiling side, and re-checks the model. Scripts: `scripts/stage22_run.py` (with `scripts/stage22_tl.py`) and `scripts/stage22_fig.py`. Output: `results/stage22.json`.
+
+**Model re-check (part 3).**
+- I fetched the journal text of Oppenheim et al., Nat. Commun. 14, 7910 (2023), Methods Eq. (47). It reads $\sigma_a^2Nr_N^3\Delta T/G^2 \ge l_P^2D_2 \ge N_\lambda M_\lambda^2/(R_\lambda\lambda)$ with $R_\lambda\sim V_\lambda^{1/3}\sim10^{-12}$ m, and quotes a lower bound of $10^{-35}$ kg² s m⁻¹. CITED.
+- Stage 15 used exactly this expression: $N M^2\tau/R$ with $R=(r_N^2\Delta x)^{1/3}$, $r_N=10^{-15}$ m, and upper bound $(r_N^3/G^2)\,$FOM. Re-running it on Pedalino gives $1.47\times10^{-29}$, unchanged.
+- arXiv:2203.01982v1 has a different Eq. (47): no $N_\lambda$, $R\sim10^{-9}$ m, and $10^{-40}$. The journal version supersedes it.
+- **Erratum (units).** Stages 15 and 17 label $l_P^2D_2$ in kg s m⁻¹. The correct unit is **kg² s m⁻¹**, as in the published text. The numbers are unchanged.
+- **Newer work (searched for 2025–26).** None of it tightens this window:
+  - Oppenheim & Sajjad, arXiv:2605.05375 (v2, Sep 2026): covariant theory with dimensionless scalar and tensor couplings; LVK tensor ceiling ~3.3×10⁻⁶⁷; floor ~10⁻⁷¹. Different parameter.
+  - Oppenheim, arXiv:2511.10738: stochastic Klein–Gordon theory, no new bound.
+  - Hirotani & Matsumura, arXiv:2603.29230: strain spectra from GW detectors for the original model's $D_0$. Different kernel.
+  - Angeli et al., arXiv:2501.13030 v3: an LOCC-diffusion torsion protocol. A proposal for a different parameter.
+  - An unrefereed Zenodo note (10.5281/zenodo.24089422) argues that $V$ is set by a free smearing length, not by the wavepacket. This supports our Stage 15 convention flag.
+  - A Nov 2026 "hexagonmath" preprint claims XENONnT excludes Gaussian covariant CQ gravity. Its own provenance note says it is AI-generated, and it is not on arXiv under the ID it shows. Not used.
+  - **The 3.66-order gap stands.**
+
+**Closing law (DERIVED).** In any symmetric Talbot–Lau interferometer (spatial or time domain), $\xi=L/L_T$ with $L_T=Mvd^2/h$. The coherence time is then $\tau=2L/v=2\xi d^2M/h$, so **the velocity drops out**. Closing requires
+
+$$2\xi M^4 d^{5/3}/(h\,m_a\,r_N^{2/3}) \ge 6.69\times10^{-26}\ \text{kg}^2\,\text{s m}^{-1}.$$
+
+Slowing the beam does not change the bound at fixed ξ. Slowing only keeps $L$ at laboratory length: $L=\xi d^2Mv/h$.
+
+Mass needed to close, $M_{\rm close}$ (MDa):
+
+| configuration | ξ=0.5 | 0.8 | 1.0 | 1.5 | 2.0 | τ at ξ=0.8 |
+|---|---|---|---|---|---|---|
+| Na, d=133 nm (MUSCLE, 266 nm) | 1.59 | **1.415** | 1.34 | 1.21 | 1.13 | 100 ms |
+| Na, d=177.5 nm (355 nm) | 1.41 | 1.26 | 1.19 | 1.07 | 1.00 | 159 ms |
+| Au, d=133 nm | 2.72 | 2.42 | 2.29 | 2.07 | 1.93 | 172 ms |
+| Na, d=266 nm (LUMI period) | 1.19 | 1.06 | 1.00 | 0.91 | 0.84 | 301 ms |
+| Au, d=78.8 nm (OTIMA 157 nm) | 3.39 | 3.01 | 2.85 | 2.57 | 2.40 | 75 ms |
+
+- Lighter constituents help, because $N_\lambda=M/m_a$: Au needs 1.71× the mass of Na. This is a property of the Eq. (47) convention and is flagged.
+- **Fixed MUSCLE length (L = 0.983 m, d = 133 nm), $M_{\rm close}(v)$:**
+
+  | v (m/s) | 10 | 15 | 20 | 25 | 40 | 160 |
+  |---|---|---|---|---|---|---|
+  | M_close (MDa) | 1.13 | 1.30 | 1.43 | 1.54 | 1.80 | 2.85 |
+  | ξ at M_close | 1.96 | 1.14 | 0.78 | 0.58 | 0.31 | 0.05 |
+
+**Interference model (DERIVED from CITED formulas).**
+- I used Pedalino et al. Methods Eqs. (1)–(9) with optical photodepletion and phase gratings, in both quantum and classical (moiré) forms, averaged over the velocity and mass distributions.
+- Inputs are all CITED: $\sigma_{\rm ion,266}=(0.537\,m/{\rm kDa}-1.5)\times10^{-20}$ m², $\alpha_{266}/{\rm atom}=-4\pi\varepsilon_0(4.5\pm0.5)$ Å³, vertical waist ≈600 µm, global factor 0.78.
+- **Validation.** At 172 kDa, 160±10 m/s and 62/15.2/68 mW, the model gives $V_q=0.105$ and $V_{cl}=0.004$. The measured value is 0.10±0.01. Nothing was fitted.
+- **5σ criterion.** $\Delta V_{\rm worst}\ge5\sqrt{2(N_s+N_b)}/N_s$.
+  - $\Delta V_{\rm worst}$ is the smallest quantum–classical difference over α ±11% (CITED) × $\sigma_{\rm ion}$ ±20% (ASSUMED, because the fit is extrapolated ×8 in mass).
+  - Dark counts $b=15$ cps (CITED lower end of 15–100).
+  - Decoherence factors are applied to both models (conservative).
+  - Grating powers are design variables, chosen on a fixed grid to minimise run time.
+
+**Constraints at the chosen point** (ξ=0.8, M=1.415 MDa = 61,600 Na atoms, radius 8.2 nm, L=0.983 m, v=19.6 m/s, τ=100 ms):
+- **Talbot length:** $L_T=1.23$ m.
+- **Gravity sag:** $gT^2/2=12.4$ mm per arm. The 0.6 mm grating height (CITED) then limits Δv/v to ≤1.21%.
+- **Grating orientation:** the grating vector must be horizontal. A vertical one would need Δv/v ≤ 6.7×10⁻⁷.
+- **Coriolis** (48.2° N): the uncompensated fringe shift is 5.4 µm (40 d).
+  - A deliberate tilt of $\theta_c=\Omega_\perp v/g=108$ µrad cancels the first-order velocity dispersion (DERIVED).
+  - The residual is 0.27 nm (0.002 d) at Δv/v = 1%. Tilt tolerance is 27 µrad.
+- **Thermal photons** (Drude Na with size-limited damping; electric and magnetic dipole; long-wavelength exponent $(d^2\tau/18)\int Rk^2$):
+
+  | process | exponent |
+  |---|---|
+  | absorption of 300 K background | 0.032 |
+  | Rayleigh scattering | 7×10⁻⁶ |
+  | emission, $T_{\rm int}$ = 100 K | 2×10⁻⁵ |
+  | emission, 300 K | 0.032 |
+  | emission, 357 K | 0.10 |
+  | emission, 600 K | 3.2 |
+
+  So **$T_{\rm int}\lesssim350$ K is required** (DERIVED). Clusters that are only evaporatively cooled would fail. Cryogenically thermalised clusters pass.
+- **Collisions.** The cross-section is the geometric $2.2\times10^{-16}$ m², which exceeds the r⁻⁶ value of $1.5\times10^{-16}$.
+  - For an exponent of 0.1 the required H₂ pressure at 300 K is **≤1.06×10⁻¹⁰ mbar** (flux $J\le1.1\times10^{15}$ m⁻² s⁻¹).
+  - At MUSCLE's 9×10⁻⁹ mbar the exponent is 8.5, so 2×10⁻⁴ of the clusters survive. **The vacuum must be 85× better.**
+- **Material gratings and van der Waals dispersion.** Point-dipole Lifshitz $C_3=2.2\times10^{-44}$ J m³. For a 10 nm-thick wall at 19.6 m/s, the radius where the vdW phase reaches π is 323 nm, against a half-period of 66.5 nm.
+  - **Material gratings are excluded.** The interferometer must be all-optical.
+  - This also rules out LUMI-type SiN G1/G3 for metal clusters. A 532 nm all-optical variant cannot photodeplete Na: 2.33 eV is below the measured 2.4 eV work function (CITED).
+- **Grating powers** (DERIVED for $n_0=6$, $\phi_0=1$): P1 = P3 = 2.2 mW and P2 = 67 µW. Pedalino used 62/15/68 mW.
+  - Model visibilities ×0.78: $V_q=0.029$, $V_{cl}=0.433$.
+  - $\Delta V_{\rm worst}=0.30$; transmission $S_0=0.054$.
+- **Source, velocity and count rate.**
+  - The demonstrated neutral beam runs at 120–170 m/s, about 140 ± 10 m/s (CITED). The fraction at 20 m/s is ~e⁻⁷², so **velocity selection cannot work. Active slowing is required.**
+  - Route (MUSCLE's own proposal, CITED): mass-selected cluster anions, then a cryogenic ion guide, then electrostatic deceleration to 2.81 eV (stray-potential tolerance 0.056 V for Δv/v = 1%), then UV photodetachment.
+  - Source: 10 pA mass-selected current (ASSUMED, at the CITED "tens of pA" for Ag and Cu up to ~70,000 atoms, M/ΔM ≈ 25) = 6.2×10⁷ s⁻¹.
+  - Efficiencies (ASSUMED): neutralisation 0.3; transverse temperature 10 K (σ_v = 0.24 m/s), so a 0.5 mm collimation over 2L passes $f_{\rm geo}=6.7\times10^{-5}$; detection 0.1.
+  - Result: **126 s⁻¹ at G1 and 6.2 cps detected**, giving **T(5σ) = 315 s** per P2 setting. A P2 curve of 8 settings (ASSUMED) takes about 0.7 h.
+  - If the rate is 10× lower, T(5σ) is 6.5 h. If it is 100× lower, 26 days.
+
+Statistical run time along the curve (ion route, L = 0.983 m):
+
+| ξ | M (MDa) | v (m/s) | $\Delta V_{\rm worst}$ | T(5σ) |
+|---|---|---|---|---|
+| 0.2–0.4 | 2.0–1.68 | 55–33 | 0.01–0.03 | fails robust discrimination |
+| 0.5 | 1.59 | 27.9 | 0.057 | 2,300 s |
+| 0.6 | 1.52 | 24.3 | 0.15 | 546 s |
+| **0.8** | **1.415** | **19.6** | **0.30** | **315 s** |
+| 1.0 | 1.34 | 16.6 | 0.25 | 403 s |
+| 1.5 | 1.21 | 12.2 | 0.17 | 3,000 s |
+
+- The model agrees with Pedalino's statement that ξ ≳ 1 is needed. Below ξ ≈ 0.5 the quantum–classical difference does not survive the α/σ uncertainty.
+- A 10× margin over the ceiling at ξ=0.6 needs 2.70 MDa at 13.7 m/s, with T(5σ) = 2,600 s.
+- **Cheapest point.** The objective was fixed before the scan: all constraints pass and statistical time is minimal. The winner is **ξ = 0.8: 1.415 MDa Na at 19.6 m/s in the existing 0.983 m all-optical geometry.**
+- **Neutral alternative without slowing.** At 140 m/s the arms must be 7.0 m (ξ = 0.8), 14 m in total, with Δv/v selected to 1.25%.
+  - The rate is unknown. I scaled it from an inferred MUSCLE rate of ~2.8×10² cps at 172 kDa (from σ_V = 0.01 ⇒ ≥2×10⁴ counts per scan, with an ASSUMED 72 s scan).
+  - With an ASSUMED 1.4-MDa/172-kDa flux ratio of 10⁻²: 0.26 cps, T(5σ) = 3.1×10⁵ s (3.5 days). At 10⁻³: about 1 year.
+
+**Route comparison** (same Eq. 47 and $r_N$; orders left, negative = closes):
+
+| route | status | orders left |
+|---|---|---|
+| Pedalino 2025, 172 kDa | demonstrated | 3.66 |
+| MUSCLE 1 MDa @ 25 m/s, τ = 2L/v | proposed (Pedalino Fig. 3c) | **0.56** |
+| same, τ = L/v as Stage 17 used | — | 0.86 — **erratum** |
+| Na at d = 266 nm, 1 MDa, ξ = 1 (LUMI period) | needs material G1/G3 → excluded | 0.00 |
+| OTIMA Au 10⁶ amu, 2nd Talbot order (τ = 60 ms) | proposed (Nimmrichter 2011) | 1.52 (closes at 2.40 MDa) |
+| Bateman/Ulbricht 10⁶ amu Si, 286 ms release→screen, Δx 150 nm | proposed 2014, not realised | 0.10 (grating→screen only: 0.46); closes at 1.08×10⁶ amu |
+| Neumeier/Romero-Isart 10⁸ amu, 1 ms, 5 nm | proposed | −4.08, **flagged** (Δx ≪ particle size) |
+| Rossi 2025, 73 pm, 26.5 µs | demonstrated delocalisation | −5.69, **flagged** (same) |
+
+- **Erratum (Stage 17).** The MUSCLE 1 MDa @ 25 m/s projection and the "1.93 MDa needed at 25 m/s" used τ = L/v. Pedalino's floor (and Stage 17's own 160 m/s figure) used τ = 2L/v. With τ = 2L/v the corrected values are **0.56 orders left** and **1.54 MDa at 25 m/s**.
+
+**Ceiling side (closing from above).**
+- The FOM must fall from 0.298 to **6.54×10⁻⁵ m² s⁻³**, i.e. 3.66 orders.
+- At the thermal floor, $\mathrm{FOM}_{\rm th}=4k_BT\omega_0/(Qm_a)$ (Janse; independent of the sensor mass). That requires $T\omega_0/Q \le$ 3.9×10⁻⁸ K s⁻¹ (20 u), 1.25×10⁻⁷ (NdFeB) or 3.9×10⁻⁷ (Au).
+
+| sensor | FOM (m² s⁻³) | vs needed |
+|---|---|---|
+| Amaral 2025 0.43 mg maglev, measured (CITED) | 0.881 | 4.13 orders short (vibration-limited) |
+| same, thermal floor at 20 mK (ASSUMED), Q = 9.3×10⁶ (CITED) | 1.9×10⁻⁴ | 0.46 short |
+| same, Q = 10⁸ (ASSUMED) | 1.75×10⁻⁵ | closes by 0.57 |
+| room-T torsion, 1 mHz, Q 5×10⁵ (ASSUMED class) | 4.7×10⁻³ | 1.85 short |
+| 4 K torsion, Q 10⁷ (ASSUMED) | 3.1×10⁻⁶ | closes by 1.32 |
+| LISA Pathfinder (differential, L1) | 1.78×10⁻⁵ | would close by 0.57 |
+| Asenbaum 2017 (differential) | 2.41×10⁻¹¹ | would close by 6.43 |
+
+- **Honest flag.** The window is still "open" only because Stage 15 counts absolute sensors only. Admit LISA Pathfinder or Asenbaum and it is already closed from above. Nothing demonstrated in absolute mode is within 4 orders.
+
+**Best route and demonstrated vs needed (part 4).** The best route is the slow-ion upgrade of MUSCLE at ξ ≈ 0.8.
+
+| item | demonstrated | needed | gap |
+|---|---|---|---|
+| quantum-discriminating mass | 172 kDa (Pedalino 2025) | 1.415 MDa | ×8.2 (moiré only, 0.4–1 MDa) |
+| beam velocity | 120–170 m/s neutral | 19.6 m/s, Δv/v ≤ 1.2% | ×7 slower; MDa anion deceleration and photodetachment not demonstrated |
+| mass-selected current | tens of pA, ≤70k atoms (Ag/Cu) | ~10 pA of Na₆₁₆₀₀⁻ | at the edge; Na not shown |
+| internal temperature | not reported | ≤ ~350 K | unknown |
+| vacuum | 9×10⁻⁹ mbar | ≤1.1×10⁻¹⁰ mbar H₂ | ×85 (routine XHV technology) |
+| alignment | Coriolis/gravity averaging absorbed into 0.78 | 108 µrad compensation tilt, ±27 µrad | new |
+| $\sigma_{\rm ion}$, α at MDa | fit 100–200 kDa; α from 0.4–1 MDa | inside ±20% / ±11% | systematic |
+
+Projected: **6.2 cps, 315 s per 5σ setting, ~0.7 h per P2 curve** (statistical, with ASSUMED efficiencies). The run time is not the bottleneck. Slowing and the source are.
+
+**Coincidences flagged.**
+1. The Na closing mass at d = 266 nm and ξ = 1 is 1.003 MDa, the same round "1 MDa" target as MUSCLE. That route is excluded anyway (material gratings).
+2. The Bateman/Ulbricht 2014 design lands within 0.10 orders of closing. Its 10⁶ amu was chosen for free-fall reasons, not for this bound.
+3. LISA Pathfinder (1.78×10⁻⁵) and the ASSUMED Q = 10⁸ maglev (1.75×10⁻⁵) both give +0.57. That is numerics, not physics.
+4. τ ≈ 100 ms at the cheapest point equals Gerlich 2011's 0.1 s. Unrelated, because v drops out.
+
+**Honest negatives.**
+- Slowing buys nothing at fixed ξ. The bound depends on $M^4\xi d^{5/3}$.
+- Every floor-side number rests on the Eq. (47) conventions: $\Delta x = d$, $r_N=10^{-15}$ m, $N_\lambda=M/m_a$. Of these, $\Delta x$ alone moves the bound only as $d^{-1/3}$, but the smearing length is free.
+- The levitated routes that "close by 4–6 orders" do so only through Δx ≪ particle size, and are excluded by the Stage 17 rule.
+- The source efficiencies are assumptions.
+
+**Sources (verified this stage).**
+- Oppenheim et al., Nat. Commun. 14, 7910 (2023), Eq. 47 and Table 1: https://www.nature.com/articles/s41467-023-43348-2 ; arXiv v1: https://arxiv.org/abs/2203.01982
+- Pedalino et al., Nature (2026) / arXiv:2507.21211 (Methods Eqs. 1–9, σ_ion, α_266, waists, 9×10⁻⁹ mbar, 15–100 cps dark counts, 25 m/s statement): https://arxiv.org/html/2507.21211v1 , https://www.nature.com/articles/s41586-025-09917-9
+- Pedalino et al., AVS Quantum Sci. 8, 013201 (2026), moiré 0.4–1 MDa, V = 0.41 ± 0.02, ~1% transmission: https://doi.org/10.1116/5.0301389
+- MUSCLE project (anion mass selection, cryogenic ion guide, UV detachment): https://ucrisportal.univie.ac.at/en/projects/multi-skalen-cluster-interferenz/
+- Size-selected cluster currents: Pratontep et al., RSI 76, 045103 (2005), https://doi.org/10.1063/1.1869332 ; Kemper et al., IJMS 254, 202 (2006) (tens of pA, M/ΔM ~ 25): https://buratto.chem.ucsb.edu/sites/secure.lsit.ucsb.edu.chem.d7_buratto/files/sitefiles/publications/Kemper_MassSpec_2006.pdf
+- Bateman, Nimmrichter, Hornberger, Ulbricht, Nat. Commun. 5, 4788 (2014): https://www.nature.com/articles/ncomms5788
+- Nimmrichter et al., PRA 83, 043621 (2011) (OTIMA, 10⁶ amu, 60 ms at 2nd order): https://doi.org/10.1103/physreva.83.043621 ; OTIMA: https://arndt.univie.ac.at/research/universal-matter-waves/otima-interferometry/
+- Newer theory: https://arxiv.org/abs/2605.05375 , https://arxiv.org/abs/2511.10738 , https://arxiv.org/abs/2603.29230 , https://arxiv.org/abs/2501.13030 , https://doi.org/10.5281/zenodo.24089422
+- Ceiling-side rows reuse the Stage 15/17 data (Gisler 2022, Amaral 2025, LISA Pathfinder 2018, Asenbaum 2017; Janse et al. PRR 6, 033076 (2024)).
+
+![Stage 22](figures/stage22_closing.png)
+
 ## Stage 23 — The Stage 21 space design with measured inputs
 
 **Question.** Stage 21's best space design gave +2.0 orders: released, drag-free, no plate, $D=273\,\mu$m diamond, $m=2.8\times10^{-14}$ kg, requirement $1.03\times10^{-17}$ m s⁻²/√Hz at $N_5\le10^4$. Three inputs were ASSUMED:
