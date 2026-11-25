@@ -3936,3 +3936,27 @@ All inputs were fetched this session (`results/stage37_sources.csv`).
   - The Youssefi thickness comes from a simulation caption.
   - The Al density is derived from Teufel's quoted mass and geometry.
   - Upper limits only; no excess claimed.
+
+## Stage 42: narrow lines in the 4.6 MHz – 5.6 GHz gap from published heating and occupancy numbers
+
+No accounts were registered.
+
+**Method.** The Al drum uses the Stage 36 thin-plate formula. The quartz BAW and sapphire HBAR use the Stage 33 bulk single-phonon-mode formula (validated against Schrinski at 1.009), with k0 = ω/v. The bulk formula leaves out free-surface terms. This is ASSUMED conservative (it holds if the surface terms add rather than cancel). All measured or bath-implied heating is attributed to the effect.
+
+**Files:** `scripts/stage42_run.py`, `results/stage42.json`, `results/stage42_bounds.csv`, `results/stage42_sources.csv`, `figures/stage42_frequency_coverage.png`.
+
+| device | f | heating (s⁻¹) | Γ/λ | λ_max (s⁻¹) | label |
+|---|---|---|---|---|---|
+| Cattiaux 2021 Al drum, 500 µK | 15.1 MHz | n·Γm = 0.3 × 2/τm = 600 | 3.0×10⁸ | **2.0×10⁻⁶** | DERIVED; occupancy measured |
+| Goryachev 2012 quartz BAW, OT5, 18 mK | 15.6 MHz | n_TH ω/Q = 1.15 | 4.8×10³ | 2.4×10⁻⁴ | ASSUMED mode at bath T (n_TH from T) |
+| Goryachev 2012 quartz BAW, OT21, 21 mK | 65.4 MHz | 2.1 | 2.0×10⁴ | 1.0×10⁻⁴ | same |
+| Chu 2017 HBAR | ~6.65 GHz | P_exc ≤ 2% / (T1 − 2σ) = 1.3×10³ | 1.0×10⁶ | 1.3×10⁻³ | DERIVED |
+
+**Reading.**
+- The 15.1 MHz drum is now the best point between 10 MHz and the GHz HBARs, but it is 10–1000× above Adler's band.
+- The quartz BAWs have tiny heating (~1 s⁻¹), yet their bulk Γ/λ is small because k0 r_C ≪ 1 at tens of MHz. An unvalidated surface-term estimate is ~25× larger, which would put them near 10⁻⁵. It is not used. A validated thickness-mode surface formula is an open question.
+- Chu 2017 is superseded by Omahen 2025 (5.05 GHz, 1.6×10⁻⁶).
+- **Not converted:**
+  - MacCabe 2020 Si optomechanical crystal (5 GHz, τ_ph ≈ 1.5 s). There is no validated CSL formula for a localised breathing mode with k r_C ~ 1, and the paper gives no dark-state heating number.
+  - Galliou 2013 quartz (Q = 8×10⁹ at ~200 MHz, 4 K): bath-implied, about 10× weaker than Goryachev.
+- All are narrow lines, so the decade coverage is unchanged at 10.84 / 25.66.
