@@ -1,0 +1,725 @@
+{
+ "stage": 31,
+ "title": "Dan's do-si-do (hooked-arm) hypothesis: minimal model and bounds",
+ "sources": {
+  "papaliolios": {
+   "ref": "Papaliolios, PRL 18, 622 (1967), as reported by Valentini & Varma, arXiv:2505.07510v3 (2025)",
+   "url": "https://arxiv.org/html/2505.07510v3",
+   "location": "Sec. 1 Introduction, paragraph on ref. [48]",
+   "quote": "\"Papaliolios verified that the transmission probability through the third polariser varied with Theta according to (3) within an accuracy of about 1%, thereby confirming the approximate validity of the Born rule over timescales of order 10^-13 s\"",
+   "values": {
+    "malus_dev": 0.01,
+    "t_after": 1e-13
+   }
+  },
+  "valentini_f": {
+   "ref": "Valentini & Varma, arXiv:2505.07510v3",
+   "url": "https://arxiv.org/html/2505.07510v3",
+   "location": "Sec. 2.3, Eqs. (30)-(31)",
+   "quote": "\"f(Theta) = -cos(2Theta) sin^2(2Theta) (where f(Theta)=0 at Theta=0, pi/4, pi/2). The usual Malus law (3) ... receives a correction\"",
+   "values": {}
+  },
+  "marx": {
+   "ref": "Marx et al., PRL 110, 254801 (2013) (APS abstract via INSPIRE record 1280263)",
+   "url": "https://inspirehep.net/api/literature/1280263?format=json",
+   "location": "abstract",
+   "quote": "\"The polarization purity of 6.457- and 12.914-keV x rays has been improved to the level of 2.4x10-10 and 5.7x10-10. The polarizers are channel-cut silicon crystals using six 90 deg reflections.\"",
+   "values": {
+    "purity": 2.4e-10,
+    "E_keV": 6.457
+   }
+  },
+  "grundmann": {
+   "ref": "Grundmann et al., Science 370, 339 (2020), arXiv:2010.08298; data Zenodo 10.5281/zenodo.3899920 (Fig3_data.txt)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "main text Eqs. (2),(3); Fig. 2/3 captions; SM Materials and Methods",
+   "quote": "\"tau_b = cos(alpha_0) R/v_ph\" ; \"v_ph = E_e/p_e\" ; \"tau_b' = cos(beta) R/c ... the expected birth time delay was +-247 zs for R=0.74 A\" ; \"fast electrons [E_e = (735+-15) eV] ... R = (0.74+-0.02) A\" ; \"The accuracy to which we could specify the zero point of the momentum distribution of the fast electron was approximately +-0.04 atomic units in all three directions\" ; \"This model is in reasonable agreement with the experimental results, but more theoretical work including electron-electron correlation is needed to clarify the deviation.\" ; [19] \"our interferometric technique is blind to this absolute delay\"",
+   "values": {
+    "R_A": 0.74,
+    "dR_A": 0.02,
+    "Ee_eV": 735.0,
+    "dEe_eV": 15.0,
+    "dp0_au": 0.04,
+    "tau_model_zs": 247
+   }
+  },
+  "grundmann_fig3c": {
+   "ref": "Grundmann et al. 2020, published-version PDF (Frankfurt), Fig. 3C, digitized from a 400 dpi render",
+   "url": "https://www.atom.uni-frankfurt.de/publications/files/Grundmann_Science_2020.pdf",
+   "location": "p. 11, Fig. 3C (crop saved as data/stage31/grundmann2020_fig3C_crop.png)",
+   "quote": "DIGITIZED (reading +-10 zs): blue R/c line reaches 249 zs at cos(beta)=1 (check vs 247 CITED); red line (nondipole + travel time) ~270 zs; dashed purple linear fit to the data ~440 zs at |cos(beta)|=1; purple systematic band ~335-575 zs there (half-width ~120 zs). Caption: \"The error bars include statistical and systematic errors and the purple-shaded error range indicates the systematical error\"",
+   "values": {
+    "blue_check_zs": 249,
+    "red_slope_zs": 270,
+    "paper_fit_slope_zs": 440,
+    "paper_sys_halfwidth_zs": 120
+   }
+  },
+  "grundmann_fig2": {
+   "ref": "Grundmann et al. 2020, Zenodo 10.5281/zenodo.3899920 Fig2_data.txt (cos(alpha) vs KER, beta-averaged)",
+   "url": "https://zenodo.org/api/records/3899920/files/Fig2_data.txt/content",
+   "location": "file columns \"cos(alpha), Kinetic Energy Release (eV), count\"; paper text",
+   "quote": "\"In the reflection approximation, the internuclear distance R at the moment of photoabsorption is related to the kinetic energy release via KER = e^2/(4 pi eps0 R)\"",
+   "values": {}
+  },
+  "ossiander": {
+   "ref": "Ossiander et al., Nature Phys. 13, 280 (2017) (author PDF, TUM)",
+   "url": "https://www.ph.nat.tum.de/fileadmin/w00bya/e11/Publications/Ossiander_Nature_Physics_2016.pdf",
+   "location": "Table 1; p.2 text",
+   "quote": "Table 1 \"Time shift dtau between direct and shake-up photoemission\": 93.9 eV -12.6 (s.e. 0.99) theory -12.7; 97.2 eV -10.6 (0.85) -11.0; 108.2 eV -5.0 (1.01) -5.9; 113.0 eV -4.9 (1.60) -5.8 [1e-18 s]. \"The remarkable agreement within the sub-attosecond standard error excludes systematic errors\"",
+   "values": {
+    "E": [
+     93.9,
+     97.2,
+     108.2,
+     113.0
+    ],
+    "exp": [
+     -12.6,
+     -10.6,
+     -5.0,
+     -4.9
+    ],
+    "se": [
+     0.99,
+     0.85,
+     1.01,
+     1.6
+    ],
+    "th": [
+     -12.7,
+     -11.0,
+     -5.9,
+     -5.8
+    ]
+   }
+  },
+  "korzh": {
+   "ref": "Korzh et al., Nature Photon. 14, 250 (2020), arXiv:1804.06839",
+   "url": "https://arxiv.org/abs/1804.06839",
+   "location": "abstract",
+   "quote": "\"We reduce this value to 2.7+-0.2 ps at 400 nm and 4.6+-0.2 ps at 1550 nm\"",
+   "values": {
+    "jitter_ps": 2.7
+   }
+  },
+  "minev": {
+   "ref": "Minev et al., Nature 570, 200 (2019), arXiv:1803.00545",
+   "url": "https://arxiv.org/abs/1803.00545",
+   "location": "abstract; main text Fig. 3/4; SM Sec. II",
+   "quote": "\"the jump evolution when completed is continuous, coherent, and deterministic ... we catch and reverse a quantum jump mid-flight\" ; \"between Delta t_catch = 2 us and 10 us, the state of the atom evolves continuously and coherently\" ; \"succeeds in reversing the jump to |G> with 83.1%+-0.3% fidelity, while ... completes the jump to |D>, with 82.0%+-0.3%\" ; \"The measured mid-flight time, 3.95 us, is predicted, in a first approximation, by Eq. (14) ... 4.3 us\"",
+   "values": {
+    "t_mid_us": 3.95,
+    "t_mid_th_us": 4.3,
+    "F_rev": 0.831,
+    "F_comp": 0.82
+   }
+  },
+  "dixit": {
+   "ref": "Dixit et al., PRL 126, 141302 (2021), arXiv:2008.12231",
+   "url": "https://arxiv.org/abs/2008.12231",
+   "location": "abstract; main text (detector characterization)",
+   "quote": "\"6.011 GHz (24.86 ueV)\" ; \"the cavity state collapses to a Fock state ... upon measurement, rather than being absorbed and destroyed\" ; \"We fit this relationship with the function n_meas = eta n_inj + delta ... eta = 0.409+-0.055 and ... delta = (4.3+-1.1)x10^-4\"",
+   "values": {
+    "E_ueV": 24.86,
+    "f_GHz": 6.011,
+    "eta": 0.409,
+    "d_eta": 0.055,
+    "delta": 0.00043
+   }
+  },
+  "heinzen": {
+   "ref": "Heinzen, Bollinger, Itano, Gilbert & Wineland, Coherence & Quantum Optics VI (Plenum 1990) p.479 = Bollinger et al. PRL 63, 1031 (1989)",
+   "url": "https://tf.nist.gov/general/pdf/898.pdf",
+   "location": "p.480, Eq. (5)",
+   "quote": "\"the angle of the first RF pulse alternates between theta_A = 0.325pi and theta_B = 0.675pi\" ; \"|eps| < 2.4 x [exponent lost in PDF text extraction] eV (5.8 uHz) on a possible nonlinear correction ... less than 4 parts in 10^27 of the binding energy per nucleon\" ; \"transition frequency of v = 303 MHz\" ; PRL abstract (doi.org/10.1103/physrevlett.63.1031): \"limit of 4x10^-27 on the fraction of binding energy per nucleon\"",
+   "values": {
+    "eps_uHz": 5.8,
+    "nu_MHz": 303.0,
+    "frac_BE": 4e-27
+   }
+  },
+  "pruttivarasin": {
+   "ref": "Pruttivarasin et al., Nature 517, 592 (2015), arXiv:1412.2194",
+   "url": "https://arxiv.org/abs/1412.2194",
+   "location": "abstract",
+   "quote": "\"After a 23 hour measurement, we limit the energy variations to h x 11 mHz ... verifying that Lorentz symmetry is preserved at the level of 1x10^-18\"",
+   "values": {
+    "dE_mHz": 11.0,
+    "frac": 1e-18
+   }
+  },
+  "vip2": {
+   "ref": "Piscicchia et al. (VIP), Acta Phys. Pol. A 142, 361 (2022) [reviewing Napolitano et al., Symmetry 14, 893 (2022)]",
+   "url": "https://doi.org/10.12693/aphyspola.142.361",
+   "location": "Eq. (2)",
+   "quote": "\"beta^2/2 <= 8.6 x 10^-31 (Bayesian), beta^2/2 <= 8.9 x 10^-31 (CL)\" (90% CL, simple diffusion model)",
+   "values": {
+    "b2": 8.6e-31
+   }
+  },
+  "helou": {
+   "ref": "Helou et al., PRD 95, 084054 (2017), arXiv:1606.03637",
+   "url": "https://arxiv.org/abs/1606.03637",
+   "location": "abstract; text",
+   "quote": "\"we bound the CSL collapse rate to be at most (2.96+-0.12)x10^-8 s^-1 ... new frequency regime, 0.7 mHz to 20 mHz\" ; \"r_CSL ... 100 nm ... we will follow this convention\" ; \"lower bound 10^(-8+-2) s^-1 proposed by Adler\"",
+   "values": {
+    "lam": 2.96e-08,
+    "fmin": 0.0007,
+    "fmax": 0.02
+   }
+  },
+  "vinante": {
+   "ref": "Vinante et al., PRL 119, 110401 (2017), arXiv:1611.09776",
+   "url": "https://arxiv.org/abs/1611.09776",
+   "location": "abstract; text near Fig. 3; SM",
+   "quote": "\"High accuracy measurements of the cantilever thermal fluctuations reveal a nonthermal force noise of unknown origin\" ; \"For the standard choice r_C=10^-7 m this would imply lambda=10^-7.7 s^-1\" (if all excess noise were CSL) ; \"resonance frequency of 8174.0 Hz\" ; \"GRW ... lambda ~ 10^-16 s^-1\"",
+   "values": {
+    "lam": 1.9952623149688786e-08,
+    "f": 8174.0,
+    "lam_grw": 1e-16
+   }
+  },
+  "majorana": {
+   "ref": "Arnquist et al. (Majorana), PRL 129, 080401 (2022), arXiv:2202.01343",
+   "url": "https://arxiv.org/abs/2202.01343",
+   "location": "abstract; Eqs. after (5)-(6)",
+   "quote": "\"no evidence of such radiation in the 19-100 keV range\" ; \"n-m-p CSL ... lambda/r_C^2=(5.15+-0.16)x10^-6 s^-1 m^-2\" ; \"only the 30 quasi-free electrons ... lambda/r_C^2=(17.4+-0.5) s^-1 m^-2\" ; \"coherent emission from nuclei ... (4.94+-0.15)x10^-1 s^-1 m^-2\" ; \"Extensions of the CSL models such as the colored noise models are required to evade such stringent constraints\"",
+   "values": {
+    "nmp": 5.15e-06,
+    "mp_e": 17.4,
+    "mp_n": 0.494,
+    "Emin_keV": 19,
+    "Emax_keV": 100
+   }
+  },
+  "firas": {
+   "ref": "Fixsen et al., ApJ 473, 576 (1996), arXiv:astro-ph/9605054",
+   "url": "https://arxiv.org/abs/astro-ph/9605054",
+   "location": "abstract; Sec. 1",
+   "quote": "\"The RMS deviations are less than 50 parts per million of the peak of the CMBR ... |y| < 15x10^-6 and |mu| < 9x10^-5 (95% CL)\" ; \"it could be distorted by energy release after a redshift z ~ 3x10^6\"",
+   "values": {
+    "mu": 9e-05,
+    "rms_ppm": 50
+   }
+  }
+ },
+ "grundmann": {
+  "KER_5_95_eV": [
+   16.033125,
+   22.666875
+  ],
+  "R_range_A": [
+   0.6352726380864442,
+   0.8981184565345602
+  ],
+  "Rc_range_zs": [
+   211.90414272744786,
+   299.5800703347114
+  ],
+  "pe_au": 7.349932217252948,
+  "vph_au": 3.674966108626474,
+  "zs_per_unit_cos_alpha0": 9204.333561916517,
+  "model_slope_R_over_c_zs": 246.8374304466325,
+  "windows": {
+   "0.3": {
+    "window": 0.3,
+    "tilt": false,
+    "cos_beta": [
+     -0.933333,
+     -0.8,
+     -0.666667,
+     -0.533333,
+     -0.4,
+     -0.266667,
+     -0.133333,
+     0.0,
+     0.133333,
+     0.266667,
+     0.4,
+     0.533333,
+     0.666667,
+     0.8,
+     0.933333
+    ],
+    "tau_zs": [
+     -596.1255508016272,
+     -341.12750459940077,
+     -242.2107765630334,
+     -219.31037881250646,
+     -295.40731681279965,
+     -86.8916678607809,
+     -170.87342601837165,
+     -26.28310441059928,
+     -65.04728341002053,
+     38.86405556571198,
+     160.67002147037178,
+     377.23342407241574,
+     296.82816233019093,
+     319.0187572549195,
+     408.0578559334518
+    ],
+    "dtau_zs": [
+     75.33313628144941,
+     99.34230511956379,
+     86.25340408541953,
+     73.41887269752998,
+     120.28680495770878,
+     81.5944544809479,
+     80.60176719084834,
+     77.4730810667845,
+     75.17639306090717,
+     79.51929346633753,
+     71.18728164162509,
+     70.12920954110707,
+     68.18913927195878,
+     61.6871597555897,
+     63.10326286435219
+    ],
+    "lin": {
+     "a": -29.61978475869701,
+     "da": 20.023632543575356,
+     "b": 480.7000174832806,
+     "db": 33.28533957451553,
+     "chi2": 14.722683586966685,
+     "dof": 13
+    },
+    "quad": {
+     "a": -29.29374750280016,
+     "b": 481.8428139919085,
+     "db": 33.59446916703596,
+     "c": -10.879506573096194,
+     "dc": 43.28706058314017,
+     "chi2": 14.65951484818781,
+     "dof": 12
+    }
+   },
+   "0.4": {
+    "window": 0.4,
+    "tilt": false,
+    "cos_beta": [
+     -0.933333,
+     -0.8,
+     -0.666667,
+     -0.533333,
+     -0.4,
+     -0.266667,
+     -0.133333,
+     0.0,
+     0.133333,
+     0.266667,
+     0.4,
+     0.533333,
+     0.666667,
+     0.8,
+     0.933333
+    ],
+    "tau_zs": [
+     -594.4379326279202,
+     -358.96759186161864,
+     -275.30204274553586,
+     -275.07820620968414,
+     -322.36048536302224,
+     -50.374014523637435,
+     -237.54283616443234,
+     -75.67987428212017,
+     -108.40283054909801,
+     17.508794806697388,
+     159.79936813789521,
+     371.8059273493187,
+     294.9196496130963,
+     365.83643938951707,
+     383.3197366169927
+    ],
+    "dtau_zs": [
+     75.6256998628195,
+     104.36149553273543,
+     100.61534958603629,
+     89.72032487684797,
+     141.32535563324768,
+     103.11014127265057,
+     93.235990058971,
+     112.60888233461195,
+     92.27146942414537,
+     100.44290578079178,
+     92.86652182325277,
+     72.80234848282166,
+     75.52898934811941,
+     72.96732907639483,
+     64.42719688474415
+    ],
+    "lin": {
+     "a": -45.6084388459508,
+     "da": 23.10470236528472,
+     "b": 504.52024423414537,
+     "db": 36.180953609532665,
+     "chi2": 13.937351278907146,
+     "dof": 13
+    },
+    "quad": {
+     "a": -45.33320281689868,
+     "b": 504.7152278701712,
+     "db": 36.352052549743476,
+     "c": -2.6894176892685095,
+     "dc": 48.59052491592873,
+     "chi2": 13.934287811016334,
+     "dof": 12
+    }
+   },
+   "0.5": {
+    "window": 0.5,
+    "tilt": false,
+    "cos_beta": [
+     -0.933333,
+     -0.8,
+     -0.666667,
+     -0.533333,
+     -0.4,
+     -0.266667,
+     -0.133333,
+     0.0,
+     0.133333,
+     0.266667,
+     0.4,
+     0.533333,
+     0.666667,
+     0.8,
+     0.933333
+    ],
+    "tau_zs": [
+     -616.175310636296,
+     -374.2853172651765,
+     -305.8076278458472,
+     -310.26546028311674,
+     -350.4051154006282,
+     334.59012809412826,
+     -279.86912633528397,
+     -86.7767761686297,
+     -148.6887680864028,
+     -13.020146639063594,
+     180.7277830424996,
+     370.41507638631407,
+     284.78850551958163,
+     357.78132490046517,
+     372.9858995488269
+    ],
+    "dtau_zs": [
+     94.1768598918086,
+     111.69217496975354,
+     116.2969441247963,
+     96.86069063100682,
+     225.33223739979738,
+     384064.7226205816,
+     126.03834034537513,
+     143.2143792952454,
+     127.03951716994739,
+     135.23999847563022,
+     116.95360300967224,
+     71.0063053998751,
+     91.52588765402602,
+     89.14521615284934,
+     77.5071779752014
+    ],
+    "lin": {
+     "a": -54.835160784272176,
+     "da": 28.478126810509938,
+     "b": 522.9851258494564,
+     "db": 43.13390833174393,
+     "chi2": 10.964517875700617,
+     "dof": 13
+    },
+    "quad": {
+     "a": -54.55229546238143,
+     "b": 523.043179130221,
+     "db": 43.176327560414215,
+     "c": -1.8969524187571096,
+     "dc": 62.523345036930735,
+     "chi2": 10.963597365797213,
+     "dof": 12
+    }
+   }
+  },
+  "tilted_envelope_win04": {
+   "window": 0.4,
+   "tilt": true,
+   "cos_beta": [
+    -0.933333,
+    -0.8,
+    -0.666667,
+    -0.533333,
+    -0.4,
+    -0.266667,
+    -0.133333,
+    0.0,
+    0.133333,
+    0.266667,
+    0.4,
+    0.533333,
+    0.666667,
+    0.8,
+    0.933333
+   ],
+   "tau_zs": [
+    -807.4716692095191,
+    -455.3930360964989,
+    -295.1472229050753,
+    -380.93195758667855,
+    -328.05683126631374,
+    -84.29571533554751,
+    -321.0076652821563,
+    -116.00322793293141,
+    -158.32096060713417,
+    83.59657969656415,
+    202.51750098713163,
+    420.6552096658786,
+    329.87613713376504,
+    366.15108725368924,
+    405.8061688469405
+   ],
+   "dtau_zs": [
+    129.99845260474606,
+    140.59207472081027,
+    107.69213602324298,
+    109.32725429086759,
+    156.3281052655898,
+    97.53852135955094,
+    107.44273582036628,
+    125.69454259885799,
+    104.33275857539935,
+    103.12385140447523,
+    102.41832492065669,
+    77.99119507454314,
+    85.11366468334086,
+    85.37730519199206,
+    87.57994175321014
+   ],
+   "lin": {
+    "a": -63.52544876432759,
+    "da": 27.552932791690502,
+    "b": 582.024210508249,
+    "db": 46.795100554995585,
+    "chi2": 18.389499154775258,
+    "dof": 13
+   },
+   "quad": {
+    "a": -63.74235312498645,
+    "b": 586.6586180082743,
+    "db": 48.03236019120266,
+    "c": -26.9321648781783,
+    "dc": 62.94692644589686,
+    "chi2": 18.206439149569178,
+    "dof": 12
+   }
+  },
+  "headline_window": 0.4,
+  "slope_zs": 504.52024423414537,
+  "slope_stat_zs": 36.180953609532665,
+  "slope_sys_p0_zs": 50.092073177549146,
+  "slope_sys_R_zs": 13.635682276598525,
+  "slope_window_spread_zs": 23.820226750864776,
+  "slope_tilted_envelope_zs": 582.024210508249,
+  "slope_tilted_envelope_stat_zs": 46.795100554995585,
+  "slope_total_err_zs": 67.61369855976709,
+  "extra_slope_zs": 257.6828137875128,
+  "extra_slope_sigma": 3.8111036561582896,
+  "bound_extra_cos_term_zs_95": 390.2056629646563,
+  "bound_extra_P2_term_zs_95": 101.60576403143347,
+  "bound_extra_cos_term_fraction_of_Rc": 1.5808204706174849,
+  "extra_vs_red_model_zs": 234.52024423414537,
+  "extra_vs_red_err_zs": 127.97056148410762,
+  "extra_vs_red_sigma": 1.8326108873349745,
+  "bound_extra_vs_red_95_zs": 485.3425447429963,
+  "paper_slope_minus_red_zs": 170,
+  "paper_slope_minus_red_sigma": 1.4166666666666667,
+  "label": "DERIVED (reanalysis of CITED Zenodo histogram; fit window ASSUMED, 3 variants reported)",
+  "note": "Symmetric (angle-independent) release delays are invisible to this interferometer (CITED note [19])."
+ },
+ "ossiander": {
+  "diff_as": [
+   0.09999999999999964,
+   0.40000000000000036,
+   0.9000000000000004,
+   0.8999999999999995
+  ],
+  "weighted_mean_as": 0.5004869787977712,
+  "err_as": 0.514664007634753,
+  "chi2_vs_theory": 1.342102377722909,
+  "dof": 4,
+  "p": 0.8541928371587427,
+  "bound_abs_extra_channel_delay_as_95": 1.509228433761887,
+  "label": "DERIVED from CITED Table 1 (theory errors ASSUMED 0)"
+ },
+ "malus": {
+  "generic_dev_max": 0.01,
+  "timescale_s": 1e-13,
+  "crossed_extra_leak_max": 2.4e-10,
+  "note": "Crossed-polarizer purity bounds any extra term at Theta=90 deg (it also contains all imperfections, so it is an upper bound). A shape f(Theta) vanishing at 0, 45, 90 deg (e.g. Valentini-Varma Eq. 30) evades it; then only the ~1% Papaliolios bound applies.",
+  "label": "CITED"
+ },
+ "anisotropy": {
+  "dE_eV": 4.5492344666162444e-17,
+  "frac": 1e-18,
+  "label": "CITED",
+  "note": "Bounds orientation dependence (lab frame vs fixed stars) of electron energy; for an add-on lock RATE the anisotropic part is bounded by the total rate bound (element 3 bands), since 0 <= Lambda(theta) <= 2 x mean for |a1|,|a2| <= 1."
+ },
+ "threshold": {
+  "E_quantum_eV": 2.486e-05,
+  "E_quantum_J": 3.9830111121239996e-24,
+  "f_GHz": 6.011,
+  "linear_eta": 0.409,
+  "linear_deta": 0.055,
+  "false_pos": 0.00043,
+  "note": "R1: single 24.86 ueV quanta are individually registered (locked into a Fock state) and the response is linear in injected n = alpha^2 << 1, i.e. no amplitude gate down to sub-single-photon amplitudes; the QND readout locks the photon number without absorbing it, so an energy-transfer threshold > 0 is not required for a lock. R2: a gate simply hides the add-on below A_th, so A_th alone is unconstrained (degenerate with Lambda0).",
+  "label": "CITED + DERIVED"
+ },
+ "frequency": {
+  "bands": [
+   {
+    "name": "LISA Pathfinder (Helou 2017)",
+    "fmin": 0.0007,
+    "fmax": 0.02,
+    "lam": 2.96e-08,
+    "kind": "force noise"
+   },
+   {
+    "name": "Cantilever 8174 Hz (Vinante 2017; all excess attributed)",
+    "fmin": 8165.826,
+    "fmax": 8182.173999999999,
+    "lam": 1.9952623149688786e-08,
+    "kind": "force noise"
+   },
+   {
+    "name": "Majorana X-ray, m-p electrons only",
+    "fmin": 4.5941795599613445e+18,
+    "fmax": 2.417989242084918e+19,
+    "lam": 1.7399999999999997e-13,
+    "kind": "radiation"
+   },
+   {
+    "name": "Majorana X-ray, m-p coherent nuclei",
+    "fmin": 4.5941795599613445e+18,
+    "fmax": 2.417989242084918e+19,
+    "lam": 4.939999999999999e-15,
+    "kind": "radiation"
+   },
+   {
+    "name": "Majorana X-ray, n-m-p",
+    "fmin": 4.5941795599613445e+18,
+    "fmax": 2.417989242084918e+19,
+    "lam": 5.149999999999999e-20,
+    "kind": "radiation"
+   }
+  ],
+  "gap": {
+   "fmin": 0.02,
+   "fmax": 4.5941795599613445e+18,
+   "note": "Between 20 mHz and 4.6e18 Hz only the single 8174 Hz cantilever line was verified this stage; other bounds exist in the literature (cold atoms, bulk heating, other cantilevers) but were not fetched, so they are not used."
+  },
+  "rC_m": 1e-07,
+  "ref_rates": {
+   "GRW": 1e-16,
+   "Adler": "1e-8 (x100^+-1)"
+  },
+  "decades_unverified": 20.360309380337952,
+  "label": "CITED (lambda) + DERIVED (keV -> Hz)"
+ },
+ "amplitude": {
+  "eps_eV": 2.398687264215838e-20,
+  "eps_over_transition": 1.914191419141914e-14,
+  "frac_binding": 4e-27,
+  "label": "CITED + DERIVED",
+  "note": "Drive pulse area (0.325pi vs 0.675pi) and hence state amplitudes were alternated: no frequency change."
+ },
+ "spread": {
+  "intrinsic_fraction_max": 8.6e-31,
+  "mapping": "ASSUMED O(1): a fraction f of electrons with a distinguishable openness label would escape the exclusion principle in K-shell capture, so f <~ beta^2/2",
+  "extrinsic_channel_delay_as_95": 1.509228433761887,
+  "note": "If openness is set by context (extrinsic), particles stay identical and only the add-on strength bounds apply."
+ },
+ "tau": {
+  "angle_dependent_zs_95": 485.3425447429963,
+  "channel_dependent_as_95": 1.509228433761887,
+  "detection_jitter_ps": 2.7,
+  "post_lock_plastic_stage": {
+   "born_dev_max": 0.01,
+   "within_s": 1e-13
+  },
+  "universal_constant": "not bounded by relative-timing data (cable-delay degenerate)",
+  "qm_already": {
+   "minev_t_mid_us": 3.95,
+   "minev_t_mid_theory_us": 4.3,
+   "reverse": 0.831,
+   "complete": 0.82
+  },
+  "label": "DERIVED/CITED"
+ },
+ "hysteresis": {
+  "eta_max": 9.000405012149493e-05,
+  "mu_max": 9e-05,
+  "derivation": "DERIVED: absorption ~ A n, emission ~ E (1+n); steady state n/(1+n) = E/A. QM: E/A = exp(-x). With E/A = exp(-x)/(1+eta): n = 1/((1+eta) e^x - 1) = Bose-Einstein with mu = ln(1+eta).",
+  "assumption": "ASSUMED: the asymmetry acts in the photon-number-changing processes that thermalised the CMB at z >~ 3e6 (CITED epoch), and is frequency independent; a frequency-dependent eta(x) is bounded by the 50 ppm-of-peak rms instead.",
+  "label": "DERIVED + CITED"
+ },
+ "verdict": [
+  {
+   "element": "1 angle of incidence",
+   "model": "P = cos^2 Theta + delta f(Theta); birth delay = R cos(beta)/c + d1 cos(beta) + d2 P2; Lambda(theta)=Lambda0 g(theta)",
+   "qm_has": "Malus cos^2, Fresnel, dipole patterns, photon-momentum retardation R cos(beta)/c (Grundmann measured it)",
+   "bound": "generic |delta| < 1e-2 (1e-13 s after a lock); extra leak at 90 deg < 2.4e-10; extra angle-dependent birth delay beyond light-travel+nondipole |d1| < 485 zs per unit cos(beta) (95%; measured residual +235 +- 128 zs), |d2| < 102 zs; lab-orientation energy anisotropy < 1e-18",
+   "verdict": "constrained but with real room in timing (|d1| < 2.0 x the light-travel term, residual 1.8 sigma); Malus 1e-2 generic, 2.4e-10 at 90 deg"
+  },
+  {
+   "element": "2 gate threshold",
+   "model": "G(A) = logistic((A - A_th)/w_A)",
+   "qm_has": "photoelectric frequency threshold (work function); none in amplitude",
+   "bound": "R1: E_th <= 24.86 ueV per quantum; no amplitude gate down to n<<1 (linear eta=0.41); R2: unconstrained alone (hides effect)",
+   "verdict": "R1 excluded above 2.5e-5 eV / any amplitude gate; R2 open but untestable alone"
+  },
+  {
+   "element": "3 frequency selectivity",
+   "model": "Lorentzian L(w; w0, Q)",
+   "qm_has": "resonant absorption lines",
+   "bound": "Lambda(w0) <= 3.0e-8 s^-1 (0.7-20 mHz), <= 2.0e-8 (8174 Hz), <= 5.2e-20 (n-m-p) .. 1.7e-13 (m-p electrons) (4.6e18-2.4e19 Hz) at r_C=1e-7 m",
+   "verdict": "constrained in 3 bands; open across ~20 unverified decades (20 mHz-4.6e18 Hz except 8174 Hz)"
+  },
+  {
+   "element": "4 amplitude",
+   "model": "Weinberg eps |c|^2 energy term",
+   "qm_has": "none (QM linear)",
+   "bound": "|eps| < 2.4e-20 eV (h x 5.8 uHz) = 1.9e-14 of the 303 MHz transition = 4e-27 of binding energy per nucleon",
+   "verdict": "excluded above 1.9e-14 of the transition energy"
+  },
+  {
+   "element": "5 spread of openness",
+   "model": "h ~ p(h), width sigma_h",
+   "qm_has": "none for identical particles",
+   "bound": "intrinsic label: fraction < 8.6e-31 (VIP-2, ASSUMED O(1) map); extrinsic: channel delay < 1.5 as",
+   "verdict": "intrinsic excluded; extrinsic open (degenerate with strength)"
+  },
+  {
+   "element": "6 release time tau",
+   "model": "kernel e^{-t/tau}/tau, jitter sigma_tau",
+   "qm_has": "Wigner/EWS delays; continuous quantum-jump flights (Minev)",
+   "bound": "angle-dependent < 485 zs; channel-dependent < 1.5 as; jitter < 2.7 ps; plastic stage: Born holds to 1% at 1e-13 s",
+   "verdict": "constrained; a universal constant tau is unobservable (open)"
+  },
+  {
+   "element": "7 hysteresis",
+   "model": "Gamma_lock/Gamma_unlock = e^{-dE/kT}(1+eta)",
+   "qm_has": "detailed balance (Einstein A/B)",
+   "bound": "|eta| < 9.0e-05 (FIRAS mu)",
+   "verdict": "constrained < 9e-5"
+  }
+ ],
+ "equivalences": {
+  "add-on lock rate Lambda0 (white)": "CSL: Ghirardi, Pearle & Rimini, PRA 42, 78 (1990) [Helou ref 20]; GRW",
+  "frequency selectivity": "colored CSL: Adler & Bassi, J. Phys. A 40, 15083 (2007); 41, 395308 (2008); Pearle PRA 48, 913 (1993) [Majorana refs 21-23]",
+  "hysteresis / asymmetry (lock vs unlock, energy flow)": "dissipative CSL: Smirne & Bassi, Sci. Rep. 5, 12518 (2015) [Helou ref 15]",
+  "release time set by the lock energy": "Diosi-Penrose / Penrose OR tau = hbar/E_G: Diosi PRA 40, 1165 (1989); Penrose GRG 28, 581 (1996) [Majorana refs 8-9]",
+  "amplitude dependence": "Weinberg nonlinear QM, PRL 62, 485 (1989) (fetched APS abstract)",
+  "plastic stage after locking, Born deviations shortly after a measurement": "Bohm & Bub, RMP 38, 453 (1966) [Valentini-Varma ref 49], tested by Papaliolios 1967",
+  "spread of hidden openness relaxing to Born statistics": "pilot-wave quantum non-equilibrium: Valentini, PLA 156, 5 (1991) [Valentini-Varma ref 18]",
+  "gradual, reversible locking (no extra physics)": "quantum trajectory theory: Carmichael (1993); Minev et al. 2019 [Minev ref 5]"
+ },
+ "runtime_s": 169.49
+}

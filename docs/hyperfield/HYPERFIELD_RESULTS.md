@@ -3111,3 +3111,181 @@ None of these reaches the 9-order gap.
   - The verification found two of the earlier assumptions wrong: the HUST-18 AAF body is not the TOS body (V ×0.64), and NIST/LANL use disks, not spheres (V ×0.56). MSL-03 is a 220 mm needle, not an h = d cylinder.
   - The smallest margin moved by only 0.2 orders (4.1 → 3.9, LENS). Individual rows moved by up to 1 order (UWup-02, because the verified source distance is 0.915 m, not the assumed 0.4 m).
   - Not verified, and therefore dropped from the physics: the source distances for MSL-03, HUST-09 and UCI-14.
+
+## Stage 31 — Dan's "do-si-do" (hooked-arm) hypothesis: minimal model, every element tested
+
+**Question (Dan).** Treat particles as locked, localized field states. Locking and unlocking work like square dancers' hooked arms:
+- the hook lets go gradually, not instantly (a release time τ, maybe a plastic stage, rate dependence);
+- hooks differ in how open they are (a spread of lock strengths);
+- they have carabiner gates (a threshold to open, a spring that closes them again);
+- release depends on frequency, amplitude and above all **angle of incidence**, the idea that started this work 8 months ago;
+- locking and unlocking need not be mirror images (hysteresis).
+
+Dan: "I'd like all of those tested."
+
+**Standing rule (new from Stage 30v).** Every experimental input was read from a source fetched during this stage. The source and quote for each are in `results/stage31_sources.csv` and `results/stage31.json → sources`. Nothing is recalled. Two values were **DIGITIZED** from a fetched figure, and they are labelled as such.
+
+**Files:**
+- `scripts/stage31_run.py`, `scripts/stage31_fig.py`
+- `results/stage31.json`, `results/stage31_sources.csv`
+- `data/stage31/grundmann2020_Fig3_data.txt` and `grundmann2020_Fig2_data.txt`: the authors' Zenodo histograms, 10.5281/zenodo.3899920
+- `data/stage31/grundmann2020_fig3C_crop.png`
+- `figures/stage31_dosido.png`
+
+**Labels:** DERIVED means computed here. CITED means taken from a fetched source. ASSUMED means our choice, stated. DIGITIZED means read off a fetched figure.
+
+### 31.1 The model (ASSUMED structure, one knob per element)
+A probe (a photon, a field or a particle) meets a lock with incidence angle θ relative to the lock axis, angular frequency ω and amplitude A. Two readings are tested.
+
+- **R1, "replacement":** the hooks *are* the mechanism of ordinary particle events (absorption, detection, emission). Each element must then reproduce standard QM within the best experiment's precision, and only the surplus counts as the hook's.
+- **R2, "add-on":** the hooks are an extra localization channel on top of QM, with a rate per nucleon
+  Λ = Λ₀ · g(θ) · G(A) · L(ω) · h, where:
+  1. **angle:** g = 1 + a₁cosθ + a₂P₂(cosθ). For probability laws, P = cos²Θ + δ·f(Θ). For release timing, the delay is t = R cosβ/c + d₁cosβ + d₂P₂(cosβ).
+  2. **gate:** G = logistic((A − A_th)/w_A). The spring return recloses the gate.
+  3. **resonance:** L = Lorentzian(ω; ω₀, Q).
+  4. **amplitude:** a Weinberg-type energy term ε|c|², where |c|² is the state population.
+  5. **openness:** h ~ p(h), with relative width σ_h.
+  6. **release time:** a kernel e^(−t/τ)/τ, with jitter σ_τ.
+  7. **hysteresis:** Γ_lock/Γ_unlock = e^(−ΔE/kT)·(1+η).
+
+**Standard QM already does a lot of this.** Any hook effect must come *on top of*:
+- Malus's cos²Θ, Fresnel and dipole patterns;
+- the photon's own travel time across a molecule (R cosβ/c, which has been measured; see 31.2);
+- resonant absorption;
+- a threshold in *frequency* (the photoelectric work function), but none in amplitude;
+- gradual, continuous quantum jumps that can be reversed mid-flight. Minev et al. 2019 show a G→D jump flying continuously over 2–10 µs, with a mid-flight time of 3.95 µs against about 4.3 µs from first-approximation theory, and reversal fidelity of 83.1 ± 0.3 %. All of this is CITED and fully described by quantum-trajectory theory "essentially without adjustable parameters".
+
+So the gradual-release picture by itself is **not new physics**. It is what QM already says about jumps.
+
+### 31.2 Element by element
+
+**(1) Angle of incidence.** Four tests.
+- **(a) Generic angle law.** A deviation δ·f(Θ) from Malus is bounded to **≲ 1 %**, about 10⁻¹³ s after a preceding measurement (CITED: Papaliolios 1967, as reported by Valentini & Varma, arXiv:2505.07510, Sec. 1). This is the only bound for shapes that vanish at 0°, 45° and 90°, such as Valentini–Varma's f = −cos2Θ sin²2Θ.
+- **(b) Extra leak at crossed polarizers (90°).** It is **< 2.4×10⁻¹⁰** for 6.457 keV X-rays (CITED: Marx et al. PRL 110, 254801, abstract via INSPIRE). That figure includes every imperfection, so it is an upper bound.
+- **(c) Lab orientation against the fixed stars.** Electron energy anisotropy is **< h×11 mHz = 4.6×10⁻¹⁷ eV, or 1×10⁻¹⁸ fractional** (CITED: Pruttivarasin et al., arXiv:1412.2194).
+  - For an add-on *rate*, the anisotropic part is bounded by the total rate bound in (3), because 0 ≤ g ≤ 2 for |a₁|, |a₂| ≤ 1.
+- **(d) Angle of incidence against release time: the most direct test of Dan's idea.**
+  - **The experiment.** Grundmann et al. (Science 370, 339 (2020), arXiv:2010.08298) measured when the photoelectron is "born" at each end of H₂ as a function of β, the angle between the photon direction and the molecular axis. The setup was 800 eV photons with fast electrons at E_e = 735 ± 15 eV and R = 0.74 ± 0.02 Å.
+  - **What standard physics predicts.** The light-travel time R cosβ/c gives a slope of **246.8 zs** (CITED value 247 zs).
+  - **Our reanalysis** (DERIVED) of their public Fig. 3 histogram:
+    - Method: a Poisson-likelihood Gaussian+constant fit to the central fringe per cosβ row, parametric-bootstrap errors, and their Eq. 2, τ_b = cosα₀·R/v_ph with v_ph = E_e/p_e. That gives 9204 zs per unit cosα₀.
+    - Result: slope **504.5 ± 36.2 zs** (stat), χ² = 13.9/13.
+    - Window variants (ASSUMED |cosα| ≤ 0.3 / 0.4 / 0.5): 480.7, 504.5, 523.0. A tilted-envelope variant gives 582 ± 47.
+    - The paper's own dashed fit (DIGITIZED) is about 440 zs, inside our errors, so the reanalysis reproduces their result.
+  - **The comparison model.** The paper's refined model, nondipole tilt plus travel time (their red line, DIGITIZED), is about **270 zs**.
+  - **The residual over that model.**
+    - With the paper's systematic band (DIGITIZED half-width about 120 zs): **+235 ± 128 zs (1.8σ)**. Using the paper's own fit instead: +170 ± 120 zs (1.4σ).
+    - With only our narrower systematics (momentum zero ±0.04 a.u. → ±50 zs, R ±2.7 % → ±14 zs, window ±24 zs), the residual over light-travel alone is 3.8σ. Our estimate is less complete than the authors', so we do **not** use it as the headline.
+  - The authors themselves wrote: "more theoretical work including electron-electron correlation is needed to clarify the deviation."
+  - **Bound (95 %).**
+    - The extra angle-dependent release term beyond light-travel plus nondipole is **|d₁| < 485 zs per unit cosβ**, about 2× the light-travel term.
+    - The cos² (P₂) term: |d₂| < 102 zs (fit c = −2.7 ± 48.6 zs).
+  - **What this test cannot see.** It is blind to any delay that does not depend on angle. CITED note [19]: "our interferometric technique is blind to this absolute delay".
+
+**(2) Gate threshold.**
+- **R1.**
+  - Single **24.86 µeV** (6.011 GHz) microwave quanta are individually registered, and the cavity "collapses to a Fock state … rather than being absorbed and destroyed".
+  - The detector response is linear in the injected mean photon number n̄ ≪ 1: n_meas = η n_inj + δ, with η = 0.409 ± 0.055 and δ = (4.3 ± 1.1)×10⁻⁴ (CITED: Dixit et al., arXiv:2008.12231).
+  - So E_th ≤ 2.5×10⁻⁵ eV per quantum, and there is **no amplitude gate down to sub-single-photon amplitudes**.
+  - A lock also needs no energy to be transferred, since the readout is non-demolition.
+- **R2.** A gate just hides the add-on below A_th, so A_th on its own is **untestable**, because it cannot be separated from Λ₀.
+
+**(3) Frequency-selective (resonant) release.** For an add-on resonance at f₀, only experiments sensitive near f₀ count. This is the logic of colored CSL. Bounds on the extra lock rate per nucleon (CSL-equivalent, r_C = 100 nm, CITED):
+
+| band | bound (s⁻¹) | source |
+|---|---|---|
+| 0.7–20 mHz | ≤ 2.96×10⁻⁸ | LISA Pathfinder, Helou et al. arXiv:1606.03637 |
+| 8174 Hz | ≤ 10⁻⁷·⁷ = 2.0×10⁻⁸ | Vinante et al. arXiv:1611.09776; attributes all of an **unexplained excess force noise** to the effect |
+| 19–100 keV (4.6×10¹⁸–2.4×10¹⁹ Hz) | ≤ 5.2×10⁻²⁰ (n-m-p), 4.9×10⁻¹⁵ (m-p, nuclei), 1.7×10⁻¹³ (m-p, electrons only) | Majorana, arXiv:2202.01343, λ/r_C² values |
+
+- Between 20 mHz and 4.6×10¹⁸ Hz, apart from the 8174 Hz line, **no bound was verified this stage**. That is about 20 decades.
+- Other bounds do exist in the literature (cold atoms, bulk heating, other cantilevers), but they were not fetched, so they are not used. This gap means "not checked here", not "allowed".
+- Majorana itself notes that colored-noise models "are required to evade such stringent constraints".
+
+**(4) Amplitude.**
+- **Test.** Bollinger et al. alternated the first Ramsey pulse between 0.325π and 0.675π, which changes the state populations. The 303 MHz ⁹Be⁺ clock frequency did not move.
+- **Bound.** |ε| < 5.8 µHz × h = **2.4×10⁻²⁰ eV**, which is **1.9×10⁻¹⁴ of the transition energy** and 4×10⁻²⁷ of the binding energy per nucleon (CITED: NIST proceedings PDF tf.nist.gov 898, Eq. 5, and the PRL 63, 1031 abstract; the exponent was lost in the PDF text, so eV was DERIVED from the 5.8 µHz).
+- Correction to my own search notes: a search summary had said "2.4×10⁻²⁷ eV". That is wrong. It mixes in the 4×10⁻²⁷ binding-energy fraction.
+- **Formal match:** Weinberg's nonlinear QM.
+
+**(5) Spread of hook openness.**
+- **Intrinsic label.** If two electrons can carry different, distinguishable openness, they escape the exclusion principle. VIP-2 finds β²/2 ≤ **8.6×10⁻³¹** (90 % CL, simple diffusion model; CITED: Acta Phys. Pol. A 142, 361, Eq. 2). So the fraction of "differently hooked" electrons is ≲ 10⁻³⁰. The mapping is an ASSUMED O(1).
+- **Extrinsic (set by context).** The release-time difference between "harder" shake-up and "softer" direct photoemission in He agrees with ab initio theory to **0.50 ± 0.51 as**, χ² = 1.34/4 (DERIVED from CITED Ossiander et al. Nat. Phys. 13, 280, Table 1). That bounds an extra channel-dependent release difference to **< 1.5 as** (95 %).
+- Otherwise the extrinsic case cannot be separated from Λ₀.
+
+**(6) Release time τ.**
+- angle-dependent: < 485 zs (see 1d);
+- channel-dependent: < 1.5 as;
+- random lock jitter: < 2.7 ± 0.2 ps for the whole detector (CITED: Korzh et al., arXiv:1804.06839);
+- plastic stage after locking: the Born rule holds to 1 % within about 10⁻¹³ s (Papaliolios).
+- A **universal constant τ** cannot be told apart from cable delay in any relative-timing data, so it is **not bounded** (open, but also untestable as stated).
+
+**(7) Hysteresis (lock/unlock asymmetry).**
+- **Derivation (DERIVED).**
+  - Absorption goes as A·n and emission as E·(1+n). In steady state, n/(1+n) = E/A. QM gives E/A = e^(−x).
+  - If E/A = e^(−x)/(1+η), then n = 1/((1+η)eˣ − 1). That is a Bose–Einstein spectrum with μ = ln(1+η).
+- **Bound.** FIRAS gives |μ| < 9×10⁻⁵ (95 % CL, CITED: Fixsen et al. astro-ph/9605054), so **|η| < 9.0×10⁻⁵**.
+- **Assumption (ASSUMED).** The asymmetry acts in the photon-number-changing processes that thermalized the CMB, which FIRAS places at z ≳ 3×10⁶, and does not depend on frequency. A frequency-dependent η(x) is bounded by the rms instead: < 50 ppm of the peak.
+
+### 31.3 Verdict table
+
+| element | best constraint (source) | bound | verdict |
+|---|---|---|---|
+| 1 angle: probability laws | Papaliolios (via Valentini–Varma); Marx 2013 | generic ≲ 1e-2; 2.4e-10 at 90° | constrained |
+| 1 angle: lab orientation | Pruttivarasin 2015 | 1e-18 (4.6e-17 eV) | excluded beyond 1e-18 |
+| **1+6 angle-dependent release time** | Grundmann 2020 reanalysis | \|d₁\| < 485 zs/cosβ (≈ 2× light-travel); residual +235 ± 128 zs (1.8σ) | **open, with real room** |
+| 2 gate threshold | Dixit 2021 | R1: E_th ≤ 24.86 µeV, no amplitude gate; R2: not separable from Λ₀ | R1 excluded; R2 untestable alone |
+| 3 resonant release | LPF; Vinante; Majorana | 3e-8 / 2e-8 / 5e-20 to 1.7e-13 s⁻¹ | constrained in 3 bands; **≈20 decades unverified here** |
+| 4 amplitude | Bollinger/Heinzen 1989 | 2.4e-20 eV = 1.9e-14 of transition | excluded |
+| 5 openness spread | VIP-2; Ossiander 2017 | intrinsic ≲ 1e-30; extrinsic channel Δτ < 1.5 as | intrinsic excluded; extrinsic degenerate |
+| 6 release time | Grundmann; Ossiander; Korzh; Papaliolios | see above; universal τ unbounded | constrained; universal τ untestable |
+| 7 hysteresis | FIRAS μ | \|η\| < 9e-5 | constrained |
+
+### 31.4 Already-known equivalents
+These references come from the reference lists of the papers fetched this stage.
+
+| element | known model |
+|---|---|
+| add-on white rate Λ₀ | **CSL/GRW** (Ghirardi, Pearle & Rimini PRA 42, 78 (1990)) |
+| resonant release | **colored CSL** (Adler & Bassi J. Phys. A 40, 15083 (2007); 41, 395308 (2008); Pearle PRA 48, 913 (1993)) |
+| asymmetry with energy flow | **dissipative CSL** (Smirne & Bassi Sci. Rep. 5, 12518 (2015)) |
+| release time set by the lock energy | **Diósi–Penrose / Penrose OR**, τ = ħ/E_G (PRA 40, 1165 (1989); GRG 28, 581 (1996)) |
+| amplitude | **Weinberg** nonlinear QM (PRL 62, 485 (1989)) |
+| plastic stage after a lock, with Born deviations right after a measurement | **Bohm & Bub** (RMP 38, 453 (1966)), the model Papaliolios tested |
+| hidden openness spread relaxing to Born statistics | **pilot-wave quantum non-equilibrium** (Valentini PLA 156, 5 (1991)) |
+| gradual, reversible locking | ordinary **quantum-trajectory theory** (Carmichael 1993; Minev 2019) |
+
+Element (1d), an angle-*dependent* release time beyond light travel, did not match any of these in what we checked. That does not prove nobody has proposed it.
+
+### 31.5 Flags, coincidences and honest negatives
+- **Coincidence flag.** Our fitted slope is 2.04 × R/c (504.5 against 246.8 zs).
+  - It is tempting to read "exactly 2×" into this. For a free non-relativistic electron, v_ph = v/2, so a phase-versus-group velocity mix-up would give exactly a factor of 2.
+  - But the paper's Eq. 1–2 use the phase velocity consistently, and that is the right choice for a phase delay. Their own fit is about 440 zs, which is 1.8×. Within the errors (±128) the factor is anything from about 1.5 to 2.5.
+  - We treat it as a coincidence, not a signal.
+- **Anomaly flagged in a source.** Vinante 2017 reports "a nonthermal force noise of unknown origin" at 8174 Hz. Read as CSL, it would correspond to λ = 10⁻⁷·⁷ s⁻¹, in line with Adler's proposed 10^(−8±2) s⁻¹. Here it is used only as an upper bound.
+- **Honest negatives.**
+  - The amplitude, intrinsic-spread, lab-anisotropy, crossed-polarizer and R1-threshold versions of the hooks are excluded by 4 to 30 orders of magnitude.
+  - Gradual, reversible "release" by itself is already standard QM (Minev).
+  - The R2 threshold, the extrinsic spread and a universal τ can't be falsified as stated. They need a prediction for Λ₀ first.
+- **Not done (dropped under the standing rule):**
+  - frequency bounds between 20 mHz and 4.6×10¹⁸ Hz other than 8174 Hz;
+  - tests of the exponential decay law (a spread of rates would show up as non-exponential decay);
+  - Hong–Ou–Mandel identical-photon tests;
+  - the paper's exact red-line numbers, which are only digitized.
+
+### 31.6 What survives, and the single best test
+**Survivor: the angle-dependent release time, (1)+(6).** This is Dan's original angle-of-incidence idea, put in timing form.
+- The best existing data allow an extra term of up to **485 zs per unit cosβ**, about 2× the light-travel effect.
+- The data even show a 1.4–1.8σ excess over the best standard model, which the authors say needs more theory (electron–electron correlation, nondipole effects).
+
+**Best test.** Repeat the Grundmann COLTRIMS birth-time measurement in a way that separates the hook term from known physics:
+- use H₂ *and* D₂ and split by KER into several bond-length bins. Their public Fig. 2 data cover KER 16.0–22.7 eV (5–95 %), which is R ≈ 0.64–0.90 Å (DERIVED via the paper's KER = e²/4πε₀R). Light travel then runs from 212 to 300 zs; a hook term d₁ would not scale with R;
+- use two photon energies, because the nondipole term changes with photon energy;
+- use single ionization, to remove e–e correlation;
+- get ≥ 10× statistics, which brings the statistical error per slope to about 11 zs. The momentum-zero systematic, ±0.04 a.u. → about 50 zs, then dominates and needs calibrating, for example with an atomic reference.
+
+**Cheapest first step.** The 300,000 recorded coincidences already contain both β and R. The public files only have them separately: Fig. 3 is β-resolved for the R ≈ 0.74 Å subset, and Fig. 2 is R-resolved but averaged over β. The R-scaling test could therefore run on the authors' existing event-level data if they share it. This would be a request to the Frankfurt group (Grundmann / Dörner); nothing has been sent.
+
+A null result at the 50 zs level would push |d₁| below about 0.2 × R/c. A d₁ that stays constant while R changes would be the first evidence for something beyond standard QED timing.
+
+**Second survivor.** A frequency-selective release hiding somewhere in the roughly 20 decades between 20 mHz and 4.6×10¹⁸ Hz that were not verified here. It is formally colored CSL. It needs a predicted f₀ before it can be tested in any meaningful way.
