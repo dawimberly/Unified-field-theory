@@ -3518,3 +3518,100 @@ python scripts/stage32_analyze_joint.py --selftest                              
   - its predicted curves are ready for a one-command comparison.
 - **But it cannot settle H0 against H1 at the size of the Stage 31 residual.** The expected significance is 1.4σ, with a 25 % chance of reaching 2σ.
 - **A decisive test needs new data:** about 10× the statistics at 800 eV, or a high-energy run (1600 eV, if the visibility holds), plus the authors' KER resolution and nondipole model per R bin.
+
+
+## Stage 33 — Closing the frequency gaps for resonant release (do-si-do element 3)
+
+**Question (Dan, via Stage 31).** Stage 31 found that a *frequency-selective* release (hooks that let go resonantly at some f₀) was bounded in only three bands — LISA Pathfinder 0.7–20 mHz, the 8174 Hz cantilever line, and Majorana X-rays 19–100 keV — leaving ≈20.4 decades between 20 mHz and 19 keV unchecked. Stage 33 searches the published record for every experiment that would see a resonant excess (heating, force noise, spontaneous emission, decoherence) inside that gap and converts each to Stage 31's units.
+
+**Standing rule.** Every experimental number was read from a source fetched during this stage; url, location and verbatim quote for each are in `results/stage33_sources.csv` (also `results/stage33.json → sources`). Constants are from the NIST CODATA pages, fetched. Nothing recalled. Labels: **CITED** (number from a fetched source), **DERIVED** (computed here from CITED inputs), **ASSUMED** (our stated choice).
+
+**Files:** `scripts/stage33_run.py`, `scripts/stage33_fig.py`, `results/stage33.json`, `results/stage33_bounds.csv`, `results/stage33_sources.csv`, `results/stage33_lpf18_curve.csv`, `figures/stage33_frequency_coverage.png`.
+
+### 33.1 Parametrization (unchanged from Stage 31, no new knobs)
+- Release rate per nucleon Λ(ω) = Λ₀·L(ω; ω₀, Q), expressed as a CSL-equivalent **mass-proportional** collapse rate λ at **r_C = 10⁻⁷ m** (formally colored CSL). An experiment that samples the noise in [f_min, f_max] bounds λ(f) there. Narrow resonators are drawn as ±0.1 % lines (Stage 31 convention, ASSUMED). m₀ = 1 u (ASSUMED; sources say "nucleon", a 0.7 % difference).
+- **Which frequency an experiment samples** (ASSUMED rule, applied uniformly): mechanical oscillators/interferometers → measured force-noise frequency; trapped-ion and phonon-mode heating → mode frequency; bulk heating → longitudinal phonons ω = v_s q weighted by q⁴e^(−q²r_C²) (Eq. 17 of Carlesso–Ferialdi–Bassi 2018); free-falling atoms → free-evolution response kernel; radiation → E/h.
+- **Caveat (honest).** Each bound is on the noise level *averaged over that experiment's band*. A release line narrower than the band is bounded more weakly, by (band width)/(line width). Stage 31 used the same convention.
+- The Majorana *non-mass-proportional* number (5.2×10⁻²⁰) is a different model; it is shown in grey and excluded from coverage counts. Stage 31's "tightest" quote used it.
+
+### 33.2 Conversion checks (DERIVED)
+- **Force-noise formula.** Eq. 13 of Carlesso–Ferialdi–Bassi in the thick-slab limit gives S_F = 8πħ²λρ²A r_C²/m₀² (two-sided). With the LPF cube (4.6 cm, 1.928 kg, CITED) and S_a^½ = 5.2 fm s⁻²/√Hz it returns **λ = 2.986×10⁻⁸ vs Helou's 2.96×10⁻⁸ (ratio 1.009)**. So λ ∝ ASD² can be used for the LPF 2018 spectrum.
+- **Single phonon mode.** Γ/λ = 4π^{3/2}ħρ r_C³k₀²e^(−k₀²r_C²)/(m₀²ω), independent of mode volume. At the paper's own optimum length (ħ/σ_q = 0.5 µm) this gives Γ/λ = 1.063×10⁷ vs the paper's 3.5×10¹³·(m_e/u)² = 1.053×10⁷ (**ratio 1.009**).
+- **Trapped ion (point mass m = A·u).** Per-axis CSL heating = ⅓ of review Eq. 3 (dE/dt = 3λħ²m/4m₀²r_C²), so λ ≤ 4m₀²r_C²ω ṅ/(ħm).
+
+### 33.3 Bounds found (mass-proportional, r_C = 100 nm)
+
+| f band | λ_max (s⁻¹) | experiment | label |
+|---|---|---|---|
+| 20 µHz – 30 mHz (curve) | 3.3×10⁻⁹ at 2–10 mHz; 3.9×10⁻⁶ at 20 µHz; 1.7×10⁻⁸ at 30 mHz | LISA Pathfinder 2018 ASD (Armano 2018: 1.74 fm s⁻²/√Hz above 2 mHz, 60 at 20 µHz; ≲12 at 0.1 mHz from 2016; 100 fm/√Hz displacement noise above 10 mHz) | DERIVED (ASD² × Helou); log-log interpolation and quadrature sum ASSUMED. The review quotes 3.8×10⁻⁹ (ours/review = 0.87) |
+| 0.7 – 20 mHz | 2.96×10⁻⁸ | LPF 2016 (Helou) | CITED (Stage 31) |
+| ≤ 0.19 Hz | 5.1×10⁻⁸ | ⁸⁷Rb pK free expansion (Kovachy data; Bilardello 2016) | λ CITED (review); band DERIVED: kernel half-power at 0.1885 Hz for T = 1.1 + 0.035 + 1.8 s |
+| 9.3, 12.9 Hz | 6.7×10⁻⁷ | diamagnetically levitated micro-sphere (Zheng 2020) | CITED (review); the paper itself says 10⁻⁶·⁴ = 4.0×10⁻⁷; the weaker value is used |
+| 30 – 35 Hz | 1.0×10⁻⁵ | LIGO test masses | CITED |
+| 931 Hz | 4.6×10⁻² | AURIGA bar | CITED |
+| 3084 Hz | ≈5×10⁻⁸ | nanocantilever (Vinante 2016) | DERIVED from text: "improves [5.0×10⁻⁶] by 2 orders" |
+| 3532.7 Hz | **2.0×10⁻¹⁰** | multilayer cantilever (Vinante 2020) | CITED |
+| 8174 Hz | 1.9×10⁻⁸ | cantilever (Vinante 2017) | CITED (Stage 31 had 10⁻⁷·⁷) |
+| 0.6, 0.8, 1.0, 1.3, 1.5 MHz | 0.70, 0.77, 0.58, 0.51, 0.65 | ⁸⁸Sr⁺ heating at ~4 K (Bruzewicz 2015, Table 1 fit + 1σ) | DERIVED |
+| 4.6 MHz | 1.37 | ⁴⁰Ca⁺ heating, 3 quanta/s (Kaufmann 2017) | DERIVED |
+| 5.55 – 12.98 GHz | **3.1×10⁻¹¹** | bulk heating of solids, 10 pW/kg residual (Adler–Vinante 2018) | λ CITED (review: 3.3×10⁻¹¹); band DERIVED, half-max of x⁴e^(−x²) with v_s = 4000 m/s (peak 9.0 GHz) |
+| 5.961 GHz | 2.4×10⁻⁴ | HBAR sapphire phonon mode (Schrinski 2023): n = 1.6 ± 0.2 %, T₁ = 85.8 µs → Γ ≤ 233 s⁻¹ | DERIVED; all population attributed to the effect (+2σ) |
+| 14.5 – 48.5 keV | 6.8×10⁻¹² | IGEX Ge (Piscicchia 2017) | CITED |
+| 19 – 100 keV | 1.74×10⁻¹³ (electrons) / **4.94×10⁻¹⁵** (coherent nuclei) | Majorana | CITED (Stage 31) |
+| 1.0 – 3.8 MeV | 5.2×10⁻¹³ | Ge underground (Donadi 2021) | CITED |
+
+### 33.4 Coverage — the honest count
+- **Stage-31 gap (20 mHz – 19 keV, 20.36 decades):** covered **0.0009 → 1.54 decades**. **18.8 decades are still open.**
+- **Whole span (20 µHz – 3.8 MeV, 25.66 decades):** 5.84 decades covered.
+- **Tightest:** 4.9×10⁻¹⁵ s⁻¹ (Majorana, m-p nuclei, 19–100 keV). Tightest new in the old gap: 3.1×10⁻¹¹ (bulk heating, 5.6–13 GHz). Tightest mechanical: 2.0×10⁻¹⁰ (3532.7 Hz).
+- **Weakest:** 1.4 s⁻¹ (⁴⁰Ca⁺ at 4.6 MHz). The ion lines are 7–10 orders weaker than the mechanical bounds. They count as coverage only in the formal sense.
+
+### 33.5 Open windows and the best experiment for each
+
+| open window | width | best proposed experiment (why) |
+|---|---|---|
+| < 20 µHz | — | LISA (or longer LPF-type free-fall runs); long-baseline torsion balances |
+| 0.19 – 30 Hz (minus 9.3/12.9 Hz lines) | ≈2.2 dec | cryogenic magneto-gravitational levitation (Zheng-type at mK); low-frequency torsion pendulums; long free-fall BEC (space) |
+| 35 Hz – 3 kHz (minus 931 Hz) | ≈1.9 dec | **Cheapest:** reanalyse public LIGO strain/force-noise spectra across 10–1000 Hz. The data are public and only the 30–35 Hz minimum was ever converted (same logic as the Stage 28 LPF reanalysis). Also wide-band cantilever spectra |
+| 3 – 8 kHz between lines | ≈0.4 dec | cantilever force-noise spectra read off-resonance |
+| 8.2 kHz – 4.6 MHz (minus ion lines) | ≈2.7 dec | high-Q SiN membranes / phononic-crystal resonators (0.1–1 MHz) at mK, with multilayer mass loading. Ion heating is 10 orders too weak |
+| 4.6 MHz – 5.6 GHz | 3.1 dec | BAW/HBAR overtone modes with qubit readout (the 15–800 MHz devices proposed in arXiv:2507.02653), cooled to ground state |
+| **13 GHz – 14.5 keV** | **8.4 dec** | the largest hole: THz, IR, optical, UV, soft X-ray. Proposals: low-threshold, low-background calorimeters/TES/SNSPDs staring at a cold massive sample (CSL emission dΓ/dE ∝ 1/E, Piscicchia 2017 Eq. 2, so low energies are favoured); superconducting-qubit quasiparticle poisoning (pair-breaking > 2Δ); a frequency-resolved model of CSL photons in the FIRAS band |
+| 100 keV – 1 MeV | 1.0 dec | reanalyse the existing Majorana/Ge spectra in this range (not yet converted) |
+
+### 33.6 Not assigned to a frequency (bounds exist, band unknown)
+| item | λ bound (CITED, review) | why no band |
+|---|---|---|
+| Neptune heating | 6.6×10⁻¹¹ | sound speed / phonon band not fetched |
+| IGM heating | 10⁻⁸ | free-proton recoil spectrum not given |
+| neutron-star heating | 9.4×10⁻⁷ | no spectral mapping |
+| CMB proton heating / FIRAS | 10⁻⁵ / 10⁻¹ | emission epoch (redshift) spread |
+| H non-dissociation | 1 | no spectral treatment |
+| SQUID supercurrent decay | 10⁻³ | pair-breaking gap not fetched; source warns it may be weaker |
+| matter-wave interferometry | 10⁻⁷ | integrates over flight time |
+| Paul-trap nanoparticle (Pontin 2020) | 4.1×10⁻⁵ | secular frequency not stated in fetched text |
+
+### 33.7 Dropped (unverifiable or wrong units)
+- Fu 1997 / TWIN 11 keV: the source says those data were "underestimated by a factor of about 50 at 10 keV", and the band of the corrected analysis is not stated.
+- HBAR next-generation λ < 5.7×10⁻⁸: given only at r_C = 3×10⁻⁷ m.
+- Earth heat balance (≈10⁻¹¹): only "∼", no band.
+- LIGO outside 30–35 Hz: spectrum not fetched.
+- Torsion pendulums, atomic clocks, NMR/comagnetometers, axion haloscopes, SQUID noise: no CSL-parametrized bound found in a fetched source. Mass-density noise reaches clocks and NMR only through motional heating, which the ion entries cover.
+- The cold-atom energy bound 10⁻⁷±¹ (±1 decade uncertainty in the source) was replaced by the position-diffusion bound.
+
+### 33.8 Coincidences and flags
+- **8174 Hz excess (Vinante 2017)** = 10⁻⁷·⁷ if read as CSL, inside Adler's 10⁻⁸±². Vinante 2020 (same cantilever, magnet and SQUID, now at 3532.7 Hz with a multilayer mass) found the *same absolute* excess force noise, while CSL predicted a large increase. That points to an instrumental origin.
+  - However, for a frequency-selective release, 3532.7 Hz does not test 8174 Hz.
+  - The decisive test: put the multilayer mass on a resonator held at 8174 Hz. **Open, cheap, and the only in-gap anomaly found.**
+- **Agreement checks, not coincidences:** LPF 2018 derived 3.3×10⁻⁹ vs review 3.8×10⁻⁹; Adler–Vinante 3.1×10⁻¹¹ vs review 3.3×10⁻¹¹; HBAR formula vs paper (ratio 1.009); LPF formula vs Helou (ratio 1.009).
+- **Discrepancy flagged:** Zheng 2020 paper 10⁻⁶·⁴ vs review 6.7×10⁻⁷ (factor 1.7); the weaker value is used.
+
+### 33.9 Verdict
+A resonant release can no longer hide at 2 mHz–0.19 Hz above about 5×10⁻⁸ s⁻¹, at 5.6–13 GHz above 3×10⁻¹¹, or at 14.5 keV–100 keV above 7×10⁻¹² (10⁻¹⁵ with nuclei). **About 18.8 of the 20.4 Stage-31 decades are still open.** The largest single hole, 13 GHz to 14.5 keV (8.4 decades, THz to soft X-ray), has no experiment converted to these units.
+- **Honest negative.** Without a predicted f₀ the hypothesis cannot be cornered. Element 3 stays a survivor by default, not on evidence.
+- **Cheapest next steps:**
+  1. a LIGO public-data force-noise reanalysis over 10–1000 Hz;
+  2. a multilayer-mass cantilever at 8174 Hz;
+  3. conversion of existing Ge spectra over 100 keV–1 MeV.
+
+![Stage 33 frequency coverage](figures/stage33_frequency_coverage.png)
