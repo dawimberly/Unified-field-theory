@@ -1,0 +1,240 @@
+{
+ "stage": 23,
+ "sources": {
+  "rider2016": "Rider et al., PRL 117, 101101 (2016): silica r=2.5 um, permanent dipoles 151+-6, 89+-10, 192+-30 e um; UV discharge with charge quantisation. https://web.stanford.edu/group/grattalab/Publications/PhysRevLett.117.101101.pdf",
+  "afek2021": "Afek et al., PRA 104, 053512 (2021), arXiv:2108.04406: 15 um silica p0=(-200+-360) e um, alpha=401+-8 e um/(V/mm); precessive control cancels dipole backgrounds by x120. https://arxiv.org/abs/2108.04406",
+  "priel2022": "Priel et al., Sci. Adv. (2022), PMC9565793: O(100 e um) dipole signals seen in all levitated-MS techniques (7.5 um silica). https://pmc.ncbi.nlm.nih.gov/articles/PMC9565793/",
+  "diamond": "No measured permanent dipole for levitated (micro)diamond found; rotating-diamond experiments report no observable dipole coupling (arXiv:2309.01545) -> silica surface density used (ASSUMED).",
+  "lpf_patch": "Armano et al., PRL 118, 171101 (2017): stray-potential fluctuations 34+-2 uV/rtHz at 1 mHz, 190+-30 at 0.1 mHz; static stray potentials up to 100 mV in lab; charging lambda_eff1+lambda_eff2 = 2220+-260 /s; UV discharge keeps V_tm within +-80 mV. https://eprints.gla.ac.uk/141213/1/141213.pdf",
+  "lpf_patch_shape": "Armano et al. arXiv:2404.08340: Delta_x PSD ~ 1/f (ASD ~ f^-1/2); 2-sigma limit on an extra 1/f ASD term 65 uV/rtHz x (0.1 mHz/f). https://arxiv.org/abs/2404.08340",
+  "lpf_jitter": "Armano et al., PRL 116, 231101 (2016): spacecraft motion bulge 20-200 mHz, max jitter 8-30 nm/rtHz on the different axes; stiffness omega_2^2 = (-525+-30)e-9 s^-2, gravitation-dominated, agrees with self-gravity model to 10%. https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.231101",
+  "lpf_release": "LPF GPRM: release requirement <5 um/s; in flight typically ~10 um/s linear (Dalla Ricca et al. ESMATS 2021). https://www.esmats.eu/esmatspapers/pastpapers/pdfs/2021/dalla-ricca.pdf ; https://sci.esa.int/web/lisa-pathfinder/-/56868-lisa-pathfinder-test-mass",
+  "gravitower": "Prakash et al., npj Microgravity (2026): first release-recapture of optically levitated silica nanoparticles in microgravity (GraviTower Bremen); usable free flights 5-6 us, 9 us not separable. https://doi.org/10.1038/s41526-026-00596-y",
+  "goce": "GOCE accelerometers 2e-12 m s^-2/rtHz spec (5-100 mHz), in-flight 3.1-6.7e-12. https://sf2a.eu/proceedings/2010/2010sf2a.conf..0113C.pdf"
+ },
+ "designs": {
+  "diamond": {
+   "D": 0.00027348383392117586,
+   "m": 2.803942224587563e-14,
+   "R": 1.2401030576582854e-06,
+   "dx": 9.576932948412494e-05,
+   "req": 1.0273618359165407e-17,
+   "req_vs_diamond_orders": 0.0
+  },
+  "silica": {
+   "D": 0.0002955294551590562,
+   "m": 2.9147654801883434e-14,
+   "R": 1.4679032852548012e-06,
+   "dx": 0.00010348932643510124,
+   "req": 9.145759110344128e-18,
+   "req_vs_diamond_orders": -0.050503670329832065
+  },
+  "osmium": {
+   "D": 0.00018654528598103688,
+   "m": 2.3157697166694044e-14,
+   "R": 6.255041230418089e-07,
+   "dx": 6.532494700208649e-05,
+   "req": 1.8236626341767294e-17,
+   "req_vs_diamond_orders": 0.24922107107901056
+  }
+ },
+ "dipole": {
+  "silica_meas_R25_eum": [
+   151,
+   89,
+   192
+  ],
+  "diamond_scaled_R2_eum": 37.15459114170043,
+  "diamond_scaled_R3_eum": 18.43020883234646,
+  "stage21_assumed_eum": 100.0,
+  "required_eum": {
+   "0.001": 3.1480847152446216e-07,
+   "0.004": 5.036935544391397e-06,
+   "0.01": 3.148084715244621e-05
+  },
+  "stage21_required_eum_1mm": 1.0,
+  "spin_cancel": 120.0,
+  "afek_alpha_scaled": 2.9043189674567807e-28,
+  "cm_alpha": 1.29520663827141e-28
+ },
+ "efield": {
+  "delta_1Hz_uV": 1.0751744044572489,
+  "delta_extra_1Hz_uV": 1.0751940522528944,
+  "dE_1mm_1Hz_lpf": 0.0010751744044572489,
+  "dE_1mm_iontrap_white": 1.7790017373411777e-09,
+  "lpf_over_iontrap_orders": 5.781302544833924,
+  "note": "LPF Delta_x includes actuation-electronics noise, so it is an upper bound for a passive housing; it is the only measured space value; extrapolated from 0.1-20 mHz to ~0.3 Hz (ASSUMED shape)"
+ },
+ "jitter": {
+  "orders": {
+   "8nm": 2.5651560562906783,
+   "30nm": 3.1373994441159248
+  },
+  "J_required": 2.177378502167075e-11,
+  "J_measured": [
+   8e-09,
+   3e-08
+  ],
+  "omega2_measured": 5.25e-07,
+  "omega2_stage21_model": 5.339439999999999e-07,
+  "stage21_assumed_J": 1e-09,
+  "stage21_required_J": 1.9e-11,
+  "omega2_needed_at_8nm": 1.4289046420471429e-09
+ },
+ "release": {
+  "v_lpf": 1e-05,
+  "dD_lpf": 3.0000000000000004e-05,
+  "dD_over_D": 0.10969569780364669,
+  "casimir_ratio_at_closest": 0.20080252424413386,
+  "dPhi_over_Phi": 0.32908709341094006,
+  "v_required_1pct": 9.116127797372529e-07,
+  "T_eff_required": 0.0016877440583308182,
+  "t_free_demo": 6e-06,
+  "t_free_needed": 3.0,
+  "free_flight_gap_orders": 5.698970004336019,
+  "dc_selfgravity_drift": 6.461055576387779e-10
+ },
+ "charge": {
+  "rate_per_s": 1.6895906039847165e-06,
+  "mean_days_between": 6.850223981346649,
+  "prob_per_shot": 5.0687718119541496e-06,
+  "one_electron_1mm_orders": 9.501953589251906,
+  "note": "area scaling of the LPF cosmic-ray charging rate is ASSUMED; discharge to exactly 0 e by UV with charge quantisation is demonstrated in levitated microspheres (Rider 2016)"
+ },
+ "z_needed_m": {
+  "diamond_1cm_spin": 0.9917276342083049,
+  "diamond_1cm": 10.863831923142412,
+  "osmium_1cm_spin": 0.2214964438870468
+ },
+ "measured_band_fraction": 0.6005517712335952,
+ "scenarios": {
+  "diamond_measured_1mm": {
+   "p_eum": 37.15459114170043,
+   "terms": {
+    "permanent_dipole": 8.071966075835952,
+    "induced_dipole": 5.760287506649417,
+    "sc_jitter": 2.5651560562906783
+   },
+   "total": 8.071971244665198,
+   "binding": "permanent_dipole"
+  },
+  "diamond_measured_1mm_R3": {
+   "p_eum": 18.43020883234646,
+   "terms": {
+    "permanent_dipole": 7.767483845481391,
+    "induced_dipole": 5.760287506649417,
+    "sc_jitter": 2.5651560562906783
+   },
+   "total": 7.767504851357937,
+   "binding": "permanent_dipole"
+  },
+  "diamond_measured_1mm_extra1f": {
+   "p_eum": 37.15459114170043,
+   "terms": {
+    "permanent_dipole": 8.07354119585746,
+    "induced_dipole": 5.761862626670925,
+    "sc_jitter": 2.5651560562906783
+   },
+   "total": 8.07354636468669,
+   "binding": "permanent_dipole"
+  },
+  "diamond_1cm": {
+   "p_eum": 37.15459114170043,
+   "terms": {
+    "permanent_dipole": 6.071966075835952,
+    "induced_dipole": 2.7602875066494166,
+    "sc_jitter": 2.5651560562906783
+   },
+   "total": 6.071966148569117,
+   "binding": "permanent_dipole"
+  },
+  "diamond_1cm_spin": {
+   "p_eum": 0.3096215928475036,
+   "terms": {
+    "permanent_dipole": 3.9927848297883277,
+    "induced_dipole": 2.7602875066494166,
+    "sc_jitter": 2.5651560562906783
+   },
+   "total": 3.993829669783081,
+   "binding": "permanent_dipole"
+  },
+  "diamond_1cm_spin_30nm": {
+   "p_eum": 0.3096215928475036,
+   "terms": {
+    "permanent_dipole": 3.9927848297883277,
+    "induced_dipole": 2.7602875066494166,
+    "sc_jitter": 3.1373994441159248
+   },
+   "total": 3.9976996341041064,
+   "binding": "permanent_dipole"
+  },
+  "diamond_1mm_one_electron": {
+   "p_eum": 37.15459114170043,
+   "terms": {
+    "permanent_dipole": 8.071966075835952,
+    "induced_dipole": 5.760287506649417,
+    "charge": 9.501953589251906,
+    "sc_jitter": 2.5651560562906783
+   },
+   "total": 9.502253153532484,
+   "binding": "charge"
+  },
+  "silica_1mm": {
+   "p_eum": 52.058519725462,
+   "terms": {
+    "permanent_dipole": 8.252114517669327,
+    "induced_dipole": 6.013675612622866,
+    "sc_jitter": 2.6156597266205104
+   },
+   "total": 8.252121759849627,
+   "binding": "permanent_dipole"
+  },
+  "silica_1cm_spin": {
+   "p_eum": 0.43382099771218335,
+   "terms": {
+    "permanent_dipole": 4.172933271621702,
+    "induced_dipole": 3.0136756126228668,
+    "sc_jitter": 2.6156597266205104
+   },
+   "total": 4.174139610046692,
+   "binding": "permanent_dipole"
+  },
+  "osmium_1mm": {
+   "p_eum": 2.717118338284804,
+   "terms": {
+    "permanent_dipole": 6.7699147621307665,
+    "induced_dipole": 4.566144938843506,
+    "sc_jitter": 2.3159349852116677
+   },
+   "total": 6.769923258236196,
+   "binding": "permanent_dipole"
+  },
+  "osmium_1cm": {
+   "p_eum": 2.717118338284804,
+   "terms": {
+    "permanent_dipole": 4.7699147621307665,
+    "induced_dipole": 1.566144938843506,
+    "sc_jitter": 2.3159349852116677
+   },
+   "total": 4.769917531148853,
+   "binding": "permanent_dipole"
+  },
+  "osmium_1cm_spin": {
+   "p_eum": 0.02264265281904003,
+   "terms": {
+    "permanent_dipole": 2.6907335160831414,
+    "induced_dipole": 1.566144938843506,
+    "sc_jitter": 2.3159349852116677
+   },
+   "total": 2.727340963217545,
+   "binding": "permanent_dipole"
+  }
+ },
+ "best": "osmium_1cm_spin",
+ "comparators": {
+  "goce_inflight": 3.1e-12,
+  "goce_orders": 5.479638265168068,
+  "lpf_1p74": 1.74e-15,
+  "lpf_orders": 2.2288258196163957
+ }
+}

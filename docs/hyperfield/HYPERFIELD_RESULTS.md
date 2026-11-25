@@ -1998,3 +1998,93 @@ The space requirement is $1.0\times10^{-17}$ m s⁻²/√Hz. Meeting it needs $p
 - Stage 18 sources (NLNM, aLIGO ISI, G ring laser, LISA Pathfinder, Labaziewicz, Sedlacek) were reused unchanged.
 
 ![Stage 21](figures/stage21_redesign.png)
+
+## Stage 23 — The Stage 21 space design with measured inputs
+
+**Question.** Stage 21's best space design gave +2.0 orders: released, drag-free, no plate, $D=273\,\mu$m diamond, $m=2.8\times10^{-14}$ kg, requirement $1.03\times10^{-17}$ m s⁻²/√Hz at $N_5\le10^4$. Three inputs were ASSUMED:
+- a permanent dipole of $10^{-2}$ e·cm;
+- E-field noise extrapolated from ion traps, with electrodes 1 mm away;
+- spacecraft jitter of 1 nm/√Hz with a 500 kg / 0.5 m self-gravity term.
+
+Here each input is replaced by a measured value, and the residual is recomputed with the unchanged Stage 21 exact model and filter (`stage21_run.proto` / `residual_orders`).
+
+**Files.** Scripts: `scripts/stage23_run.py` (about 1 s) and `scripts/stage23_fig.py`. Data: `results/stage23.json`. Figure: `figures/stage23_space.png`.
+
+**Answer.** The design as drawn, with electrodes at 1 mm, is **+8.1 orders**, not +2.0. Two measured mitigations bring diamond to **+4.0**:
+- electrodes moved to 1 cm (a design choice);
+- spin-averaging of the dipole (×120, measured by Afek 2021).
+
+The binding input is the **permanent electric dipole** coupling to measured stray-potential noise. Even with all electrostatics removed, the measured LPF spacecraft jitter times the measured self-gravity stiffness leaves a floor of **+2.6** (+3.1 at the worst axis). Osmium reaches +2.7, but only through an ASSUMED patch-dipole estimate.
+
+### 23.1 Measured inputs vs required
+
+| input | measured (source) | used for the design | required | gap (orders) |
+|---|---|---|---|---|
+| permanent dipole | silica r=2.5 µm: **151±6, 89±10, 192±30 e·µm** (Rider 2016); 15 µm silica $p_0=-200\pm360$ e·µm, consistent with 0 (Afek 2021); O(100 e·µm) "observed in all techniques" (Priel 2022) | diamond R=1.24 µm. **No diamond measurement exists**, so silica surface density is used, scaled as R²: **37 e·µm** (R³ gives 18) | at 1 mm: 3×10⁻⁷ e·µm; at 1 cm: 3×10⁻⁵ e·µm (Stage 21 said 1 e·µm at 1 mm) | +8.1 (1 mm), +6.1 (1 cm), **+4.0** (1 cm with spin ×120) |
+| induced dipole | α = 401 e·µm/(V/mm) for 15 µm silica, 2.2× Clausius–Mossotti (Afek 2021) | scaled R³ to 2.9×10⁻²⁸ C m²/V, in a 100 mV static stray potential (LPF lab level) | — | +5.8 (1 mm), +2.8 (1 cm) |
+| stray-potential noise | LPF: **34±2 µV/√Hz at 1 mHz, 190±30 at 0.1 mHz**, PSD ∝ 1/f (ASD ∝ f^-1/2) (Armano 2017; arXiv:2404.08340) | extrapolated, 1.08 µV/√Hz at 1 Hz; field = Δ/z, gradient = Δ/z² (geometry ASSUMED) | — | **5.8 orders above** Stage 18/21's ion-trap model at 1 mm. 60% of the dipole-term variance comes from the LPF-measured band (1–20 mHz), so this is mostly measured, not extrapolated |
+| spacecraft-to-TM jitter | LPF: **8–30 nm/√Hz** maximum, 20–200 mHz (Armano 2016); 0.2 nm/√Hz at 1 mHz simulated (Vitale & Weber) | shape: flat in 20–200 mHz, f⁻² above (ASSUMED) | **2.2×10⁻¹¹ m/√Hz** (Stage 21: 1.9×10⁻¹¹) | **+2.6 / +3.1** |
+| self-gravity stiffness | LPF: **ω² = −(525±30)×10⁻⁹ s⁻²**, gravitation-dominated, model agrees to 10% (Armano 2016) | measured value used | 1.4×10⁻⁹ s⁻² at 8 nm jitter | 2.6 |
+| release velocity | LPF requirement < 5 µm/s; **~10 µm/s typical in flight** (Dalla Ricca, ESMATS 2021; ESA) | — | ≤ **0.91 µm/s** to hold D to 1% over 3 s, i.e. $T_{\rm eff}\le1.7$ mK (DERIVED) | 1.0 |
+| free flight of a levitated particle (silica nanoparticles) | **5–6 µs usable**; 9 µs could not be separated (first microgravity release-recapture, GraviTower Bremen; Prakash, npj Microgravity 2026) | — | 3 s | **5.7** in time |
+| charge | LPF charging λ_eff = 2220±260 s⁻¹ for both TMs; UV discharge to ±80 mV (Armano 2017); exact 0 e with visible charge quantisation in levitated microspheres (Rider 2016) | area-scaled to the sphere (ASSUMED): 1.7×10⁻⁶ s⁻¹, one event per **6.9 days**, 5×10⁻⁶ per shot | q = 0 exactly: one electron at 1 mm gives **+9.5** | holdable |
+
+**Holding D during a shot.**
+- At the LPF release velocity, D drifts by 30 µm (11%) over 3 s. The Casimir ratio at closest approach becomes 0.20, which breaks the 0.1 cut, and Φ shifts by 33%.
+- The DC self-gravity differential drift is only 0.6 nm, which is negligible.
+- So D can be held only with sub-µm/s release, i.e. feedback cooling to about 1 mK before release. That is not shown here. The demonstrated free-flight time, 6 µs, is 5.7 orders short of 3 s.
+
+**Comparison with servoed electrostatic accelerometers.** GOCE achieved 3.1–6.7×10⁻¹² m s⁻²/√Hz in flight against a 2×10⁻¹² specification (MICROSCOPE's specification is also 2×10⁻¹²). That is +5.5 orders over the requirement. LPF's 1.74 fm is +2.2.
+
+### 23.2 Recomputed space residual (orders)
+
+| scenario | permanent dipole | induced dipole | jitter (8 nm) | **total** |
+|---|---|---|---|---|
+| diamond, electrodes 1 mm (Stage 21 design as drawn) | +8.1 | +5.8 | +2.6 | **+8.1** |
+| same, R³ dipole scaling | +7.8 | +5.8 | +2.6 | +7.8 |
+| diamond, 1 cm | +6.1 | +2.8 | +2.6 | +6.1 |
+| **diamond, 1 cm, spin-averaged ×120** | +4.0 | +2.8 | +2.6 | **+4.0** |
+| same, 30 nm jitter | +4.0 | +2.8 | +3.1 | +4.0 |
+| silica, 1 cm, spin (D=296 µm; requirement −0.05 orders) | +4.2 | +3.0 | +2.6 | +4.2 |
+| osmium, 1 mm (D=187 µm; requirement +0.25 orders looser) | +6.8 | +4.6 | +2.3 | +6.8 |
+| osmium, 1 cm (patch dipole 2.7 e·µm, ASSUMED 10 mV patches) | +4.8 | +1.6 | +2.3 | +4.8 |
+| osmium, 1 cm, spin (spin-averaging of a patch dipole ASSUMED) | +2.7 | +1.6 | +2.3 | **+2.7** |
+| diamond, 1 mm, one stray electron | +8.1 | +5.8 | +2.6 (charge +9.5) | +9.5 |
+
+**Material, DERIVED.** With the 10% Casimir–Polder curvature cut, D is independent of mass and scales as (coef·CM²/ρ²)^{1/6}. The resulting D values are:
+- diamond 273 µm;
+- silica 296 µm;
+- osmium 187 µm (perfect-conductor e+m coefficient 143/16π).
+
+Osmium buys only 0.25 orders of requirement. Its real advantage is that a metal has no bulk dipole; only patch potentials remain, and their size is unmeasured. Stage 16 found that Os in space also needs to be at 2.7 K for blackbody reasons.
+
+**What closing the gap would take (DERIVED):**
+- **Dipole term (diamond, spin-averaged):** electrodes at about **1.0 m**, since the term scales as z⁻²; or a further ×10⁴ cut in dipole. For osmium with spin, 22 cm.
+- **Jitter term:** spacecraft-to-TM jitter about 400–1400× below LPF's measured value, or a self-gravity gradient compensated to ≤1.4×10⁻⁹ s⁻² (LPF achieved 5.25×10⁻⁷; the LISA tolerance quoted in Stage 21's source is 4×10⁻⁷).
+- **Free flight:** about 5.7 orders longer than demonstrated, plus sub-µm/s release.
+
+**Coincidences flagged.**
+- Stage 21's assumed self-gravity term, 2GM/r³ = 5.34×10⁻⁷ s⁻², agrees with LPF's measured −5.25×10⁻⁷ s⁻² to 2%. The assumption was arbitrary (500 kg at 0.5 m), so this is a coincidence.
+- Schut's default dipole (10⁻² e·cm = 100 e·µm) lies within a factor 1.5 of Rider's median of 151 e·µm. The Rider spheres are 3.4× larger than our cheap-point sphere, and Schut does not cite Rider.
+
+**Honest negatives.**
+- Measured stray-potential noise is 5.8 orders worse than the Stage 18/21 ion-trap model. The Stage 21 space design as drawn moves from +2.0 to **+8.1**.
+- No levitated-diamond dipole has been measured.
+- Spin-averaging a diamond that carries a spatial superposition and an NV spin is untested.
+- The LPF numbers include actuation-electronics noise. They are an upper bound for a passive housing, but they are the only measured space values.
+- The 6 µs → 3 s free-flight gap is outside the noise budget entirely.
+
+**Sources (all opened this stage).**
+- Rider et al., PRL 117, 101101 (2016): https://web.stanford.edu/group/grattalab/Publications/PhysRevLett.117.101101.pdf
+- Afek et al., PRA 104, 053512 (2021): https://arxiv.org/abs/2108.04406
+- Priel et al. 2022: https://pmc.ncbi.nlm.nih.gov/articles/PMC9565793/
+- Rotating levitated diamonds: arXiv:2309.01545
+- Armano et al., PRL 118, 171101 (2017): https://eprints.gla.ac.uk/141213/1/141213.pdf
+- LPF patch-noise estimate: https://arxiv.org/abs/2404.08340
+- Armano et al., PRL 116, 231101 (2016): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.231101 (jitter 8–30 nm/√Hz; ω₂² = −525×10⁻⁹ s⁻²)
+- Vitale & Weber: arXiv:1012.5968
+- LPF release: https://www.esmats.eu/esmatspapers/pastpapers/pdfs/2021/dalla-ricca.pdf and https://sci.esa.int/web/lisa-pathfinder/-/56868-lisa-pathfinder-test-mass
+- Prakash et al., npj Microgravity (2026): https://doi.org/10.1038/s41526-026-00596-y
+- GOCE in-orbit accelerometer verification: https://sf2a.eu/proceedings/2010/2010sf2a.conf..0113C.pdf
+
+![Stage 23](figures/stage23_space.png)
