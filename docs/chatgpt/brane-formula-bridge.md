@@ -2,7 +2,7 @@
 
 **Conversation date range** 2026-10-29 to 2026-10-30
 
-**DERIVED** This checkpoint records Applying a known brane formula to the scalar determinant action. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records Applying a known brane formula to the scalar determinant action. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
@@ -14,65 +14,83 @@
 
 **DERIVED** The induced-volume action for a D-dimensional worldvolume has the form
 
-    S_volume = integral d^D x sqrt(|det h_mu nu|),
-    h_mu nu = H_ab(phi) partial_mu phi^a partial_nu phi^b.
+$$
+\begin{gathered}
+S_{volume} = \int d^D x \sqrt{|\det h_{\mu\nu} |}, \\
+h_{\mu\nu} = H_{ab}(\phi ) \partial _\mu \phi ^a \partial _\nu \phi ^b.
+\end{gathered}
+$$
 
-**DERIVED** The target metric H_ab is allowed to depend on the embedding coordinates phi. For a regular conformal target metric H_ab=Omega(phi)^2 delta_ab,
+**DERIVED** The target metric H_ab is allowed to depend on the embedding coordinates phi. For a regular conformal target metric $H_{ab}=\Omega (\phi )^{2} \delta _{ab}$,
 
-    h_mu nu = Omega^2 P_mu nu,
-    sqrt(|det h|) = |Omega|^D sqrt(|det P|).
+$$
+\begin{gathered}
+h_{\mu\nu} = \Omega ^{2} P_{\mu\nu} , \\
+\sqrt{|\det h|} = |\Omega |^D \sqrt{|\det P|}.
+\end{gathered}
+$$
 
 **DERIVED** These determinant identities are exact at the classical algebraic level.
 
 ## Matching our action
 
-**DERIVED** Write a=D/2-1. The clock-free scalar action used in the CEV family is
+**DERIVED** Write $a=D/2-1$. The clock-free scalar action used in the CEV family is
 
-    S_CEV = integral d^D x (a/V(phi))^a sqrt(|det P|),
-    P_mu nu = sum_a partial_mu phi^a partial_nu phi^a.
+$$
+\begin{gathered}
+S_CEV = \int d^D x (a/V(\phi ))^a \sqrt{|\det P|}, \\
+P_{\mu\nu} = \sum _a \partial _\mu \phi ^a \partial _\nu \phi ^a.
+\end{gathered}
+$$
 
-**DERIVED** On a real patch with D>2 and V>0, choose
+**DERIVED** On a real patch with $D>2$ and $V>0$, choose
 
-    Omega(phi) = (a/V(phi))^(a/D),
-    H_ab(phi) = (a/V(phi))^((D-2)/D) delta_ab.
+$$
+\begin{gathered}
+\Omega (\phi ) = (a/V(\phi ))^{a/D}, \\
+H_{ab}(\phi ) = (a/V(\phi ))^((D-2)/D) \delta _{ab}.
+\end{gathered}
+$$
 
-**DERIVED** Then |Omega|^D=(a/V)^a, so the two volume densities coincide. In D=4 the target metric is simply
+**DERIVED** Then |Omega|$^D=(a/V)^a$, so the two volume densities coincide. In $D=4$ the target metric is simply
 
-    H_ab(phi) = V(phi)^(-1/2) delta_ab.
+$$
+H_{ab}(\phi ) = V(\phi )^{-1/2} \delta _{ab}.
+$$
 
-**DERIVED** The potential has been absorbed into a curved field-space metric. No new spacetime field has been introduced. A constant tension or reference scale can be restored to fix units; it does not alter this local determinant identity. At V=0 this mapping is singular. Nonpositive or complex branches require an explicitly different branch prescription and are not included in the displayed real formula.
+**DERIVED** The potential has been absorbed into a curved field-space metric. No new spacetime field has been introduced. A constant tension or reference scale can be restored to fix units; it does not alter this local determinant identity. At $V=0$ this mapping is singular. Nonpositive or complex branches require an explicitly different branch prescription and are not included in the displayed real formula.
 
 ## What this identification buys us
 
 **DERIVED** It identifies an existing family of classical constrained systems whose auxiliary-metric and Hamiltonian techniques can be reused. The microscopic scalar fields act as embedding coordinates into field space in this representation; the identity does not assert that extra physical spatial dimensions have been discovered.
 
-**DERIVED** The concrete next application is to import the general curved-target brane variational and constraint machinery, specialize its target metric to the expression above, and derive the first/second-class split before constructing a constrained phase-space measure. This avoids guessing a determinant from the configuration-space equation T=0.
+**DERIVED** The concrete next application is to import the general curved-target brane variational and constraint machinery, specialize its target metric to the expression above, and derive the first/second-class split before constructing a constrained phase-space measure. This avoids guessing a determinant from the configuration-space equation $T=0$.
 
 ## Four transfers that are not justified
 
-1. **DERIVED** **Signature:** real fields with delta_ab give P as a positive-semidefinite Gram matrix. A positive conformal factor cannot turn this into a classical Lorentzian induced metric. The real V>0 algebraic identification is therefore a volume identity, not a construction of a real timelike brane. The composite-gravity quantum vacuum involves regulated composite expectations; that separate construction must not be replaced with an unjustified signature assignment. This observation is not a proof excluding every quantum realization.
+1. **DERIVED** **Signature:** real fields with delta_ab give P as a positive-semidefinite Gram matrix. A positive conformal factor cannot turn this into a classical Lorentzian induced metric. The real $V>0$ algebraic identification is therefore a volume identity, not a construction of a real timelike brane. The composite-gravity quantum vacuum involves regulated composite expectations; that separate construction must not be replaced with an unjustified signature assignment. This observation is not a proof excluding every quantum realization.
 2. **DERIVED** **Quantum measure:** equal classical volume densities do not identify a flat scalar measure with a brane measure, an induced surface measure, or the measure obtained after auxiliary-metric integration.
-3. **DERIVED** **Worldvolume dimension:** D=4 corresponds to a 3-brane. Special results relying on the Weyl symmetry of a two-dimensional string worldsheet do not transfer automatically. A four-dimensional auxiliary metric has different trace constraints.
+3. **DERIVED** **Worldvolume dimension:** $D=4$ corresponds to a 3-brane. Special results relying on the Weyl symmetry of a two-dimensional string worldsheet do not transfer automatically. A four-dimensional auxiliary metric has different trace constraints.
 4. **DERIVED** **Matter content/background:** flat-target D-brane constraints with a gauge field are a methodological reference, not the final constraint list for a curved-target scalar-only model. The field-dependent potential is now target curvature and has to remain in the calculation.
 
 **DERIVED** Thus the process-of-elimination verdict is: retain the classical curved-target volume map; reject automatic transfer of timelike signature, string quantization, or the complete D-brane quantum measure.
 
 ## Where the published input ends
 
-**DERIVED** Kluson, *Note about covariant Hamiltonian formalism for strings, p-branes and unstable Dp-branes*, Physics Letters B 810 (2020), 135753, Section 3, Eqs. (12)-(21), supplies the general brane and auxiliary-metric templates. The conformal specialization above is our direct algebraic application. The source does not claim a quantum completion of CEV.
+**DERIVED** Kluson, *Note about covariant Hamiltonian formalism for strings, p-branes and unstable Dp-branes*, Physics Letters B 810 (2020), 135753, Section 3, Eqs. $(12)-(21)$, supplies the general brane and auxiliary-metric templates. The conformal specialization above is our direct algebraic application. The source does not claim a quantum completion of CEV.
 
-**DERIVED** https://doi.org/10.1016/j.physletb.2020.135753
+**CITED** https://doi.org/10.1016/j.physletb.2020.135753 — eq./page UNVERIFIED.
 
-**DERIVED** https://arxiv.org/pdf/2004.14654
+**CITED** https://arxiv.org/pdf/2004.14654 — eq./page UNVERIFIED.
 
 **DERIVED** Lee, *Hamiltonian formulation of the D-brane action and the light-cone Hamiltonian*, Physical Review D 57 (1998), 5134, illustrates why lapse/shift and spatial auxiliary data require a genuine constraint classification. Its setting differs from ours as stated above.
 
-**DERIVED** https://doi.org/10.1103/PhysRevD.57.5134
+**CITED** https://doi.org/10.1103/PhysRevD.57.5134 — eq./page UNVERIFIED.
 
-**DERIVED** https://arxiv.org/pdf/hep-th/9708093
+**CITED** https://arxiv.org/pdf/hep-th/9708093 — eq./page UNVERIFIED.
 
-**UNVERIFIED** Carone, Erlich, Vaman, JHEP 03 (2017), 134, and Batz, Erlich, Mrini, *Background-Independent Composite Gravity*, provide the composite-gravity starting action. Their prior brane analogy is acknowledged; no originality is claimed for identifying a determinant-volume structure.
+**CITED** Carone, Erlich, Vaman, JHEP 03 (2017), 134, and Batz, Erlich, Mrini, *Background-Independent Composite Gravity*, provide the composite-gravity starting action. Their prior brane analogy is acknowledged; no originality is claimed for identifying a determinant-volume structure. — eq./page UNVERIFIED.
 
-**DERIVED** https://doi.org/10.1007/JHEP03(2017)134
+**CITED** https://doi.org/10.1007/JHEP03(2017)134 — eq./page UNVERIFIED.
 
-**DERIVED** https://arxiv.org/pdf/2011.06541
+**CITED** https://arxiv.org/pdf/2011.06541 — eq./page UNVERIFIED.

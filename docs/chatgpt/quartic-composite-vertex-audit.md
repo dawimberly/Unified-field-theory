@@ -1,8 +1,8 @@
 # Candidate research problem: independent quartic interactions in composite gravity
 
-**Conversation date range** 2026-10 (exact conversation dates UNVERIFIED)
+**Conversation date range** $2026-10$ (exact conversation dates UNVERIFIED)
 
-**DERIVED** This checkpoint records candidate research problem: independent quartic interactions in composite gravity. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records candidate research problem: independent quartic interactions in composite gravity. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
@@ -16,24 +16,24 @@
 
 ## Literature check and resulting corrections to our research map
 
-1. **DERIVED** Carone, Erlich and Vaman, 1610.08521: starting scalar composite-graviton mechanism. The later corrected formulas, rather than the original sign conventions, are required.
-2. **DERIVED** Carone, Claringbold and Vaman, 1710.09367, published in 2018: cubic graviton interactions and universal coupling were already studied. Its conclusion explicitly identifies an additional quartic constituent potential as a direction requiring extra diagrams. The quartic interactions already present in the base composite action must not be mistaken for that independent potential extension.
-3. **DERIVED** Carone, 1911.13166: tuning, the original off-tuned construction's scalar-ghost issue, and a reformulation without the limiting clock-and-ruler setup are already discussed. Reproducing those observations is not original work.
-4. **DERIVED** Batz, Erlich and Mrini, 2011.06541, published in 2021: a self-consistent vacuum geometry and emergent gravitational interaction on that background are already analyzed in this framework. Our broad suggestion to use a self-consistent curved vacuum therefore overlaps existing research. The explicit starting potential checked in this source is quadratic; that is not a completed independent-quartic calculation.
-5. **DERIVED** Li and Vaman, 2512.06132: Pauli-Villars regulator examples retain a tuned massless graviton; the induced Planck scale depends on regulator masses/multiplicities. Regulator robustness is therefore also an existing research direction. The displayed constituent potential is quadratic. This paper does not, in the portions reviewed, complete our candidate extension.
-6. **ASSUMED** Erlich, 2504.03084: a related stochastic-composite-gravity essay gives proposed consequences and tests. It is evidence of an active broader program, not evidence that our proposed calculation is original or experimentally confirmed.
+1. **CITED** Carone, Erlich and Vaman, 1610.08521: starting scalar composite-graviton mechanism. The later corrected formulas, rather than the original sign conventions, are required. — eq./page UNVERIFIED.
+2. **CITED** Carone, Claringbold and Vaman, 1710.09367, published in 2018: cubic graviton interactions and universal coupling were already studied. Its conclusion explicitly identifies an additional quartic constituent potential as a direction requiring extra diagrams. The quartic interactions already present in the base composite action must not be mistaken for that independent potential extension. — eq./page UNVERIFIED.
+3. **CITED** Carone, 1911.13166: tuning, the original off-tuned construction's scalar-ghost issue, and a reformulation without the limiting clock-and-ruler setup are already discussed. Reproducing those observations is not original work. — eq./page UNVERIFIED.
+4. **CITED** Batz, Erlich and Mrini, 2011.06541, published in 2021: a self-consistent vacuum geometry and emergent gravitational interaction on that background are already analyzed in this framework. Our broad suggestion to use a self-consistent curved vacuum therefore overlaps existing research. The explicit starting potential checked in this source is quadratic; that is not a completed independent-quartic calculation. — eq./page UNVERIFIED.
+5. **CITED** Li and Vaman, 2512.06132: Pauli-Villars regulator examples retain a tuned massless graviton; the induced Planck scale depends on regulator masses/multiplicities. Regulator robustness is therefore also an existing research direction. The displayed constituent potential is quadratic. This paper does not, in the portions reviewed, complete our candidate extension. — eq./page UNVERIFIED.
+6. **CITED** Erlich, 2504.03084: a related stochastic-composite-gravity essay gives proposed consequences and tests. It is evidence of an active broader program, not evidence that our proposed calculation is original or experimentally confirmed. — eq./page UNVERIFIED.
 
 **DERIVED** Both general web search and targeted primary-source searches were used. Queries combined composite graviton/gravity with independent quartic potential, self-interacting scalar, phase transition, the author names, and the above identifiers. A search finding no matching completion is not a proof of absence. Citation chaining, theses, alternate terminology, more recent versions and expert review remain necessary before any novelty claim. Indexed publication/crawl dates were not treated as authoritative; paper identifiers and source text were used.
 
 ## Concrete groundwork completed
 
-**DERIVED** We derived the additional tree-level six-field terms implied by the exact D=4 determinant action after introducing a quartic potential. The coefficients were checked against the exact algebraic expression on twelve generic configurations, using 60-digit decimal arithmetic to avoid subtraction error. Correct truncation errors scale approximately as amplitude^8; omitting the new terms gives amplitude^6 errors. Ninety-six implementation checks pass. This is interaction bookkeeping, not a quantum pole calculation or evidence that the model describes nature.
+**DERIVED** We derived the additional tree-level six-field terms implied by the exact $D=4$ determinant action after introducing a quartic potential. The coefficients were checked against the exact algebraic expression on twelve generic configurations, using 60-digit decimal arithmetic to avoid subtraction error. Correct truncation errors scale approximately as amplitude$^{8}$; omitting the new terms gives amplitude$^{6}$ errors. Ninety-six implementation checks pass. This is interaction bookkeeping, not a quantum pole calculation or evidence that the model describes nature.
 
 **DERIVED** The simplified tree-background coefficient is V0 and the normal-ordering/counterterm structure is deliberately not implemented in this algebra check. Consequently its vertices are a preliminary ingredient to be embedded in a fully specified renormalized calculation, not ready-to-use complete quantum Feynman rules.
 
 ## Next calculation, stated precisely
 
-**DERIVED** Take V(phi)=V0+(m0^2/2)phi^2+lambda(phi^2)^2/(4N). Work to first order in the independent lambda and leading order in 1/N, with a regulator and counterterm prescription that preserve coordinate covariance. This changes a theory parameter; it does NOT yet describe a binding reaction or a state transition at fixed Hamiltonian.
+**DERIVED** Take $V(\phi )=V0+(m0^{2}/2)\phi ^{2}+\lambda (\phi ^{2})^{2}/(4N)$. Work to first order in the independent lambda and leading order in $1/N$, with a regulator and counterterm prescription that preserve coordinate covariance. This changes a theory parameter; it does NOT yet describe a binding reaction or a state transition at fixed Hamiltonian.
 
 1. **DERIVED** Specify the complete action and the regulator's extension to the interacting theory, including which fields couple to which interactions. Choose a consistent counterterm basis and background condition. A covariant proper-time regulator used for an unrelated induced-gravity control is not automatically an implementation of the composite theory's measure or constraint.
 2. **DERIVED** List all diagrams at the chosen orders: constituent self-energy, stress-vertex corrections, local second metric variations/contact terms, and the extra vertices identified in the expansion. Account for large-N factors. Establish rather than assume which terms vanish after the spin-2 projection.
@@ -49,9 +49,9 @@
 
 ## Primary sources
 
-- **DERIVED** https://arxiv.org/abs/1610.08521
-- **DERIVED** https://arxiv.org/abs/1710.09367
-- **DERIVED** https://arxiv.org/abs/1911.13166
-- **DERIVED** https://arxiv.org/abs/2011.06541
-- **DERIVED** https://arxiv.org/abs/2512.06132
-- **DERIVED** https://arxiv.org/abs/2504.03084
+- **CITED** https://arxiv.org/abs/1610.08521 — eq./page UNVERIFIED.
+- **CITED** https://arxiv.org/abs/1710.09367 — eq./page UNVERIFIED.
+- **CITED** https://arxiv.org/abs/1911.13166 — eq./page UNVERIFIED.
+- **CITED** https://arxiv.org/abs/2011.06541 — eq./page UNVERIFIED.
+- **CITED** https://arxiv.org/abs/2512.06132 — eq./page UNVERIFIED.
+- **CITED** https://arxiv.org/abs/2504.03084 — eq./page UNVERIFIED.

@@ -1,4 +1,4 @@
-# Quantum Hopfion Do-Si-Do
+# Hopfion capture rule
 
 **Conversation date range** 2026-06-06 (draft and discussion)
 
@@ -6,11 +6,11 @@
 
 ## Research record
 
-## Quantum Hopfion Do-Si-Do
+## Hopfion capture rule
 
 **ASSUMED** *Working framework for unified field theory — June 2026 draft*
 
-**ASSUMED** Quantum Hopfion Do-Si-Do
+**ASSUMED** Hopfion capture rule
 
 **ASSUMED** A Working Framework for Unified Field Theory
 
@@ -22,7 +22,7 @@
 
 1. **ASSUMED** The Problem Being Addressed
 
-**ASSUMED** The four fundamental forces — gravity, electromagnetism, the strong nuclear force, and the weak nuclear force — have never been unified into a single coherent framework. The Standard Model describes three of them successfully but excludes gravity. General relativity describes gravity but is incompatible with quantum mechanics at small scales.
+**UNVERIFIED** The four fundamental forces — gravity, electromagnetism, the strong nuclear force, and the weak nuclear force — have never been unified into a single coherent framework. The Standard Model describes three of them successfully but excludes gravity. General relativity describes gravity but is incompatible with quantum mechanics at small scales.
 
 **ASSUMED** This framework proposes that all four forces are not fundamental in themselves but emerge from a single underlying geometric medium. The goal is to identify what that medium is, what its properties are, and how the forces arise from its structure.
 
@@ -44,7 +44,7 @@
 
 **ASSUMED** In condensed matter physics, stable structures called topological defects arise naturally in ordered media. They are stable not because they sit in an energy minimum but because they cannot be continuously deformed into the background state without tearing the medium. Knots in a rope are an analogy. Vortices in a superfluid are a real example.
 
-**ASSUMED** The hypothesis is that particles in physics are topological defects in the underlying medium. This is not a new idea — Skyrme proposed something similar in the 1960s, and the Faddeev-Niemi model explores it mathematically. The specific claim here is that the medium supporting these defects has geometric properties that naturally produce the observed force hierarchy.
+**CITED** The hypothesis is that particles in physics are topological defects in the underlying medium. This is not a new idea — Skyrme proposed something similar in the 1960s, and the Faddeev-Niemi model explores it mathematically. The specific claim here is that the medium supporting these defects has geometric properties that naturally produce the observed force hierarchy. — eq./page UNVERIFIED.
 
 **ASSUMED** This is a hypothesis. It has not been proven in this framework.
 
@@ -72,7 +72,7 @@
 
 **ASSUMED** The acoustic analogy: two musical notes form a stable chord when their frequency ratio is simple ($2:1$, $3:2$, $4:3$). Two speakers at the wrong distance produce destructive interference even if their intrinsic frequencies are compatible. Both conditions must be satisfied simultaneously.
 
-**ASSUMED** A useful image: think of configurations as dancers at a square dance. Most encounters are brief — incompatible phase, wrong geometry, they separate. Some accidentally synchronize. A few find compatible rhythm and geometry and leave as stable pairs. This “Quantum Hopfion Do-Si-Do” — a phrase credited to Grok during collaborative development — captures something real about resonance capture and bound state formation.
+**ASSUMED** A useful image: think of configurations as dancers at a square dance. Most encounters are brief — incompatible phase, wrong geometry, they separate. Some accidentally synchronize. A few find compatible rhythm and geometry and leave as stable pairs. This “Hopfion capture rule” — a phrase credited to Grok during collaborative development — captures something real about resonance capture and bound state formation.
 
 **ASSUMED** The interaction may matter more than the individual object. What governs partner selection, synchronization, and stable group formation is potentially more fundamental than the properties of any single configuration in isolation.
 
@@ -128,13 +128,13 @@
 
 **ASSUMED** Linear algebra — vectors, transformations, eigenvalues. More immediately relevant than calculus for this framework.
 
-**ASSUMED** Landau theory and order parameters — the standard toolkit for steps 3 through 5.
+**UNVERIFIED** Landau theory and order parameters — the standard toolkit for steps 3 through 5.
 
 **ASSUMED** Mermin (1979) The topological theory of defects in ordered media — directly addresses steps 6 and 7.
 
 **ASSUMED** Geometric frustration — Sadoc and Mosseri — relevant to whether the vacuum has forced defects.
 
-**ASSUMED** Faddeev-Niemi model — Hopf solitons as candidate particle-like objects.
+**CITED** Faddeev-Niemi model — Hopf solitons as candidate particle-like objects. — eq./page UNVERIFIED.
 
 **ASSUMED** Susskind, The Theoretical Minimum series — mathematical physics from foundations.
 
@@ -142,7 +142,7 @@
 
 7. **ASSUMED** Connection to Recent Physics
 
-**ASSUMED** Charles Cao at Virginia Tech recently identified that quantum entanglement alone builds space but leaves it too rigid for gravity to emerge. A second ingredient he calls magic makes space flexible and allows gravity to emerge. He describes this as step 0.5 of 5.
+**CITED** **UNVERIFIED** The archive attributes to Charles Cao a claim that entanglement builds geometry while a further resource called magic allows gravitational flexibility. It attributes the quotation “Right now, we are at step 0.5 of 5.” to Quanta, 3 June 2026. The article, attribution, date and exact wording have not been verified; eq./page UNVERIFIED. This is an external claim, not a result derived here.
 
 **ASSUMED** The compliance gradient mechanism in this framework is structurally similar. The two approaches are complementary: Cao works at the quantum information layer. This framework attempts the geometric mechanical picture. Neither currently reproduces Einstein’s field equations.
 
@@ -150,13 +150,13 @@
 
 **ASSUMED** Note on development history
 
-**ASSUMED** This framework has been developed through extended collaborative sessions with AI assistants including Claude (Anthropic) and Grok (xAI). The core intuitions originate with the author. The mathematical vocabulary and critical pressure testing emerged through dialogue.
+**UNVERIFIED** This framework has been developed through extended collaborative sessions with AI assistants including Claude (Anthropic) and Grok (xAI). The core intuitions originate with the author. The mathematical vocabulary and critical pressure testing emerged through dialogue.
 
-**ASSUMED** Credit where due: the phrase 'Quantum Hopfion Do-Si-Do' and the associated many-body interaction framing came from Grok during a session exploring binding selectivity. It was funny. It was also genuinely insightful. The observation that the interaction matters more than the individual object pointed toward collective behavior as the right frame for this problem.
+**ASSUMED** Credit where due: the phrase 'Hopfion capture rule' and the associated many-body interaction framing came from Grok during a session exploring binding selectivity. It was funny. It was also genuinely insightful. The observation that the interaction matters more than the individual object pointed toward collective behavior as the right frame for this problem.
 
 **ASSUMED** Notation such as the symbol for the underlying medium was introduced during chat sessions as shorthand and should not be treated as a defined mathematical object until formally defined by the author.
 
-**ASSUMED** The author has a background in construction, biology, and philosophy at the 200-300 level. Mathematical foundations are currently being built. This document represents stage one of a multi-year research program.
+**ASSUMED** The author has a background in construction, biology, and philosophy at the $200-300$ level. Mathematical foundations are currently being built. This document represents stage one of a multi-year research program.
 
 **ASSUMED** Step | Task
 
@@ -168,7 +168,7 @@
 
 **ASSUMED** 4 | Write a functional. What quantity does the system minimize? Even a toy functional is more useful than none.
 
-**ASSUMED** 5 | Identify the symmetry breaking. What symmetry G exists before breaking? What symmetry H survives? The vacuum manifold V = G/H follows from this.
+**ASSUMED** 5 | Identify the symmetry breaking. What symmetry G exists before breaking? What symmetry H survives? The vacuum manifold $V = G/H$ follows from this.
 
 **ASSUMED** 6 | Compute homotopy groups of V. These classify the allowed defect types mathematically.
 

@@ -6,9 +6,9 @@
 
 ## Research record
 
-**DERIVED** Continues the [unsubtracted benchmark](ffz-b-finite-epsilon-benchmark.md). This removes the first apparent singularity in continuing the projective integral toward ε=0. It identifies a finite contribution that would be lost by setting ε=1/2 directly.
+**ASSUMED** Continues the [unsubtracted benchmark](ffz-b-finite-epsilon-benchmark.md). This removes the first apparent singularity in continuing the projective integral toward $\epsilon =0$. It identifies a finite contribution that would be lost by setting $\epsilon =1/2$ directly.
 
-**DERIVED** For the scalar-long endpoint a→0 at fixed P, the largest physical length is s=P/a. The scalar curvature-mass term in WA and the scalar variance term in kB contribute jointly a coefficient 2d(2ε−1)/3 times s², since k=−1+3ε and d=4−2ε. The leading integrand in a is therefore 2d(2ε−1)P^(2−3ε)a^(2ε−2)/3, apart from the partner measure. Subtract this leading term for a<1/2 and for the corresponding endpoint in b. Its individual integral contains 1/(2ε−1), which cancels the explicit zero in the numerator. The two add-backs after spin normalization are exactly
+**DERIVED** For the scalar-long endpoint a→0 at fixed P, the largest physical length is $s=P/a$. The scalar curvature-mass term in WA and the scalar variance term in kB contribute jointly a coefficient $2d(2\epsilon -1)/3$ times s², since $k=-1+3\epsilon$ and $d=4-2\epsilon$. The leading integrand in a is therefore $2d(2\epsilon -1)P^{2-3\epsilon }a^{2\epsilon -2}/3$, apart from the partner measure. Subtract this leading term for $a<1/2$ and for the corresponding endpoint in b. Its individual integral contains $1/(2\epsilon -1)$, which cancels the explicit zero in the numerator. The two add-backs after spin normalization are exactly
 
 $$
 2\frac{2d}{3}\frac{d(d+2)}{4}2^{1-2\epsilon}
@@ -16,11 +16,11 @@ $$
 B(1-\epsilon,2-\epsilon).
 $$
 
-**DERIVED** At ε=1/2 this gives **4π** in the projective normalization. It is an add-back, not the complete value of the integral. In particular, a raw pointwise evaluation at ε=1/2 drops this finite contribution. The ratio singularity is removable in the continued integral.
+**DERIVED** At $\epsilon =1/2$ this gives **4π** in the projective normalization. It is an add-back, not the complete value of the integral. In particular, a raw pointwise evaluation at $\epsilon =1/2$ drops this finite contribution. The ratio singularity is removable in the continued integral.
 
-**UNVERIFIED** The following quadrature results are exploratory. The subtraction smooths passage across ε=1/2. At ε=0.7 the continued representation and the unsubtracted one are algebraically the same, but the present low-order quadrature of the subtracted representation still has substantial drift and does not give a precise numerical match. Near ε=0 the short and overlapping long logarithms still need explicit treatment. No conclusion about the double-pole discrepancy follows from this check.
+**UNVERIFIED** The following quadrature results are exploratory. The subtraction smooths passage across $\epsilon =1/2$. At $\epsilon =0.7$ the continued representation and the unsubtracted one are algebraically the same, but the present low-order quadrature of the subtracted representation still has substantial drift and does not give a precise numerical match. Near $\epsilon =0$ the short and overlapping long logarithms still need explicit treatment. No conclusion about the double-pole discrepancy follows from this check.
 
-| ε | 12-point rule | 24-point rule |
+| $\epsilon$ | 12-point rule | 24-point rule |
 | --- | ---: | ---: |
 | **DERIVED** 0.49 | 2.56034 | 2.57408 |
 | **DERIVED** 0.50 | 2.47064 | 2.48397 |
@@ -99,4 +99,4 @@ for(const e of [.49,.5,.51,.7]) for(const n of [12,24])
  console.log(e,n,run(n,e));
 ```
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

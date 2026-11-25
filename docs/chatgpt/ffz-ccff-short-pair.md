@@ -2,31 +2,31 @@
 
 **Conversation date range** 2026-11-20 to 2026-11-21 (checkpoint sequence)
 
-**DERIVED** This checkpoint records the FFZ CcFf analytic short-pair subtraction. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records the FFZ CcFf analytic short-pair subtraction. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the curved CcFf kernel](ffz-ccff-projective-kernel.md). Fix the sum of the two single-edge lengths to 1. Write p for the scalar-pair total, q for the fermion-pair total, P=pf(1−f), Q=qg(1−g), S=1+P+Q, W=1+p+q. The projective measure is p^(ε−1)q^(ε−2) dp dq df dg dv. The coefficient multiplying it is the smooth numerator H=(qN) S^(−d/2) W^(−k) [A+kB/W], where k=3ε. Thus the short q constant gives a cutoff denominator ε−1 and the q-linear term gives a denominator ε.
+**ASSUMED** Continues [the curved CcFf kernel](ffz-ccff-projective-kernel.md). Fix the sum of the two single-edge lengths to 1. Write p for the scalar-pair total, q for the fermion-pair total, $P=pf(1-f), Q=qg(1-g), S=1+P+Q, W=1+p+q$. The projective measure is $p^{\epsilon -1}q^{\epsilon -2} dp dq df dg dv$. The coefficient multiplying it is the smooth numerator $H=(qN) S^{-d/2} W^{-k} [A+kB/W]$, where $k=3\epsilon$. Thus the short q constant gives a cutoff denominator $\epsilon -1$ and the q-linear term gives a denominator $\epsilon$.
 
-**DERIVED** At d=4 only the cubic vertex term in A survives. Anchor at cubic vertex 0. The contracted cycle includes effective edges P,Q and the two single edges. The conditioned variance of cubic vertex 1 is M₁₁=8P(1+Q)/S+4P²Q/[S(1+P)]. The first term follows from the cycle resistance and the second from the covariance with the fermion endpoint difference. Also qN=2(1+P)/S. This yields
+**DERIVED** At $d=4$ only the cubic vertex term in A survives. Anchor at cubic vertex 0. The contracted cycle includes effective edges P,Q and the two single edges. The conditioned variance of cubic vertex 1 is $M_{11}=8P(1+Q)/S+4P^{2}Q/[S(1+P)]$. The first term follows from the cycle resistance and the second from the covariance with the fermion endpoint difference. Also $qN=2(1+P)/S$. This yields
 
-**DERIVED** H(p,0)|₄ = −16P/(1+P)³,
-**DERIVED** ∫dg ∂qH(p,0)|₄ = −4P(P−2)/(1+P)⁴.
+**DERIVED** H(p,0)|₄ $= -16P/(1+P)^{3}$,
+**DERIVED** $\int dg \partial qH(p,0)$|₄ $= -4P(P-2)/(1+P)^{4}$.
 
-**DERIVED** Both vanish on the scalar corner at d=4. The integrated q-linear coefficient with dp/p is exactly 2, independent of the scalar split after changing p to P. This is one short-face contribution to the projective residue before assembly with the scalar endpoint and evanescent terms.
+**DERIVED** Both vanish on the scalar corner at $d=4$. The integrated q-linear coefficient with $dp/p$ is exactly 2, independent of the scalar split after changing p to P. This is one short-face contribution to the projective residue before assembly with the scalar endpoint and evanescent terms.
 
 ## Evanescent overlap
 
-**DERIVED** At p=0 anchor the merged cubic vertices. Use the triangle with edges v,1−v,Q. Taking the q expansion of H at finite d before averaging v,g gives
+**DERIVED** At $p=0$ anchor the merged cubic vertices. Use the triangle with edges v,1−v,Q. Taking the q expansion of H at finite d before averaging v,g gives
 
-**DERIVED** H₀,c = −d²(d−4)/6,
-**DERIVED** H₁,c = −d(d−4)(17d²−72d+4)/72.
+**DERIVED** $H_{0},c = -d^{2}(d-4)/6$,
+**DERIVED** $H_{1},c = -d(d-4)(17d^{2}-72d+4)/72$.
 
-**DERIVED** Their leading terms at d=4−2ε are +16ε/3 and −4ε/3. The constant corner is multiplied by 1/[ε(ε−1)] and contributes at finite projective order. The linear corner is multiplied by 1/ε² and contributes −4/(3ε) at projective order under a unit cutoff. The radial Γ(3ε) can promote these to simple and double graph poles respectively. All cutoff terms must be combined with the remaining faces. These pieces alone do not determine the graph's Laurent coefficients.
+**DERIVED** Their leading terms at $d=4-2\epsilon$ are $+16\epsilon /3$ and $-4\epsilon /3$. The constant corner is multiplied by $1/[\epsilon (\epsilon -1)]$ and contributes at finite projective order. The linear corner is multiplied by $1/\epsilon ^{2}$ and contributes $-4/(3\epsilon )$ at projective order under a unit cutoff. The radial $\Gamma (3\epsilon )$ can promote these to simple and double graph poles respectively. All cutoff terms must be combined with the remaining faces. These pieces alone do not determine the graph's Laurent coefficients.
 
 ## Runnable check
 
-**DERIVED** Run with Python 3 and SymPy.
+**ASSUMED** Run with Python 3 and SymPy.
 
 ```python
 import sympy as s
@@ -62,6 +62,6 @@ linear=s.factor(s.diff(H,Q).subs(Q,0)/6)
 assert s.integrate(s.cancel(linear/P),(P,0,s.oo))==2
 ```
 
-**DERIVED** Next, integrate the subtracted scalar face and check the long-pair corners with finite d retained. Those terms and the finite projective contribution are needed to obtain the CcFf simple pole and predict cancellation in the full Newton sum.
+**ASSUMED** Next, integrate the subtracted scalar face and check the long-pair corners with finite d retained. Those terms and the finite projective contribution are needed to obtain the CcFf simple pole and predict cancellation in the full Newton sum.
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

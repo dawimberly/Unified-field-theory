@@ -2,7 +2,7 @@
 
 **Conversation date range** 2026-11-01
 
-**DERIVED** This checkpoint records reproduction of the dimension-mechanism checks. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records reproduction of the dimension-mechanism checks. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 

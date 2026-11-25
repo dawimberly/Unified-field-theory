@@ -2,17 +2,17 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records FFff(B) unsubtracted finite-epsilon benchmark. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records FFff(B) unsubtracted finite-epsilon benchmark. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues the [homogeneous overlap audit](ffz-b-homogeneous-tail-audit.md). This evaluates the full projective kernel in its convergent domain without any Laurent coefficients as inputs.
+**ASSUMED** Continues the [homogeneous overlap audit](ffz-b-homogeneous-tail-audit.md). This evaluates the full projective kernel in its convergent domain without any Laurent coefficients as inputs.
 
-**DERIVED** Set the effective perimeter to one and use Q=(1−P)q. The scalar and fermion physical lengths of the first mixed pair are P/a and P/(1−a). Include P^(ε−1) Q^(ε−1), the two fraction weights [a(1−a)]^(−ε)(1−a) and [b(1−b)]^(−ε)(1−b), the bridge Jacobian 1−P−Q, and d(d+2)/4. The curvature term is W^(−3ε)(WA+kB), where W is the physical perimeter. The table excludes the outer radial gamma factor and curvature normalization.
+**ASSUMED** Set the effective perimeter to one and use $Q=(1-P)q$. The scalar and fermion physical lengths of the first mixed pair are $P/a$ and $P/(1-a)$. Include $P^{\epsilon -1} Q^{\epsilon -1}$, the two fraction weights $[a(1-a)]^{-\epsilon }(1-a)$ and $[b(1-b)]^{-\epsilon }(1-b)$, the bridge Jacobian 1−P−Q, and $d(d+2)/4$. The curvature term is $W^{-3\epsilon }(WA+kB)$, where W is the physical perimeter. The table excludes the outer radial gamma factor and curvature normalization.
 
-**DERIVED** For the bridge division the moments have degree at most two and the weighted bridge sum degree at most three. Simpson integration is exact for these polynomials. The remaining quadrature removes the explicit P and q powers and clusters points near the possibly long constituent. At ε>1/2 the isolated long scalar endpoint has integrable power −2+2ε. Two anchor choices test the implementation in this domain.
+**DERIVED** For the bridge division the moments have degree at most two and the weighted bridge sum degree at most three. Simpson integration is exact for these polynomials. The remaining quadrature removes the explicit P and q powers and clusters points near the possibly long constituent. At $\epsilon >1/2$ the isolated long scalar endpoint has integrable power $-2+2\epsilon$. Two anchor choices test the implementation in this domain.
 
-| ε | Points per quadrature dimension | Anchor 0 | Anchor 2 |
+| $\epsilon$ | Points per quadrature dimension | Anchor 0 | Anchor 2 |
 | --- | ---: | ---: | ---: |
 | **DERIVED** 0.7 | 40 | 1.0032901597 | 1.0032933363 |
 | **DERIVED** 0.7 | 64 | 1.0033353814 | 1.0033362220 |
@@ -81,5 +81,5 @@ for(const e of [.7,.8]) for(const n of [12,24,40,64])
  console.log(e,n,evaluate(n,e),evaluate(n,e,2));
 ```
 
-- **DERIVED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005).
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005). — eq./page UNVERIFIED.
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

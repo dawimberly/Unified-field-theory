@@ -2,30 +2,33 @@
 
 **Conversation date range** 2026-11-20 to 2026-11-21 (checkpoint sequence)
 
-**DERIVED** This checkpoint records the FFZ scalar Newton projection with exact scale integration. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records the FFZ scalar Newton projection with exact scale integration. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the cubic insertion checkpoint](ffz-cubic-newton-checkpoint.md). The previous QCc tadpole pole remains −h²z/(36Kε). The open scalar graph calculation reduces to two distinct integrals.
+**ASSUMED** The $1/24$ target is a normalization chosen to match Einstein gravity; it is not an independently predicted gravitational constant. A computed $c_Y=1/24$ in the stated matter prescription is a separate conditional calculation. Matching a baseline simple pole to that target remains a test, not a completed derivation.
+
+
+**ASSUMED** Continues [the cubic insertion checkpoint](ffz-cubic-newton-checkpoint.md). The previous QCc tadpole pole remains $-h^{2}z/(36K\epsilon )$. The open scalar graph calculation reduces to two distinct integrals.
 
 ## Identical CCcc integrands
 
-**DERIVED** The two CCcc matchings have identical undirected edge multisets on the same four labeled vertices. Both have double edges 02 and 13, and single edges 03 and 12. Only the assignment of X and Y species differs. In the baseline all scalar propagators have the same mass and curvature coupling, and all four vertices have the cubic Weyl weight. Consequently the line and vertex insertion integrands agree pointwise up to ordering their Schwinger lengths. The combined signed coefficient is −(5/8)|y|⁴z². This reduction applies to the baseline. An explicit Y-improvement insertion would distinguish the assignments.
+**DERIVED** The two CCcc matchings have identical undirected edge multisets on the same four labeled vertices. Both have double edges 02 and 13, and single edges 03 and 12. Only the assignment of X and Y species differs. In the baseline all scalar propagators have the same mass and curvature coupling, and all four vertices have the cubic Weyl weight. Consequently the line and vertex insertion integrands agree pointwise up to ordering their Schwinger lengths. The combined signed coefficient is $-(5/8)$|y|⁴z². This reduction applies to the baseline. An explicit Y-improvement insertion would distinguish the assignments.
 
 ## Projective formula for QCc and CCcc
 
-**DERIVED** Set s_e=ρu_e with Σu_e=1. Let C=2 L_g(u)^−1 padded at the root, and U=det L_g(u) ∏u_e. With N internal lines, k=N−3d/2. Define
+**ASSUMED** Set $s_e=\rho u_e$ with $\sum u_e=1$. Let $C=2 L_g(u)^{-1}$ padded at the root, and $U=\det L_g(u)$ ∏u_e. With N internal lines, $k=N-3d/2$. Define
 
-- **DERIVED** A=−d[Σᵢ λᵢ C_ii + (4−d)/3].
-- **DERIVED** B=(2d/3)Σ_(e=ij) u_e(C_ii+C_jj+C_ij+u_e).
+- **DERIVED** $A=-d[\sum ᵢ \lambda ᵢ C_{ii} + (4-d)/3]$.
+- **DERIVED** $B=(2d/3)\sum _(e=ij) u_e(C_{ii}+C_{jj}+C_{ij}+u_e)$.
 
-**DERIVED** The full linear Weyl insertion at fixed Schwinger lengths is ρA+zρ²B. Integration over ρ with measure ρ^(k−1) exp(−zρ) gives the exact projective numerator A+(k+1)B and radial factor Γ(k+1)z^(−k−1). In units κ=R/[4d(d−1)], the remaining integral is ∫_simplex U^(−d/2)[A+(k+1)B]. Restore the three-loop factor (4π)^(−3d/2), the dimensional scales of the original checkpoint, and the signed vertex factors. In d=4−2ε the radial gamma is Γ(3ε) for QCc and Γ(1+3ε) for CCcc. Thus the remaining QCc simple pole needs the finite part of its projective integral after endpoint subtraction, whereas CCcc needs its projective pole residues. A numerical integral from a convergent dimension is insufficient to fix either.
+**DERIVED** The full linear Weyl insertion at fixed Schwinger lengths is $\rho A+z\rho ^{2}B$. Integration over $\rho$ with measure $\rho ^{k-1} \exp\left(-z\rho \right)$ gives the exact projective numerator $A+(k+1)B$ and radial factor $\Gamma (k+1)z^{-k-1}$. In units $\kappa =R/[4d(d-1)]$, the remaining integral is $\int_{\mathrm{simplex}}$ $U^{-d/2}[A+(k+1)B]$. Restore the three-loop factor $(4\pi )^{-3d/2}$, the dimensional scales of the original checkpoint, and the signed vertex factors. In $d=4-2\epsilon$ the radial gamma is $\Gamma (3\epsilon )$ for QCc and $\Gamma (1+3\epsilon )$ for CCcc. Thus the remaining QCc simple pole needs the finite part of its projective integral after endpoint subtraction, whereas CCcc needs its projective pole residues. A numerical integral from a convergent dimension is insufficient to fix either.
 
-**DERIVED** For subtracting the endpoints, the two parallel pairs of lengths a,b and c,e can be combined exactly at the level of the graph determinant. Their effective lengths are ab/(a+b) and ce/(c+e). The determinant polynomial is (a+b)(c+e) times the sum of the effective lengths and the remaining single-edge lengths. Writing total pair lengths p₁=a+b, p₂=c+e and fractions x₁=a/p₁, x₂=c/p₂, the Jacobian contributes p₁p₂. The potentially singular individual-pair factors are pᵢ^(−1+ε) near four dimensions. Their joint soft limit must be treated separately when overlaps or additional degenerations are present. Keep the covariance numerator at finite d for these subtractions.
+**DERIVED** For subtracting the endpoints, the two parallel pairs of lengths a,b and c,e can be combined exactly at the level of the graph determinant. Their effective lengths are $ab/(a+b)$ and $ce/(c+e)$. The determinant polynomial is $(a+b)(c+e)$ times the sum of the effective lengths and the remaining single-edge lengths. Writing total pair lengths $p_{1}=a+b, p_{2}=c+e$ and fractions $x_{1}=a/p_{1}, x_{2}=c/p_{2}$, the Jacobian contributes p₁p₂. The potentially singular individual-pair factors are $pᵢ^{-1+\epsilon }$ near four dimensions. Their joint soft limit must be treated separately when overlaps or additional degenerations are present. Keep the covariance numerator at finite d for these subtractions.
 
 ## Checks
 
-**DERIVED** Run Python 3 with NumPy and SciPy. The exact d=1 cancellation from the preceding position-space calculation is recovered with two independent scrambled quadratures. At d=2 both CCcc orderings agree numerically and the relabeling is checked exactly. Printed numbers are stripped integrals after radial integration with z=1, including the radial gamma but excluding the loop measure, Wick factors and κ. The conservative tolerances reflect endpoint sampling.
+**ASSUMED** Run Python 3 with NumPy and SciPy. The exact $d=1$ cancellation from the preceding position-space calculation is recovered with two independent scrambled quadratures. At $d=2$ both CCcc orderings agree numerically and the relabeling is checked exactly. Printed numbers are stripped integrals after radial integration with $z=1$, including the radial gamma but excluding the loop measure, Wick factors and $\kappa$. The conservative tolerances reflect endpoint sampling.
 
 ```python
 import numpy as np
@@ -74,6 +77,6 @@ perm=(0,1,2,3)
 assert shape(graphs["CCcc-A"])==shape([(perm[i],perm[j]) for i,j in graphs["CCcc-B"]])
 ```
 
-**DERIVED** Next, subtract the small-pair endpoints with the factorized determinant and finite-d numerator, then verify the Laurent extraction against the QCc tadpole check before using it in the remaining Yukawa and counterterm assembly. The baseline simple pole and its comparison with 1/24 remain open.
+**ASSUMED** Next, subtract the small-pair endpoints with the factorized determinant and finite-d numerator, then verify the Laurent extraction against the QCc tadpole check before using it in the remaining Yukawa and counterterm assembly. The baseline simple pole and its comparison with $1/24$ remain open.
 
-- **DERIVED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005), scalar G and K topologies.
+- **CITED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005), scalar G and K topologies. — eq./page UNVERIFIED.

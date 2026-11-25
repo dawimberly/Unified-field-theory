@@ -2,7 +2,7 @@
 
 **Conversation date range** 2025-03-30 to 2026-11-22 (recovered records)
 
-**DERIVED** This index catalogs the recovered Do-Si-Do, field-stability and induced-gravity research. **ASSUMED** The original hypotheses remain working premises where the archive treated them as such. **UNVERIFIED** Missing conversation dates, provisional claims and incomplete citation locations remain open.
+**UNVERIFIED** This index catalogs the recovered Hopfion capture rule, field-stability and induced-gravity research. **ASSUMED** The original hypotheses remain working premises where the archive treated them as such. **UNVERIFIED** Missing conversation dates, provisional claims and incomplete citation locations remain open.
 
 ## Topics
 
@@ -19,10 +19,10 @@
 - [cyclic-bose-gas-checks.md](cyclic-bose-gas-checks.md) — Cyclic interactions and excited quantum order: finite-system test.
 - [dimension-gravity-investigation.md](dimension-gravity-investigation.md) — Dimension, field concentration, and gravity: mechanism audit.
 - [dimension-mechanism-checks.md](dimension-mechanism-checks.md) — Reproduction of the dimension-mechanism checks.
-- [do-si-do-hypothesis.md](do-si-do-hypothesis.md) — Quantum Hopfion Do-Si-Do.
+- [hopfion-capture-rule.md](hopfion-capture-rule.md) — Hopfion capture rule.
 - [emergent-gravity-three-routes.md](emergent-gravity-three-routes.md) — Can interacting fields develop gravity as a new property?.
 - [ffz-b-finite-epsilon-benchmark.md](ffz-b-finite-epsilon-benchmark.md) — FFff(B) unsubtracted finite-epsilon benchmark.
-- [ffz-b-half-epsilon-continuation.md](ffz-b-half-epsilon-continuation.md) — FFff(B) continuation across epsilon = 1/2.
+- [ffz-b-half-epsilon-continuation.md](ffz-b-half-epsilon-continuation.md) — FFff(B) continuation across $\epsilon = 1/2$.
 - [ffz-b-homogeneous-tail-audit.md](ffz-b-homogeneous-tail-audit.md) — FFff(B) homogeneous two-long tail audit.
 - [ffz-ccff-long-pair.md](ffz-ccff-long-pair.md) — FFZ CcFf long scalar-pair subtraction.
 - [ffz-ccff-projective-kernel.md](ffz-ccff-projective-kernel.md) — FFZ CcFf curved projective kernel.
@@ -35,17 +35,17 @@
 - [ffz-ffff-a-leading-endpoints.md](ffz-ffff-a-leading-endpoints.md) — FFZ FFff(A) leading endpoint calculation.
 - [ffz-ffff-a-mixed-long-terms.md](ffz-ffff-a-mixed-long-terms.md) — FFz(A) mixed long-face and overlap double pole.
 - [ffz-ffff-b-bounded-double-pole.md](ffz-ffff-b-bounded-double-pole.md) — FFZ(B) complete bounded-region double pole.
-- [ffz-ffff-b-complete-double-pole.md](ffz-ffff-b-complete-double-pole.md) — FFZ(B) complete double pole at L=0.
+- [ffz-ffff-b-complete-double-pole.md](ffz-ffff-b-complete-double-pole.md) — FFZ(B) complete double pole at $L=0$.
 - [ffz-ffff-b-double-short-subtraction.md](ffz-ffff-b-double-short-subtraction.md) — FFZ(B) double-short subtraction through the double pole.
 - [ffz-ffff-b-mixed-endpoints.md](ffz-ffff-b-mixed-endpoints.md) — FFZ FFff(B): one long constituent and one short mixed pair.
 - [ffz-ffff-b-mixed-long-face.md](ffz-ffff-b-mixed-long-face.md) — FFZ(B) mixed-region long face after short subtraction.
-- [ffz-ffff-complete-triple-pole.md](ffz-ffff-complete-triple-pole.md) — Complete three-loop triple pole for FFff(A+B).
+- [ffz-ffff-complete-triple-pole.md](ffz-ffff-complete-triple-pole.md) — Complete three-loop triple pole for FFff$(A+B)$.
 - [ffz-ffff-curvature-corner.md](ffz-ffff-curvature-corner.md) — FFZ four-Yukawa curvature kernels and the FFff(B) short-pair corner.
 - [ffz-ffff-double-long-double-pole.md](ffz-ffff-double-long-double-pole.md) — FFZ double pole from the two-long chart.
 - [ffz-ffff-double-pole-cutoff-identity.md](ffz-ffff-double-pole-cutoff-identity.md) — FFZ cutoff identity for the four-Yukawa double pole.
 - [ffz-ffff-double-pole-mismatch.md](ffz-ffff-double-pole-mismatch.md) — FFZ four-Yukawa double-pole mismatch.
 - [ffz-ffff-graphwise-scalar-audit.md](ffz-ffff-graphwise-scalar-audit.md) — FFff graph-by-graph scalar insertion audit.
-- [ffz-fixed-one-sixth-checkpoint.md](ffz-fixed-one-sixth-checkpoint.md) — FFZ fixed-1/6 curvature-source conversion.
+- [ffz-fixed-one-sixth-checkpoint.md](ffz-fixed-one-sixth-checkpoint.md) — FFZ fixed $1/6$ curvature-source conversion.
 - [ffz-local-weyl-and-curvature-checkpoint.md](ffz-local-weyl-and-curvature-checkpoint.md) — FFZ local Weyl and curvature checkpoint.
 - [ffz-matter-counterterms-yukawa-targets.md](ffz-matter-counterterms-yukawa-targets.md) — FFZ matter counterterms and the remaining four-Yukawa targets.
 - [ffz-newton-graphs-and-pole-mass-checkpoint.md](ffz-newton-graphs-and-pole-mass-checkpoint.md) — FFZ Newton vacuum graph inventory and pole-mass response.
@@ -69,7 +69,7 @@
 - [gravity-continuation-batch.md](gravity-continuation-batch.md) — Gravity continuation: source overlap, complex contours, dispersion.
 - [gravity-cross-reference.md](gravity-cross-reference.md) — Gravity research cross-reference and Higgs-sector assessment.
 - [gravity-literature-elimination.md](gravity-literature-elimination.md) — Gravity research by elimination: published results and the remaining bridge.
-- [grok-quartic-claim-review.md](grok-quartic-claim-review.md) — Independent review of Grok quartic claims C1-C8.
+- [grok-quartic-claim-review.md](grok-quartic-claim-review.md) — Independent review of Grok quartic claims $C1-C8$.
 - [grok-round2-independent-review.md](grok-round2-independent-review.md) — Independent check of Grok round 2.
 - [grok-round3-measure-review.md](grok-round3-measure-review.md) — Independent review of round-3 measure step.
 - [hopf-first-run.md](hopf-first-run.md) — First Hopf stability experiment.
@@ -105,10 +105,18 @@
 - [spin2-interaction-inventory.md](spin2-interaction-inventory.md) — First reduction of the independent-quartic interaction calculation.
 - [spin2-simulation-spec.md](spin2-simulation-spec.md) — Route 6: numerical target and prerequisites.
 - [stochastic-regulator-screen.md](stochastic-regulator-screen.md) — Physical-regulator branch: stochastic composite gravity.
-- [unified-synthesis.md](unified-synthesis.md) — Do-Si-Do and possibility-cloud synthesis.
+- [unified-synthesis.md](unified-synthesis.md) — Hopfion capture rule and possibility-cloud synthesis.
 
 ## Source limits
 
-- **DERIVED** The export draws on the Physics checkpoint files, the local experiment reports, the master document and recovered conversation excerpts.
-- **UNVERIFIED** Full historical coverage could not be established. A source block can contain older values later corrected by a linked checkpoint. Code blocks retain original executable notation. Standalone source equations are converted where the syntax is recoverable, and some historical prose still uses source shorthand.
+- **UNVERIFIED** The export draws on the Physics checkpoint files, the local experiment reports, the master document and recovered conversation excerpts.
+- **UNVERIFIED** Full historical coverage could not be established. A source block can contain older values later corrected by a linked checkpoint. Code blocks retain original executable notation. Standalone source equations are converted where the syntax is recoverable, with executable source notation retained inside code blocks.
 - **UNVERIFIED** Original external reviews, citations without exact paper locations and numerical checks carried forward from the archive retain their source caveats.
+
+## Claim labels
+
+- **CITED** identifies imported paper or reference claims. Known equation locations are retained; missing locations read “eq./page UNVERIFIED”.
+- **DERIVED** identifies calculations conditional on their stated inputs. Archived numerical checks are historical reports, not newly rerun physics tests.
+- **ASSUMED** identifies model choices and starting premises, including the $1/24$ Einstein-gravity normalization target.
+- **FITTED** identifies calibrated or tuned quantities and selected spectra; these are not independent physical predictions.
+- **UNVERIFIED** identifies unsupported historical claims, untraced numbers, incomplete sources and open results.

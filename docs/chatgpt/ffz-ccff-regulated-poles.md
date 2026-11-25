@@ -2,28 +2,31 @@
 
 **Conversation date range** 2026-11-20 to 2026-11-21 (checkpoint sequence)
 
-**DERIVED** This checkpoint records CcFf regulated pole cross-check. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records CcFf regulated pole cross-check. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the analytical long-pair model](ffz-ccff-long-pair.md). This checks the complete CcFf graph integrand at nonzero ε in the equal-mass fixed-1/6 benchmark. It does not reuse the individual short-face integrals. The global long scalar-pair model is subtracted from the integrand and its analytic integral is added back.
+**ASSUMED** The $1/24$ target is a normalization chosen to match Einstein gravity; it is not an independently predicted gravitational constant. A computed $c_Y=1/24$ in the stated matter prescription is a separate conditional calculation. Matching a baseline simple pole to that target remains a test, not a completed derivation.
+
+
+**ASSUMED** Continues [the analytical long-pair model](ffz-ccff-long-pair.md). This checks the complete CcFf graph integrand at nonzero $\epsilon$ in the equal-mass fixed $1/6$ benchmark. It does not reuse the individual short-face integrals. The global long scalar-pair model is subtracted from the integrand and its analytic integral is added back.
 
 ## Implementation
 
-**DERIVED** The anchored cycle positions along its perimeter are 0,P,P+1−v,P+1−v+Q. The Brownian-bridge covariance is 2 min(t_i,t_j)[1−max(t_i,t_j)/S]. For the spin-conditioned covariance use
+**DERIVED** The anchored cycle positions along its perimeter are $0,P,P+1-v,P+1-v+Q$. The Brownian-bridge covariance is $2 min(t_i,t_j)[1-max(t_i,t_j)/S]$. For the spin-conditioned covariance use
 
 **DERIVED** $M_ij = d C_ij + 4Q l_i l_j/[S(1+P)],$
 **DERIVED** $l=(0,P,P+1-v,-v).$
 
-**DERIVED** This formula avoids dividing by Q at the fermion face. The regulated integrand has effective-length weights P^(ε−1)Q^(ε−2) f_r^(−ε)g_r^(1−ε), where f_r=f(1−f), g_r=g(1−g). For Q<1 subtract H(P,0)+Q∂_QH(P,0), obtaining the derivative by complex step. Subtract the P=0 overlap for P<1 from each term. The added-back effective-length integrals are 1/ε, 1/(ε−1), or 1/ε for the scalar face, fermion constant or fermion linear term, respectively. The independent cutoff in effective lengths differs from the earlier local subtraction in physical pair totals. Only the global tail model is shared.
+**DERIVED** This formula avoids dividing by Q at the fermion face. The regulated integrand has effective-length weights $P^{\epsilon -1}Q^{\epsilon -2} f_r^{-\epsilon }g_r^{1-\epsilon }$, where $f_r=f(1-f), g_r=g(1-g)$. For $Q<1$ subtract $H(P,0)+Q\partial _QH(P,0)$, obtaining the derivative by complex step. Subtract the $P=0$ overlap for $P<1$ from each term. The added-back effective-length integrals are $1/\epsilon , 1/(\epsilon -1)$, or $1/\epsilon$ for the scalar face, fermion constant or fermion linear term, respectively. The independent cutoff in effective lengths differs from the earlier local subtraction in physical pair totals. Only the global tail model is shared.
 
-**DERIVED** Using three scrambled quasi-Monte Carlo streams, ε times the full projective integral tends to −2, supporting the predicted double pole +1/(144ε²) and the corresponding scale logarithm −L/(48ε). At ε=.0025 the estimates range from −1.97664 to −1.97648, consistent with a smooth finite correction. After subtracting the double pole, positive-ε extrapolation gives a simple-pole constant about −0.0247 at L=0. This constant is numerical. The stream spread is a sampling diagnostic rather than a rigorous error bound.
+**DERIVED** Using three scrambled quasi-Monte Carlo streams, $\epsilon$ times the full projective integral tends to −2, supporting the predicted double pole $+1/(144\epsilon ^{2})$ and the corresponding scale logarithm $-L/(48\epsilon )$. At $\epsilon=0.0025$ the estimates range from −1.97664 to −1.97648, consistent with a smooth finite correction. After subtracting the double pole, positive $\epsilon$ extrapolation gives a simple-pole constant about −0.0247 at $L=0$. This constant is numerical. The stream spread is a sampling diagnostic rather than a rigorous error bound.
 
-**DERIVED** In units h²z/K the checked CcFf contribution is therefore
+**DERIVED** In units $h^{2}z/K$ the checked CcFf contribution is therefore
 
 **DERIVED** 1/(144ε²) + [approximately −0.0247 − L/48]/ε.
 
-**DERIVED** Adding it to the scalar and QFf subtotal gives a double pole 5/(144ε²) and a simple pole approximately [−0.1506−5L/48]/ε. Both FFff graphs and the matter counterterms still enter the projected Newton sum. The absence of the full projected higher poles and the comparison with 1/24 remain open.
+**DERIVED** Adding it to the scalar and QFf subtotal gives a double pole $5/(144\epsilon ^{2})$ and a simple pole approximately $[-0.1506-5L/48]/\epsilon$. Both FFff graphs and the matter counterterms still enter the projected Newton sum. The absence of the full projected higher poles and the comparison with $1/24$ remain open.
 
 ## Runnable check
 
@@ -83,6 +86,6 @@ for seed in (11,22,33):
     print(seed,"projective residue",c0,"simple pole",c1)
 ```
 
-**DERIVED** Next, use the two independent parallel fermion pairs in FFff(A) to extend the Gaussian spin weighting to two endpoint differences. Isolate the small-pair overlaps before integrating the four-vertex spin trace in FFff(B).
+**ASSUMED** Next, use the two independent parallel fermion pairs in FFff(A) to extend the Gaussian spin weighting to two endpoint differences. Isolate the small-pair overlaps before integrating the four-vertex spin trace in FFff(B).
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

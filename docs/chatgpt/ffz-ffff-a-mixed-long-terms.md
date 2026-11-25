@@ -2,30 +2,30 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records FFz(A) mixed long-face and overlap double pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records FFz(A) mixed long-face and overlap double pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the FFff(A) leading endpoints](ffz-ffff-a-leading-endpoints.md). Use effective perimeter one, physical cut 2 and L=0. These two add-backs are computed without imposing the counterterm target.
+**ASSUMED** Continues [the FFff(A) leading endpoints](ffz-ffff-a-leading-endpoints.md). Use effective perimeter one, physical cut 2 and $L=0$. These two add-backs are computed without imposing the counterterm target.
 
 ## Long face with both short Taylor terms removed
 
-**DERIVED** The long logarithm comes only from the long fermion variance. At ε=0 the integrated geometry for the other effective pair length q is
+**DERIVED** The long logarithm comes only from the long fermion variance. At $\epsilon =0$ the integrated geometry for the other effective pair length q is
 **DERIVED** $G(q)=∫₀^(1-q) (1-P-q)[4(1-P)(1-q)+2Pq]dP=(1-q)^3(\frac{4}{3}+q).$
-**DERIVED** The bounded partner has physical length U and smaller fraction a, so q=aU. Its smooth weight for one assignment is 1−a and its length weight is U^−2. Subtract G(0)+qG′(0) because the short expansion has a constant and a linear term. The remainder is q²+(5/3)q³−q⁴. The two orientations per pair, the two pair choices, (2/3)×3 from the long profile, and the long pole factor 1/2 give the coefficient 8 multiplying the finite integral. Multiplying by k=−1 and the radial-curvature-graph prefactor +1/288 yields the double-pole term.
+**DERIVED** The bounded partner has physical length U and smaller fraction a, so $q=aU$. Its smooth weight for one assignment is 1−a and its length weight is $U^{-2}$. Subtract $G(0)+qG$′(0) because the short expansion has a constant and a linear term. The remainder is $q^{2}+(5/3)q^{3}-q^{4}$. The two orientations per pair, the two pair choices, $(2/3)\times 3$ from the long profile, and the long pole factor $1/2$ give the coefficient 8 multiplying the finite integral. Multiplying by $k=-1$ and the radial-curvature-graph prefactor $+1/288$ yields the double-pole term.
 
 ## Mixed overlap
 
-**DERIVED** Write A=d²/4 and B=d/2 for the coefficients in n=A(1−P)(1−q)+BPq. The integrated linear geometry coefficient is (B−5A)/6=−3+(19/6)ε. The remaining factors relative to their leading values are:
+**DERIVED** Write $A=d^{2}/4$ and $B=d/2$ for the coefficients in $n=A(1-P)(1-q)+BPq$. The integrated linear geometry coefficient is $(B-5A)/6=-3+(19/6)\epsilon$. The remaining factors relative to their leading values are:
 
-- **DERIVED** Long variance d−1 gives slope −2/3.
-- **DERIVED** k=−1+3ε gives slope −3.
-- **DERIVED** The short fraction integral 2∫₀^½ a(1−a)^(1−ε) da gives slope 13/12−ln 2.
-- **DERIVED** The two analytic length integrals give cutoff factor 2^−ε, adding −ln 2.
+- **DERIVED** Long variance d−1 gives slope $-2/3$.
+- **DERIVED** $k=-1+3\epsilon$ gives slope −3.
+- **DERIVED** The short fraction $\int 2\int _{0}^½ a(1-a)^{1-\epsilon } da$ gives slope $13/12-\ln 2$.
+- **DERIVED** The two analytic length integrals give cutoff factor $2^-\epsilon$, adding −ln 2.
 
-**DERIVED** The leading angular overlap is +2/ε². Its relative slope is −131/36−2 ln 2. The radial prefactor adds slope 25/6. The resulting overlap graph double pole is 19/5184−ln 2/72 in units h²z/K. The Weyl term is bounded in the long length before multiplication by W and therefore has no long logarithm in graph A.
+**DERIVED** The leading angular overlap is $+2/\epsilon ^{2}$. Its relative slope is $-131/36-2 \ln 2$. The radial prefactor adds slope $25/6$. The resulting overlap graph double pole is $19/5184-\ln 2/72$ in units $h^{2}z/K$. The Weyl term is bounded in the long length before multiplication by W and therefore has no long logarithm in graph A.
 
-**DERIVED** The complementary mixed short face and the bounded chart remain to be integrated. The full FFff(A) double pole, and its comparison with −209/2592, are open.
+**DERIVED** The complementary mixed short face and the bounded chart remain to be integrated. The full FFff(A) double pole, and its comparison with $-209/2592$, are open.
 
 ## Exact checks
 
@@ -46,5 +46,5 @@ assert 2*(slope+F(25,6))/288 == F(19,5184)
 print("A mixed long-face double pole:", long_face)
 ```
 
-- **DERIVED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005).
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005). — eq./page UNVERIFIED.
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

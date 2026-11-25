@@ -1,6 +1,6 @@
 # Possibility cloud
 
-**Conversation date range** 2026-05 to 2026-06-06
+**Conversation date range** $2026-05$ to 2026-06-06
 
 **ASSUMED** The early model treats persistent configurations as resonant locks of a spinning probability manifold. **ASSUMED** It sketches an action, a phase-overlap measure and mass feedback. **UNVERIFIED** The proposed correspondence to physical mass, collapse and force laws remains open.
 
@@ -31,14 +31,15 @@
 | **ASSUMED** **Resonant lock** | Stable structure formed by resonant convergence in the cloud |
 | **ASSUMED** **Mass** | Coherence density — $m \propto$ probability overlap where spirograph paths intersect in projection |
 | **ASSUMED** **Collapse** | Geodesic fall into high-mass basins — geometry, not measurement |
-| **ASSUMED** **Perspective** | Selects which dimensional slice is "real" for an observer (2D mandala = one lock-in frame) |
+| **ASSUMED** **Perspective** | Selects which dimensional slice is "real" for an observer (2D mandala $=$ one lock-in frame) |
 
 **Working relations (from discussion):**
 
-```
-m(x) ∝ ∫ ρ_overlap dV
-ω(x) ∝ m(x)     (more likely to exist → faster local spin)
-```
+**ASSUMED**
+$$
+m(x) \propto \int \rho_{\mathrm{overlap}}\,dV,\qquad \omega(x)\propto m(x).
+$$
+**ASSUMED** Greater local overlap was proposed to increase local spin; no physical calibration was supplied.
 
 ---
 
@@ -47,9 +48,7 @@ m(x) ∝ ∫ ρ_overlap dV
 **ASSUMED** The system is governed by the Lagrangian density $\mathcal{L}$, where the action $S$ is minimized to achieve stable locks:
 
 $$
-
 S = \int_M \left[ \frac{1}{2} \eta^{\mu\nu} \partial_\mu \psi^* \partial_\nu \psi - U(|\psi|^2) - \lambda (\mathcal{H} - 1)^2 \right] d^4x
-
 $$
 
 | Term | Role |
@@ -61,9 +60,7 @@ $$
 **Harmonic completeness:**
 
 $$
-
 \mathcal{H} = \frac{\left|\sum_i \psi_i e^{i\phi_i}\right|^2}{\sum_i |\psi_i|^2}
-
 $$
 
 - **ASSUMED** $\mathcal{H} = 1$ → deep lock (stable)
@@ -95,37 +92,27 @@ $$
 
 **Wave on manifold:**
 $$
-
 \Box_g \psi + V(m)\psi = 0
-
 $$
 
 **Metric (weak field):**
 $$
-
 g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}(m)
-
 $$
 
 **Resonance condition:**
 $$
-
 \cos\theta_i \cdot \frac{\lambda}{R(m)} \approx n + \frac{\phi_{\text{spin}}}{2\pi}, \qquad \phi_{\text{spin}} = \omega_{\text{cloud}} \cdot t
-
 $$
 
 **Geodesic collapse:**
 $$
-
 \frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\tau} \frac{dx^\beta}{d\tau} = 0
-
 $$
 
 **2D atomic projection (demo tier):**
 $$
-
 \rho_{2D} = |\psi_{1s}|^2 + |\psi_{2s}|^2 + |\psi_{2px}|^2 + |\psi_{2py}|^2 + |\psi_{2pz}|^2
-
 $$
 
 ---
@@ -152,9 +139,7 @@ $$
 **ASSUMED** Decay is not an external interaction but an **internal transition**. The transition rate $\Gamma$ is proportional to harmonic instability:
 
 $$
-
 \Gamma \propto \left| \frac{\partial}{\partial \psi} \lambda (\mathcal{H} - 1)^2 \right|^2
-
 $$
 
 **ASSUMED** The weak force reshapes nuclear identity when a configuration becomes harmonically incomplete.
@@ -202,7 +187,7 @@ $$
 
 - **ASSUMED** Form follows function — physics first, mandala encodes
 - **ASSUMED** Encoded on purpose — navigation / transmission (maps, not proof)
-- **ASSUMED** Sacred geometry = mnemonic overlay, not derived proof
+- **ASSUMED** Sacred geometry $=$ mnemonic overlay, not derived proof
 
 ---
 

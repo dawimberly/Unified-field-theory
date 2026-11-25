@@ -2,17 +2,17 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** The bounded, mixed and two-long regions give $1/96$ for FFff(A). **DERIVED** The A+B sum is $17/162$ against the independent $1/72$ target, leaving $59/648$. **UNVERIFIED** The physical simple pole remains uninterpretable until that inconsistency is resolved.
+**DERIVED** The bounded, mixed and two-long regions give $1/96$ for FFff(A). **DERIVED** The $A+B \sum$ is $17/162$ against the independent $1/72$ target, leaving $59/648$. **UNVERIFIED** The physical simple pole remains uninterpretable until that inconsistency is resolved.
 
 ## Research record
 
-**DERIVED** This completes the bounded FFff(A) calculation at physical cut 2 and L=0, following [the A mixed regions](ffz-ffff-a-complete-mixed-double-pole.md).
+**DERIVED** This completes the bounded FFff(A) calculation at physical cut 2 and $L=0$, following [the A mixed regions](ffz-ffff-a-complete-mixed-double-pole.md).
 
-**DERIVED** Expand the bounded smooth numerator in T,U through first order in each variable. The T^(ε−2) U^(ε−2) factors select the first Taylor coefficient of either length for a simple endpoint pole. For the other length keep the analytically integrated constant (−1/2 at cutoff 2), the finite logarithmic factor ln 2 on the linear term, and ordinary integration on higher powers. The summed corner at ε=0 is zero. Its first-order ε slope is −182/27, including the expansion of W^(−3ε) and the fraction factors. The logarithms of the two fractions vanish separately by the zero marginal integrals of the leading corner. The script uses exact Taylor arithmetic in T,U, polynomial integration, and an exact derivative in ε.
+**DERIVED** Expand the bounded smooth numerator in T,U through first order in each variable. The $T^{\epsilon -2} U^{\epsilon -2}$ factors select the first Taylor coefficient of either length for a simple endpoint pole. For the other length keep the analytically integrated constant ($-1/2$ at cutoff 2), the finite logarithmic factor ln 2 on the linear term, and ordinary integration on higher powers. The summed corner at $\epsilon =0$ is zero. Its first-order $\epsilon$ slope is $-182/27$, including the expansion of $W^{-3\epsilon }$ and the fraction factors. The logarithms of the two fractions vanish separately by the zero marginal integrals of the leading corner. The script uses exact Taylor arithmetic in T,U, polynomial integration, and an exact derivative in $\epsilon$.
 
-**DERIVED** The two bounded single-face contributions to the angular simple pole, with vertex 0 anchored, are 7246/945+(8/3)ln 2 and 1012/945+(8/3)ln 2. Add the corner slope and convert by +1/288. The bounded graph double pole has logarithm +ln 2/54, which cancels the mixed region's logarithm exactly. Adding the rational terms from the bounded, mixed and two-long regions gives **FFff(A) = 1/96** in units h²z/K.
+**DERIVED** The two bounded single-face contributions to the angular simple pole, with vertex 0 anchored, are $7246/945+(8/3)\ln 2$ and $1012/945+(8/3)\ln 2$. Add the corner slope and convert by $+1/288$. The bounded graph double pole has logarithm $+\ln 2/54$, which cancels the mixed region's logarithm exactly. Adding the rational terms from the bounded, mixed and two-long regions gives **$FFff(A) = 1/96$** in units $h^{2}z/K$.
 
-**DERIVED** Combining with [FFff(B) = 245/2592](ffz-ffff-b-complete-double-pole.md) gives **17/162**, versus the independent target **1/72**. The discrepancy is **59/648**. This is an inconsistency between the current calculation and the pole equations. The physical simple-pole test cannot be interpreted until the mismatch is resolved. An independent audit should rederive the curvature numerators and subgraph residues, and check the matter insertions and the earlier bare subtotal in one common convention.
+**DERIVED** Combining with [FFff(B) = 245/2592](ffz-ffff-b-complete-double-pole.md) gives **$17/162$**, versus the independent target **$1/72$**. The discrepancy is **$59/648$**. This is an inconsistency between the current calculation and the pole equations. The physical simple-pole test cannot be interpreted until the mismatch is resolved. An independent audit should rederive the curvature numerators and subgraph residues, and check the matter insertions and the earlier bare subtotal in one common convention.
 
 ## Reproduction
 
@@ -145,5 +145,5 @@ print("A, total, discrepancy:",a,total,total-F(1,72))
 
 ```
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
-- **DERIVED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.
+- **CITED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005). — eq./page UNVERIFIED.

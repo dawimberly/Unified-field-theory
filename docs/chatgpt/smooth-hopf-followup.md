@@ -2,11 +2,11 @@
 
 **Conversation date range** 2026-11-01
 
-**DERIVED** This checkpoint records Smooth, topology-preserving field follow-up. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records Smooth, topology-preserving field follow-up. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** 1 November 2026. Candidate 0, infinite flat three-space, v=kappa=1 and lambda=64.
+**DERIVED** 1 November 2026. Candidate 0, infinite flat three-space, $v=\kappa =1$ and $\lambda =64$.
 
 ## Main result
 **DERIVED** The earlier grid's artificial unwinding was avoided by switching to globally smooth, topology-preserving trial fields. The radius/amplitude-only optimum is demonstrably not stationary once smooth orientation deformations are admitted: an explicit small change lowers its energy by approximately 0.20330045, consistently across three integration grids.
@@ -19,24 +19,30 @@
 **DERIVED** There is no new force, topology penalty, noise term, imposed collapse rule, gravitational dynamics or physical scale calibration. The constant phase is retained. Its quadratic perturbation energy is nonnegative for positive amplitude and has no mixed quadratic terms at a constant-phase background.
 
 ## Construction
-**DERIVED** Start with the degree-one rational Hopf texture n_H(y), y=x/R. Let a(y) be a finite combination of smooth polynomial-times-Gaussian basis functions. Apply its Cayley rotation:
+**DERIVED** Start with the degree-one rational Hopf texture $n_H(y), y=x/R$. Let a(y) be a finite combination of smooth polynomial-times-Gaussian basis functions. Apply its Cayley rotation:
 
-    n(y)=[(1-a.a)n_H+2a(a.n_H)+2(a cross n_H)]/(1+a.a).
+$$
+n(y)=[(1-a.a)n_H+2a(a.n_H)+2(a \times n_H)]/(1+a.a).
+$$
 
-**DERIVED** For real finite coefficients the denominator is at least one and n has unit length everywhere. The basis functions vanish at infinity. Replacing a by t*a continuously, 0<=t<=1, gives a smooth homotopy to the original Hopf map, preserving its unit Hopf class (with the inherited orientation convention). This does not force arbitrary dynamics to retain topology; it respects the smooth topological sector already present in the written independent-n model. It does restrict the trial family and cannot represent every field in that sector.
+**DERIVED** For real finite coefficients the denominator is at least one and n has unit length everywhere. The basis functions vanish at infinity. Replacing a by t*a continuously, $0\le t\le 1$, gives a smooth homotopy to the original Hopf map, preserving its unit Hopf class (with the inherited orientation convention). This does not force arbitrary dynamics to retain topology; it respects the smooth topological sector already present in the written independent-n model. It does restrict the trial family and cannot represent every field in that sector.
 
-**DERIVED** Amplitude is rho=exp[-sum c_b H_b(y)], hence strictly positive and tending to one at infinity. The first five H_b are radial Gaussians; the extended solve adds polynomial-Gaussian terms, permitting nonspherical amplitude. Spatial derivatives of both fields are analytic. There is no node-wise renormalization or singular interpolant.
+**DERIVED** Amplitude is $\rho =\exp [-\sum c_b H_b(y)]$, hence strictly positive and tending to one at infinity. The first five H_b are radial Gaussians; the extended solve adds polynomial-Gaussian terms, permitting nonspherical amplitude. Spatial derivatives of both fields are analytic. There is no node-wise renormalization or singular interpolant.
 
 **DERIVED** After changing variables to y, the static energy is
 
-    E=R*A+(1/R)*B+64*R^3*C,
-    A=integral [|grad_y rho|^2+rho^2|grad_y n|^2]/2,
-    B=integral sum_(i<j) [n.(partial_i n cross partial_j n)]^2/2,
-    C=integral (rho^2-1)^2/4.
+$$
+\begin{gathered}
+E=R\,A+(1/R)\,B+64\,R^{3}\,C, \\
+A=\int [|\nabla _y \rho |^{2}+\rho ^{2}|\nabla _y n|^{2}]/2, \\
+B=\int \sum _(i<j) [n.(\partial _i n \times \partial _j n)]^{2}/2, \\
+C=\int (\rho ^{2}-1)^{2}/4.
+\end{gathered}
+$$
 
 **DERIVED** R is dimensionless. Once a is nonzero, it is a reference coordinate scale rather than a directly measured object radius. The angular field can change the object's shape and effective extent independently.
 
-**DERIVED** Radial integration uses r=tan(t) with Gaussian quadrature in 0<t<pi/2. Polar cosine uses Gaussian quadrature and azimuth uses a periodic trapezoidal rule. Integration-grid refinement is separate from variational-basis refinement.
+**DERIVED** Radial integration uses $r=\tan\left(t\right)$ with Gaussian quadrature in $0<t<\pi /2$. Polar cosine uses Gaussian quadrature and azimuth uses a periodic trapezoidal rule. Integration-grid refinement is separate from variational-basis refinement.
 
 ## Completed minimizations
 
@@ -47,10 +53,10 @@
 | **DERIVED** Quadratic orientation modes | 36 | 280.7745686302 |
 | **DERIVED** Cubic orientation and quadratic amplitude modes | 76 | 280.5673060785 |
 
-**DERIVED** The extended endpoint has maximum parameter gradient 3.14858e-05; active parameter bounds: False. Its final optimizer termination is CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH. Minimum sampled amplitude is 0.83613734. Parameter bounds limit the search; no conclusion extends beyond the tested family or their range. No model parameter was fitted to an observed particle mass.
+**DERIVED** The extended endpoint has maximum parameter gradient $3.14858\times10^{-05}$; active parameter bounds: False. Its final optimizer termination is CONVERGENCE: RELATIVE REDUCTION $OF F \le FACTR$*EPSMCH. Minimum sampled amplitude is 0.83613734. Parameter bounds limit the search; no conclusion extends beyond the tested family or their range. No model parameter was fitted to an observed particle mass.
 
 ## Explicit countercheck of the radius-only claim
-**DERIVED** At its own optimum the six-parameter radius/amplitude control has a small retained gradient, but a large omitted orientation gradient. The deformation used here is a_z(y)=epsilon*y_z*exp(-|y|^2/4), with epsilon=0.01 and other orientation coefficients zero. It is smooth, localized and topology preserving. Numerical results:
+**DERIVED** At its own optimum the six-parameter radius/amplitude control has a small retained gradient, but a large omitted orientation gradient. The deformation used here is $a_z(y)=\epsilon y_z\exp(-|y|^2/4)$, with $\epsilon =0.01$ and other orientation coefficients zero. It is smooth, localized and topology preserving. Numerical results:
 
 | Integration grid | Energy change |
 |---|---:|
@@ -67,21 +73,21 @@
 | **DERIVED** [40, 18, 36] | 280.5672877894 | 0.000432055 |
 | **DERIVED** [56, 24, 48] | 280.5673060877 | 0.00108452 |
 | **DERIVED** [72, 30, 60] | 280.5673061703 | 0.00108286 |
-| **DERIVED** [72, 30, 60] | 280.5673061612 | 3.14306e-05 |
+| **DERIVED** [72, 30, 60] | 280.5673061612 | $3.14306\times10^{-05}$ |
 
 **DERIVED** These rows include pre-refinement results if a refined reoptimization was required. The final label is extended_order3_refined; only rows identified as after-refinement are evaluations of that new endpoint when applicable. Comparisons across different endpoints must not be mistaken for quadrature errors.
 
-**DERIVED** Embedding the final parameters into an even larger family gives maximum NEW amplitude-mode gradient 9.23337e-08 and maximum NEW orientation-mode gradient 10.2393. These directions were absent from the optimization. Non-negligible new-mode gradients mean the configuration is still not stationary in the larger family, regardless of a positive Hessian in the smaller one. The larger-family evaluation uses its own reported integration grid and is not itself a further optimized solution.
+**DERIVED** Embedding the final parameters into an even larger family gives maximum NEW amplitude-mode gradient $9.23337\times10^{-08}$ and maximum NEW orientation-mode gradient 10.2393. These directions were absent from the optimization. Non-negligible new-mode gradients mean the configuration is still not stationary in the larger family, regardless of a positive Hessian in the smaller one. The larger-family evaluation uses its own reported integration grid and is not itself a further optimized solution.
 
 ## Restricted Hessian
-**DERIVED** The Hessian was calculated by central differences of the analytic parameter gradient, with step 0.0001. Its relative antisymmetry is 2.04e-08. Its eigenvalues range from 0.12029688 to 7764.1028, with 0 below -1e-5 and 0 of absolute size below 1e-5.
+**CITED** The Hessian was calculated by central differences of the analytic parameter gradient, with step 0.0001. Its relative antisymmetry is $2.04\times10^{-08}$. Its eigenvalues range from 0.12029688 to 7764.1028, with 0 below $-1\times10^{-5}$ and 0 of absolute size below $1\times10^{-5}$. — eq./page UNVERIFIED.
 
 **DERIVED** These are curvatures in the finite chosen parameter space, not frequencies of the full continuum field. A positive restricted Hessian does not prove dynamical stability. A negative eigenvalue at a nonstationary endpoint is not by itself a normal-mode instability of a stationary solution. We have not solved the complete generalized field eigenproblem with its kinetic metric. A second full Hessian-difference step was not used. The smallest-eigenvalue direction was independently checked using symmetric energy differences at steps 0.001 and 0.0005; details are in smallest_mode_direct_check.json. These curvatures are not continuum oscillation frequencies.
 
 ## Implementation controls
-**DERIVED** The undeformed frozen-amplitude Hopf energy matches 16*pi^2*(R+1/R), with maximum reference integral relative error 3.55e-15. Unit-vector error is 1.89e-15, and the spatial tangent condition error is 1.78e-15. Analytic parameter gradients were compared against independent complex-step gradients; maximum check error is 6.37e-12. A random directional finite-difference check also passed.
+**DERIVED** The undeformed frozen-amplitude Hopf energy matches $16\,\pi ^{2}\,(R+1/R)$, with maximum reference integral relative error $3.55\times10^{-15}$. Unit-vector error is $1.89\times10^{-15}$, and the spatial tangent condition error is $1.78\times10^{-15}$. Analytic parameter gradients were compared against independent complex-step gradients; maximum check error is $6.37\times10^{-12}$. A random directional finite-difference check also passed.
 
-**DERIVED** A separately written quaternion formula and centered spatial differences checked 20 sample locations in the deformed field. The largest orientation-derivative discrepancy was 1.19e-09; the largest amplitude-derivative discrepancy was 2.01e-10. These are implementation controls, not empirical tests.
+**DERIVED** A separately written quaternion formula and centered spatial differences checked 20 sample locations in the deformed field. The largest orientation-derivative discrepancy was $1.19\times10^{-09}$; the largest amplitude-derivative discrepancy was $2.01\times10^{-10}$. These are implementation controls, not empirical tests.
 
 ## Scientific conclusion
 **DERIVED** We can now lower the energy without losing topology numerically. The old radius-only equilibrium claim fails a specific smooth deformation test. The expanded configurations are better candidates, but the explicit omitted-mode gradients and quadrature checks remain the appropriate gate for further work. The mathematically justified next step is targeted basis enlargement or a full stationary solve initialized from the smooth candidate, followed by a full constrained stability calculation after stationarity is established.
@@ -89,7 +95,7 @@
 **DERIVED** This work addresses the stable-field-structure question only. It does not derive quantum measurement, gravity, Einstein's equations, particle spin/statistics or an observed mass. The current action still has no dynamical metric. Making a better classical knot is not, by itself, progress on the origin of gravity. No user choice is required to interpret that limitation.
 
 ## Reproduction
-**DERIVED** Run smooth_hopf_variational_2026_11_01.py, smooth_hopf_derivative_check_2026_11_01.py, smooth_hopf_radial_countercheck_2026_11_01.py and smooth_hopf_extended_2026_11_01.py, then smooth_hopf_omitted_check_2026_11_01.py, smooth_hopf_smallest_mode_check_2026_11_01.py and this packaging script. Dependencies: Python, NumPy, SciPy, Matplotlib, threadpoolctl. The source now uses the checked analytic parameter gradient; original coarse runs initially used complex-step gradients, so iteration histories can differ on reproduction while endpoint comparisons and checks remain the relevant criteria. Reproduction overwrites only this follow-up's output directory.
+**ASSUMED** Run smooth_hopf_variational_2026_11_01.py, smooth_hopf_derivative_check_2026_11_01.py, smooth_hopf_radial_countercheck_2026_11_01.py and smooth_hopf_extended_2026_11_01.py, then smooth_hopf_omitted_check_2026_11_01.py, smooth_hopf_smallest_mode_check_2026_11_01.py and this packaging script. Dependencies: Python, NumPy, SciPy, Matplotlib, threadpoolctl. The source now uses the checked analytic parameter gradient; original coarse runs initially used complex-step gradients, so iteration histories can differ on reproduction while endpoint comparisons and checks remain the relevant criteria. Reproduction overwrites only this follow-up's output directory.
 
 ## Direct omitted-mode perturbation check
 

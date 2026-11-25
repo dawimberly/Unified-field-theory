@@ -1,6 +1,6 @@
 # Route 6: numerical target and prerequisites
 
-**Conversation date range** 2026-10 (exact conversation dates UNVERIFIED)
+**Conversation date range** $2026-10$ (exact conversation dates UNVERIFIED)
 
 **ASSUMED** This checkpoint records route 6: numerical target and prerequisites. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
@@ -21,7 +21,7 @@
 ## Observables
 
 1. **ASSUMED** Select and renormalize a composite metric operator h_ab constructed from the underlying fields according to the actual theory. Specify the relational/gauge context in which its correlation is meaningful.
-2. **ASSUMED** Measure the connected correlation C_abcd(q)=<h_ab(q)h_cd(-q)>-<h_ab(q)><h_cd(-q)> in a valid translationally invariant reference setup. On curved backgrounds use the appropriate harmonic or position-space construction rather than importing flat Fourier momenta unchanged.
+2. **ASSUMED** Measure the connected correlation $C_{abcd}(q)=<h_{ab}(q)h_{cd}(-q)>-<h_{ab}(q)><h_{cd}(-q)>$ in a valid translationally invariant reference setup. On curved backgrounds use the appropriate harmonic or position-space construction rather than importing flat Fourier momenta unchanged.
 3. **ASSUMED** Project into TT and scalar sectors using momentum conventions consistent with the discretized derivative. The continuum projector used by this audit cannot be blindly reused with an unrelated lattice derivative or Laplacian.
 4. **ASSUMED** Also measure background one-point functions, local contact contributions and Ward-identity residuals. Zero momentum is not defined by the present q-dependent projector and must be handled separately.
 
@@ -30,7 +30,7 @@
 - **ASSUMED** Reproduce the free/base-model limit and the weak-quartic analytic result once it exists.
 - **ASSUMED** Compare genuinely connected correlations, not disconnected vacuum products.
 - **ASSUMED** Repeat with larger physical volume and a sequence of spacings at matched parameters. A finite-volume correlation length or an isolated small eigenvalue is not enough.
-- **ASSUMED** Look for the expected low-momentum tensor pole only in the FULL appropriate correlator. A matter stress bubble is a building block of an inverse response and need not have a 1/q^2 pole itself.
+- **ASSUMED** Look for the expected low-momentum tensor pole only in the FULL appropriate correlator. A matter stress bubble is a building block of an inverse response and need not have $a 1/q^{2}$ pole itself.
 - **ASSUMED** Evaluate spin-zero contamination and positivity/unitarity through appropriate observables. The Euclidean TT projector has rank five; this does not count physical massless helicities.
 - **ASSUMED** Distinguish numerical symmetry breaking from a physical interaction effect. Quantify autocorrelation and statistical/systematic uncertainty.
 - **ASSUMED** Comparing ordered/disordered states requires fixed microscopic parameters with a specified state or thermodynamic control, plus the correct extra medium tensor structures. Changing lambda alone is not a binding transition.

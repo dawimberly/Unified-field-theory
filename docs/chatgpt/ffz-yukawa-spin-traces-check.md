@@ -2,7 +2,7 @@
 
 **Conversation date range** 2026-11-20 to 2026-11-21 (checkpoint sequence)
 
-**DERIVED** This checkpoint records ffz weyl spin traces and multiplicity checks. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records ffz weyl spin traces and multiplicity checks. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 

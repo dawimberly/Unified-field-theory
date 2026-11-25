@@ -1,12 +1,12 @@
 # Fixed-mass density-arrangement scan
 
-**Conversation date range** 2026-10 (exact conversation dates UNVERIFIED)
+**Conversation date range** $2026-10$ (exact conversation dates UNVERIFIED)
 
-**DERIVED** This checkpoint records fixed-mass density-arrangement scan. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records fixed-mass density-arrangement scan. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Completed 45 cases; 0 failed solves. Same continuous mass, radius, ambient density and scalar coupling in each comparison. Only core/mantle density arrangement changes. Model: n=1 chameleon scalar, mean body density contrast 1000.
+**DERIVED** Completed 45 cases; 0 failed solves. Same continuous mass, radius, ambient density and scalar coupling in each comparison. Only core/mantle density arrangement changes. Model: $n=1$ chameleon scalar, mean body density contrast 1000.
 
 | mu | Core radius / radius | Core density / mean | Exterior charge change |
 |---|---:|---:|---:|
@@ -58,7 +58,7 @@
 
 ## Controls and scope
 
-**DERIVED** Core density ratio 1 is the uniform control. Positive changes mean a larger exterior scalar charge than the uniform sphere. The mantle density is set to 1000*(1-f^3*ratio)/(1-f^3), enforcing equal continuous mass. All sampled densities are positive.
+**DERIVED** Core density ratio 1 is the uniform control. Positive changes mean a larger exterior scalar charge than the uniform sphere. The mantle density is set to $1000(1-f^3\mathrm{ratio})/(1-f^3)$, enforcing equal continuous mass. All sampled densities are positive.
 
 **DERIVED** Every successful solve checks adaptive collocation convergence, positive scalar field, equal continuous mass and integrated exterior flux balance. The two most extreme responses were rerun at tenfold tighter tolerance and doubled outer radius; each charge changes by less than 0.02%. Charge is extracted five ambient Compton lengths beyond the surface.
 
@@ -66,8 +66,8 @@
 
 ## Next step
 
-**DERIVED** Use density-matched materials as a null control: this density-only model predicts identical scalar profiles for identical density profiles regardless of material name. A material/spin claim needs a specified additional coupling and independent laboratory constraints before assigning numerical predictions.
+**ASSUMED** Use density-matched materials as a null control: this density-only model predicts identical scalar profiles for identical density profiles regardless of material name. A material/spin claim needs a specified additional coupling and independent laboratory constraints before assigning numerical predictions.
 
 ## Reproduction
 
-**DERIVED** Run python C:\workspace\physics\scripts\screening_density_scan.py (NumPy and SciPy required). Full results include solver diagnostics; refinements.json contains extreme-case reruns.
+**ASSUMED** Run python C:\workspace\physics\scripts\screening_density_scan.py (NumPy and SciPy required). Full results include solver diagnostics; refinements.json contains extreme-case reruns.

@@ -2,23 +2,23 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records the FFZ double-pole locality audit. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records the FFZ double-pole locality audit. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the double-pole mismatch](ffz-ffff-double-pole-mismatch.md) and independently checks the [counterterm targets](ffz-matter-counterterms-yukawa-targets.md). The mismatch survives two checks on the target. This audit uses the fixed-1/6 external-metric continuation and mass-independent subtraction.
+**ASSUMED** Continues [the double-pole mismatch](ffz-ffff-double-pole-mismatch.md) and independently checks the [counterterm targets](ffz-matter-counterterms-yukawa-targets.md). The mismatch survives two checks on the target. This audit uses the fixed $1/6$ external-metric continuation and mass-independent subtraction.
 
 ## Check 1: baseline higher poles from baseline data alone
 
-**DERIVED** For the one-loop coefficient R, the scalar heat-kernel term vanishes at ξ=1/6. The four-component Dirac coefficient is tr(R/6−R/4)=−R/3. With the fermionic determinant sign and Γ(−1+ε), the positive Newton pole is z/(6Kε). This provides a direct normalization check on the one-loop input. The two-loop baseline pole after matter insertions is hz/K times [1/(24ε²)−1/(24ε)].
+**DERIVED** For the one-loop coefficient R, the scalar heat-kernel term vanishes at $\xi =1/6$. The four-component Dirac coefficient is $tr(R/6-R/4)=-R/3$. With the fermionic determinant sign and $\Gamma (-1+\epsilon )$, the positive Newton pole is $z/(6K\epsilon )$. This provides a direct normalization check on the one-loop input. The two-loop baseline pole after matter insertions is $hz/K$ times $[1/(24\epsilon ^{2})-1/(24\epsilon )]$.
 
-**DERIVED** For the normalized local pole polynomial C(h,ε), the bare-scale derivative operator is −2ε+β_h∂_h+β_z/z, where β_h=−2εh+3h²+O(h³) and β_z/z=h−h²+O(h³). Requiring its Laurent-pole part to vanish yields 6 C_23=4 C_12 and 6 C_22=4 C_11−C_01. Thus the baseline higher poles at order h² are **1/36 and −1/18**, respectively, without importing the improvement-source computation. Subtracting the known counterterm double pole −5/48 and the earlier graph subtotal 5/144 gives the remaining bare target **1/72** again.
+**DERIVED** For the normalized local pole polynomial $C(h,\epsilon )$, the bare-scale derivative operator is $-2\epsilon +\beta _h\partial _h+\beta _z/z$, where $\beta _h=-2\epsilon h+3h^{2}+O(h^{3})$ and $\beta _z/z=h-h^{2}+O(h^{3})$. Requiring its Laurent-pole part to vanish yields $6 C_23=4 C_12$ and $6 C_22=4 C_11-C_01$. Thus the baseline higher poles at order h² are **1/36 and −1/18**, respectively, without importing the improvement-source computation. Subtracting the known counterterm double pole $-5/48$ and the earlier graph subtotal $5/144$ gives the remaining bare target **$1/72$** again.
 
 ## Check 2: the mismatch produces a nonlocal simple pole
 
-**DERIVED** The three-loop bare terms carry the common factor exp(−3εL) with L=ln(z/μ²). Hence the residual double-pole discrepancy Δ=59/648 necessarily produces an uncanceled **−59 L/(216ε)** in the simple pole of the one-mass baseline, given the existing matter insertions. A mass-independent local pure-metric subtraction cannot compensate this scale logarithm.
+**DERIVED** The three-loop bare terms carry the common factor $\exp\left(-3\epsilon L\right)$ with $L=\ln\left(z/\mu ^{2}\right)$. Hence the residual double-pole discrepancy $\Delta =59/648$ necessarily produces an uncanceled **−59 L/(216ε)** in the simple pole of the one-mass baseline, given the existing matter insertions. A mass-independent local pure-metric subtraction cannot compensate this scale logarithm.
 
-**DERIVED** The three-group projection does not hide it. In the benchmark masses z_g=M²(1,2,4), the improvement weights satisfy Σ z_g a_Y,g=−7M² and the baseline sum is Σ z_g=7M². The discrepancy is in the improvement-independent coefficient. It leaves the projected simple-pole logarithm proportional to 7 ln(M²/μ²)+10 ln 2, in units h²M²/K. Thus the mismatch has to be repaired in the complete calculation before the projected finite matching or simple coefficient can be interpreted.
+**DERIVED** The three-group projection does not hide it. In the benchmark masses $z_g=M^{2}(1,2,4)$, the improvement weights satisfy $\sum z_g a_Y,g=-7M^{2}$ and the baseline sum is $\sum z_g=7M^{2}$. The discrepancy is in the improvement-independent coefficient. It leaves the projected simple-pole logarithm proportional to $7 \ln\left(M^{2}/\mu ^{2}\right)+10 \ln 2$, in units h²M²/K. Thus the mismatch has to be repaired in the complete calculation before the projected finite matching or simple coefficient can be interpreted.
 
 ## Independent numerical-free check of the spin-conditioned covariance
 
@@ -73,4 +73,4 @@ for lengths in ((F(1,4),)*4,(F(1,10),F(1,5),F(3,10),F(2,5))):
 print("Baseline recurrence, nonlocal discrepancy and Gaussian moments verified")
 ```
 
-- **DERIVED** [Martin, Three-loop effective potential for softly broken supersymmetry](https://doi.org/10.1103/PhysRevD.109.015019).
+- **CITED** [Martin, Three-loop effective potential for softly broken supersymmetry](https://doi.org/10.1103/PhysRevD.109.015019). — eq./page UNVERIFIED.

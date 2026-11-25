@@ -1,6 +1,6 @@
 # Hypersphere churn
 
-**Conversation date range** 2026-05 to 2026-10-20 (source window)
+**Conversation date range** $2026-05$ to 2026-10-20 (source window)
 
 **ASSUMED** The early picture combines stochastic motion, a spinning hypersphere and local phase locks. **ASSUMED** Later discussion treated time and real motion as integral to the geometry. **UNVERIFIED** The churn law, dimensional selection and coupling to physical gravity remain open.
 
@@ -12,7 +12,7 @@
 $$
 \dot m=\beta\sum_i \Delta m_i-\gamma m-\eta I_{\mathrm{external}}.
 $$
-**DERIVED** Collisions were hypothesized to change local wells and generate harmonics. The coefficients and measure were left unspecified.
+**ASSUMED** Collisions were hypothesized to change local wells and generate harmonics. The coefficients and measure were left unspecified.
 
 **ASSUMED** In the October 20 discussion, circles and spheres were preferred, time motivated the hypersphere, and vectors were meant to represent real motion.
 

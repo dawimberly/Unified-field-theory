@@ -2,7 +2,7 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records the FFZ fermion curvature insertion audit. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records the FFZ fermion curvature insertion audit. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
@@ -10,23 +10,23 @@
 
 ## Off-diagonal resolvent
 
-**DERIVED** In the flat Weyl frame δD=−κm |u|². The first derivative of D^−1 is −S δD S. Write each flat spinor resolvent as (m−γ·∂)G, then transfer the derivative of the second factor to its other endpoint. The odd Clifford component is κz γ·(∂y−∂x)Q, where Q=∫du G(x−u)|u|²G(u−y). The even Clifford part vanishes between the two opposite chiral projections on every kinetic line.
+**DERIVED** In the flat Weyl frame $\delta D=-\kappa m$ |u|². The first derivative of $D^{-1}$ is $-S \delta D S$. Write each flat spinor resolvent as $(m-\gamma \cdot \partial )G$, then transfer the derivative of the second factor to its other endpoint. The odd Clifford component is $\kappa z \gamma \cdot (\partial y-\partial x)Q$, where $Q=\int du G(x-u)$|u|²G(u−y). The even Clifford part vanishes between the two opposite chiral projections on every kinetic line.
 
-**DERIVED** At fixed total Schwinger length s, the convolution in Q has extra factor s and its conditional position moment is μ²+2ds a(1−a), with μ=ax+(1−a)y. Differentiating before anchoring gives two terms, from the heat kernel and from μ². With Δ=x−y their combined numerator at fixed a is
-**DERIVED** Δ[μ²+2ds a(1−a)] + 2s(1−2a)μ.
-**DERIVED** The a integral is Δ[x²+y²+x·y+(d−1)s]/3. Thus the insertion multiplies the flat kinetic component by 2κzs[x²+y²+x·y+(d−1)s]/3. In particular the split-point derivative lowers d to d−1 in the variance term. This agrees with the formula used in both four-Yukawa kernels.
+**DERIVED** At fixed total Schwinger length s, the convolution in Q has extra factor s and its conditional position moment is $\mu ^{2}+2ds a(1-a)$, with $\mu =ax+(1-a)y$. Differentiating before anchoring gives two terms, from the heat kernel and from $\mu ^{2}$. With $\Delta =x-y$ their combined numerator at fixed a is
+**DERIVED** $\Delta [\mu ^{2}+2ds a(1-a)] + 2s(1-2a)\mu$.
+**DERIVED** The a integral is $\Delta [x^{2}+y^{2}+x\cdot y+(d-1)s]/3$. Thus the insertion multiplies the flat kinetic component by $2\kappa zs[x^{2}+y^{2}+x\cdot y+(d-1)s]/3$. In particular the split-point derivative lowers d to d−1 in the variance term. This agrees with the formula used in both four-Yukawa kernels.
 
 ## Independent anchored radial check
 
-**DERIVED** Set y=0 only after the differentiation. The flat radial kinetic factor at fixed s is b_s=r K_s/(2s). Using ∫s b_s=rG/2 and ∫s² b_s=−r ∂z G/2 yields δb/κ=(zr/3)[r²G−(d−1)∂zG]. The scaling relation 2z∂zG=(d−2)G+rG′ reduces it to
-**DERIVED** zr³G/3+(d−1)r²b/6−(d−1)(d−2)rG/6.
-**DERIVED** The older radial expression reduces to this same polynomial using b′=−zG−(d−1)b/r and ∂z b=−rG/2. This tests the relative sign and the dimension-dependent variance against the differently organized lower-loop derivation.
+**ASSUMED** Set $y=0$ only after the differentiation. The flat radial kinetic factor at fixed s is $b_s=r K_s/(2s)$. Using $\int s b_s=rG/2$ and $\int s^{2} b_s=-r \partial z G/2$ yields $\delta b/\kappa =(zr/3)[r^{2}G-(d-1)\partial zG]$. The scaling relation $2z\partial zG=(d-2)G+rG$′ reduces it to
+**DERIVED** $zr^{3}G/3+(d-1)r^{2}b/6-(d-1)(d-2)rG/6$.
+**DERIVED** The older radial expression reduces to this same polynomial using b′$=-zG-(d-1)b/r$ and $\partial z b=-rG/2$. This tests the relative sign and the dimension-dependent variance against the differently organized lower-loop derivation.
 
 ## Separate test for the scalar evanescent insertion
 
-**DERIVED** At linear order in R, the difference between the two prescriptions ξ=1/6 and ξ=ξ_d is exactly
-**DERIVED** R(1/6−ξ_d)(∂_x+∂_u)V_flat
-**DERIVED** with independent scalar squared masses x,u. The derivatives keep the fermion mass and the cubic and Yukawa vertices fixed. The coefficient 1/6−ξ_d=(4−d)/[12(d−1)] multiplies the flat mass derivative, so only its leading triple pole is required for a three-loop double-pole comparison. This provides a flat-space diagnostic of the direct scalar curvature-mass terms, separate from the spinor line test. That comparison has yet to be evaluated.
+**DERIVED** At linear order in R, the difference between the two prescriptions $\xi =1/6$ and $\xi =\xi _d$ is exactly
+**DERIVED** $R(1/6-\xi _d)(\partial _x+\partial _u)V_{flat}$
+**DERIVED** with independent scalar squared masses x,u. The derivatives keep the fermion mass and the cubic and Yukawa vertices fixed. The coefficient $1/6-\xi _d=(4-d)/[12(d-1)]$ multiplies the flat mass derivative, so only its leading triple pole is required for a three-loop double-pole comparison. This provides a flat-space diagnostic of the direct scalar curvature-mass terms, separate from the spinor line test. That comparison has yet to be evaluated.
 
 ## Exact checks
 
@@ -56,4 +56,4 @@ for d,r,z,g,b in product((2,3,4,7),(F(1,2),F(3)),(2,7),(F(3,5),),(F(4,9),)):
 print("Off-diagonal spinor insertion and anchored radial check passed")
 ```
 
-- **DERIVED** [Bunch and Parker, Feynman propagator in curved spacetime](https://doi.org/10.1103/PhysRevD.20.2499).
+- **CITED** [Bunch and Parker, Feynman propagator in curved spacetime](https://doi.org/10.1103/PhysRevD.20.2499). — eq./page UNVERIFIED.

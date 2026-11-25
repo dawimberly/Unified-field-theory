@@ -2,26 +2,26 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records FFZ(B) complete bounded-region double pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records FFZ(B) complete bounded-region double pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the double-short subtraction](ffz-ffff-b-double-short-subtraction.md) with physical length cut 2 and L=0. At ε=0 a single-face pole selects the finite integral of the other face after subtracting the common corner. Calculate both faces with vertex 0 anchored. Their integrands are different in this representation.
+**ASSUMED** Continues [the double-short subtraction](ffz-ffff-b-double-short-subtraction.md) with physical length cut 2 and $L=0$. At $\epsilon =0$ a single-face pole selects the finite integral of the other face after subtracting the common corner. Calculate both faces with vertex 0 anchored. Their integrands are different in this representation.
 
-**DERIVED** On either face let T be the longer length of the surviving pair and a its smaller length fraction. The opposite constituent has length s=aT/(1−a). At ε=0 sum the two assignments of which field occupies T, with respective weights 1−a and a. The summed pair contribution to the profile before 2/3 is
-**DERIVED** (T+s)(M_ii+M_jj+M_ij)+(4−a)T²+(3+a)s².
-**DERIVED** Add both fermion bridges and multiply by r=1−aT. The angular face residue comes from integrating the bridge-averaged profile minus 4/3 with measure dT/T da over 0<T<2 and 0<a<1/2. No simplex boundary clipping is needed on a single face at cut 2. The pole of the collapsed pair supplies the fraction factor 1/2. With spin 6, k=−1 and the radial conversion −1/144 the overall face factor is 1/48.
+**DERIVED** On either face let T be the longer length of the surviving pair and a its smaller length fraction. The opposite constituent has length $s=aT/(1-a)$. At $\epsilon =0 \sum$ the two assignments of which field occupies T, with respective weights 1−a and a. The summed pair contribution to the profile before $2/3$ is
+**DERIVED** $(T+s)(M_{ii}+M_{jj}+M_{ij})+(4-a)T^{2}+(3+a)s^{2}$.
+**DERIVED** Add both fermion bridges and multiply by $r=1-aT$. The angular face residue comes from integrating the bridge-averaged profile minus $4/3$ with measure $dT/T da$ over $0<T<2$ and $0<a<1/2$. No simplex boundary clipping is needed on a single face at cut 2. The pole of the collapsed pair supplies the fraction factor $1/2$. With spin $6, k=-1$ and the radial conversion $-1/144$ the overall face factor is $1/48$.
 
 **DERIVED** Call the two integrals I₀ and I₂ according to the surviving cyclic edge. Exact polynomial integration gives
-**DERIVED** I₀=−671/60+20 ln 2,
-**DERIVED** I₂=−386/45+16 ln 2.
-**DERIVED** Adding (I₀+I₂)/48 to the corner coefficient 7/324 gives the **full bounded-region** double pole for graph B:
+**DERIVED** $I_{0}=-671/60+20 \ln 2$,
+**DERIVED** $I_{2}=-386/45+16 \ln 2$.
+**DERIVED** Adding $(I_{0}+I_{2})/48$ to the corner coefficient $7/324$ gives the **full bounded-region** double pole for graph B:
 **−10111/25920+(3/4) ln 2 ≈ 0.12977550887675**
-**DERIVED** in units h²z/K. This is a chart coefficient at cut 2. The mixed regions and the bounded region of graph A are still required for the full two-graph result.
+**DERIVED** in units $h^{2}z/K$. This is a chart coefficient at cut 2. The mixed regions and the bounded region of graph A are still required for the full two-graph result.
 
 ## Reproducible exact integration
 
-**DERIVED** The first interpolation integrates the polynomial in T after corner subtraction and division by T. The second multiplies by b² with b=1−a to remove the physical-length denominators, integrates each monomial of the recovered polynomial divided by b², and retains ln 2 symbolically. The Gaussian tilt uses rational arithmetic throughout.
+**DERIVED** The first interpolation integrates the polynomial in T after corner subtraction and division by T. The second multiplies by b² with $b=1-a$ to remove the physical-length denominators, integrates each monomial of the recovered polynomial divided by b², and retains ln 2 symbolically. The Gaussian tilt uses rational arithmetic throughout.
 
 ```python
 from fractions import Fraction as F
@@ -93,4 +93,4 @@ print("bounded double pole:",F(7,324)+r/48,l/48,
 
 ```
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

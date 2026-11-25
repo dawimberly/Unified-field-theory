@@ -2,18 +2,18 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records FFff(A) mixed-region double pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records FFff(A) mixed-region double pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the long-face and overlap calculation](ffz-ffff-a-mixed-long-terms.md). Effective perimeter one, physical cut 2 and L=0. This finishes the mixed regions for A by computing the short-face contribution after the long subtraction.
+**ASSUMED** Continues [the long-face and overlap calculation](ffz-ffff-a-mixed-long-terms.md). Effective perimeter one, physical cut 2 and $L=0$. This finishes the mixed regions for A by computing the short-face contribution after the long subtraction.
 
-**DERIVED** Write r=1−P−Q. The long pair has effective length Lp, physical lengths T and Lp/(1−Lp/T). Its density for one assignment at ε=0 is T^−3(1−Lp/T). Use the unnormalized moments n M_ij. Write E_long and E_short for their sums on the two pair edges, and H for their bridge sum with bridge variance terms. After removing the long logarithmic tail, integrating T from 2 to infinity gives the following profile, before the factor 2/3:
+**DERIVED** Write $r=1-P-Q$. The long pair has effective length Lp, physical lengths T and $Lp/(1-Lp/T)$. Its density for one assignment at $\epsilon =0$ is $T^{-3}(1-Lp/T)$. Use the unnormalized moments n M_ij. Write E_long and E_short for their sums on the two pair edges, and H for their bridge sum with bridge variance terms. After removing the long logarithmic tail, integrating T from 2 to infinity gives the following profile, before the factor $2/3$:
 **DERIVED** r [(1/8−Lp/24)(H + 6 q E_short)
    +(E_long−3Lp n)/2 + 3n(−ln(1−Lp/2)−Lp/2)].
-**DERIVED** Here q is the short effective length and only its first Taylor coefficient is used. The factor 6 accounts for the short pair's physical total q/[a(1−a)] in the fraction integral. The two fermion assignments give 2∫ a(1−a) da=1/6 on 0≤a≤1/2 for the other terms and 2∫ da=1 for the q E_short term. The moving simplex boundary gives no derivative term because r vanishes there.
+**DERIVED** Here q is the short effective length and only its first Taylor coefficient is used. The factor 6 accounts for the short pair's physical total q/[a(1−a)] in the fraction integral. The two fermion assignments give $2\int a(1-a) da=1/6$ on $0\le a\le 1/2$ for the other terms and $2\int da=1$ for the q E_short term. The moving simplex boundary gives no derivative term because r vanishes there.
 
-**DERIVED** The first Taylor coefficients, integrated over Lp and bridge split, are −139/210+3 ln 2 and −703/210+3 ln 2 with the two possible long edges and the same anchor. Multiplication by −1/1296 gives the short-face term 421/136080−ln 2/216. Including the long face and overlap, the total mixed-region coefficient is **1283/272160−ln 2/54** in units h²z/K. The bounded region still needs evaluation before checking the full graph against −209/2592.
+**DERIVED** The first Taylor coefficients, integrated over Lp and bridge split, are $-139/210+3 \ln 2$ and $-703/210+3 \ln 2$ with the two possible long edges and the same anchor. Multiplication by $-1/1296$ gives the short-face term $421/136080-\ln 2/216$. Including the long face and overlap, the total mixed-region coefficient is **1283/272160−ln 2/54** in units $h^{2}z/K$. The bounded region still needs evaluation before checking the full graph against $-209/2592$.
 
 ## Reproduction
 
@@ -95,4 +95,4 @@ print('Mixed-region coefficient:',coef[0]-F(53,25920)+F(19,5184),coef[1]-F(1,72)
 
 ```
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

@@ -2,27 +2,27 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records FFZ(B) complete double pole at L=0. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records FFZ(B) complete double pole at $L=0$. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the mixed long face](ffz-ffff-b-mixed-long-face.md). Effective perimeter one, physical cut 2. This completes the complementary short face and the overlap. The graph coefficients below are in units h²z/K.
+**ASSUMED** Continues [the mixed long face](ffz-ffff-b-mixed-long-face.md). Effective perimeter one, physical cut 2. This completes the complementary short face and the overlap. The graph coefficients below are in units $h^{2}z/K$.
 
 ## Mixed short face
 
-**DERIVED** At ε=0 sum the two long assignments. After subtracting its constant and logarithmic long tails the short-face mass profile is (2/3)r times
-**DERIVED** T^−2 [B_bridge + s M + (3+P/T)s²],
-**DERIVED** where M=M_ii+M_jj+M_ij for the long pair, B_bridge includes the two bridge lengths and their variance terms, and s=P/(1−P/T). Substitute h=1/T and x=1−P/2. Integration over T≥2 gives (2/3)r[B_bridge/2+4P(1/x−1)+(P−M)ln x]. The resulting integrals over P and bridge division are 2543/180−(59/3)ln 2 and 113/10−(47/3)ln 2 for edges 0 and 2. Multiply their sum by 1/48, including the short fraction weight, spin, radial residue and k=−1.
+**DERIVED** At $\epsilon =0 \sum$ the two long assignments. After subtracting its constant and logarithmic long tails the short-face mass profile is $(2/3)r$ times
+**DERIVED** $T^{-2} [B_{bridge} + s M + (3+P/T)s^{2}]$,
+**DERIVED** where $M=M_{ii}+M_{jj}+M_{ij}$ for the long pair, B_bridge includes the two bridge lengths and their variance terms, and $s=P/(1-P/T)$. Substitute $h=1/T$ and $x=1-P/2$. Integration over $T\ge 2$ gives $(2/3)r[B_{bridge}/2+4P(1/x-1)+(P-M)\ln x]$. The resulting integrals over P and bridge division are $2543/180-(59/3)\ln 2$ and $113/10-(47/3)\ln 2$ for edges 0 and 2. Multiply their sum by $1/48$, including the short fraction weight, spin, radial residue and $k=-1$.
 
 ## Mixed overlap
 
-**DERIVED** On the short face W=T+1+O(1/T). The long logarithm coefficient of the profile before multiplying by k is (2/3)[M−P+ε(4P−12)], where M retains its d dependence. The 4P comes from the density expansion and −12 from W^(−3ε) multiplying the scalar quadratic tail. The W A term adds −ε[Σ_i M_ii+(8/3)(1−P)] to the logarithm. The integrated ε slopes of the full bracket W A+kB are 23/9 and 10/3 with r included. Multiply by the spin normalization, the short fraction integral J(ε), and 2^(−ε)/2 from the product of the analytic short and long cut factors. The angular overlap is −1/ε²+[26/3+2 ln 2]/ε. Radial conversion with slope 25/6 gives the overlap double-pole coefficient −1/32−ln 2/72.
+**DERIVED** On the short face $W=T+1+O(1/T)$. The long logarithm coefficient of the profile before multiplying by k is $(2/3)[M-P+\epsilon (4P-12)]$, where M retains its d dependence. The 4P comes from the density expansion and −12 from $W^{-3\epsilon }$ multiplying the scalar quadratic tail. The W A term adds $-\epsilon [\sum _i M_{ii}+(8/3)(1-P)]$ to the logarithm. The integrated $\epsilon$ slopes of the full bracket $W A+kB$ are $23/9$ and $10/3$ with r included. Multiply by the spin normalization, the short fraction $\int J(\epsilon )$, and $2^{-\epsilon }/2$ from the product of the analytic short and long cut factors. The angular overlap is $-1/\epsilon ^{2}+[26/3+2 \ln 2]/\epsilon$. Radial conversion with slope $25/6$ gives the overlap double-pole coefficient $-1/32-\ln 2/72$.
 
 ## Assembly
 
-**DERIVED** Add the [long face](ffz-ffff-b-mixed-long-face.md), the short face and the overlap. The mixed regions give 1079/2160−(3/4)ln 2. Adding the [bounded region](ffz-ffff-b-bounded-double-pole.md) and the [two-long region](ffz-ffff-double-long-double-pole.md) cancels ln 2 exactly:
-**FFff(B) double pole at L=0 = 245/2592.**
-**DERIVED** The combined target 1/72 therefore requires FFff(A) to give −209/2592. That independent graph evaluation and the two simple poles remain open.
+**DERIVED** Add the [long face](ffz-ffff-b-mixed-long-face.md), the short face and the overlap. The mixed regions give $1079/2160-(3/4)\ln 2$. Adding the [bounded region](ffz-ffff-b-bounded-double-pole.md) and the [two-long region](ffz-ffff-double-long-double-pole.md) cancels ln 2 exactly:
+**DERIVED** FFff(B) double pole: $c_{-2}(L=0)=245/2592$.
+**DERIVED** The combined target $1/72$ therefore requires FFff(A) to give $-209/2592$. That independent graph evaluation and the two simple poles remain open.
 
 ## Reproduction
 
@@ -128,4 +128,4 @@ print('FFff(B) double pole and log cancellation verified')
 
 ```
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

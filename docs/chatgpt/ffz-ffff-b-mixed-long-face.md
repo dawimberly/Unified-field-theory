@@ -2,21 +2,21 @@
 
 **Conversation date range** 2026-11-22
 
-**DERIVED** This checkpoint records FFZ(B) mixed-region long face after short subtraction. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records FFZ(B) mixed-region long face after short subtraction. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the bounded-chart integration](ffz-ffff-b-bounded-double-pole.md) using effective perimeter one, cutoff 2, and L=0. This computes the long-face add-back with its short limit subtracted.
+**ASSUMED** Continues [the bounded-chart integration](ffz-ffff-b-bounded-double-pole.md) using effective perimeter one, cutoff 2, and $L=0$. This computes the long-face add-back with its short limit subtracted.
 
-**DERIVED** At ε=0 the sum of the scalar-long and fermion-long logarithm coefficients in the mass profile is (2/3)(M_ii+M_jj+M_ij−P) for long effective length P. The analytic long-length integral contributes 1/(2ε). For the partner's bounded physical length U and smaller fraction a, the sum of the two assignments gives the unit fraction density and short effective length s=aU. Integrate the logarithm coefficient over P from 0 to 1−s and the bridge-division fraction from 0 to 1, retaining bridge Jacobian r=1−P−s. Strip 2/3 in defining the resulting polynomials.
+**DERIVED** At $\epsilon =0$ the sum of the scalar-long and fermion-long logarithm coefficients in the mass profile is $(2/3)(M_{ii}+M_{jj}+M_{ij}-P)$ for long effective length P. The analytic long-length integral contributes $1/(2\epsilon )$. For the partner's bounded physical length U and smaller fraction a, the sum of the two assignments gives the unit fraction density and short effective length $s=aU$. Integrate the logarithm coefficient over P from 0 to 1−s and the bridge-division fraction from 0 to 1, retaining bridge Jacobian $r=1-P-s$. Strip $2/3$ in defining the resulting polynomials.
 
 **DERIVED** For long edges 0 and 2 respectively the polynomials are
-**DERIVED** G₀(s)=1/2−s/6−5s²/2+7s³/2−4s⁴/3,
-**DERIVED** G₂(s)=1/2+23s/6−33s²/2+39s³/2−22s⁴/3.
+**DERIVED** $G_{0}(s)=1/2-s/6-5s^{2}/2+7s^{3}/2-4s^{4}/3$,
+**DERIVED** $G_{2}(s)=1/2+23s/6-33s^{2}/2+39s^{3}/2-22s^{4}/3$.
 
-**DERIVED** After subtracting G_i(0), integrate with dU/U da over U∈[0,2] and a∈[0,1/2]. A term s^k integrates to 1/[2k(k+1)]. The two answers are −11/80 and +17/80. Multiplying their sum by 1/72, from (2/3), long-pole factor 1/2, spin 6, mass-profile factor −1 and radial conversion −1/144, gives **+1/960** to the double pole in units h²z/K.
+**DERIVED** After subtracting G_i(0), integrate with $dU/U da$ over U∈[0,2] and a∈$[0,1/2]$. A term $s^k$ integrates to $1/[2k(k+1)]$. The two answers are $-11/80$ and $+17/80$. Multiplying their sum by $1/72$, from $(2/3)$, long-pole factor $1/2$, spin 6, mass-profile factor −1 and radial conversion $-1/144$, gives **$+1/960$** to the double pole in units $h^{2}z/K$.
 
-**DERIVED** This term is insensitive to the ε slope of the integrand because the short-subtracted face is finite. The complementary short face with its long subtraction and the simultaneous endpoint's ε slope are still needed for the full mixed coefficient.
+**DERIVED** This term is insensitive to the $\epsilon$ slope of the integrand because the short-subtracted face is finite. The complementary short face with its long subtraction and the simultaneous endpoint's $\epsilon$ slope are still needed for the full mixed coefficient.
 
 ## Exact check
 
@@ -79,4 +79,4 @@ print('Mixed long-face coefficient verified')
 
 ```
 
-- **DERIVED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177).
+- **CITED** [Heinrich, Sector Decomposition](https://arxiv.org/abs/0803.4177). — eq./page UNVERIFIED.

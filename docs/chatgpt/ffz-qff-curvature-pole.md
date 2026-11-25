@@ -2,31 +2,31 @@
 
 **Conversation date range** 2026-11-20 to 2026-11-21 (checkpoint sequence)
 
-**DERIVED** This checkpoint records the FFZ curved QFf tadpole pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records the FFZ curved QFf tadpole pole. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Continues [the checked QCc scalar sum](ffz-qcc-full-regulated-check.md). This step covers the QFf class only.
+**ASSUMED** Continues [the checked QCc scalar sum](ffz-qcc-full-regulated-check.md). This step covers the QFf class only.
 
-**DERIVED** In the covariant frame the quartic tadpole is constant in R at ξ=1/6. It acts as a scalar squared-mass insertion δx=|y|²T in the two-loop Yukawa sunset at fixed fermion mass z, where T=−z/(Kε)+O(1). The mass-shift normalization follows by contracting a pair of the X²X*² slots in |y|² X²X*²/4, with four choices. It also reproduces the flat J_SSFFS class of Martin (3.27).
+**CITED** In the covariant frame the quartic tadpole is constant in R at $\xi =1/6$. It acts as a scalar squared-mass insertion $\delta x=$|y|²T in the two-loop Yukawa sunset at fixed fermion mass z, where $T=-z/(K\epsilon )+O(1)$. The mass-shift normalization follows by contracting a pair of the X²X*² slots in |y|² X²X*²/4, with four choices. It also reproduces the flat J_SSFFS class of Martin (3.27). — eq./page UNVERIFIED.
 
-**DERIVED** Let G_x be the scalar kernel and b=−G_z' the radial kinetic fermion kernel. Radially integrating the fixed-1/6 Weyl insertion gives the sunset curvature term −|y|² [P/(12d)+(1/12−1/(6d))T_r], with P=∫r²G_x b² and T_r=−∫rG_x G_z b. This is the original two-loop radial formula with the scalar mass left independent. Its fermion derivative term is Q=T_r/2 because ∂z b=−rG_z/2. The integration by parts uses only the radial derivative of the product and holds for unequal x and z. In this paragraph primes on G refer to radial derivatives.
+**DERIVED** Let G_x be the scalar kernel and $b=-G_z'$ the radial kinetic fermion kernel. Radially integrating the fixed $1/6$ Weyl insertion gives the sunset curvature term $-|y|^2$ $[P/(12d)+(1/12-1/(6d))T_r]$, with $P=\int r^{2}G_x b^{2}$ and $T_r=-\int rG_xG_zb$. This is the original two-loop radial formula with the scalar mass left independent. Its fermion derivative term is $Q=T_r/2$ because $\partial_zb=-rG_z/2$. The integration by parts uses only the radial derivative of the product and holds for unequal x and z. In this paragraph primes on G refer to radial derivatives.
 
-**DERIVED** At x=z, the common-mass identities are P=−zJ/2+dI/3 and T_r=−dI/3, with I=∫G³ and J=∫r²G³. To differentiate only the scalar, subtract from the common derivative the fermion derivatives. This gives ∂xP=∂z(common)P+(d+2)J/3 and ∂xT_r=∂z(common)T_r/2−J/4. With I∝z^(d−3), J∝z^(d−4), the bracket's resulting derivative is
+**DERIVED** At $x=z$, the common-mass identities are $P=-zJ/2+dI/3$ and $T_r=-dI/3$, with $I=\int G^{3}$ and $J=\int r^{2}G^{3}$. To differentiate only the scalar, subtract from the common derivative the fermion derivatives. This gives $\partial_xP=\partial_z^{\mathrm{common}}P+(d+2)J/3$ and $\partial_xT_r=\partial_z^{\mathrm{common}}T_r/2-J/4$. With $I\propto z^{d-3}, J\propto z^{d-4}$, the bracket's resulting derivative is
 
 **DERIVED** $D_x=-(d-3)(d-4)I/(72z)+(32-5d)J/(144d).$
 
 **DERIVED** The independent Bessel quadrature below verifies this expression in three convergent dimensions. The QFf curvature term is −|y|⁴ T D_x.
 
-**DERIVED** For J, order the three Schwinger lengths as ρ(1,u,uv). The parallel resistance supplies the additional r² moment. The six sectors give
+**DERIVED** For J, order the three Schwinger lengths as $\rho (1,u,uv)$. The parallel resistance supplies the additional r² moment. The six sectors give
 
-**DERIVED** K² J = 12d e^(2γ_E ε−2ε L) Γ(2ε) ∫₀¹ du dv u^ε v (1+v+uv)^(−3+ε)(1+u+uv)^(−2ε).
+**DERIVED** $K^{2} J = 12d e^{2\gamma _E \epsilon -2\epsilon L} \Gamma (2\epsilon ) \int _{0}¹ du dv u^\epsilon v (1+v+uv)^{-3+\epsilon }(1+u+uv)^{-2\epsilon }$.
 
-**DERIVED** The integral at ε=0 is 1/12. The derivative of this integral is j₁ in the runnable check, yielding K²J=2/ε+24j₁−1−4L. The common sunset poles are K²I/z=−3/(2ε²)+(3L−9/2)/ε. Substitution into D_x cancels the 1/ε terms and the L dependence. Its finite limit is K²D_x=(24j₁−1)/48−1/24+1/18=−0.07466151326053. Thus the bare QFf result in units h²z/K is
+**DERIVED** The integral at $\epsilon =0$ is $1/12$. The derivative of this integral is j₁ in the runnable check, yielding $K^{2}J=2/\epsilon +24j_{1}-1-4L$. The common sunset poles are $K^{2}I/z=-3/(2\epsilon ^{2})+(3L-9/2)/\epsilon$. Substitution into D_x cancels the $1/\epsilon$ terms and the L dependence. Its finite limit is $K^{2}D_x=(24j_{1}-1)/48-1/24+1/18=-0.07466151326053$. Thus the bare QFf result in units $h^{2}z/K$ is
 
-**DERIVED** −0.07466151326053 / ε.
+**DERIVED** $-0.07466151326053 / \epsilon$.
 
-**DERIVED** There are no higher poles in this graph. Adding it to the checked scalar sector gives the subtotal 1/(36ε²)+[−0.12588115878−L/12]/ε. Three Yukawa classes and matter counterterms are still required. No projected Newton conclusion follows from this subtotal.
+**DERIVED** There are no higher poles in this graph. Adding it to the checked scalar sector gives the subtotal $1/(36\epsilon ^{2})+[-0.12588115878-L/12]/\epsilon$. Three Yukawa classes and matter counterterms are still required. No projected Newton conclusion follows from this subtotal.
 
 ## Runnable check
 
@@ -59,6 +59,6 @@ print(c)
 assert abs(dblquad(lambda t,x:t/(1+t+x*t)**3,0,1,0,1)[0]-1/12)<1e-12
 ```
 
-**DERIVED** Next evaluate CcFf, which has the same scalar-cycle layout as one CCcc topology but with a parallel fermion pair. Then compute both FFff classes and assemble the projected higher poles.
+**ASSUMED** Next evaluate CcFf, which has the same scalar-cycle layout as one CCcc topology but with a parallel fermion pair. Then compute both FFff classes and assemble the projected higher poles.
 
-- **DERIVED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005), Eq. (3.27).
+- **CITED** [Martin, Effective potential at three loops](https://doi.org/10.1103/PhysRevD.96.096005), Eq. (3.27).

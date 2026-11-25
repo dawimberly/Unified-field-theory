@@ -1,12 +1,12 @@
 # Independent screening audit
 
-**Conversation date range** 2026-10 (exact conversation dates UNVERIFIED)
+**Conversation date range** $2026-10$ (exact conversation dates UNVERIFIED)
 
-**DERIVED** This checkpoint records independent screening audit. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
+**ASSUMED** This checkpoint records independent screening audit. **UNVERIFIED** The results retain the scope and limitations recorded in the source. **UNVERIFIED** Bibliographic details and external claims without a verified paper location remain provisional.
 
 ## Research record
 
-**DERIVED** Six original isolated-sphere runs reproduce the reported values. An independent piecewise adaptive SciPy collocation solver confirms the approximation error and the effect of radial mass distribution. This is a numerical test of an n=1 chameleon scalar model, not an experimental detection, quantum-gravity calculation, or unification result.
+**DERIVED** Six original isolated-sphere runs reproduce the reported values. An independent piecewise adaptive SciPy collocation solver confirms the approximation error and the effect of radial mass distribution. This is a numerical test of an $n=1$ chameleon scalar model, not an experimental detection, quantum-gravity calculation, or unification result.
 
 ## Independent results
 
@@ -19,9 +19,9 @@
 ## Verification
 
 - **DERIVED** Original versus independent exterior-charge discrepancy: at most 0.0817%.
-- **DERIVED** Independent integrated exterior flux balance: maximum normalized discrepancy 1.85e-09.
+- **DERIVED** Independent integrated exterior flux balance: maximum normalized discrepancy $1.85\times10^{-09}$.
 - **DERIVED** All 62 recorded independent checks pass (solver convergence, positivity, equal continuous mass, flux balance, and refinement comparisons).
-- **DERIVED** Tighter solver tolerance, doubled exterior radius, and a linear asymptotic Robin boundary were tested for both mu=0.1 profiles. Each matches its baseline charge within 0.02%.
+- **DERIVED** Tighter solver tolerance, doubled exterior radius, and a linear asymptotic Robin boundary were tested for both $\mu =0.1$ profiles. Each matches its baseline charge within 0.02%.
 - **DERIVED** Additional original-grid and boundary checks are in extra_checks.json.
 
 | mu | Core fraction | Intervals | Outer radius | Exterior charge |
@@ -33,7 +33,7 @@
 
 ## Interpretation and issues
 
-**DERIVED** The local surface flux is not the exterior Yukawa amplitude. The exterior equation contains a distributed scalar source: [r^2 u′]_1^r = integral_1^r k s^2(1-u^-2) ds. Independently integrating this source verifies the flux change. The mismatch is expected physics within this model, not by itself a coding error.
+**DERIVED** The local surface flux is not the exterior Yukawa amplitude. The exterior equation contains a distributed scalar source: $[r^2u\prime]_1^r=\int_1^r ks^2(1-u^{-2})\,ds$. Independently integrating this source verifies the flux change. The mismatch is expected physics within this model, not by itself a coding error.
 
 **DERIVED** The layered body has core radius 0.8, core density 1500, mantle density 475.409836, and mean density 1000. Uniform and layered cases have the same continuous mass and radius. This probes radial density arrangement, not chemical composition, piezoelectricity, or intrinsic spin.
 
