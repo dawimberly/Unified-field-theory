@@ -1,0 +1,114 @@
+# ChatGPT Physics research index
+
+**Conversation date range** 2025-03-30 to 2026-11-22 (recovered records)
+
+**DERIVED** This index catalogs the recovered Do-Si-Do, field-stability and induced-gravity research. **ASSUMED** The original hypotheses remain working premises where the archive treated them as such. **UNVERIFIED** Missing conversation dates, provisional claims and incomplete citation locations remain open.
+
+## Topics
+
+- [600-cell.md](600-cell.md) — 600-cell geometry.
+- [alternative-gravity-routes.md](alternative-gravity-routes.md) — Three alternative gravity routes: concrete calculations.
+- [amplitude-static-obstruction.md](amplitude-static-obstruction.md) — What this evolution can establish.
+- [angle-of-incidence.md](angle-of-incidence.md) — Minimum-energy coupling angle and the fine-structure hypothesis.
+- [binding-mode-energy.md](binding-mode-energy.md) — Energy difference when two quantum modes couple.
+- [brane-formula-bridge.md](brane-formula-bridge.md) — Applying a known brane formula to the scalar determinant action.
+- [candidate-action.md](candidate-action.md) — Candidate 0 amplitude, phase and Hopf action.
+- [cloud-amplitude-dynamics.md](cloud-amplitude-dynamics.md) — Conservative amplitude-cloud evolution.
+- [composite-ratio-control.md](composite-ratio-control.md) — Composite-metric denominator control.
+- [coupled-field-stability.md](coupled-field-stability.md) — Coupled field stability test.
+- [cyclic-bose-gas-checks.md](cyclic-bose-gas-checks.md) — Cyclic interactions and excited quantum order: finite-system test.
+- [dimension-gravity-investigation.md](dimension-gravity-investigation.md) — Dimension, field concentration, and gravity: mechanism audit.
+- [dimension-mechanism-checks.md](dimension-mechanism-checks.md) — Reproduction of the dimension-mechanism checks.
+- [do-si-do-hypothesis.md](do-si-do-hypothesis.md) — Quantum Hopfion Do-Si-Do.
+- [emergent-gravity-three-routes.md](emergent-gravity-three-routes.md) — Can interacting fields develop gravity as a new property?.
+- [ffz-b-finite-epsilon-benchmark.md](ffz-b-finite-epsilon-benchmark.md) — FFff(B) unsubtracted finite-epsilon benchmark.
+- [ffz-b-half-epsilon-continuation.md](ffz-b-half-epsilon-continuation.md) — FFff(B) continuation across epsilon = 1/2.
+- [ffz-b-homogeneous-tail-audit.md](ffz-b-homogeneous-tail-audit.md) — FFff(B) homogeneous two-long tail audit.
+- [ffz-ccff-long-pair.md](ffz-ccff-long-pair.md) — FFZ CcFf long scalar-pair subtraction.
+- [ffz-ccff-projective-kernel.md](ffz-ccff-projective-kernel.md) — FFZ CcFf curved projective kernel.
+- [ffz-ccff-regulated-poles.md](ffz-ccff-regulated-poles.md) — CcFf regulated pole cross-check.
+- [ffz-ccff-short-pair.md](ffz-ccff-short-pair.md) — FFZ CcFf analytic short-pair subtraction.
+- [ffz-cubic-newton-checkpoint.md](ffz-cubic-newton-checkpoint.md) — FFZ cubic-sector Newton insertion.
+- [ffz-double-pole-locality-audit.md](ffz-double-pole-locality-audit.md) — FFZ double-pole locality audit.
+- [ffz-fermion-resolvent-audit.md](ffz-fermion-resolvent-audit.md) — FFZ fermion curvature insertion audit.
+- [ffz-ffff-a-complete-mixed-double-pole.md](ffz-ffff-a-complete-mixed-double-pole.md) — FFff(A) mixed-region double pole.
+- [ffz-ffff-a-leading-endpoints.md](ffz-ffff-a-leading-endpoints.md) — FFZ FFff(A) leading endpoint calculation.
+- [ffz-ffff-a-mixed-long-terms.md](ffz-ffff-a-mixed-long-terms.md) — FFz(A) mixed long-face and overlap double pole.
+- [ffz-ffff-b-bounded-double-pole.md](ffz-ffff-b-bounded-double-pole.md) — FFZ(B) complete bounded-region double pole.
+- [ffz-ffff-b-complete-double-pole.md](ffz-ffff-b-complete-double-pole.md) — FFZ(B) complete double pole at L=0.
+- [ffz-ffff-b-double-short-subtraction.md](ffz-ffff-b-double-short-subtraction.md) — FFZ(B) double-short subtraction through the double pole.
+- [ffz-ffff-b-mixed-endpoints.md](ffz-ffff-b-mixed-endpoints.md) — FFZ FFff(B): one long constituent and one short mixed pair.
+- [ffz-ffff-b-mixed-long-face.md](ffz-ffff-b-mixed-long-face.md) — FFZ(B) mixed-region long face after short subtraction.
+- [ffz-ffff-complete-triple-pole.md](ffz-ffff-complete-triple-pole.md) — Complete three-loop triple pole for FFff(A+B).
+- [ffz-ffff-curvature-corner.md](ffz-ffff-curvature-corner.md) — FFZ four-Yukawa curvature kernels and the FFff(B) short-pair corner.
+- [ffz-ffff-double-long-double-pole.md](ffz-ffff-double-long-double-pole.md) — FFZ double pole from the two-long chart.
+- [ffz-ffff-double-pole-cutoff-identity.md](ffz-ffff-double-pole-cutoff-identity.md) — FFZ cutoff identity for the four-Yukawa double pole.
+- [ffz-ffff-double-pole-mismatch.md](ffz-ffff-double-pole-mismatch.md) — FFZ four-Yukawa double-pole mismatch.
+- [ffz-ffff-graphwise-scalar-audit.md](ffz-ffff-graphwise-scalar-audit.md) — FFff graph-by-graph scalar insertion audit.
+- [ffz-fixed-one-sixth-checkpoint.md](ffz-fixed-one-sixth-checkpoint.md) — FFZ fixed-1/6 curvature-source conversion.
+- [ffz-local-weyl-and-curvature-checkpoint.md](ffz-local-weyl-and-curvature-checkpoint.md) — FFZ local Weyl and curvature checkpoint.
+- [ffz-matter-counterterms-yukawa-targets.md](ffz-matter-counterterms-yukawa-targets.md) — FFZ matter counterterms and the remaining four-Yukawa targets.
+- [ffz-newton-graphs-and-pole-mass-checkpoint.md](ffz-newton-graphs-and-pole-mass-checkpoint.md) — FFZ Newton vacuum graph inventory and pole-mass response.
+- [ffz-newton-projection-q4-checkpoint.md](ffz-newton-projection-q4-checkpoint.md) — FFZ Newton pole projection and fourth-order momentum coefficient.
+- [ffz-qcc-finite-scalar-sum.md](ffz-qcc-finite-scalar-sum.md) — FFZ finite QCc projective remainder and bare scalar sum.
+- [ffz-qcc-full-regulated-check.md](ffz-qcc-full-regulated-check.md) — QCc full regulated check and correction.
+- [ffz-qcc-missing-corner-checkpoint.md](ffz-qcc-missing-corner-checkpoint.md) — FFZ QCc endpoint correction.
+- [ffz-qff-curvature-pole.md](ffz-qff-curvature-pole.md) — FFZ curved QFf tadpole pole.
+- [ffz-quartic-newton-checkpoint.md](ffz-quartic-newton-checkpoint.md) — FFZ three-loop quartic Newton sector.
+- [ffz-scalar-endpoint-residues.md](ffz-scalar-endpoint-residues.md) — FFZ scalar endpoint residues.
+- [ffz-scalar-evanescent-comparison.md](ffz-scalar-evanescent-comparison.md) — FFZ explicit scalar curvature-mass comparison.
+- [ffz-scalar-evanescent-double-pole-audit.md](ffz-scalar-evanescent-double-pole-audit.md) — FFZ scalar curvature-mass audit.
+- [ffz-scalar-projective-checkpoint.md](ffz-scalar-projective-checkpoint.md) — FFZ scalar Newton projection with exact scale integration.
+- [ffz-subtracted-momentum-kernel.md](ffz-subtracted-momentum-kernel.md) — FFZ momentum-subtracted two-loop even response.
+- [ffz-three-loop-y-improvement-checkpoint.md](ffz-three-loop-y-improvement-checkpoint.md) — FFZ three-loop Newton pole from the Y improvement.
+- [ffz-threshold-and-spinor-checkpoint.md](ffz-threshold-and-spinor-checkpoint.md) — FFZ pole-mass threshold and curved spinor insertion.
+- [ffz-two-loop-flat-space-checkpoint.md](ffz-two-loop-flat-space-checkpoint.md) — FFZ interacting benchmark: two-loop flat-space checkpoint.
+- [ffz-two-loop-momentum-slope.md](ffz-two-loop-momentum-slope.md) — FFZ finite two-loop even curvature slope.
+- [ffz-yukawa-spin-traces-check.md](ffz-yukawa-spin-traces-check.md) — FFZ Weyl spin traces and multiplicity checks.
+- [field-transition-cross-reference.md](field-transition-cross-reference.md) — Field-transition collapse: cross-reference assessment.
+- [gravity-continuation-batch.md](gravity-continuation-batch.md) — Gravity continuation: source overlap, complex contours, dispersion.
+- [gravity-cross-reference.md](gravity-cross-reference.md) — Gravity research cross-reference and Higgs-sector assessment.
+- [gravity-literature-elimination.md](gravity-literature-elimination.md) — Gravity research by elimination: published results and the remaining bridge.
+- [grok-quartic-claim-review.md](grok-quartic-claim-review.md) — Independent review of Grok quartic claims C1-C8.
+- [grok-round2-independent-review.md](grok-round2-independent-review.md) — Independent check of Grok round 2.
+- [grok-round3-measure-review.md](grok-round3-measure-review.md) — Independent review of round-3 measure step.
+- [hopf-first-run.md](hopf-first-run.md) — First Hopf stability experiment.
+- [hydrogen-cloud-workbench.md](hydrogen-cloud-workbench.md) — Hydrogen benchmark and a concrete cloud-action audit.
+- [hypersphere-churn.md](hypersphere-churn.md) — Hypersphere churn.
+- [induced-gravity-spectrum-audit.md](induced-gravity-spectrum-audit.md) — Induced gravity: spectrum balance and its vacuum-energy cost.
+- [interacting-covariance-audit.md](interacting-covariance-audit.md) — Interaction, symmetry protection, and the vacuum.
+- [knotted-cloud-dynamics.md](knotted-cloud-dynamics.md) — First real-time knotted-cloud tests.
+- [magnetoelastic-gravity-checks.md](magnetoelastic-gravity-checks.md) — Magnetoelastic mechanisms and gravity: first checks.
+- [matched-constraint-identity.md](matched-constraint-identity.md) — Exact branchwise constraint identity: a sharper matching target.
+- [matter-organization.md](matter-organization.md) — Matter organization and gravitational sourcing.
+- [metric-spectral-check.md](metric-spectral-check.md) — Continuum spectral check.
+- [metric-tensor-ward-check.md](metric-tensor-ward-check.md) — Full tensor and contact Ward check.
+- [morphic-resonance.md](morphic-resonance.md) — Morphic resonance and history-dependent locking.
+- [ordering-gravity-comparison.md](ordering-gravity-comparison.md) — Ordering, extra dimensions, and alternative gravity responses.
+- [planck-scale-and-higgs.md](planck-scale-and-higgs.md) — Planck-scale and Higgs-medium conjectures.
+- [possibility-cloud.md](possibility-cloud.md) — Possibility cloud.
+- [pv-scalar-response-control.md](pv-scalar-response-control.md) — Pauli-Villars scalar-response control.
+- [quantum-einstein-bridge-audit.md](quantum-einstein-bridge-audit.md) — Quantum-to-Einstein bridge: derivation and assumption audit.
+- [quartic-composite-vertex-audit.md](quartic-composite-vertex-audit.md) — Candidate research problem: independent quartic interactions in composite gravity.
+- [quartic-vertex-derivation.md](quartic-vertex-derivation.md) — Independent quartic potential: tree-level expansion check.
+- [radiation-four-checks.md](radiation-four-checks.md) — Four radiation checks.
+- [response-pole-checkpoint.md](response-pole-checkpoint.md) — Response pole checkpoint — 30 October 2026.
+- [scalar-full-response-scan.md](scalar-full-response-scan.md) — Full scalar-response and regulator audit.
+- [scalar-matching-checkpoint.md](scalar-matching-checkpoint.md) — Scalar response matching checkpoint — 30 October 2026.
+- [scalar-matter-audit.md](scalar-matter-audit.md) — Scalar pole audit: cancellation in a constituent-matter channel.
+- [scalar-source-projection-check.md](scalar-source-projection-check.md) — Scalar source saturation: cancellation in the identical-mass channel.
+- [scalar-threshold-transition.md](scalar-threshold-transition.md) — Scalar threshold crossing and continuation.
+- [screening-density-scan.md](screening-density-scan.md) — Fixed-mass density-arrangement scan.
+- [screening-independent-audit.md](screening-independent-audit.md) — Independent screening audit.
+- [smooth-hopf-followup.md](smooth-hopf-followup.md) — Smooth, topology-preserving field follow-up.
+- [spin-organization-control.md](spin-organization-control.md) — Spin organization and gravitational response: construction control.
+- [spin2-interaction-inventory.md](spin2-interaction-inventory.md) — First reduction of the independent-quartic interaction calculation.
+- [spin2-simulation-spec.md](spin2-simulation-spec.md) — Route 6: numerical target and prerequisites.
+- [stochastic-regulator-screen.md](stochastic-regulator-screen.md) — Physical-regulator branch: stochastic composite gravity.
+- [unified-synthesis.md](unified-synthesis.md) — Do-Si-Do and possibility-cloud synthesis.
+
+## Source limits
+
+- **DERIVED** The export draws on the Physics checkpoint files, the local experiment reports, the master document and recovered conversation excerpts.
+- **UNVERIFIED** Full historical coverage could not be established. A source block can contain older values later corrected by a linked checkpoint. Code blocks retain original executable notation. Standalone source equations are converted where the syntax is recoverable, and some historical prose still uses source shorthand.
+- **UNVERIFIED** Original external reviews, citations without exact paper locations and numerical checks carried forward from the archive retain their source caveats.
