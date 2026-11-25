@@ -2477,3 +2477,217 @@ Both are now tested. Scripts: `scripts/stage25_run.py` and `scripts/stage25_fig.
 - Janse et al., arXiv:2403.08912: https://arxiv.org/abs/2403.08912
 
 ![Stage 25](figures/stage25_tests.png)
+
+## Stage 26 — What survives of classical-quantum Newtonian gravity, and who can reach it
+
+**Question.** Stage 25 showed that the X-ray data exclude Oppenheim's DP-kernel model at $\ell=10^{-15}$ m. This stage asks the constructive question. Which part of the $(\ell,\,D_0)$ / $(\ell,\,D_2)$ plane survives *all* data, for which kernels, and which existing or planned experiment can reach it, at fixed published sensitivities?
+
+Scripts: `scripts/stage26_run.py`, `scripts/stage26_fig.py`. Results: `results/stage26.json`. Figure: `figures/stage26_window.png`. Runtime is 8 s.
+
+### 26.1 One structure for every probe (DERIVED, cross-checked against Tilloy & Diósi 2017)
+
+**Model.** The classical field couples to the mass density smeared over a Gaussian of width $\ell$. The decoherence term is $-\tfrac12\int D_0[\hat m(x),[\hat m(y),\rho]]$, and the decoherence–diffusion trade-off is saturated. Following Layton et al. 2023, we use the equivalence of the saturated CQ dynamics with continuous measurement plus feedback (ASSUMED). The classical field noise is then the measurement imprecision $\langle\delta m\,\delta m\rangle=D_0^{-1}/4$, and the decoherence is its back-action. These two obey the standard-quantum-limit product.
+
+**Result.** For the DP kernel $D_0=\kappa G/(\hbar r)$, with $\kappa=1$ being Diósi's equation, every probe E sees
+
+$$N_E(\kappa,\ell)=A_E(\ell)\,\Big(\kappa+\frac{1}{4\kappa}\Big),$$
+
+where $A_E(\ell)$ is what plain Diósi ($\kappa=1$) predicts for that probe.
+- The $\kappa$ term is the $D_0$ back-action, i.e. heating and decoherence.
+- The $1/4\kappa$ term is the classical-field noise. This is $D_2$ at saturation, $l_P^2D_2=\hbar/(16\pi G\kappa)$ in this normalisation. Stage 25's Eq. 47 normalisation gives $\hbar/(2G\kappa)$; the two differ by a convention factor of 8π.
+
+The same body integral appears in both terms:
+- Acceleration noise of a body (two-sided, per axis): $A=\frac{2G\hbar}{3\pi}\int k^2e^{-k^2\ell^2}|\tilde\rho(k)/M|^2dk$.
+- Interferometric decoherence: $A=\frac{G}{\hbar}\frac{2}{\pi}\int e^{-k^2\ell^2}|\tilde\rho(k)|^2(1-\mathrm{sinc}\,k\Delta x)\,dk$.
+
+Two checks:
+- A single nucleus gives $A=G\hbar/(6\sqrt\pi\ell^3)$ and $\lambda=Gm^2/(\sqrt\pi\hbar\ell)$.
+- Pedalino at $\ell=10^{-15}$ reproduces the Stage 25 lattice rate to within the factor 2 noted below.
+
+The minimum sits at $\kappa=1/2$, where the total noise equals Diósi $\kappa=1$. This is exactly the Tilloy–Diósi "principle of least decoherence" model (PRD 96, 104045, arXiv:1706.01856). Their Eq. 11 has the same two-term decoherence kernel and is minimised mode by mode.
+
+**Consequences.**
+1. An experiment with bound $B_E$ allows $\kappa\in[\kappa_-,\kappa_+]$, where $\kappa_\pm=(u\pm\sqrt{u^2-1})/2$, $u=B_E/A_E$ and $\kappa_+\kappa_-=1/4$.
+2. Every allowed interval contains $\kappa=1/2$. So the model at a given $\ell$ survives all data **iff $\min_E u_E(\ell)\ge1$**. One experiment with $u_E<1$ excludes that $\ell$ for every $\kappa$.
+3. **Kernel independence (DERIVED).** Take any positive $D_0$, including state-dependent ones such as Oppenheim's discrete $\delta(x-y)/m(x)$. Cauchy–Schwarz gives $N_E\ge\eta_K A_E$, with $\eta_K\ge1$ and equality only for DP. So DP is the most permissive kernel, and the condition $u_E\ge1$ is *necessary for every kernel*. Computed for a single Gaussian nucleus:
+
+| kernel | η | ℓ_min / R0 |
+|---|---|---|
+| DP | 1.000 | 1.000 |
+| Oppenheim ultra-local discrete (self-sourced only, so a lower bound) | 1.136 | 1.043 |
+| Ultra-local continuous | √3 = 1.732 | 1.201 |
+
+4. **X-rays see both terms.** The classical field noise shakes the nucleus just as the $D_0$ kicks do, and it is white in a Markovian model. So the X-ray bound $R_0$ (Diósi convention, CITED Stage 25) becomes, for any kernel, **$\ell\ge R_0$**:
+   - **4.5 Å** (XENONnT 2026);
+   - **0.18 Å** (Donadi 2021).
+   
+   This is exact by construction, because $u_X=(\ell/R_0)^3$. Stage 25 let only the $D_0$ part radiate. That was the gap.
+
+### 26.2 Inputs (CITED unless marked)
+
+**Force noise.** Janse et al. 2024, Table I, gives $\sqrt{S_a}$ (one-sided). We convert to the two-sided per-test-mass value (DERIVED):
+- $\Gamma=S_a/2$ for absolute measurements;
+- $S_a/4$ for LISA Pathfinder, which is differential with two independent test masses.
+
+| experiment | $\sqrt{S_a}$ | notes |
+|---|---|---|
+| Gisler 2022 | 1.03e-6 | ρ = 3100 ASSUMED |
+| LPF (Armano 2018) | 1.74e-15 | at L1 |
+| aLIGO | 3.92e-14 | |
+| Fuchs 2024 | 1.25e-9 | |
+| Westphal 2021 torsion | 4.16e-9 | |
+| Monteiro 2020 | 9.32e-7 | |
+| LISA requirement | 3 fm s⁻²/√Hz per test mass | Definition Study Report 2024 |
+
+Bodies are treated as equal-volume spheres (ASSUMED; shape matters only when ℓ ~ size). Each $|\tilde\rho|^2$ is a coherent continuum form factor plus incoherent nuclei above the Debye wavenumber, using the composition $\langle m^2\rangle$.
+
+**Interferometers.** The rule is λ ≤ 1/τ (Stage 15). The rows:
+- Pedalino 2025: 172 kDa, Δx = 133 nm, 12.3 ms.
+- Kovachy 2015: Rb, 54 cm, 2.08 s.
+- MAGIS-100: Sr, 1 m, 9 s.
+- MAQRO baseline (QST 8, 014006 (2023)): 1e10 u silica, R = 122 nm, Δx ≈ R, 100 s.
+- MAQRO maximum (EPJ QT 3, 5 (2016)): 1e11 u. Δx = R and 100 s are carried over from the baseline.
+- Pino 2018: Nb, 3.3e-14 kg, 1 µm, Δx = 0.5 µm, 0.596 s.
+- Our own designs (Stages 12, 16 and 22).
+
+**X-rays.** $R_0$ = 0.184 Å (Donadi, Ge) and 4.5 Å (XENONnT, Xe), both in Diósi convention. For ℓ near the nuclear size we include a nucleon-resolved correction; it is irrelevant above 1e-14 m.
+
+**Cold atoms.** Kovachy 2015 measured the heating rate as 20 ± 30 pK/s; we take a 95% upper value of 69 pK/s (ASSUMED Gaussian).
+
+**Upper end of ℓ.** Lee et al. 2020 test 1/r² down to **52 µm**. We use that as the largest allowed smearing length (ASSUMED).
+
+### 26.3 The surviving region (DERIVED; figure panels a and c)
+
+Primary scenario S1: all existing data, Markovian noise.
+
+| ℓ | window log10(κ+/κ−) | κ− … κ+ | binding probes |
+|---|---|---|---|
+| < 4.5 Å | **excluded** (every kernel) | — | XENONnT |
+| 4.5 Å | 0 (edge) | κ = 1/2 only | XENONnT |
+| 1 nm | **2.68** | 0.023 … 11.0 | XENONnT on both sides |
+| 10 nm | **8.68** | 2.3e-5 … 1.1e4 | XENONnT |
+| 100 nm | **14.7** | 2.3e-8 … 1.1e7 | XENONnT |
+| ≥ 0.63 µm up to 52 µm | **19.4** (flat) | 1.0e-10 … 2.5e9 | LISA Pathfinder (plateau $(4\pi/3)G\hbar/V$) |
+
+- The window grows by 6 orders per decade of ℓ, because both edges scale as $\ell^3$, until LPF takes over at 0.63 µm.
+- **Published vs corrected N-counting changes nothing here.** Across the whole surviving range, Pedalino's interferometric bound stays weaker than the binding probe:
+  - by ≥ 8.2 orders under corrected counting (12.8 orders at 4.5 Å);
+  - by ≥ 1.2 orders under the published N·M² form, coming closest at 0.63 µm.
+  
+  So S1 is identical either way.
+- No other existing probe matters:
+
+| probe | log10 u at best ℓ |
+|---|---|
+| LPF | 9.40 |
+| Gisler | 13.7 |
+| aLIGO | 14.7 |
+| Fuchs | 15.2 |
+| Monteiro | 15.8 |
+| Kovachy interferometry | 16.5 |
+| Westphal torsion | 18.5 |
+| Pedalino | 12.8 |
+| Donadi | 4.2 |
+
+**Other scenarios (same data, different physics assumption).**
+- **S2**, Stage 25's assumption (X-rays see only $D_0$): ℓ_min = 4.0e-12 m with LPF, or 7.1e-13 m with on-Earth absolute data only. Stage 25 had 1.0e-12 m.
+- **S3**, noise coloured below the X-ray band (the non-Markovian loophole): ℓ_min = **5.6e-14 m** (LPF) or **1.7e-15 m** (Gisler alone). In both cases the window reaches the 19.4-order plateau above about 0.6 Å.
+
+### 26.4 Can anything reach it? Orders short at fixed published sensitivity (DERIVED; panel b)
+
+**log10 u** is the number of orders an experiment is short of the least-noise point. A negative value means the experiment alone excludes that ℓ for every kernel.
+
+| experiment | status | log10 u at ℓ = 4.5 Å | at 1 µm | ℓ range it would exclude |
+|---|---|---|---|---|
+| **Pino 2018 Nb sphere** | proposal | **−1.65** | −0.56 | **0.5 nm – 1.6 µm** |
+| **MAQRO at 1e11 u** | planned (max mass) | **−0.33** | +2.26 | 0.5 – 112 nm |
+| MAQRO baseline 1e10 u | planned | **+1.34** | +4.92 | none |
+| LISA Pathfinder | flown | +9.40 | +9.40 | none (sets the plateau) |
+| LISA (requirement) | planned | +10.17 | +10.17 | none |
+| Stage-22 MUSCLE 1.4 MDa | our design | +10.3 | +15.7 | none |
+| Pedalino 172 kDa | existing | +12.8 | +18.3 | none |
+| Gisler nanowire | existing | +13.7 | +15.0 | none |
+| MAGIS-100 | planned | +15.8 | +19.2 | none |
+| Kovachy 54 cm atoms | existing | +16.5 | +19.8 | none |
+| Westphal torsion | existing | +18.5 | +18.5 | none |
+| Stage-12 BMV diamond / Stage-16 Pb | our designs | −1.84 / −2.02 | −1.15 / −1.10 | 0.5 nm – 2.8 µm |
+
+**Why massive superpositions win (DERIVED).** For spacing ≪ ℓ ≪ R the decoherence is the coherent self-energy, of order $GM^2/(\hbar R)$ and independent of ℓ. X-ray reach, by contrast, grows only as $\ell^3$. Force sensors are limited by $\Gamma\,V$ against $(4\pi/3)G\hbar$, so large test masses are penalised and torsion balances come out worst.
+
+**Published counting would overstate the reach massively.** Under Eq. 47's N·M² counting, MAQRO baseline would sit at −6.4 and Pino at −13.2. Under the corrected counting they are +1.34 and −1.65.
+
+**After all planned and proposed literature experiments (S4).** Only **ℓ = 1.8 – 52 µm** survives, with a window of up to 5.2 orders at 10 µm and 9.4 at 52 µm. Nothing planned reaches that range. LPF, the closest, is 9.4 orders short there. Adding our own designs (S5) moves the edge to 3.2 µm.
+
+### 26.5 Kernel-by-kernel verdict
+
+| conclusion | DP / non-local | ultra-local discrete | ultra-local continuous | depends on |
+|---|---|---|---|---|
+| ℓ < R0 excluded (4.5 Å XENONnT, 0.18 Å Donadi) | yes (ℓ ≥ 1.00 R0) | yes (ℓ ≥ 1.04 R0, lower bound) | yes (ℓ ≥ 1.20 R0) | Markovian noise up to MeV; Newtonian D1 |
+| window sizes in 26.3 | exact (most permissive) | smaller (u → u/η) | smaller | saturation |
+| Oppenheim's own nuclear smearing | excluded: 17.0 (XENONnT, point nucleus; 15.6 nucleon-resolved) / 12.8 (Donadi; 11.7) orders at ℓ = 1e-15 | **excluded:** heating alone needs $\hat D\equiv(l_P^3/m_P)D_2\ge$ 944–7,000 kg vs the Eq. 46 ceiling 4e-14 kg, i.e. **16.4–17.2 orders** (XENONnT), 12.6–13.3 (Donadi) | already excluded (paper) | X-ray carry-over |
+| Pino/MAQRO-1e11 reach | yes | yes (stronger) | yes | λ ≤ 1/τ rule |
+
+**Honest reading.** The X-ray kill is *not* DP-specific. It hits every positive kernel and every smearing below 4.5 Å. What survives everywhere is a family of models whose mass density is smeared over **≥ 4.5 Å to ≤ 52 µm**. That is far from any nuclear or Planckian scale. Stage 17's discrete window of 9.41 orders and the non-local 3.66 → 8.95 orders (Stage 25) are both closed at Oppenheim's $r_N$.
+
+### 26.6 Corrections to our earlier numbers
+
+1. **Stage 25 ℓ_min.**
+   - Was 2.05e-13 (Donadi) and 1.01e-12 m (XENONnT), consistent reading.
+   - Is now **1.84e-11 and 4.5e-10 m**, i.e. +1.95 and +2.65 orders, because the classical-field noise radiates too.
+   - Under Stage 25's own assumption with explicit constants: 7.1e-13 m (on-Earth absolute) or 4.0e-12 m (with LPF).
+2. **Stage 25 exclusion at ℓ = 1e-15.**
+   - Was 18.0 (XENONnT) / 13.9 (Donadi) orders.
+   - Is now 17.0 / 12.8 (point nucleus) or 15.6 / 11.7 (nucleon-resolved).
+   - Cause: Eq. 47's dropped constants. The ceiling-required κ is 11.8 there and 0.56 with explicit constants, a factor of 21.
+3. **Stage 25 text, "X-ray ≥ 20 orders above interferometry at every ℓ".**
+   - True only for ℓ ≲ 1e-12 m.
+   - At 1 nm the margin is 11.8 orders; at 10 nm it is 9.5. Stage 25's own scan shows 8.2 at 1e-8 m.
+4. **Stage 24 "consistent" ceiling rows** (shifts of +14 to +27 orders at atomic and larger ℓ).
+   - Extrapolating the ceiling as $\ell^3$ fails above about 0.6 Å.
+   - The force-noise ceiling saturates at the bulk plateau $(4\pi/3)G\hbar/V$ once ℓ exceeds the interatomic spacing.
+5. **Gisler alone at $r_N$.** Counting the $D_0$ heating in the nanowire itself, Gisler alone excludes ℓ = 1e-15 by **0.70 orders** (ℓ_kill = 1.7e-15 m). Two caveats:
+   - This is marginal and within O(1) conventions.
+   - It is in a rare-kick regime: 0.011 kicks per second of 6e-20 kg m/s each.
+6. **Interferometric rate convention.** Stage 25 used λ = ∫D0ΔmΔm (Eq. 137 as printed). The Lindblad form with the ½ gives half that. So Pedalino's κ bound is 2.1e10, not 1.0e10 (+0.3 orders, immaterial).
+
+### 26.7 Flags, coincidences and honest negatives
+
+**Coincidences.**
+- ℓ_min = R0(XENONnT) exactly. This is not a coincidence: the least-noise CQ model *is* Diósi κ = 1.
+- Pino's exclusion range ends at 1.6 µm, close to its own 1 µm radius. That is expected, because the coherent plateau ends at ℓ ~ R.
+- MAQRO 1e11 vs 1e10 differs by 1.67 orders, which is $(10)^{5/3}$ from $M^2/R$.
+- Gisler's 0.70-order margin at $r_N$ is close to the O(1) convention uncertainty. Treat it as marginal.
+
+**Honest negatives.**
+- **Cold atoms do not constrain.** A naive heating translation gives ℓ ≥ 4.6e-13 m. But for ℓ < 10.6 µm each kick ħ/ℓ ejects an atom instead of heating the cloud, and in the valid range they are 22 orders short.
+- **Atom interferometers (Kovachy, MAGIS-100) are irrelevant**, at 16–20 orders short. A single atom carries no coherent self-energy.
+- **LISA does not improve on LPF**: its requirement sits 0.8 orders above LPF's achieved noise.
+- **Torsion balances are the worst class** in this metric.
+- **The 1.8–52 µm band is out of reach** of everything planned. It is bounded above only by the 1/r² tests.
+
+**Assumptions to watch.**
+- Markovian (white) noise up to the MeV X-ray band. If the noise is coloured, scenario S3 applies and ℓ_min drops to 5.6e-14 m.
+- Measurement–feedback equivalence of saturated CQ.
+- D0(Φ_b) at L1 for LPF.
+- Equal-volume spheres for wires and cubes.
+- The λ ≤ 1/τ rule for planned interferometers.
+- The ISL translation for the upper end of ℓ.
+
+**Sources (verified this stage).**
+- Tilloy & Diósi, PRD 96, 104045 (2017): https://arxiv.org/abs/1706.01856
+- Oppenheim et al., Nat. Commun. 14, 7910: https://www.nature.com/articles/s41467-023-43348-2
+- Janse et al., PRR 6, 033076, Table I: https://arxiv.org/abs/2403.08912
+- Donadi et al.: https://arxiv.org/abs/2111.13490
+- XENONnT: https://arxiv.org/abs/2506.05507
+- LISA Definition Study Report: https://arxiv.org/abs/2402.07571
+- MAQRO 2023: https://wigner.hu/~diosi/prints/2023qst8_014006.pdf
+- MAQRO 2016: https://doi.org/10.1140/epjqt/s40507-016-0043-7
+- Pino et al.: https://arxiv.org/abs/1603.01553
+- Kovachy et al. 2015: https://arxiv.org/abs/1407.6995
+- Bilardello et al.: https://arxiv.org/abs/1605.01891
+- Angeli et al.: https://arxiv.org/abs/2501.13030
+- Lee et al., PRL 124, 101101 (2020): https://doi.org/10.1103/PhysRevLett.124.101101
+- Pedalino et al.: https://arxiv.org/abs/2507.21211
+- MAGIS-100: https://arxiv.org/abs/2104.02835
+
+![Stage 26](figures/stage26_window.png)
