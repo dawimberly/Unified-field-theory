@@ -78,4 +78,4 @@ $$
 - **CITED** Gisin and Rigo, Relevant and irrelevant nonlinear Schrodinger equations: https://doi.org/10.1088/0305-4470/28/24/030 — eq./page UNVERIFIED.
 - **CITED** Underground gravity-related collapse test: https://www.nature.com/articles/s41567-020-1008-4 — eq./page UNVERIFIED.
 
-**CITED** These provide comparison criteria, not evidence that the proposed crest mechanism occurs. No demonstrated unification or new experimentally supported collapse mechanism is claimed. — eq./page UNVERIFIED.
+These provide comparison criteria, not evidence that the proposed crest mechanism occurs. No demonstrated unification or new experimentally supported collapse mechanism is claimed. — eq./page UNVERIFIED.

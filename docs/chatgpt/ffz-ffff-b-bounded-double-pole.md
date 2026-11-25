@@ -16,12 +16,12 @@
 **DERIVED** $I_{0}=-671/60+20 \ln 2$,
 **DERIVED** $I_{2}=-386/45+16 \ln 2$.
 **DERIVED** Adding $(I_{0}+I_{2})/48$ to the corner coefficient $7/324$ gives the **full bounded-region** double pole for graph B:
-**−10111/25920+(3/4) ln 2 ≈ 0.12977550887675**
+**$-10111/25920+(3/4) \ln 2 \approx  0.12977550887675$**
 **DERIVED** in units $h^{2}z/K$. This is a chart coefficient at cut 2. The mixed regions and the bounded region of graph A are still required for the full two-graph result.
 
 ## Reproducible exact integration
 
-**DERIVED** The first interpolation integrates the polynomial in T after corner subtraction and division by T. The second multiplies by b² with $b=1-a$ to remove the physical-length denominators, integrates each monomial of the recovered polynomial divided by b², and retains ln 2 symbolically. The Gaussian tilt uses rational arithmetic throughout.
+**DERIVED** The first interpolation integrates the polynomial in T after corner subtraction and division by T. The second multiplies by $b^{2}$ with $b=1-a$ to remove the physical-length denominators, integrates each monomial of the recovered polynomial divided by $b^{2}$, and retains ln 2 symbolically. The Gaussian tilt uses rational arithmetic throughout.
 
 ```python
 from fractions import Fraction as F

@@ -6,13 +6,13 @@
 
 ## Research record
 
-**ASSUMED** Continues [the threshold and spinor checkpoint](ffz-threshold-and-spinor-checkpoint.md) and [the original two-loop benchmark](ffz-two-loop-flat-space-checkpoint.md). The absence of additive matter-source drift through order h³ in the stated fixed $1/6$ prescription carries forward for both Newton constraints.
+**ASSUMED** Continues [the threshold and spinor checkpoint](ffz-threshold-and-spinor-checkpoint.md) and [the original two-loop benchmark](ffz-two-loop-flat-space-checkpoint.md). The absence of additive matter-source drift through order $h^{3}$ in the stated fixed $1/6$ prescription carries forward for both Newton constraints.
 
 ## Three-loop Newton graph set
 
-**DERIVED** For the ungauged theory at zero scalar background, Q denotes the scalar quartic X²X*², C and c the conjugate cubic pair X²Y* and X*²Y, and F and f the conjugate Yukawa pair $X\psi _X\psi _X$ and $X\,\psi _X$†ψ_X†. Each component carries a coupling magnitude |y|²/4, |my|/2 or |y|/2 respectively. The kinetic fermion propagator is the only fermion line between these vertices, since the supersymmetric mass matrix is off-diagonal and its XX helicity-flip propagator vanishes. A metric probe varying the same off-diagonal mass preserves the X versus Y flavor selection at a single insertion. Scalar and fermion line variations are attached after generating the graph.
+**DERIVED** For the ungauged theory at zero scalar background, Q denotes the scalar quartic $X^{2}(X^*)^{2}$, C and c the conjugate cubic pair $X^{2}Y^*$ and $(X^*)^{2}Y$, and F and f the conjugate Yukawa pair $X\psi _X\psi _X$ and $X\psi_X^\dagger\psi_X^\dagger$. Each component carries a coupling magnitude $|y|^{2}/4$, |my|/2 or |y|/2 respectively. The kinetic fermion propagator is the only fermion line between these vertices, since the supersymmetric mass matrix is off-diagonal and its XX helicity-flip propagator vanishes. A metric probe varying the same off-diagonal mass preserves the X versus Y flavor selection at a single insertion. Scalar and fermion line variations are attached after generating the graph.
 
-**DERIVED** The complete order-|y|⁴ list from Wick matching has ten oriented, field-labeled classes up to relabeling vertices of the same type. The unsigned multiplicities are:
+**DERIVED** The complete order-$|y|^4$ list from Wick matching has ten oriented, field-labeled classes up to relabeling vertices of the same type. The unsigned multiplicities are:
 
 | Multiset | Classes | Multiplicities |
 | --- | --- | --- |
@@ -23,7 +23,7 @@
 | **DERIVED** CcFf | 1 | 8 |
 | **DERIVED** FFff | 2 | 8, 32 |
 
-**CITED** All connected matchings are one-particle irreducible in this model. A bridge would give a one-point subdiagram carrying a nonzero discrete charge. The enumeration separately tests each edge. Ignoring species and directions yields the Martin E, G, J, K and L vacuum types. The H tetrahedron is absent: with four cubic vertices the graph is bipartite between unconjugated and conjugated interaction sets, whereas H contains odd cycles. For a check of the scalar factors, the QQ connected matchings divide into 16 having one self-contraction at each vertex and 4 with all lines across, giving −|y|⁴/2 and −|y|⁴/8 in the Euclidean effective action. The QCc coefficients are +z|y|⁴ and +z|y|⁴/4. The CCcc coefficients are −z²|y|⁴/8 and −z²|y|⁴/2. These include the expansion factorials for repeated monomials. Fermion-containing multiplicities in the table count slot matchings before the signed spin trace. They cannot be used as scalar integral weights. — eq./page UNVERIFIED.
+**CITED** All connected matchings are one-particle irreducible in this model. A bridge would give a one-point subdiagram carrying a nonzero discrete charge. The enumeration separately tests each edge. Ignoring species and directions yields the Martin E, G, J, K and L vacuum types. The H tetrahedron is absent: with four cubic vertices the graph is bipartite between unconjugated and conjugated interaction sets, whereas H contains odd cycles. For a check of the scalar factors, the QQ connected matchings divide into 16 having one self-contraction at each vertex and 4 with all lines across, giving $-|y|^{4}/2$ and $-|y|^{4}/8$ in the Euclidean effective action. The QCc coefficients are $+z|y|^{4}$ and $+z|y|^{4}/4$. The CCcc coefficients are $-z^{2}|y|^{4}/8$ and $-z^{2}|y|^{4}/2$. These include the expansion factorials for repeated monomials. Fermion-containing multiplicities in the table count slot matchings before the signed spin trace. They cannot be used as scalar integral weights. — eq./page UNVERIFIED.
 
 **DERIVED** The projected Newton pole requires the Weyl variation of these graphs plus the one- and two-loop counterterm graphs. The graph list narrows the integration set and identifies two independent checks: the flat sum at zero curvature must vanish in the supersymmetric vacuum and the projected curvature triple and double poles must vanish. Only the projected simple pole tests cancellation of the two-loop-source result with the three-loop vacuum term. The baseline simple-pole coefficient remains unknown.
 
@@ -33,9 +33,9 @@
 
 **DERIVED** $H_pole(u_p,L_p)= H(u_p,L_p) + [L_p+A(-1)] B(u_p),$
 
-**DERIVED** where $u_p=q^{2}/z_{pole}$ and $L_p=\ln\left(z_{pole}/\mu ^{2}\right)$. Because B∼$-\pi /$√$(u+4)$, the entire leading inverse-square-root term cancels in H_pole. The explicit scale logarithm is now 3L_p A, since the mass is RG invariant through this order. Its scale derivative cancels the separate running of the X member of the two source variations. This check fixes the sign of the added term.
+**DERIVED** where $u_p=q^{2}/z_{pole}$ and $L_p=\ln\left(z_{pole}/\mu ^{2}\right)$. Because $B\sim-\pi/\sqrt{u+4}$, the entire leading inverse-square-root term cancels in H_pole. The explicit scale logarithm is now 3L_p A, since the mass is RG invariant through this order. Its scale derivative cancels the separate running of the X member of the two source variations. This check fixes the sign of the added term.
 
-**DERIVED** The low-momentum coefficients give a second check. At the reference scale the pole-mass order-h slope has bracket $3L_p/2 + c_{slope} + A(-1)/2$, multiplying h v²/(216K z_pole). The coefficient of (q²)² has bracket $3L_p/2 + c_{q4} + A(-1)$, multiplying −h v²/(2160K z_pole²). Thus moving to the pole mass changes both finite Taylor coefficients by known constants and makes the relative log coefficient identical for the two orders. At $L_p=0$ the brackets are approximately −0.40041819 and −1.68552609. The subleading cut remains to be evaluated.
+**DERIVED** The low-momentum coefficients give a second check. At the reference scale the pole-mass order-h slope has bracket $3L_p/2 + c_{slope} + A(-1)/2$, multiplying $h v^{2}/(216K z_pole)$. The coefficient of $(q^{2})^{2}$ has bracket $3L_p/2 + c_{q4} + A(-1)$, multiplying $-h v^{2}/(2160K z_pole^{2})$. Thus moving to the pole mass changes both finite Taylor coefficients by known constants and makes the relative log coefficient identical for the two orders. At $L_p=0$ the brackets are approximately −0.40041819 and −1.68552609. The subleading cut remains to be evaluated.
 
 ## Runnable verification
 

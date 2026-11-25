@@ -13,7 +13,7 @@
 
 ## Identical CCcc integrands
 
-**DERIVED** The two CCcc matchings have identical undirected edge multisets on the same four labeled vertices. Both have double edges 02 and 13, and single edges 03 and 12. Only the assignment of X and Y species differs. In the baseline all scalar propagators have the same mass and curvature coupling, and all four vertices have the cubic Weyl weight. Consequently the line and vertex insertion integrands agree pointwise up to ordering their Schwinger lengths. The combined signed coefficient is $-(5/8)$|y|⁴z². This reduction applies to the baseline. An explicit Y-improvement insertion would distinguish the assignments.
+**DERIVED** The two CCcc matchings have identical undirected edge multisets on the same four labeled vertices. Both have double edges 02 and 13, and single edges 03 and 12. Only the assignment of X and Y species differs. In the baseline all scalar propagators have the same mass and curvature coupling, and all four vertices have the cubic Weyl weight. Consequently the line and vertex insertion integrands agree pointwise up to ordering their Schwinger lengths. The combined signed coefficient is $-(5/8)$$|y|^{4}z^{2}$. This reduction applies to the baseline. An explicit Y-improvement insertion would distinguish the assignments.
 
 ## Projective formula for QCc and CCcc
 

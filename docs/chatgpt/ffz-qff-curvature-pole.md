@@ -8,7 +8,7 @@
 
 **ASSUMED** Continues [the checked QCc scalar sum](ffz-qcc-full-regulated-check.md). This step covers the QFf class only.
 
-**CITED** In the covariant frame the quartic tadpole is constant in R at $\xi =1/6$. It acts as a scalar squared-mass insertion $\delta x=$|y|²T in the two-loop Yukawa sunset at fixed fermion mass z, where $T=-z/(K\epsilon )+O(1)$. The mass-shift normalization follows by contracting a pair of the X²X*² slots in |y|² X²X*²/4, with four choices. It also reproduces the flat J_SSFFS class of Martin (3.27). — eq./page UNVERIFIED.
+**CITED** In the covariant frame the quartic tadpole is constant in R at $\xi =1/6$. It acts as a scalar squared-mass insertion $\delta x=|y|^2T$ in the two-loop Yukawa sunset at fixed fermion mass z, where $T=-z/(K\epsilon )+O(1)$. The mass-shift normalization follows by contracting a pair of the $X^{2}(X^*)^{2}$ slots in $|y|^{2} X^{2}(X^*)^{2}/4$, with four choices. It also reproduces the flat J_SSFFS class of Martin (3.27). — eq./page UNVERIFIED.
 
 **DERIVED** Let G_x be the scalar kernel and $b=-G_z'$ the radial kinetic fermion kernel. Radially integrating the fixed $1/6$ Weyl insertion gives the sunset curvature term $-|y|^2$ $[P/(12d)+(1/12-1/(6d))T_r]$, with $P=\int r^{2}G_x b^{2}$ and $T_r=-\int rG_xG_zb$. This is the original two-loop radial formula with the scalar mass left independent. Its fermion derivative term is $Q=T_r/2$ because $\partial_zb=-rG_z/2$. The integration by parts uses only the radial derivative of the product and holds for unequal x and z. In this paragraph primes on G refer to radial derivatives.
 
@@ -16,11 +16,11 @@
 
 **DERIVED** $D_x=-(d-3)(d-4)I/(72z)+(32-5d)J/(144d).$
 
-**DERIVED** The independent Bessel quadrature below verifies this expression in three convergent dimensions. The QFf curvature term is −|y|⁴ T D_x.
+**DERIVED** The independent Bessel quadrature below verifies this expression in three convergent dimensions. The QFf curvature term is $-|y|^{4} T D_x$.
 
-**DERIVED** For J, order the three Schwinger lengths as $\rho (1,u,uv)$. The parallel resistance supplies the additional r² moment. The six sectors give
+**DERIVED** For J, order the three Schwinger lengths as $\rho (1,u,uv)$. The parallel resistance supplies the additional $r^{2}$ moment. The six sectors give
 
-**DERIVED** $K^{2} J = 12d e^{2\gamma _E \epsilon -2\epsilon L} \Gamma (2\epsilon ) \int _{0}¹ du dv u^\epsilon v (1+v+uv)^{-3+\epsilon }(1+u+uv)^{-2\epsilon }$.
+**DERIVED** $K^{2} J = 12d e^{2\gamma _E \epsilon -2\epsilon L} \Gamma (2\epsilon ) \int _{0}^{1} du dv u^\epsilon v (1+v+uv)^{-3+\epsilon }(1+u+uv)^{-2\epsilon }$.
 
 **DERIVED** The integral at $\epsilon =0$ is $1/12$. The derivative of this integral is j₁ in the runnable check, yielding $K^{2}J=2/\epsilon +24j_{1}-1-4L$. The common sunset poles are $K^{2}I/z=-3/(2\epsilon ^{2})+(3L-9/2)/\epsilon$. Substitution into D_x cancels the $1/\epsilon$ terms and the L dependence. Its finite limit is $K^{2}D_x=(24j_{1}-1)/48-1/24+1/18=-0.07466151326053$. Thus the bare QFf result in units $h^{2}z/K$ is
 

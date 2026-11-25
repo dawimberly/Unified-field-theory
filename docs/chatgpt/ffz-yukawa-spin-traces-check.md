@@ -6,6 +6,8 @@
 
 ## Research record
 
+**DERIVED** The code checks Weyl traces $\operatorname{tr}(\sigma^\mu\bar\sigma^\nu)$ and the signed Yukawa products built from $y$ and $\bar y$.
+
 ```python
 """Signed Weyl traces, multiplicities, couplings and Martin-formula checks
 for the Yukawa-containing three-loop vacuum classes QFf, CcFf, FFff(A), FFff(B).

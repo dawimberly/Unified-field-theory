@@ -89,7 +89,7 @@ print("QCc",c,"scalar sum",c-5/144,"and mass pole recursion passed")
 
 ### Mass-only one-loop counterterm insertion
 
-**DERIVED** In the baseline the one-loop curvature term is $z \exp [(\gamma _E-L)\epsilon ] \Gamma (\epsilon )/[6K(1-\epsilon )]$. Inserting $z_B=z Z_z$ raises Z_z to $1-\epsilon$, so at h² the binomial expansion, after dividing by $1-\epsilon$, gives $1/(2\epsilon ^{2})-3/(8\epsilon )$. Its Laurent coefficients in the same units $h^{2}z/K$ are
+**DERIVED** In the baseline the one-loop curvature term is $z \exp [(\gamma _E-L)\epsilon ] \Gamma (\epsilon )/[6K(1-\epsilon )]$. Inserting $z_B=z Z_z$ raises Z_z to $1-\epsilon$, so at $h^{2}$ the binomial expansion, after dividing by $1-\epsilon$, gives $1/(2\epsilon ^{2})-3/(8\epsilon )$. Its Laurent coefficients in the same units $h^{2}z/K$ are
 
 **DERIVED** $1/(12\epsilon ^{3}) - [1/16+L/12]/\epsilon ^{2} + [\zeta (2)/24+L/16+L^{2}/24]/\epsilon$.
 

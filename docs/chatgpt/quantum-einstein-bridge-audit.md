@@ -14,16 +14,16 @@
 
 | Route | What is controlled | What remains assumed or missing |
 |---|---|---|
-| **CITED** Quantum gravity as a low-energy effective field theory [1,2] | Quantum corrections to GR can be calculated systematically at low energies. | GR's low-energy fields and couplings are inputs; microscopic origin and Planck-regime completion are not provided. | — eq./page UNVERIFIED.
-| **CITED** Local entanglement equilibrium [3] | Conditional relation between first-order entropy stationarity and the semiclassical Einstein equation. | A smooth local geometry, conformal-field assumptions or an extension conjecture, and a finite universal area-entropy coefficient. | — eq./page UNVERIFIED.
-| **CITED** Holographic entanglement [4] | The first law plus an entropy/area dictionary constrains linearized gravitational equations near AdS. | The holographic setting and entropy functional are essential; different functionals can yield different gravitational equations. | — eq./page UNVERIFIED.
-| **CITED** Nonlinear holographic extension [5] | Einstein dynamics reconstructed to second perturbative order for the specified class of CFT states. | This is not an unrestricted all-orders derivation for our cosmology. | — eq./page UNVERIFIED.
+| **CITED** Donoghue: Quantum gravity as a low-energy effective field theory [1,2] | Quantum corrections to GR can be calculated systematically at low energies. | GR's low-energy fields and couplings are inputs; microscopic origin and Planck-regime completion are not provided. | — eq./page UNVERIFIED.
+| **CITED** Jacobson: Local entanglement equilibrium [3] | Conditional relation between first-order entropy stationarity and the semiclassical Einstein equation. | A smooth local geometry, conformal-field assumptions or an extension conjecture, and a finite universal area-entropy coefficient. | — eq./page UNVERIFIED.
+| **CITED** Faulkner et al.: Holographic entanglement [4] | The first law plus an entropy/area dictionary constrains linearized gravitational equations near AdS. | The holographic setting and entropy functional are essential; different functionals can yield different gravitational equations. | — eq./page UNVERIFIED.
+| **CITED** Faulkner et al.: Nonlinear holographic extension [5] | Einstein dynamics reconstructed to second perturbative order for the specified class of CFT states. | This is not an unrestricted all-orders derivation for our cosmology. | — eq./page UNVERIFIED.
 
 **ASSUMED** The local equilibrium route is selected here because its central coefficients can be independently checked and its assumptions are unusually explicit. This is a practical audit choice, not a claim that it is the uniquely correct theory.
 
 ## Reconstructed calculation
 
-**CITED** Use $\hbar =c=k_B=1$, four spacetime dimensions, and a locally flat reference vacuum. Entropy is dimensionless. Denote the Newton constant by G and the Einstein tensor by G_ab. The following is a leading small-ball, first-order reconstruction, not the full tensor or nonconformal-field proof in [3]. — eq./page UNVERIFIED.
+**ASSUMED** Use $\hbar =c=k_B=1$, four spacetime dimensions, and a locally flat reference vacuum. Entropy is dimensionless. Denote the Newton constant by G and the Einstein tensor by G_ab. The following is a leading small-ball, first-order reconstruction, not the full tensor or nonconformal-field proof in [3]. — eq./page UNVERIFIED.
 
 **DERIVED** For a three-dimensional ball with small constant sectional curvature k,
 
@@ -59,7 +59,7 @@
 
 **DERIVED** so $G=1/(4 \eta )$. In SI units, eta is an entropy-per-area coefficient measured in units of k_B, and $G=c^{3}/(4 \hbar \eta )$.
 
-**CITED** This coefficient matches the local entanglement-equilibrium framework [3]. Requiring the appropriate relation for every local timelike direction is crucial to recovering a tensor equation. Our constant-curvature numerical examples check the scalar geometry coefficient, the modular integral and the equilibrium coefficient; they do not independently prove that all-frame step. Background curvature/cosmological-constant treatment is also outside these flat-reference examples. In particular Lambda's observed value is not derived. — eq./page UNVERIFIED.
+**CITED** Jacobson: This coefficient matches the local entanglement-equilibrium framework [3]. Requiring the appropriate relation for every local timelike direction is crucial to recovering a tensor equation. Our constant-curvature numerical examples check the scalar geometry coefficient, the modular integral and the equilibrium coefficient; they do not independently prove that all-frame step. Background curvature/cosmological-constant treatment is also outside these flat-reference examples. In particular Lambda's observed value is not derived. — eq./page UNVERIFIED.
 
 ## What was actually verified numerically
 
@@ -103,7 +103,7 @@
 
 **DERIVED** The spatial dust equation would require its left side to vanish, so the prescription fails for epsilon not equal to zero. The supplied script verifies this residual; a constant-G control gives zero. This is an algebraic consistency check, not an observational bound and not a no-go theorem for all variable-coupling theories.
 
-**CITED** Additional covariant dynamics, stress-energy exchange, or geometric terms are needed. In known thermodynamic extensions, modifying the entropy relation can require non-equilibrium entropy production and modified field equations [6]. An arbitrary G(order) fit with these contributions omitted is not a consistent bridge to Einstein gravity. — eq./page UNVERIFIED.
+**CITED** Eling, Guedens and Jacobson: Additional covariant dynamics, stress-energy exchange, or geometric terms are needed. In known thermodynamic extensions, modifying the entropy relation can require non-equilibrium entropy production and modified field equations [6]. An arbitrary G(order) fit with these contributions omitted is not a consistent bridge to Einstein gravity. — eq./page UNVERIFIED.
 
 ## The microscopic input still required
 
@@ -111,7 +111,7 @@
 
 **ASSUMED** A credible next calculation must select a specific microscopic theory and a geometric observable, then derive its area response at a controlled cutoff or renormalization scale. The same low-energy action must account for the gravitational coupling, any extra fields, and conservation laws. If ordering is proposed to alter the coupling, calculate the coefficient change at fixed energy bookkeeping and check the resulting dynamics, rather than equating a change in subsystem entropy with a change in G.
 
-**CITED** The present result supports using entanglement equilibrium as a conditional benchmark. It does not support the assertion that nuclear ordering weakens gravity. The high-energy completion remains open; low-energy quantum corrections can already be treated within effective field theory [1,2]. — eq./page UNVERIFIED.
+**CITED** Donoghue: The present result supports using entanglement equilibrium as a conditional benchmark. It does not support the assertion that nuclear ordering weakens gravity. The high-energy completion remains open; low-energy quantum corrections can already be treated within effective field theory [1,2]. — eq./page UNVERIFIED.
 
 ## Primary references
 

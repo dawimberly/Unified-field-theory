@@ -20,7 +20,7 @@
 | **DERIVED** B, scalar long within the pair | $T^{\epsilon -1}(1-a)^{1-\epsilon }$ |
 | **DERIVED** B, fermion long within the pair | $T^{\epsilon -1}a(1-a)^{-\epsilon }$ |
 
-**DERIVED** Thus a→0 at fixed bounded T is integrable. The only poles in this chart come from T→0. For $T\ge 2$ use (P,T) and $a=P/T$. The same densities in dP dT are
+**DERIVED** Thus $a\to 0$ at fixed bounded T is integrable. The only poles in this chart come from $T\to 0$. For $T\ge 2$ use (P,T) and $a=P/T$. The same densities in dP dT are
 
 | Pair type | Measure in dP dT |
 | --- | --- |
@@ -30,7 +30,7 @@
 
 **DERIVED** These are smooth at $P=0$ uniformly for $T\ge 2$. The effective bridge endpoints are polynomial in r,v in the unnormalized Gaussian moments. In particular $r=0$ supplies no singular measure. With one bounded length tending to zero the moving boundary $P+Q\le 1$ produces no first-derivative boundary term because the numerator contains r. The total physical length is at least the normalized effective perimeter, so there is no additional mass-factor zero.
 
-**DERIVED** The two bounded lengths give the two short residues. At fixed fractions the short Taylor term converts back to exactly the prior P,Q calculation. With one long length and one bounded length, the only possible angular double pole combines the long logarithm and the bounded short residue. This reproduces the mixed endpoints. For B, the compact-gauge position moment on the $Q=0$ face is 4P(3−4P). The mixed coefficient uses $\int _{0}¹ (1-P)P(11-16P)dP=1/2$, independently reproducing the previous integral in the bridge-sum gauge.
+**DERIVED** The two bounded lengths give the two short residues. At fixed fractions the short Taylor term converts back to exactly the prior P,Q calculation. With one long length and one bounded length, the only possible angular double pole combines the long logarithm and the bounded short residue. This reproduces the mixed endpoints. For B, the compact-gauge position moment on the $Q=0$ face is 4P(3−4P). The mixed coefficient uses $\int _{0}^{1} (1-P)P(11-16P)dP=1/2$, independently reproducing the previous integral in the bridge-sum gauge.
 
 ## Two long lengths
 

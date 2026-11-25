@@ -54,4 +54,4 @@
 - **CITED** Hinterbichler and Khoury, https://arxiv.org/abs/1001.4525 (symmetron mechanism). — eq./page UNVERIFIED.
 - **CITED** Hinterbichler et al., https://arxiv.org/abs/1107.2112 (symmetron cosmology). — eq./page UNVERIFIED.
 
-**CITED** Implementation checks: 699 passed. Extra-dimensional parameter combinations: 75. — eq./page UNVERIFIED.
+**DERIVED** Implementation checks: 699 passed. Extra-dimensional parameter combinations: 75. — eq./page UNVERIFIED.

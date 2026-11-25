@@ -18,19 +18,19 @@
 
 **ASSUMED** Matter loops are evaluated at one loop. Gravitational loops, ultraviolet completion, metric emergence and a supergravity completion are absent. A chosen curvature coupling is not determined by flat-space particle data. Bare gravitational/vacuum contributions are set to zero in the illustrative examples; they could change the total coupling. Outputs are regulated coefficients, not automatically unique renormalized observables.
 
-**CITED** The scalar and fermion induced-Newton coefficients follow [1]. General induced-gravity finiteness and vacuum-energy issues are discussed in [2]. Curvature-squared coefficients below are the free-field heat-kernel magnitudes after statistics and gauge ghosts are included. Euler-density and total-derivative terms are omitted from the local bulk comparison at fixed topology without a boundary. — eq./page UNVERIFIED.
+**CITED** Solodukhin: The scalar and fermion induced-Newton coefficients follow [1]. General induced-gravity finiteness and vacuum-energy issues are discussed in [2]. Curvature-squared coefficients below are the free-field heat-kernel magnitudes after statistics and gauge ghosts are included. Euler-density and total-derivative terms are omitted from the local bulk comparison at fixed topology without a boundary. — eq./page UNVERIFIED.
 
 ## Coefficient scan
 
 **ASSUMED** Let $N_s$ count real minimal scalars, $N_f$ neutral Majorana fermions, and $N_v$ massless gauge vectors. The relevant ultraviolet coefficients are
 
-**CITED** $a0=N_s-2N_f+2N_v,$ — eq./page UNVERIFIED.
+**ASSUMED** $a0=N_s-2N_f+2N_v,$ — eq./page UNVERIFIED.
 
-**CITED** $a1=N_s(\frac{1}{6}-\xi)+\frac{N_f}{6}-\frac{2N_v}{3},$ — eq./page UNVERIFIED.
+**ASSUMED** $a1=N_s(\frac{1}{6}-\xi)+\frac{N_f}{6}-\frac{2N_v}{3},$ — eq./page UNVERIFIED.
 
-**CITED** $aC=\frac{N_s}{120}+\frac{N_f}{40}+\frac{N_v}{10},$ — eq./page UNVERIFIED.
+**ASSUMED** $aC=\frac{N_s}{120}+\frac{N_f}{40}+\frac{N_v}{10},$ — eq./page UNVERIFIED.
 
-**CITED** $aR=(\frac{N_s}{2})(\frac{1}{6}-\xi)^2.$ — eq./page UNVERIFIED.
+**ASSUMED** $aR=(\frac{N_s}{2})(\frac{1}{6}-\xi)^2.$ — eq./page UNVERIFIED.
 
 **DERIVED** Here a0 controls the leading flat vacuum term, a1 the Einstein term, and aC,aR the displayed curvature-squared terms. The vector expression includes its gauge/ghost contributions and must not be used for a massive vector without modification.
 
@@ -70,7 +70,7 @@
 | **DERIVED** $1\times10^{-4}$ | 0.0013303 |
 | **DERIVED** 0.01 | 0.133710 |
 
-**CITED** This is an illustrative sensitivity calculation, not a bound from observations. Separate readjustment of the vacuum subtraction at every split would hide the issue. Exact global supersymmetry can protect a flat-space vacuum cancellation, while broken supersymmetry and coupling to gravity require further analysis [3,4]. — eq./page UNVERIFIED.
+**CITED** Intriligator and Seiberg; Goodsell: This is an illustrative sensitivity calculation, not a bound from observations. Separate readjustment of the vacuum subtraction at every split would hide the issue. Exact global supersymmetry can protect a flat-space vacuum cancellation, while broken supersymmetry and coupling to gravity require further analysis [3,4]. — eq./page UNVERIFIED.
 
 **DERIVED** An additional nondegenerate example uses squared masses (0.01,0.02,0.03,0.04) and signed mode counts (-2,6,-6,2). It obeys $\sum w=\sum w m^{2}=\sum w m^{4}=0$, removing the flat vacuum quartic, quadratic and logarithmic divergences. Nevertheless its finite term
 
@@ -82,9 +82,9 @@
 
 **ASSUMED** To avoid arbitrary mass changes, use the known rigid-SUSY matter superpotential
 
-**CITED** $W=fX+(\frac{\lambda }{2})X \phi_1^2+m \phi_1 \phi_2$ — eq./page UNVERIFIED.
+**CITED** Intriligator and Seiberg; Goodsell: $W=fX+(\frac{\lambda }{2})X \phi_1^2+m \phi_1 \phi_2$ — eq./page UNVERIFIED.
 
-**CITED** with canonical field kinetic terms. This is an O'Raifeartaigh model of the type discussed in [3,4]. On its $X=\phi_1=\phi_2=0$ branch, define $y=\lambda f/m^{2}<1$. The heavy real scalar squared masses are $(m^{2}+\lambda f,m^{2}-\lambda f,m^{2},m^{2})$; the two heavy Majorana fermions have mass m. The tree vacuum energy is $f^{2}$. These relations are obtained from the potential, and the script independently verifies the real-scalar Hessian and the vanishing supertrace of squared masses. — eq./page UNVERIFIED.
+**CITED** Intriligator and Seiberg; Goodsell: with canonical field kinetic terms. This is an O'Raifeartaigh model of the type discussed in [3,4]. On its $X=\phi_1=\phi_2=0$ branch, define $y=\lambda f/m^{2}<1$. The heavy real scalar squared masses are $(m^{2}+\lambda f,m^{2}-\lambda f,m^{2},m^{2})$; the two heavy Majorana fermions have mass m. The tree vacuum energy is $f^{2}$. These relations are obtained from the potential, and the script independently verifies the real-scalar Hessian and the vanishing supertrace of squared masses. — eq./page UNVERIFIED.
 
 **ASSUMED** The light X degrees of freedom and goldstino remain in the low-energy theory; they are not integrated out. Their possible contributions and interactions must not be mistaken for absent physics. The calculation fixes the tree reference $X=0$, not a fully solved curved-space or loop-stabilized configuration. We vary a parameter f; we do not simulate a dynamical ordering transition at fixed Hamiltonian. SUSY breaking is not a quantitative measure of nuclear ordering.
 

@@ -41,7 +41,7 @@
 
 **DERIVED** Separately, reducing the zero-mode Einstein-Hilbert action on a fixed flat circle gives $M4^{2}=(2 \pi R) M5^{3}$, or $G4=G5/(2 \pi R)$, in the corresponding action normalization. Holding the bulk coupling fixed, halving R doubles G4. Thus dimensional shrinkage does not give weakened long-distance coupling in this simplest setup. The scalar C normalization and the Einstein action relation are distinct calculations and are not identified as a complete relativistic model.
 
-**CITED** Large-extra-dimension models use related volume dilution to address gravitational weakness [1]. The illustrative one-circle computation here is not a fit to their phenomenology. No compactification radius is inferred, and experimental viability is not evaluated. This approach assumes extra geometry and higher-dimensional gravity; it does not explain their microscopic origin. — eq./page UNVERIFIED.
+**CITED** Arkani-Hamed, Dimopoulos and Dvali: Large-extra-dimension models use related volume dilution to address gravitational weakness [1]. The illustrative one-circle computation here is not a fit to their phenomenology. No compactification radius is inferred, and experimental viability is not evaluated. This approach assumes extra geometry and higher-dimensional gravity; it does not explain their microscopic origin. — eq./page UNVERIFIED.
 
 ## 2. Quantum-induced curvature
 
@@ -65,7 +65,7 @@
 
 **DERIVED** $\delta (1/G)=(\frac{1}{6}-\xi) I/(2 \pi ).$
 
-**CITED** For a minimally coupled scalar, $\xi =0$, this becomes $I/(12 \pi )$. These conventions and signs are explicit; the numerical interpretation follows the scalar heat-kernel/induced-Newton-constant treatment in [2], rather than interchanging overall signs between effective-action conventions. General induced-gravity context is reviewed in [3]. — eq./page UNVERIFIED.
+**CITED** Solodukhin: For a minimally coupled scalar, $\xi =0$, this becomes $I/(12 \pi )$. These conventions and signs are explicit; the numerical interpretation follows the scalar heat-kernel/induced-Newton-constant treatment in [2], rather than interchanging overall signs between effective-action conventions. General induced-gravity context is reviewed in [3]. — eq./page UNVERIFIED.
 
 **ASSUMED** Set $x=m/\Lambda _UV$. Independent quadrature agrees with
 
@@ -95,7 +95,7 @@
 
 **DERIVED** $S_mn=\sqrt{mn}/(m+n) binom(m+n,m) g^(m+n).$
 
-**CITED** This is the known model in [4]. For a finite maximum loop length N, diagonalize S. For the infinite-length operator, let — eq./page UNVERIFIED.
+**CITED** Ambjorn and Loll: This is the known model in [4]. For a finite maximum loop length N, diagonalize S. For the infinite-length operator, let — eq./page UNVERIFIED.
 
 **DERIVED** $F=2g/[1+\sqrt{1-4g^2}].$
 
@@ -112,7 +112,7 @@
 
 **DERIVED** This exposes a substantial finite-size bias rather than hiding it. Removing triangulation multiplicities changes the length distribution, confirming that counting geometries has a real role in this ensemble.
 
-**CITED** Topology is fixed to a cylinder; lattice spacing and causal construction are inputs. The experiment does NOT demonstrate dimensional emergence into $3+1$ dimensions, a de Sitter universe in our dimensions, local gravitons, or recovery of four-dimensional Einstein dynamics. Those are separate questions in higher-dimensional CDT [5]. In two spacetime dimensions the Einstein-Hilbert term is topological, so this pilot cannot determine the ordinary four-dimensional Newton coupling. We have reproduced a known low-dimensional quantum-geometric kernel, not the full CDT program. — eq./page UNVERIFIED.
+**CITED** Loll: Topology is fixed to a cylinder; lattice spacing and causal construction are inputs. The experiment does NOT demonstrate dimensional emergence into $3+1$ dimensions, a de Sitter universe in our dimensions, local gravitons, or recovery of four-dimensional Einstein dynamics. Those are separate questions in higher-dimensional CDT [5]. In two spacetime dimensions the Einstein-Hilbert term is topological, so this pilot cannot determine the ordinary four-dimensional Newton coupling. We have reproduced a known low-dimensional quantum-geometric kernel, not the full CDT program. — eq./page UNVERIFIED.
 
 ## What to pursue and reject
 

@@ -55,7 +55,7 @@ $$
 G_\mu \nu [\phi ] = (D/2-1) P_{\mu\nu} / V.
 $$
 
-**CITED** This provides the candidate local auxiliary-elimination map required by [2]. It is branchwise: it does not select a real Lorentzian contour, include singular configurations, or prove that the quantum vacuum lies on this patch. — eq./page UNVERIFIED.
+**CITED** Barnich, Brandt and Henneaux: This provides the candidate local auxiliary-elimination map required by [2]. It is branchwise: it does not select a real Lorentzian contour, include singular configurations, or prove that the quantum vacuum lies on this patch. — eq./page UNVERIFIED.
 
 **DERIVED** At the minimal classical BV level, introduce the diffeomorphism ghost c and antifields. Schematically,
 
@@ -79,7 +79,7 @@ $$
 
 **DERIVED** This identifies a concrete classical cohomology comparison rather than an unsupported assertion of full quantum equivalence. The scalar BRST transformation is independent of the auxiliary metric, which makes this map particularly direct. Completing the gauge-fixed quantum construction still requires the measure, regulator, integration domain, boundaries, and transformed observables.
 
-**CITED** A candidate gauge fermion can depend on the composite metric G(phi) rather than on the independent integration variable g. Its gauge condition may be chosen to have harmonic form around a regular flat-metric patch. Because the gauge fermion then contains no independent g, it is designed to preserve algebraic metric elimination, following the objective of [1]. This candidate has not been established as a globally admissible gauge, especially on the actual tuned quantum saddle. Local invertibility at nonzero momentum would not resolve residual zero modes or global gauge copies. — eq./page UNVERIFIED.
+**CITED** Henneaux: A candidate gauge fermion can depend on the composite metric G(phi) rather than on the independent integration variable g. Its gauge condition may be chosen to have harmonic form around a regular flat-metric patch. Because the gauge fermion then contains no independent g, it is designed to preserve algebraic metric elimination, following the objective of [1]. This candidate has not been established as a globally admissible gauge, especially on the actual tuned quantum saddle. Local invertibility at nonzero momentum would not resolve residual zero modes or global gauge copies. — eq./page UNVERIFIED.
 
 **DERIVED** The intended next comparison is therefore a gauge-fixed generating functional with matched measures and matched observables. The target is not equality of two independently chosen flat measures.
 
@@ -87,14 +87,14 @@ $$
 
 | Proposed shortcut or route | Published test | Current disposition |
 |---|---|---|
-| **CITED** Eliminate the metric classically and declare quantum equivalence | [1], [3] | Eliminate this shortcut; quantum measure and sources remain necessary. | — eq./page UNVERIFIED.
-| **CITED** Use BRST cohomology equality as a proof of unitarity | [2], [4] | Eliminate this inference; these conclusions are different. | — eq./page UNVERIFIED.
-| **CITED** Apply an all-orders supersymmetric auxiliary-field identity to the present scalar model | [5] | Not applicable without the required supersymmetric structure. | — eq./page UNVERIFIED.
+| **CITED** Henneaux: Eliminate the metric classically and declare quantum equivalence | [1], [3] | Eliminate this shortcut; quantum measure and sources remain necessary. | — eq./page UNVERIFIED.
+| **CITED** Barnich, Brandt and Henneaux: Use BRST cohomology equality as a proof of unitarity | [2], [4] | Eliminate this inference; these conclusions are different. | — eq./page UNVERIFIED.
+| **CITED** Higashijima and Nitta: Apply an all-orders supersymmetric auxiliary-field identity to the present scalar model | [5] | Not applicable without the required supersymmetric structure. | — eq./page UNVERIFIED.
 | **CITED** Obtain a conventional composite graviton while keeping all the hypotheses of the Weinberg-Witten obstruction | [6] | Excluded under those hypotheses; document a real evasion rather than ignore it. | — eq./page UNVERIFIED.
-| **CITED** Retain ordinary local bulk observables and locality while demanding nonlinear universal gravitational energy coupling | [7] | Constrained by the theorem's shared-time/shared-locality hypotheses; not an unrestricted matter-only no-go. | — eq./page UNVERIFIED.
-| **CITED** Recover only a Newtonian force or one massless pole and declare Einstein gravity | [8], [9] | Insufficient; interactions and universal coupling must also be addressed. | — eq./page UNVERIFIED.
-| **CITED** Use a thermodynamic derivation of Einstein's equation as a complete microscopic quantum theory | [10], [11] | Insufficient; it establishes a conditional macroscopic bridge. | — eq./page UNVERIFIED.
-| **CITED** Continue the constrained, clock-free matter-only construction using auxiliary-field/BV methods | [1]-[4], [8] | Retain as the most directly relevant next route; quantum matching is open. | — eq./page UNVERIFIED.
+| **CITED** Marolf: Retain ordinary local bulk observables and locality while demanding nonlinear universal gravitational energy coupling | [7] | Constrained by the theorem's shared-time/shared-locality hypotheses; not an unrestricted matter-only no-go. | — eq./page UNVERIFIED.
+| **CITED** Carone, Claringbold and Vaman: Recover only a Newtonian force or one massless pole and declare Einstein gravity | [8], [9] | Insufficient; interactions and universal coupling must also be addressed. | — eq./page UNVERIFIED.
+| **CITED** Jacobson: Use a thermodynamic derivation of Einstein's equation as a complete microscopic quantum theory | [10], [11] | Insufficient; it establishes a conditional macroscopic bridge. | — eq./page UNVERIFIED.
+| **CITED** Henneaux: Continue the constrained, clock-free matter-only construction using auxiliary-field/BV methods | [1]-[4], [8] | Retain as the most directly relevant next route; quantum matching is open. | — eq./page UNVERIFIED.
 
 **DERIVED** "Eliminate" here means reject a stated inference or an assumption set, not claim to have disproved an entire research field.
 

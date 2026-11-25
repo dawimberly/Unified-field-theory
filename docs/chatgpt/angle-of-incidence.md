@@ -91,6 +91,6 @@
 
 ## Sources
 
-- **CITED** Local source: docs/POSSIBILITY_CLOUD_THEORY.md, especially morphology resonance and the resonance-condition sketch. — eq./page UNVERIFIED.
+- Local source: docs/POSSIBILITY_CLOUD_THEORY.md, especially morphology resonance and the resonance-condition sketch. — eq./page UNVERIFIED.
 - **CITED** NIST/CODATA 2022 recommended constants: https://physics.nist.gov/cuu/pdf/all.pdf . Used only as the final comparison target. — eq./page UNVERIFIED.
 - **CITED** Antisymmetric spin interactions are a physical motivation for sine/cosine angular terms, not a claim that these illustrative coefficients describe a particular material: Cardias et al., First-principles Dzyaloshinskii-Moriya interaction in a non-collinear framework (2020), https://doi.org/10.1038/s41598-020-77219-3 . — eq./page UNVERIFIED.

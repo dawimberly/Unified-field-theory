@@ -123,12 +123,12 @@ $$
 **DERIVED** If investigating the fluid connection specifically, first derive or disprove the texture transport dictionary. Without it, running fluid blowup profiles through the texture code would test a new imported equation instead of our action. There is currently no derived common mechanism connecting the three dimensional facts.
 
 ## Sources
-- **CITED** Local model: C:/workspace/physics/experiments/hydrogen_cloud_workbench/CANDIDATE_ACTION.md — eq./page UNVERIFIED.
-- **CITED** Local prior audit: C:/workspace/physics/experiments/cloud_amplitude_dynamics/STATIC_SECTOR_AUDIT.md — eq./page UNVERIFIED.
-- **CITED** Local coupled runs: C:/workspace/physics/experiments/knotted_cloud_dynamics/REPORT.md — eq./page UNVERIFIED.
+- Local model: C:/workspace/physics/experiments/hydrogen_cloud_workbench/CANDIDATE_ACTION.md — eq./page UNVERIFIED.
+- Local prior audit: C:/workspace/physics/experiments/cloud_amplitude_dynamics/STATIC_SECTOR_AUDIT.md — eq./page UNVERIFIED.
+- Local coupled runs: C:/workspace/physics/experiments/knotted_cloud_dynamics/REPORT.md — eq./page UNVERIFIED.
 - **CITED** Bredberg et al., From Navier-Stokes To Einstein, JHEP07(2012)146: https://arxiv.org/abs/1101.2451 ; PDF inspected, especially the setup and expansion structure. — eq./page UNVERIFIED.
 - **CITED** Carlip, Quantum Gravity in $2+1$ Dimensions, Living Reviews 8:1 (2005): https://arxiv.org/abs/gr-qc/0409039 ; dimensional result checked against the accessible review record and indexed text. — eq./page UNVERIFIED.
 - **CITED** Vorticity derivation, UCL teaching notes: https://uclnatsci.github.io/Electromagnetism-Fluids-and-Waves/fluids/vorticity.html — eq./page UNVERIFIED.
 - **CITED** Recent forced Navier-Stokes construction: https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf — eq./page UNVERIFIED.
 
-**CITED** Reproduction: python dimension_mechanism_checks_2026_11_01.py. Uses only Python standard library. JSON records dimension counts, eight local strain/rotation controls and four restricted size minima. These checks establish arithmetic consistency, not empirical confirmation. — eq./page UNVERIFIED.
+Reproduction: python dimension_mechanism_checks_2026_11_01.py. Uses only Python standard library. JSON records dimension counts, eight local strain/rotation controls and four restricted size minima. These checks establish arithmetic consistency, not empirical confirmation. — eq./page UNVERIFIED.

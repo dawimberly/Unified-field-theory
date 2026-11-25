@@ -98,7 +98,7 @@
 
 **ASSUMED** 4.1 The Substrate Is Not Defined
 
-**ASSUMED** The framework needs an underlying medium with specific geometric properties. Several candidates have been considered: a spherical Hoberman-style lattice, the Hopf fibration on S³, a liquid crystal director field. None has been derived from necessity. The right question is not which beautiful mathematical object to use but what is the minimum geometric structure required to produce the observed physics.
+**ASSUMED** The framework needs an underlying medium with specific geometric properties. Several candidates have been considered: a spherical Hoberman-style lattice, the Hopf fibration on $S^{3}$, a liquid crystal director field. None has been derived from necessity. The right question is not which beautiful mathematical object to use but what is the minimum geometric structure required to produce the observed physics.
 
 **ASSUMED** Note: different regions of the medium need not have the same local geometry. Just as a real crystal has domains with different local symmetry, the medium may support different local geometric configurations. This is more realistic than requiring uniform structure everywhere.
 
@@ -142,7 +142,7 @@
 
 7. **ASSUMED** Connection to Recent Physics
 
-**CITED** **UNVERIFIED** The archive attributes to Charles Cao a claim that entanglement builds geometry while a further resource called magic allows gravitational flexibility. It attributes the quotation “Right now, we are at step 0.5 of 5.” to Quanta, 3 June 2026. The article, attribution, date and exact wording have not been verified; eq./page UNVERIFIED. This is an external claim, not a result derived here.
+**CITED** Charles Cao, quoted in [Quanta Magazine, 3 June 2026](https://www.quantamagazine.org/entanglement-builds-space-time-now-magic-gives-it-gravity-20260603/): “Right now, we are at step 0.5 of 5.” The article describes entanglement as supplying geometric structure and magic as allowing that geometry to respond to matter; this sentence is a paraphrase, not part of the quotation. The quotation appears in the section “Gravity From Quantumness”.
 
 **ASSUMED** The compliance gradient mechanism in this framework is structurally similar. The two approaches are complementary: Cao works at the quantum information layer. This framework attempts the geometric mechanical picture. Neither currently reproduces Einstein’s field equations.
 

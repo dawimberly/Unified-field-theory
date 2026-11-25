@@ -2,18 +2,18 @@
 
 **Conversation date range** 2026-10-13 to 2026-10-25 (archive dates; original transcript dates UNVERIFIED)
 
-**ASSUMED** The 600-cell was considered as a finite network for studying phase locking, topology and information flow. **UNVERIFIED** Its standard geometric properties are summarized below without claiming a new derivation or a verified bibliographic source. **ASSUMED** The proposed physical use places states on vertices and interactions on edges. **UNVERIFIED** No emergence of spacetime or physical force law was established.
+**ASSUMED** The 600-cell was considered as a finite network for studying phase locking, topology and information flow. **CITED** Coxeter, *Regular Polytopes*, supplies the standard geometric counts summarized below; they are not a new derivation. **ASSUMED** The proposed physical use places states on vertices and interactions on edges. **UNVERIFIED** No emergence of spacetime or physical force law was established.
 
 ## Geometry
 
-**UNVERIFIED** The 600-cell, or hexacosichoron, is a regular four-dimensional polytope with Schläfli symbol $\{3,3,5\}$. Its boundary triangulates $S^{3}$, rather than $S^{2}$.
+**CITED** Coxeter, *Regular Polytopes*: The 600-cell, or hexacosichoron, is a regular four-dimensional polytope with Schläfli symbol $\{3,3,5\}$. Its boundary triangulates $S^{3}$, rather than $S^{2}$.
 
 | Component | Count |
 |---|---:|
-| **UNVERIFIED** Vertices | 120 |
-| **UNVERIFIED** Edges | 720 |
-| **UNVERIFIED** Triangular faces | 1,200 |
-| **UNVERIFIED** Tetrahedral cells | 600 |
+| **CITED** Vertices (Coxeter, *Regular Polytopes*) | 120 |
+| **CITED** Edges (Coxeter, *Regular Polytopes*) | 720 |
+| **CITED** Triangular faces (Coxeter, *Regular Polytopes*) | 1,200 |
+| **CITED** Tetrahedral cells (Coxeter, *Regular Polytopes*) | 600 |
 
 **UNVERIFIED** Each vertex has 12 neighbors and an icosahedral link. On the unit sphere, neighboring vertices have dot product $\varphi/2\approx0.809$, where $\varphi=(1+\sqrt5)/2$. The archived coordinate construction uses eight axis points, sixteen points with every coordinate equal to $\pm1/2$, and ninety-six even permutations of $(0,\pm1/2,\pm\varphi/2,\pm1/(2\varphi))$. The coordinate set was identified with the binary icosahedral group; no independent verification is recorded here.
 
@@ -29,4 +29,4 @@
 
 ## Limits
 
-**UNVERIFIED** A reproducible physics calculation would need an explicit state space, action or update law, observables and refinement checks. No such calculation or verified source for the geometric claims is supplied in this topic. The market replay and the proposed physics network are separate applications.
+**UNVERIFIED** A reproducible physics calculation would need an explicit state space, action or update law, observables and refinement checks. No such physics calculation is supplied in this topic; the standard geometric counts are sourced to Coxeter, *Regular Polytopes*. The market replay and the proposed physics network are separate applications.

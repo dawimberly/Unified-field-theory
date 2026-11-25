@@ -6,9 +6,9 @@
 
 ## Research record
 
-**ASSUMED** Continues [the short-pair checkpoint](ffz-ccff-short-pair.md). Use the same p,q,P,Q,S,W notation and $d=4-2\epsilon$. The overall bare graph weight is −z|y|⁴/2.
+**ASSUMED** Continues [the short-pair checkpoint](ffz-ccff-short-pair.md). Use the same p,q,P,Q,S,W notation and $d=4-2\epsilon$. The overall bare graph weight is $-z|y|^{4}/2$.
 
-**DERIVED** At p→∞ with $P=pf(1-f)$ fixed, the evanescent mass-profile term supplies a large-p numerator proportional to p. The fermion spin weight after removing $1/q$ is $d(1+P)/(2S)$. The resulting global model in the same projective measure is
+**DERIVED** At $p\to \infty$ with $P=pf(1-f)$ fixed, the evanescent mass-profile term supplies a large-p numerator proportional to p. The fermion spin weight after removing $1/q$ is $d(1+P)/(2S)$. The resulting global model in the same projective measure is
 
 **DERIVED** $H_tail = (2d^2\frac{\epsilon }{3}) (1+P) S^(-1-\frac{d}{2}) p^(1-3\epsilon ).$
 

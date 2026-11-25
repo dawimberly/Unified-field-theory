@@ -18,7 +18,7 @@
 **DERIVED** $z_B/z = 1+h/(2\epsilon )+h^{2}[1/(2\epsilon ^{2})-1/(4\epsilon )]$,
 **DERIVED** $h_B/h = 1+3h/(2\epsilon )+O(h^{2})$.
 
-**DERIVED** The one-loop bare coefficient is $z e^{-\epsilon L} e^{\gamma \epsilon } \Gamma (\epsilon )/[6K(1-\epsilon )]$, including the spin multiplicity. Its first mass insertion gives $hz/K$ times $[1/\epsilon ^{2}-L/\epsilon ]/12$, as independently fixed by the $w=2$ runnable two-loop benchmark. At order h² the replacement multiplies its logarithm-free prefactor after cancelling $1-\epsilon$ by $[1/(2\epsilon ^{2})-3/(8\epsilon )]$.
+**DERIVED** The one-loop bare coefficient is $z e^{-\epsilon L} e^{\gamma \epsilon } \Gamma (\epsilon )/[6K(1-\epsilon )]$, including the spin multiplicity. Its first mass insertion gives $hz/K$ times $[1/\epsilon ^{2}-L/\epsilon ]/12$, as independently fixed by the $w=2$ runnable two-loop benchmark. At order $h^{2}$ the replacement multiplies its logarithm-free prefactor after cancelling $1-\epsilon$ by $[1/(2\epsilon ^{2})-3/(8\epsilon )]$.
 
 **DERIVED** The bare two-loop coefficient is $|y|^2(1-2\epsilon)I_{\mathrm{bare}}/36$. Replacing h and z multiplies it by $h(2/\epsilon -1)$ at the requested order. For its finite input write $I_{bare} K^{2}/z = -3/(2\epsilon ^{2})+(3L-9/2)/\epsilon -3L^{2}+9L+C-3-3\zeta (2)/2$, with $C=-15/2+2\sqrt3\operatorname{Cl}_2(\pi/3)$. This follows from the subtracted sunset value in the two-loop benchmark and adding the order$-\epsilon$ terms of three equal-mass bare tadpoles divided by $\epsilon$. There is no new three-loop integral in this matter-counterterm step.
 

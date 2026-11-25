@@ -22,7 +22,7 @@
 
 ## On-shell threshold from the flat matter sector
 
-**ASSUMED** Set $z=m^2$, $h=|y|^2/(16\pi^2)$, $L=\ln(z/\mu^2)$, and $A(u)=\int _{0}¹ dx \ln [1+u x(1-x)]$. The scalar Y couples via the cubic term m* y Y* X²/2 plus conjugate. Its one-loop inverse propagator correction is minus |my|²/2 times the subtracted equal-mass bubble. The factor $1/2$ is from the two identical X contractions. Thus the common mass-shell location (the multiplets are degenerate in this flat supersymmetric prescription) is
+**ASSUMED** Set $z=m^2$, $h=|y|^2/(16\pi^2)$, $L=\ln(z/\mu^2)$, and $A(u)=\int _{0}^{1} dx \ln [1+u x(1-x)]$. The scalar Y couples via the cubic term $m^* y Y^* X^{2}/2$ plus conjugate. Its one-loop inverse propagator correction is minus $|my|^{2}/2$ times the subtracted equal-mass bubble. The factor $1/2$ is from the two identical X contractions. Thus the common mass-shell location (the multiplets are degenerate in this flat supersymmetric prescription) is
 
 **DERIVED** $z_pole = z [1+(\frac{h}{2})(L+A(-1))]+O(h^2), with A(-1)=\pi /√3-2.$
 
@@ -32,13 +32,13 @@
 
 **DERIVED** The preceding checkpoint writes the subtracted response as $h v^{2} H(u,L)/(72K)$, with $u=q^{2}/z$ and $v=t w_g$. $Put \delta =u+4>0$. The leading inverse-square-root coefficient is
 
-**DERIVED** $lim_(\delta \to 0+)$ √δ $H(-4+\delta ,L)/\pi = L+A(-1)$.
+**DERIVED** $\lim_{\delta\to0+}\sqrt\delta\,H(-4+\delta,L)/\pi=L+A(-1)$.
 
-**DERIVED** It follows directly from the corner of the finite kernel. In either ordered sector with $a=1 set b=x,c=x t$ and mark the long line at separation l. Near $l=1/2$ and $x=0$, the denominator is $P+kx$, where $P=\delta /4+4(l-1/2)^{2}$ and $k=1+t-t/(1+t)$. The singular same-line combination in J is the integral of $[1/P-1/(P+kx)]/x$. Integrating x gives $\ln\left(k/P\right)/P$ to leading order. The endpoint logarithm and the pair sectors do not furnish a leading 1/√δ: they have an extra radial integration or a vanishing short-edge source measure. Away from this corner, any nearly maximal resistance requires both a small auxiliary-edge length and a source location tuned to the antipode. Integrating these directions with a smooth graph measure gives a term subleading relative to $\delta ^{-1/2}$.
+**DERIVED** It follows directly from the corner of the finite kernel. In either ordered sector with $a=1 set b=x,c=x t$ and mark the long line at separation l. Near $l=1/2$ and $x=0$, the denominator is $P+kx$, where $P=\delta /4+4(l-1/2)^{2}$ and $k=1+t-t/(1+t)$. The singular same-line combination in J is the integral of $[1/P-1/(P+kx)]/x$. Integrating x gives $\ln\left(k/P\right)/P$ to leading order. The endpoint logarithm and the pair sectors do not furnish a leading $1/\sqrt \delta$: they have an extra radial integration or a vanishing short-edge source measure. Away from this corner, any nearly maximal resistance requires both a small auxiliary-edge length and a source location tuned to the antipode. Integrating these directions with a smooth graph measure gives a term subleading relative to $\delta ^{-1/2}$.
 
-**DERIVED** The term −D of the finite response contributes $+\ln P/P$ and cancels the logarithmically enhanced leading singularity. Including the explicit (1−ln 2)(B−A) and L(3A−B) terms leaves the coefficient $L-1+\ln 2+2\int _{0}¹ dt \ln\left(k\right)/(1+t)^{2}$. Change variables $y=t/(1+t)$, giving $k=[1-y(1-y)]/(1-y)$. Reflection symmetry of the first logarithm and direct integration of the second give $A(-1)+1-\ln 2$ for the angular average. Finally $\int dl/P$ has leading coefficient $\pi /$√δ. The result is the same as expanding the one-loop form factor about z_pole, since its mass derivative at fixed q is −B and B∼$-\pi /$√δ.
+**DERIVED** The term −D of the finite response contributes $+\ln P/P$ and cancels the logarithmically enhanced leading singularity. Including the explicit (1−ln 2)(B−A) and L(3A−B) terms leaves the coefficient $L-1+\ln 2+2\int _{0}^{1} dt \ln\left(k\right)/(1+t)^{2}$. Change variables $y=t/(1+t)$, giving $k=[1-y(1-y)]/(1-y)$. Reflection symmetry of the first logarithm and direct integration of the second give $A(-1)+1-\ln 2$ for the angular average. Finally $\int dl/P$ has leading coefficient $\pi/\sqrt\delta$. The result is the same as expanding the one-loop form factor about z_pole, since its mass derivative at fixed q is −B and $B\sim-\pi/\sqrt\delta$.
 
-**DERIVED** The signs matter. At $L=0$ the limiting coefficient is negative, $\pi /$√$3-2\approx -0.18620$. Moderate-distance quadrature can still give positive values for √δ $H/\pi$ because the subleading terms are sizeable. That quadrature is not a verification of the asymptotic coefficient. The analytical corner extraction and the independent mass-shell calculation supply the check. The full above-threshold discontinuity and its nonsingular vertex corrections remain open.
+**DERIVED** The signs matter. At $L=0$ the limiting coefficient is negative, $\pi/\sqrt3-2\approx-0.18620$. Moderate-distance quadrature can still give positive values for $\sqrt\delta\,H/\pi$ because the subleading terms are sizeable. That quadrature is not a verification of the asymptotic coefficient. The analytical corner extraction and the independent mass-shell calculation supply the check. The full above-threshold discontinuity and its nonsingular vertex corrections remain open.
 
 ## Runnable checks
 

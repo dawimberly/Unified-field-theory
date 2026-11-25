@@ -9,11 +9,11 @@
 **ASSUMED** The $1/24$ target is a normalization chosen to match Einstein gravity; it is not an independently predicted gravitational constant. A computed $c_Y=1/24$ in the stated matter prescription is a separate conditional calculation. Matching a baseline simple pole to that target remains a test, not a completed derivation.
 
 
-**ASSUMED** Continues [the Y-improvement Newton residue](ffz-three-loop-y-improvement-checkpoint.md), [the q⁴ check](ffz-newton-projection-q4-checkpoint.md), and [the finite momentum slope](ffz-two-loop-momentum-slope.md). Earlier fixed $1/6$ matter beta and Newton moment results carry forward. The baseline curvature residue still needs a curved vacuum graph sum.
+**ASSUMED** Continues [the Y-improvement Newton residue](ffz-three-loop-y-improvement-checkpoint.md), [the $q^{4}$ check](ffz-newton-projection-q4-checkpoint.md), and [the finite momentum slope](ffz-two-loop-momentum-slope.md). Earlier fixed $1/6$ matter beta and Newton moment results carry forward. The baseline curvature residue still needs a curved vacuum graph sum.
 
 ## Subtracted form factor at finite momentum
 
-**DERIVED** For each group let $u=q^{2}/z$ with Euclidean $q$, $L=\ln(z/\mu^2)$, $v=tw_g$ and $K=16\pi ^{2}$. The order-h contribution to the even curvature-squared response, subtracting its value at $q=0$, is h v²/(72K) times H(u,L). Let $r=u x(1-x), g=\ln\left(1+r\right)$ and all integrals below be over $0\le x\le 1$:
+**DERIVED** For each group let $u=q^{2}/z$ with Euclidean $q$, $L=\ln(z/\mu^2)$, $v=tw_g$ and $K=16\pi ^{2}$. The order-h contribution to the even curvature-squared response, subtracting its value at $q=0$, is $h v^{2}/(72K)$ times H(u,L). Let $r=u x(1-x), g=\ln\left(1+r\right)$ and all integrals below be over $0\le x\le 1$:
 **DERIVED** $A=∫g, B=∫r/(1+r), C=∫g^2, D=∫g r/(1+r).$
 
 **DERIVED** $H = J + (1-\ln  2)(B-A) + A-D+\frac{C}{2}+A^2 + L(3A-B).$
@@ -26,11 +26,11 @@
 
 **DERIVED** The bubble-square contribution has pole $-2A/\epsilon$ and finite $4LA+C+A^{2}$. The matter counterterm is minus $(3+z\partial _z)$ times the subtracted dimensionally regulated bubble divided by $\epsilon$, with q fixed. It contributes $(3A-B)/\epsilon$ and finite $-L(3A-B)-3C/2-A+D$. All poles cancel for every u in the regular region. This gives the displayed finite H, with no fit to individual momentum points. An independent check of its log follows from applying the one-loop matter flow to the one-loop response $v^{2} A/(36K)$. The numerator variation contributes 3h A, the mass flow contributes −h B. The explicit derivative $\partial \ln \mu H = -2(3A-B)$ cancels that flow in the stated normalization.
 
-**DERIVED** At $L=0$ the numerical response yields the prior q² and q⁴ coefficients by symmetric finite differences. It also passes quadrature convergence checks from $u=-3.8$ to $u=10$. This representation gives the whole spacelike response and subthreshold timelike response. It assumes a common pure-metric subtraction and no extra assignment-dependent higher-derivative matching. The subtraction removes the common local R² constant.
+**DERIVED** At $L=0$ the numerical response yields the prior $q^{2}$ and $q^{4}$ coefficients by symmetric finite differences. It also passes quadrature convergence checks from $u=-3.8$ to $u=10$. This representation gives the whole spacelike response and subthreshold timelike response. It assumes a common pure-metric subtraction and no extra assignment-dependent higher-derivative matching. The subtraction removes the common local $R^{2}$ constant.
 
 ## Threshold domain
 
-**DERIVED** Every pair of marked points in a theta graph belongs to a cycle of total length at most V. The effective resistance with all edges present is bounded by that of the cycle alone, which is the parallel combination of the two arcs and is at most $V/4$. The same bound holds for the bubble. The radial denominators and logarithms have no singularity for real $u>-4$ or in the complex Taylor disk |u|$<4$. Subtractions preserve analyticity on compact subsets away from the cut. The bound is approached when one line takes nearly the whole Schwinger length and the two insertions are nearly opposite on it. At free order the cut begins exactly at $u=-4$, since the bubble logarithm has a discontinuity proportional to the interval length sqrt(1−4/|u|). The order-h formula isolates the integrable sectors below that cut. Continuing the sum above the cut with the proper prescription, and resolving mass-shell shifts or singular perturbation terms at threshold, remains open.
+**DERIVED** Every pair of marked points in a theta graph belongs to a cycle of total length at most V. The effective resistance with all edges present is bounded by that of the cycle alone, which is the parallel combination of the two arcs and is at most $V/4$. The same bound holds for the bubble. The radial denominators and logarithms have no singularity for real $u>-4$ or in the complex Taylor disk |u|$<4$. Subtractions preserve analyticity on compact subsets away from the cut. The bound is approached when one line takes nearly the whole Schwinger length and the two insertions are nearly opposite on it. At free order the cut begins exactly at $u=-4$, since the bubble logarithm has a discontinuity proportional to the interval length $\sqrt{1-4/|u|}$. The order-h formula isolates the integrable sectors below that cut. Continuing the sum above the cut with the proper prescription, and resolving mass-shell shifts or singular perturbation terms at threshold, remains open.
 
 ## Curved Newton implementation step
 

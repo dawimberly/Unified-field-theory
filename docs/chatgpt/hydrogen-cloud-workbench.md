@@ -97,7 +97,7 @@
 
 **DERIVED** $V/E_\mu = -C \exp\left(-s\,r\right)/r$,
 
-**CITED** where C is its strength divided by the measured Coulomb strength and $s=m_\sigma *a_\mu$ in natural units. These units import alpha; they do not derive it. First $C=1$ was checked. Then for each s, ONLY C was fitted so the numerical 1s energy equals -0.5 E_mu, allowing the excited spectrum to test the potential. This fit is deliberately labeled calibration. It targets the nonrelativistic reference, not the more precise NIST energy; omitted QED physics must not be absorbed into a supposedly new force. — eq./page UNVERIFIED.
+**ASSUMED** where C is its strength divided by the measured Coulomb strength and $s=m_\sigma *a_\mu$ in natural units. These units import alpha; they do not derive it. First $C=1$ was checked. Then for each s, ONLY C was fitted so the numerical 1s energy equals -0.5 E_mu, allowing the excited spectrum to test the potential. This fit is deliberately labeled calibration. It targets the nonrelativistic reference, not the more precise NIST energy; omitted QED physics must not be absorbed into a supposedly new force. — eq./page UNVERIFIED.
 
 | Screening s (rows include FITTED calibration) | 1s with $C=1 / E_\mu$ | Fitted C for $1s=-0.5$ | Calibrated 2s / E_mu | Calibrated 2p / E_mu | $2s-2p$ separation (eV) |
 |---:|---:|---:|---:|---:|---:|
@@ -170,4 +170,4 @@
 - **CITED** NIST hydrogen spectral lines: https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable3.htm . Leading reference only; resolved fine structure is outside the solver. — eq./page UNVERIFIED.
 - **CITED** Faddeev and Niemi, Knots and Particles: https://arxiv.org/abs/hep-th/9610193 . Motivation for texture models, not replication. — eq./page UNVERIFIED.
 - **CITED** Samoilenka and Shnir, Magnetic Hopfions in the Faddeev-Skyrme-Maxwell model: https://doi.org/10.1103/PhysRevD.97.125014 . Explicitly gauged model for comparison. — eq./page UNVERIFIED.
-- **CITED** User theory notes: docs/POSSIBILITY_CLOUD_THEORY.md and archive/MASTER_PHYSICS_DOCUMENT.md. Candidate 0 is a new proposed formalization, not a claim that all its terms were already derived in those notes. — eq./page UNVERIFIED.
+- User theory notes: docs/POSSIBILITY_CLOUD_THEORY.md and archive/MASTER_PHYSICS_DOCUMENT.md. Candidate 0 is a new proposed formalization, not a claim that all its terms were already derived in those notes. — eq./page UNVERIFIED.

@@ -24,7 +24,7 @@
 
 **DERIVED** In units $h^{2}z/K$ the checked CcFf contribution is therefore
 
-**DERIVED** 1/(144ε²) + [approximately −0.0247 − L/48]/ε.
+**DERIVED** $1/(144\epsilon ^{2}) + [\text{approximately} -0.0247 - L/48]/\epsilon$.
 
 **DERIVED** Adding it to the scalar and QFf subtotal gives a double pole $5/(144\epsilon ^{2})$ and a simple pole approximately $[-0.1506-5L/48]/\epsilon$. Both FFff graphs and the matter counterterms still enter the projected Newton sum. The absence of the full projected higher poles and the comparison with $1/24$ remain open.
 

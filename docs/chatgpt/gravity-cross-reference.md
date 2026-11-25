@@ -46,10 +46,10 @@
 
 ## Corrections to earlier explanatory material
 
-1. **CITED** The Higgs boson is an excitation of the Higgs field. The experimentally observed excitation is spin 0 [1]. “Boson” includes particles of different integer spins; it does not mean tensor. — eq./page UNVERIFIED.
+1. **CITED** ATLAS: The Higgs boson is an excitation of the Higgs field. The experimentally observed excitation is spin 0 [1]. “Boson” includes particles of different integer spins; it does not mean tensor. — eq./page UNVERIFIED.
 2. **DERIVED** A scalar field has a tensor stress-energy. This lets it source gravity, but does not give it independent spin-2 polarizations.
 3. **DERIVED** The video's “photons have no inertia” statement is misleading. Photons have zero rest mass, nonzero energy and momentum, and contribute to stress-energy. Their lack of a rest frame is not an absence of gravitational influence.
-4. **CITED** Most nucleon mass originates in QCD dynamics. The video's exact “only 1%” should not be treated as a universal decomposition: adding valence current-quark masses is different from a renormalized proton mass decomposition. For example, one lattice calculation reports a roughly 9% u,d,s scalar-condensate contribution, with uncertainties [2]. — eq./page UNVERIFIED.
+4. **CITED** Yang et al.: Most nucleon mass originates in QCD dynamics. The video's exact “only 1%” should not be treated as a universal decomposition: adding valence current-quark masses is different from a renormalized proton mass decomposition. For example, one lattice calculation reports a roughly 9% u,d,s scalar-condensate contribution, with uncertainties [2]. — eq./page UNVERIFIED.
 5. **DERIVED** The Hopf field n is not generally $\nabla\times A$. The pulled-back area two-form is locally represented by a curvature $dA$; its spatial dual is the divergence-free field entering a helicity integral. Factors depend on the normalization used.
 6. **DERIVED** Integer winding labels do not determine oscillation frequencies. Frequencies require the action, solution and fluctuation operator. Earlier claims such as a general $\omega\propto p/q$ were unsupported.
 7. **DERIVED** A stable topological sector need not be a localized particle. A compact-space minimum can spread over the entire sphere.
@@ -160,7 +160,7 @@ $$
 K_v = 1 + 6 \xi ^{2} v^{2}/\bar M_P^{2}.
 $$
 
-**CITED** Its inverse square root is then about `4.12e-17`. Strong Higgs/gravity mixing and the resulting decoupling problem are known in the literature [5]. The paper's 2013 collider bound is historical, not asserted here as a current global limit. — eq./page UNVERIFIED.
+**DERIVED** Its inverse square root is then about `4.12e-17`. **CITED** Atkins and Calmet: Strong Higgs/gravity mixing and the resulting decoupling problem are known in the literature [5]. The paper's 2013 collider bound is historical, not asserted here as a current global limit. — eq./page UNVERIFIED.
 
 **DERIVED** An additional explicit tree-level check retains the full conformal mass transformation. Define $f=\xi v^{2}/\bar M_P^{2}$ and $\Omega ^{2}=F(r)/\bar M_P^{2}$. For massive fermions and vector bosons whose Jordan masses are proportional to r, their Einstein-frame masses are proportional to $r/\Omega$. Therefore the linear canonically normalized radial coupling, relative to the usual $m/v$, is
 
@@ -178,17 +178,17 @@ $$
 
 **DERIVED** The **specific connection to the original notes** is electroweak topology. A fixed-norm Higgs doublet has an S3 of orientations. In the ordinary linear field description the full four-real-component field can reach zero, so a winding of normalized orientations is not automatically protected. Electroweak gauge transformations and gauge fields must also be included. An n constructed from $H^\dagger\sigma H/(H^\dagger H)$ is not an independent gauge-invariant physical orientation under local SU(2).
 
-**CITED** Published electroweak-Skyrmion work supplies a usable extension: additional derivative operators can stabilize finite-size configurations in specified effective theories [6]. It is theoretical evidence about those actions, not an observation of such particles. HEFT lets the Higgs radial field and Goldstone orientation be treated more generally; the referenced calculation also neglects hypercharge, so it is not the complete Standard Model. — eq./page UNVERIFIED.
+**CITED** Criado, Khoze and Spannowsky: Published electroweak-Skyrmion work supplies a usable extension: additional derivative operators can stabilize finite-size configurations in specified effective theories [6]. It is theoretical evidence about those actions, not an observation of such particles. HEFT lets the Higgs radial field and Goldstone orientation be treated more generally; the referenced calculation also neglects hypercharge, so it is not the complete Standard Model. — eq./page UNVERIFIED.
 
-**CITED** A 2026 classification further emphasizes that locally measured Higgs-sector behavior need not uniquely fix the global topology of its scalar manifold [7]. That is relevant to “there may be more to the Higgs,” without establishing any gravitational conclusion. — eq./page UNVERIFIED.
+**CITED** Criado: A 2026 classification further emphasizes that locally measured Higgs-sector behavior need not uniquely fix the global topology of its scalar manifold [7]. That is relevant to “there may be more to the Higgs,” without establishing any gravitational conclusion. — eq./page UNVERIFIED.
 
 **DERIVED** The next required bridge is still a healthy universal spin-2 response of that **same** quantum action. Copying a CEV propagator from another scalar theory onto an electroweak soliton model does not provide it.
 
 ## What graphene contributes
 
-**DERIVED** The new tight-binding control expands the honeycomb band energy `|t sum_j exp(i k.delta_j)|` near a Dirac point. At lattice spacing and $\hbar$ equal to one, twelve momentum/hopping cases reproduce speed $3t/2$. This is an independent check of collective Dirac behavior, not evidence of gravitational dynamics.
+**DERIVED** The new tight-binding control expands the honeycomb band energy $|t\sum_j\exp(i k\cdot\delta_j)|$ near a Dirac point. At lattice spacing and $\hbar$ equal to one, twelve momentum/hopping cases reproduce speed $3t/2$. This is an independent check of collective Dirac behavior, not evidence of gravitational dynamics.
 
-**CITED** Published strained-graphene constructions derive effective zweibeins and gauge fields for quasiparticles, including a teleparallel $2+1$ dimensional description [8]. Their geometry depends on the material degrees of freedom and the excitations being described. The Higgs vacuum has not been shown to possess a graphene lattice. A successful underlying-medium model must also recover observed Lorentz behavior and universal matter coupling. — eq./page UNVERIFIED.
+**CITED** Volovik and Zubkov: Published strained-graphene constructions derive effective zweibeins and gauge fields for quasiparticles, including a teleparallel $2+1$ dimensional description [8]. Their geometry depends on the material degrees of freedom and the excitations being described. The Higgs vacuum has not been shown to possess a graphene lattice. A successful underlying-medium model must also recover observed Lorentz behavior and universal matter coupling. — eq./page UNVERIFIED.
 
 ## The latest auxiliary poles remain a separate result
 
@@ -202,7 +202,7 @@ $$
 
 **DERIVED** The scalar rational sign certificate and tensor Rouché certificate were rerun successfully in this session. This rechecks the exact-arithmetic implementations, rather than independently reproducing every earlier proof or physical assumption. Neither certificate establishes the constrained theory's observable spectrum.
 
-**CITED** Single-source cancellation, classical elimination, an auxiliary Gaussian determinant and the exact determinant-weighted constraint identity are distinct claims. The latter embeds a **specified** reduced measure; it does not select that measure. Invertible field redefinitions cannot erase a real physical instability while preserving all physical observables [9]. The full matched quantum generating functional remains a missing construction. — eq./page UNVERIFIED.
+**CITED** Criado and Perez-Victoria: Single-source cancellation, classical elimination, an auxiliary Gaussian determinant and the exact determinant-weighted constraint identity are distinct claims. The latter embeds a **specified** reduced measure; it does not select that measure. Invertible field redefinitions cannot erase a real physical instability while preserving all physical observables [9]. The full matched quantum generating functional remains a missing construction. — eq./page UNVERIFIED.
 
 ## What a genuine common theory must show
 
@@ -214,7 +214,7 @@ $$
 
 **CITED** with the appropriate physical normalization, causal prescription and universal coupling. A scalar-mediated inverse-square force or a tensor-valued composite operator is insufficient. The Weinberg–Witten assumptions must be checked explicitly [10]. Once a suitable massless spin-2 system exists, known consistency constructions constrain its nonlinear completion toward Einstein dynamics under their assumptions [11]. — eq./page UNVERIFIED.
 
-**CITED** Low-energy quantum GR is already a useful effective theory [12]. A new microscopic explanation must add what that framework leaves unresolved; it does not need to discard its tested low-energy behavior. — eq./page UNVERIFIED.
+**CITED** Donoghue: Low-energy quantum GR is already a useful effective theory [12]. A new microscopic explanation must add what that framework leaves unresolved; it does not need to discard its tested low-energy behavior. — eq./page UNVERIFIED.
 
 ## Concrete continuation
 

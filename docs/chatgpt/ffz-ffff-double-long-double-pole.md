@@ -10,7 +10,7 @@
 
 ## A
 
-**DERIVED** At $\epsilon =0$ the density on either long orientation is $T^{-3}(1-P/T)$. Only the fermion variance 3T² can make a long logarithm. Its pole factor is $1/(2\epsilon )$. The other long length has an integrable density with $\int 1/8-Q/24$ for one orientation. Include the multiplicity of two orientations in each pair and the factor $2/3$ in the mass profile. With $n=4(1-P)(1-Q)+2PQ$, the angular B-profile residue for the chart is
+**DERIVED** At $\epsilon =0$ the density on either long orientation is $T^{-3}(1-P/T)$. Only the fermion variance $3T^{2}$ can make a long logarithm. Its pole factor is $1/(2\epsilon )$. The other long length has an integrable density with $\int 1/8-Q/24$ for one orientation. Include the multiplicity of two orientations in each pair and the factor $2/3$ in the mass profile. With $n=4(1-P)(1-Q)+2PQ$, the angular B-profile residue for the chart is
 **DERIVED** $4\int dP dQ r n [1/4-(P+Q)/24] = 16/45$.
 **DERIVED** At $\epsilon =0$ the Weyl numerator has no degree-two term in this chart, because both long lines are fermions. The graph double-pole coefficient is therefore $-(16/45)/288 = -1/810$.
 

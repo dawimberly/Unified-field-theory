@@ -18,7 +18,7 @@
 
 ## Extracting the same term from the four-Yukawa kernels
 
-**DERIVED** For FFff(A) only the two scalar bridges contribute. At the double-short corner the relevant expression is $-(8/3)\epsilon W r^{2}n$. In effective lengths P,Q, write $W=1+P(1/f-1)+Q(1/g-1)$. The PQ coefficient of W r²n is $54-12/f-12/g$. Its fraction-weighted integral is $-5/2$. Converting the $\epsilon$ times angular double pole by the graph and radial prefactor $+1/288$ gives **$5/216$**. The Weyl term on this scalar mass insertion has no long logarithm in A, since both long lines are fermions.
+**DERIVED** For FFff(A) only the two scalar bridges contribute. At the double-short corner the relevant expression is $-(8/3)\epsilon W r^{2}n$. In effective lengths P,Q, write $W=1+P(1/f-1)+Q(1/g-1)$. The PQ coefficient of $W r^{2}n$ is $54-12/f-12/g$. Its fraction-weighted integral is $-5/2$. Converting the $\epsilon$ times angular double pole by the graph and radial prefactor $+1/288$ gives **$5/216$**. The Weyl term on this scalar mass insertion has no long logarithm in A, since both long lines are fermions.
 
 **DERIVED** For B the double-short corner vanishes. The two mixed overlaps integrate the scalar-long logarithm proportional to $-(8/3)\epsilon (1-P)$ against the Jacobian 1−P, giving $+1/54$ after radial conversion. The two-long overlap gives $+1/27$ from the scalar-long cross term. Thus the scalar mass piece is **$1/18$** for B, and the two graphs sum to **$17/216$**.
 

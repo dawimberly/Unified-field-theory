@@ -6,6 +6,8 @@
 
 ## Research record
 
+**DERIVED** The code checks the relation between spatial dimension $d$ and spacetime dimension $D$, and evaluates the restricted dilation energy $E(s)$.
+
 ```python
 import json
 from fractions import Fraction as F

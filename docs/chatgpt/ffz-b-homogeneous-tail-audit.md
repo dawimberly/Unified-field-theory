@@ -12,12 +12,12 @@
 **DERIVED** $J_s = ∫₀¹ [x^(-2+2\epsilon )+x^(2\epsilon )](1+x)^(-3\epsilon ) dx.$
 **DERIVED** Integrating the derivative of $x^{-1+2\epsilon }(1+x)^{-3\epsilon }$, first in the convergent domain and then by continuation, gives
 **DERIVED** $J_s = 2^(-3\epsilon )/(2\epsilon -1) + [3\epsilon /(2\epsilon -1)] H + J₂,$
-**DERIVED** where $H=\int _{0}¹ x^{-1+2\epsilon }(1+x)^{-1-3\epsilon } dx$ and J₂ is the second, regular term of J_s. Subtracting H's value at $x=0$ gives $H=1/(2\epsilon )-\ln 2+O(\epsilon )$. Direct differentiation gives $J_{2}=1+(1-6 \ln 2)\epsilon +O(\epsilon ^{2})$. Together this yields $J_s=-3/2-4\epsilon +O(\epsilon ^{2})$. The cross term has ratio weight $J_c=2\int _{0}¹ x^{-1+2\epsilon }(1+x)^{-3\epsilon } dx=1/\epsilon +O(\epsilon )$. Its constant vanishes.
+**DERIVED** where $H=\int _{0}^{1} x^{-1+2\epsilon }(1+x)^{-1-3\epsilon } dx$ and J₂ is the second, regular term of J_s. Subtracting H's value at $x=0$ gives $H=1/(2\epsilon )-\ln 2+O(\epsilon )$. Direct differentiation gives $J_{2}=1+(1-6 \ln 2)\epsilon +O(\epsilon ^{2})$. Together this yields $J_s=-3/2-4\epsilon +O(\epsilon ^{2})$. The cross term has ratio weight $J_c=2\int _{0}^{1} x^{-1+2\epsilon }(1+x)^{-3\epsilon } dx=1/\epsilon +O(\epsilon )$. Its constant vanishes.
 
 **DERIVED** The angular factor before the spin normalization is
 **DERIVED** $(c^-\epsilon /\epsilon ) [(2dk/9) J_s - d(4-d) J_c/9]$,
 **DERIVED** where $d=4-2\epsilon$ and $k=-1+3\epsilon$. This includes both square numerators and the simplex weight $1/6$. Its pole and constant are $4/(9\epsilon )-2/3-(4/9)\ln c$. Restoring $d(d+2)/4$ and the radial and curvature prefactor yields
-**−1/(54ε²) + [−11/324+(ln c)/54]/ε**
+**$-1/(54\epsilon ^{2}) + [-11/324+(\ln c)/54]/\epsilon$**
 **UNVERIFIED** in units $h^{2}z/K$. The double pole matches the earlier homogeneous contribution exactly. The simple pole is new for this subtraction term. The nonhomogeneous remainders and other regions are separate, so this check leaves the total mismatch unresolved.
 
 ## Reproduction

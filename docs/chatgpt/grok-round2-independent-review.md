@@ -25,7 +25,7 @@
 **DERIVED** $\sqrt{g}=1-t^2 tr(h^2)/4+O(t^3),$
 **DERIVED** $g_inverse=I-th+t^2 h^2+O(t^3).$
 
-**DERIVED** The quadratic coefficient of sqrt(g)[g_inverse.P/2+<V>] is
+**DERIVED** The quadratic coefficient of $\sqrt{g}[g_{\mathrm{inverse}}:P/2+\langle V\rangle]$ is
 
 **DERIVED** $C_TT=[\frac{p}{2}-\frac{Dp}{8}-<V>/4]tr(h^2).$
 
@@ -68,9 +68,9 @@
 
 ## What is still missing to identify this with constrained CEV
 
-1. **CITED** Quantum definition/measure. DERIVATION.md replaces the constrained composite construction by -ln integral Dphi exp(-S_E[g,phi]) at external g. This is a legitimate matter generating functional, but the exact map to the original constrained functional integral has not been established. Carone 1911.13166, footnote 4, explicitly distinguishes imposing the stress constraint from merely integrating over an auxiliary metric because a functional determinant can differ. Show that the relevant difference is absent or subleading at the stated order, or state the result as belonging to the auxiliary-metric model only. — eq./page UNVERIFIED.
+1. **CITED** Quantum definition/measure. DERIVATION.md replaces the constrained composite construction by $-\ln\int\mathcal D\phi\,\exp(-S_E[g,\phi])$ at external g. This is a legitimate matter generating functional, but the exact map to the original constrained functional integral has not been established. Carone 1911.13166, footnote 4, explicitly distinguishes imposing the stress constraint from merely integrating over an auxiliary metric because a functional determinant can differ. Show that the relevant difference is absent or subleading at the stated order, or state the result as belonging to the auxiliary-metric model only. — eq./page UNVERIFIED.
 2. **DERIVED** Euclidean sign map. From the displayed positive Euclidean action and $T=0$, algebraic elimination gives $g_{ab}=-a P_{ab}/V$. At $D=4$ its on-shell density is $-\sqrt{\det P}/V$ on a real positive-metric branch, not automatically the positive determinant density written by analogy with the Lorentzian action. A defined Wick rotation, clock-field contour and potential convention must connect them. This is not a proof that no continuation exists; it is an uncompleted map already acknowledged in the supplied derivation.
-3. **CITED** Counterterm/gauge bookkeeping. The original CEV gauge in 1710.09367 Eq. 2.7 has the clock gradient squared $V0/a-c1$. The new text also puts an explicit -c1 delta_ab inside P while writing $X=b x$. Define whether $b^{2}$ is the unshifted coefficient or the already-renormalized clock gradient. Otherwise the same subtraction can be counted twice. The statement $b^{2}=c1$ cannot be identified literally with the original physical clock gradient without this definition; the original tuned gradient vanishes.
+3. **CITED** Carone, Claringbold and Vaman: Counterterm/gauge bookkeeping. The original CEV gauge in 1710.09367 Eq. 2.7 has the clock gradient squared $V0/a-c1$. The new text also puts an explicit -c1 delta_ab inside P while writing $X=b x$. Define whether $b^{2}$ is the unshifted coefficient or the already-renormalized clock gradient. Otherwise the same subtraction can be counted twice. The statement $b^{2}=c1$ cannot be identified literally with the original physical clock gradient without this definition; the original tuned gradient vanishes.
 4. **DERIVED** Complete source map. The Euclidean normalization magnitude was checked above, but the constrained composite-source identification and Lorentzian continuation remain required for an actual physical scattering residue. Symbolic replacement of m in a free bubble does not by itself supply this map.
 
 ## Gap equation: reproduced roots, controlled interpretation

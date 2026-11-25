@@ -31,4 +31,4 @@
 
 **ASSUMED** Next decisive calculation: evolve the candidate action's fields with conserved stress-energy, extract the total quadrupole before/during/after coupling, and account for outgoing energy. The earlier energy minima are not such trajectories; optimization steps are not physical time. A binding transient could initially raise radiation before the final state becomes quieter.
 
-**DERIVED** Reference: David Tong, General Relativity, section 5.3.4, https://www.damtp.cam.ac.uk/user/tong/gr/grhtml/S5.html
+**CITED** Reference: David Tong, General Relativity, section 5.3.4, https://www.damtp.cam.ac.uk/user/tong/gr/grhtml/S5.html

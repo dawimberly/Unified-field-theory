@@ -6,6 +6,6 @@
 
 ## Research record
 
-**ASSUMED** The proposed memory effect was that a configuration that once took a given amount of time or energy might become easier to form subsequently. Rupert Sheldrake's morphic resonance was the conceptual prompt.
+**ASSUMED** The proposed memory effect was that a configuration that once took a given amount of time $t$ or energy $E$ might become easier to form subsequently. Rupert Sheldrake's morphic resonance was the conceptual prompt.
 
 **UNVERIFIED** The inference from larger occurrence probability to reduced total energy requires an explicit transition model and energy accounting. The accessible conversation did not supply a quantitative coupling, threshold, experimental detection or validated prediction.

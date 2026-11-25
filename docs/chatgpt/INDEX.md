@@ -115,7 +115,7 @@
 
 ## Claim labels
 
-- **CITED** identifies imported paper or reference claims. Known equation locations are retained; missing locations read “eq./page UNVERIFIED”.
+- `CITED` identifies claims on lines naming their paper, book, article or reference source. Known equation locations are retained; missing locations read “eq./page UNVERIFIED”.
 - **DERIVED** identifies calculations conditional on their stated inputs. Archived numerical checks are historical reports, not newly rerun physics tests.
 - **ASSUMED** identifies model choices and starting premises, including the $1/24$ Einstein-gravity normalization target.
 - **FITTED** identifies calibrated or tuned quantities and selected spectra; these are not independent physical predictions.

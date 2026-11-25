@@ -30,10 +30,10 @@
 ## Independent checks completed
 - **DERIVED** Static energy was cross-checked against the existing real-time solver at the initial seed on each grid.
 - **DERIVED** Directional energy derivatives agreed with the analytic gradient. Individual errors are in the JSON files.
-- **DERIVED** The full amplitude-orientation constrained Hessian-vector product was derived, including the sphere-constraint curvature term -(n dot grad_n E) delta n.
+- **DERIVED** The full amplitude-orientation constrained Hessian-vector product was derived, including the sphere-constraint curvature term $-(n\cdot\nabla_nE)\delta n$.
 - **DERIVED** Hessian-vector finite-difference relative errors: amplitude $1.11\times10^{-10}$, orientation $1.92\times10^{-10}$; bilinear symmetry error $1.61\times10^{-16}$.
 - **DERIVED** All 648 amplitude/orientation vacuum eigenvalues on an independent $6^{3}$ lattice matched the Fourier prediction within $4.83\times10^{-13}$. Negative eigenvalues: 0; orientation constant-mode zeros: 2.
-- **DERIVED** At constant theta the quadratic phase contribution is $\int \rho ^{2}$ |grad delta theta|$^{2} / 2$, so it is nonnegative, with no quadratic cross terms with rho or n. Its omission from the static minimizer does not hide a negative phase-energy direction for positive rho.
+- **DERIVED** At constant theta the quadratic phase contribution is $\int\rho^2|\nabla\delta\theta|^2/2$, so it is nonnegative, with no quadratic cross terms with rho or n. Its omission from the static minimizer does not hide a negative phase-energy direction for positive rho.
 - **DERIVED** Five perturbation directions, at two finite-difference sizes, were probed at each endpoint: amplitude, orientation, mixed, translation-like, and internal rotation. These are directional curvature diagnostics, not a complete knot eigenvalue spectrum. At a nonstationary endpoint they are not normal-mode stability evidence.
 
 ## Exact vacuum result

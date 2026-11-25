@@ -10,7 +10,7 @@
 
 ## Off-diagonal resolvent
 
-**DERIVED** In the flat Weyl frame $\delta D=-\kappa m$ |u|². The first derivative of $D^{-1}$ is $-S \delta D S$. Write each flat spinor resolvent as $(m-\gamma \cdot \partial )G$, then transfer the derivative of the second factor to its other endpoint. The odd Clifford component is $\kappa z \gamma \cdot (\partial y-\partial x)Q$, where $Q=\int du G(x-u)$|u|²G(u−y). The even Clifford part vanishes between the two opposite chiral projections on every kinetic line.
+**DERIVED** In the flat Weyl frame $\delta D=-\kappa m|u|^2$. The first derivative of $D^{-1}$ is $-S \delta D S$. Write each flat spinor resolvent as $(m-\gamma \cdot \partial )G$, then transfer the derivative of the second factor to its other endpoint. The odd Clifford component is $\kappa z \gamma \cdot (\partial y-\partial x)Q$, where $Q=\int du\,G(x-u)|u|^2G(u-y)$. The even Clifford part vanishes between the two opposite chiral projections on every kinetic line.
 
 **DERIVED** At fixed total Schwinger length s, the convolution in Q has extra factor s and its conditional position moment is $\mu ^{2}+2ds a(1-a)$, with $\mu =ax+(1-a)y$. Differentiating before anchoring gives two terms, from the heat kernel and from $\mu ^{2}$. With $\Delta =x-y$ their combined numerator at fixed a is
 **DERIVED** $\Delta [\mu ^{2}+2ds a(1-a)] + 2s(1-2a)\mu$.

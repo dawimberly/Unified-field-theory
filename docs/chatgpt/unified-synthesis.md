@@ -46,7 +46,7 @@
 | **ASSUMED** 5 | Symmetry breaking → vacuum manifold $V = G/H$ | Open |
 | **ASSUMED** 6 | Homotopy groups → defect classification | Open |
 | **ASSUMED** 7 | Match defects to observed particles | Hypothesis |
-| **ASSUMED** 8 | Recover one known number ($E_{1} = -13.6 eV$, Rydberg, **not yet α**) | Not done |
+| **ASSUMED** 8 | Recover one known number ($E_{1} = -13.6 eV$, Rydberg, **not yet $\alpha$**) | Not done |
 | **ASSUMED** 9 | Force ratios and coupling constants | Explicitly deferred |
 
 ## Recommended reading order
@@ -60,7 +60,7 @@
 ## Next work (your stated priorities)
 
 - **ASSUMED** **Frequency matching math** — make the Hopfion capture rule selection rule quantitative
-- **ASSUMED** **Field Ψ** — complete the Lagrangian terms and boundary conditions
-- **ASSUMED** **ω_cloud** — fix the master clock or derive it from a known constant
+- **ASSUMED** **Field $\Psi$** — complete the Lagrangian terms and boundary conditions
+- **ASSUMED** **$\omega _cloud$** — fix the master clock or derive it from a known constant
 
 ---

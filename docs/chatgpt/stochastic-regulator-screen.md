@@ -28,7 +28,7 @@
 
 **CITED** Wallstrom, Inequivalence between the Schrodinger equation and the Madelung hydrodynamic equations, Physical Review A 49 (1994), 1613, DOI 10.1103/PhysRevA.49.1613, identifies a missing quantization condition in reconstructing quantum mechanics from the hydrodynamic equations. The publisher abstract was inspected; its full proof was not retrieved. This is a required test for a claimed stochastic derivation, not a demonstrated refutation of Erlich's specific model. — eq./page UNVERIFIED.
 
-**DERIVED** https://journals.aps.org/pra/abstract/10.1103/PhysRevA.49.1613
+**CITED** https://journals.aps.org/pra/abstract/10.1103/PhysRevA.49.1613
 
 **CITED** Our applicability inference: constructing a stochastic drift from an already admissible quantum wavefunctional is different from deriving the global quantum state space. The latter must explain phase/circulation quantization and behavior around nodes. The 2025 essay explicitly writes its drift in terms of a wavefunctional's phase and amplitude; that reverse construction does not by itself settle the forward derivation. A text search for Wallstrom returned no match in the two inspected manuscripts. This absence does not prove that the issue is unaddressed elsewhere. — eq./page UNVERIFIED.
 
@@ -63,4 +63,4 @@
 - **CITED** Bombelli, Henson, Sorkin: https://doi.org/10.1142/S0217732309031958 . Author abstract and journal reference verified. — eq./page UNVERIFIED.
 - **CITED** Wallstrom: https://doi.org/10.1103/PhysRevA.49.1613 . Publisher abstract and journal details verified. — eq./page UNVERIFIED.
 
-**CITED** No new numerical scans were performed. No complete quantum-gravity solution, regulator-spectrum equivalence, or novelty claim is made. — eq./page UNVERIFIED.
+No new numerical scans were performed. No complete quantum-gravity solution, regulator-spectrum equivalence, or novelty claim is made. — eq./page UNVERIFIED.

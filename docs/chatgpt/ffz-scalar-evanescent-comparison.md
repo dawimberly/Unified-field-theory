@@ -18,7 +18,7 @@
 
 | Graph | Coefficient | Derivation |
 | --- | ---: | --- |
-| **DERIVED** QQ with two tadpoles | −1 | Flat graph is −A²T₂/2 after extracting the quartic couplings. |
+| **DERIVED** QQ with two tadpoles | −1 | Flat graph is $-A^{2}T_{2}/2$ after extracting the quartic couplings. |
 | **DERIVED** QQ basketball | $-1/2$ | Flat graph is $-E/8$ with four scalar masses shifted together. |
 | **DERIVED** QCc with tadpole | $-1/2$ | Flat graph is z A times one negative mass derivative of I, at fixed cubic coupling. |
 | **DERIVED** QCc doubled | $-1/4$ | Flat graph is $z G/4$, with all five lines scalar. |

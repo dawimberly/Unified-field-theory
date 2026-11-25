@@ -46,4 +46,4 @@
 
 **CITED** Carone, Claringbold and Vaman, Composite graviton self-interactions in a model of emergent gravity, arXiv:1710.09367, Phys. Rev. D 98, 024041 (2018): https://arxiv.org/abs/1710.09367 . Carone, Composite Gravitons from Metric-Independent Quantum Field Theories, arXiv:1911.13166: https://arxiv.org/abs/1911.13166 . These references motivate the program; the conditional kernels and scans above are our calculation, not claims attributed to those papers. — eq./page UNVERIFIED.
 
-**CITED** Run python scalar_full_response_scan.py with NumPy and SciPy. Dimensionless masses are in constituent-mass units. No claim of novelty or experimental confirmation. — eq./page UNVERIFIED.
+Run python scalar_full_response_scan.py with NumPy and SciPy. Dimensionless masses are in constituent-mass units. No claim of novelty or experimental confirmation. — eq./page UNVERIFIED.

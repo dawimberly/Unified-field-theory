@@ -18,8 +18,8 @@
 8. **DERIVED** For CCcc on $p=0$ the reduced network is a triangle with edge lengths v,1−v and qr. Retain the two separate Schwinger lengths within the q pair when forming B. Integrating over v gives the following face, including $dq/q$:
    $-8(2q^{2}r^{2}-q^{2}r+3qr-q+r)/[3(q+1)^{2}(qr+1)^{3}]$.
 9. **DERIVED** Integrating this face over $q\ge 0$ gives a rational function plus a log. Let $r=g(1-g)$. The result is
-   −4r/[3(r−1)]+8(5r−2)/[3(r−1)²]−8(2r²+2r−1)ln r/[3(r−1)³].
-   Its g integral is exactly $4/3$. Integration by parts with the rational primitive of the log coefficient leaves the integrable rational function 4r(4−r)/[3(1−r)²]. The omitted rational endpoint terms cancel the boundary log. The numerical integral agrees independently.
+   $-4r/[3(r-1)]+8(5r-2)/[3(r-1)^{2}]-8(2r^{2}+2r-1)\ln r/[3(r-1)^{3}]$.
+   Its g integral is exactly $4/3$. Integration by parts with the rational primitive of the log coefficient leaves the integrable rational function $4r(4-r)/[3(1-r)^{2}]$. The omitted rational endpoint terms cancel the boundary log. The numerical integral agrees independently.
 10. **DERIVED** The CCcc projective residue is $8/3+2(4/3)=16/3$. Including $\Gamma (1+3\epsilon )$, the signed combined Wick factor $-5/8$ and 1/[4d(d−1)] yields $-5h^{2}z/(72K \epsilon )$, with no double or triple pole. Separately the two CCcc Wick weights $-1/8$ and $-1/2$ give simple poles $-h^{2}z/(72K\epsilon )$ and $-h^{2}z/(18K\epsilon )$.
 
 **DERIVED** These results are bare contributions in the baseline curvature sector. The QCc double pole constrains the sum with other graphs and counterterms. Neither Newton constraint can be decided from these graphs individually. The next scalar calculation is the finite once- and twice-subtracted QCc projective remainder, followed by the Yukawa and counterterm sectors.

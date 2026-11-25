@@ -10,23 +10,23 @@
 
 ## Finite slope in the specified matter subtraction
 
-**DERIVED** For one group use $h=|y|^2/K$, $K=16\pi^2$, $z=m^2$, $L=\ln(z/\mu^2)$, and $v=tw_g$. Let $U_X=-vR/6$ and $U_Y=-U_X$. Extract the even family difference in the coefficient of R(q)R(−q). The order-h coefficient of q² is
+**DERIVED** For one group use $h=|y|^2/K$, $K=16\pi^2$, $z=m^2$, $L=\ln(z/\mu^2)$, and $v=tw_g$. Let $U_X=-vR/6$ and $U_Y=-U_X$. Extract the even family difference in the coefficient of $R(q)R(-q)$. The order-h coefficient of $q^{2}$ is
 
 **DERIVED** $P_{1} = h v^{2}/(216 K z) [L - 0.307317873115]$.
 
-**DERIVED** The three-group sum at $\mu =M$ is +0.00359585422706 h t²/(KM²). This is the matter threshold with a common pure-metric subtraction and no independent t-dependent $R\Box R$ term. The result concerns the Euclidean expansion in q² about zero. It provides a sign and normalization check for subsequent calculations of the nonlocal form factor.
+**DERIVED** The three-group sum at $\mu =M$ is $+0.00359585422706 h t^{2}/(KM^{2})$. This is the matter threshold with a common pure-metric subtraction and no independent t-dependent $R\Box R$ term. The result concerns the Euclidean expansion in $q^{2}$ about zero. It provides a sign and normalization check for subsequent calculations of the nonlocal form factor.
 
 ## Derivation
 
-**CITED** Normalize the two-loop functional by |y|²/2, as in the parent and Martin's scalar and chiral-fermion vacuum diagrams. Let G be the free scalar Green function of mass z and T its coincident limit. Let G_X,G_Y be resolvents with local potentials U_X,U_Y. Up to a source-independent constant the functional reduces to — eq./page UNVERIFIED.
+**CITED** Normalize the two-loop functional by $|y|^{2}/2$, as in the parent and Martin's scalar and chiral-fermion vacuum diagrams. Let G be the free scalar Green function of mass z and T its coincident limit. Let G_X,G_Y be resolvents with local potentials U_X,U_Y. Up to a source-independent constant the functional reduces to — eq./page UNVERIFIED.
 
 **DERIVED** $\int dx\,(G_X(x,x)-T)^2+\int dx\,dy\,[(z-U_X(x))G(x,y)^2G_X(x,y)-zG_X(x,y)^2G_Y(x,y)]$.
 
 **DERIVED** The chiral fermion numerator is $-2\nabla G\cdot \nabla G$ in this normalization. Use $2\nabla G\cdot \nabla G=\Box (G^{2})-2zG^{2}+2T\delta$ and integrate $\Box$ onto G_X at one endpoint. The resolvent equation produces the endpoint source in the displayed functional. For constant sources the formula reduces to the parent's two-loop potential before subdivergence subtraction. The complete expression keeps the local endpoint insertion at finite momentum.
 
-**DERIVED** Expand the resolvents with two opposite-momentum source insertions. In the sunset part the coefficients are −2z per same-line kernel, +z for one distinct-line kernel, and +1 for the kernel with the explicit source at an endpoint. Equal masses allow one representative line or pair for each coefficient. The factors come from 1−3 for same-line insertions and the negative of 1−1−1 for distinct lines. There is no extra factor of two from averaging the Fourier insertions. At $q=0$ a same-line expansion has Schwinger weight a²/2, a distinct pair has ab, and an endpoint-source expansion has a.
+**DERIVED** Expand the resolvents with two opposite-momentum source insertions. In the sunset part the coefficients are −2z per same-line kernel, +z for one distinct-line kernel, and +1 for the kernel with the explicit source at an endpoint. Equal masses allow one representative line or pair for each coefficient. The factors come from $1-3$ for same-line insertions and the negative of $1-1-1$ for distinct lines. There is no extra factor of two from averaging the Fourier insertions. At $q=0$ a same-line expansion has Schwinger weight $a^{2}/2$, a distinct pair has ab, and an endpoint-source expansion has a.
 
-**DERIVED** For Schwinger lengths $a,b,c, D=ab+ac+bc$. The q² slope is minus the effective resistance between the insertion points times the zero-momentum Gaussian. For two points separated by l on line a the resistance is $l-l^{2}(b+c)/D$. For points distances l and r from their common vertex along lines a,b it is $l+r-[(b+c)l^{2}+(a+c)r^{2}+2clr]/D$. The latter also follows by inverting the two-loop quadratic form with entries $a+c,b+c$ and off-diagonal c after routing the momentum on the two segments with opposite signs. Integrating these polynomials gives the functions in the runnable check. The endpoint kernel uses the same-line resistance with one point fixed at the endpoint. The figure-eight square gives the derivative of the squared one-loop bubble, $-\Gamma (\epsilon )\Gamma (1+\epsilon )/(3z)$ with common scale factors suppressed.
+**DERIVED** For Schwinger lengths $a,b,c, D=ab+ac+bc$. The $q^{2}$ slope is minus the effective resistance between the insertion points times the zero-momentum Gaussian. For two points separated by l on line a the resistance is $l-l^{2}(b+c)/D$. For points distances l and r from their common vertex along lines a,b it is $l+r-[(b+c)l^{2}+(a+c)r^{2}+2clr]/D$. The latter also follows by inverting the two-loop quadratic form with entries $a+c,b+c$ and off-diagonal c after routing the momentum on the two segments with opposite signs. Integrating these polynomials gives the functions in the runnable check. The endpoint kernel uses the same-line resistance with one point fixed at the endpoint. The figure-eight square gives the derivative of the squared one-loop bubble, $-\Gamma (\epsilon )\Gamma (1+\epsilon )/(3z)$ with common scale factors suppressed.
 
 ## Endpoint subtraction and cross-check
 
@@ -86,7 +86,7 @@ for L in (0,log(2),log(4)):
 
 ## Next calculation
 
-**ASSUMED** Use the same momentum-routed representation at finite q² to examine the common-contact-subtracted even response and locate its first spectral threshold. A separate independent check can use direct momentum-space Taylor differentiation and massive vacuum integral reduction. For the Newton branch, compute the order-h² pure-metric R simple pole or its improvement-dependent part and test its mass moments. The present result only addresses curvature degree two and order h.
+**ASSUMED** Use the same momentum-routed representation at finite $q^{2}$ to examine the common-contact-subtracted even response and locate its first spectral threshold. A separate independent check can use direct momentum-space Taylor differentiation and massive vacuum integral reduction. For the Newton branch, compute the order-$h^{2}$ pure-metric R simple pole or its improvement-dependent part and test its mass moments. The present result only addresses curvature degree two and order h.
 
 ## Primary papers
 

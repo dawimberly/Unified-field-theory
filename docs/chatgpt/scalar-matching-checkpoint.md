@@ -58,7 +58,7 @@ $$
 
 **DERIVED** With the reference subtractions, $q*=11.3066267794444$. The identical constituent-source scalar trace factor $2-q$* is approximately -9.3066267794444, so that channel does not cancel this zero. Source normalization and the complete physical observable must still be checked before assigning a physical interpretation.
 
-**DERIVED** Changing b by (-.002,-.001,0,.001,.002) moved the zero to approximately (1403.56,116.729,11.3066,2.38058,1.12513). These examples illustrate the theorem; they are not a parameter fit. The corresponding Euclidean momentum is sqrt(q*) times the constituent mass, not q* times the mass.
+**DERIVED** Changing b by (-.002,-.001,0,.001,.002) moved the zero to approximately (1403.56,116.729,11.3066,2.38058,1.12513). These examples illustrate the theorem; they are not a parameter fit. The corresponding Euclidean momentum is $\sqrt{q_*}$ times the constituent mass, not $q_*$ times the mass.
 
 ## Scope and next unresolved issues
 

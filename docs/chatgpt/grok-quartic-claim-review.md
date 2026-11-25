@@ -103,12 +103,12 @@
 
 ## Verification and sources
 
-**CITED** The accompanying script passes 55 algebra, quadrature and counterexample checks. They cover general $D$ C1/C2 algebra, the hard-cutoff correction, a specified PV cancellation, normal-ordering combinatorics, the conditional dimensional Planck relation and a positive determinant-ratio counterexample. They do not verify C4 or C6. — eq./page UNVERIFIED.
+**DERIVED** The accompanying script passes 55 algebra, quadrature and counterexample checks. They cover general $D$ C1/C2 algebra, the hard-cutoff correction, a specified PV cancellation, normal-ordering combinatorics, the conditional dimensional Planck relation and a positive determinant-ratio counterexample. They do not verify C4 or C6. — eq./page UNVERIFIED.
 
-**CITED** Precisely named primary papers consulted: — eq./page UNVERIFIED.
+Precisely named primary papers consulted: — eq./page UNVERIFIED.
 
 - **CITED** Christopher D. Carone, Tangereen V. B. Claringbold and Diana Vaman, Composite graviton self-interactions in a model of emergent gravity, Phys. Rev. D 98, 024041 (2018), https://arxiv.org/abs/1710.09367. — eq./page UNVERIFIED.
 - **CITED** Christopher D. Carone, Composite Gravitons from Metric-Independent Quantum Field Theories, https://arxiv.org/abs/1911.13166. — eq./page UNVERIFIED.
 - **CITED** Chris Li and Diana Vaman, A model of composite gravity with Pauli-Villars regulators, https://arxiv.org/abs/2512.06132. — eq./page UNVERIFIED.
 
-**CITED** No novelty claim. No message was sent to Grok; this is a human-mediated review of the supplied claims. — eq./page UNVERIFIED.
+No novelty claim. No message was sent to Grok; this is a human-mediated review of the supplied claims. — eq./page UNVERIFIED.
