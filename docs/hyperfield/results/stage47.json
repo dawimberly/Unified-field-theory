@@ -1,0 +1,53 @@
+{
+ "firas": {
+  "eta95": 9e-05,
+  "x_range": [
+   1.0548217573313783,
+   11.07562845197947
+  ]
+ },
+ "jnt": {
+  "T": 273.16,
+  "x_fmax": 6.478697039477938e-08,
+  "a0_response_in_units_of_c_over_fmax": 6.808159913572021,
+  "a0_lim95": 6.1819999999999994e-06,
+  "eta95": 5.882838477135445e-14,
+  "fit_residual_at_10kHz": 2.730744653400321e-05,
+  "note": "a0 of a quadratic fit to c/f over 10-368.75 kHz equals 6.81 c/f_max; |a0-1| < 6.18e-06 -> |eta| < 5.9e-14. The fit residual at 10 kHz would be only 2.7e-05, so the a0 bound is the conservative one.",
+  "eta_firas_effect": "at eta = 9e-5 the predicted noise ratio at 368.75 kHz would be 7.19e-04 of nominal"
+ },
+ "purdy": {
+  "x_range": [
+   2.5311207968933443e-06,
+   2.6365841634305677e-05
+  ],
+  "dev95": 0.2,
+  "eta95": 5.2731683268611355e-06,
+  "note": "ASSUMED 95% = 2 x stated 10% average deviation; average over unknown T points bounded by the largest-x point (4.8 K), so conservative"
+ },
+ "co": {
+  "x_range": [
+   0.0,
+   3.919611238684174
+  ],
+  "eta95": 0.0002,
+  "note": "ASSUMED: eta multiplies every population ratio of two different rotational levels once (single-step reading); measured ratios agree with UCL2025 ab initio to <0.02%, so |eta| < 2e-4. The 6 ppm LRT-vs-sensor agreement is NOT used: the Einstein-A ratios were fitted to the same lab data at 296 K with the sensor temperature, so a constant eta is absorbed (circular)."
+ },
+ "eta_prop_x": {
+  "note": "if eta = eps*x the effect is a rescaled temperature; only cross-thermometer comparisons see it: JNT vs CODATA2014 (acoustic-gas dominated) |eps| < 6.2e-06; Purdy |eps| < 0.2",
+  "eps95_jnt": 6.1819999999999994e-06
+ },
+ "verdict": {
+  "freq_independent_eta": {
+   "best_lab": "JNT",
+   "eta95": 5.882838477135445e-14,
+   "factor_vs_firas": 1529873722.5201545
+  },
+  "x_ge_1_only": {
+   "best_lab": "CO line ratios vs ab initio",
+   "eta95": 0.0002,
+   "factor_vs_firas": 2.2222222222222223,
+   "beats_firas": false
+  }
+ }
+}

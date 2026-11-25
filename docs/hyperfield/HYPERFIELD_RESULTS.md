@@ -4130,3 +4130,42 @@ All are honest upper limits; nothing is claimed.
 **Fallback not needed:** a usable spectrum was found.
 
 **Files:** `scripts/stage46_run.py`, `data/stage46_marxglowna2021_fig6_digitized.csv`, `results/stage46.json`, `results/stage46_sources.csv`, `figures/stage46_nfs_gate.png`.
+
+## Stage 47: hysteresis (lock/unlock asymmetry) vs detailed balance in lab thermometry
+
+**Definition.** This is the Stage 31 definition, unchanged. Per quantum, emission/absorption = e^(−x)/(1+η), with x = hν/kT. The steady-state occupation is then n = 1/((1+η)eˣ − 1).
+
+**Bound to beat.** FIRAS: |η| < 9.0×10⁻⁵ (95 %). It probes x = 1.05–11.1 (2–21 cm⁻¹ at 2.728 K, CITED Fixsen 1996, re-fetched).
+
+**How a lab test reads η (DERIVED).**
+- **Mode at x ≪ 1:** n ≈ 1/(x+η), so a thermometer reads T/(1+η/x). A fractional agreement ε between thermometers gives |η| < ε·x. The leverage is a factor 1/x.
+- **Two-level Boltzmann ratio at any x:** ln(N_l/N_u) = x + ln(1+η). A population ratio known to ε gives |η| < ε. There is no leverage.
+
+**Results (95 %).**
+
+| test | x probed | \|η\| bound | vs FIRAS |
+|---|---|---|---|
+| Johnson-noise thermometry: Qu et al. 2017, Metrologia 54, 549; 100 Ω resistor in a TPW cell vs quantum voltage noise; a0 = 1 within 0.89 ± 2.7 ppm over a 10–368.75 kHz quadratic fit (CITED) | 1.8×10⁻⁹ – 6.5×10⁻⁸ | **5.9×10⁻¹⁴** | **1.5×10⁹ × tighter** |
+| optomechanical Raman (sideband) ratio vs diode thermometer: Purdy 2015, 2.637 MHz, 4.8–50 K, "average deviation of less than 10%" (CITED); 95 % taken as 20 % at the largest-x point (ASSUMED, conservative) | 2.5×10⁻⁶ – 2.6×10⁻⁵ | 5.3×10⁻⁶ | 17 × tighter |
+| CO line-intensity ratios (different lower levels) vs UCL2025 ab initio: Li 2025 Sci. Adv., agreement < 0.02 % at 296 K (CITED) | 0 – 3.9 | 2×10⁻⁴ | **2.2 × weaker** |
+| FIRAS μ (Stage 31) | 1.05 – 11.1 | 9.0×10⁻⁵ | — |
+
+**JNT step (DERIVED).**
+- η makes the resistor/QVNS noise ratio 1 − (ηkT/h)/f.
+- A uniform-weight quadratic fit (ASSUMED weights) over the paper's band turns a pure c/f term into a0 = 6.8·c/f_max.
+- So |a0 − 1| < 0.89 + 1.96 × 2.7 = 6.2 ppm gives |η| < 5.9×10⁻¹⁴.
+- At the FIRAS value η = 9×10⁻⁵, the Johnson noise at 368 kHz would be suppressed to 7×10⁻⁴ of nominal, which is grossly excluded.
+
+**Plain answer: do lab data beat FIRAS?**
+- **Yes, if η is frequency-independent**, as Stage 31 ASSUMED. Johnson-noise thermometry beats FIRAS by about 10⁹, and sideband thermometry by about 17×. The leverage comes entirely from x ≪ 1: a fixed lock/unlock asymmetry would dominate the Boltzmann factor for small quanta.
+- **No, if η only acts for quanta with hν ≳ kT** (x ≳ 1, the regime FIRAS probes). The best lab Boltzmann-factor test found, CO line ratios vs ab initio, gives 2×10⁻⁴. FIRAS stays best, by 2.2×.
+- **If η ∝ x**, it is a pure temperature rescale and is invisible to any single thermometer. Only cross-method comparisons constrain it: JNT vs CODATA 2014 (acoustic-gas dominated) gives |ε| < 6.2×10⁻⁶.
+
+**Flags and honest negatives.**
+1. **CO assumption.** The CO bound ASSUMES η multiplies each different-level population ratio once (single-step reading). In a multilevel system a per-transition constant η breaks the Kolmogorov loop condition, so equilibrium populations become path-dependent. The model is not self-consistent beyond two levels without a further rule.
+2. **CO's 6 ppm LRT-vs-sensor agreement is NOT used.** The Einstein-A ratios were fitted to the same lab ratios at 296 K with the sensor temperature, so a constant η would be absorbed. That comparison is circular.
+3. **Not a pure photon process.** Rotational populations (collisions) and membrane phonons (substrate) are thermalized by non-photon processes. Using them ASSUMES η is universal across quanta types. JNT (1-D blackbody on a line) is the closest to FIRAS's photon process.
+4. **Purdy points not digitized.** I used Purdy's stated 10 % "average deviation" rather than digitizing Fig. 4c.
+5. **Reference k.** CODATA 2014 k is taken as η-independent (acoustic gas thermometry; ASSUMED).
+
+**Files:** `scripts/stage47_run.py`, `results/stage47.json`, `results/stage47_sources.csv`, `figures/stage47_hysteresis.png`.
