@@ -2355,3 +2355,125 @@ Scripts: `scripts/stage24_run.py`, `scripts/stage24_fig.py`. Output: `results/st
 - Smearing-length note (unrefereed): https://doi.org/10.5281/zenodo.24089422
 
 ![Stage 24](figures/stage24_smearing.png)
+
+## Stage 25 — Testing the two Stage 24 flags: Eq. 47 N-counting and the Donadi carry-over
+
+**Question.** Stage 24 raised two flags without testing them:
+- **(A)** Eq. 47's floor uses $N_\lambda M_\lambda^2$ with the total mass, while the ceiling counts constituents independently.
+- **(B)** The Donadi-type spontaneous-radiation bound on the DP smearing length might carry over to Oppenheim's kernel.
+
+Both are now tested. Scripts: `scripts/stage25_run.py` and `scripts/stage25_fig.py`. Results: `results/stage25.json`. Runtime is 168 s.
+
+### (A) N-counting: derived from the paper's own master equation
+
+**Starting point (CITED, Methods Eqs. 135–137).**
+- Integrating out the classical field gives
+  $\dot\rho_Q=\tfrac12\int D_0(x,y)[\hat m(x),[\rho_Q,\hat m(y)]]$.
+- The L/R coherence decays at
+  $\lambda=\int D_0(x,y)\,[m_L-m_R](x)\,[m_L-m_R](y)$ (Eq. 137).
+
+**Applying it to a rigid body (DERIVED).**
+- Take N nuclei of mass $m_a$, each Gaussian-smeared at ℓ, and DP kernel $D_0(x,y)=\kappa G/(\hbar|x-y|)$. The position-basis decoherence function at displacement Δx is then exactly
+  $\lambda=\kappa\frac{G}{\hbar}m_a^2 S$, with
+  $S=\sum_{ij}[2K(r_{ij})-K(|\mathbf r_{ij}+\Delta x\hat e|)-K(|\mathbf r_{ij}-\Delta x\hat e|)]$ and $K(r)=\mathrm{erf}(r/2\ell)/r$, $K(0)=1/(\sqrt\pi\ell)$.
+- The body's own density enters, not the c.o.m. expectation density. Eq. 137 with $\langle\hat m\rangle$ is only the localized-branch limit.
+
+**Regimes for Δx larger than the body (TL case; DERIVED).**
+- $S\simeq 2N/(\sqrt\pi\ell)$ (incoherent, ∝ $M^2/N$) for ℓ ≪ ℓ* = R/(1.2√π N).
+- $S\simeq 2.4N^2/R$ (coherent body self-energy, ∝ $M^2/R$, i.e. $N^{5/3}$) for ℓ* ≪ ℓ ≪ R.
+- $S\simeq 2N^2/(\sqrt\pi\ell)$ for ℓ ≫ R.
+- ℓ* is 2.6e-13 m at 172 kDa and 6.4e-14 m at 1.415 MDa.
+- The atom spacing is not a transition when Δx ≫ R.
+- It becomes one only for Δx < a. Then the crossover is at ℓ ≈ R/N^{1/3} = 2.1 Å, i.e. the lattice spacing.
+
+**Numerical double sum (DERIVED).**
+- Model: bcc Na clusters with a = 4.29 Å (CITED). N = 7,482 (172 kDa, R = 4.13 nm) and N = 61,600 (1.415 MDa, R = 8.34 nm).
+- Method: exact sums over j for 1,200 or 600 random rows i, at 16 values of ℓ from 1e-16 to 1e-7 m. Standard errors are ≤ 1.4%.
+- Check: the exact shell histogram gives $\sum_{i\neq j}1/r$ = 0.996 and 0.999 of the uniform-sphere value $6N^2/5R$.
+- At Pedalino, ℓ = 1e-15 m, Δx = 133 nm: S = 8.47e18 m⁻¹, of which 99.6% is incoherent.
+- The effective exponent p in S ∝ N^p (from 7,482 to 61,600 atoms) is:
+
+| ℓ [m] | 1e-16 | 1e-15 | 1e-14 | 1e-13 | 1e-12 | 1e-10 | 1e-9 | 1e-8 | 1e-7 |
+|---|---|---|---|---|---|---|---|---|---|
+| p (Δx = 133 nm) | 1.00 | 1.01 | 1.05 | 1.28 | 1.57 | 1.65 | 1.69 | 1.97 | 2.00 |
+| p (Δx = 1 Å) | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.01 | 1.13 | 1.93 | 2.00 |
+
+**The decoherence rate never scales as N·M² (p = 3).** Its range is p = 1 (M²/N) to p = 2 (M²).
+
+**What the paper encodes (CITED).**
+- Eq. 151: $\lambda\sim N_\lambda M_\lambda^2/(V_\lambda D_2)$, "M_λ is the mass of a composite particle … made up of N_λ particles, each with volume V_λ".
+- The numbers in Eq. 152 (M = 1e-24 kg, N = 1e3, V = 1e-37 m³, λ = 10 s⁻¹ → 1e-9) reproduce only with the **total** mass.
+- The paper's own single-particle result from Eq. 137 is $\lambda=2D_0M^2/V$. Applied per constituent, this gives $N(M/N)^2/V=M^2/(NV)$.
+- The ceiling side (Eqs. 147–150) keeps only the $i=j$ self-terms, "$\mathbb E[\sum_{ij}F_iF_j]\sim\sum_i\mathbb E[F_i^2]$". That is independent nuclei.
+
+**Verdict A.**
+- **The inconsistency is real (DERIVED).** It is in the published text, not our misreading. Stage 15/22 followed the text and Table 1 correctly.
+- **Floor at Pedalino.** The derived Eq. 137 floor is 7.59e-35, against 1.47e-29 published. It moves down by **5.29 orders**:
+  - −7.75 from N²;
+  - +2.46 because the self-energy scale is ℓ = r_N, not R_λ = (r_N²Δx)^{1/3} = 5.1e-13 m.
+- **Window.** The ceiling is unchanged because it already counts incoherently. The window widens from 3.66 to **8.95 orders**.
+- **Closing mass at the cheapest MUSCLE point** (ξ = 0.8, d = 133 nm): rises from 1.39 MDa to **3,930 MDa**, at 7 mm/s with a 95 km sag. That is unreachable. **Stage 22's conclusion does not survive the corrected counting.**
+- **Robustness.**
+  - Resolving nucleons inside the Na nucleus (A = 23, r_nuc = 3.4 fm) changes the floor by −0.18 orders.
+  - The paper's δ-kernel exclusion survives: 1e-9 becomes 1e-15 (V = 1e-37) or 1e-7 (V = r_N³), against an upper bound of 1e-41.
+- **Correction to Stage 24.** Its "indepDP" row (window 11.41, M_close 87,147 MDa) kept R_λ. The derived values are 8.95 and 3,930 MDa.
+- **No erratum found.** There is no correction notice on the Nat Commun article page. Janse et al. 2024 (arXiv:2403.08912) addresses only the ceiling, multiplying N by nuclei per molecule. No 2024–26 paper re-derives the floor's N scaling that we could find. Aguiar & Matsas (arXiv:2409.14155, PRD 112, 046004) discuss N-sensitivity in a different model.
+
+### (B) Donadi carry-over: same kernel, same ℓ, same Lindblad term
+
+**Why it carries over (DERIVED).**
+- Oppenheim's Eq. 135 is $-\tfrac12\int D_0[\hat m(x),[\hat m(y),\rho]]$. With $D_0=\kappa G/(\hbar|x-y|)$, κ = 1 is exactly Diósi's master equation, $G/2\hbar$.
+- Donadi 2021 Eq. 3 uses $4\pi G/\hbar$ (Penrose convention), i.e. κ = 8π.
+- Check: from the momentum diffusion $\dot{\langle p^2\rangle}=\kappa G\hbar m^2/(2\sqrt\pi\ell^3)$ and Larmor, $d\Gamma/d\omega=\kappa Z^2e^2G/(12\pi^{5/2}\epsilon_0c^3\ell^3\omega)$. This is exactly 1/(8π) of Donadi's Eq. 4.
+- So the X-ray bound is a bound on κ/ℓ³:
+  - $\kappa\le(\ell/0.184\,\text{Å})^3$ for Donadi, whose 0.54 Å becomes 0.184 Å in Diósi convention;
+  - $\kappa\le(\ell/4.5\,\text{Å})^3$ for XENONnT 2026 (95% CL, stated in Diósi convention).
+- The CQ model's D0 term is Markovian, so the white-noise radiation calculation applies unchanged.
+- D0(Φ_b) is evaluated at the same terrestrial Φ_b for interferometer, torsion balance and Ge detector.
+
+**Numbers at ℓ = 1e-15 m (DERIVED).**
+- The torsion ceiling, via the trade-off in Eq. 47 normalisation ($l_P^2D_2\ge\hbar/(2G\kappa)$ = 7.9e-25/κ), requires **κ ≥ 11.8**.
+- Pedalino interferometry, with derived counting, gives only κ ≤ 1.0e10.
+- Donadi gives **κ ≤ 1.6e-13**. XENONnT gives **κ ≤ 1.1e-17**.
+- **Excluded by 13.9 orders (Donadi) and 18.0 orders (XENONnT).**
+- In Donadi's Ge setup the minimal-κ model predicts 8.5e15 signal counts, against 114 allowed at 95%.
+- Heating would be 4.5e-25 W per Na atom, i.e. dT/dt = 0.022 K/s for a free gas.
+- Resolving nucleons inside the Ge nucleus (A = 73) suppresses the radiation by 1/A, which still leaves 12.0 orders.
+- **Prior work agrees.** Layton, Oppenheim, Russo & Weller-Davies (arXiv:2307.02557, Sec. 7) already state, citing Tilloy & Diósi 2017 (arXiv:1706.01856), that a cut-off below 1e-15 m is "inconsistent with experiments due to excess heating". Piccione (arXiv:2511.00644) notes that radiation gives the strongest DP/Tilloy–Diósi bounds and that optimal smearing changes them by ≤ 22%.
+
+**Smallest allowed ℓ (DERIVED).**
+
+| reading | Donadi | XENONnT |
+|---|---|---|
+| consistent ($r_N=\ell$ in the ceiling) | 2.05e-13 m | 1.01e-12 m |
+| floor-only (ceiling fixed at r_N = 1e-15) | 4.2e-11 m | 1.02e-9 m |
+
+- At every ℓ the X-ray floor lies ≥ 20 orders above the interferometric floor. At ℓ = 1e-15 the gap is 22.8 orders (Donadi) or 27.0 (XENONnT).
+
+**Verdict B.**
+- If the radiation calculation carries over (argued above; not contested in the sources we found), **the nuclear-scale choice ℓ = 1e-15 is excluded by 13.9–18.0 orders.**
+- **Matter-wave interferometry cannot be the binding floor** for the DP-kernel CQ model at any ℓ.
+- **The Stage 22 experiment is moot for this kernel.** The window it was designed to close is either already closed by X-ray data (ℓ below 2e-13 to 1e-9 m, depending on reading) or ≥ 20 orders out of interferometric reach.
+- **Our own error.** Stage 24 quoted Donadi's 0.54 Å as if it were in the same normalisation as Oppenheim's D0. In matched (Diósi) convention it is 0.184 Å.
+
+**Coincidences.**
+1. $F\kappa=\hbar/2G$ exactly. This is forced by our Eq. 47 normalisation, not physics. Only the O(1) prefactor is conventional, because $l_P^2D_2$ has the units of ħ/G.
+2. The floor-only threshold is ℓ ≈ 2.3 R0_bound, close to the DP bound itself. This is because κ_req ≈ 12 ≈ 2.3³.
+
+**Honest negatives.**
+- Our Stage 22 "1.4 MDa closes it" result rested on a counting the paper's own master equation does not support.
+- Under correct counting **and** the radiation data, it is irrelevant.
+- The trade-off constant (dropped "constant factors" in Eq. 47) is uncertain by O(1–10). The margins of 12–18 orders swamp it.
+- Relativistic corrections at 1e-15 m (Layton Sec. 7) and coloured or dissipative extensions are outside this test.
+
+**Sources (verified this stage).**
+- Oppenheim et al., Nat. Commun. 14, 7910 (2023), Methods Eqs. 131–137 and 147–152: https://www.nature.com/articles/s41467-023-43348-2
+- Layton et al., arXiv:2307.02557: https://arxiv.org/abs/2307.02557
+- Tilloy & Diósi, PRD 96, 104045 (2017): https://arxiv.org/abs/1706.01856
+- Donadi et al., Nat. Phys. 17, 74 (2021), Eqs. 3–6: https://arxiv.org/abs/2111.13490
+- XENONnT, PRL 136, 120201 (2026): https://arxiv.org/abs/2506.05507
+- Piccione, arXiv:2511.00644: https://arxiv.org/abs/2511.00644
+- Piccione, arXiv:2602.19377: https://arxiv.org/abs/2602.19377
+- Janse et al., arXiv:2403.08912: https://arxiv.org/abs/2403.08912
+
+![Stage 25](figures/stage25_tests.png)
