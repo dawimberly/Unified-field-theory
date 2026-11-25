@@ -2268,3 +2268,90 @@ Osmium buys only 0.25 orders of requirement. Its real advantage is that a metal 
 - GOCE in-orbit accelerometer verification: https://sf2a.eu/proceedings/2010/2010sf2a.conf..0113C.pdf
 
 ![Stage 23](figures/stage23_space.png)
+
+## Stage 24 — How much of Stage 22 is convention? Smearing length, superposition size, constituent counting
+
+**Question.** Stage 22's floor side used the Stage 15 conventions of Oppenheim et al. Eq. (47): superposition size Δx = d, smearing length $r_N=10^{-15}$ m, and $N=M/m_{\rm atom}$. The theory does not fix the smearing length $\ell$.
+
+This stage sweeps each convention and recomputes three things:
+- (a) the non-local window in orders;
+- (b) the Stage 22 closing mass at the cheapest MUSCLE point (L = 0.983 m, d = 133 nm, ξ = 0.8);
+- (c) whether the window is open or already closed.
+
+Scripts: `scripts/stage24_run.py`, `scripts/stage24_fig.py`. Output: `results/stage24.json`.
+
+**Where the conventions enter (DERIVED from published Eq. 47).**
+- Floor: $N M^2\tau/(\ell^2\Delta x)^{1/3}$, which scales as $\ell^{-2/3}$.
+- Ceiling: $S_aN\,\ell^3/G^2$. **The ceiling depends on the convention as well**, as $\ell^3$ and through $N$.
+- Two modes:
+  - **floor-only**: the ceiling stays at Stage 15's $10^{-15}$ m. The window then moves 0.67 orders per decade of $\ell$, and $M_{\rm close}\propto\ell^{1/6}$.
+  - **consistent**: the same $\ell$ on both sides. The window then moves 3.67 orders per decade, and $M_{\rm close}\propto\ell^{11/12}$.
+- For $\ell\ge\Delta x$, ASSUMED: the smeared-DP small-separation suppression $(\Delta x/\ell)^2$ with $R\to\ell$.
+- Ceiling inputs: the Gisler sensor with CITED FOM 0.298 and $N_{\rm atoms}=2.79\times10^{11}$ (mean 20.1 u). For rigid-body counting it is treated as an equivalent sphere of 0.89 µm, using an ASSUMED density of 3100 kg m⁻³; a string is not a sphere (flagged).
+- Reach criterion (ASSUMED): gravity sag ≤ 31.7 mm, the largest sag among the Stage 22 designs that passed every constraint. This means $M\le2.27$ MDa at ξ = 0.8.
+
+| convention | mode | window (orders) | ceiling shift | M_close @ cheapest point | v | Stage 22 still closes it? |
+|---|---|---|---|---|---|---|
+| **baseline** (ℓ=1e-15, Δx=d, atoms) | — | **+3.66 open** | 0 | **1.415 MDa** | 19.6 m/s | yes |
+| ℓ = cluster Compton ħ/Mc (1.5e-22 m) | floor-only | −0.89 **closed** | 0 | 0.10 MDa | — | already closed by Pedalino |
+| | consistent | −21.4 closed | −20.5 | — | — | already closed |
+| ℓ = Na-atom Compton (9.2e-18 m) | floor-only | +2.30 open | 0 | 0.65 MDa | 42.8 | yes |
+| | consistent | −3.81 closed | −6.1 | — | — | already closed |
+| ℓ = nucleon Compton (2.1e-16 m) | floor-only | +3.21 | 0 | 1.09 MDa | 25.4 | yes |
+| | consistent | +1.18 | −2.0 | 0.34 MDa | 81.8 | yes |
+| ℓ = 1e-12 m (Oppenheim's published R_λ, used as ℓ) | floor-only | +5.66 | 0 | 4.5 MDa | 6.2 | **no** (sag 12 cm) |
+| | consistent | +14.7 | +9.0 | 796 MDa | 0.03 | no |
+| ℓ = 0.54 Å (Donadi 2020 DP limit) | floor-only | +6.81 | 0 | 8.7 MDa | 3.2 | no |
+| | consistent | +21.0 | +14.2 | 3.1e4 MDa | — | no |
+| ℓ = 1e-10 m (atomic) | floor-only | +6.99 | 0 | 9.6 MDa | 2.9 | no |
+| | consistent | +22.0 | +15.0 | 5.4e4 MDa | — | no |
+| ℓ = cluster radius (4.1 / 8.2 nm) | floor-only | +8.06 | 0 | 23.5 MDa | 1.2 | no |
+| | consistent | +34.9 | +26.9 | 5e9 MDa | — | no |
+| ℓ = 1e-7 m (CSL/DP r_C) | floor-only | +8.99 | 0 | 30.5 MDa | 0.9 | no |
+| | consistent | +33.0 | +24.0 | 3e7 MDa | — | no |
+| Δx = d/2, ℓ=1e-15 | floor-only | +3.56 | 0 | 1.34 MDa | 20.7 | yes |
+| Δx = ξd (TL path separation at G2), ℓ=1e-15 | floor-only | +3.63 | 0 | 1.39 MDa | 20.0 | yes |
+| Δx = d/2, ℓ=1e-7 | floor-only | +9.30 | 0 | 36.5 MDa | 0.8 | no |
+| Δx = ξd, ℓ=1e-7 | floor-only | +8.96 | 0 | 29.9 MDa | 0.9 | no |
+| N = nucleons (both sides), ℓ=1e-15 | consistent | +3.60 | +1.3 | 1.37 MDa | 20.3 | yes |
+| N = 1, rigid body (ℓ = body radius) | consistent | +27.4 | +15.4 | >1e16 amu | — | no |
+| N: independent-constituent DP sum M²/N (DERIVED, flagged) | — | +11.4 | 0 | 8.7e4 MDa | — | no |
+| arXiv v1 Eq. 47 (no N, R ~ 1e-9 m) | — | +10.8 | 0 | 699 MDa | — | no |
+| paired: atoms + atomic radius | consistent | +22.0 | +15.0 | 5.4e4 MDa | — | no |
+| paired: atoms + Donadi 0.54 Å | consistent | +21.0 | +14.2 | 3.1e4 MDa | — | no |
+| paired: rigid body + body radius | consistent | +27.4 | +15.4 | >1e16 amu | — | no |
+
+**Thresholds (DERIVED).**
+- The Stage 22 design (1.4 MDa at about 20 m/s) still closes the window only if **ℓ ≤ 1.7×10⁻¹⁴ m** (floor-only) or **ℓ ≤ 1.65×10⁻¹⁵ m** (consistent).
+- The window is already closed if ℓ ≤ 3.3×10⁻²¹ m (floor-only) or ℓ ≤ 1.0×10⁻¹⁶ m (consistent).
+
+**Verdict.**
+- **Robust:**
+  - The superposition-size convention. Δx = d, d/2 or ξd moves the window by ≤ 0.1 orders and $M_{\rm close}$ within 1.34–1.415 MDa, as long as ℓ ≪ Δx. Only in the ℓ > Δx regime does Δx enter as $\Delta x^2$.
+  - Atoms versus nucleons, when counted the same way on both sides: 3.60 vs 3.66 orders.
+- **Fragile:**
+  - The smearing length dominates everything. Over the physically motivated range (Compton scales up to 1e-7 m) the window runs from −21 to +35 orders.
+  - The Stage 22 conclusion survives only within a factor 1.65 above Oppenheim's own nuclear choice (consistent reading), or a factor 17 above it (floor-only).
+  - At any atomic or larger ℓ, the window is ≥ 6.8 orders (floor-only) or ≥ 21 orders (consistent). Closing it needs ≥ 8.7 MDa, beyond the Stage 22 geometry.
+  - Rigid-body counting and the independent-constituent sum also make it unreachable (+11 to +27 orders).
+- **Stage 22's "1.4 MDa closes it" is a statement about the Eq. 47 conventions as Oppenheim et al. chose them, not about classical-gravity models in general.**
+
+**Flags.**
+- **Independent-constituent counting (DERIVED, not adopted).** For N separated constituents of mass M/N, a DP-type sum gives $N(M/N)^2=M^2/N$. The published floor uses $N_\lambda M_\lambda^2$ with total mass, which is a factor $N^2$ larger (7.7 orders for Pedalino). The ceiling's $\sigma_a^2\propto1/N$ already uses the independent-constituent picture. The published text says "total mass M_λ", so we keep it, but this is a possible internal inconsistency in Eq. 47 worth checking with the authors.
+- **Donadi et al. 2020.** Their experiment bounds the DP mass-density size $R_0>0.54$ Å. If that bound transfers to the CQ decoherence kernel, which is ASSUMED and not shown here, the nuclear choice would be excluded, and with it the closable regime.
+- **Cluster Compton row.** ℓ is fixed at the 1.4 MDa value for both experiments.
+- **Regularisation for ℓ ≥ Δx** is ASSUMED.
+
+**Coincidences.**
+1. The consistent-mode window closes at ℓ = 1.005×10⁻¹⁶ m, almost exactly 0.1 r_N. This is only because 3.66 orders ÷ 3.67 orders per decade ≈ 1.00. It is close to the nucleon Compton wavelength (2.1e-16) but unrelated.
+2. Nucleon counting barely changes the window because Na (23 u) and the SiN sensor (20.1 u) have almost the same mass per atom. A heavy-atom ceiling sensor (e.g. Au) would break this.
+
+**Honest negative.** No convention in this sweep that is plausible on its own physical grounds (atomic, Donadi, body, CSL scales) leaves the window closable by any cluster-interferometer route in Stages 17 or 22. The closable regime exists only at sub-femtometre to ~10 fm smearing.
+
+**Sources (verified this stage).**
+- Oppenheim et al., Nat. Commun. 14, 7910 (2023), Eq. 47 and the r_N, R_λ choices (re-read in Stage 22): https://www.nature.com/articles/s41467-023-43348-2
+- Donadi et al., Nat. Phys. 17, 74 (2021), $R_0>0.54\times10^{-10}$ m: https://www.nature.com/articles/s41567-020-1008-4 , https://arxiv.org/abs/2111.13490
+- Bassi et al., RMP 85, 471 (2013), CSL $r_C=10^{-7}$ m: https://arxiv.org/abs/1204.4325
+- Smearing-length note (unrefereed): https://doi.org/10.5281/zenodo.24089422
+
+![Stage 24](figures/stage24_smearing.png)
