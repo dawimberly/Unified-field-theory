@@ -1,0 +1,25 @@
+quantity,value,unit,label,note
+slope_subsetS_refit,502.4751740720311,zs,DERIVED,"Stage 31 method, window 0.4, Fisher stat error below"
+slope_subsetS_stat_fisher,36.448236849117286,zs,DERIVED,Stage 31 bootstrap 36.2
+residual_over_red_line_d1,230.77517407203112,zs,DERIVED,slope - 271.7 (red line DIGITIZED this session)
+all_R_single_bin_slope_err,16.729573866102943,zs,DERIVED,all ~267k Fig.2 events x Fig3 cut efficiency
+sigma_d1_B_4bins,169.22136118414747,zs,DERIVED,"shape test, a*R free: immune to momentum-zero and R-scale systematics"
+dmin_B_2sigma,338.44272236829494,zs,DERIVED,expected Z=2 (Asimov)
+dmin_B_5sigma,846.1068059207373,zs,DERIVED,expected Z=5
+dmin_B_2sigma_95pct_power,616.8118615162175,zs,DERIVED,
+Z_B_if_stage31_residual_real,1.3637472979602174,sigma,DERIVED,
+sigma_d1_A_4bins,52.54970571281096,zs,DERIVED,travel time fixed; delta*R prior 51.9 zs at R_S (momentum zero + R scale)
+Z_A_if_stage31_residual_real,4.391559780243851,sigma,DERIVED,
+sigma_d1_A_authors_band_prior,100.01150021089768,zs,DERIVED,prior = authors purple band half-width 121 zs (DIGITIZED)
+Z_A_band_if_stage31_real,2.30748637492076,sigma,DERIVED,
+best_binning,10,,DERIVED,sigma_d1_B = 162.5 zs
+sigma_d1_B_with_2nd_energy_400,147.3747477943825,zs,DERIVED+ASSUMED,"same events, visibility; width ~1/p_e"
+sigma_d1_B_with_2nd_energy_1600,84.90365814686322,zs,DERIVED+ASSUMED,
+sigma_d1_B_with_800_repeat,119.65757201492869,zs,DERIVED,
+sigma_d1_A2_commondp_400,39.14904314803614,zs,DERIVED+ASSUMED,"travel fixed, same absolute dp0 at both energies"
+sigma_d1_A2_commondp_1600,23.458103242831353,zs,DERIVED+ASSUMED,
+MC_B_std_H1,163.82785731092005,zs,DERIVED,400 full-pipeline simulations
+MC_B_mean_H1,220.64185406447993,zs,DERIVED,true 230.8
+MC_B_mean_H0,8.258826392919282,zs,DERIVED,true 0
+MC_frac_Z_gt_2_if_H1,0.2525,,DERIVED,
+H0free_cal_coefficient,1.9351812778463795,x 1/c,DERIVED,if the whole excess scales with R

@@ -1,0 +1,530 @@
+{
+ "stage": 32,
+ "title": "Forecast: joint angle x bond-length split of the Grundmann 2020 H2 birth-delay data (H0 scales with R vs H1 do-si-do R-independent)",
+ "sources": {
+  "grundmann_text": {
+   "ref": "Grundmann et al., Science 370, 339 (2020), author version arXiv:2010.08298v1 (text saved as data/stage32/grundmann2020_arXiv2010.08298v1_text.txt)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "main text p.5 Eqs.(1)-(2); p.5 KER relation; p.6 subset S",
+   "quote": "\"tau_b = cos(alpha_0) R/v_ph\" (Eq. 2) ; \"propagates with the phase velocity v_ph = E_e/p_e\" ; \"using left-handed circularly polarized photons with an energy of 800 eV\" ; \"In the reflection approximation, the internuclear distance R at the moment of photoabsorption is related to the kinetic energy release via KER = e^2/(4 pi eps0 R)\" ; \"we inspected the interference pattern of the fast electron for different angles beta ... in Fig. 3 for the subset S (see Fig. 2 B)\"",
+   "label": "CITED",
+   "values": {
+    "Eph_eV": 800.0
+   }
+  },
+  "grundmann_fig3_caption": {
+   "ref": "Grundmann et al. 2020 (arXiv:2010.08298v1)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "p.11 Fig. 3 caption; p.10 Fig. 2 caption",
+   "quote": "\"fast electrons [Ee = (735+-15) eV] ... for the average internuclear distance of R = (0.74 +- 0.02) A [selected subset S as shown in Fig. 2 B]\" ; \"The maxima are obtained using Gaussian fits\" ; Fig.2: \"The subset S of the data is used for panel A and for the subsequent analysis of the birth time delay.\"",
+   "label": "CITED",
+   "values": {
+    "Ee_eV": 735.0,
+    "dEe_eV": 15.0,
+    "R_S_A": 0.74,
+    "dR_S_A": 0.02
+   }
+  },
+  "grundmann_eq3": {
+   "ref": "Grundmann et al. 2020 (arXiv:2010.08298v1)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "p.7 Eq.(3) and following",
+   "quote": "\"tau_b' = cos(beta) R/c\" ; \"For this case the expected birth time delay was +-247 zs for R = 0.74 A\" ; red line: \"the atomic nondipole effect tilts the electron angular distributions from each center slightly in forward direction ... This fact led to an additional angular shift of the interference pattern that slightly increased the slope\" ; \"more theoretical work including electron-electron correlation is needed to clarify the deviation\"",
+   "label": "CITED",
+   "values": {
+    "tau_Rc_S_zs": 247.0
+   }
+  },
+  "grundmann_sm": {
+   "ref": "Grundmann et al. 2020, Supplementary Materials (in arXiv:2010.08298v1)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "SM Materials and Methods p.13-14",
+   "quote": "\"The roughly 300.000 ion-ion-electron coincidences displayed in Fig. 2 have been obtained during a total acquisition time of approximately 132 h.\" ; \"The accuracy to which we could specify the zero point of the momentum distribution of the fast electron was approximately +-0.04 atomic units in all three directions\" ; \"we determined the maximum and minimum slope of the linear fit function in Fig. 3 C (including +-1 sigma estimation error) and indicated this range by the purple-shaded area\" ; \"The statistical errors ... are the standard deviations of the mean values from the Gaussian fits estimated as the square root of the respective diagonal element of the covariance matrix\"",
+   "label": "CITED",
+   "values": {
+    "N_coinc": 300000,
+    "t_h": 132,
+    "dp0_au": 0.04
+   }
+  },
+  "grundmann_energy": {
+   "ref": "Grundmann et al. 2020 (arXiv:2010.08298v1)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "main text p.6",
+   "quote": "\"The fraction of the photon energy that exceeds the sum of the adiabatic double ionization energy of H2 (31.03 eV) and the KER is shared between the two electrons\" ; \"we restricted our investigation to fast electrons that carried more than 96% of the excess energy\"",
+   "label": "CITED",
+   "values": {
+    "IP2_eV": 31.03,
+    "frac_min": 0.96
+   }
+  },
+  "grundmann_note19": {
+   "ref": "Grundmann et al. 2020 (arXiv:2010.08298v1)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "reference note 19",
+   "quote": "\"This possible additional delay of the double ionization process is symmetric with respect to inversion of the two centers of the molecule. Therefore, our interferometric technique is blind to this absolute delay.\"",
+   "label": "CITED",
+   "values": {}
+  },
+  "zenodo": {
+   "ref": "Grundmann et al. data, Zenodo 10.5281/zenodo.3899920 (record JSON saved as data/stage32/zen.json)",
+   "url": "https://zenodo.org/api/records/3899920",
+   "location": "files Fig2_data.txt, Fig3_data.txt",
+   "quote": "title \"Zeptosecond Birth Time Delay in Molecular Photoionization\"; md5 Fig2 dc8986f4cc4529650f8932b8c7583e59, Fig3 f367578243fadce987bb1b48d3c74147 (re-downloaded this session; identical to data/stage31 copies)",
+   "label": "CITED",
+   "values": {
+    "md5_fig2": "dc8986f4cc4529650f8932b8c7583e59",
+    "md5_fig3": "f367578243fadce987bb1b48d3c74147"
+   }
+  },
+  "fig3c_digitized": {
+   "ref": "Grundmann et al. 2020 Fig. 3C, re-rendered at 600 dpi this session (data/stage32/grundmann2020_fig3C_600dpi_crop.png)",
+   "url": "https://arxiv.org/pdf/2010.08298",
+   "location": "p.11 Fig. 3C; axis calibrated on right-axis ticks 0/200/400 zs and frame (cos beta = +-1)",
+   "quote": "DIGITIZED (pixel colour tracing, +-2 zs): blue line slope 246.9 zs (check: CITED 247, Eq.3 246.8); red line slope 271.7 zs (at cos beta = 0.966 and -0.940: 271.6, 271.9); dashed purple fit 445.8 zs; purple band 326-568 zs (half-width 121)",
+   "label": "DIGITIZED",
+   "values": {
+    "blue_zs": 246.9,
+    "red_zs": 271.7,
+    "paper_fit_zs": 445.8,
+    "band_lo_zs": 326.0,
+    "band_hi_zs": 568.0
+   }
+  },
+  "codata2022": {
+   "ref": "CODATA 2022 complete listing (NIST), saved as data/stage32/codata.txt",
+   "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+   "location": "lines for c, a0, E_h, atomic unit of time, e, eps0",
+   "quote": "\"speed of light in vacuum 299 792 458 (exact)\"; \"Bohr radius 5.291 772 105 44 e-11\"; \"Hartree energy in eV 27.211 386 245 981\"; \"atomic unit of time 2.418 884 326 5864 e-17\"; \"elementary charge 1.602 176 634 e-19 (exact)\"; \"vacuum electric permittivity 8.854 187 8188 e-12\"",
+   "label": "CITED",
+   "values": {
+    "c": 299792458.0,
+    "a0": 5.29177210544e-11,
+    "Eh_eV": 27.211386245981,
+    "t_au": 2.4188843265864e-17,
+    "e": 1.602176634e-19,
+    "eps0": 8.8541878188e-12
+   }
+  },
+  "stage31": {
+   "ref": "Stage 31 of this repo (DERIVED there from the Zenodo Fig3 file; recomputed here)",
+   "url": "docs/hyperfield/results/stage31.json",
+   "location": "grundmann.slope_zs etc.",
+   "quote": "slope 504.5 +- 36.2 zs (stat, window 0.4); residual over red line +235 +- 128 zs",
+   "label": "DERIVED (repo)",
+   "values": {}
+  }
+ },
+ "reproduce_stage31": {
+  "slope_zs": 502.4751740720311,
+  "slope_stat_fisher_zs": 36.448236849117286,
+  "stage31_slope_zs": 504.52024423414537,
+  "stage31_slope_stat_bootstrap_zs": 36.180953609532665,
+  "fisher_over_bootstrap_rowerr_median": 0.9616385077603828,
+  "residual_over_red_zs": 230.77517407203112,
+  "tauRc_S_zs": 246.8374304466325,
+  "nd_S_zs": 24.799999999999983,
+  "counts_subset_S_fig3": 47413.0
+ },
+ "calibration": {
+  "subsetS_forecast_over_measured_stat": 1.0306313245864176,
+  "NSCALE_fig3_over_fig2slice": 0.925330314799274,
+  "fig2_subsetS_slice": {
+   "N": 51239.0,
+   "R": 0.7405340232286366,
+   "KER": 19.44995368518121,
+   "A_per_N": 0.011063691237768517,
+   "B_per_N": 0.006431938877183463,
+   "sigma": 0.1070026169876294,
+   "mu": 0.0029508072869561764,
+   "mu_err": 0.002387356600671507
+  },
+  "fig2_fine_groups": [
+   {
+    "N": 16601.0,
+    "R": 0.6251082700960806,
+    "KER": 23.040382544726217,
+    "A_per_N": 0.012366073810771377,
+    "B_per_N": 0.007983816544357892,
+    "sigma": 0.12699516095904312,
+    "mu": -0.007210524053446073,
+    "mu_err": 0.004456486596615556
+   },
+   {
+    "N": 14092.0,
+    "R": 0.6497399671487181,
+    "KER": 22.16370946281578,
+    "A_per_N": 0.011732656204737733,
+    "B_per_N": 0.007510248039476979,
+    "sigma": 0.11885236317487301,
+    "mu": -0.011289894659830489,
+    "mu_err": 0.004791761778257988
+   },
+   {
+    "N": 18998.0,
+    "R": 0.6694615635098834,
+    "KER": 21.51088390883251,
+    "A_per_N": 0.012015995416953688,
+    "B_per_N": 0.007427965476505837,
+    "sigma": 0.11031396381200971,
+    "mu": -0.008559940136956195,
+    "mu_err": 0.00388854392449379
+   },
+   {
+    "N": 23422.0,
+    "R": 0.6902874982877252,
+    "KER": 20.862015946545984,
+    "A_per_N": 0.011922303590133276,
+    "B_per_N": 0.006916646154838668,
+    "sigma": 0.1119488953173102,
+    "mu": 0.0052687562667750945,
+    "mu_err": 0.003477185340106883
+   },
+   {
+    "N": 22474.0,
+    "R": 0.7104139925799302,
+    "KER": 20.27053773249088,
+    "A_per_N": 0.010856197260235942,
+    "B_per_N": 0.006969029474342982,
+    "sigma": 0.1093545844774488,
+    "mu": -0.009160345063990119,
+    "mu_err": 0.0037868823589172593
+   },
+   {
+    "N": 25039.0,
+    "R": 0.7299721035642379,
+    "KER": 19.727502221534404,
+    "A_per_N": 0.011178484900018253,
+    "B_per_N": 0.006520120800738525,
+    "sigma": 0.10848238870308888,
+    "mu": 0.006408694921314292,
+    "mu_err": 0.0034242202430081465
+   },
+   {
+    "N": 26200.0,
+    "R": 0.7506279127888227,
+    "KER": 19.18470415076336,
+    "A_per_N": 0.010959344526198095,
+    "B_per_N": 0.00632848958669496,
+    "sigma": 0.10606859309000005,
+    "mu": -0.0002175214856969545,
+    "mu_err": 0.0033333575903157996
+   },
+   {
+    "N": 21189.0,
+    "R": 0.7702075286455929,
+    "KER": 18.696594134928503,
+    "A_per_N": 0.010935130146363346,
+    "B_per_N": 0.0061232686368377495,
+    "sigma": 0.09774903560705188,
+    "mu": 0.0009747835280783325,
+    "mu_err": 0.0035311649560155374
+   },
+   {
+    "N": 20268.0,
+    "R": 0.7883925749475584,
+    "KER": 18.26537059650681,
+    "A_per_N": 0.011869523871690768,
+    "B_per_N": 0.005788477506602765,
+    "sigma": 0.10194218045626048,
+    "mu": -0.0051022978848978984,
+    "mu_err": 0.0034065892968227953
+   },
+   {
+    "N": 27252.0,
+    "R": 0.8123849537938703,
+    "KER": 17.72707026089828,
+    "A_per_N": 0.011216447285994796,
+    "B_per_N": 0.005938088965356176,
+    "sigma": 0.09865778708145029,
+    "mu": 0.0009811867293577985,
+    "mu_err": 0.0030404664845680115
+   },
+   {
+    "N": 27483.0,
+    "R": 0.8480171371420089,
+    "KER": 16.984001951206203,
+    "A_per_N": 0.01047180540849935,
+    "B_per_N": 0.005891523861252459,
+    "sigma": 0.09724851966195942,
+    "mu": 0.0031295307268889875,
+    "mu_err": 0.0031645397426864007
+   },
+   {
+    "N": 24032.0,
+    "R": 0.9057853139580805,
+    "KER": 15.908631772220373,
+    "A_per_N": 0.009712519773062362,
+    "B_per_N": 0.006402308319481677,
+    "sigma": 0.09490284769221217,
+    "mu": 0.008055339579337868,
+    "mu_err": 0.0036355424035480434
+   }
+  ]
+ },
+ "headline": {
+  "nbins": 4,
+  "edges_A": [
+   0.6,
+   0.6953201373130679,
+   0.7504945682226947,
+   0.8101921000762564,
+   0.96
+  ],
+  "R_A": [
+   0.6577444403286168,
+   0.7213985841547021,
+   0.7767127359550908,
+   0.8602560314161796
+  ],
+  "N": [
+   59908.6605710494,
+   61252.24018813794,
+   61875.91282031265,
+   64072.64698764613
+  ],
+  "slope_err_zs": [
+   30.47163693759583,
+   32.370078226047035,
+   34.17220742210927,
+   36.5661436513455
+  ],
+  "sigma_d1_B_zs": 169.22136118414747,
+  "sigma_d1_A_zs": 52.54970571281096,
+  "sigma_d1_A_authorsband_zs": 100.01150021089768,
+  "dmin_B_2sig_zs": 338.44272236829494,
+  "dmin_B_5sig_zs": 846.1068059207373,
+  "dmin_B_2sig_95power_zs": 616.8118615162175,
+  "dmin_A_2sig_zs": 105.09941142562192,
+  "dmin_A_5sig_zs": 262.7485285640548,
+  "Z_B_if_stage31_real": 1.3637472979602174,
+  "Z_A_if_stage31_real": 4.391559780243851,
+  "Z_A_band_if_stage31_real": 2.30748637492076,
+  "Z_B_at_stage31_95bound_485": 2.866068424258925,
+  "all_R_single_bin_slope_err_zs": 16.729573866102943,
+  "subsetS_slope_err_zs": 36.448236849117286
+ },
+ "binning_scan": [
+  {
+   "nbins": 2,
+   "sigma_d1_B_zs": 194.09919484761923,
+   "sigma_d1_A_zs": 53.237835923200755
+  },
+  {
+   "nbins": 3,
+   "sigma_d1_B_zs": 175.3790579126169,
+   "sigma_d1_A_zs": 52.74563713493361
+  },
+  {
+   "nbins": 4,
+   "sigma_d1_B_zs": 169.22136118414747,
+   "sigma_d1_A_zs": 52.54970571281096
+  },
+  {
+   "nbins": 5,
+   "sigma_d1_B_zs": 166.51336324827713,
+   "sigma_d1_A_zs": 52.45716728305415
+  },
+  {
+   "nbins": 6,
+   "sigma_d1_B_zs": 164.88718307578068,
+   "sigma_d1_A_zs": 52.39999141970117
+  },
+  {
+   "nbins": 7,
+   "sigma_d1_B_zs": 163.88781797490049,
+   "sigma_d1_A_zs": 52.363712457637874
+  },
+  {
+   "nbins": 8,
+   "sigma_d1_B_zs": 163.2591312054016,
+   "sigma_d1_A_zs": 52.340857768286135
+  },
+  {
+   "nbins": 9,
+   "sigma_d1_B_zs": 162.79759414953273,
+   "sigma_d1_A_zs": 52.323430913051446
+  },
+  {
+   "nbins": 10,
+   "sigma_d1_B_zs": 162.50396800996876,
+   "sigma_d1_A_zs": 52.31244719017034
+  },
+  {
+   "nbins": "paper-like 0.04 A slices",
+   "sigma_d1_B_zs": 163.06694401293328,
+   "sigma_d1_A_zs": 52.33254718429792
+  },
+  {
+   "nbins": "outer thirds only",
+   "sigma_d1_B_zs": 175.51445651173884,
+   "sigma_d1_A_zs": 53.91093255211161
+  }
+ ],
+ "best_binning": {
+  "nbins": 10,
+  "sigma_d1_B_zs": 162.50396800996876,
+  "sigma_d1_A_zs": 52.31244719017034
+ },
+ "second_energy": {
+  "800 repeat (x2 events)": {
+   "sigma_d1_B_zs": 119.65757201492869,
+   "sigma_d1_A2_commondp_zs": null
+  },
+  "400": {
+   "sigma_d1_B_zs": 147.3747477943825,
+   "sigma_d1_A2_commondp_zs": 39.14904314803614
+  },
+  "1600": {
+   "sigma_d1_B_zs": 84.90365814686322,
+   "sigma_d1_A2_commondp_zs": 23.458103242831353
+  },
+  "400+1600": {
+   "sigma_d1_B_zs": 81.69233471274504,
+   "sigma_d1_A2_commondp_zs": 14.911239070253036
+  },
+  "800 only": {
+   "sigma_d1_B_zs": 169.22136118414747,
+   "sigma_d1_A2_commondp_zs": null
+  }
+ },
+ "second_energy_single_bin": {
+  "400.0": {
+   "lo": 0.6,
+   "hi": 0.96,
+   "N": 267050.0,
+   "R": 0.7558211567206428,
+   "KER": 19.257910068339264,
+   "Ee": 342.8184081994328,
+   "err": 29.639629920418862
+  },
+  "800.0": {
+   "lo": 0.6,
+   "hi": 0.96,
+   "N": 267050.0,
+   "R": 0.7558211567206428,
+   "KER": 19.257910068339264,
+   "Ee": 734.9334286054185,
+   "err": 16.729573866102943
+  },
+  "1600.0": {
+   "lo": 0.6,
+   "hi": 0.96,
+   "N": 267050.0,
+   "R": 0.7558211567206428,
+   "KER": 19.257910068339264,
+   "Ee": 1519.1634694173902,
+   "err": 9.704359986847889
+  }
+ },
+ "nd_scaling_bias_on_B_d1_zs": {
+  "true-1_fit-1": 2.6604602686541308e-12,
+  "true-1_fit+0": 24.345131976490475,
+  "true-1_fit+1": 49.14513197649508,
+  "true+0_fit-1": -24.345131976497257,
+  "true+0_fit+0": -2.1642105368467293e-12,
+  "true+0_fit+1": 24.7999999999988,
+  "true+1_fit-1": -49.14513197649763,
+  "true+1_fit+0": -24.800000000001944,
+  "true+1_fit+1": -1.5708645376421557e-12
+ },
+ "R_resolution_variant": {
+  "sigma_R_A": 0.03,
+  "R_true_means": [
+   0.669626467932733,
+   0.7249347111147746,
+   0.7753900930350202,
+   0.8513761883749061
+  ],
+  "R_measured_means": [
+   0.6577444403286168,
+   0.7213985841547021,
+   0.7767127359550908,
+   0.8602560314161796
+  ],
+  "d1_recovered_zs": 254.08715367001363,
+  "d1_true_zs": 230.77517407203112,
+  "lever_shrink": 0.8991851305059414,
+  "d1_recovered_if_H0free_truth_zs": 47.69544768350282,
+  "d1_recovered_if_H0_truth_zs": 23.311979597984813
+ },
+ "monte_carlo": {
+  "n_per_hypothesis": 400,
+  "H0": {
+   "d1_true_zs": 0.0,
+   "B_mean_zs": 8.258826392919282,
+   "B_std_zs": 170.3645706435923,
+   "B_mean_reported_err_zs": 167.05351670737545,
+   "A_mean_zs": -0.3050883587939338,
+   "A_std_zs": 21.43078499391135,
+   "slope_means_zs": [
+    248.42958887302225,
+    263.3513917623024,
+    280.14219609772243,
+    306.8241148130829
+   ],
+   "slope_stds_zs": [
+    29.738844272129143,
+    31.29581848470148,
+    33.50224553016878,
+    37.75071338790936
+   ],
+   "frac_B_Z_gt_2": 0.025,
+   "frac_B_Z_gt_1": 0.1825
+  },
+  "H1_stage31": {
+   "d1_true_zs": 230.77517407203112,
+   "B_mean_zs": 220.64185406447993,
+   "B_std_zs": 163.82785731092005,
+   "B_mean_reported_err_zs": 166.78932468749065,
+   "A_mean_zs": 230.0077297491858,
+   "A_std_zs": 22.706589852704603,
+   "slope_means_zs": [
+    476.89960937804324,
+    496.74299699181137,
+    514.1483424237729,
+    540.5987631813022
+   ],
+   "slope_stds_zs": [
+    31.55559849180539,
+    32.803897476721616,
+    35.082198615633054,
+    38.69495534328241
+   ],
+   "frac_B_Z_gt_2": 0.2525,
+   "frac_B_Z_gt_1": 0.6475
+  },
+  "H0free_cal": {
+   "d1_true_zs": 0.0,
+   "B_mean_zs": 1.9805801677360797,
+   "B_std_zs": 175.75048891215593,
+   "B_mean_reported_err_zs": 167.1259334118195,
+   "A_mean_zs": 211.7711657464654,
+   "A_std_zs": 23.09851415165052,
+   "slope_means_zs": [
+    454.11531879979356,
+    490.45218604251363,
+    523.9309608909449,
+    578.1183311411903
+   ],
+   "slope_stds_zs": [
+    31.219383242521165,
+    33.121720857450434,
+    32.9276583244493,
+    37.80972692527583
+   ],
+   "frac_B_Z_gt_2": 0.02,
+   "frac_B_Z_gt_1": 0.1825
+  },
+  "fisher_sigma_d1_B_zs": 169.22136118414747,
+  "fisher_slope_err_zs": [
+   30.47163693759583,
+   32.370078226047035,
+   34.17220742210927,
+   36.5661436513455
+  ]
+ },
+ "H1_stage31_d1_zs": 230.77517407203112,
+ "H0free_cal_a_zs_per_A": 645.5069919892313,
+ "H0free_cal_a_over_inv_c": 1.9351812778463795
+}

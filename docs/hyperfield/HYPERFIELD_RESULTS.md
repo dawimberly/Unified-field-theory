@@ -3289,3 +3289,232 @@ Element (1d), an angle-*dependent* release time beyond light travel, did not mat
 A null result at the 50 zs level would push |d₁| below about 0.2 × R/c. A d₁ that stays constant while R changes would be the first evidence for something beyond standard QED timing.
 
 **Second survivor.** A frequency-selective release hiding somewhere in the roughly 20 decades between 20 mHz and 4.6×10¹⁸ Hz that were not verified here. It is formally colored CSL. It needs a predicted f₀ before it can be tested in any meaningful way.
+
+## Stage 32 — Forecast: can a joint emission-angle × bond-length split of the Grundmann 2020 H₂ data tell a do-si-do release term from ordinary R-scaling?
+
+**Question (Dan, "A and b").** While we wait for the Frankfurt group's reply to our data request, work out what the joint (cos α, cos β, R) data *can* show. Two hypotheses are tested:
+- **H0.** The birth-delay slope scales with the bond length R: light travel R cosβ/c (paper Eq. 3) plus the paper's nondipole correction.
+- **H1.** H0 plus a do-si-do finite-release term d₁·cosβ whose size does **not** scale with R.
+
+**Standing rule.** Every input was fetched this session:
+- the arXiv PDF;
+- the Zenodo record and both data files (md5 identical to the Stage 31 copies);
+- the CODATA 2022 listing from NIST;
+- Fig. 3C, re-rendered at 600 dpi and re-digitized.
+
+The quotes and their locations are in `results/stage32_sources.csv`. Nothing is recalled.
+
+**Labels:** CITED, DIGITIZED, DERIVED, ASSUMED.
+
+**Files:**
+- `scripts/stage32_run.py` (forecast plus Monte Carlo), `scripts/stage32_fig.py`;
+- **`scripts/stage32_analyze_joint.py`**, the ready-to-run analysis for the real joint data (see 32.7);
+- `results/stage32.json`, `results/stage32_forecast.csv`, `results/stage32_curves.csv`, `results/stage32_sources.csv`;
+- `data/stage32/`: the CODATA listing, the Zenodo record JSON, the paper text, and the 600 dpi Fig. 3C crop;
+- `figures/stage32_split_forecast.png`.
+
+![Stage 32](figures/stage32_split_forecast.png)
+
+### 32.1 Inputs, and two corrections to Stage 31
+**Facts from the paper (CITED):**
+- Eq. 2: τ_b = cosα₀·R/v_ph, with v_ph = E_e/p_e.
+- Eq. 3: τ_b′ = cosβ·R/c, "±247 zs for R = 0.74 Å".
+- Photon energy 800 eV, E_e = 735 ± 15 eV.
+- KER = e²/4πε₀R (reflection approximation).
+- "roughly 300.000 ion-ion-electron coincidences displayed in Fig. 2 … approximately 132 h".
+- Momentum zero point good to ±0.04 a.u.
+- Double-ionization threshold 31.03 eV.
+- Note [19]: the method is "blind to this absolute delay".
+
+**Correction 1: the public β-resolved data are a narrow R slice.** The Fig. 3 histogram that Stage 31 refit is "the subset S", R = (0.74 ± 0.02) Å. It holds **47,413 events**. Fig. 2, which spans all R, holds **267,050**.
+- So Stage 31's slope (504.5 ± 36 zs) used only about 18 % of the events.
+- The joint data would carry about 5.6× more events in the angle analysis. With one all-R bin, the slope's statistical error would be **16.7 zs** (DERIVED).
+
+**Correction 2: the "published-version" PDF is the author version.** The Frankfurt-hosted PDF that Stage 31 called the published version is byte-identical (md5) to arXiv:2010.08298v1, the author version. None of the numbers change.
+
+**Re-digitized Fig. 3C (DIGITIZED this session, ±2 zs, calibrated on the right-axis ticks):**
+
+| line | slope (zs) |
+|---|---|
+| blue | 246.9 (checks against the CITED 247 and Eq. 3's 246.8) |
+| red (nondipole + travel) | **271.7** |
+| paper's dashed fit | 445.8 |
+| purple band | 326–568 (half-width 121) |
+
+**Refit of the subset S data (DERIVED, Stage 31 method, window 0.4):**
+- slope **502.5 ± 36.4 zs** (stat, Fisher). Stage 31 got 504.5 ± 36.2 with a bootstrap. The 2 zs difference comes from the minimizer's starting point.
+- Fisher row errors are 0.96× the Stage 31 bootstrap row errors.
+- Residual over the red line: **d₁ = 230.8 zs**. This is the number to beat.
+
+**Constants (CITED, CODATA 2022):** c, a₀, E_h, the atomic unit of time, e and ε₀. From these, e²/4πε₀ = 14.39965 eV·Å and R/v_ph = 9204 zs per unit cosα₀ at R = 0.74 Å.
+
+### 32.2 What the split actually discriminates (DERIVED)
+In the raw observable, the fringe shift is cos α₀ = τ·v_ph/R. That gives three cases:
+- **Travel time** gives a fringe shift v_ph·cosβ/c that is **independent of R**.
+- **A momentum-zero offset** Δp gives cos α₀ shift = Δp·cosβ/p_e, also independent of R. In time units it is ∝ R, like travel time.
+- **A d₁ that does not scale with R** gives a fringe shift ∝ **1/R**.
+
+So the split is a test of **"time-like constant" against "anything that scales with R"**. That cuts both ways:
+- **For:** it is immune to the momentum-zero systematic and to the R-scale (KER calibration) systematic, both of which are R-proportional.
+- **Against:** it cannot tell travel time from any other R-proportional term. If the Stage 31 excess is a factor of about 2 *on* the travel time (the coincidence flagged in 31.5), the split will call it "H0-like", even though the coefficient would still be unexplained.
+
+The two tests used below:
+- **(B) Shape test.** Fit s(R) = a·R + nd(R) + d₁ with a free. This is the actual H0/H1 discriminator.
+- **(A) Excess test.** a is fixed at 1/c, with a δ·R nuisance. The prior on δ is 51.9 zs at R_S (DERIVED from the CITED ±0.04 a.u. and ±0.02 Å). **(A) is not a discrimination test.** The Monte Carlo shows that if the whole excess scales with R (the "H0free" case, a = 1.94/c), (A) still reports d₁ = 212 ± 23 zs. In other words, it just restates the Stage 31 excess with more statistics.
+
+The nondipole term is 24.8 zs at R_S (DIGITIZED red minus blue). Its R-scaling is **ASSUMED**:
+- baseline R⁻¹, from an envelope-tilt toy: a tilted envelope times a fringe of width 1/(p_eR) shifts the peak by ∝ (p_eR)⁻², so τ ∝ R⁻¹;
+- variants R⁰ and R⁺¹.
+
+### 32.3 Simulation model (how realistic joint data were built)
+- **R distribution and fringe shape versus R.**
+  - Taken from Fig. 2 (β-averaged): 12 R slices, each fitted with Gaussian + constant on the central fringe.
+  - The fringe width scales as σ·R ≈ constant (0.076–0.085 across the slices), close to the 1/R double-slit expectation. Peak and background per event vary by ±10–20 %.
+  - These ratios to the subset-S slice are fitted linearly in R (ASSUMED smooth).
+- **Angle structure.** Taken from the 15 cosβ rows of Fig. 3 (subset S), scaled for each R by those ratios. The Fig. 3/Fig. 2 cut efficiency (0.925) is ASSUMED to be the same at all R.
+- **R resolution.** Perfect in the baseline (ASSUMED). A σ_R = 0.03 Å variant is also run; the paper gives no KER resolution.
+- **Calibration check (not a tuning).** The forecast for the subset S slice alone reproduces the measured statistical error to **3 %** (ratio 1.03).
+- **Full-pipeline Monte Carlo.**
+  - Each of the 80 KER bins gets its own R, shift and width. The Poisson histograms are then fitted exactly as real data would be, by `stage32_analyze_joint.py`.
+  - 400 simulations each were run for H0, H1 (d₁ = 230.8 zs) and H0free.
+  - Results: σ(d₁) = 170 / 164 / 176 zs against 169 zs from Fisher. Mean bias +8 / −10 / +2 zs, which is within the 8.5 zs MC error.
+
+### 32.4 Headline forecast (DERIVED; 4 equal-count R bins, 800 eV, all ~267k events)
+
+| R bin (Å) | ⟨R⟩ | events | slope stat error (zs) | H0 slope | H1 slope (d₁ = 231) | H0free slope |
+|---|---|---|---|---|---|---|
+| 0.60–0.695 | 0.658 | 59.9k | 30.5 | 247 | 478 | 453 |
+| 0.695–0.750 | 0.721 | 61.3k | 32.4 | 266 | 497 | 491 |
+| 0.750–0.810 | 0.777 | 61.9k | 34.2 | 283 | 514 | 525 |
+| 0.810–0.96 | 0.860 | 64.1k | 36.6 | 308 | 539 | 577 |
+
+| quantity | value |
+|---|---|
+| σ(d₁), shape test (B) | **169 zs** (MC 164–176) |
+| minimum detectable d₁, expected Z = 2 | **338 zs** (617 zs for 95 % power at 2σ) |
+| minimum detectable d₁, expected Z = 5 | **846 zs** |
+| **expected Z if the Stage 31 residual (231 zs) is real** | **1.36σ**; MC: Z > 2 in only 25 % of simulated experiments, Z > 1 in 65 % |
+| expected Z at the Stage 31 95 % bound (485 zs) | 2.9σ |
+| (A) excess test, σ(d₁) | 52.5 zs (Z = 4.4 if real); 100 zs (Z = 2.3) with the authors' 121 zs band as prior. Not a discriminator (see 32.2) |
+
+**Honest negative.** The existing ~300k-event data set **cannot** decide H0 against H1 for an extra term the size of the Stage 31 residual. The expected significance is 1.4σ.
+- A d₁ below about 340 zs would not reach 2σ, and below about 850 zs it would not reach 5σ.
+- The 5σ figure is already above the Stage 31 95 % bound (485 zs). So a 5σ discovery with these data is ruled out in advance.
+- What the split *can* do: exclude d₁ ≳ 485 zs at about 2.9σ, and so test the top half of the window Stage 31 left open.
+
+### 32.5 Bin choice, second photon energy, systematics
+**Binning** (equal-count bins, σ_B in zs):
+
+| bins | σ_B (zs) |
+|---|---|
+| 2 | 194 |
+| 3 | 175 |
+| 4 | 169 |
+| 6 | 165 |
+| 10 | 163 |
+| paper-like 0.04 Å slices | 163 |
+| outer thirds only | 176 |
+
+- More bins help only slowly. **Best practical choice: 6–8 equal-count bins** (165–163 zs); beyond that the fits become fragile.
+- Throwing away the middle third does not help.
+
+**Second photon energy (DERIVED + ASSUMED).** The assumptions are:
+- the same event count, visibility and envelope as at 800 eV, with fringe width ∝ 1/p_e;
+- the same energy-sharing fraction;
+- d₁ independent of photon energy.
+
+The cross-section change with energy is **not** included, because no fetched source gives it.
+
+The key physics (DERIVED) is that the time precision per event goes as σ_cosα·R/v_ph ∝ 1/E_e. A given τ gives a phase E_e·τ, so a higher energy is a finer clock. One all-R bin gives a slope error of 29.6 / 16.7 / 9.7 zs at 400 / 800 / 1600 eV.
+
+| added data set | σ(d₁), shape test (B) | Z if d₁ = 231 | σ(d₁), (A2): travel fixed, common Δp free |
+|---|---|---|---|
+| none (800 eV only) | 169 zs | 1.36 | — |
+| repeat at 800 eV (×2 events) | 120 zs | 1.9 | — |
+| + 400 eV | 147 zs | 1.6 | 39 zs |
+| + 1600 eV | **85 zs** | **2.7** | 23 zs |
+| + 400 and 1600 eV | 82 zs | 2.8 | 15 zs |
+
+- A second energy adds a different handle. The momentum-zero offset enters τ as Δp·R/E_e, so it falls with energy, while travel time and d₁ do not.
+- With the *same* absolute Δp at both energies (ASSUMED), (A2) separates "real time delay" from "calibration artefact" at the 15–39 zs level.
+- But (A2) still cannot separate d₁ from an R-proportional excess that does not depend on energy. Only (B) does that.
+
+**Reaching σ_B = 50 zs** (the level Stage 31 31.6 implied) would need about **11× the present events at 800 eV** (≈ 3 Mevents, ≈ 1500 h at the CITED rate), or about 4× at 1600 eV if the visibility holds there (ASSUMED). **This corrects Stage 31's "null result at the 50 zs level" remark:** 50 zs is reachable for test (A), not for the shape test, with the present statistics.
+
+**Systematics of the shape test (DERIVED):**
+- **Nondipole R-scaling mis-modelled** (R⁻¹ / R⁰ / R⁺¹ cross-fits): bias in d₁ up to **±49 zs**, about 0.3σ_B. Once theory gives the nondipole term per R bin, this goes away.
+- **R resolution σ_R = 0.03 Å (ASSUMED).** It shrinks the lever arm by 0.90 and biases d₁ by:
+  - +23 zs under H0;
+  - +23 zs under H1 (254 vs 231);
+  - **+48 zs under H0free**.
+
+  We need the KER resolution from the authors.
+- **Flag: excess scatter in the public β-averaged data.** The 12 Fig. 2 fringe centres, which "must be symmetric" according to the paper, scatter about 0 with χ² = 33.0/12 (p = 0.001), 1.66× the Fisher errors.
+  - That scatter sits in the cosβ-even intercept, which the slope fits ignore.
+  - But if the same 1.66× under-estimate applied to R-binned slope errors, σ_B would grow to about 280 zs (Z = 0.8 for d₁ = 231).
+  - Worth asking the authors.
+
+### 32.6 Predicted curves for immediate comparison (`results/stage32_curves.csv`, panel a/b)
+Slopes are in zs per unit cosβ; the last two rows are the raw dcosα₀/dcosβ.
+
+| R (Å) | 0.60 | 0.66 | 0.72 | 0.78 | 0.84 | 0.90 | 0.96 |
+|---|---|---|---|---|---|---|---|
+| R/c | 200.1 | 220.2 | 240.2 | 260.2 | 280.2 | 300.2 | 320.2 |
+| H0 (R/c + nondipole ∝1/R) | 230.7 | 248.0 | 265.7 | 283.7 | 302.0 | 320.6 | 339.3 |
+| H0free (all excess ∝ R, a = 1.94/c) | 417.9 | 453.8 | 490.3 | 527.0 | 564.1 | 601.3 | 638.8 |
+| **H1** (H0 + 231 zs) | 461.5 | 478.7 | 496.4 | 514.5 | 532.8 | 551.4 | 570.1 |
+| H1 at 95 % bound (H0 + 485) | 715.7 | 733.0 | 750.7 | 768.7 | 787.0 | 805.6 | 824.3 |
+| H0free in raw cosα₀ slope | 0.0558 | 0.0552 | 0.0547 | 0.0543 | 0.0541 | 0.0538 | 0.0536 |
+| H1 in raw cosα₀ slope | 0.0616 | 0.0582 | 0.0554 | 0.0531 | 0.0511 | 0.0494 | 0.0479 |
+
+**Rule of thumb for the real data.** Across 0.66 → 0.86 Å:
+- H1 predicts the slope rises by only **≈ 61 zs** (the travel-time part);
+- H0free predicts it rises by **≈ 124 zs**;
+- with four bins, each point has a ±30–37 zs statistical error.
+
+In raw units, H1 means the fringe-shift slope *falls* by 13 % from the first to the last bin, while H0 and H0free stay flat to within about 2–4 % (the residual drift comes from the 1/R nondipole term and E_e(KER)).
+
+### 32.7 Ready-to-run analysis (`scripts/stage32_analyze_joint.py`)
+```
+python scripts/stage32_analyze_joint.py JOINT.csv --nbins 6 --out results/stage32_joint_result.json   # binned (KER or R, cos α, cos β, count) or event list
+python scripts/stage32_analyze_joint.py --selftest                                                      # simulated H1 file, full pipeline
+```
+- **What it does.** It reads Zenodo-style headers. For each (R bin, cosβ row) it fits the central fringe with a Poisson Gaussian + constant in a window scaled with the fringe width. It then converts with each bin's R/v_ph (E_e from KER), fits the slope per R bin, and reports:
+  - H0-fixed χ²;
+  - test (B): d₁, its error and Z, plus the fitted R coefficient in units of 1/c;
+  - test (A);
+  - all of this for the three nondipole-scaling variants.
+- **Self-test.** One H1 realization (true d₁ = 231) returned d₁ = 68 ± 163 zs, within 1σ, as expected from 32.4.
+- **Event lists.** An event-list version of the same file gave 84 ± 163.
+- **Caveat.** The self-test file models only the central fringe, so its total count is lower than the real data.
+
+### 32.8 Assumptions (all ASSUMED unless noted)
+1. The fringe shape at each R follows Fig. 2 (β-averaged). β-smearing is common to all R under H0, so it cancels in the ratios.
+2. The Fig. 3 cut efficiency is the same at all R.
+3. R resolution is perfect (variant: 0.03 Å).
+4. Fisher errors are accurate; this was checked by MC and against the Stage 31 bootstrap (0.96×).
+5. The nondipole magnitude is DIGITIZED. Its R-scaling is ASSUMED (R⁻¹, with R⁰ and R⁺¹ as variants).
+6. d₁ is the same at all R and all photon energies. A constant, angle-independent d₀ is unobservable (CITED note [19], and inversion symmetry).
+7. At the second energy: same counts, same visibility, width ∝ 1/p_e, same sharing fraction.
+8. The momentum-zero prior is ±0.04 a.u., read as 1σ.
+9. Window 0.4 at R_S, scaled with the fringe width.
+
+### 32.9 Flags and coincidences
+- **The Stage 31 residual (231 zs) is 0.93 × R/c (247 zs).** That is the same factor-of-2 coincidence as in 31.5, seen from the other side.
+  - If the excess really is "a second travel time", it scales with R. The shape test would then come out **H0-like** (H0free), and Dan's R-independent release term would be disfavoured, not confirmed.
+  - The two cases differ by only about 63 zs in slope rise across the four bins, against a σ_B of 169.
+- **H1 and H0free cross at R ≈ 0.74 Å by construction.** Both are calibrated to the subset S slope. This is not a coincidence.
+- **The forecast was not fitted to anything.** Forecast/measured stat ratio is 1.03 and Fisher/bootstrap is 0.96; these agreements are checks, not tuning.
+- **Dropped (not verifiable this session):**
+  - the KER resolution;
+  - the photon-energy dependence of the double-ionization cross-section and of the fringe visibility;
+  - any D₂ R distribution (Stage 31 suggested D₂);
+  - the nondipole term's actual R dependence (which needs the authors' or Chelkowski–Bandrauk's model).
+
+### 32.10 Bottom line
+- **The joint split is still worth getting, for three reasons:**
+  - it is the only test that is immune to the momentum-zero and R-scale systematics;
+  - it can push the open window from 485 zs down to about 340 zs (2σ);
+  - its predicted curves are ready for a one-command comparison.
+- **But it cannot settle H0 against H1 at the size of the Stage 31 residual.** The expected significance is 1.4σ, with a 25 % chance of reaching 2σ.
+- **A decisive test needs new data:** about 10× the statistics at 800 eV, or a high-energy run (1600 eV, if the visibility holds), plus the authors' KER resolution and nondipole model per R bin.
