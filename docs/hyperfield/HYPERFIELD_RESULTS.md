@@ -4280,3 +4280,42 @@ All are honest upper limits; nothing is claimed.
 
 **Files:** `scripts/stage50_run.py`, `results/stage50.json`, `results/stage50_sources.csv`, `figures/stage50_d1_search.png`.
 - Note: the box was replaced mid-stage, so the Python venv was rebuilt. Source PDFs live in `/workspace/stage50_src`.
+
+## Stage 51: does the Kirpitch forward/backward fringe-visibility difference reproduce? (public Grundmann data)
+
+**Claim checked.** Kirpitch 2026 (Zenodo preprint): *"the visibility differs between forward and backward light directions (0.579 against 0.508, 4.2 standard deviations)"*. The preprint PDF was blocked (Zenodo 403) this session, so its exact definition of the halves is not known. I took "forward/backward" as cosβ > 0 / < 0 (photon direction vs molecular axis, the paper's two "halves"; ASSUMED).
+
+**Data.** Grundmann 2020 Zenodo `Fig3_data.txt`: a 45 × 15 histogram in cosα (fast electron vs axis) and cosβ, 47 413 events, copy in `data/stage31`.
+- Visibility comes from a Poisson-likelihood fit of the central fringe: I = N(1+sx)(1+V cos k(x−x₀)), with |cosα| ≤ W.
+- Errors come from a parametric Poisson bootstrap (400 resamples; 200 per cosβ column).
+
+**Result: it reproduces.**
+
+| estimator | V_forward | V_backward | ΔV | z |
+|---|---|---|---|---|
+| fit, W = 0.40 / 0.45 / 0.50 | 0.559 / 0.562 / 0.569 | 0.488 / 0.490 / 0.493 | 0.071 / **0.072 ± 0.019** / 0.076 | 4.0 / 3.8 / 4.3 |
+| raw max / mean(adjacent minima) | 0.554 | 0.483 | 0.071 ± 0.026 | 2.7 |
+| pairwise V(+\|cosβ\|) − V(−\|cosβ\|), 7 pairs | — | — | **0.074 ± 0.018** (χ² = 11.5/6) | 4.1 |
+| Kirpitch (quoted) | 0.579 | 0.508 | 0.071 | 4.2 |
+
+- My absolute V runs about 0.02 lower than Kirpitch's (estimator choice; overall 0.510 vs 0.543), but the forward–backward difference matches to 0.001.
+
+**What physics predicts: ΔV = 0 exactly, for any physical mechanism.**
+- The sign of the axis is a labelling convention: *"we label the two detected protons by their sequence of impact on the detector … the molecule direction … points from the proton detected first to the one detected second"* (CITED, Grundmann Methods).
+- A rotation by π about the photon direction k maps every cosβ > 0 configuration onto a cosβ < 0 configuration with cosα → −cosα. That rotation is an exact symmetry of a randomly oriented gas in a circularly polarized beam (CITED: *"randomly oriented"*, *"left-handed circularly polarized photons at right angle"*). Only the spectrometer is not invariant under it.
+- So standard nondipole physics, a do-si-do d₁ term, and the preprint's coherence law all predict V(+cosβ) = V(−cosβ).
+- **The authors state no forward/backward visibility expectation.** Their nondipole statement (*"tilts the electron angular distributions … slightly in forward direction"*) concerns electron direction relative to k, which is mapped consistently by the rotation.
+
+**The instrument breaks the symmetry, visibly, in the same data.**
+- The forward half has **6.8 % more events (14σ)**. The two halves must be equally populated physically.
+- The forward profile vs the mirrored backward profile has shape χ² = 88 for 44 dof.
+- The pairwise backward visibilities scatter more than their errors allow: 0.40 at |cosβ| = 0.4 and 0.43 at 0.8, against 0.49–0.55 elsewhere.
+
+**Verdict.**
+- The 4σ forward/backward visibility difference is **real in the data but instrumental** (acceptance, resolution or background differing between first- and second-detected-proton geometries).
+- It carries **no information about do-si-do release timing or any other physics**. It cannot support the preprint's "coherence law", and it does not bear on d₁.
+- Coincidence flag: V_b/V_f = 0.872 and N_b/N_f = 0.873. I did not interpret this.
+
+**Liang 2024 ETH repository retry (once).** HTTP 500 from the JavaScript front end; no files reached, and I made no further attempts.
+
+**Files:** `scripts/stage51_run.py`, `scripts/stage51_fig.py`, `results/stage51.json`, `results/stage51_sources.csv`, `figures/stage51_fb_visibility.png`.
