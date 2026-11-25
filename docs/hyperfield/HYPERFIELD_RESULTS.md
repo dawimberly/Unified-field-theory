@@ -3998,3 +3998,54 @@ The Schrinski 5.96 GHz point is not recomputed, because L is not re-fetched this
 - These are narrow lines, so coverage is unchanged.
 
 **Files:** `scripts/stage43_run.py`, `results/stage43.json`, `results/stage43_bounds.csv` (with old bulk-only column), `results/stage43_sources.csv` (adds `/workspace/stage43_src/1606.04581` Carlesso 2016), `figures/stage43_frequency_coverage.png`.
+
+## Stage 44: do-si-do release-time spread and gate threshold, from decay-law tests and quantum-jump statistics
+
+**Model (ASSUMED; QM value in brackets).** A hook (an unstable nucleus, or a shelved ion) releases after a waiting time t.
+
+- **D1, shape.** t ~ Weibull(τ, β), with spread σ_τ/τ = CV(β). [β = 1, CV = 1: memoryless]
+- **D2, static spread.** Each hook has its own fixed rate Γ̄(1+sε), gamma-distributed with Var ε = 1. The population hazard is Γ̄/(1+s²Γ̄t), so the apparent half-life grows as T0(1+s²Γ̄t). [s = 0]
+- **D3, slowly varying openness (memory).** One system whose rate has spread s, holds for ≥ 2 consecutive jumps, and is re-drawn within < 1000 jumps. This correlates consecutive intervals. [s = 0]
+- **D4, gate.** No release is possible for t < t_g after the hook forms, and release is exponential after that. [t_g = 0]
+
+**How this differs from Stage 31.**
+- Stage 31's ~10⁻³⁰ limit (VIP-2) is on an **intrinsic, distinguishable openness label**. Such a label would let electrons evade the Pauli principle.
+- D2 and D3 are statistical spreads of release **rate** among hooks that stay identical for exchange purposes (a pilot-wave-like hidden variable). VIP-2 does not see these.
+- Stage 31's timing items constrained jitter (< 2.7 ps, a detector limit) and left a universal τ untestable. D1 to D4 test the **shape and memory** of the release-time distribution, which is new.
+- If the spread were an exchange-relevant label, the 10⁻³⁰ limit would apply and dominate.
+
+**Data (all fetched; quotes in `results/stage44_sources.csv`).**
+- **Norman et al. 1988** (LBL-24562 = PRL 60, 2246), Table II. Four ⁵⁶Mn samples were each fitted with a free half-life over 0.3–13, 11–22, 20–33 and 34–45 half-lives. Results: 2.583 ± 0.008, 2.585 ± 0.005, 2.576 ± 0.005, 2.573 ± 0.019 h.
+- **Norman ⁶⁰Co run:** a 12.5 ms activation burst, with counting starting after 3.5 h.
+- **Berkeland et al. 2004** (arXiv:physics/0304013): 228,000 Sr⁺ quantum jumps, with fractional entropy reduction U < 6.5×10⁻⁴ between interval pairs. They used 13×13 equiprobable bins and normalised intervals in strings of 1000.
+
+**Results (DERIVED, 95%).**
+
+| element | test | result |
+|---|---|---|
+| D2 static rate spread | linear fit of T vs age (in mean lives) | s² = (−2.5 ± 2.3)×10⁻⁴, χ² = 0.64/2 → **s < 0.019** (start-of-interval ages: 0.0195) |
+| D1 Weibull shape | ln T vs ln age | β = 1.0023 ± 0.0025 → **|β−1| < 7.3×10⁻³**, σ_τ/τ ∈ [0.993, 1.003] |
+| D3 slow openness | mutual information of consecutive intervals, lognormal rate (I ∝ s⁴), all measured U attributed | **s < 0.27** |
+| D4 gate (dead time) | ⁶⁰Co counted with exponential time spectra while every nucleus was ≤ 3.5 h old | **t_g < 1.3×10⁴ s = 5.3×10⁻⁵ τ(⁶⁰Co)** |
+
+**Flags.**
+- The half-life numbers come from an OCR'd scanned preprint. Values were cross-read across two text extractions.
+- The effective age of each per-sample fit is ASSUMED (midpoint vs start, both reported).
+- The Weibull result depends on the age zero point. Irradiation durations are not given.
+- Berkeland's U is about the size of the finite-sample bias, so the D3 limit is set by statistics, not by a measured correlation.
+- D3 only sees rate fluctuations lasting between 1 and ~1000 jumps. Slower ones are normalised away; faster ones average out.
+- Gamma-shaped waiting times (as opposed to Weibull) relax to a constant hazard after a few τ, so the long-baseline data barely test them.
+- The D4 limit is relative to a 7.6-year lifetime, so it is weak in absolute terms.
+- No quantum-jump dwell-time histogram was available as numbers, so no short-time gate test was possible from the jump data.
+- QM's own Khalfin deviations are far below these sensitivities.
+- The D2 slope is 1.1σ *negative* (the opposite sign to a spread). Not significant.
+
+**Verdict.** No deviation from memoryless, exponential release:
+- a per-event shape at the 0.7 % level;
+- a population rate spread below 2 %;
+- a persistent hook memory below 27 %;
+- a gate below 5×10⁻⁵ of the lifetime.
+
+All are honest upper limits; nothing is claimed.
+
+**Files:** `scripts/stage44_run.py`, `results/stage44.json`, `results/stage44_sources.csv`, `figures/stage44_release_time.png`.

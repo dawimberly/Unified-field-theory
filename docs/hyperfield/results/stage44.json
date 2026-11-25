@@ -1,0 +1,115 @@
+{
+ "stage": 44,
+ "results": {
+  "D2_static_spread": {
+   "midpoint": {
+    "T0": 2.5895850597879315,
+    "slope_h_per_life": -0.0006534231908953913,
+    "s2": -0.000252327371300521,
+    "s2_err": 0.0002273292474925454,
+    "s2_95": 0.0003739566121252372,
+    "s_95": 0.019337957806480944,
+    "chi2": 0.6380538160636055,
+    "dof": 2
+   },
+   "start": {
+    "T0": 2.586673585727269,
+    "slope_h_per_life": -0.0006348511827492923,
+    "s2": -0.00024543150177597597,
+    "s2_err": 0.0002310821189369254,
+    "s2_95": 0.0003801300856512423,
+    "s_95": 0.01949692503066169,
+    "chi2": 0.7420258783518138,
+    "dof": 2
+   }
+  },
+  "D1_weibull_shape": {
+   "midpoint": {
+    "beta": 1.0023127291965557,
+    "beta_err": 0.0025296538198383406,
+    "beta_lo95": 0.9973546077096725,
+    "beta_hi95": 1.007270850683439,
+    "chi2": 1.0334515864590414,
+    "CV_range95": [
+     0.9927891486458044,
+     1.0026534303918504
+    ]
+   },
+   "start": {
+    "beta": 1.000485720844103,
+    "beta_err": 0.0008415574960557153,
+    "beta_lo95": 0.9988362681518337,
+    "beta_hi95": 1.0021351735363722,
+    "chi2": 1.536175747771083,
+    "CV_range95": [
+     0.997870032725365,
+     1.0011652845872012
+    ]
+   }
+  },
+  "D3_slow_openness": {
+   "I_max_nats": 0.0016672170823499987,
+   "s_95": 0.271422610383261,
+   "note": "U < 6.5e-4 is itself about the finite-sample bias (nb-1)^2/(2N ln nb) for N ~ 4e4 pairs; all attributed. Rates varying slower than ~1000 jumps are removed by the paper's normalisation, faster than one interval average out."
+  },
+  "D4_gate": {
+   "t_g_max_s": 12600.0,
+   "t_g_over_tau": 5.250480173457401e-05,
+   "logic": "all 60Co nuclei are <= 3.5 h old when counting starts (12.5 ms burst; 60mCo feeding finished after 20 of its half-lives); counts with flat exponential time spectra were recorded, so a dead time t_g > ~3.5 h is excluded"
+  }
+ },
+ "sources": {
+  "norman88": {
+   "ref": "Norman, Gazes, Crane & Bennett, \"Tests of the Exponential Decay Law at Short and Long Times\", LBL-24562 (Dec 1987) = PRL 60, 2246 (1988)",
+   "url": "https://escholarship.org/content/qt5568p03n/qt5568p03n.pdf",
+   "location": "Table II; text p.4-6 (OCR of scanned preprint)",
+   "quote": "Table II (1811 keV, half-life free): sample 1 \"0.3 t1/2 ~ 13 t1/2\" \"2.583 +- 0.008\"; sample 2 \"11 t1/2 ~ 22 t1/2\" \"2.585 +- 0.005\"; sample 3 \"20 t1/2 ~ 33 t1/2\" \"2.576 +- 0.005\"; sample 4 \"34 t1/2 ~ 45 t1/2\" \"2.573 +- 0.019\" [hours] ; \"In all four cases the half-life determined from our data agreed with the known value, thus indicating no dependence on the age of the source\" ; \"56Mn ... 2.5785 hours\" ; 60Co: \"irradiated ... in a burst with a full width at half maximum of 12.5 milliseconds\" ; \"After allowing this activity to decay for 3.5 hours, the sample contained 15 micro-Curies of 60Co\" ; \"Counting was begun within 8x10^-5 t1/2(60Co) after the activation\" (exponent OCR-garbled; consistent with 3.5 h / 5.271 y = 7.6e-5) ; \"60Co ... 5.271 years\" ; \"Half of the 60Co activity that we observed was produced initially as the t1/2 = 10.5 minute 60Com\"",
+   "values": {
+    "T": [
+     2.583,
+     2.585,
+     2.576,
+     2.573
+    ],
+    "dT": [
+     0.008,
+     0.005,
+     0.005,
+     0.019
+    ],
+    "lo": [
+     0.3,
+     11,
+     20,
+     34
+    ],
+    "hi": [
+     13,
+     22,
+     33,
+     45
+    ],
+    "Tknown": 2.5785,
+    "co_wait_h": 3.5,
+    "co_T_y": 5.271
+   }
+  },
+  "berkeland04": {
+   "ref": "Berkeland, Raymondson & Tassin, \"Tests for nonrandomness in quantum jumps\", PRA 69, 052103 (2004), arXiv:physics/0304013v2",
+   "url": "https://arxiv.org/pdf/physics/0304013v2",
+   "location": "abstract; p.2-3, Eqs. (1)-(5)",
+   "quote": "\"we have observed 228 000 quantum jumps of a single trapped and laser cooled 88Sr+ ion\" ; \"We measure the fractional reduction in the entropy of information to be < 6.5x10^-4 when the value of any interval between quantum jumps is known\" ; \"divide our data sets into continuous strings of 1000 events and normalize each interval time by the average interval time of its string\" ; \"choose tm(n) at intervals that result in roughly uniform values of Nm,n\" ; \"We set the number of bins in each row and column (mmax = nmax) to be 13\" ; \"U(x|y) = (H(x) - H(x|y))/H(x)\" ; \"intervals are uncorrelated when they are separated by 1 to 20 intervals, which corresponds to approximately 2 ms to several seconds\"",
+   "values": {
+    "U": 0.00065,
+    "nb": 13
+   }
+  },
+  "stage31": {
+   "ref": "HYPERFIELD_RESULTS.md Stage 31 (this repo)",
+   "url": "docs/hyperfield/HYPERFIELD_RESULTS.md",
+   "location": "31.2 (5),(6)",
+   "quote": "openness spread: VIP-2 beta^2/2 <= 8.6e-31 -> intrinsic distinguishable label <~ 1e-30; release time: jitter < 2.7 ps, universal tau unbounded",
+   "values": {}
+  }
+ }
+}
