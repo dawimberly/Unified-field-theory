@@ -3960,3 +3960,41 @@ No accounts were registered.
   - MacCabe 2020 Si optomechanical crystal (5 GHz, τ_ph ≈ 1.5 s). There is no validated CSL formula for a localised breathing mode with k r_C ~ 1, and the paper gives no dark-state heating number.
   - Galliou 2013 quartz (Q = 8×10⁹ at ~200 MHz, 4 K): bath-implied, about 10× weaker than Goryachev.
 - All are narrow lines, so the decade coverage is unchanged at 10.84 / 25.66.
+
+## Stage 43: bulk + free-surface CSL heating for thickness-type modes, validated before use
+
+**Formula (DERIVED).** The model is linearised mass-proportional CSL with u = q·φ(x):
+- momentum diffusion: η = λ(4πr_C²)^{3/2}/(m0²(2π)³) ∫d³k e^{−k²r_C²}|F(k)|², with F(k) = i∫ρ k·φ e^{ik·x};
+- phonon heating: Γ = ħη/(2M_eff ω).
+
+For a laterally wide slab with free faces and φ = ẑ cos(nπz/L):
+- Γ/λ = ħ(4π)^{3/2} r_C³ ρ/(2π m0² L ω) · ∫dk k²|I(k)|² e^{−k²r_C²}, with I(k) = ∫₀^L cos(k0 z) e^{ikz} dz.
+- The resonance peaks reproduce the Stage 33 bulk formula. The tails give a surface term 8πħρr_C²/(m0² L ω), which is twice the thin-plate value (two faces, M_eff = M/2).
+- Evaluated numerically. In the separated limit, full = bulk + surface to 0.1–0.3 %.
+
+**Validation A (the stated criterion, ±10 %): Omahen 2025.**
+- With their P_max = 6.7×10⁻⁵ at their r_CSL = 3.0×10⁻⁷ m, the formula gives λ_max = 5.2×10⁻⁸ (T1 = 112 µs, Table I) or 5.9×10⁻⁸ (T1 = 100 µs, Table II), against the published 5.7×10⁻⁸. Ratios 0.92 / 1.03: **pass**.
+- This also explains the Stage 36 "12.6×" mismatch. Omahen's number is at r_C = 3×10⁻⁷ m, not 10⁻⁷ m.
+- **Honest caveat:** at 5 GHz the surface term is only 0.2–0.3 % of the total. Check A validates the framework and the bulk term, not the surface term.
+
+**Validation B (surface machinery): rigid cube vs Carlesso et al. 2016 Eq. (12b).**
+- The same k-space integral for a rigid cube (where all CSL noise is surface/finite-size) matches the published closed form to 10⁻¹⁵ for L/r_C = 0.5–100: **pass**.
+- The thickness-mode extension relies on the same linearisation. Remaining assumptions (ASSUMED): pure longitudinal polarisation (quasi-longitudinal SC-cut), free faces (electrode-separated, quoted), lateral mode size ≫ r_C, and plano-convex curvature ignored.
+
+**Applied (both checks passed), r_C = 1e-7 m:**
+
+| point | L (m) | Γ/λ bulk-only → full | λ_max old → new (s⁻¹) |
+|---|---|---|---|
+| quartz BAW OT5, 15.6 MHz (Goryachev 2012) | 1.083e-3 (DERIVED, n v_L/2f) | 4.8e3 → 2.4e5 | 2.4e-4 → **4.7e-6** |
+| quartz BAW OT21, 65.4 MHz | 1.085e-3 | 2.0e4 → 7.7e4 | 1.0e-4 → **2.7e-5** |
+| Omahen HBAR 5.05 GHz | 435e-6 | 8.36e5 → 8.38e5 | 1.553e-6 → 1.550e-6 |
+| Chu HBAR 6.65 GHz (n = 503) | 420e-6 | 9.97e5 → 9.98e5 | 1.336e-3 → 1.336e-3 |
+
+The Schrinski 5.96 GHz point is not recomputed, because L is not re-fetched this stage. The correction at GHz is <1 %.
+
+**Reading.**
+- Quartz OT5 improves 50×, to 4.7×10⁻⁶, comparable to the Cattiaux drum at 15.1 MHz (2.0×10⁻⁶).
+- The quartz points still rely on the bath-temperature assumption (n_TH from T, not measured).
+- These are narrow lines, so coverage is unchanged.
+
+**Files:** `scripts/stage43_run.py`, `results/stage43.json`, `results/stage43_bounds.csv` (with old bulk-only column), `results/stage43_sources.csv` (adds `/workspace/stage43_src/1606.04581` Carlesso 2016), `figures/stage43_frequency_coverage.png`.
