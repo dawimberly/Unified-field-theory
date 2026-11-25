@@ -3885,3 +3885,32 @@ All inputs were fetched this session (`results/stage37_sources.csv`).
 - **Spread / release-time distribution via non-exponential nuclear decay** (Norman 1988, ⁵⁶Mn over 45 half-lives). The only fetchable statement is qualitative (*"none were found"*), with no numerical amplitude limit.
 - **The d₁ (odd) term in He.** The fetched text does not say whether the two hemispheres were separated.
 - **Gate threshold and hysteresis.** No public dataset beyond those used in Stage 31.
+
+## Stage 40 — Second membrane dataset: millikelvin SiN membranes at 121–242 kHz (overnight loop, tick 1)
+
+**Why this stage.** The SUMMARY_11-25 open item "turn the 1.5 MHz point into a MHz band" can be advanced with public numbers, without any data request. Yuan, Cohen & Steele 2015 (arXiv:1510.07468) give everything the Stage 36 thin-plate formula needs:
+- thickness (50 nm SiN + 20 nm Al);
+- effective density 3.0 g/cm³;
+- mode frequencies (Table I);
+- ringdown Q;
+- the **measured** mode temperature (210 mK for Device I, 180 mK for Device II).
+
+**Method (DERIVED, as Stage 36).** The bound is CSL heating ≤ the total measured heating k_B T_mode/(ħQ), with all of it attributed to the effect. Γ/λ is taken as the smaller of the SiN-only (ρ = 3200) and bilayer (70 nm, ρ = 3000) predictions. Sources are in `results/stage40_sources.csv`.
+
+**Files:** `scripts/stage40_run.py`, `results/stage40.json`, `results/stage40_bounds.csv`, `results/stage40_sources.csv`, `figures/stage40_frequency_coverage.png`.
+
+| mode | f | Q used | heating (s⁻¹) | λ_max (s⁻¹) |
+|---|---|---|---|---|
+| Device I (1,1) | **242 kHz** | 1.27×10⁸ (14 mK) | 216 | **1.8×10⁻⁸** |
+| Device II (1,1) | 121 kHz | ≥5×10⁶ (lower bound used, conservative) | 4.7×10³ | 1.9×10⁻⁷ |
+| Device II (1,2) | 193 kHz | ≥5×10⁶ | 4.7×10³ | 3.1×10⁻⁷ |
+| Device II (2,1) | 192 kHz | 1.2×10⁵ | 2.0×10⁵ | 1.3×10⁻⁵ |
+
+**Reading.**
+- Four new points in the 8 kHz – 4.6 MHz gap. The best, **1.8×10⁻⁸ at 242 kHz**, sits in the middle of Adler's band. Before this the gap held only trapped ions at λ ~ 1.
+- Together with Seis (2.9×10⁻⁹ at 1.49 MHz) and Rossi (1.2×10⁻⁶ at 1.14 MHz), the membranes now bracket 0.12–1.5 MHz at 10⁻⁶–10⁻⁹. These are still narrow lines (±0.1 %), not a band, so the decade coverage is essentially unchanged.
+- The mode temperature (~0.2 K) is above the fridge (14 mK). The authors attribute this to vibration ("likely related to mechanical vibration noise in the setup"), and our bound counts all of it. This is **not** an excess candidate: it is environmental and also present in Seis 2022.
+- **Flags:**
+  - For Device II (2,1), the mode temperature of Device II is ASSUMED to apply.
+  - Q ≥ 5×10⁶ is a quoted lower bound, which makes the result conservative.
+  - The Al coverage is partial ("avoid depositing Al over the edges"), so the min-over-two-models choice is the conservative one.
