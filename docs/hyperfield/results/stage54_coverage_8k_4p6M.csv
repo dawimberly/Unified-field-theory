@@ -1,0 +1,26 @@
+f_center_Hz,lambda_max,stage,name
+8174.01,1.9e-08,31,Cantilever 8174 Hz (Vinante 2017)
+25220,3.62e-06,54,Diamond nanoladder cantilever 25.22 kHz (Heritier 2018)
+41400,2.41e-05,54,"SiN trampoline 41.4 kHz, 44 nm (Reinhardt 2016)"
+77600,2.22e-05,54,"Levitated silica nanosphere z 77.6 kHz, cryogenic (Tebbenjohanns 2021)"
+100500,5.6e-06,54,"Levitated silica nanosphere 100.5 kHz, R = 68.0 nm (Jain 2016)"
+104000,3.82e-05,54,"Levitated silica nanosphere z 104 kHz, room-T (Magrini 2021)"
+121000,1.92e-07,40,"SiN membrane 121 kHz, Device II (1,1) (Yuan 2015)"
+140000,5.46e-05,54,"SiN tethered membrane 140 kHz, 20 nm, room T (Norte 2016)"
+148800,1.77e-05,54,"Levitated silica nanosphere 148.8 kHz, R = 52.7 nm (Jain 2016)"
+151200,1.13e-05,54,"Levitated silica nanosphere 151.2 kHz, R = 71.6 nm (Jain 2016)"
+158800,1.74e-05,54,"Levitated silica nanosphere 158.8 kHz, R = 68.0 nm (Jain 2016)"
+192000,1.27e-05,40,"SiN membrane 192 kHz, Device II (2,1) (Yuan 2015)"
+193000,3.07e-07,40,"SiN membrane 193 kHz, Device II (1,2) (Yuan 2015)"
+242000,1.77e-08,40,"SiN membrane 242 kHz, Device I (1,1) (Yuan 2015)"
+305000,0.000144,54,Levitated silica nanosphere x 305 kHz (Delic 2020)
+600000,0.704,33,88Sr+ heating 0.60 MHz (Bruzewicz 2015)
+800000,0.77,33,88Sr+ heating 0.80 MHz (Bruzewicz 2015)
+1e+06,0.579,33,88Sr+ heating 1.00 MHz (Bruzewicz 2015)
+1.14e+06,1.19e-06,36,"SiN membrane 1.14 MHz, 20 nm (Rossi 2018), heating n_th Gamma_m at T~10 K"
+1.3e+06,0.506,33,88Sr+ heating 1.30 MHz (Bruzewicz 2015)
+1.406e+06,4.65e-09,54,"Soft-clamped SiN string 1.406 MHz, 20 nm, 46 mK (Gisler 2022)"
+1.486e+06,2.89e-09,36,"SiN membrane 1.486 MHz, 63 nm + Al pad (Seis 2022), 1/t_coh = n_th Gamma_m"
+1.5e+06,0.648,33,88Sr+ heating 1.50 MHz (Bruzewicz 2015)
+1.8e+06,3.65e-08,41,Al vacuum-gap drum 1.8 MHz (Youssefi 2023)
+4.6e+06,1.37,33,40Ca+ heating 4.6 MHz (Kaufmann 2017)
