@@ -4049,3 +4049,46 @@ The Schrinski 5.96 GHz point is not recomputed, because L is not re-fetched this
 All are honest upper limits; nothing is claimed.
 
 **Files:** `scripts/stage44_run.py`, `results/stage44.json`, `results/stage44_sources.csv`, `figures/stage44_release_time.png`.
+
+## Stage 45: short-time gate (dead time t_g) from a single-photon trace that contains its own excitation pulse
+
+**Model (ASSUMED).** Excitation happens at t = 0, the centre of a 15 ps π pulse.
+
+- **Gate-a ("clock gate").** The hook only forms at t_g, so the whole emission pattern shifts: S = Θ(t−t_g) e^{−(t−t_g)/τ} sin²(a(t−t_g)).
+- **Gate-b ("release gate").** The state evolves from t = 0, but release is blocked until t_g: S = Θ(t−t_g) e^{−(t−t_g)/τ} sin²(a t).
+- Here a = Δ_FSS/2ħ (Ollivier et al. Eq. 4).
+- **Measured signal** = laser Gaussian (same trace) + S ⊗ Gaussian jitter + background.
+- **t_g is measured relative to the laser peak in the same histogram.** Cable and axis delays therefore cancel. This avoids the problem that a universal delay is invisible in relative timing (Stages 31 and 45).
+
+**What standard QM predicts at short times (not a gate).**
+- In this geometry the H-polarised emission starts as sin²(at) ∝ t². That is fine-structure precession into the collection mode, already in the model. It moves the emission maximum to about 200 ps.
+- The generic Zeno-type quadratic onset lasts about the inverse bandwidth of the coupled reservoir. For optical spontaneous emission this is ASSUMED ≪ 1 ps (no number used), so it cannot mimic a 5–50 ps dead time.
+- QM therefore predicts t_g = 0 at the resolution here.
+
+**Data.** Ollivier et al., ACS Photonics 7, 1050 (2020), arXiv:1910.08863, Fig. 2b (exciton source S7).
+- The laser was deliberately left in the trace.
+- The paper quotes τ = 252 ± 3 ps, Δ_FSS = 8.58 ± 0.03 µeV, and Gaussian jitter of 53 ps FWHM.
+- DIGITIZED from the embedded 917×632 raster: 5.8 ps/px, x-scale linear to 1 px; 348 points in `data/stage45_ollivier2020_fig2b_digitized.csv`.
+- Fit parameters free: laser amplitude, centre and width; amplitude, τ, Δ, background and jitter.
+- Digitized residuals are correlated (integrated autocorrelation 3.1), so σ² is inflated by 3.1.
+- **Cross-check of the digitization:** the zero-gate parameters reproduce the paper's values. τ = 255 ps (paper 252 ± 3), Δ = 8.50 µeV (paper 8.58), jitter 51 ps FWHM (paper 53).
+
+**Results (DERIVED, 95 % profile likelihood).**
+
+| variant | best t_g | 95 % range (stat) | + ASSUMED ±5 ps systematic (π-pulse build-up, rendering) | t_g/τ |
+|---|---|---|---|---|
+| gate-a, clock delayed | +2.0 ps (Δχ² at 0 = 1.7) | −1 to +5 ps | **−6 to +10 ps** | < 0.04 |
+| gate-b, release blocked | +35 ps (Δχ² at 0 = 2.1, i.e. 1.4σ, not significant) | 0–47.5 ps | **< 53 ps** | < 0.21 |
+
+**Reading.**
+- Emission starts with the excitation pulse, to within about 10 ps (clock gate). A pure release block is allowed up to about 50 ps.
+- The shallow gate-b minimum is degenerate with the rising edge and the jitter/laser line shape. It is not a signal.
+- Together with Stage 44 (⁶⁰Co, t_g < 1.3×10⁴ s, 5×10⁻⁵ τ):
+  - in absolute time the gate is now pinned below 10⁻¹¹ s;
+  - relative to the lifetime, the long-lived nucleus still gives the stronger ratio.
+- **Not done:**
+  - no numeric short-lived nuclear "from creation" decay curve was found in fetchable form;
+  - no atomic pump-probe curve with numeric data near t = 0 was found.
+- **Flags:** the data are digitized, not raw; the ±5 ps systematic is ASSUMED; the jitter is modelled as Gaussian (real detectors have tails); there is one emitter and one trace.
+
+**Files:** `scripts/stage45_run.py`, `data/stage45_ollivier2020_fig2b_digitized.csv`, `results/stage45.json`, `results/stage45_sources.csv`, `figures/stage45_short_time_gate.png`.
