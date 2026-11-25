@@ -2691,3 +2691,83 @@ Primary scenario S1: all existing data, Markovian noise.
 - MAGIS-100: https://arxiv.org/abs/2104.02835
 
 ![Stage 26](figures/stage26_window.png)
+
+## Stage 27: what the CQ noise looks like, and whether we can tune an experiment to it
+
+**Question (Dan):** "If the noise is constant or consistent, can we tune the experiment for that, figure out what the noise is, or both?"
+**Files:** `scripts/stage27_run.py`, `scripts/stage27_fig.py`, `results/stage27.json`, `figures/stage27_signature.png`.
+**Labels:** DERIVED means computed here. CITED means taken from a source. ASSUMED means our choice, stated. This stage builds on Stage 26, where every probe sees A_E(ℓ)(κ+1/4κ) and the minimum is at κ = 1/2 (= Diósi κ = 1).
+
+### 27.1 The signature: how CQ noise differs from ordinary noise (DERIVED)
+1. **Spectrum.** White (Markovian), flat from DC upward. The model has no cutoff. For the X-ray bound to apply at all, the noise must stay flat to at least about 1e21 rad/s. *Honest negative:* residual-gas Brownian noise is also white, so spectral shape alone cannot separate CQ from gas. It does separate CQ from patch noise and internal damping (1/f), seismic noise (coloured) and readout noise (f⁴ in acceleration).
+2. **The "volume law".** Above the Stage 26 floor (ℓ ≥ 4.5 Å), every body larger than ℓ sits in the plateau. There, Γ_CQ·V = (4π/3)Għ(κ+1/4κ) ≥ **2.95e-44 m⁵ s⁻³**, one universal constant. The acceleration noise depends only on the body's volume. It does not depend on mass, composition, temperature, pressure, charge, magnetic field or laser power. Bodies smaller than ℓ all see the same Għ/(6√π ℓ³).
+   - Gas scales as P·√T·R⁻⁴·ρ⁻² and blackbody as T⁵R⁻⁴ρ⁻². A two-size or two-pressure series separates them from CQ (exponent −3 in R, 0 in P and T).
+   - Composition dependence appears only in the incoherent regime (ℓ < 0.6 Å), which is already excluded. *Honest negative:* in the surviving window, an EP-style composition differential gives a CQ signal of exactly 0. It is useful only as a veto.
+3. **Spatial correlation.** For two bodies the cross-spectrum is S_AB = 4πGħ(κ+1/4κ)·J_AB. Along the line joining them it is **−2Għ/d³** (anti-correlated); transverse it is **+Għ/d³** (κ = 1/2).
+   - It is independent of mass and ℓ, and exact for non-overlapping spheres by the shell theorem. Both the kick term and the field-noise term carry the same angular kernel. So the correlation coefficient is independent of κ.
+   - This is exactly the Kafri–Taylor–Milburn mutual noise (arXiv:1401.0946). Its sign agrees with the anti-correlated cross-spectrum (plus the π phase) of Kryhin & Sudhir (arXiv:2309.09105, PRL 134, 061501).
+   - For equal spheres, ρ_long = −(3/2π)V/d³. Values: touching spheres −0.25; d = 3R −0.074; **LPF TM1–TM2 −8.7e-4** (cross 2.65e-43 against self 3.03e-40 m²/s³); torsion dumbbell (ASSUMED 40 mm) −8.4e-5. |ρ| reaches 1% only for d ≤ 5.85 R.
+   - Point-like bodies (R ≪ ℓ), using the erf kernel: ρ → +1 for d ≪ ℓ (common mode, so a differential instrument is blind to it). It crosses zero at d = 1.93 ℓ and falls as −12√π(ℓ/d)³ beyond that.
+   - The cross term is long-range (1/d³). ℓ sets only the self term, so the "correlation length" is fixed by geometry, not by ℓ.
+
+**Bottom line for "figure out what the noise is":** a CQ excess would be (i) white, (ii) unchanged when you vary pressure, temperature, composition or mass at fixed volume, (iii) scaling as 1/V, and (iv) anti-correlated between neighbouring bodies at −(3/2π)V/d³. No ordinary source does all four.
+
+### 27.2 Tuning: honest gains (DERIVED, with published or ASSUMED T and B)
+White noise has no carrier. A lock-in or matched filter cannot pull it out of white backgrounds; one can only estimate excess PSD.
+- **(a) PSD integration.**
+  - The statistical floor is 1/√(TB): LPF (1.1e6 s, 19 mHz band) gives 2.2 orders; torsion 2; levitated 3.
+  - The binding limit is background-model accuracy ε. ASSUMED ε of 10% or 5% gives **1.0–1.3 orders**.
+- **LPF public-data reanalysis (feasible).** Fit the white Brownian branch against the decaying pressure over about 500 days (Armano 2024, arXiv:2405.05207). The Brownian PSD fell by a factor of 8.9; the cold run at 274.8 K already sits below the warm runs. The intercept is S_0 ⊇ CQ.
+  - ASSUMED inputs: 20 runs at 5% each. That gives intercept error 5.0% of the final PSD, which is a **1.0-order** gain (2σ).
+  - Data: LPF Legacy Archive https://lpf.esac.esa.int/lpfsa/ (HEASARC mirror) has Δg and housekeeping. Boileau et al. (arXiv:2204.03867) already used the public data.
+  - *Not possible:* a correlated-noise search. LPF records only Δg, has no independent TM channels, and the correlated part is 1e-3 of the self term.
+- **(b) Modulation.**
+  - For the DP / translation-invariant kernel there is **no external handle**: the noise is identical in vacuum and nothing outside the body changes it. Only body swaps (V) or modulating the backgrounds (P, T) are possible, which is the same limit as (a).
+  - **New:** a state-dependent (ultralocal "discrete") kernel is different, because its field noise is sourced by matter.
+    - Body self-term: Γ_x = πρG²D̂/(15R). LPF therefore gives D̂ ≤ **1.17e-15 kg**. Combined with XENONnT heating (D̂ ≥ ħ²/(ℓ² m_Xe Γ_X)), **the discrete kernel needs ℓ ≥ 2.5 µm**. This corrects the Stage 26 treatment, but only for that kernel.
+    - Remaining window: 1.2 orders at 10 µm, 2.6 at 50 µm.
+    - A moving source mass modulates the noise as Γ = (G²D̂/4)M_s/r⁴. That is a true lock-in handle.
+    - An LPF-class sensor with an ASSUMED 10 kg source at 5 cm reaches D̂ = 1.2e-17. It would cover the whole discrete window for ℓ ≲ 24 µm and ≥ 76% of it up to 52 µm. No such instrument exists.
+    - A Westphal-class torsion balance with 1 kg at 1 cm is 9.4 orders short.
+- **(c) Cross-correlation.** The 2σ threshold on the correlated part is 2√(Γ_AΓ_B/TB).
+  - LPF (hypothetical independent channels): 10.6 orders short, worse than the self route.
+  - Levitated pair at d = 3R: 14.3. Nanowire pair: 13.4. Torsion pair: 20.9.
+  - It never closes a gap, because the correlated part is only the small mutual term. Common mode (ℓ > d) is invisible to differential instruments.
+- **(d) Composition differential:** 0 (see 27.1).
+
+| Probe | Stage 26 log10 u | Best Stage 27 | Route |
+|---|---|---|---|
+| LPF (1.8–52 µm gap) | +9.40 | **+8.1** (+8.4 from public-data reanalysis) | (a) |
+| MAQRO baseline | +1.34 | **−0.20** (1 run, 1e4 detections), **−0.95** (30 runs, ASSUMED) | contrast statistics instead of λτ ≤ 1 |
+| Westphal torsion | +18.5 | +17.2 | (a) |
+| Monteiro levitated | +16.0 | +14.3 | (c) pair at d = 3R |
+
+**MAQRO with statistics.** Visibility resolution 2√(2/N) (ASSUMED Poisson) gives λ_min = 2.9e-4 s⁻¹ against λ_DP = 4.6e-4 s⁻¹. That excludes 0.5–35 nm, or 0.5–112 nm with 30 runs. It assumes environmental decoherence is known at the 0.5–3% level (ASSUMED).
+- *Coincidence flag:* the single-run value (−0.20) is within a factor of 2 of zero.
+- It does **not** reach the 1.8–52 µm band left after Stage 26 S4.
+
+### 27.3 Verdict
+- **Does tuning close any Stage 26 gap?** No for the DP kernel in the surviving 1.8–52 µm band: the best realistic gain is about 1.3 orders against 9.4.
+- **What tuning does buy:** MAQRO's baseline moves to a reach of 0.5–112 nm, which is already covered by Pino/MAQRO-1e11 in S4. For state-dependent kernels, the noise becomes *modulatable* with a source mass, and LPF self-noise already squeezes that class to ℓ ≥ 2.5 µm.
+- **What would identify the noise if an excess is seen:** the volume law plus the −2Għ/d³ anti-correlation.
+
+### 27.4 Literature (verified IDs)
+- Kafri, Taylor & Milburn, arXiv:1401.0946 (mutual noise is equivalent to Diósi).
+- Altamirano et al., arXiv:1612.07735 (pairwise classical channels differ from DP).
+- Tilloy & Diósi, arXiv:1706.01856.
+- Helou et al., arXiv:1606.03637 (LPF bounds DP at σ ≥ 40 fm; their D_DP equals our incoherent formula).
+- arXiv:2411.17588 (LPF update, σ_DP > 285.5 fm).
+- Kryhin & Sudhir, arXiv:2309.09105 (closest prior art for the correlation signature).
+- Angeli et al., arXiv:2501.13030.
+- Armano et al. 2024, arXiv:2405.05207.
+- Boileau et al., arXiv:2204.03867.
+
+What I did not find in these sources: the explicit volume-law constant used as a discriminator, the κ-independence of ρ, and source-mass modulation of state-dependent kernels. That is not proof that they are new.
+
+**Honest negatives:**
+- Spectrum cannot separate CQ from gas.
+- Composition tests give a null CQ difference.
+- Cross-correlation is weaker than the self route.
+- Lock-in fails for DP.
+- The LPF reanalysis gains only about 1 order.
+- The gains above rest on ASSUMED ε, run counts and source geometry.
