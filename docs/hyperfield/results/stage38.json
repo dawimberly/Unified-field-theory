@@ -1,0 +1,60 @@
+{
+ "stage": 38,
+ "results": {
+  "P2_ref": 0.8169749827262686,
+  "P2_60_65": -0.1770539734176626,
+  "lever": -0.9940289561439312,
+  "d2_max_as": 15.090103670811038,
+  "d2_max_zs": 15090.103670811039,
+  "ratio_to_H2": 147.9421928510886
+ },
+ "dropped": [
+  {
+   "item": "Element 4 spread / element 6 release time: non-exponential nuclear decay (Norman et al. PRL 60, 2246 (1988), 56Mn over 45 half-lives)",
+   "why": "only the qualitative statement \"measured up to 45 half lives ... none were found\" could be fetched (Aston arXiv:1204.5953); no numerical limit on the non-exponential amplitude -> dropped."
+  },
+  {
+   "item": "Element 1 d1 (odd, cos beta) term in helium",
+   "why": "the fetched text does not say whether the two emission hemispheres were separated; only the even P2 term is bounded."
+  },
+  {
+   "item": "Elements 2 (gate threshold) and 7 (hysteresis)",
+   "why": "no new public dataset beyond Stage 31 (single-photon microwave counting; FIRAS mu) was found this stage."
+  }
+ ],
+ "sources": {
+  "heuser15": {
+   "ref": "Heuser, Jimenez Galan, Cirelli, ..., Martin & Keller, \"Time delay anisotropy in photoelectron emission from the isotropic ground state of helium\", PRA 94, 063409 (2016), arXiv:1503.08966",
+   "url": "https://arxiv.org/pdf/1503.08966",
+   "location": "Results (Fig. 2-3 text)",
+   "quote": "\"Panel (c) comprises electrons emitted within a cone of emission between 60 and 65\" ; \"a delay at 15 is understood as the delay between electrons emitted at angles between 0 and 30 (reference)\" ; \"shown with error bars in Fig. 3 for four consecutive sidebands, SB 18-SB 24. For all sidebands, the measurements deviate significantly from zero for angles larger than 50\" ; \"The results of the ab initio calculations are in quantitative agreement with the measurement\" ; \"for the considered angular range, the discrepancy between experimental data and the theory curves is not larger than 10-15 as\"",
+   "values": {
+    "ref_cone": [
+     0.0,
+     30.0
+    ],
+    "last_bin": [
+     60.0,
+     65.0
+    ],
+    "max_disc_as": 15.0
+   }
+  },
+  "ivanov16": {
+   "ref": "Ivanov, Dahlstrom, Lindroth & Kheifets, \"On the angular dependence of the photoemission time delay in helium\", arXiv:1605.04539",
+   "url": "https://arxiv.org/pdf/1605.04539",
+   "location": "abstract; Sec. 3",
+   "quote": "\"In the case of helium with only one 1s -> Ep photoemission channel, the Wigner time delay tau_W does not depend on the photoelectron detection angle\" ; \"In the experimentally accessible angular range of 0 to 65, where the RABBITT signal is sufficiently strong\" ; \"the experimental data (Heuser et al 2015) is insufficient to extract these parameters\"",
+   "values": {}
+  },
+  "stage31": {
+   "ref": "Stage 31 (this repo): Grundmann 2020 H2 reanalysis",
+   "url": "docs/hyperfield/HYPERFIELD_RESULTS.md",
+   "location": "Stage 31, element 1",
+   "quote": "\"For release timing, the delay is t = R cos(beta)/c + d1 cos(beta) + d2 P2(cos(beta))\" ; \"The cos^2 (P2) term: |d2| < 102 zs\"",
+   "values": {
+    "d2_H2_zs": 102.0
+   }
+  }
+ }
+}

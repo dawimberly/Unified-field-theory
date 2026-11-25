@@ -3861,3 +3861,27 @@ All inputs were fetched this session (`results/stage37_sources.csv`).
 - Cheaper alternative: the raw 2017/2020 spectra, to check whether the 2017 floor is flat over 8100–8240 Hz and whether the 2020 floor varies across 3515–3550 Hz. → **data request (Vinante/Southampton).**
 
 ![Stage 37: 8174 Hz line shapes](figures/stage37_8174Hz.png)
+
+## Stage 38 — Other do-si-do elements with new public data (max two)
+
+**Goal.** Find do-si-do elements other than resonant release that public data not used in Stages 31–34 can test. I searched for angle, gate threshold, spread, release time and hysteresis. Only **one** element had usable new data.
+
+**Files:** `scripts/stage38_run.py`, `results/stage38.json`, `results/stage38_sources.csv`.
+
+### 38.1 Element 1 (angle), even term d₂P₂(cosβ), tested on a second system: the helium atom
+- **Data (CITED).** Heuser et al. 2016 (Keller group): angle-resolved RABBITT plus COLTRIMS on He 1s, sidebands SB18–SB24.
+  - Delays are measured relative to the 0–30° cone, out to the 60–65° bin.
+  - The anisotropy is significant above 50° and reproduced by ab-initio theory.
+  - *"the discrepancy between experimental data and the theory curves is not larger than 10–15 as"*.
+- **Conversion (DERIVED).** The dipole-weighted ⟨P₂⟩ is 0.817 in the reference cone and −0.177 in 60–65°, a lever of 0.994. So **|d₂| ≲ 15 as** = 15 000 zs.
+  - ASSUMED: theory exact, and the quoted maximum discrepancy treated as an envelope.
+- **Compared with Stage 31 (H₂, Grundmann 2020): |d₂| < 102 zs.** Helium is **~150× weaker**, but it is independent in three ways:
+  - an atom, not a molecule;
+  - the angle is to the polarization, not to a bond axis;
+  - photoelectrons of a few eV.
+- **No anomaly.** The angle element survives in a second system. This adds no tension and no support.
+
+### 38.2 Dropped (honest)
+- **Spread / release-time distribution via non-exponential nuclear decay** (Norman 1988, ⁵⁶Mn over 45 half-lives). The only fetchable statement is qualitative (*"none were found"*), with no numerical amplitude limit.
+- **The d₁ (odd) term in He.** The fetched text does not say whether the two hemispheres were separated.
+- **Gate threshold and hysteresis.** No public dataset beyond those used in Stage 31.
