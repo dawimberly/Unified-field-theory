@@ -4169,3 +4169,48 @@ All are honest upper limits; nothing is claimed.
 5. **Reference k.** CODATA 2014 k is taken as η-independent (acoustic gas thermometry; ASSUMED).
 
 **Files:** `scripts/stage47_run.py`, `results/stage47.json`, `results/stage47_sources.csv`, `figures/stage47_hysteresis.png`.
+
+## Stage 48: path dependence of η: CO line-intensity ratios (Li 2025, Table S1)
+
+**Data (CITED).** Li et al., Sci. Adv. 11, eadz6560 (2025), Supplementary Table S1, fetched from the PMC open-data bucket (PMC12442875).
+- 38 rows: 16 ratios of R-lines from *different* lower levels J, and 22 R(J)/P(J) rows that *share* the lower level. Each row gives the measured ratio, its 1σ statistical error, P, T (298.43 K), and the Einstein-A ratio inferred with the Boltzmann factor at the sensor T, next to the UCL2025 ab initio value.
+- Temperature-probe calibration: 5 mK (CITED).
+- Lower-level energies use B, D fitted to the paper's quoted E(J=1) = 3.8450 and E(J=17) = 587.7209 cm⁻¹ (DERIVED). Check: this gives E(20) = 806.385 against the cited 806.3828.
+- Note: the main-text "circulating ratio" numbers (0.535362 …) differ from Table S1 (0.534955 …), most likely because they refer to a different temperature (296 K in Fig. 3). I used Table S1 and the supplement's own A-ratio closure.
+
+**Observable (DERIVED).** Write the populations as N_J = N_J^Boltzmann·e^(−g(J)). The paper's inferred A-ratio then carries e^(−[g(J1)−g(J2)]), so the residual r = ln(A_exp/A_UCL2025) = g(J2) − g(J1) + theory error.
+- R(J)/P(J) pairs have g cancel exactly, so they form an **η-free control** that measures theory error plus systematics.
+
+**Readings of the Stage 31 η (ASSUMED; per quantum, emission/absorption = e^(−x)/(1+η)):**
+- **L (ladder):** η acts on each ΔJ = 1 rung, the rotational dipole rule, so g(J) = J·ln(1+η).
+- **G (ground-only):** all J ≥ 1 share one factor.
+- **S (pair-contextual):** the Stage 47 reading. Every different-level ratio carries one factor (1+η). This is not a population vector, and it predicts a closure defect of (1+η)⁻².
+
+**Key point: closure cannot detect path dependence of physical populations.** The circulating product (R1/R3)(R3/R5)(R5/R10) = R1/R10 is an identity for *any* set of level populations, Boltzmann or not, because populations are state functions. It bounds only reading S, a measurement-contextual factor. A real path-dependent η, meaning a per-transition η that breaks the Kolmogorov loop condition, shows up instead as a non-Boltzmann g(J). That is tested against theory, with the R/P control fixing the theory floor.
+
+**Results (95 %).**
+
+| reading | method | \|η\| bound | vs FIRAS 9.0e-5 |
+|---|---|---|---|
+| L ladder, temperature offset free | weighted fit of 16 different-level residuals; theory floor 3.6e-5 taken from the control | **2.3×10⁻⁵** (η = −0.9 ± 0.7 ×10⁻⁵, 1.2σ; ΔT = −12 ± 12 mK) | **3.8× tighter** |
+| L ladder, T fixed at sensor | same | η = −1.56 ± 0.37 ×10⁻⁵ (4.3σ!), see flag 1 | — |
+| G ground-only | only R(0)/R(1) is sensitive | 1.5×10⁻⁴ | 1.6× weaker |
+| S contextual | supplement closure 0.739592 vs 0.739608 direct (from Table S1) | 5.6×10⁻⁵ | 1.6× tighter, but trivially passed by any population model |
+
+**Flags.**
+1. **Ladder trend is not evidence for η.** With the temperature fixed at the sensor reading, the different-level residuals show a J-linear trend of 4.3σ. Freeing a temperature offset absorbs most of it: −12 ± 12 mK against the stated 5 mK calibration, leaving η at 1.2σ. The fit is stable under leave-one-out (−1.46 to −1.84 ×10⁻⁵ with T fixed). Other signs of systematics:
+   - The control itself sits at +36 ± 7 ppm (5σ) relative to UCL2025, with a 1.5σ J slope.
+   - The control drifts upward at high pressure (R(26)/P(26), 226 → 648 Pa: +55 → +120 ppm).
+   
+   So J- and pressure-dependent systematics of tens of ppm are present in data that η cannot touch. I quote only the T-free bound.
+2. **Transferring the theory floor.** The R/P control floor (3.6e-5) is ASSUMED to apply to R/R ratios. The paper finds R/R obs−calc scatter slightly larger (0.006–0.007 % vs 0.003 %). The different-level data alone need a floor of 3.3e-5, which is consistent.
+3. **Collisional thermalization.** Rotational populations are thermalized by collisions, which allow any ΔJ. The ladder reading assumes η acts per rotational quantum even so (universality, as in Stage 47).
+4. **FIRAS regime.** x per rung = 2B(J+1)/kT ≈ 0.019–0.5, below the FIRAS x = 1–11, so this is still not a test at hν ≳ kT.
+5. **What remains unconstrained.** An η that depends arbitrarily on the level, i.e. a free g(J), is constrained only to the path-summed band in panel b, about ±2×10⁻⁴ at J = 27.
+
+**Plain answer.**
+- For the natural per-rung reading of Stage 31's η, lab CO data beat FIRAS by about 4× (2.3e-5), at x < 1.
+- A ground-only η and the closure test do not meaningfully beat FIRAS.
+- The circulating-ratio "path test" is, on reflection, not a test of physical path dependence at all.
+
+**Files:** `scripts/stage48_run.py` (Table S1 transcribed in full), `results/stage48.json`, `results/stage48_sources.csv`, `figures/stage48_eta_path.png`.
