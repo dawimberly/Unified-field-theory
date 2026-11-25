@@ -4252,3 +4252,31 @@ All are honest upper limits; nothing is claimed.
 4. **RuO₂ calibration uncertainty is not stated in the paper.** The 1 % is ASSUMED.
 
 **Files:** `scripts/stage49_run.py`, `data/stage49_scigliuzzo2020_fig4d_digitized.csv`, `results/stage49.json`, `results/stage49_sources.csv`, `figures/stage49_transmon_eta.png`.
+
+## Stage 50: angle-dependent release time d₁, search for independent data
+
+**Parametrization (Stage 31/32, unchanged).** t(β) = R cosβ/c + nondipole (authors' model) + d₁ cosβ + d₂P₂(cosβ). β is the angle between the photon direction and the "lock" axis: the bond axis, or for atoms the emission direction.
+- Stage 32: only an R-independent d₁ can be told apart from travel time, and that needs R-binned data.
+
+**Search (about 20 min).** Attosecond/zeptosecond angle-resolved delay data that are odd along the photon direction k, from molecules, atoms and solids (RABBITT, streaking, COLTRIMS).
+
+| candidate | what it measures | usable for d₁? |
+|---|---|---|
+| Kirpitch 2026 (Zenodo preprint) | re-analysis of the **same** Grundmann events: slope 391 ± 82 zs, so d₁ = 119 ± 82 zs over the authors' 271.7 zs model | **not independent**; cross-check only, never combined |
+| Liang et al. 2024, Nat. Photon. 18, 311 (He, non-dipole RABBITT, forward/backward along k) | dipole–quadrupole transition delay 15 ± 10 as (CITED) | full text paywalled; data (ETH Research Collection) returned 429/500. No mapping to d₁ without the paper's formalism. **Sensitivity floor only:** a d₁cosβ term gives a forward–backward delay of 2d₁cos70° (θ = 70°/110° CITED; mirror pair about the plane ⊥ k ASSUMED). At ±10 as this means σ(d₁) ≥ 14.6 as, i.e. **95 % ≥ 28 700 zs (59× weaker than Grundmann)** |
+| Rezvan 2024 (N₂ 1s, 880 eV) and CO 1s at 905 eV (PRL 2022) | forward/backward MFPAD *intensity* asymmetry | no timing observable; N₂ "large statistical uncertainties" |
+| Heuser 2016 He (Stage 38) | angle to polarization | k-hemispheres not separated |
+| molecular-frame RABBITT; chiral forward/backward delays (Nature 2025) | angle to polarization or molecular axis; PECD | not referenced to k, or the standard-theory term (tens of as) swamps d₁ |
+| solids (streaking) | fixed incidence angle | no d₁ lever found |
+
+**Combination (independent sets only).** Grundmann 235 ± 128 zs is combined with the He floor (centre 0 ASSUMED, the most favourable case). The result is 235 ± 128 zs, and the He weight is 8×10⁻⁵. **|d₁| < 485 zs is unchanged.**
+
+**Headline.** No newer or independent dataset tightens d₁. Grundmann 2020 remains the only measurement with zeptosecond resolution referenced to the photon direction. The best independent candidate is about 60× too weak even under optimistic assumptions. The element stays "open, with real room": d₁ is allowed up to about 2× the light-travel term.
+
+**Flags.**
+- **Not independent.** The Kirpitch preprint is unrefereed and uses the same events, so it cannot be combined. Its d₁ = 119 ± 82 zs is consistent with Stage 31's 235 ± 128 zs.
+- **Forward/backward visibility claim.** The preprint reports that fringe visibility differs between forward and backward light directions (4.2σ). That is the kind of k-odd effect d₁ would produce, but it comes from the same data and an unreviewed analysis.
+- **He floor is optimistic.** It uses the paper's dipole–quadrupole delay error as a stand-in for the forward–backward delay precision, and the θ geometry is ASSUMED.
+
+**Files:** `scripts/stage50_run.py`, `results/stage50.json`, `results/stage50_sources.csv`, `figures/stage50_d1_search.png`.
+- Note: the box was replaced mid-stage, so the Python venv was rebuilt. Source PDFs live in `/workspace/stage50_src`.

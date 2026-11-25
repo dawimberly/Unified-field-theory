@@ -1,0 +1,38 @@
+{
+ "grundmann": {
+  "d1": 235.0,
+  "sig": 128.0,
+  "d1_95": 485.0,
+  "src": "Stage 31 (CITED/DIGITIZED Grundmann 2020 Fig. 3C); Stage 32 red line 271.7 zs"
+ },
+ "kirpitch_same_data": {
+  "slope": 391.0,
+  "sig": 82.00609733428362,
+  "d1": 119.30000000000001,
+  "d1_sig": 82.00609733428362,
+  "independent": false,
+  "note": "same events as Grundmann 2020; unrefereed preprint; shown as a cross-check only, never combined"
+ },
+ "liang2024_floor": {
+  "cos_beta": 0.3420201433256688,
+  "sig_FB_as": 10.0,
+  "sig_d1_zs": 14619.022000815432,
+  "d1_95_floor_zs": 28653.283121598248,
+  "vs_grundmann": 59.07893427133659,
+  "note": "full text and data (ETH Research Collection) not reachable (Nature paywall; ETH 429/500); the paper reports a dipole-quadrupole transition delay, which cannot be mapped to d1 without its formalism. Best case only: sigma(d1) >= 14619 zs."
+ },
+ "combined_best_case": {
+  "d1": 234.9819856801573,
+  "sig": 127.99509387844482,
+  "d1_95": 485.8523696819091,
+  "weight_liang": 7.665668018166875e-05,
+  "note": "even granting the He floor with central value 0, the combination is unchanged: |d1| < 485 zs stands"
+ },
+ "dropped": [
+  "Rezvan et al. 2024 J. Phys. B 57 145101 (N2 1s, 880 eV): forward/backward MFPAD intensity asymmetry, no timing; large statistical uncertainties at beta = 45 deg",
+  "CO 1s at 905 eV, PRL 129, 253201 (2022): intensity asymmetry, no timing",
+  "Heuser 2016 He RABBITT (Stage 38): hemispheres along k not separated, so d1 not accessible",
+  "Molecular-frame RABBITT (e.g. Nat. Commun. 2021): angle to polarization / molecular axis, not to photon direction; dipole symmetric along k",
+  "Chiral forward/backward delays (Nature 2025): dominated by PECD (tens of as); standard-theory term far larger than d1"
+ ]
+}
