@@ -1911,3 +1911,90 @@ What cryosorption buys at 4 K is only ≈1.7e16 He atoms per gram of charcoal (A
 **Net.** In flux terms the vacuum is **not** co-binding against the best demonstrated limit: −0.67 (cheap), −0.98 (Pb), −0.72 (Pino) orders, i.e. margins. It **is** binding against everything else: +0.5 to +0.8 vs Gabrielse 1990, +0.9 to +1.2 vs CSR, +2.1 to +2.4 vs room-temperature XHV, +1.6 to +3.9 for MAQRO-style space vacuum. The real gap is therefore 0 to 0.8 orders, conditional on reproducing a BASE-class sealed cryogenic can around a levitated sphere with optical or SQUID access. That has never been done.
 
 ![Stage 20](figures/stage20_vacuum.png)
+
+## Stage 21 — Loosening the acceleration-noise requirement instead of meeting it
+
+**Question.** Stage 18 showed what happens if we try to *meet* the requirement:
+- per-mass requirement $0.44$ fm s⁻²/√Hz, from the exact model at $N_{5\sigma}=5049$;
+- ground floor +6.0 orders from seismic noise, +8.0 once the plate's surface electric-field noise is included;
+- space-grade floor +4.0.
+
+Stage 21 asks which design changes **loosen** the requirement instead, scored in orders with the same exact model: the QGEM state with gas and blackbody decoherence plus jointly Gaussian which-path phases, and $N_5=25/\lambda^2$.
+
+**Method.** For a noise spectrum $S(f)$ under protocol $P$:
+- residual (orders) $=\tfrac12\log_{10}\big(\kappa^2\!\int S|W_P|^2df\,/\,\sigma^2_{\rm allowed}(P)\big)$;
+- $W_P$ is the Fourier transform of the branch profile $w(t)$;
+- the band runs from 1 mHz to 300 Hz, as in Stage 18.
+
+**Shot rule.** All designs use the Stage 16 cap $N_5\le10^4$ (ASSUMED). At Stage 18's $N_5=5049$, noise gets only 4% of the slack, and every protocol that adds any duration becomes infeasible, so that criterion cannot rank levers. With $N_5\le10^4$ the baseline requirement is **1.27 fm s⁻²/√Hz**. Moving the cap from 5049 to 10⁴ is itself the first lever, worth +0.46 orders.
+
+**Files.** Scripts: `scripts/stage21_run.py` (about 20 s) and `scripts/stage21_fig.py`. Data: `results/stage21.json`. Figure: `figures/stage21_redesign.png`.
+
+### 21.0 A ceiling on any protocol-level loosening (DERIVED)
+
+The which-path variance is $\sigma^2=\kappa^2S\,t/2$ with $\kappa=m\Delta x/\hbar$. The allowed $\sigma^2$ is a fixed fraction of $\Phi\propto Gm^2\Delta x^2t/\hbar D^3$. Together these give $S_{\rm req}\propto G\hbar/D^3$, **independent of $m$, $\Delta x$ and $t$**. This is the Großardt (2020) form $2G\hbar/d^3$; at $D=11\,\mu$m it equals $\sqrt{2G\hbar/D^3}=3.25$ fm s⁻²/√Hz.
+
+Our requirement sits at 0.136 of that ceiling at $N_5=5049$ and at 0.39 at $N_5=10^4$. No change to protocol, shot count, mass or hold time can loosen it by more than **0.87 orders relative to Stage 18**. The only geometric knob is $D$, and it scales as $D^{-3/2}$: separating the masses *tightens* the requirement.
+
+### 21.1 Lever ledger
+
+| lever | effect (orders; + loosens) | verdict |
+|---|---|---|
+| allow up to 10⁴ shots instead of 5049 | **+0.46** (0.44 → 1.27 fm) | survives (ASSUMED shot cap) |
+| hold 2.5 → 5 s, 10⁴ shots | +0.15 (1.78 fm) | marginal; 10 s gives +0.12; 20 s fails because of gas ($\gamma t$ ∝ t) |
+| shorter shots, more repetitions, same wall-clock (overhead 2 s ASSUMED) | holds of 0.1–1 s are **infeasible** (no $N_5$ reaches λ); 5 s is the best at +0.11 | **negative** |
+| echo, 1 branch swap mid-hold (SG π-flip; local DC phase cancels, entangling phase keeps accumulating) | tilt (1/f) **+0.98**; flat isolated seismic −0.10; NLNM −0.36; white surface noise −0.11 | survives **only against 1/f-like noise** |
+| echo, 2 swaps | requirement 0.69 fm; all sources worse than 1 swap; 3 or more swaps lose the entanglement (gas over the longer shot) | negative |
+| remove the plate: Casimir–Polder sets $D=273\,\mu$m (DERIVED, independent of $m$); $m$ raised to 2.8×10⁻¹⁴ kg to keep Φ | requirement tightens by **−2.09**; the plate's E-field (+7.5) and Johnson (+6.7) noise go away, but on the ground trap surfaces at 100 µm (ASSUMED) give +5.0 (E-field) and +6.2 (Johnson) | **negative on the ground**, enabling in space |
+| keep the plate, engineer a neutral dipole ($p=0$, $q=0$) and use a non-metal plate (no Johnson noise) | E-field on the dipole replaced by the induced dipole in a static 10 mV patch field (ASSUMED): +7.5 → **+5.0** (+2.5) | survives, but the residual still exceeds seismic |
+| stiffer trap | **0** (DERIVED: in the trap frame the inertial force is $-ma$ at any ω). A separately mounted SG source makes things *worse*: relative motion couples as $m\omega^2X$, so $X_{\rm rel}\le3.2\times10^{-21}$ m/√Hz at 100 Hz | negative |
+| drop tower or Einstein-Elevator with trapped masses (10⁻⁶ g residual, spread flat over 0.1–10 Hz, ASSUMED) | +9.4 vs +5.5 for isolated ground (**−3.9**); 10⁴ shots take 3,333 days at ZARM (3 drops/day) or 33 days at the Einstein-Elevator (300/day) | **negative** |
+| ISS with trapped masses (SSP 41000E vibratory limit) | +11.2 (**−5.7**) | **negative** |
+| one trap, relative-mode readout, or a DFS | 0 (see 21.2) | **negative** |
+| release the masses in drag-free space with no plate (Toroš/MAQRO-type) | platform noise decouples; the residual comes from direct forces, **+2.0** (21.3) | **survives** |
+
+**Echo details (DERIVED).** One swap costs 0.5 s of transit. That transit is counted as adding no entangling phase (conservative) but it does add gas decoherence. $|W(f)|^2$ goes to zero at DC, but its peak moves to about $1/T\approx0.3$ Hz, which sits on the microseism peak (panel a). Hence the result: echo helps against the ring-laser 1/f tilt bound and hurts against NLNM. In acceleration, seismic noise does **not** fall steeply above 1–10 Hz: the NLNM stays between about −169 and −160 dB from 1 to 10 Hz. It falls in displacement, but the phase filter already suppresses high frequencies as $1/f^2$.
+
+### 21.2 Relative-coordinate and one-trap protocols: Stage 18's no-CMRR result holds (DERIVED)
+
+- **Collective dephasing has one decoherence-free subspace.** For two qubits under correlated dephasing it is span{|LR⟩,|RL⟩}. The Bell state inside it keeps $\lambda=-0.5$ under any common noise. But that state is entangled at preparation. The only product states in the subspace, |LR⟩ and |RL⟩, pick up only a global phase from gravity, so the subspace cannot host a test of gravity-mediated entanglement, which must start from a product state.
+- **Two particles in one trap, Gaussian modes.** Take the CM mode thermal with $n$ (driven by common noise) and the relative mode squeezed by $r$. The minimum PT symplectic eigenvalue crosses 1/2 exactly at $e^{2r}=2n+1$, checked for $r$ = 0.1, 0.5 and 1. So common-mode noise in the CM mode destroys 1|2 entanglement unless the relative-mode squeezing beats it. There is no rejection.
+- **Anti-parallel splitting** has an intrinsic CMRR of 1.006, as found in Stage 18.
+
+### 21.3 Best combined designs (residual in orders over the protocol's own requirement)
+
+| design | residual (orders) | binding source |
+|---|---|---|
+| ground baseline at $N_5\le10^4$ (isolated seismic + tilt) | +6.9 | tilt (1/f bound) |
+| same, with plate surface noise | +7.5 | plate E-field |
+| **ground: 1 echo swap + neutral dipole + non-metal plate** | **+6.0** | isolated seismic (+5.6) ≈ tilt (+5.9); induced dipole +5.1 |
+| ground: no plate, $D=273\,\mu$m, echo | +8.1 | tightened requirement |
+| drop tower, trapped | +9.4 | capsule residual |
+| space, trapped, LPF-grade readout | +3.5 | readout × $(2\pi f)^2$ |
+| **space: released, drag-free, no plate, $D=273\,\mu$m** | **+2.0** (white E-field) / +5.7 (1/f E-field) | E-field from electrodes at 1 mm on $p=10^{-2}$ e·cm (+2.0); spacecraft self-gravity jitter +1.7 |
+
+The space requirement is $1.0\times10^{-17}$ m s⁻²/√Hz. Meeting it needs $p\le1\times10^{-4}$ e·cm at 1 mm (or larger electrode distances, since the noise scales as $z^{-3}$). It also needs spacecraft jitter $\le1.9\times10^{-11}$ m/√Hz for 500 kg at 0.5 m (ASSUMED values; noise scales as $2GM\delta r/r^3$).
+
+**Net change vs Stage 18.**
+- **Ground:** the floor moves from +6.0/+8.0 to **+6.0** at best. The real gains are shots (+0.46), echo against tilt (+0.98) and neutralising the dipole (+2.5 on that source). None of them moves the isolated-seismic floor; seismic noise stays the firm limit, and the requirement cannot loosen past the $G\hbar/D^3$ ceiling.
+- **Space:** releasing the masses, which removes trap coupling and the plate, moves the floor from +4.0 to **+2.0**. That figure rests on two ASSUMED inputs, the electrode distance and the spacecraft jitter.
+
+**Coincidences flagged.**
+- The 2-swap echo requirement, 0.687 fm, is within 1% of Stage 19's Pino point (0.68 fm). The two calculations are unrelated.
+- In space, self-gravity (+1.7) and electrode E-field noise (+2.0) land within a factor 2 of each other. Both use ASSUMED parameters.
+- The no-plate trap-surface E-field orders and the space 1 mm white E-field residual are identical (+4.995 in both). The scalings $a\propto z^{-3}/m$ and $\sqrt{S}\propto z^{-2}$ make the 100 µm/1 mm cases mirror each other, so this is algebra, not physics.
+
+**Honest negatives.**
+- Shorter shots, stiffer traps, drop towers, the ISS, multi-swap echo, relative-mode readout and a decoherence-free subspace all fail to loosen anything.
+- Removing the plate on the ground costs 2.1 orders.
+- Most of the loosening budget is capped at 0.87 orders by $G\hbar/D^3$.
+
+**Sources (opened this stage).**
+- ZARM Bremen Drop Tower Payload User's Guide: 4.7 s drop, 9.3 s catapult, 10⁻⁶ g, at most 3 flights/day. https://www.zarm.uni-bremen.de/fileadmin/user_upload/Research/Testing_and_Facilities/ZARM_BDT_PUG.pdf ; ESA user guide: 10⁻⁶–10⁻⁵ g. https://wsn.spaceflight.esa.int/docs/EUG2LGPr3/EUG2LGPr3-4-DropTower.pdf
+- Hannover Einstein-Elevator: 4 s, <10⁻⁶ g, 300 tests/day. https://www.hcmr.uni-hannover.de/en/details/einstein-elevator ; the current carrier shows more than 10⁻³ g (Sci. Rep. 2023). https://www.nature.com/articles/s41598-023-46483-4
+- ISS microgravity specification SSP 41000E: one-third-octave rms ≤16 µg × f over 0.1–100 Hz, 1.6 µg over 0.01–0.1 Hz. https://gipoc.grc.nasa.gov/pims/MMAP/PIMS_ORIG/MEIT/MEIT_pdfs/ISS_Requirements.pdf
+- Toroš et al., PRR 3, 023178 (2021), arXiv:2007.15029: the free-fall capsule removes inertial noise.
+- Casimir–Polder sphere–sphere form, as used by Bose et al., PRL 119, 240401 (2017). This is ASSUMED to apply at $D\gg R$, with a 10% curvature cut as in Stage 16.
+- Stage 18 sources (NLNM, aLIGO ISI, G ring laser, LISA Pathfinder, Labaziewicz, Sedlacek) were reused unchanged.
+
+![Stage 21](figures/stage21_redesign.png)
