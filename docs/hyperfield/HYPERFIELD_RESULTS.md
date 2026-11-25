@@ -3761,3 +3761,54 @@ Notes on the table:
 - ⚑ The IGEX band (Stage 33) starts at 14.5 keV, where λ_k = 0.086 nm. That is marginal against the 0.1 nm condition.
 
 ![Stage 35 frequency coverage](figures/stage35_frequency_coverage.png)
+
+## Stage 36 — The 4.6 MHz – 5.6 GHz and 0.19 – 9.3 Hz windows (plus the 8 kHz – 4.6 MHz gap)
+
+**Goal.** Find published resonator, membrane, qubit-acoustic, torsion-pendulum or levitated measurements and convert them to λ(f).
+- **Parametrization:** unchanged. Every input was fetched this session (`results/stage36_sources.csv`, 10 sources with quotes).
+
+**Files:**
+- `scripts/stage36_run.py`
+- `results/stage36.json`, `results/stage36_bounds.csv` (all bands, Stages 31–36), `results/stage36_sources.csv`
+- `figures/stage36_frequency_coverage.png`
+
+### 36.1 New formula (DERIVED): thin membrane mode, mode wavelength ≫ r_C
+Γ/λ = 4πħρ r_C² (1 − e^(−h²/4r_C²)) / (m₀² h ω).
+
+- It does **not** depend on the mode shape or the effective mass.
+- It uses the same D-convention as the Stage 33 phonon-mode formula, which was validated against Schrinski at a ratio of 1.009.
+- In the thick limit it reduces to the per-area slab formula of Stages 33–34, which was validated against Helou/LPF and LIGO.
+- For h ≪ r_C it becomes πħρh/(m₀²ω).
+- **Bound:** CSL heating ≤ the measured total heating n̄_th Γ_m, with all of it attributed to the effect (ASSUMED, conservative).
+
+### 36.2 New bounds
+| f | λ_max (s⁻¹) | source / how |
+|---|---|---|
+| **1.486 MHz** | **2.9×10⁻⁹** | Seis 2022 soft-clamped SiN membrane: 63 nm, t_coh ≈ 140 ms → heating 7.1 s⁻¹. ρ = 3200 kg/m³ (Tsaturyan 2017). Al pad: took the smaller of the SiN-only and bilayer predictions |
+| 1.14 MHz | 1.2×10⁻⁶ | Rossi 2018: 20 nm SiN, Q = 1.03×10⁹, T ≈ 10 K → k_BT/ħQ = 1.27×10³ s⁻¹. Only "~10 K" is stated, so ×2 uncertainty |
+| **5.0486 GHz** | **1.6×10⁻⁶** | Omahen/Chu 2025 HBAR mode 404: P = (1.2 ± 5.5)×10⁻⁵ (+2σ), T₁ = 112 ± 9 µs (−2σ), λ_ac = 2L/n = 2.15 µm. Uses the paper's own 1σ P_max: 7.2×10⁻⁷. The paper's own convention gives 5.7×10⁻⁸ (different r_C/σ_q convention, same as the Stage 33 Schrinski factor) |
+| ~50–150 Hz | 1.9×10⁻⁴ (not added) | Komori 2020 torsion pendulum, Eq. 4 (CITED): 20 aN·m/√Hz, bar 15×1.5×0.2 mm, 10 mg. The frequency of the minimum is not stated in the text, and LIGO is ~10× stronger there |
+
+**Headline.** The Seis membrane puts a resonant release at **1.49 MHz below 2.9×10⁻⁹ s⁻¹**.
+- That is inside Adler's band, in a region where Stage 33 had only trapped ions (λ ~ 1).
+- It sits about 9 orders below the ion bounds and is comparable to the cantilevers.
+- The 5.05 GHz HBAR improves the Stage 33 HBAR point (5.96 GHz, 2.4×10⁻⁴) by about 150×.
+
+### 36.3 Coverage after Stage 36
+- These are all **narrow lines** (±0.1 %, the Stage 31 convention), so they add **points, not decades**:
+  - Stage-31 gap: 6.540 → 6.543 dec.
+  - 4.6 MHz – 5.6 GHz: 0.0009 of 3.08 dec.
+  - 0.19 – 9.3 Hz: **0 of 1.69 dec**.
+- **Why the windows stay open (honest negative):**
+  - No published bound with a stated frequency inside 0.19 – 9.3 Hz was found.
+  - The LPF 2018 text does not state the upper frequency of the published ASD, so it was not extrapolated.
+  - Fuchs 2024 levitated is at 26.7 Hz; its other modes have no frequency given in the text.
+  - The Altamura 2024 Eöt-Wash rotational analysis samples mHz.
+  - For MHz–GHz: Wollack 2022 phononic crystals give no mechanical population; quartz BAW and Si optomechanical crystals had no heating numbers plus geometry.
+
+### 36.4 Flags
+- Upper limits only, with all heating attributed to the effect.
+- The Seis bath runs at ~80 mK while the cryostat sits at 30 mK. The authors attribute this to vibration isolation. It is noted, not a candidate: the bound already uses all of it.
+- The thin-plate formula is new here. It is checked only through its two limits (slab and HBAR conventions), not against a published membrane CSL number.
+
+![Stage 36 frequency coverage](figures/stage36_frequency_coverage.png)
