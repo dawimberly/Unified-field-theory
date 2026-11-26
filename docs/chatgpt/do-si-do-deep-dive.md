@@ -134,27 +134,68 @@ For a narrow calibrated mode centered at $f_i$, the repo approximation reduces t
 **DERIVED** The core is useful as a restricted falsifiable *phenomenology* only where its inputs and predictions are fixed before data are opened. A credible next step is to demonstrate the same signed residual with equivalent-site reversals, reject conventional $R$ and energy scaling in independent data, and test a history-conditioned gate with independently calibrated load. For a unified account, deduce one shared parameter relation that predicts another observable without fitting it, specify where the energy and momentum of any added stochastic kicks go, and supply a normalized dynamics compatible with known symmetries and equilibrium when undriven. **UNVERIFIED** No such derivation is presently in the sourced record, and the observations do not compel an extra channel.
 
 
-## 7. Power-law release-noise channel
+## 7. Release-time distribution and the noise spectrum
 
-**ASSUMED** Use a one-sided spectral rate in the appendix's mass-proportional CSL-equivalent normalization, with the same reference smearing and $\bar g=1$:
+**DERIVED — outcome.** An activated gate ensemble replaces the phenomenological exponent with a slope calculated from its relaxation-time distribution. A uniform distribution of gate energies predicts an approximately $1/f$ interval under the fluctuation assumptions below. The normalization is a function of site count and measured signal variance. **UNVERIFIED** The present Do-Si-Do mechanism provides no independent values for those quantities, the gate distribution, or the coupling to the appendix's CSL-equivalent rate. The shape derivation is conditional, and the model still lacks a parameter-free numerical noise prediction. No new parameters are fitted to the data.
 
+**CITED** A. L. McWhorter, “1/f Noise and Germanium Surface Properties,” in *Semiconductor Surface Physics*, ed. R. H. Kingston (University of Pennsylvania Press, 1957), pp. 207–228, is the surface-trapping precedent. P. Dutta and P. M. Horn, “Low-frequency fluctuations in solids: 1/f noise,” *Reviews of Modern Physics* **53**, 497–516 (1981), reviews superposed activated relaxations and their spectral slopes. These are condensed-matter references, not measurements of Do-Si-Do gates. [McWhorter](https://www.jstor.org/stable/j.ctv512sg7.16) · [Dutta and Horn](https://doi.org/10.1103/RevModPhys.53.497)
+
+### Activated gates and the spectral shape
+
+**ASSUMED** Let a gate with barrier $E$ have mean release time $\tau_{\rm rel}(E)=\tau_0\exp(E/\epsilon)$, with effective energy scale $\epsilon=k_BT_{\rm eff}>0$. This scale could represent a gate-strength spread rather than thermodynamic temperature. Identify the attempt time with the $\tau_0$ in §1 only as a transfer assumption. Let site barriers be independent and have normalized density $p_E(E)$ on $[E_{\min},E_{\max}]$, with nonnegative barriers. Noise is measured in a driven stationary ensemble, with repeated capture and release and uncorrelated fluctuations from distinct sites.
+
+**DERIVED** For Markov capture and release with rates $k_{\rm on},k_{\rm off}$, the occupation probability of the locked state is $p=k_{\rm on}/(k_{\rm on}+k_{\rm off})$, while the occupation correlation time is $\tau_c=(k_{\rm on}+k_{\rm off})^{-1}$ and the mean locked waiting time is $1/k_{\rm off}$. **ASSUMED** Use $\tau_c=\kappa\tau_{\rm rel}$, with $\kappa$ independent of $E$ and fixed by the capture protocol. In the Markov example $\kappa=k_{\rm off}/(k_{\rm on}+k_{\rm off})$. A constant capture-to-release rate ratio gives constant $\kappa$ and constant $p$. The exact corners below are expressed using the correlation times $\tau_{\min},\tau_{\max}$. The illustrative release-time corners take $\kappa=1$ as a frequency-scale convention, or the limit of slow capture relative to release. In the strict slow-capture limit the occupation variance vanishes, so this convention alone does not predict nonzero power. One irreversible release produces a transient, and an arbitrary sequence of independent pulses need not have the occupation spectrum that follows.
+
+**DERIVED** Changing variables gives $dE=\epsilon\,d\ln\tau_c$. For uniform $p_E=1/(E_{\max}-E_{\min})$, the density of $y=\ln(\tau_c/\tau_{\min})$ is uniform on $[0,W]$, where
 $$
-S(f)=A\left(\frac{f}{f_{\rm ref}}\right)^{-\alpha},\qquad f_{\rm ref}=1\,\mathrm{Hz}.
+W=\frac{E_{\max}-E_{\min}}{\epsilon}=\ln\frac{\tau_{\max}}{\tau_{\min}}.
+$$
+Let $v(E)$ be a site's variance in a measured observable $X$. For a binary occupation with a calibrated signal step $\Delta X(E)$ per event, $v(E)=p(E)[1-p(E)]|\Delta X(E)|^2$. The stationary correlation at that site is $v(E)\exp(-|t|/\tau_c)$. Its one-sided PSD, normalized by $\int_0^\infty S_X(f)\,df=\operatorname{Var}(X)$, is $4v(E)\tau_c/[1+(2\pi f\tau_c)^2]$. For $N$ independent participating sites, the mixture is
+$$
+S_X(f)=4N\int_{E_{\min}}^{E_{\max}}
+\frac{p_E(E)v(E)\tau_c(E)}{1+(2\pi f\tau_c(E))^2}\,dE .
 $$
 
-Here $f$ is frequency in Hz, $A\ge0$ is the rate in $\mathrm{s^{-1}}$ at the reference frequency, and $\alpha$ is a dimensionless slope. $S$ here is neither the measured displacement power spectral density nor a spatial fractal dimension of the H₂ histogram. The numerical screen below is restricted to the listed experimental windows. **DERIVED** A nonzero power law over all positive frequencies has divergent total integrated power at one or both ends. A physical model needs breaks or cutoffs. No cutoff is estimated from these data, and promoting cutoffs to adjustable parameters adds further freedom.
-
-**FITTED (free, unestimated)** The core gives neither $A$ nor $\alpha$, and there is no independent measurement of a release-noise component to fix either before comparison. The calculations below screen the full family without optimizing either parameter or assigning a best fit. The $\alpha=1$ column is the definition of the $1/f$ benchmark, not a slope inferred from the data. **DERIVED** The core has four parameters and the power law adds two, for six with the power law alone, or nine if both the three-parameter Lorentzian and the power law are present. The bounds below allocate the entire budget to the power law. An added Lorentzian consumes some of that budget.
-
-**CITED** Carlesso, Ferialdi and Bassi (2018), *European Physical Journal D* **72**, 159, Eq. (17), uses frequency-weighted bulk heating for colored CSL. **DERIVED** For an actual nonnegative response $W_i$ and measured upper budget $B_i$, the conditional allowed region is $0\le A\le \min_i B_i/K_i(\alpha)$, where
-
+**DERIVED** If the variance is approximately independent of barrier and equal to $v$, the uniform-gate integral is exact. With $\omega=2\pi f$, $u_-=\omega\tau_{\min}$, $u_+=\omega\tau_{\max}$, and $D=\arctan u_+-\arctan u_-$,
 $$
-K_i(\alpha)=\int W_i(f)(f/f_{\rm ref})^{-\alpha}\,df.
+S_X(f)=\frac{4Nv}{W\omega}\,D,
+\qquad
+\alpha_{\rm eff}(f;W)
+=1-\frac{u_+/(1+u_+^2)-u_-/(1+u_-^2)}{D}.
 $$
+Thus $S_X(f)\simeq Nv/(Wf)$ only if $u_-\ll1\ll u_+$. The lower corner is $f_L=1/(2\pi\tau_{\max})$, the upper corner is $f_H=1/(2\pi\tau_{\min})$, and $\log_{10}(f_H/f_L)=W/\ln 10$. The slope is a function of both width and frequency, with $\alpha_{\rm eff}=1$ at the geometric-mean corner frequency for any nonzero uniform width. A single point with slope near unity therefore does not establish a broad $1/f$ region. At fixed geometric-mean time $\tau_g$, the limit $W\to0$ gives $S_X=4Nv\tau_g/[1+(2\pi f\tau_g)^2]$ and $\alpha_{\rm eff}=2(2\pi f\tau_g)^2/[1+(2\pi f\tau_g)^2]$. This is flat below the corner and falls as $f^{-2}$ above it.
 
-For a band quoted as an equivalent constant rate $L_i=B_i/\int W_i\,df$, the upper edge is $L_i/\langle (f/f_{\rm ref})^{-\alpha}\rangle_{W_i}$. For a resolved mode at $f_i$, this reduces to $A\le L_i(f_i/f_{\rm ref})^\alpha$ under the narrow-mode approximation. Integrated X-ray counts, expansion and heating cannot be recast as pointwise limits using only the appendix. For a positive kernel known to be supported in $[l,h]$, dividing $L_i$ by the maximum spectral shape on that interval gives a sufficient ceiling and dividing by the minimum gives a necessary ceiling. The Rb half-power point and the bulk-heating half-maximum interval are sensitivity descriptors. They are not hard bounds on kernel support.
+**DERIVED** For an arbitrary nonnegative variance-weighted distribution, define $w_f(E)=p_E(E)v(E)\tau_c(E)/[1+(\omega\tau_c(E))^2]$. Then
+$$
+\alpha_{\rm eff}(f)=
+\frac{\displaystyle\int w_f(E)\,
+\frac{2(\omega\tau_c(E))^2}{1+(\omega\tau_c(E))^2}\,dE}
+{\displaystyle\int w_f(E)\,dE}.
+$$
+When the signal is nonzero this is a weighted average between zero and two. If the variance weight per unit $\ln\tau_c$ is proportional to $\tau_c^\beta$ across a wide interior band, substituting $u=\omega\tau_c$ gives $S_X\propto f^{-(1+\beta)}$ for $-1<\beta<1$. The integral $\int_0^\infty u^\beta/(1+u^2)\,du$ converges in precisely that range. With finite support the spectrum eventually crosses back to the flat and $f^{-2}$ tails. A uniform barrier density alone does not imply $\alpha\simeq1$ when the event signal or occupancy depends on the barrier.
 
-### Numerical comparison with the complete appendix
+### Normalization and comparison with the repo's limits
+
+**DERIVED** At a reference frequency $f_{\rm ref}=1\,\mathrm{Hz}$, the uniform-gate model gives $A_X=S_X(f_{\rm ref})=4NvD(f_{\rm ref})/[W\,2\pi f_{\rm ref}]$ in units of $X^2/\mathrm{Hz}$. It reduces to $Nv/(W f_{\rm ref})$ in the interior band. For calibrated signal steps, this normalization follows from the counted participating sites and their occupancy and event sizes, without a separate fitted amplitude. **UNVERIFIED** Neither $N$, $p(E)$, $\Delta X(E)$, $p_E(E)$ nor a measured conversion from $S_X$ to the mass-proportional CSL-equivalent $\mathrm{s^{-1}}$ rate is supplied by the model. Counting particles is not a substitute for determining the participating independent sites. Coherent or correlated release would also change the sum. Therefore the old $A$ and $\alpha$ are removed as fit knobs for this mechanism, but replacing them with unconstrained physical inputs does not reduce the empirical freedom. There is no numerical prediction to exclude or confirm using the appendix.
+
+**DERIVED** Once an independently calibrated model gives a spectral rate $S_{\rm eq}(f)$ in the appendix convention, a narrow channel can compare its value near the measured frequency to the corresponding point limit. An integrated measurement requires $\int W_i(f)S_{\rm eq}(f)\,df\le B_i$, using its response $W_i$ and upper budget $B_i$. **CITED** Carlesso, Ferialdi and Bassi (2018), *European Physical Journal D* **72**, 159, Eq. (17), provides a colored CSL bulk-heating example. [Paper](https://doi.org/10.1140/epjd/e2018-90248-x)
+
+### Conditional corners and what could measure them
+
+**DERIVED** The general corners are
+$$
+f_H=\frac{e^{-E_{\min}/\epsilon}}{2\pi\kappa\tau_0},
+\qquad f_L=f_H e^{-W}.
+$$
+**ASSUMED** For illustration take $E_{\min}=0$ and the $\kappa=1$ corner convention above. **DERIVED** Fork A's existing conditional $\tau_0\lesssim0.76$–$0.90\,\mathrm{as}$ ceiling then gives an upper-corner **lower bound** of about $2.09\times10^{17}$ or $1.77\times10^{17}\,\mathrm{Hz}$, respectively, corresponding to $hf_H\gtrsim0.87$ or $0.73\,\mathrm{keV}$. Smaller $\tau_0$ moves this corner higher. A positive barrier floor and a nonunit $\kappa$ change the mapping as shown above. The original H₂ visibility ceiling was computed for the specific phase model in §1. It is not a fresh visibility constraint on an aggregate of independent activated sites. **UNVERIFIED** Fork B has no H₂ visibility ceiling on $\tau_0$ under its shared-jitter assumption, nor does it independently establish the stationary fluctuations used in this section. It supplies no numerical corner. Neither fork fixes $W$ or the slow corner.
+
+**DERIVED** In the same illustrative Fork A convention and using the stated $\tau_0$ ceiling benchmarks, reaching $f_L$ as low as $8174\,\mathrm{Hz}$ requires $W\gtrsim30.7$–$30.9$, reaching $1\,\mathrm{Hz}$ requires $W\gtrsim39.7$–$39.9$, and reaching $1\,\mathrm{mHz}$ requires $W\gtrsim46.6$–$46.8$. These are threshold widths for overlap, not fitted widths or predicted coincidences. They follow from $W\ge\ln(f_H/f_{\rm probe})$. **DERIVED** LISA Pathfinder and cold-atom expansion probe the low-frequency side if the slow corner extends that far and couples to their observables. LIGO, cantilevers and the Stage 54 mechanical or heating channels can sample an intermediate span only if it overlaps their measured bands. At the illustrative sub-keV upper-corner scale the repo's diffuse X-ray sensitivity is weak and its neutral-matter radiation channel is suppressed below its cancellation scale. Its laboratory X-ray and Ge bounds could probe a harder corner or the higher-frequency tail if a radiative coupling is established. A frequency overlap with any named experiment is a numerical coincidence until both its response and signal normalization are predicted.
+
+**DERIVED** Algebra check: evaluating the uniform integral numerically in $\ln\tau_c$ with midpoint quadrature on several finite test intervals reproduced the arctangent expression to better than $10^{-9}$ relative error. This checks the formula, not the activation law or the frequency mapping.
+
+**ASSUMED (historical benchmark only)** The calculation below screens the previously used unbroken trial spectrum over the tabulated bands, in the appendix's CSL-equivalent normalization and with $f_{\rm ref}=1\,\mathrm{Hz}$. It is retained for comparison with existing records. It does not apply to the finite-corner gate prediction unless the calibrated response and probe bands satisfy the required approximations.
+
+### Historical comparison with the complete appendix
 
 **ASSUMED** To put numbers on the plane with the published summaries, approximate each unresolved band by a normalized response uniform in $\ln f$, use mode centers for narrow mechanical lines, and use the resolved curve samples where available. This is a reproducible screen, and the resulting boundaries apply to this surrogate response. The Stage 53 line-ceiling envelope can also be screened with the same bin rule. The band limit in each bin is tighter and controls the combined envelope there, without treating the two estimators as independent. The Stage 35 tail is screened bin by bin using its own quoted budgets, not summed as independent measurements. The Stage 34 numerical edge uses the quantified calibration range. The bins above that range remain indicative. The appendix's non-mass-proportional Majorana row belongs to a different coupling and is excluded from the joint envelope. The electron-only Majorana row is screened as a weaker alternate projection of the same exposure rather than as an independent likelihood.
 
@@ -163,8 +204,7 @@ For a band quoted as an equivalent constant rate $L_i=B_i/\int W_i\,df$, the upp
 $$
 H_\alpha(l,h)=
 \begin{cases}
-1 & \alpha=0,\
-$$2pt]
+1 & \alpha=0,\\[2pt]
 \displaystyle\frac{(l/f_{\rm ref})^{-\alpha}-(h/f_{\rm ref})^{-\alpha}}{\alpha\ln(h/l)} & \alpha\ne0.
 \end{cases}
 $$
