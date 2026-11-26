@@ -20,6 +20,7 @@
 - [dimension-gravity-investigation.md](dimension-gravity-investigation.md) — Dimension, field concentration, and gravity: mechanism audit.
 - [dimension-mechanism-checks.md](dimension-mechanism-checks.md) — Reproduction of the dimension-mechanism checks.
 - [hopfion-capture-rule.md](hopfion-capture-rule.md) — Hopfion capture rule.
+- [do-si-do-deep-dive.md](do-si-do-deep-dive.md) — Finite release, independent and shared phase models, experimental bounds, and discriminating tests.
 - [emergent-gravity-three-routes.md](emergent-gravity-three-routes.md) — Can interacting fields develop gravity as a new property?.
 - [ffz-b-finite-epsilon-benchmark.md](ffz-b-finite-epsilon-benchmark.md) — FFff(B) unsubtracted finite-epsilon benchmark.
 - [ffz-b-half-epsilon-continuation.md](ffz-b-half-epsilon-continuation.md) — FFff(B) continuation across $\epsilon = 1/2$.
