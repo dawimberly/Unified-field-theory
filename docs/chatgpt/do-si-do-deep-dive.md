@@ -133,6 +133,142 @@ For a narrow calibrated mode centered at $f_i$, the repo approximation reduces t
 
 **DERIVED** The core is useful as a restricted falsifiable *phenomenology* only where its inputs and predictions are fixed before data are opened. A credible next step is to demonstrate the same signed residual with equivalent-site reversals, reject conventional $R$ and energy scaling in independent data, and test a history-conditioned gate with independently calibrated load. For a unified account, deduce one shared parameter relation that predicts another observable without fitting it, specify where the energy and momentum of any added stochastic kicks go, and supply a normalized dynamics compatible with known symmetries and equilibrium when undriven. **UNVERIFIED** No such derivation is presently in the sourced record, and the observations do not compel an extra channel.
 
+
+## 7. Power-law release-noise channel
+
+**ASSUMED** Use a one-sided spectral rate in the appendix's mass-proportional CSL-equivalent normalization, with the same reference smearing and $\bar g=1$:
+
+$$
+S(f)=A\left(\frac{f}{f_{\rm ref}}\right)^{-\alpha},\qquad f_{\rm ref}=1\,\mathrm{Hz}.
+$$
+
+Here $f$ is frequency in Hz, $A\ge0$ is the rate in $\mathrm{s^{-1}}$ at the reference frequency, and $\alpha$ is a dimensionless slope. $S$ here is neither the measured displacement power spectral density nor a spatial fractal dimension of the H₂ histogram. The numerical screen below is restricted to the listed experimental windows. **DERIVED** A nonzero power law over all positive frequencies has divergent total integrated power at one or both ends. A physical model needs breaks or cutoffs. No cutoff is estimated from these data, and promoting cutoffs to adjustable parameters adds further freedom.
+
+**FITTED (free, unestimated)** The core gives neither $A$ nor $\alpha$, and there is no independent measurement of a release-noise component to fix either before comparison. The calculations below screen the full family without optimizing either parameter or assigning a best fit. The $\alpha=1$ column is the definition of the $1/f$ benchmark, not a slope inferred from the data. **DERIVED** The core has four parameters and the power law adds two, for six with the power law alone, or nine if both the three-parameter Lorentzian and the power law are present. The bounds below allocate the entire budget to the power law. An added Lorentzian consumes some of that budget.
+
+**CITED** Carlesso, Ferialdi and Bassi (2018), *European Physical Journal D* **72**, 159, Eq. (17), uses frequency-weighted bulk heating for colored CSL. **DERIVED** For an actual nonnegative response $W_i$ and measured upper budget $B_i$, the conditional allowed region is $0\le A\le \min_i B_i/K_i(\alpha)$, where
+
+$$
+K_i(\alpha)=\int W_i(f)(f/f_{\rm ref})^{-\alpha}\,df.
+$$
+
+For a band quoted as an equivalent constant rate $L_i=B_i/\int W_i\,df$, the upper edge is $L_i/\langle (f/f_{\rm ref})^{-\alpha}\rangle_{W_i}$. For a resolved mode at $f_i$, this reduces to $A\le L_i(f_i/f_{\rm ref})^\alpha$ under the narrow-mode approximation. Integrated X-ray counts, expansion and heating cannot be recast as pointwise limits using only the appendix. For a positive kernel known to be supported in $[l,h]$, dividing $L_i$ by the maximum spectral shape on that interval gives a sufficient ceiling and dividing by the minimum gives a necessary ceiling. The Rb half-power point and the bulk-heating half-maximum interval are sensitivity descriptors. They are not hard bounds on kernel support.
+
+### Numerical comparison with the complete appendix
+
+**ASSUMED** To put numbers on the plane with the published summaries, approximate each unresolved band by a normalized response uniform in $\ln f$, use mode centers for narrow mechanical lines, and use the resolved curve samples where available. This is a reproducible screen, and the resulting boundaries apply to this surrogate response. The Stage 53 line-ceiling envelope can also be screened with the same bin rule. The band limit in each bin is tighter and controls the combined envelope there, without treating the two estimators as independent. The Stage 35 tail is screened bin by bin using its own quoted budgets, not summed as independent measurements. The Stage 34 numerical edge uses the quantified calibration range. The bins above that range remain indicative. The appendix's non-mass-proportional Majorana row belongs to a different coupling and is excluded from the joint envelope. The electron-only Majorana row is screened as a weaker alternate projection of the same exposure rather than as an independent likelihood.
+
+**DERIVED** For each log-uniform band the divisor is
+
+$$
+H_\alpha(l,h)=
+\begin{cases}
+1 & \alpha=0,\
+$$2pt]
+\displaystyle\frac{(l/f_{\rm ref})^{-\alpha}-(h/f_{\rm ref})^{-\alpha}}{\alpha\ln(h/l)} & \alpha\ne0.
+\end{cases}
+$$
+
+Take $A_{\max}(\alpha)=\min_i L_i/H_\alpha$, using the point rule for modes or individual samples. This specifies the numerical allowed region for any slope in the stated surrogate. It is an intersection of quoted ceilings, with no joint confidence level assigned. The switches below were checked on $-3\le\alpha\le4$.
+
+| Status | Slope interval, approximate | Active upper edge on $A$ |
+|---|---:|---|
+| **DERIVED** | $-3$ to $-1.24$ | Underground Ge, Donadi MeV band |
+| **DERIVED** | $-1.24$ to $0.269$ | Majorana X-rays, mass-proportional coherent nuclei |
+| **DERIVED** | $0.269$ to $0.626$ | Stage 33 interpolated LPF 2018 spectrum, with the active frequency changing across the sampled curve |
+| **DERIVED** | $0.626$ to $4$ | Rb free expansion with the assumed log-uniform band and the repository's $10^{-6}\,\mathrm{Hz}$ plotting floor |
+
+**DERIVED** Representative $A_{\max}$ values in $\mathrm{s^{-1}}$ at $1\,\mathrm{Hz}$ are $1.77\times10^{-54}$ at $\alpha=-2$, $4.19\times10^{-34}$ at $-1$, $4.94\times10^{-15}$ at $0$, $1.50\times10^{-10}$ at $0.5$, $6.20\times10^{-13}$ at $1$, and $1.24\times10^{-18}$ at $2$. **UNVERIFIED** The steep positive-slope edge is particularly sensitive to the assumed infrared response and plotting floor. It is not a measured Rb bound on $1/f$ noise. The exact experimental contour and exact locations of the edge switches require the true response kernels, exposure window, spectral cutoffs and covariance. The table does not establish those inputs.
+
+**DERIVED** The following audit identifies every Stage 54 aggregate entry by its order in the machine-readable source and shows its individual $A$ ceiling at $\alpha=1$. The original appendix remains the source for frequencies and limits. Curve entries use the underlying samples or bins instead of applying their best limit uniformly across the band.
+
+| Status | Entry | Probe | $A$ ceiling at $\alpha=1$ ($\mathrm{s^{-1}}$) |
+|---|---:|---|---:|
+| **DERIVED** | 1 | LISA Pathfinder 2016 (Helou 2017) | $7.20\times10^{-11}$ |
+| **DERIVED** | 2 | LISA Pathfinder 2018 (Armano 2018 ASD -> lambda, DERIVED) | $6.65\times10^{-12}$ (curve or bins) |
+| **DERIVED** | 3 | Cold atoms, 87Rb pK free expansion (Kovachy data, Bilardello 2016) | $6.20\times10^{-13}$ |
+| **DERIVED** | 4 | Diamagnetic levitated micro-sphere 9.3 Hz (Zheng 2020) | $6.23\times10^{-6}$ |
+| **DERIVED** | 5 | Diamagnetic levitated micro-sphere 12.9 Hz (Zheng 2020) | $8.64\times10^{-6}$ |
+| **DERIVED** | 6 | LIGO test-mass force noise 30-35 Hz | $3.24\times10^{-4}$ |
+| **DERIVED** | 7 | AURIGA bar 931 Hz | $4.28\times10^{1}$ |
+| **DERIVED** | 8 | Nanocantilever 3084 Hz (Vinante 2016) | $1.54\times10^{-4}$ |
+| **DERIVED** | 9 | Multilayer cantilever 3532.7 Hz (Vinante 2020) | $7.07\times10^{-7}$ |
+| **DERIVED** | 10 | Cantilever 8174 Hz (Vinante 2017) | $1.55\times10^{-4}$ |
+| **DERIVED** | 11 | 40Ca+ heating 4.6 MHz (Kaufmann 2017) | $6.28\times10^{6}$ |
+| **DERIVED** | 12 | 88Sr+ heating 0.60 MHz (Bruzewicz 2015) | $4.23\times10^{5}$ |
+| **DERIVED** | 13 | 88Sr+ heating 0.80 MHz (Bruzewicz 2015) | $6.16\times10^{5}$ |
+| **DERIVED** | 14 | 88Sr+ heating 1.00 MHz (Bruzewicz 2015) | $5.79\times10^{5}$ |
+| **DERIVED** | 15 | 88Sr+ heating 1.30 MHz (Bruzewicz 2015) | $6.58\times10^{5}$ |
+| **DERIVED** | 16 | 88Sr+ heating 1.50 MHz (Bruzewicz 2015) | $9.73\times10^{5}$ |
+| **DERIVED** | 17 | Bulk heating of solids (10 pW/kg residual; Adler-Vinante 2018) | $2.55\times10^{-1}$ |
+| **DERIVED** | 18 | HBAR phonon mode 5.961 GHz (Schrinski 2023) | $1.42\times10^{6}$ |
+| **DERIVED** | 19 | IGEX Ge X-rays 14.5-48.5 keV (Piscicchia 2017) | $4.11\times10^{7}$ |
+| **DERIVED** | 20 | Majorana 19-100 keV, m-p electrons only | $1.64\times10^{6}$ |
+| **DERIVED** | 21 | Majorana 19-100 keV, m-p coherent nuclei | $4.65\times10^{4}$ |
+| **DERIVED** | 22 | Majorana 19-100 keV, NON-mass-proportional | Excluded from mass-proportional envelope |
+| **DERIVED** | 23 | Ge underground 1000-3800 keV (Donadi 2021) | $2.28\times10^{8}$ |
+| **DERIVED** | 24 | LIGO O3a L1 / O3b H1 / O1 GW150914 force noise (DERIVED) | $1.00\times10^{-4}$ (curve or bins) |
+| **DERIVED** | 25 | Bulk-heating tail above 13 GHz, band-limited (0.05-dec bins, lambda<=1 shown) | $5.55\times10^{0}$ (curve or bins) |
+| **DERIVED** | 26 | CXB total 1-2 keV vs free-charge emission of diffuse ionized gas (Hickox 2006) | $1.83\times10^{19}$ |
+| **DERIVED** | 27 | CXB total 2-8 keV vs free-charge emission of diffuse ionized gas (Hickox 2006) | $3.29\times10^{19}$ |
+| **DERIVED** | 28 | COBE/FIRAS 2-21 cm^-1 residual vs free-charge emission (Fixsen 1996) | $4.65\times10^{19}$ |
+| **DERIVED** | 29 | HBAR mode 404, 5.0486 GHz (Omahen 2025) [bulk+surface] | $7.82\times10^{3}$ |
+| **DERIVED** | 30 | SiN membrane 1.14 MHz, 20 nm (Rossi 2018), heating n_th Gamma_m at T~10 K | $1.36\times10^{0}$ |
+| **DERIVED** | 31 | SiN membrane 1.486 MHz, 63 nm + Al pad (Seis 2022), 1/t_coh = n_th Gamma_m | $4.30\times10^{-3}$ |
+| **DERIVED** | 32 | SiN membrane 242 kHz, Device I (1,1) (Yuan 2015) | $4.27\times10^{-3}$ |
+| **DERIVED** | 33 | SiN membrane 121 kHz, Device II (1,1) (Yuan 2015) | $2.33\times10^{-2}$ |
+| **DERIVED** | 34 | SiN membrane 193 kHz, Device II (1,2) (Yuan 2015) | $5.92\times10^{-2}$ |
+| **DERIVED** | 35 | SiN membrane 192 kHz, Device II (2,1) (Yuan 2015) | $2.44\times10^{0}$ |
+| **DERIVED** | 36 | Al drum 10.56 MHz (Teufel 2011) | $1.46\times10^{2}$ |
+| **DERIVED** | 37 | Al vacuum-gap drum 1.8 MHz (Youssefi 2023) | $6.57\times10^{-2}$ |
+| **DERIVED** | 38 | Al drum 15.1 MHz, 500 uK (Cattiaux 2021) | $2.98\times10^{1}$ |
+| **DERIVED** | 39 | quartz BAW OT5 15.6 MHz, 20 mK (Goryachev 2012) [bulk+surface] | $7.34\times10^{1}$ |
+| **DERIVED** | 40 | quartz BAW OT21 65.4 MHz, 20 mK (Goryachev 2012) [bulk+surface] | $1.79\times10^{3}$ |
+| **DERIVED** | 41 | HBAR ~6.65 GHz (Chu 2017) [bulk+surface] | $8.88\times10^{6}$ |
+| **DERIVED** | 42 | Diamond nanoladder cantilever 25.22 kHz (Heritier 2018) | $9.12\times10^{-2}$ |
+| **DERIVED** | 43 | SiN trampoline 41.4 kHz, 44 nm (Reinhardt 2016) | $9.99\times10^{-1}$ |
+| **DERIVED** | 44 | Levitated silica nanosphere z 77.6 kHz, cryogenic (Tebbenjohanns 2021) | $1.72\times10^{0}$ |
+| **DERIVED** | 45 | Levitated silica nanosphere z 104 kHz, room-T (Magrini 2021) | $3.97\times10^{0}$ |
+| **DERIVED** | 46 | Levitated silica nanosphere 100.5 kHz, R = 68.0 nm (Jain 2016) | $5.63\times10^{-1}$ |
+| **DERIVED** | 47 | Levitated silica nanosphere 148.8 kHz, R = 52.7 nm (Jain 2016) | $2.63\times10^{0}$ |
+| **DERIVED** | 48 | Levitated silica nanosphere 151.2 kHz, R = 71.6 nm (Jain 2016) | $1.71\times10^{0}$ |
+| **DERIVED** | 49 | Levitated silica nanosphere 158.8 kHz, R = 68.0 nm (Jain 2016) | $2.77\times10^{0}$ |
+| **DERIVED** | 50 | Levitated silica nanosphere x 305 kHz (Delic 2020) | $4.39\times10^{1}$ |
+| **DERIVED** | 51 | SiN tethered membrane 140 kHz, 20 nm, room T (Norte 2016) | $7.65\times10^{0}$ |
+| **DERIVED** | 52 | Soft-clamped SiN string 1.406 MHz, 20 nm, 46 mK (Gisler 2022) | $6.54\times10^{-3}$ |
+
+**DERIVED** In addition to those 52 entries, both estimators in every one of the 31 accepted Stage 53 LPF bins were evaluated with $L_i/H_1$. The strongest band ceiling is about $4.29\times10^{-10}\,\mathrm{s^{-1}}$ at $0.0317$–$0.0356\,\mathrm{Hz}$; the corresponding line-ceiling screen is $4.65\times10^{-10}\,\mathrm{s^{-1}}$. The six above-cut bins were screened separately at the same benchmark. Their best band ceiling is about $3.89\times10^{-3}\,\mathrm{s^{-1}}$, and they stay outside the robust envelope. Without the Rb surrogate the $\alpha=1$ screen is set by the interpolated Stage 33 LPF curve at $6.65\times10^{-12}\,\mathrm{s^{-1}}$. The stronger Stage 33 low-frequency limits retain their interpolated status.
+
+**DERIVED** A preregistered power law with fixed nonzero $A$ and fixed $\alpha$ is easier to test across widely separated bands because the same slope and normalization apply everywhere. Giving the hypothesis independent freedom in $A$ and $\alpha$, especially an arbitrarily small $A$ or adjustable breaks, makes the hypothesis as a whole harder to falsify. No agreement between a chosen slope and a spectral feature counts as independent evidence. **UNVERIFIED** Neither a release-noise slope nor its physical link to a spatial fractal is established.
+
+## 8. Nearby mass at the H₂ detector
+
+**DERIVED — predicted delay shift per kilogram at 10 cm: undetermined.** The release model contains no coupling from an external source mass $M$, gravitational potential, or tidal field into $\tau_0$, $d$ or $Q_\pm$. In the leading timing law, defining $F=[1+(\omega_{\rm e}\tau_0)^2]^{-1}$ and holding electron energy fixed gives
+
+$$
+\frac{\partial\Delta t}{\partial M}=\cos\beta\left[
+F\,\frac{\partial d}{\partial M}
+-2d\,\omega_{\rm e}^{2}\tau_0 F^2\,\frac{\partial\tau_0}{\partial M}\right].
+$$
+
+Neither derivative is supplied. The written model has zero explicit response to $M$ at fixed parameters. **UNVERIFIED** A nonzero nearby-mass extension has no predicted size in $\mathrm{zs/kg}$ and is not yet falsifiable. A mass-swapping null could instead bound a separately defined empirical slope.
+
+**ASSUMED** Use the same empty outer housing, the same housing with an aluminum insert, and a housing with a dense pure tungsten insert. Specify and magnetically screen the actual tungsten stock and mount. Avoid ferromagnetic tungsten alloys or binders. Match outer shape, position and grounding. Use the measured center-to-interaction distance, with $r=0.10\,\mathrm m$ as the calculation benchmark, and replace the point approximation with the measured mass geometry when needed.
+
+**DERIVED** The Newtonian comparison for a compact body is $\Phi/M=-G/r\simeq-6.67\times10^{-10}\,\mathrm{m^2\,s^{-2}\,kg^{-1}}$. The potential itself is common to the two ends of the molecule to leading order. Across $R=0.74$ Å aligned with the field, the potential difference per kilogram is approximately $GR/r^2=4.94\times10^{-19}\,\mathrm{m^2\,s^{-2}\,kg^{-1}}$. A weak-field clock-rate comparison gives a maximum fractional differential scale of about $5.5\times10^{-36}\,\mathrm{kg^{-1}}$. Multiplying by the pre-existing $896$ zs reference time gives an illustrative scale of $4.9\times10^{-33}\,\mathrm{zs/kg}$. This is a clock-rate scale comparison, not a calculation of the spectrometer or of a Newtonian shift in the measured birth delay. A constant potential alone cannot supply a locally measured differential delay. **UNVERIFIED** A full ordinary-physics fringe prediction including the apparatus geometry and gravitational transport has not been calculated here.
+
+**FITTED** Stage 52 gives $\pm35.8$ zs statistical and $\pm32$ zs fit-model uncertainty. **DERIVED** Their quadrature is about $48.0$ zs if treated as independent, some 34 orders above the illustrative differential clock scale for a $1$ kg swap. This comparison supplies no predicted signal scale for a new mass coupling and no detection claim. **ASSUMED** If a mass coupling is proposed, specify its sign, distance law and minimum effect before opening the swap data. Do not select a distance or a slope because it coincides with a fringe feature.
+
+| Status | Confounder | Control |
+|---|---|---|
+| **ASSUMED** | Magnetic fields or gradients affecting electron trajectories | Use screened tungsten, aluminum and nonmagnetic mounts. Map the field for each insert with the spectrometer energized and track a fixed calibration feature. |
+| **ASSUMED** | Electrostatic fields, charging and patch potentials | Use the identical grounded conductive exterior, check ground continuity, and repeat the trajectory calibration after each swap. |
+| **ASSUMED** | Thermal drift from different heat capacity or conduction | Temperature-match inserts before a run, log the chamber and mount temperatures, and use the same stabilization criterion for all three cases. |
+| **ASSUMED** | Vibration, mechanical loading and alignment | Support the insert independently of the instrument, monitor acceleration and alignment, and include blinded empty-housing sham swaps. |
+| **ASSUMED** | Blackbody radiation from changed temperature, emissivity or view factor | Use the same temperature-monitored exterior and radiation shield for every insert, preserve the line of sight and view factors, and control temperature before acquisition. |
+
+**ASSUMED** Randomize and blind swaps, repeat them on both sides, and run calibration checks without changing detector settings. A repeatable mass-correlated residual would motivate testing its side and distance dependence after bounding the confounders. **UNVERIFIED** No nearby-mass measurement or release-specific calibration has been made in this report.
+
 ## Appendix: numerical frequency inventory
 
 **DERIVED** The following inventory transcribes the Stage 54 aggregate at readable precision, leaving the originals as the authoritative machine-readable values. Where a curve is named, the number is the best value in the listed band, rather than a uniform limit. The mechanical lines use the repo's $\pm0.1\%$ plotting widths. The stage labels point to the experiment-specific derivations and paper locations. The non-mass-proportional alternative and indicative estimates carry their own assumptions.
