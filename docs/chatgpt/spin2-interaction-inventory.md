@@ -163,3 +163,21 @@ One cross-contraction gives $I\sum_a\partial_{\phi_a}(S^2)\partial_{\phi_a}S=8IS
 8. **DERIVED** Therefore $s_Y-z_Y=0$ for this paired subgraph before integrating the common scalar loop. When the selected kinetic correction is used at fixed pole mass, its two-propagator normalization change cancels the two matched source corrections in the bilinear TT bubble. This check isolates the normalization term. A mass counterterm and the other source and action terms still need their own matching.
 9. **DERIVED** Independent all-cross slot enumeration for $N=1,2,3,5,8$ produced $24,64,120,280,640$, respectively, agreeing with $8N(N+2)$. Arithmetic substitution in the two independently factored coefficient formulas also reproduced $s_Y=z_Y$ to working precision. These checks require no fitted $J_Y$.
 10. **DERIVED** This removes the selected $X_6$–baseline-$Y$ normalization pair from the bilinear response and the single-$X_6$ quartic-source term from its TT channel. **UNVERIFIED** The complementary placement with the independent quartic in the action and an undeformed higher vertex or source, the remaining counterterms and source contacts, and additional distinct-vertex graphs have not been summed. The next calculation is the complementary placement and its subtraction at fixed canonical parameters. No physical pole shift or universal Newton residue is inferred from the paired cancellation.
+
+## Follow-up: complementary quartic placement with a retained derivative pair
+
+**CITED** The baseline composite source expansion is in Carone, Claringbold and Vaman, arXiv:1710.09367v2, Eqs. (3.7)–(3.9). [Primary paper](https://arxiv.org/pdf/1710.09367) **ASSUMED** Continue the four-dimensional, rotationally invariant Euclidean polynomial control. Put the independent scalar quartic in the action at $Y$, and retain an entire derivative bilinear at the undeformed six-field vertex or source at $X$. This selects a subset of contractions.
+
+**DERIVED** In the all-cross bundle the four lines to $Y$ have zero total momentum. At separation $z$ an internal undifferentiated pair contributes $G^2$, and a derivative pair contributes $B_{\mu\nu}=\partial_\mu G\,\partial_\nu G$. A retained external derivative pair contributes $C_{\mu\nu}$. Denote $b=\operatorname{tr}B$ and $c=\operatorname{tr}C$. For this subset the coefficient linear in $C$ can be read by differentiating the action polynomial at the rank-one matrix $B$. The common all-cross flavor factor is $8N(N+2)$ as above.
+
+**DERIVED** The determinant polynomials obey
+$$
+\delta a_1=c/2,\quad
+\delta a_2=bc/4-\operatorname{tr}(BC)/2,\quad
+\delta a_3=-b^2c/16+b\,\operatorname{tr}(BC)/4.
+$$
+The last identity uses $B^2=bB$. Angular averaging gives $\langle\operatorname{tr}(BC)\rangle=bc/4$ in this control. Thus $\langle\delta a_2\rangle=bc/8$ and $\langle\delta a_3\rangle=0$. An independent check averages four equally weighted rank-one matrices along the coordinate axes, which gives the same results for a general $C$ because the expressions are linear in its contraction with $B$ at fixed $b$.
+
+**DERIVED** The selected $a_1U_2^2$ term contributes a relative kinetic correction equal to the relative source correction from $KU_2^2$, after stripping their shared four-line integral and the independent quartic insertion. The selected $-a_2U_2$ term also contributes an action term proportional to $-m^2c\,G^2|\nabla G|^2/(16V_0^2)$ with the shared flavor factor and insertion sign stripped. The direct baseline TT source has no term with this internal derivative structure. The selected $a_3$ term vanishes in exactly four Euclidean dimensions. The angular factor before setting $D=4$ is $-1/16+1/(4D)$, so an evanescent term times a regulator pole needs a separate check in dimensional regularization.
+
+**UNVERIFIED** This does not establish a physical remainder. Contractions with retained derivatives taken from different bilinears, regulated contact terms, and matched source and action counterterms can contribute at the same order. The previous equality of one selected source and kinetic pair cannot be applied to this whole placement. The comparison now has an explicit term that must be accounted for in the complete sum.
