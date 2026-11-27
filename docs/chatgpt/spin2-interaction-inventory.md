@@ -453,3 +453,38 @@ For instance the gradient finite term is $149/(32\cdot288)+39/(64\cdot9)+1/(128\
 **DERIVED** In this comparison the master-by-master result is $(\mathcal E-y^3)/48$. Keeping the full coefficients and subtracting only the poles at the overall step gives $(\mathcal E-y^3)/48-3407/9216$, in the same stripped normalization. To match the latter to the former requires an additive local finite shift $+3407/9216$ in this block. It specifies only the net shift in the selected projected channel. It does not fix the finite operator coefficients before projection, whose values must agree across all occurrences of the vertices.
 
 **OPEN** The next condition is operator-level matching of the action and the composite source, including the Ward/BRST and on-shell conditions. The two overall prescriptions above leave the inner subtractions fixed. A different extension of the evanescent tensors to inner vertices needs its own nested finite insertions. The result supplies no graviton pole or residue.
+
+
+### Forward stress matching and the independent derivative condition
+
+**CITED** Brown and Collins, [Ann. Phys. 130, 215 (1980)](https://doi.org/10.1016/0003-4916(80)90232-8), construct the external-metric counterterms and distinguish flat-space renormalization from curvature-dependent terms. The following is a conditional external-metric control for the selected block.
+
+**DERIVED** In the stripped normalization above, write $s$ and $z$ for the relative local bilinear source and kinetic corrections, each divided by twice the same common graph factor and by $x^4$. Thus $z-s=\Delta/x^4$ in this paragraph. The direct source has coefficient $1/8$ on $I_{40}/x^2$, independent of $\epsilon$. Its overall subtraction is $P_{40}/8$ and its finite coefficient is $s=\mathcal E/8$ in either overall prescription. The kinetic pole is obtained by adding $P_{40}/8$ to the previous pole row for the difference. Its entries are
+$$
+(5/16,\ -577/576,\ 1195/1152)
+$$
+in decreasing pole order. The kinetic finite coefficient with full prefactors and overall pole subtraction is
+$$
+z=\frac{7\mathcal E}{48}-\frac{y^3}{48}-\frac{3407}{9216}.
+$$
+In particular the scheme conversion $+3407/9216$ goes entirely to the kinetic side if the scalar source subtraction is held fixed. This is an allocation of the conversion **within this block**, not a condition on the sum of the operator insertions.
+
+**DERIVED** For a source defined by variation of a covariant external metric, let $\Gamma(k^2)$ be the scalar inverse two-point function and $\Gamma_{\mu\nu}^T(k',k)$ the corresponding amputated translation-current vertex. In the Euclidean convention $q=k'-k$ and with tree kinetic vertex $k'_\mu k_\nu+k'_\nu k_\mu-\delta_{\mu\nu}(k'\cdot k+x)$, the flat-space Ward identity is
+$$
+q^\mu\Gamma^T_{\mu\nu}(k',k)
+=k_\nu\Gamma(k'^2)-k'_\nu\Gamma(k^2).
+$$
+Varying the scalar arguments under a background diffeomorphism gives the two inverse-propagator contact terms. Differentiating at $q=0$ for a regular vertex yields
+$$
+\Gamma^T_{\mu\nu}(k,k)=2 k_\mu k_\nu\Gamma'(k^2)-\delta_{\mu\nu}\Gamma(k^2).
+$$
+At a simple scalar pole, $\Gamma(-x_{\rm pole})=0$ and the two external legs multiply the vertex by the inverse of $\Gamma'(-x_{\rm pole})$. The forward matrix element therefore has its tree-level $2k_\mu k_\nu$ normalization. The local source and kinetic renormalizations must agree in this forward component **after summing the graphs and counterterms** if the composite source is identified with this metric variation. For the selected block, the amount to be balanced in the full forward condition is the computed $z-s$. This identity supplies a condition on the sum and cannot be applied to each graph independently. The scalar improvement from $R\phi^2$ is proportional to $q_\mu q_\nu-\delta_{\mu\nu}q^2$ in a single insertion, so it cannot supply a TT forward shift.
+
+**DERIVED** The same Ward identity permits an independent slope in the TT scalar form factor. To exhibit it within a local external-metric derivative expansion, add
+$$
+\lambda_R\int d^D r\,\sqrt g\,R_{\mu\nu}(g)
+  \sum_a\nabla^\mu\phi_a\nabla^\nu\phi_a
+$$
+with an appropriately dimensionful coefficient. Its flat-space action vanishes, so it leaves the constituent mass and wavefunction conditions unchanged. In the convention $g=\delta+h$, the linearized Ricci tensor for a transverse-traceless $h$ is $-\partial^2 h_{\mu\nu}/2$. Thus the first variation supplies a TT bilinear proportional to $\lambda_R q^2 K_{\mu\nu}$ and vanishes in the forward limit. The background Ward identity is preserved by covariance. This is a counterexample to fixing the first TT momentum-dependent coefficient from the forward identity and scalar on-shell data alone. It applies to the external-source correlator and does not, by itself, imply a change to a dynamical pole.
+
+**OPEN** For the reduced composite source the identification with a translation-normalized metric variation still has to be derived, or its finite forward normalization imposed separately. Even with that identification, a finite-momentum form factor or a microscopic matching calculation is required to fix the derivative coefficient. The remaining graph sum and quadratic source terms are still needed before constructing a resummed TT propagator.
