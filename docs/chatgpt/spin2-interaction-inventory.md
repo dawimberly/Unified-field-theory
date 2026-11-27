@@ -226,3 +226,26 @@ The explicit $D$ dependence here varies only the angular average of the stated a
 8. **DERIVED** Consequently even at exactly four dimensions and leading flavor, the leftover $-m^2I_{22}/16$ contains both a scalar integral $m^4I_{40}/48$ and a contact term $-m^2\int G^3\rho_\Lambda/48$. A calculation that drops the contact would alter the kinetic-minus-source coefficient in this block.
 9. **DERIVED** The isolated block cannot give a regulator-independent finite mismatch by setting $D=4$ before integration. There are two distinct evanescent prefactors and an explicit contact. These must be combined with subtractions of the same regulator and the other graphs before comparing the pole.
 10. **UNVERIFIED** The Laurent coefficients after subdivergence subtraction and the full matched composite operator contact terms are still open. No physical pole shift or cross-species Newton residue is extracted.
+
+## Follow-up: dimensional contact identity and three-loop masters
+
+**CITED** Groote, Körner and Pivovarov, Phys. Rev. D 60, 061701 (1999), use configuration space for water-melon vacuum topologies. [Paper](https://doi.org/10.1103/PhysRevD.60.061701) **ASSUMED** Use the massive continuum Euclidean propagator $G_D(r)$ with Fourier measure $d^Dk/(2\pi)^D$. Define bare dimensional integrals by analytic continuation from $1<D<4/3$, where the following integrals converge. Renormalization scale factors are suppressed uniformly.
+
+1. **DERIVED** At the origin $G_D(0)=(4\pi)^{-D/2}(m^2)^{D/2-1}\Gamma(1-D/2)$ in that strip. This follows from its Schwinger representation at zero separation.
+2. **DERIVED** The radial boundary flux is $-\Omega_{D-1}r^{D-1}G_D'(r)\to1$, since $(-\nabla^2+m^2)G_D=\delta^{(D)}$ and the mass integral over the ball vanishes as its radius shrinks.
+3. **DERIVED** Applying integration by parts outside the ball and taking its radius to zero therefore gives $3I_{22}=G_D(0)^3-m^2I_{40}$. By meromorphic continuation the same identity holds for the bare dimensional masters. It does not identify an independently renormalized contact in an arbitrary cutoff or source scheme.
+4. **DERIVED** Near $D=4-\varepsilon$, the product $G_D(0)^3$ has leading Laurent term $-8m^6/[(4\pi)^6\varepsilon^3]$ in these conventions. Thus the contact appearing in the preceding block has explicit pole content. Keeping only a possible simple pole is insufficient at the bare level.
+5. **DERIVED** Write $G_D(r)=\int_0^\infty dt\,(4\pi t)^{-D/2}e^{-m^2t-r^2/(4t)}$. For four copies set $t_i=sx_i$, $\sum x_i=1$, $X=\prod x_i$, $H=\sum x_i^{-1}$, and $U=XH$. Gaussian integration gives
+   $$
+   I_{40}=(4\pi)^{-3D/2}(m^2)^{3D/2-4}
+     \Gamma(4-3D/2)\int_{\sum x=1} U^{-D/2}\,d^3x.
+   $$
+6. **DERIVED** Each gradient contributes $-r_\mu/(2t_i)$ before contractions. The normalized fourth radial moment under the combined Gaussian is $D(D+2)/(\sum t_i^{-1})^2$. Combining these factors gives
+   $$
+   I_{04}=\frac{D(D+2)}{16}(4\pi)^{-3D/2}(m^2)^{3D/2-2}
+     \Gamma(2-3D/2)\int_{\sum x=1} X\,U^{-D/2-2}\,d^3x.
+   $$
+7. **DERIVED** These masters both have explicit scale-integration gamma poles near four dimensions. Their simplex boundaries encode additional UV subgraphs. Coefficients obtained by expanding only the gamma factors would omit those boundaries.
+8. **DERIVED** At the convergent endpoint $D=1$, $G=e^{-m|r|}/(2m)$ gives $(I_{40},I_{22},I_{04})=(1,m^2,m^4)/(32m^5)$. The contact identity becomes $3m^2/(32m^5)=1/(8m^3)-1/(32m^3)$. Midpoint integration at $m=1.7$ reproduced the three exact values within $2\times10^{-6}$ relative error.
+9. **DERIVED** Substituting $I_{22}$ into the preceding kinetic-minus-source expression reduces the isolated bare block to two simplex masters and one explicit tadpole cube. Its exact four-dimensional formal coefficients at leading flavor are $m^4/48$ on $I_{40}$ and $-m^2/48$ on the tadpole cube, with the evanescent contributions retained in the continued calculation.
+10. **UNVERIFIED** The subtracted simplex coefficients and the corresponding composite-operator renormalization remain to be matched. The exact bare identity reduces the calculation and fixes the contact sign, but provides no renormalized graviton pole or residue by itself.
