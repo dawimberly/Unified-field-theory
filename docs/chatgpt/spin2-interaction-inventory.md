@@ -488,3 +488,23 @@ $$
 with an appropriately dimensionful coefficient. Its flat-space action vanishes, so it leaves the constituent mass and wavefunction conditions unchanged. In the convention $g=\delta+h$, the linearized Ricci tensor for a transverse-traceless $h$ is $-\partial^2 h_{\mu\nu}/2$. Thus the first variation supplies a TT bilinear proportional to $\lambda_R q^2 K_{\mu\nu}$ and vanishes in the forward limit. The background Ward identity is preserved by covariance. This is a counterexample to fixing the first TT momentum-dependent coefficient from the forward identity and scalar on-shell data alone. It applies to the external-source correlator and does not, by itself, imply a change to a dynamical pole.
 
 **OPEN** For the reduced composite source the identification with a translation-normalized metric variation still has to be derived, or its finite forward normalization imposed separately. Even with that identification, a finite-momentum form factor or a microscopic matching calculation is required to fix the derivative coefficient. The remaining graph sum and quadratic source terms are still needed before constructing a resummed TT propagator.
+
+
+### Leading TT pole matching
+
+**CITED** Carone, Claringbold and Vaman, [arXiv:1710.09367](https://arxiv.org/pdf/1710.09367), extract the composite pole and compare scalar species in the resummed scattering amplitude.
+
+**DERIVED** For an isolated simple TT pole, strip the on-shell stress-tensor kinematics and write $t=q^2$ and $\mathcal M_{ij}=F_i(t)F_j(t)/\mathcal K(t)+H_{ij}(t)$ with $H$ regular. At a simple zero $t_\star$ of the inverse exchange kernel, the residue is $\mathcal R_{ij}=F_i(t_\star)F_j(t_\star)/\mathcal K'(t_\star)$. An analytic invertible exchange-field rescaling sends $F_i$ to $f F_i$ and $\mathcal K$ to $f^2\mathcal K$ and leaves this ratio invariant. The derivative of $f^2$ multiplies the vanishing kernel. The relation $\mathcal R_{12}^2=\mathcal R_{11}\mathcal R_{22}$ tests factorization. Universality additionally requires $\mathcal R_{12}/\mathcal R_{11}=F_2/F_1=1$ for nonzero couplings in common stress-tensor normalization.
+
+**DERIVED** At a massless pole with fixed kernel and forward vertices, the independently changeable source slope $F_i\to F_i+\rho_i t$ changes the regular term by $(\rho_i F_j(0)+\rho_j F_i(0))/\mathcal K'(0)$ and leaves the residue invariant. A curvature operator added to the microscopic action could also affect the kernel. The result here is for the external insertion. A purely external contact term in $H$ also has zero residue.
+
+**DERIVED** Allow the pole to move by expanding $\mathcal K=Z_0t+Y_0t^2/2+\lambda(\kappa_0+\kappa_1t)+\cdots$ and $F_i=f_i+b_it+\lambda a_i+\cdots$. Put $u=-\kappa_0/Z_0$. The root is $t_\star=\lambda u+O(\lambda^2)$ and the coefficient of $\lambda$ in the residue is
+$$
+\frac{a_i f_j+f_i a_j+u(b_i f_j+f_i b_j)}{Z_0}
+-\frac{f_i f_j(\kappa_1+uY_0)}{Z_0^2}.
+$$
+The baseline slope enters when the pole moves. An order-$\lambda$ source slope first enters at order $\lambda^2$. After massless retuning, only forward corrections $a_i$ and dynamical kernel slope $\kappa_1$ enter the first-order residue. This assumes a simple pole with no coincident threshold.
+
+**CHECK** For $\mathcal K=2t+3t^2$, $F_1=4+5t$ and $F_2=7-2t$, the mixed residue is $14$ and the regular constant is $-15/2$. Replacing the coefficient $5$ by $6$ raises the constant by $7/2$ and retains the residue.
+
+**OPEN** The summed forward matching and the constant and linear terms of the dynamical TT kernel still need calculation. The endpoint block alone does not supply $a_i$, $\kappa_0$ or $\kappa_1$. No graviton pole or residue is established for the deformation.
