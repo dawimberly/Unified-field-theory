@@ -249,3 +249,24 @@ The explicit $D$ dependence here varies only the angular average of the stated a
 8. **DERIVED** At the convergent endpoint $D=1$, $G=e^{-m|r|}/(2m)$ gives $(I_{40},I_{22},I_{04})=(1,m^2,m^4)/(32m^5)$. The contact identity becomes $3m^2/(32m^5)=1/(8m^3)-1/(32m^3)$. Midpoint integration at $m=1.7$ reproduced the three exact values within $2\times10^{-6}$ relative error.
 9. **DERIVED** Substituting $I_{22}$ into the preceding kinetic-minus-source expression reduces the isolated bare block to two simplex masters and one explicit tadpole cube. Its exact four-dimensional formal coefficients at leading flavor are $m^4/48$ on $I_{40}$ and $-m^2/48$ on the tadpole cube, with the evanescent contributions retained in the continued calculation.
 10. **UNVERIFIED** The subtracted simplex coefficients and the corresponding composite-operator renormalization remain to be matched. The exact bare identity reduces the calculation and fixes the contact sign, but provides no renormalized graviton pole or residue by itself.
+
+## Follow-up: published basketball poles and the evanescent subtraction
+
+**CITED** Martin and Robertson, *Evaluation of the general 3-loop vacuum Feynman integral*, arXiv:1610.07720, Secs. II–III, define the scalar basketball master $E$ and give its bare Laurent coefficients in Eqs. (3.1), (3.5)–(3.8). [Paper](https://arxiv.org/pdf/1610.07720) **ASSUMED** Use their loop normalization throughout this comparison, with $D=4-2e$, $x=m^2$, and $L=\ln(x/Q^2)$. This $e$ is half the previous checkpoint's $\varepsilon$.
+
+1. **DERIVED** Fourier transformation of $I_{40}$ gives four equal-mass propagators and one momentum-conserving delta function. This is the bare basketball $E$ after applying the three loop normalization factors.
+2. **DERIVED** With $A_{\rm bare}/x=-1/e+(L-1)+O(e)$, the normalized contact is $A_{\rm bare}^3$, in the same three-loop convention.
+3. **DERIVED** Substituting equal masses in the published basketball coefficients gives $E/x^2=2/e^3+(23/3-6L)/e^2+O(e^{-1})$. The six pair products contribute $2$ to the cubic coefficient. The double coefficient is $-6(L-1)+2-1/3$.
+4. **DERIVED** In the leading-flavor block write $\Delta=x^2 c_E E-xc_T A_{\rm bare}^3+c_F I_{04}$, suppressing graph factors and using the same normalization on $I_{04}$. The coefficients are $c_T=p^2(1/4-1/(2D))/6$, $c_E=c_T+[p(p+1)/2-1]/8$, and $c_F=p^2(4-D)/(16D)$.
+5. **DERIVED** Their expansions are $c_T=1/48-5e/96+O(e^2)$, $c_E=1/48-23e/96+O(e^2)$, and $c_F=e/32+O(e^2)$. In particular using the previous $\varepsilon$ in the published pole series without converting it would give the wrong evanescent contribution.
+6. **DERIVED** The two scalar terms together give
+   $$
+   \frac{x^2c_E E-xc_T A_{\rm bare}^3}{x^4}
+   =\frac{1}{16e^3}+
+   \frac{-89/288-3L/16}{e^2}+O(e^{-1}).
+   $$
+   The cubic coefficient follows independently by combining the bare $E$ coefficient $2$ and the tadpole cube coefficient $-1$ with the opposite signs in $\Delta$. The displayed double coefficient excludes $I_{04}$.
+7. **DERIVED** The exact Schwinger expression for the gradient master gives an alternative reduction target: in the unscaled Fourier convention it equals $D(D+2)(4\pi)^6/16$ times the equal-mass basketball in $D+4$ with all four propagators squared. The squared powers supply one $t_i$ each, and the dimension shift adds two powers of the inverse graph determinant. Their ratio gives the gradient factor $X/U^2$ in projective parameters. The mass dimension of the shifted integral is $3D-4$, as required.
+8. **DERIVED** That doubled basketball is also the mixed derivative with respect to the four independent squared masses of the unsquared basketball in $D+4$. Four minus signs cancel. Differentiating the equal-mass specialization four times would instead include derivatives that strike the same propagator more than once.
+9. **DERIVED** Subtracting the scalar master first and multiplying by its dimension-dependent coefficient is different from multiplying its bare Laurent series first and then subtracting poles. Terms of order $e$ can multiply subgraph poles, including the explicit tadpole cube. The bare scalar coefficients therefore provide a check for the subtraction, not a finite kinetic-minus-source coefficient.
+10. **UNVERIFIED** The remaining input for this block is the Laurent series of the gradient master or its dimension recurrence, followed by the same subgraph and composite-source subtraction. Published scalar basketball subtractions do not by themselves fix counterterms for the full reduced operator or establish a graviton pole shift.
