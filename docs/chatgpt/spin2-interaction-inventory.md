@@ -270,3 +270,34 @@ The explicit $D$ dependence here varies only the angular average of the stated a
 8. **DERIVED** That doubled basketball is also the mixed derivative with respect to the four independent squared masses of the unsquared basketball in $D+4$. Four minus signs cancel. Differentiating the equal-mass specialization four times would instead include derivatives that strike the same propagator more than once.
 9. **DERIVED** Subtracting the scalar master first and multiplying by its dimension-dependent coefficient is different from multiplying its bare Laurent series first and then subtracting poles. Terms of order $e$ can multiply subgraph poles, including the explicit tadpole cube. The bare scalar coefficients therefore provide a check for the subtraction, not a finite kinetic-minus-source coefficient.
 10. **UNVERIFIED** The remaining input for this block is the Laurent series of the gradient master or its dimension recurrence, followed by the same subgraph and composite-source subtraction. Published scalar basketball subtractions do not by themselves fix counterterms for the full reduced operator or establish a graviton pole shift.
+
+## Follow-up: reduce the gradient master in the original dimension
+
+**CITED** Martin and Robertson, arXiv:1610.07720, Eqs. (3.5)–(3.6), give the scalar basketball poles used below. [Paper](https://arxiv.org/pdf/1610.07720) **ASSUMED** Use massive Euclidean dimensional regularization with a common factor per loop and scaleless polynomial integrals set to zero. Let $x=m^2$, $s=P^2$, $A$ be the bare tadpole, and $B(s)$ the equal-mass bubble.
+
+1. **DERIVED** Group the four lines into two pairs with total momenta $P,-P$. Within each pair the gradient numerator is $(s-k^2-(P-k)^2)/2$, up to a Fourier sign common to the pair. The signs cancel between the pairs.
+2. **DERIVED** Cancel the inverse propagators in this numerator to obtain the pair integral $(s+2x)B(s)/2-A$. Hence the gradient master is the momentum integral of its square.
+3. **DERIVED** Define $M_j=\int_P s^j B(s)^2$, with $M_0=E$. Translation and rotational symmetry give $\int_P B=A^2$ and $\int_P s B=-2x A^2$. In the latter identity the mixed loop moment vanishes and $\int_k k^2/(k^2+x)=-x A$ in this prescription.
+4. **DERIVED** The cross term in the square therefore cancels, giving $I_{04}=M_2/4+xM_1+x^2E$. This equality uses dimensionally regulated polynomial integrals. It is not a pointwise equality of the momentum integrands.
+5. **DERIVED** Feynman parameterization writes $B$ as a constant times $\int_0^1 [x+s t(1-t)]^{D/2-2}dt$. Integrating the derivative of $(t-1/2)[x+s t(1-t)]^{D/2-2}$ and using the tadpole gamma recurrence gives
+   $$
+   s(s+4x)B'(s)=[(D-4)s/2-2x]B(s)-(D-2)A.
+   $$
+6. **DERIVED** Radial integration by parts with $s^{D/2+j}(s+4x)B^2$ yields
+   $$
+   (3D/2+j-3) M_{j+1}+x(2D+4j-4)M_j
+   =2(D-2)A\int_P s^j B.
+   $$
+   These are dimensional identities. Endpoint polynomial terms in individual summands must be treated in the common dimensional prescription rather than assigned ordinary convergent integrals at positive integer dimension.
+7. **DERIVED** The cases $j=0,1$ reduce $I_{04}$ to $E$ and $A^3$ alone. In particular, with $a=3D/2-3$,
+   $$
+   M_1=[2(D-2)A^3-(2D-4)x E]/a,\quad
+   M_2=[-4(D-2)xA^3-2Dx M_1]/(a+1).
+   $$
+   This gives the original-dimension reduction without a recurrence from $D+4$.
+8. **DERIVED** In $D=1$ at $m=1$, the formula gives $I_{04}=1/32$ using $E=1/32$ and $A=1/2$, in agreement with the direct position-space result. At $D=4$ the rational reduction coefficients multiplying $x^2 E$ and $x A^3$ approach $1/3$ and $1/6$. These are limits of the coefficients, since the masters themselves have poles.
+9. **DERIVED** In $D=4-2e$, the gradient master has $I_{04}/x^4=1/(2e^3)+O(e^{-2})$ in the previous loop normalization. Multiplication by the evanescent $c_F=e/32+O(e^2)$ adds $1/(64 e^2)$ to the bare leading-flavor block. Including the scalar terms, the checked bare result is
+   $$
+   \Delta/x^4=1/(16e^3)+(-169/576-3L/16)/e^2+O(e^{-1}).
+   $$
+10. **DERIVED** The isolated gradient-master reduction closes at two published scalar inputs. **UNVERIFIED** A bare pole is not a renormalized composite-source correction. The local and subgraph counterterms still need to be combined with the remaining action and source graphs before assigning any shift to the physical graviton pole.
