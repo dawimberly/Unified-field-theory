@@ -356,7 +356,7 @@ The explicit $D$ dependence here varies only the angular average of the stated a
    K\bar R S(p)=\frac{p^2}{96\epsilon}
        [p^4+24p^2x+70x^2-36x^2/\epsilon]
    $$
-   in the spectator tadpole uses $\int (p^2)^n/(p^2+x)=(-x)^n A$. Summing four spectators gives $(\alpha/\epsilon^2+\beta/\epsilon)a$ in units of $x^4$, with $\alpha=3/2$ and $\beta=-47/24$. These coefficients also follow independently by requiring the $L$ and $L^2$ pieces of the quotient poles to cancel given $C(D)$ and the bare reduction. **UNVERIFIED** That condition checks only the integrated polynomial at $p^2=-x$. It cannot verify the full off-shell sunset pole, which requires an independent tensor sunset calculation with its nested bubble subtractions.
+   in the spectator tadpole uses $\int (p^2)^n/(p^2+x)=(-x)^n A$. Summing four spectators gives $(\alpha/\epsilon^2+\beta/\epsilon)a$ in units of $x^4$, with $\alpha=3/2$ and $\beta=-47/24$. These coefficients also follow independently by requiring the $L$ and $L^2$ pieces of the quotient poles to cancel given $C(D)$ and the bare reduction. That condition by itself checks only the integrated polynomial at $p^2=-x$. The Fourier and locality calculation below supplies the two independent off-shell coefficients missing from that quotient check.
 
 6. **DERIVED** With that three-line quotient, the subtraction check is the Laurent convolution
    $$
@@ -374,7 +374,49 @@ The explicit $D$ dependence here varies only the angular average of the stated a
 
 - Match finite shifts consistently across every graph sharing each vertex.
 - Determine where $c_F(\epsilon)$ enters the nested and overall counterterms and retain evanescent terms in the same prescription throughout.
-- Verify the off-shell differentiated sunset polynomial, renormalize the composite source and its coincident products, and include the remaining graphs.
+- Renormalize the composite source and its coincident products, and include the remaining graphs.
 - Impose the Ward/BRST identities and on-shell conditions before constructing the resummed TT propagator.
 
 No graviton pole or residue follows from these checks.
+
+
+### Off-shell differentiated sunset from two Fourier residues and locality
+
+**CITED** The configuration-space product representation of the sunset is described by Groote, Körner and Pivovarov, [hep-ph/9805224](https://arxiv.org/pdf/hep-ph/9805224). Use M–R Eq. (2.3) for loop normalization and the two-line pole convention above.
+
+**DERIVED** Set $q=p^2$ and write $G$ for the Euclidean massive propagator in position space. The three hard derivatives and the last, external derivative give
+$$
+S(p)=-\int d^D r\,e^{ip\cdot r}\,
+   \nabla\cdot[(\nabla G)^2\nabla G],
+$$
+with the two M–R loop factors understood. This follows by representing the spectator derivative by $ip$ and integrating by parts. For $r\ne0$, the equation $(\nabla^2-x)G=0$ and the Coulomb singularity fix the first two terms
+$$
+\partial_\mu G=-b_D r_\mu r^{-D}[1+a_D x r^2+\cdots],
+\qquad b_D=\frac{\Gamma(D/2)}{2\pi^{D/2}},
+\quad a_D=\frac{1}{2(2-D)}.
+$$
+The regular branch starts at relative order $x^{D/2}r^D$ in the gradient and contributes to the $q x^2$ pole sector near four dimensions. Two-line counterterms inside the sunset also contribute only to $qx^2$. In each case their numerator is a polynomial in $p$ and the lone remaining loop momentum $k$, linear in the explicit $p$ from the spectator. Terms with an odd number of $k$ components vanish. The even terms contain two $k$ components, so the surviving scalar is proportional to $q\int k^2/(k^2+x)=-qxA$. This leaves the $q^3$ and $q^2x$ residues directly accessible from the first two short-distance terms.
+
+**DERIVED** Apply the continued Fourier formula
+$$
+\int d^D r\,e^{ip\cdot r}(r^2)^{-\nu}
+ =\pi^{D/2}2^{D-2\nu}\frac{\Gamma(D/2-\nu)}{\Gamma(\nu)}
+ (p^2)^{\nu-D/2}.
+$$
+For the leading term $\nu=3D/2-1$. The coefficient of $q^3/\epsilon$ is
+$$
+-(16\pi^2)^2\,b_4^3(6)\,\pi^2 2^{-6}
+       \frac{-1}{12\,\Gamma(5)}=\frac1{96}.
+$$
+The second term shifts $\nu$ down by one. In the residue the ratio of Fourier factors is $4(4)(-3)$, the ratio of divergence factors is $4/6$, and the relative gradient-cube coefficient is $3a_4=-3/4$. The product is $24$. Thus the $q^2x/\epsilon$ coefficient is $1/4$ and neither coefficient has a double pole.
+
+**DERIVED** The remaining local polynomial must be proportional to $qx^2$, because rotational invariance and the explicit external derivative supply a factor of $q$. Determine its coefficient from the independently required absence of $L$ in the three-loop vacuum counterterm. With the two-line term $C(D)a^2/\epsilon$ already fixed, subtract $(\alpha/\epsilon^2+\beta/\epsilon)a$ from the reduced vacuum master after its two-line subtraction. The coefficient of $y$ in the double pole is $3/2-\alpha$. At $\alpha=3/2$, the coefficient of $y$ in the simple pole is $-47/24-\beta$ and the $y^2$ coefficient vanishes. This fixes $\alpha=3/2$ and $\beta=-47/24$ without supplying the proposed off-shell polynomial as input. For the four identical spectators the quotient operation is exactly $4A S(q=-x)$ on the counterterm polynomial. If the unknown $qx^2$ coefficients are denoted $B_2/\epsilon^2+B_1/\epsilon$, the resulting normalized quotient gives
+$$
+-4 B_2=\alpha,\qquad -4(1/96-1/4+B_1)=\beta.
+$$
+It follows that $B_2=-3/8$, $B_1=35/48$, and hence
+$$
+K\bar R S(p)=\frac{q}{96\epsilon}
+   [q^2+24qx+70x^2-36x^2/\epsilon].
+$$
+This is an off-shell reconstruction from two directly calculated residues, locality and the vacuum quotient. The $qx^2$ term is determined by matching and has not been separately evaluated by direct off-shell integration. All of this concerns the selected UV subtraction. The finite shared-vertex and composite-source matching conditions remain open.
