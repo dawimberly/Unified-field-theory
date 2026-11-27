@@ -420,3 +420,36 @@ K\bar R S(p)=\frac{q}{96\epsilon}
    [q^2+24qx+70x^2-36x^2/\epsilon].
 $$
 This is an off-shell reconstruction from two directly calculated residues, locality and the vacuum quotient. The $qx^2$ term is determined by matching and has not been separately evaluated by direct off-shell integration. All of this concerns the selected UV subtraction. The finite shared-vertex and composite-source matching conditions remain open.
+
+
+### Evanescent prefactors in the overall subtraction
+
+**CITED** Use the proper-subgraph versus overall subtraction split of Martin and Robertson, [arXiv:1610.07720](https://arxiv.org/pdf/1610.07720), Eqs. (2.35)–(2.38). The general dependence on the renormalization prescription for structures that vanish at four dimensions is discussed by Dugan and Grinstein, [Phys. Lett. B 256, 239 (1991)](https://doi.org/10.1016/0370-2693(91)90680-O).
+
+**ASSUMED** For this comparison carry each graph's prefactor through its already established proper-subgraph subtraction, without changing the inner tensor counterterms. Compare overall pole subtraction on the prefactored expression with subtraction on each master before multiplying. This fixes the scheme of this isolated block. An endpoint coefficient arising from the final rotational projection is carried outside the inner subgraphs, where the spectator momentum is still unintegrated.
+
+**DERIVED** With $p=D/2-1=1-\epsilon$ and $B=1/4-1/(2D)$, the coefficients of the unreduced, dimensionless masters in $\Delta/x^4$ are
+$$
+\begin{aligned}
+d_{40}&=\tfrac18[p(p+1)/2-1]=-3\epsilon/16+\epsilon^2/16,\\
+d_{22}&=-p^2B/2=-1/16+5\epsilon/32-7\epsilon^2/64+\epsilon^3/128+O(\epsilon^4),\\
+c_F&=p^2(4-D)/(16D)=\epsilon/32-3\epsilon^2/64+\epsilon^3/128+O(\epsilon^4).
+\end{aligned}
+$$
+Let $P_j$ denote the overall pole of the corresponding normalized $R'I_j$, in units of $x^2,x^3,x^4$ respectively. In decreasing pole order the rows for $P_{40},P_{22},P_{04}$ are $(2,-10/3,1/2)$, $(-1,10/9,-1/6)$, and $(1/2,-13/9,149/288)$. The first row follows from M–R Eq. (2.38), and the last two are the forest results above.
+
+**DERIVED** Only the $P_j$ rows can contribute a finite difference between the two prescriptions. For a coefficient with Taylor entries $(d_0,d_1,d_2,d_3)$ and a pole row $(P_3,P_2,P_1)$, the finite difference is $d_1P_1+d_2P_2+d_3P_3$. Multiplying these rows gives
+$$
+\begin{array}{c|rrrr}
+ &\epsilon^{-3}&\epsilon^{-2}&\epsilon^{-1}&\epsilon^0\\ \hline
+ d_{40}P_{40}&0&-3/8&3/4&-29/96\\
+ d_{22}P_{22}&1/16&-65/288&169/576&-179/1152\\
+ c_FP_{04}&0&1/64&-79/1152&809/9216\\ \hline
+ {\rm sum}&1/16&-337/576&1123/1152&-3407/9216
+\end{array}
+$$
+For instance the gradient finite term is $149/(32\cdot288)+39/(64\cdot9)+1/(128\cdot2)$. The gradient coefficient vanishes in four dimensions, but multiplying before overall pole subtraction leaves that finite local term. All three differences are independent of $L$.
+
+**DERIVED** In this comparison the master-by-master result is $(\mathcal E-y^3)/48$. Keeping the full coefficients and subtracting only the poles at the overall step gives $(\mathcal E-y^3)/48-3407/9216$, in the same stripped normalization. To match the latter to the former requires an additive local finite shift $+3407/9216$ in this block. It specifies only the net shift in the selected projected channel. It does not fix the finite operator coefficients before projection, whose values must agree across all occurrences of the vertices.
+
+**OPEN** The next condition is operator-level matching of the action and the composite source, including the Ward/BRST and on-shell conditions. The two overall prescriptions above leave the inner subtractions fixed. A different extension of the evanescent tensors to inner vertices needs its own nested finite insertions. The result supplies no graviton pole or residue.
