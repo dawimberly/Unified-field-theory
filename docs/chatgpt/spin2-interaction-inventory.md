@@ -206,3 +206,23 @@ $$
 The explicit $D$ dependence here varies only the angular average of the stated algebraic polynomial. It is not the continued $D$-dimensional determinant action. In exactly four dimensions the mixed integrand is $-m^2(1/16-1/(4N))G^2|u|^2$, and the last coefficient is $3/(8N)$.
 
 **DERIVED** The direct undeformed six-field TT source with this scalar action insertion still receives only the retained derivative pair. With at most one derivative endpoint on the doubled source, its loop is killed by TT as before. The $G^4$ term matches after normalization. At leading flavor order the split terms carry an extra $1/N$ and therefore do not cancel the retained $-m^2G^2|u|^2/16$ mismatch within this block. No cross-species Newton residue follows. **UNVERIFIED** The other action and operator contractions, contact subtractions, and finite counterterm matching are required for a statement about a physical pole. In particular, setting $D=4$ before regulating the physical integrals cannot settle the evanescent contributions.
+
+## Follow-up: dimensional continuation and contact reduction
+
+**CITED** The determinant action and static gauge convention are given in Carone, Claringbold and Vaman, arXiv:1710.09367v2, Eqs. (2.6)–(2.7). [Paper](https://arxiv.org/pdf/1710.09367) **ASSUMED** Use that tree-level dimension dependence in the formal Euclidean polynomial control, with the clock counterterm omitted at this stage. Match the scalar mass and project on the same TT source as in the preceding block.
+
+1. **DERIVED** Set $p=D/2-1$, $U=U_2+U_4$. The continued density is $(V_0/p)\sqrt{\det(I+pK/V_0)}(1+U/V_0)^{-p}$, with Euclidean indices. The metric is $(\eta+pK/V_0)/(1+U/V_0)$ before Euclidean projection.
+2. **DERIVED** The undeformed six-field action, with $V_0^{-2}$ stripped, is $p^2a_3-p^2a_2U_2+[p(p+1)/2]a_1U_2^2-[(p+1)(p+2)/6]U_2^3$. The last term has no external derivative pair.
+3. **DERIVED** The relative TT source correction from $KU_2^2$ has coefficient unity after dividing by the baseline bilinear coefficient $p/V_0$ and stripping the common $V_0^{-2}$. The relative kinetic correction from $a_1U_2^2$ has coefficient $p(p+1)/2$. Their apparent equality in four dimensions leaves an evanescent difference in the continued block.
+4. **DERIVED** Let $I_{40}=\int G^4$, $I_{22}=\int G^2|\nabla G|^2$, and $I_{04}=\int|\nabla G|^4$, all with the same regulator. Using the split and retained angular factors above, the kinetic-minus-source difference, divided by twice the common graph factor (which includes $V_0^{-2}$), is
+   $$
+   \Delta=\frac{m^4}{8}\left[\frac{p(p+1)}2-1\right]I_{40}
+   -\frac{p^2m^2}{2}\left(\frac14-\frac{1}{2D}-\frac{1}{2N}\right) I_{22}
+   +p^2\left[\frac{4-D}{16D}+\frac1N\left(\frac14+\frac1{2D}\right)\right]I_{04}.
+   $$
+5. **DERIVED** For $D=4-\varepsilon$, the leading-flavor $I_{40}$ prefactor bracket is $-3\varepsilon/4+\varepsilon^2/8$, and the leading-flavor angular factor of $I_{04}$ is $\varepsilon/(16D)$. Both can multiply UV poles. Taylor and direct angular-factor evaluations agreed to floating-point precision in ten trial dimensions. This does not evaluate either pole.
+6. **ASSUMED** For the integration-by-parts check let a smooth massive regulated propagator obey $(-\nabla^2+m^2)G=\rho_\Lambda$ with vanishing boundary flux. Its smeared source and any regulator counterterms must use the same prescription.
+7. **DERIVED** Integrating $\nabla\cdot(G^3\nabla G)$ gives $3I_{22}=\int G^3\rho_\Lambda-m^2I_{40}$. Replacing the regulated contact by a point delta multiplied by the unregulated singular propagator would not define the required integral.
+8. **DERIVED** Consequently even at exactly four dimensions and leading flavor, the leftover $-m^2I_{22}/16$ contains both a scalar integral $m^4I_{40}/48$ and a contact term $-m^2\int G^3\rho_\Lambda/48$. A calculation that drops the contact would alter the kinetic-minus-source coefficient in this block.
+9. **DERIVED** The isolated block cannot give a regulator-independent finite mismatch by setting $D=4$ before integration. There are two distinct evanescent prefactors and an explicit contact. These must be combined with subtractions of the same regulator and the other graphs before comparing the pole.
+10. **UNVERIFIED** The Laurent coefficients after subdivergence subtraction and the full matched composite operator contact terms are still open. No physical pole shift or cross-species Newton residue is extracted.
