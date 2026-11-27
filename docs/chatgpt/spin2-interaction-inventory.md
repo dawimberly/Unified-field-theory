@@ -64,3 +64,16 @@
 - **CITED** Regulator and counterterm dependence of the base model: https://arxiv.org/abs/2512.06132 — eq./page UNVERIFIED.
 - **CITED** Background selection and contact variations: https://arxiv.org/abs/2011.06541 — eq./page UNVERIFIED.
 - **CITED** Ordinary large-N scalar methods: https://arxiv.org/abs/hep-th/0306133 — eq./page UNVERIFIED.
+
+## Follow-up: first-order contact cancellation in the external-metric control
+
+**ASSUMED** Use the ordinary Euclidean scalar control on a prescribed metric, with potential $\lambda(\phi_a\phi_a)^2/(4N)$ and a common covariant regulator for the coincident propagator, mass counterterm, and vacuum term. The mass is fixed by subtracting the flat momentum-independent tadpole, and the flat vacuum is made stationary. This calculation does not integrate over the metric or identify an external source with the composite metric.
+
+**DERIVED** Let $G_g(x,x)$ be the regulated single-species free propagator and $G_0$ its flat value. Wick contraction gives $\langle(\phi_a\phi_a)^2\rangle=N(N+2)G_g^2$. The order-$\lambda$ vacuum functional before counterterms therefore has integrand $C G_g^2$, with $C=\lambda(N+2)/4$. The tadpole is $\lambda(1+2/N)G_0$. The fixed-mass counterterm contributes $-2C G_0G_g$ to the integrand, and the flat vacuum subtraction contributes $+CG_0^2$. The complete correction in this control is
+$$
+\Delta\Gamma[g]=C\int d^Dx\sqrt g\,[G_g(x,x)-G_0]^2+O(\lambda^2).
+$$
+
+**DERIVED** At the flat background its second variation is $2C\int d^Dx\,\delta G_g[h_1]\delta G_g[h_2]$. Terms with $\delta^2G_g$ or variations of $\sqrt g$ have zero coefficient there. Thus the mass-insertion and local contact terms are included in the cancellation. At nonzero momentum, rotational invariance permits only $\delta G_g[h]=[a(q^2)\delta_{\mu\nu}+b(q^2)q_\mu q_\nu]h_{\mu\nu}(q)$, which vanishes for transverse-traceless sources. The first-order TT correction to the prescribed-metric control is zero at all nonzero momenta with a symmetry-preserving regulator and the stated matching. The scalar Hessian is not eliminated by this argument.
+
+**CITED** Carone, Erlich and Vaman report the large-$N$ composite spin-2 pole in their baseline scattering model. [Emergent Gravity from Vanishing Energy-Momentum Tensor, abstract](https://arxiv.org/abs/1610.08521) **UNVERIFIED** No interacting composite pole or pair of Newton residues is extracted here. The prescribed-metric cancellation cannot settle the determinant-action six-field contractions or the reduced-measure and source matching in [the constraint identity](matched-constraint-identity.md). The next calculation is to test whether that remaining reduced-theory sector adds a term to the TT kernel at this order, then evaluate source-saturated residues.
