@@ -181,3 +181,28 @@ The last identity uses $B^2=bB$. Angular averaging gives $\langle\operatorname{t
 **DERIVED** The selected $a_1U_2^2$ term contributes a relative kinetic correction equal to the relative source correction from $KU_2^2$, after stripping their shared four-line integral and the independent quartic insertion. The selected $-a_2U_2$ term also contributes an action term proportional to $-m^2c\,G^2|\nabla G|^2/(16V_0^2)$ with the shared flavor factor and insertion sign stripped. The direct baseline TT source has no term with this internal derivative structure. The selected $a_3$ term vanishes in exactly four Euclidean dimensions. The angular factor before setting $D=4$ is $-1/16+1/(4D)$, so an evanescent term times a regulator pole needs a separate check in dimensional regularization.
 
 **UNVERIFIED** This does not establish a physical remainder. Contractions with retained derivatives taken from different bilinears, regulated contact terms, and matched source and action counterterms can contribute at the same order. The previous equality of one selected source and kinetic pair cannot be applied to this whole placement. The comparison now has an explicit term that must be accounted for in the complete sum.
+
+## Follow-up: sum the retained and split derivative contractions
+
+**CITED** Carone, Claringbold and Vaman, arXiv:1710.09367v2, Eqs. (3.7)–(3.10), specify the baseline source and higher vertices. [Paper](https://arxiv.org/pdf/1710.09367) **ASSUMED** Retain the Gaussian, all-cross Euclidean polynomial control above, with a scalar quartic at $Y$. Compute the local kinetic coefficient at $X$ with two external differentiated legs. This is a bare block and its direct source counterpart.
+
+**DERIVED** Introduce a flavor vector $v$ for internal legs and external derivatives $w_{a\mu}$. At fixed separation put $u=\nabla G$, $A_\mu=\sum_a v_a w_{a\mu}$, $B=v^2uu^\top$, $C_{\mu\nu}=\sum_aw_{a\mu}w_{a\nu}$, and $M=uA^\top+Au^\top$. Then the derivative bilinear expands as $K=B+tM+t^2C$. The $t^2C$ term reproduces the retained pair. The quadratic $tM$ terms contain both split placements. Undifferentiated external legs cannot contribute to this kinetic coefficient. A single external derivative integrates to zero by reflection symmetry.
+
+**DERIVED** Direct substitution into the trace polynomials gives the split parts
+$$
+[a_2(B+tM)]_{t^2}=-|u|^2|A|^2/2,\qquad
+[a_3(B+tM)]_{t^2}
+=\operatorname{tr}B\,[|u|^2|A|^2/4+(u\cdot A)^2/2].
+$$
+After the all-cross contraction, the rotationally invariant flavor weight replaces $v^2 v_a v_b$ by $(v^2)^2\delta_{ab}/N$ inside the average. Spatial rotation replaces $(u\cdot A)^2$ by $|u|^2|A|^2/D$. The flavor normalization for $(v^2)^2$ is the same $8N(N+2)$ as in the retained-pair calculation. For a check, symmetric finite differences of the two trace polynomials for ten test matrices gave the stated quadratic coefficients within $8\times10^{-12}$ absolute error.
+
+**DERIVED** Combining both placements, the coefficient of $\operatorname{tr}C/V_0^2$, stripping the common flavor factor and independent quartic insertion at $Y$, has integrand
+$$
+\frac{m^4}{8}G^4
+-\frac{m^2}{2}\left(\frac14-\frac{1}{2D}-\frac{1}{2N}\right)G^2|u|^2
++\left[-\frac1{16}+\frac1{4D}
++\frac1N\left(\frac14+\frac1{2D}\right)\right]|u|^4 .
+$$
+The explicit $D$ dependence here varies only the angular average of the stated algebraic polynomial. It is not the continued $D$-dimensional determinant action. In exactly four dimensions the mixed integrand is $-m^2(1/16-1/(4N))G^2|u|^2$, and the last coefficient is $3/(8N)$.
+
+**DERIVED** The direct undeformed six-field TT source with this scalar action insertion still receives only the retained derivative pair. With at most one derivative endpoint on the doubled source, its loop is killed by TT as before. The $G^4$ term matches after normalization. At leading flavor order the split terms carry an extra $1/N$ and therefore do not cancel the retained $-m^2G^2|u|^2/16$ mismatch within this block. No cross-species Newton residue follows. **UNVERIFIED** The other action and operator contractions, contact subtractions, and finite counterterm matching are required for a statement about a physical pole. In particular, setting $D=4$ before regulating the physical integrals cannot settle the evanescent contributions.
