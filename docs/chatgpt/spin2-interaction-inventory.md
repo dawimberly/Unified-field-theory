@@ -301,3 +301,31 @@ The explicit $D$ dependence here varies only the angular average of the stated a
    \Delta/x^4=1/(16e^3)+(-169/576-3L/16)/e^2+O(e^{-1}).
    $$
 10. **DERIVED** The isolated gradient-master reduction closes at two published scalar inputs. **UNVERIFIED** A bare pole is not a renormalized composite-source correction. The local and subgraph counterterms still need to be combined with the remaining action and source graphs before assigning any shift to the physical graviton pole.
+
+## Follow-up: close the isolated bare Laurent series
+
+**CITED** Martin and Robertson, arXiv:1610.07720, Eqs. (3.5)–(3.8), give the basketball Laurent coefficients in terms of the tadpole and the finite subtracted basketball. [Paper](https://arxiv.org/pdf/1610.07720) **ASSUMED** Use that common loop normalization, $D=4-2e$, $x=m^2$, and $L=\ln(x/Q^2)$, keeping the same leading-flavor graph factors stripped.
+
+1. **DERIVED** The preceding bubble recurrence gives $I_{04}=g x^2 E+h x A^3$, where $a=3D/2-3$, $r=-(2D-4)/a$, $t=2(D-2)/a$, $g=1+r[1-D/(2(a+1))]$, and $h=t[1-D/(2(a+1))]-(D-2)/(a+1)$.
+2. **DERIVED** Combining all three terms yields $\Delta/x^4=v(E/x^2)+w(A/x)^3$, with $v=c_E+c_Fg$ and $w=-c_T+c_Fh$, using the coefficients in the earlier basketball checkpoint.
+3. **DERIVED** Through cubic order, $v=1/48-11e/48+17e^2/192-e^3/256$ and $w=-1/48+11e/192-35e^2/768+5e^3/1024$, up to $O(e^4)$.
+4. **DERIVED** Write $A/x=-1/e+b+eu+e^2t_A+O(e^3)$. Expansion of the tadpole gamma function gives $b=L-1$, $u=-1+L-L^2/2-\zeta(2)/2$, and $t_A=-1+L-L^2/2+L^3/6+(L-1)\zeta(2)/2-\zeta(3)/3$.
+5. **DERIVED** The tadpole cube has coefficients $(-1,3b,3u-3b^2,b^3-6bu+3t_A)$ in powers $e^{-3},e^{-2},e^{-1},e^0$.
+6. **DERIVED** Equal masses in Eqs. (3.5)–(3.8) give the normalized basketball coefficients $(2,23/3-6L,6b^2-6u-5b+1/2,\mathcal E+12bu-5u-6t_A)$ in the same powers, where $\mathcal E$ is the paper's finite subtracted basketball divided by $x^2$.
+7. **DERIVED** Convolution reproduces the previous cubic and double poles and gives the simple pole
+   $$
+   [\Delta/x^4]_{e^{-1}}
+   =\frac{9L^2}{32}+\frac{169L}{192}
+    +\frac{3\zeta(2)}{32}-\frac{2803}{2304}.
+   $$
+8. **DERIVED** The finite bare coefficient is
+   $$
+   \frac{\mathcal E+12bu-5u-6t_A-(b^3-6bu+3t_A)}{48}
+   -\frac{11}{48}(6b^2-6u-5b+1/2)
+   +\frac{11}{192}(3u-3b^2)
+   +\frac{17}{192}(23/3-6L)
+   -\frac{105b}{768}-\frac{13}{1024}.
+   $$
+   No numerical value for $\mathcal E$ is needed to close the algebraic reduction.
+9. **DERIVED** Numerical polynomial convolution at $L=0,\pm1$, with the zeta terms formally suppressed, gives simple-pole coefficients $-2803/2304,-127/2304,-4183/2304$, respectively in the order $0,+1,-1$. Restoring a unit test value for $\zeta(2)$ changes the coefficient by $3/32$. These are reproducibility checks with artificial inputs.
+10. **DERIVED** The published subtractions enter through $\mathcal E$. They do not subtract the entire composite block. Its bare finite part includes evanescent prefactors multiplying lower-order pole coefficients. **UNVERIFIED** The full counterterm insertion and composite-source matching are still required to determine a physical pole or residue.
