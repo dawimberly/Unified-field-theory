@@ -309,7 +309,7 @@ The explicit $D$ dependence here varies only the angular average of the stated a
 1. **DERIVED** The preceding bubble recurrence gives $I_{04}=g x^2 E+h x A^3$, where $a=3D/2-3$, $r=-(2D-4)/a$, $t=2(D-2)/a$, $g=1+r[1-D/(2(a+1))]$, and $h=t[1-D/(2(a+1))]-(D-2)/(a+1)$.
 2. **DERIVED** Combining all three terms yields $\Delta/x^4=v(E/x^2)+w(A/x)^3$, with $v=c_E+c_Fg$ and $w=-c_T+c_Fh$, using the coefficients in the earlier basketball checkpoint.
 3. **DERIVED** Through cubic order, $v=1/48-11e/48+17e^2/192-e^3/256$ and $w=-1/48+11e/192-35e^2/768+5e^3/1024$, up to $O(e^4)$.
-4. **DERIVED** Write $A/x=-1/e+b+eu+e^2t_A+O(e^3)$. Expansion of the tadpole gamma function gives $b=L-1$, $u=-1+L-L^2/2-\zeta(2)/2$, and $t_A=-1+L-L^2/2+L^3/6+(L-1)\zeta(2)/2-\zeta(3)/3$.
+4. **DERIVED** Write $A/x=-1/e+b+eu+e^2t_A+O(e^3)$. Expansion of the tadpole gamma function gives $b=L-1$, $u=-1+L-L^2/2-\zeta(2)/2$, and $t_A=-1+L-L^2/2+L^3/6+(L-1)\zeta(2)/2+\zeta(3)/3$ (Eq. (2.10)).
 5. **DERIVED** The tadpole cube has coefficients $(-1,3b,3u-3b^2,b^3-6bu+3t_A)$ in powers $e^{-3},e^{-2},e^{-1},e^0$.
 6. **DERIVED** Equal masses in Eqs. (3.5)–(3.8) give the normalized basketball coefficients $(2,23/3-6L,6b^2-6u-5b+1/2,\mathcal E+12bu-5u-6t_A)$ in the same powers, where $\mathcal E$ is the paper's finite subtracted basketball divided by $x^2$.
 7. **DERIVED** Convolution reproduces the previous cubic and double poles and gives the simple pole
@@ -320,12 +320,61 @@ The explicit $D$ dependence here varies only the angular average of the stated a
    $$
 8. **DERIVED** The finite bare coefficient is
    $$
-   \frac{\mathcal E+12bu-5u-6t_A-(b^3-6bu+3t_A)}{48}
+   \frac{\mathcal E-b^3+(18b-5)u-9t_A}{48}
    -\frac{11}{48}(6b^2-6u-5b+1/2)
    +\frac{11}{192}(3u-3b^2)
    +\frac{17}{192}(23/3-6L)
    -\frac{105b}{768}-\frac{13}{1024}.
    $$
-   No numerical value for $\mathcal E$ is needed to close the algebraic reduction.
+   Here $t_A$ includes $+\zeta(3)/3$, so the explicit $\zeta(3)$ term in this coefficient is $-\zeta(3)/16$. Compared with the previous sign this shifts the finite bare coefficient by $-\zeta(3)/8$. The pole terms use only $b$ and $u$ and are unchanged.
 9. **DERIVED** Numerical polynomial convolution at $L=0,\pm1$, with the zeta terms formally suppressed, gives simple-pole coefficients $-2803/2304,-127/2304,-4183/2304$, respectively in the order $0,+1,-1$. Restoring a unit test value for $\zeta(2)$ changes the coefficient by $3/32$. These are reproducibility checks with artificial inputs.
 10. **DERIVED** The published subtractions enter through $\mathcal E$. They do not subtract the entire composite block. Its bare finite part includes evanescent prefactors multiplying lower-order pole coefficients. **UNVERIFIED** The full counterterm insertion and composite-source matching are still required to determine a physical pole or residue.
+
+## Subtraction checks (independently verified)
+
+**CITED** Martin and Robertson (M–R), [arXiv:1610.07720](https://arxiv.org/pdf/1610.07720), Eqs. (2.3), (2.6)–(2.13), (2.35)–(2.38), and (3.5)–(3.8). Use $\epsilon=e$, $x=m^2$, $y=L-1$, $a=A_{\rm bare}/x$, and $A=A_{\rm bare}$. Denote the finite, subtracted equal-mass basketball divided by $x^2$ by $\mathcal E$. Write $R'$ for subtraction of proper subgraphs, $K$ for pole extraction, and $R=(1-K)R'$.
+
+1. **DERIVED** In the M–R loop normalization, the six pair and four triple terms in Eqs. (2.35)–(2.38), plus the overall subtraction, give
+   $$
+   E_{\rm div}/x^2=6a^2/\epsilon+(6/\epsilon^2-5/\epsilon)a
+       +2/\epsilon^3-10/(3\epsilon^2)+1/(2\epsilon).
+   $$
+   Subtracting $v E_{\rm div}/x^2$ from $\Delta/x^4$ leaves the poles of $wa^3$ because $v(E-E_{\rm div})/x^2$ is finite. Their coefficients, from cubic to simple, are $1/48$, $1/192-L/16$, and $3L^2/32-L/64-1/768+\zeta(2)/32$. These follow by multiplying the tadpole series (Eqs. (2.6)–(2.10)) by the stated $w$ and checking the basketball cancellation against Eqs. (3.5)–(3.8).
+
+2. **DERIVED** Replacing $a^3$ by $(a+1/\epsilon)^3$ and using the subtracted basketball produces the scalar reference $(\mathcal E-y^3)/48$. This is the $D=4$ coefficients times the $\overline{\rm MS}$ masters by construction (Eqs. (2.7)–(2.10), (2.35)–(2.38)). It is a reference for matching the reduced masters.
+
+3. **DERIVED** With the contact product subtracted as three independent tadpoles, keep its fully contracted graph as an overall term. At the common dimension and loop normalization of Eqs. (2.3), (2.6)–(2.13), the resulting identity is
+   $$
+   R'I_{22}=-\frac{x}{3}R'E+\frac{(A+x/\epsilon)^3}{3}-\frac{x^3}{3\epsilon^3}.
+   $$
+   This can also be obtained by inserting the two-line and three-line contact corrections $x A^2/\epsilon+x^2 A/\epsilon^2$ into $I_{22}=(A^3-x I_{40})/3$, with the contact terms counted once. The M–R overall basketball polynomial in Eq. (2.38) then gives $K R'I_{22}=x^3[-1/\epsilon^3+10/(9\epsilon^2)-1/(6\epsilon)]$. Its coefficients contain no $L$. The finite part is $x^3(y^3-\mathcal E)/3$, the same combination as the scalar reference after accounting for the prefactor $-1/16$ on $I_{22}/x^3$ at $D=4$.
+
+4. **DERIVED** For $I_{04}$, the two-line forest contribution in units of $x^4$ is $C(D)a^2/\epsilon$, with $C(D)=2/3+10/(3D)$. The two same-product hard pairs each give $1/D$ after the spectator average. The four split hard pairs each give $1/6+1/(3D)$. To obtain the split term use the free-index hard pole $\{\delta_{\mu\nu}(x/2+P^2/12)+P_\mu P_\nu/6\}/\epsilon$ from the Feynman-parameter shift, then contract in $D$ dimensions. For the same-product pairs the traced hard pole is $(2x+P^2/2)/\epsilon$. Its constant part integrates to zero against the remaining $r\cdot s$. The spectator moment follows from $\int k^2/(k^2+x)=-x A$ in the conventions of Eqs. (2.3) and (2.6)–(2.10).
+
+5. **DERIVED (quotient check)** Inserting the proposed local three-line pole
+   $$
+   K\bar R S(p)=\frac{p^2}{96\epsilon}
+       [p^4+24p^2x+70x^2-36x^2/\epsilon]
+   $$
+   in the spectator tadpole uses $\int (p^2)^n/(p^2+x)=(-x)^n A$. Summing four spectators gives $(\alpha/\epsilon^2+\beta/\epsilon)a$ in units of $x^4$, with $\alpha=3/2$ and $\beta=-47/24$. These coefficients also follow independently by requiring the $L$ and $L^2$ pieces of the quotient poles to cancel given $C(D)$ and the bare reduction. **UNVERIFIED** That condition checks only the integrated polynomial at $p^2=-x$. It cannot verify the full off-shell sunset pole, which requires an independent tensor sunset calculation with its nested bubble subtractions.
+
+6. **DERIVED** With that three-line quotient, the subtraction check is the Laurent convolution
+   $$
+   R'I_{04}/x^4=g E/x^2+h a^3-C(D)a^2/\epsilon
+        -(3/(2\epsilon^2)-47/(24\epsilon))a .
+   $$
+   Expand $g=(1/3,1/6,1/8,3/32)$, $h=(1/6,-1/24,-1/32,-3/128)$, and $C=(3/2,5/12,5/24,5/48)$ through cubic order. Use the tadpole and basketball coefficients from Eqs. (2.6)–(2.13), (2.35)–(2.38), and (3.5)–(3.8). The $L$ and zeta terms cancel from the pole, leaving $1/(2\epsilon^3)-13/(9\epsilon^2)+149/(288\epsilon)$. The finite part is
+   $$
+   \lim R I_{04}/x^4=\mathcal E/3+y^3/6+(17/24)y^2-(121/96)y+51/128 .
+   $$
+
+7. **DERIVED** Subtracting the scalar-master reference $\mathcal E/3+y^3/6$ leaves $(17/24)y^2-(121/96)y+51/128$, with value $303/128$ at $Q^2=x$. Both expressions have leading log $y^3/6$. A finite insertion of $17/36$ times the derivative-pair residue tensor yields $(17/36)(3/2)y^2=(17/24)y^2$ with finite spectator tadpoles. The remaining linear and constant terms have the form of a local three-line insertion into a tadpole and an overall local counterterm. $I_{22}$ needs no corresponding shift. **UNVERIFIED** The value $239/96$ does not follow from retaining $g(\epsilon)$ and $h(\epsilon)$ while fully subtracting the two scalar masters before taking the limit. Their positive powers then multiply finite series and vanish. A prescription for what evanescent products to retain would be needed to check that number. The proposed $\sigma=-749/864$ and $\delta_0=-1037/3456$ also require an explicit definition of their insertion polynomials and finite subgraph prescription. The finite scalar-master prescription assigns different shifts to derivative and non-derivative vertices. Compatibility with shared renormalization conditions is open.
+
+### Open
+
+- Match finite shifts consistently across every graph sharing each vertex.
+- Determine where $c_F(\epsilon)$ enters the nested and overall counterterms and retain evanescent terms in the same prescription throughout.
+- Verify the off-shell differentiated sunset polynomial, renormalize the composite source and its coincident products, and include the remaining graphs.
+- Impose the Ward/BRST identities and on-shell conditions before constructing the resummed TT propagator.
+
+No graviton pole or residue follows from these checks.

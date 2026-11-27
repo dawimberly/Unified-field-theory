@@ -104,6 +104,7 @@
 - [smooth-hopf-followup.md](smooth-hopf-followup.md) — Smooth, topology-preserving field follow-up.
 - [spin-organization-control.md](spin-organization-control.md) — Spin organization and gravitational response: construction control.
 - [spin2-interaction-inventory.md](spin2-interaction-inventory.md) — First reduction of the independent-quartic interaction calculation.
+- [Spin-2 subtraction checks](spin2-interaction-inventory.md#subtraction-checks-independently-verified) — Corrected finite bare term, forest quotient checks, and open matching conditions.
 - [spin2-simulation-spec.md](spin2-simulation-spec.md) — Route 6: numerical target and prerequisites.
 - [stochastic-regulator-screen.md](stochastic-regulator-screen.md) — Physical-regulator branch: stochastic composite gravity.
 - [unified-synthesis.md](unified-synthesis.md) — Hopfion capture rule and possibility-cloud synthesis.
