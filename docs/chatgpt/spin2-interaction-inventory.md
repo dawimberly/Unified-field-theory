@@ -77,3 +77,21 @@ $$
 **DERIVED** At the flat background its second variation is $2C\int d^Dx\,\delta G_g[h_1]\delta G_g[h_2]$. Terms with $\delta^2G_g$ or variations of $\sqrt g$ have zero coefficient there. Thus the mass-insertion and local contact terms are included in the cancellation. At nonzero momentum, rotational invariance permits only $\delta G_g[h]=[a(q^2)\delta_{\mu\nu}+b(q^2)q_\mu q_\nu]h_{\mu\nu}(q)$, which vanishes for transverse-traceless sources. The first-order TT correction to the prescribed-metric control is zero at all nonzero momenta with a symmetry-preserving regulator and the stated matching. The scalar Hessian is not eliminated by this argument.
 
 **CITED** Carone, Erlich and Vaman report the large-$N$ composite spin-2 pole in their baseline scattering model. [Emergent Gravity from Vanishing Energy-Momentum Tensor, abstract](https://arxiv.org/abs/1610.08521) **UNVERIFIED** No interacting composite pole or pair of Newton residues is extracted here. The prescribed-metric cancellation cannot settle the determinant-action six-field contractions or the reduced-measure and source matching in [the constraint identity](matched-constraint-identity.md). The next calculation is to test whether that remaining reduced-theory sector adds a term to the TT kernel at this order, then evaluate source-saturated residues.
+
+## Follow-up: reduced six-field vertex at one insertion
+
+**ASSUMED** Use the flat, translationally and reflection invariant free reference state and a common regulator. Let $S=\sum_a\phi_a^2$, $D=\sum_a\partial_\mu\phi_a\partial^\mu\phi_a$, and $I=\langle\phi_a^2\rangle_0$ for a fixed species. Colons below order each block separately with respect to that state. This is an explicit local contraction prescription for a control calculation. Its equivalence to the full renormalized reduced measure is **UNVERIFIED**.
+
+**DERIVED** The previously expanded deformation is $\Delta L_6=\lambda S^2(m^2S-D/2)/(4NV_0)$ at tree level. For its potential block the Wick product identity gives
+$$
+:S^2:\,:S:
+=
+:S^3:+8I:S^2:+4(N+2)I^2:S:.
+$$
+One cross-contraction gives $I\sum_a\partial_{\phi_a}(S^2)\partial_{\phi_a}S=8IS^2$. Two give $I^2\sum_a\partial_{\phi_a}^2(S^2)=4(N+2)I^2S$. More crossings are impossible because the smaller block has two fields. In the derivative block every cross-contraction is proportional to $\langle\phi_a\partial_\mu\phi_b\rangle_0=0$ by reflection symmetry. Hence $:S^2:\,:D:=:S^2D:$ for this prescription. A single local insertion generates no lower-field derivative term.
+
+**DERIVED** The induced bilinear is proportional to $S$, so its contribution at this insertion can be absorbed by a matched mass counterterm. The induced quartic is a local scalar potential. If used in the factorized scalar bridge it has zero TT projection by the selection rule above. This leaves the Wick-ordered six-field vertices themselves, contributions from the consistent counterterm expansion of the full reduced action, and contractions joining distinct vertices. The one-insertion result does not remove any of those classes.
+
+**DERIVED** Independent slot enumeration for $N=1,2,3,8$ gave double-cross coefficients $12,16,20,40$, respectively. A reproduction uses four ordered slots $(i,i,j,j)$, two slots $(k,k)$, and loops over $i,j,k$ and all ordered distinct pairs of the first four slots. Keep a pair if both selected labels equal $k$ and both remaining labels equal the same fixed external species. The count is the coefficient of that species' square in the identity.
+
+**CITED** Carone, Claringbold and Vaman describe their baseline tadpole subtraction and give the source-saturated amplitude in Sec. III, Eqs. (3.1)–(3.3), arXiv:1710.09367v2. Their discussion after Eq. (3.10) also identifies a specific higher-vertex graph removed by the baseline tadpole prescription. [Primary paper](https://arxiv.org/pdf/1710.09367) **UNVERIFIED** That baseline subtraction does not establish the contraction prescription above for the independent quartic deformation. The first distinct-vertex TT graphs and the source and counterterm matching still have to be evaluated before extracting a pole shift.
