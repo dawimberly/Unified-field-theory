@@ -4,6 +4,13 @@
 
 **UNVERIFIED** This index catalogs the recovered Hopfion capture rule, field-stability and induced-gravity research. **ASSUMED** The original hypotheses remain working premises where the archive treated them as such. **UNVERIFIED** Missing conversation dates, provisional claims and incomplete citation locations remain open.
 
+## Latest checkpoint — November 27, 2026
+
+- [Clock-domain audit](clock-domain-audit-2026-11-27.md) — **DERIVED** Resolvent recovery criterion, counterexamples to a general domain argument, and conditional dependency map; 235 numerical assertions previously passed.
+- [Positive-shear domain follow-up](positive-shear-domain-followup-2026-11-27.md) — **DERIVED** A free null-mode benchmark has a vacuum-term obstruction; subtraction supplies a dense domain in that benchmark, with 38 numerical assertions previously passed. **UNVERIFIED** A dense domain or counterexample for the full nonlinear gravitational clock remains open.
+
+These additions audit Chandrasekaran, arXiv:2611.34924v1; they do not establish a solution to quantum gravity or microscopic emergence. Both reports include their reproducible Python checks. Counts record the original local runs, not new runs during this repository update.
+
 ## Topics
 
 - [600-cell.md](600-cell.md) — 600-cell geometry.
